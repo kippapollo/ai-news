@@ -1122,7 +1122,10 @@ body{
     moreCountEl.textContent = `${visibleN} ${noun}${moreSuffix}`;
   }
 
+  const bigPicture = document.querySelector('.big-picture');
+
   function applyFilter(filter){
+    if(bigPicture) bigPicture.hidden = (filter !== 'all');
     let shown = 0;
     stories.forEach(s => {
       const tags = (s.dataset.tags || '').split(/\s+/);
