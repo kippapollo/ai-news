@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>AI News — Daily · 2026-05-28</title>
-<meta name="description" content="A daily AI briefing for 2026-05-28: Microsoft Copilot Studio ships computer-using agents to GA, Beijing widens AI travel curbs to Alibaba and DeepSeek, Anthropic buys Stainless, DeepMind absorbs Contextual AI, Penn physicists demo optical computing, and more." />
+<title>Apollo AI News — Daily · 2026-05-28</title>
+<meta name="description" content="Daily AI briefing for 2026-05-28: Cognition raises $1B at $26B as Devin writes 90% of its code, Fujitsu signs Claude and ChatGPT deals in Tokyo, Altman and Olah split on jobs, Anthropic opens Seoul, Pope Leo XIV calls for AI disarmament." />
 <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
 <style>
   :root {
@@ -15,9 +15,9 @@
     --ink-mute: #5a6068;
     --rule: #e1ddd2;
     --rule-soft: #ece8da;
-    --accent: #6b21a8;
-    --accent-soft: #ead7f4;
-    --accent-deep: #4c1576;
+    --accent: #115e59;
+    --accent-soft: #d2ebe7;
+    --accent-deep: #0c3d3a;
     /* Tag palette — stays consistent across editions */
     --tag-tech-bg: #e3edfb;       --tag-tech-fg: #1d4ed8;
     --tag-app-bg: #d8efe9;        --tag-app-fg: #0f766e;
@@ -35,9 +35,9 @@
       --ink-mute: #9a9690;
       --rule: #2b3038;
       --rule-soft: #232830;
-      --accent: #c6a4ea;
-      --accent-soft: #2a1a3a;
-      --accent-deep: #d9bef0;
+      --accent: #4ec3b6;
+      --accent-soft: #173834;
+      --accent-deep: #6ad9cc;
       --tag-tech-bg: #1c2d4a;     --tag-tech-fg: #9ab8ef;
       --tag-app-bg: #143434;      --tag-app-fg: #6dd2c2;
       --tag-econ-bg: #1a2e1d;     --tag-econ-fg: #91d29a;
@@ -76,25 +76,17 @@
     gap: 24px;
   }
   .pubname { display: flex; align-items: center; gap: 14px; }
-  .pubname .mark { flex: 0 0 auto; }
   .pubname a.brandlink {
     display: flex;
     align-items: center;
-    gap: 14px;
     color: var(--ink);
     border-bottom: 0;
     text-decoration: none;
+    outline: none;
   }
-  .pubname a.brandlink:hover { color: var(--accent-deep); border-bottom: 0; }
-  .pubname .title {
-    font-family: Georgia, "Times New Roman", Charter, serif;
-    font-size: 26px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: inherit;
-    line-height: 1;
-  }
+  .pubname a.brandlink:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+  .pubname a.brandlink:hover { opacity: 0.85; }
+  .pubname svg.brandmark { height: 56px; width: auto; display: block; }
   .edition {
     font-size: 13px;
     letter-spacing: 0.14em;
@@ -159,13 +151,17 @@
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
   /* HERO */
   .hero {
-    margin: 48px 0 56px;
+    margin: 48px 0 48px;
     transition: opacity 120ms ease;
   }
   .hero[hidden] { display: none; }
+  .hero > summary { list-style: none; cursor: pointer; outline: none; }
+  .hero > summary::-webkit-details-marker { display: none; }
+  .hero > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 6px; }
   .hero-kicker {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     font-size: 12px;
     letter-spacing: 0.16em;
@@ -206,6 +202,8 @@
     letter-spacing: 0.04em;
     font-feature-settings: "tnum";
   }
+  .hero .kicker-source a { color: var(--ink-mute); border-bottom: 1px dotted var(--ink-mute); }
+  .hero .kicker-source a:hover { color: var(--accent); border-bottom-color: var(--accent); }
   .hero-art {
     aspect-ratio: 1 / 1;
     width: 100%;
@@ -213,6 +211,47 @@
     justify-self: end;
   }
   @media (max-width: 720px) { .hero-art { justify-self: start; max-width: 280px; } }
+  .hero .expand-control {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    padding: 7px 14px;
+    border: 1px solid var(--accent-soft);
+    border-radius: 999px;
+    background: transparent;
+    transition: background 120ms ease, border-color 120ms ease;
+  }
+  .hero[open] .expand-control { background: var(--accent-soft); border-color: var(--accent-soft); }
+  .hero:hover .expand-control { border-color: var(--accent); }
+  .hero[open] .expand-control::after { content: " ▴"; }
+  .hero:not([open]) .expand-control::after { content: " ▾"; }
+  .hero[open] .expand-control::before { content: "Collapse"; }
+  .hero:not([open]) .expand-control::before { content: "Read in full"; }
+  .hero-body {
+    margin: 32px 0 0;
+    padding: 28px 0 0;
+    border-top: 1px solid var(--rule);
+    animation: storyFade 220ms ease;
+  }
+  .hero-body p {
+    margin: 0 0 1em;
+    font-size: 1.04rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 66ch;
+  }
+  .hero-body h4 {
+    font-family: Georgia, "Times New Roman", Charter, serif;
+    font-size: 1.15rem;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    margin: 1.6em 0 0.5em;
+  }
+  .hero-body p:last-child { margin-bottom: 0; }
   /* BIG PICTURE */
   .bigpicture {
     margin: 0 0 56px;
@@ -251,27 +290,13 @@
     color: var(--accent);
     opacity: 0.85;
   }
-  /* HERO LEAD CARD body (long-form) */
-  .hero-body {
-    margin: 32px 0 0;
-    padding: 28px 0 0;
-    border-top: 1px solid var(--rule);
-  }
-  .hero-body p {
-    margin: 0 0 1em;
-    font-size: 1.04rem;
-    line-height: 1.7;
-    color: var(--ink-soft);
-    max-width: 64ch;
-  }
-  .hero-body p:last-child { margin-bottom: 0; }
   .pullquote {
     border-left: 3px solid var(--accent);
     padding: 4px 0 4px 18px;
     margin: 18px 0;
     font-style: italic;
     font-family: Georgia, "Times New Roman", Charter, serif;
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     line-height: 1.5;
     color: var(--ink);
     max-width: 60ch;
@@ -305,7 +330,7 @@
     color: var(--ink-mute);
     font-feature-settings: "tnum";
   }
-  /* STORY CARDS (details/summary collapse) */
+  /* STORY CARDS */
   .stories { display: flex; flex-direction: column; gap: 0; }
   details.story {
     padding: 28px 0;
@@ -318,9 +343,24 @@
     list-style: none;
     cursor: pointer;
     outline: none;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.25rem;
+    align-items: start;
   }
   details.story > summary::-webkit-details-marker { display: none; }
   details.story > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+  details.story .thumb {
+    width: 120px;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    flex: 0 0 auto;
+  }
+  details.story .thumb svg { display: block; width: 100%; height: 100%; }
+  details.story .summary-text { min-width: 0; }
   details.story .headline {
     font-family: Georgia, "Times New Roman", Charter, serif;
     font-size: 1.5rem;
@@ -375,6 +415,13 @@
     border-top: 1px dashed var(--rule);
     animation: storyFade 220ms ease;
   }
+  details.story .full-content h4 {
+    font-family: Georgia, "Times New Roman", Charter, serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    margin: 1.6em 0 0.5em;
+  }
   @keyframes storyFade {
     from { opacity: 0; transform: translateY(-4px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -400,6 +447,11 @@
     font-size: 12px;
     font-style: italic;
     color: var(--ink-mute);
+  }
+  @media (max-width: 600px) {
+    details.story > summary { grid-template-columns: 1fr; gap: 0.75rem; }
+    details.story .thumb { width: 100%; height: 80px; }
+    details.story .thumb svg { width: 100%; height: 100%; }
   }
   /* TAG CHIPS */
   .tags {
@@ -454,7 +506,7 @@
     body { font-size: 17px; }
     .wrap { padding: 0 18px 64px; }
     .masthead { padding-top: 24px; }
-    .pubname .title { font-size: 20px; letter-spacing: 0.18em; }
+    .pubname svg.brandmark { height: 44px; }
     .edition { font-size: 11px; }
     .bigpicture p { font-size: 1.1rem; }
     .hero h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
@@ -469,20 +521,31 @@
   <header class="masthead">
     <div class="masthead-row">
       <div class="pubname">
-        <a class="brandlink" href="../index.html" aria-label="AI News — home">
-          <svg class="mark" width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <linearGradient id="mast-grad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#6b21a8"/>
-                <stop offset="100%" stop-color="#4c1576"/>
-              </linearGradient>
-            </defs>
-            <circle cx="23" cy="23" r="22" fill="none" stroke="#6b21a8" stroke-width="1.4"/>
-            <path d="M14 30 L23 12 L32 30" fill="none" stroke="url(#mast-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="17.5" y1="24" x2="28.5" y2="24" stroke="#6b21a8" stroke-width="1.6" stroke-linecap="round"/>
-            <circle cx="23" cy="23" r="2.2" fill="#6b21a8"/>
+        <a class="brandlink" href="../index.html" aria-label="Apollo AI News — home">
+          <svg class="brandmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+            <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+              <g fill="none" stroke-width="2">
+                <line x1="28" y1="2"  x2="28" y2="9"/>
+                <line x1="28" y1="47" x2="28" y2="54"/>
+                <line x1="2"  y1="28" x2="9"  y2="28"/>
+                <line x1="47" y1="28" x2="54" y2="28"/>
+                <line x1="9.5"  y1="9.5"  x2="14"   y2="14"/>
+                <line x1="42"   y1="42"   x2="46.5" y2="46.5"/>
+                <line x1="46.5" y1="9.5"  x2="42"   y2="14"/>
+                <line x1="9.5"  y1="46.5" x2="14"   y2="42"/>
+              </g>
+              <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+              <circle cx="28" cy="28" r="5"  fill="#c2410c" stroke="none"/>
+            </g>
+            <g transform="translate(76, 0)" fill="currentColor">
+              <text x="0" y="34"
+                    font-family="Georgia,'Times New Roman',Charter,serif"
+                    font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+              <text x="0" y="54"
+                    font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif"
+                    font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+            </g>
           </svg>
-          <span class="title">AI News</span>
         </a>
       </div>
       <div class="edition">
@@ -496,119 +559,130 @@
   <nav class="filterbar" id="filterbar" aria-label="Filter stories by tag">
     <div class="filterbar-inner" id="filter-chips">
       <button data-filter="all" aria-pressed="true">All <span class="count">· 9</span></button>
-      <button data-filter="tech" aria-pressed="false">Tech <span class="count">· 6</span></button>
-      <button data-filter="economic" aria-pressed="false">Economic <span class="count">· 3</span></button>
-      <button data-filter="policy" aria-pressed="false">Policy <span class="count">· 3</span></button>
-      <button data-filter="application" aria-pressed="false">Application <span class="count">· 2</span></button>
-      <button data-filter="trend" aria-pressed="false">Trend <span class="count">· 1</span></button>
+      <button data-filter="tech" aria-pressed="false">Tech <span class="count">· 1</span></button>
+      <button data-filter="application" aria-pressed="false">Application <span class="count">· 3</span></button>
+      <button data-filter="economic" aria-pressed="false">Economic <span class="count">· 6</span></button>
+      <button data-filter="policy" aria-pressed="false">Policy <span class="count">· 2</span></button>
       <button data-filter="safety" aria-pressed="false">Safety <span class="count">· 1</span></button>
+      <button data-filter="trend" aria-pressed="false">Trend <span class="count">· 2</span></button>
     </div>
-    <p class="sr-only" id="filter-status" aria-live="polite">Showing all 9 stories.</p>
+    <span id="filter-sr" class="sr-only" aria-live="polite"></span>
   </nav>
 
-  <!-- HERO (collapsible — daily defaults open) -->
-  <details class="story hero" id="hero" data-tags="tech application" open>
+  <!-- HERO -->
+  <details class="hero" data-tags="economic application" open>
     <summary>
       <div class="hero-kicker">
-        <span>Lead</span>
+        <span>Lead story</span>
         <span class="sep">·</span>
-        <span>Agents</span>
+        <span>2026-05-28</span>
         <span class="sep">·</span>
-        <span>Enterprise</span>
+        <span class="tags" style="margin:0;">
+          <span class="tag tag-economic">Economic</span>
+          <span class="tag tag-application">Application</span>
+        </span>
       </div>
       <div class="hero-grid">
         <div>
-          <div class="tags">
-            <span class="tag tag-tech">Tech</span>
-            <span class="tag tag-application">Application</span>
-          </div>
-          <h1 class="headline">Microsoft puts computer-using agents into production. First hyperscaler to ship screen-and-keyboard automation at GA.</h1>
-          <p class="dek">Copilot Studio's CUA tier reaches every commercial Power Platform geography with OpenAI CUA and Claude Sonnet 4.5 as the launch models, Key Vault credential handling, Purview audit logs, and configurable human review at 5 Copilot Credits per step.</p>
-          <p class="kicker-source">Microsoft Copilot Studio Blog · 2026-05-26</p>
+          <h1>Cognition raises $1B at $26B as Devin writes 90% of its own code.</h1>
+          <p class="dek">The Devin maker more than doubled its September valuation in eight months. Run-rate revenue jumped from $37M to $492M in twelve. Lux, General Catalyst and 8VC co-led; Founders Fund, Ribbit and Atreides followed in. Goldman Sachs, Mercedes-Benz, NASA and Santander now run Devin on production code.</p>
+          <p class="kicker-source">Bloomberg · 2026-05-27 · <a href="https://www.bloomberg.com/news/articles/2026-05-27/ai-coding-startup-cognition-raises-1-billion-at-26-billion-value" target="_blank" rel="noopener">Source ↗</a></p>
           <span class="expand-control"></span>
         </div>
-        <div class="hero-art">
-          <!-- Generative SVG: isometric grid with glyph flow + corner brackets — distinct from prior editions -->
-          <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%;">
+        <div class="hero-art" aria-hidden="true">
+          <!-- Hero SVG: layered code stack with growth axis and accent star marking the $26B mark -->
+          <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="presentation">
             <defs>
-              <linearGradient id="hero-lg" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#6b21a8"/>
-                <stop offset="100%" stop-color="#4c1576"/>
+              <linearGradient id="hero-fill" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stop-color="#115e59" stop-opacity="0"/>
+                <stop offset="100%" stop-color="#115e59" stop-opacity="0.18"/>
               </linearGradient>
-              <radialGradient id="hero-rg" cx="62%" cy="38%" r="60%">
-                <stop offset="0%" stop-color="#6b21a8" stop-opacity="0.18"/>
-                <stop offset="55%" stop-color="#6b21a8" stop-opacity="0.05"/>
-                <stop offset="100%" stop-color="#6b21a8" stop-opacity="0"/>
-              </radialGradient>
-              <pattern id="iso-grid" x="0" y="0" width="40" height="22" patternUnits="userSpaceOnUse" patternTransform="translate(0 0)">
-                <path d="M0 11 L20 0 L40 11 L20 22 Z" fill="none" stroke="#6b21a8" stroke-width="0.6" opacity="0.32"/>
-              </pattern>
+              <linearGradient id="hero-stroke" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#115e59"/>
+                <stop offset="100%" stop-color="#0c3d3a"/>
+              </linearGradient>
             </defs>
-            <rect width="360" height="360" fill="url(#hero-rg)"/>
-            <rect x="20" y="40" width="320" height="270" fill="url(#iso-grid)"/>
-            <!-- ascending stack of plates (agent-action layers) -->
-            <g stroke="#6b21a8" stroke-width="1.6" fill="none" opacity="0.88">
-              <path d="M70 230 L180 175 L290 230 L180 285 Z"/>
-              <path d="M85 195 L180 148 L275 195 L180 242 Z"/>
-              <path d="M100 162 L180 122 L260 162 L180 202 Z" opacity="0.78"/>
-              <path d="M115 130 L180 98 L245 130 L180 162 Z" opacity="0.55"/>
+            <rect width="320" height="320" fill="url(#hero-fill)"/>
+            <!-- vertical axis ticks -->
+            <g stroke="#0c3d3a" stroke-width="1" opacity="0.4">
+              <line x1="30" y1="40" x2="30" y2="280"/>
+              <line x1="30" y1="280" x2="290" y2="280"/>
+              <line x1="26" y1="80"  x2="34" y2="80"/>
+              <line x1="26" y1="140" x2="34" y2="140"/>
+              <line x1="26" y1="200" x2="34" y2="200"/>
+              <line x1="26" y1="260" x2="34" y2="260"/>
             </g>
-            <!-- key glyphs that read as "cursor / window / step" -->
-            <g fill="#4c1576" opacity="0.92">
-              <rect x="155" y="86" width="50" height="12" rx="2"/>
-              <rect x="155" y="100" width="22" height="3" rx="1.5"/>
-              <rect x="155" y="106" width="36" height="3" rx="1.5"/>
-              <rect x="155" y="112" width="28" height="3" rx="1.5"/>
+            <!-- stacked code bars (rising) -->
+            <g fill="none" stroke="url(#hero-stroke)" stroke-width="1.6">
+              <rect x="60"  y="240" width="32" height="40" opacity="0.45"/>
+              <rect x="100" y="218" width="32" height="62" opacity="0.55"/>
+              <rect x="140" y="186" width="32" height="94" opacity="0.7"/>
+              <rect x="180" y="138" width="32" height="142" opacity="0.85"/>
+              <rect x="220" y="78"  width="32" height="202" opacity="1"/>
             </g>
-            <!-- step arrows -->
-            <g stroke="url(#hero-lg)" stroke-width="2" stroke-linecap="round" fill="none">
-              <path d="M40 80 L70 60"/>
-              <path d="M70 60 L66 66 M70 60 L66 54"/>
-              <path d="M40 110 L70 90"/>
-              <path d="M70 90 L66 96 M70 90 L66 84"/>
-              <path d="M320 280 L292 300"/>
-              <path d="M292 300 L298 297 M292 300 L294 294"/>
-              <path d="M320 250 L292 270"/>
-              <path d="M292 270 L298 267 M292 270 L294 264"/>
+            <!-- inner code lines on tallest bar -->
+            <g stroke="#0c3d3a" stroke-width="1" opacity="0.55">
+              <line x1="226" y1="90"  x2="246" y2="90"/>
+              <line x1="226" y1="100" x2="240" y2="100"/>
+              <line x1="226" y1="110" x2="248" y2="110"/>
+              <line x1="226" y1="120" x2="238" y2="120"/>
+              <line x1="226" y1="130" x2="244" y2="130"/>
+              <line x1="226" y1="140" x2="246" y2="140"/>
+              <line x1="226" y1="150" x2="234" y2="150"/>
             </g>
-            <!-- dotted "memory" track -->
-            <path d="M58 305 Q 180 340 302 305" stroke="#6b21a8" stroke-width="1.2" fill="none" stroke-dasharray="2 6" opacity="0.7"/>
+            <!-- growth arc -->
+            <path d="M70 250 Q 160 220 240 70" stroke="#0c3d3a" stroke-width="1.6" fill="none" opacity="0.6" stroke-dasharray="2 4"/>
+            <!-- 26B mark -->
+            <g transform="translate(238, 64)">
+              <circle r="9" fill="#115e59"/>
+              <text x="0" y="3" text-anchor="middle" font-family="Georgia, serif" font-size="9" font-weight="700" fill="#f7f5ef">26</text>
+            </g>
             <!-- corner brackets -->
-            <g stroke="#4c1576" stroke-width="1.2" fill="none" opacity="0.75">
-              <line x1="20" y1="20" x2="40" y2="20"/>
-              <line x1="20" y1="20" x2="20" y2="40"/>
-              <line x1="340" y1="340" x2="320" y2="340"/>
-              <line x1="340" y1="340" x2="340" y2="320"/>
-              <line x1="340" y1="20" x2="320" y2="20"/>
-              <line x1="340" y1="20" x2="340" y2="40"/>
-              <line x1="20" y1="340" x2="40" y2="340"/>
-              <line x1="20" y1="340" x2="20" y2="320"/>
+            <g stroke="#0c3d3a" stroke-width="1.2" fill="none" opacity="0.5">
+              <line x1="14" y1="14" x2="32" y2="14"/>
+              <line x1="14" y1="14" x2="14" y2="32"/>
+              <line x1="306" y1="306" x2="288" y2="306"/>
+              <line x1="306" y1="306" x2="306" y2="288"/>
             </g>
           </svg>
         </div>
       </div>
     </summary>
+    <div class="hero-body">
+      <p>Cognition AI raised more than $1 billion in a financing led by Lux Capital, General Catalyst and 8VC, the company confirmed on Wednesday. The round values the maker of the autonomous coding agent Devin at $26 billion. That is up from $10.2 billion in September, a price more than doubled in eight months. Other participants include Ribbit Capital, Atreides Management and Peter Thiel's Founders Fund. Cognition has now raised about $2.5 billion in total.</p>
 
-    <div class="hero-body full-content">
-      <p>Microsoft moved computer-using agents (CUA) in Copilot Studio to general availability on May 26, ending a five-month preview and rolling them out to every commercial Power Platform geography. The move makes Microsoft the first hyperscaler to put screen-and-keyboard automation behind a production-tier SLA, with Key Vault credential storage, Purview audit logging, and configurable human-in-the-loop review as standard. The GA build supports OpenAI's CUA and Anthropic's Claude Sonnet 4.5 as the launch models, billed at 5 Copilot Credits per step rather than per token, so customers can model the cost of an agent run as a fixed UI-action count.</p>
+      <p>The funding lands against a backdrop of revenue numbers that explain the markup. Cognition reported a $37 million annualized run rate twelve months ago. It is at $492 million now and targeting a billion-dollar run rate by year end. Co-founder and chief executive Scott Wu says enterprise usage has grown roughly tenfold since January. Goldman Sachs, Mercedes-Benz, NASA, Santander and several US government departments are paying customers running Devin on production code.</p>
 
-      <p>The functional change matters more than the licensing math. Until now, robotic-process-automation tools have leaned on brittle UI selectors that snap when an application's layout drifts. Microsoft's CUA uses vision and reasoning to read whatever is on screen and pick the next action, which means an agent can complete a workflow inside a desktop app or a SaaS portal that exposes no API at all. The first launch partners (Lumen Technologies, Graebel Companies, Aon, and Westat) say they have lined the new agents up against approval queues, claim reconciliation, and IT-onboarding tasks that previously demanded a human in the loop because the underlying system was un-scriptable.</p>
+      <h4>The "90 percent" claim</h4>
 
-      <p class="pullquote">"By adopting Microsoft Copilot Studio and AI agents, we've moved beyond traditional automation to a more intelligent, scalable operating model."<cite>— Matt Brownlee, Chief Revenue Officer, Graebel</cite></p>
+      <p>The most-quoted line out of the round is internal rather than commercial. Cognition says 90 percent of its own code now ships from Devin. The number is part of a small cluster of self-eating-dog-food disclosures from coding-AI companies that have piled up over the past quarter. Google has said roughly three-quarters of its new code is AI-generated. Snap put the figure at 65 percent before laying off a thousand engineers in April. Meta's internal target is "55 percent or more" for agent-assisted commits. Cognition's 90 percent is the highest disclosure anyone has put a year-of-2026 date on.</p>
 
-      <p>The wider competitive picture is that production-grade computer use is no longer a research demo. OpenAI's Operator hit preview in early 2025 and only ChatGPT Pro users can run it; Anthropic's "computer use" tool has lived in the developer API since Claude 3.5 Sonnet but without a managed enterprise wrapper. By bundling CUA into Power Platform tenants under existing data-residency and compliance boundaries, Microsoft has now made the easier sell to a regulated buyer than either of the model labs whose technology it runs. Expect Google to push Gemini-based screen agents into Workspace Flows in the following weeks, with the same pricing-per-step playbook.</p>
+      <p>Devin runs as a hosted agent that plans, writes, debugs and deploys code across multi-step workflows. Cognition operates a mix of its own model training and inference against frontier models from OpenAI and Anthropic. The company picked up Windsurf's remaining engineering assets in July 2025, after Google paid $2.4 billion to license the rest of the business and hire most of the team. That deal gave Cognition both an IDE codebase and a pool of engineers familiar with editor-level integration.</p>
 
-      <p class="source-footer"><a class="source-link" href="https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/new-and-improved-computer-using-agents-a-new-workflows-experience-and-real-time-voice-experiences/" target="_blank" rel="noopener">Read source →</a></p>
+      <h4>What changed since September</h4>
+
+      <p>September's $10.2 billion price reflected a company whose customers were mostly early adopters running Devin on isolated tickets. Eight months later, banks and a small set of national security customers are routing meaningful slices of their engineering throughput through it. The US Army and Navy are publicly disclosed customers. The growth has come without any change to the headline product positioning: Devin is sold as a software engineer, with seat-style pricing on top of usage-based consumption. The model is not chat. It is task assignment.</p>
+
+      <blockquote class="pullquote">"Our enterprise usage has grown more than tenfold since the start of the year." <cite>— Scott Wu, Cognition co-founder and CEO</cite></blockquote>
+
+      <p>The investor list signals a maturing thesis. Lux Capital and General Catalyst have both led prior rounds, and Founders Fund has been on the cap table since the company emerged from stealth in March 2024 with its first $21 million seed. The addition of Atreides and Ribbit, two firms that historically write large checks into late-stage software businesses with predictable revenue, suggests the late-stage market is pricing Devin against SaaS multiples rather than research-lab multiples. At $26 billion on roughly $500 million of run-rate revenue, that is a 52x multiple, expensive but not out of line with peers like Cursor.</p>
+
+      <h4>The reliability question</h4>
+
+      <p>Critics inside the engineering community continue to point at agent reliability as the soft underbelly of the category. Cognition has not published an updated public benchmark in months. SWE-Bench Verified, the most-cited test, now sits above 90 percent for frontier models from Anthropic and OpenAI. That ceiling matters less than wall-clock reliability on long-running tasks, which is still where multi-step agents drop tickets. Investors appear to be discounting that risk against the revenue trajectory and the speed at which enterprise customers are renewing.</p>
+
+      <p>The round closes Cognition's transition from research bet to category leader for the autonomous coding-agent niche, in a market where Microsoft (Copilot), Google (Antigravity, Jules), GitHub (Copilot Workspace), Anysphere (Cursor) and a handful of model labs are all competing on the same use case. Wu's framing is that Cognition is the only firm with both a serious frontier model investment and a product designed from day one for end-to-end software delivery. The $26 billion valuation says enough investors agree to write the check.</p>
+
+      <p class="source-footer"><a class="source-link" href="https://www.bloomberg.com/news/articles/2026-05-27/ai-coding-startup-cognition-raises-1-billion-at-26-billion-value" target="_blank" rel="noopener">Read source →</a></p>
     </div>
   </details>
 
   <!-- BIG PICTURE -->
   <section class="bigpicture">
-    <p class="label">The big picture</p>
-    <p>Microsoft shipped computer-using agents to general availability in Copilot Studio on May 26, becoming the first hyperscaler to put screen-and-keyboard automation behind a production tier with credential vaulting and Purview audit logs. The same week, Beijing widened overseas travel curbs to AI staff at Alibaba and DeepSeek, formalizing a talent-containment regime that previously hit only DeepSeek leadership. Acqui-hires accelerated on both coasts: Anthropic bought SDK-generator Stainless for north of $300 million, the same tooling that ships OpenAI's and Google's official client libraries, and DeepMind paid roughly $100 million to absorb 20-plus researchers from Bezos-backed Contextual AI without filing a merger. Underneath the politics, Nvidia booked $75.2 billion of data-center revenue in a single quarter, almost double last year's pace. Each story lands on a different rail of the build-out; together they describe the moment that production-grade AI infrastructure stopped being a demo.</p>
+    <p class="label">Big picture</p>
+    <p>Cognition's $1 billion round on Wednesday joined a market where AI coding agents now write the majority of code at their own makers. Fujitsu signed strategic deals on the same day with both Anthropic and OpenAI, putting Claude in the hands of 100,000 employees and a thousand new Forward Deployed Engineers. The frontier labs split publicly over what comes next for workers: Sam Altman conceded he was wrong about a near-term jobs apocalypse, while Anthropic co-founder Chris Olah used a Vatican stage to insist labor displacement remains the central question. The Holy See has now made it one. Pope Leo XIV's first encyclical, Magnifica Humanitas, treats AI as the defining test of human dignity and asks states to "disarm" lethal autonomous weapons. Underneath it all, the physical layer keeps doubling: Nvidia booked $75.2 billion of data center revenue last week, and NextEra moved to buy Dominion for $67 billion to feed the Virginia data centers that consume it.</p>
   </section>
 
-  <!-- ORNAMENT -->
   <div class="ornament" aria-hidden="true">
     <svg width="96" height="14" viewBox="0 0 96 14" xmlns="http://www.w3.org/2000/svg">
       <path d="M6 7 L12 1 L18 7 L12 13 Z" fill="currentColor"/>
@@ -619,280 +693,511 @@
     </svg>
   </div>
 
-  <!-- STORIES -->
-  <section>
-    <header class="section-head">
-      <h2>More today</h2>
-      <span class="count">8 stories · last week</span>
-    </header>
+  <!-- MORE TODAY -->
+  <header class="section-head">
+    <h2>More today</h2>
+    <span class="count">8 stories</span>
+  </header>
 
-    <div class="stories" id="story-list">
+  <div class="stories" id="story-list">
 
-      <!-- STORY 1: China AI travel curbs -->
-      <details class="story" data-tags="policy trend">
-        <summary>
+    <!-- STORY 2: Fujitsu / Anthropic / OpenAI -->
+    <details class="story" data-tags="application economic">
+      <summary>
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <rect width="120" height="80" fill="#d2ebe7" opacity="0.35"/>
+            <circle cx="36" cy="40" r="16" fill="none" stroke="#115e59" stroke-width="1.6"/>
+            <circle cx="84" cy="28" r="14" fill="none" stroke="#115e59" stroke-width="1.6"/>
+            <circle cx="84" cy="56" r="14" fill="none" stroke="#115e59" stroke-width="1.6"/>
+            <line x1="48" y1="34" x2="74" y2="30" stroke="#0c3d3a" stroke-width="1.4"/>
+            <line x1="48" y1="46" x2="74" y2="54" stroke="#0c3d3a" stroke-width="1.4"/>
+            <circle cx="36" cy="40" r="3" fill="#115e59"/>
+            <circle cx="84" cy="28" r="2.5" fill="#115e59"/>
+            <circle cx="84" cy="56" r="2.5" fill="#115e59"/>
+          </svg>
+        </div>
+        <div class="summary-text">
           <div class="tags">
-            <span class="tag tag-policy">Policy</span>
+            <span class="tag tag-application">Application</span>
+            <span class="tag tag-economic">Economic</span>
+          </div>
+          <h3 class="headline">Fujitsu signs Claude and ChatGPT deals in Tokyo on the same morning.</h3>
+          <p class="kicker">Fujitsu Global · 2026-05-27 · <a href="https://global.fujitsu/en-global/pr/news/2026/05/27-01" target="_blank" rel="noopener">Source ↗</a></p>
+          <p class="teaser">Fujitsu announced strategic partnerships with both Anthropic and OpenAI from its Kawasaki headquarters. About 100,000 Group employees will use Claude; a new 1,000-engineer Forward Deployed team will sell Claude-built systems to regulated Japanese industries.</p>
+          <span class="expand-control"></span>
+        </div>
+      </summary>
+      <div class="full-content">
+        <p>Fujitsu Limited used a single morning press cycle to formalize what most large Japanese systems integrators have spent the year arranging quietly: full-frontier dependencies on both Anthropic and OpenAI. The Anthropic deal was announced jointly in Kawasaki by Takahito Tokita, Fujitsu's chief executive, and Paul Smith, Anthropic's chief commercial officer. The OpenAI partnership was disclosed simultaneously through Fujitsu's corporate channels. Both are framed as multi-year commercial agreements with two operative components: Fujitsu Group's internal use of the models across roughly 100,000 employees, and a customer-facing services business built on top.</p>
+
+        <p>The Anthropic announcement carries the more specific structure. Fujitsu will stand up a thousand-person Forward Deployed Engineer (FDE) team built around Claude, modeled on Anthropic's own FDE model that has driven much of the lab's enterprise penetration over the past eighteen months. Those engineers will be embedded into customer environments in finance, healthcare, defense, government and critical-infrastructure operations. Fujitsu's existing AI platform, Kozuchi, and its Takane large language model, developed jointly with Cohere, remain in the catalog. Claude joins as the frontier-tier option for tasks that need the most capable reasoning available.</p>
+
+        <h4>Why Japan, why now</h4>
+
+        <p>Fujitsu reported FY2026 consolidated revenue of 3.5 trillion yen, about $23 billion. It is the largest IT-services provider headquartered in Japan and one of the small number of vendors trusted by the national government on mission-critical systems. The Anthropic announcement positions Claude into precisely those environments: power generation, defense procurement, the social-security backbone. Anthropic's framing of "social infrastructure" reliability suggests it is positioning Mythos-class safety practices for the contract pipeline, even if Mythos itself remains restricted.</p>
+
+        <blockquote class="pullquote">"We see the rapid evolution and growth of AI as something that must be swiftly implemented in society." <cite>— Takahito Tokita, Fujitsu CEO</cite></blockquote>
+
+        <p>The OpenAI deal is broader and less architecturally specific. Fujitsu will integrate OpenAI's models into its AI service portfolio and use them internally across development, operations, proposal-writing and service delivery. The press release uses the same "human and AI agents working together" framing OpenAI has been pushing in its enterprise sales motion through 2026. Fujitsu has not disclosed how it plans to route customer workloads between the two frontier providers, beyond saying both are now part of the supported menu.</p>
+
+        <h4>The dual-vendor pattern</h4>
+
+        <p>Fujitsu's dual signing fits a pattern that has become the default for large enterprise buyers this year. The biggest customers no longer pick a single frontier provider. They pick two and route based on cost, latency and capability per task. SAP did the same with Anthropic and OpenAI in May. Salesforce, ServiceNow and Workday have all moved to multi-frontier architectures. The losing position is the single-provider lock-in. The winning position, for the labs, is being on the menu.</p>
+
+        <p>For Anthropic, the deal extends a string of Asia-Pacific commercial wins. The Tokyo announcement comes one day after Anthropic disclosed its Seoul office and Korea Representative Director appointment. Japan and Korea are the two highest per-capita Claude markets outside the US, and both are markets where regulated industries pay a premium for vendor diligence on safety and reliability. The Fujitsu agreement, with its explicit cybersecurity-of-critical-infrastructure positioning, is the largest Japanese enterprise contract Anthropic has disclosed publicly.</p>
+
+        <p class="source-footer"><a class="source-link" href="https://global.fujitsu/en-global/pr/news/2026/05/27-01" target="_blank" rel="noopener">Read source →</a></p>
+      </div>
+    </details>
+
+    <!-- STORY 3: Altman walks back jobs apocalypse / Olah dissents -->
+    <details class="story" data-tags="trend economic">
+      <summary>
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <rect width="120" height="80" fill="#d2ebe7" opacity="0.35"/>
+            <line x1="20" y1="55" x2="100" y2="55" stroke="#0c3d3a" stroke-width="1" opacity="0.4"/>
+            <path d="M28 50 L48 30 L48 25" stroke="#115e59" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <polygon points="42,25 48,18 54,25" fill="#115e59"/>
+            <path d="M92 50 L72 64 L72 69" stroke="#115e59" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <polygon points="66,69 72,76 78,69" fill="#115e59"/>
+            <circle cx="60" cy="42" r="3" fill="#0c3d3a"/>
+          </svg>
+        </div>
+        <div class="summary-text">
+          <div class="tags">
             <span class="tag tag-trend">Trend</span>
+            <span class="tag tag-economic">Economic</span>
           </div>
-          <h3 class="headline">Beijing widens overseas-travel curbs for top AI staff at Alibaba and DeepSeek.</h3>
-          <p class="kicker">Bloomberg · 2026-05-26 · <a href="https://www.bloomberg.com/news/articles/2026-05-26/china-expands-travel-curbs-to-top-ai-talent-at-private-firms" target="_blank" rel="noopener">Source ↗</a></p>
-          <p class="teaser">Founders, researchers, and senior engineers working on frontier AI must now seek government approval before going overseas. The list of affected names is set by national-tech relevance, not job title.</p>
+          <h3 class="headline">Altman concedes the AI jobs apocalypse hasn't arrived. Anthropic disagrees from Rome.</h3>
+          <p class="kicker">Axios · 2026-05-27 · <a href="https://www.axios.com/2026/05/27/ai-hype-doom-openai-anthropic" target="_blank" rel="noopener">Source ↗</a></p>
+          <p class="teaser">OpenAI's chief executive said he was "delighted to be wrong" about entry-level white-collar elimination. Anthropic co-founder Chris Olah, speaking at the Vatican two days earlier, restated the company's view that large-scale labor displacement remains imminent. Software-engineering job postings on Indeed are up 18 percent year-on-year.</p>
           <span class="expand-control"></span>
-        </summary>
-        <div class="full-content">
-          <p>China has extended a passport-control regime previously aimed at DeepSeek's leadership to AI staff across private firms, including Alibaba's Qwen team, Bloomberg reported on May 26. Founders, principal researchers, and senior engineers working on advanced AI must now obtain government approval before traveling abroad, with the determination based on the strategic value of an individual's work rather than their formal title. Two co-founders of agent-startup Manus were already blocked from leaving the country earlier in the year, presaging the wider rule.</p>
-
-          <p>The architecture of the policy is what makes it consequential. Until now Western reporting treated Beijing's AI-talent controls as a niche measure aimed at one or two state-sensitive labs. Folding Alibaba, DeepSeek, and (per the reporting) a handful of other private-sector frontier teams into the same regime turns it into a quasi-industrial-policy instrument: the government decides which AI workers carry national-priority knowledge and which can negotiate in the open labor market. Neither Alibaba nor DeepSeek has commented, and the State Council has not publicized the rule.</p>
-
-          <p>The move parallels the export-control posture the US has tightened around frontier chips and weights. With the EU AI Act becoming fully applicable on August 2 and Washington's own Center for AI Standards and Innovation onboarding Google, Microsoft, and xAI for pre-deployment evaluations as of early May, the three large blocs are now treating AI capability as a state asset rather than a private-sector product. The practical effect for multinationals: hiring or partnering with senior researchers based in mainland China just gained an additional layer of regulatory uncertainty around international travel and conference attendance.</p>
-
-          <p class="source-footer"><a class="source-link" href="https://en.cryptonomist.ch/2026/05/26/china-ai-travel-restrictions/" target="_blank" rel="noopener">Read source →</a></p>
-          <em class="paywall-note">(Primary Bloomberg article paywalled; details above triangulate with Cryptonomist, Business Recorder, and Business Standard summaries.)</em>
         </div>
-      </details>
+      </summary>
+      <div class="full-content">
+        <p>The two best-resourced frontier labs in the United States now hold publicly opposite positions on AI's near-term effect on employment. Sam Altman, OpenAI's chief executive, told reporters this week that the jobs apocalypse he and others had publicly anticipated has not materialized in any visible labor-market data. Chris Olah, Anthropic's co-founder and the company's head of interpretability research, used a Vatican stage on Sunday to argue that the absence of an obvious crisis does not mean it is not coming.</p>
 
-      <!-- STORY 2: Anthropic acquires Stainless -->
-      <details class="story" data-tags="economic tech">
-        <summary>
+        <blockquote class="pullquote">"I'm delighted to be wrong about this. I thought there would have been more impact on entry-level white-collar jobs being eliminated by now than has actually happened." <cite>— Sam Altman, OpenAI CEO</cite></blockquote>
+
+        <p>The numbers Altman cited support his framing in the short term. Software-engineering openings on Indeed are up 18 percent year-on-year, against an overall job-listings drop of 4.3 percent. LinkedIn's chief economist has counted roughly 1.3 million new AI-related job postings over the period. US unemployment has ticked up modestly since 2023, but the rise has concentrated in sectors with the lowest AI exposure, not the highest. Software jobs, the bellwether category most often used as the proof-of-displacement story, are running counter to the doom forecast.</p>
+
+        <h4>Anthropic's position</h4>
+
+        <p>Olah did not address Altman directly, but the framing of his Vatican remarks made the disagreement explicit. Speaking at the launch of Pope Leo XIV's encyclical Magnifica Humanitas, Olah said the field has a duty to take seriously the prospect of large-scale labor displacement even while incentives push everyone in the room toward optimism. The remarks restated language that Anthropic chief executive Dario Amodei has used through 2025, including the much-quoted prediction that half of entry-level white-collar jobs could be automated within five years.</p>
+
+        <blockquote class="pullquote">"There is a real possibility that AI will displace human labor at very large scale." <cite>— Chris Olah, Anthropic co-founder</cite></blockquote>
+
+        <p>The reframing of Anthropic's labor narrative away from product marketing and into Catholic moral philosophy is part of the company's broader positioning. Olah described frontier labs, Anthropic included, as operating inside incentive structures that occasionally conflict with doing the right thing. He named the need for external constituencies, including religious institutions, to "say hard things" the labs cannot. The encyclical and Olah's remarks together set up an explicit external check on the field that did not exist three months ago.</p>
+
+        <h4>The IPO context</h4>
+
+        <p>Both labs are heading toward exits. OpenAI is reportedly targeting a fourth-quarter 2026 IPO that would value the company near $1 trillion. Anthropic is rumored to be approaching its first profitable quarter on a $10.9 billion Q2 revenue run rate. Public-market posture matters more than usual. Telling potential retail investors that the technology you are selling will destroy their jobs is a hard pitch. Altman's pivot away from earlier doom rhetoric, which Fortune's Sharon Goldman characterized as walking back the "AI jobs apocalypse" line, is consistent with that read.</p>
+
+        <p>Other named voices weighed in. Commonwealth Bank of Australia chief executive Matt Comyn said the bank's productivity gains from AI deployments have so far been concentrated in software development and call-center work, not white-collar cognitive labor at scale. Uber chief operating officer Andrew Macdonald said the company has yet to identify a clean causal link between AI investment and headcount reduction. Sophia Velastegui, Microsoft's former chief AI officer, argued that the labor-impact lag is shorter than the public narrative assumes and that 2027 will be a different conversation.</p>
+
+        <p>Meta cut roughly 8,000 staff this month, citing efficiency. Coinbase, Block, Pinterest and Shopify have all tied restructuring decisions to AI-driven productivity. None of those cuts are visible in the aggregate national data yet, which is the data Altman pointed at to make his case. The disagreement between Altman and Olah is not a disagreement about whether AI will eventually transform the labor market. It is a disagreement about whether the curve has already bent.</p>
+
+        <p class="source-footer"><a class="source-link" href="https://www.axios.com/2026/05/27/ai-hype-doom-openai-anthropic" target="_blank" rel="noopener">Read source →</a></p>
+      </div>
+    </details>
+
+    <!-- STORY 4: Anthropic Korea -->
+    <details class="story" data-tags="economic application">
+      <summary>
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <rect width="120" height="80" fill="#d2ebe7" opacity="0.35"/>
+            <g stroke="#115e59" stroke-width="1.4" fill="none">
+              <circle cx="60" cy="40" r="22"/>
+              <line x1="60" y1="18" x2="60" y2="22"/>
+              <line x1="60" y1="58" x2="60" y2="62"/>
+              <line x1="38" y1="40" x2="42" y2="40"/>
+              <line x1="78" y1="40" x2="82" y2="40"/>
+              <line x1="44" y1="24" x2="47" y2="27"/>
+              <line x1="73" y1="53" x2="76" y2="56"/>
+              <line x1="76" y1="24" x2="73" y2="27"/>
+              <line x1="47" y1="53" x2="44" y2="56"/>
+            </g>
+            <path d="M52 36 Q60 30 68 36 Q60 44 52 36 Z" fill="#0c3d3a" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="summary-text">
           <div class="tags">
             <span class="tag tag-economic">Economic</span>
-            <span class="tag tag-tech">Tech</span>
+            <span class="tag tag-application">Application</span>
           </div>
-          <h3 class="headline">Anthropic buys Stainless for $300M-plus, taking ownership of the SDK pipeline shipping OpenAI's and Google's developer libraries.</h3>
-          <p class="kicker">TechCrunch · 2026-05-18 · <a href="https://techcrunch.com/2026/05/18/anthropic-has-acquired-the-dev-tools-startup-used-by-openai-google-and-cloudflare/" target="_blank" rel="noopener">Source ↗</a></p>
-          <p class="teaser">Stainless turns OpenAPI specs into production SDKs in Python, TypeScript, Kotlin, Go, and Java. Its customers include OpenAI, Google, Cloudflare, Replicate, and Runway. Anthropic is winding the hosted product down.</p>
+          <h3 class="headline">Anthropic opens Seoul, names Snowflake's Choi to run Korea.</h3>
+          <p class="kicker">Anthropic · 2026-05-26 · <a href="https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea" target="_blank" rel="noopener">Source ↗</a></p>
+          <p class="teaser">KiYoung Choi joins as Representative Director ahead of an in-person office opening "in the coming weeks." Korean per-capita Claude usage runs 3.5x the population-weighted baseline. SK Telecom and Law&amp;Company are the first named enterprise references.</p>
           <span class="expand-control"></span>
-        </summary>
-        <div class="full-content">
-          <p>Anthropic acquired Stainless on May 18 for a price The Information reported at more than $300 million, double the New York startup's $150 million valuation from December 2024. Stainless built an AI-powered compiler that turns an OpenAPI spec into a maintained, production-ready SDK across Python, TypeScript, Kotlin, Go, Java, and other languages. The customer roster is the punchline: Stainless ships the official client libraries that OpenAI and Google publish to developers, alongside SDKs for Cloudflare, Replicate, Runway, and dozens of smaller AI vendors. By the company's own count, around a quarter of professional software developers have used a Stainless-generated SDK or documentation site.</p>
-
-          <p>Anthropic announced it will wind down all hosted Stainless products, including the SDK generator service. Existing customers retain full rights to SDKs already generated and can keep modifying them, but the company has flagged a transition window after which the managed product disappears. For OpenAI and Google, that means the developer-facing tooling that wraps their APIs was, until last week, partly under the control of a direct frontier-lab competitor, and the wind-down now forces them to internalize, rebuild, or migrate that pipeline before the cut-off lands.</p>
-
-          <p class="pullquote">"SDKs deserve as much care as the APIs they wrap. Anthropic was one of the first teams to bet on this with us."<cite>— Alex Rattray, founder, Stainless</cite></p>
-
-          <p>The strategic logic for Anthropic is plain. Frontier-lab competition is increasingly downstream of the model itself: at the developer surface, the agent runtime, and the tooling that connects an AI to the rest of a company's stack. Owning the canonical SDK-generation pipeline lets Anthropic shape how its own MCP-style tool-use primitives and managed-agent integrations get represented in client libraries across the ecosystem. The acquisition follows Anthropic's $14 billion February raise and lands in the same week the company is reportedly closing a fresh $30 billion round at a $900 billion valuation.</p>
-
-          <p class="source-footer"><a class="source-link" href="https://techcrunch.com/2026/05/18/anthropic-has-acquired-the-dev-tools-startup-used-by-openai-google-and-cloudflare/" target="_blank" rel="noopener">Read source →</a></p>
         </div>
-      </details>
+      </summary>
+      <div class="full-content">
+        <p>Anthropic disclosed its Seoul office and the appointment of KiYoung Choi as Representative Director of Korea on Tuesday. It is the company's third commercial office in the Asia-Pacific region after Tokyo and Singapore, and the first time Anthropic has named a country lead reporting separately from the regional commercial leadership in Tokyo. Choi joins from Snowflake, where he ran the Korea business as general manager. His CV includes Google Cloud, Adobe, Autodesk and Microsoft.</p>
 
-      <!-- STORY 3: DeepMind hires Contextual AI -->
-      <details class="story" data-tags="economic policy">
-        <summary>
+        <p>The headline data point Anthropic used to justify the move: Korean users adopt Claude at roughly 3.5 times the rate the country's population would predict. That ratio is one of the highest national skews in Anthropic's internal usage data, comparable to early Singapore and Tokyo numbers and well above the equivalent figures for Western European markets. Usage is concentrated in technical and creative work — software engineering, document drafting, and creative-tools workflows — which matches the demographic skew toward Korea's developer and creative-industries base.</p>
+
+        <h4>Named customers</h4>
+
+        <p>The announcement disclosed two anchor enterprise references in market. Law&amp;Company, the legal-technology firm behind the consumer legal app LawTalk, has deployed Claude for an AI legal-assistant product targeted at Korean law practice. SK Telecom, the country's largest telecommunications operator, built a custom AI customer-service model on Claude that is now in production. Anthropic has previously named SK Telecom as a development partner; the Tuesday disclosure is the first time the company has identified the relationship as a production deployment.</p>
+
+        <blockquote class="pullquote">"Korean organizations combine technical depth with a commitment to responsible deployment, which is exactly where Anthropic operates." <cite>— KiYoung Choi, Representative Director, Anthropic Korea</cite></blockquote>
+
+        <h4>The regional play</h4>
+
+        <p>The Seoul opening lands one day before the company's Tokyo announcement with Fujitsu, putting Anthropic's two largest Asia commercial events on consecutive news days. That sequencing is intentional. Anthropic's commercial leadership has been telegraphing an Asia-first quarter for the past several months, with the Tokyo, Seoul and a planned Sydney expansion driving most of the international hiring through Q3. The company's Q2 revenue, rumored at roughly $10.9 billion annualized, has come disproportionately from enterprise contracts in markets where the regulated-industry buyer wants a vendor relationship with a local team. Seoul fits that template.</p>
+
+        <p>Choi's mandate, as described in the announcement, is fourfold: enterprise partnerships, startup engagement, government-and-research-institution outreach, and developer-community support. Senior Anthropic leadership will travel to Seoul "in the coming weeks" to open the office formally and meet customers. Hiring for the Korea team is open at anthropic.com/careers. The office will be Anthropic's tenth globally; six are in North America, three in Asia-Pacific, and one in Europe.</p>
+
+        <p class="source-footer"><a class="source-link" href="https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea" target="_blank" rel="noopener">Read source →</a></p>
+      </div>
+    </details>
+
+    <!-- STORY 5: Simon Willison PMF -->
+    <details class="story" data-tags="trend economic">
+      <summary>
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <rect width="120" height="80" fill="#d2ebe7" opacity="0.35"/>
+            <line x1="20" y1="64" x2="100" y2="64" stroke="#0c3d3a" stroke-width="1" opacity="0.4"/>
+            <line x1="20" y1="16" x2="20" y2="64" stroke="#0c3d3a" stroke-width="1" opacity="0.4"/>
+            <rect x="30" y="46" width="14" height="18" fill="#115e59" opacity="0.6"/>
+            <rect x="52" y="34" width="14" height="30" fill="#115e59" opacity="0.75"/>
+            <rect x="74" y="20" width="14" height="44" fill="#115e59"/>
+            <text x="81" y="14" font-family="Georgia, serif" font-size="9" font-weight="700" fill="#0c3d3a" text-anchor="middle">$$</text>
+          </svg>
+        </div>
+        <div class="summary-text">
           <div class="tags">
+            <span class="tag tag-trend">Trend</span>
             <span class="tag tag-economic">Economic</span>
-            <span class="tag tag-policy">Policy</span>
           </div>
-          <h3 class="headline">DeepMind pays roughly $100M to absorb the Contextual AI team. Antitrust scrutiny on acqui-hires hardens.</h3>
-          <p class="kicker">Bloomberg / Benzinga · 2026-05-19 · <a href="https://www.bloomberg.com/news/articles/2026-05-19/google-hires-staff-from-bezos-backed-contextual-ai-in-licensing-deal" target="_blank" rel="noopener">Source ↗</a></p>
-          <p class="teaser">More than 20 researchers, including co-founder and CEO Douwe Kiela, move to DeepMind in a non-exclusive licensing deal that avoids triggering a merger filing. DOJ leadership has now flagged the pattern as a red flag.</p>
+          <h3 class="headline">A developer reads the receipts: Anthropic and OpenAI have product-market fit.</h3>
+          <p class="kicker">Simon Willison · 2026-05-27 · <a href="https://simonwillison.net/2026/May/27/product-market-fit/" target="_blank" rel="noopener">Source ↗</a></p>
+          <p class="teaser">Willison adds up his own thirty-day API spend at the two labs, $2,180 against the $200 he paid in subscription. Anthropic's Q2 2026 revenue is rumored at $10.9 billion. SpaceX is paying Anthropic $1.25 billion a month for compute through 2029.</p>
           <span class="expand-control"></span>
-        </summary>
-        <div class="full-content">
-          <p>Google DeepMind agreed on May 19 to license technology from retrieval-augmented-generation pioneer Contextual AI and to hire more than 20 of its researchers, including co-founder and CEO Douwe Kiela. Bloomberg pegged the total value at $80–90 million, with other sources reporting figures up to $100 million. The shape of the deal, licensing plus hiring rather than an outright purchase, keeps Alphabet outside the merger-review process while delivering the same operational result: Contextual's RAG and grounded-reasoning bench joins DeepMind's research org, and Contextual AI continues as a shell entity for its remaining customers.</p>
-
-          <p>The structural choice is the same template Google used for its 2025 Windsurf deal (about $2.4 billion in licensing fees) and its 2024 Character.AI arrangement, and that Nvidia used for its absorption of part of the Groq team. Acting Assistant Attorney General Omeed Assefi has now characterized that pattern as a potential "red flag" for antitrust enforcement, signaling that DOJ may treat licensing-plus-talent transactions as functional mergers when reviewers look at concentration effects in the AI labor market.</p>
-
-          <p>Contextual AI's investors include Greycroft, Bain Capital Ventures, and Lightspeed; the team had raised an $80 million Series A in 2024 and has been backed by Jeff Bezos, per separate StartupHub.ai reporting on what it calls "four labs, four acquisitions in five days." The week of May 18 alone saw similar arrangements from Anthropic (Stainless), Mistral, and Meta. The pattern is a consolidation cycle that is real, sizeable, and almost entirely invisible to standard merger trackers. For investors, the read is that the absence of headline AI acquisitions does not mean the consolidation phase has not arrived.</p>
-
-          <p class="source-footer"><a class="source-link" href="https://www.benzinga.com/markets/tech/26/05/52681185/google-deepmind-contextual-ai-talent-antitrust-scrutiny" target="_blank" rel="noopener">Read source →</a></p>
-          <em class="paywall-note">(Primary Bloomberg article paywalled; details triangulated from Benzinga, Seeking Alpha, and StartupHub.ai.)</em>
         </div>
-      </details>
+      </summary>
+      <div class="full-content">
+        <p>Simon Willison published a post on Wednesday arguing that, after two years of skepticism about whether anyone would pay real money for the cost of running large language models at scale, the data finally points in one direction. Anthropic and OpenAI have both demonstrated product-market fit on enterprise developer tooling specifically, and the revenue numbers are now too large for the field's "this won't last" argument to hold up.</p>
 
-      <!-- STORY 4: Penn light-matter computing -->
-      <details class="story" data-tags="tech">
-        <summary>
-          <div class="tags">
-            <span class="tag tag-tech">Tech</span>
-          </div>
-          <h3 class="headline">Penn physicists switch logic with light at four femtojoules, a step toward optical AI hardware.</h3>
-          <p class="kicker">Penn Today · 2026-05-18 · <a href="https://penntoday.upenn.edu/news/making-light-work-computing" target="_blank" rel="noopener">Source ↗</a></p>
-          <p class="teaser">Bo Zhen's group demonstrated all-light signal switching using exciton-polariton quasiparticles, at roughly four quadrillionths of a joule per operation. The work was published in Physical Review Letters.</p>
-          <span class="expand-control"></span>
-        </summary>
-        <div class="full-content">
-          <p>A group at the University of Pennsylvania led by Bo Zhen, Jin K. Lee Presidential Associate Professor of Physics and Astronomy, has demonstrated an all-light logic switch with an energy cost of approximately four femtojoules (four quadrillionths of a joule) per operation. The work, published in Physical Review Letters on April 23 and amplified by Penn Today and ScienceDaily in mid-May, relies on exciton-polaritons: hybrid light-matter quasiparticles formed when photons couple strongly with electrons in an atomically thin semiconductor inside a nanoscale optical cavity.</p>
+        <p>The most readable part of the piece is the back-of-the-envelope math Willison ran on his own usage. Over thirty days, his Claude Code usage at the API-equivalent rate was $1,199.79. His Codex usage was $980.37. Total fair-cost: $2,180.16. He pays $200 a month for the two subscriptions combined. Anthropic and OpenAI both changed their pricing in April. OpenAI moved Codex to API-token billing on April 2, 2026. Anthropic adjusted its enterprise plan in November 2025 to $20-per-seat plus usage-based fees, and tightened further in April.</p>
 
-          <p>The physics matters because of what it removes. Conventional photonic computing is fast and cheap for moving data, but every time a system needs a nonlinear operation (the choice points at the core of any logic or activation function) it has to convert the photon signal back into electrons, perform the switch, and convert back. That round-trip is where most of the energy goes. By making the photons themselves interact strongly enough to switch each other, the Penn group sidesteps the conversion entirely and pushes the per-operation energy budget orders of magnitude below what a small LED would draw.</p>
+        <blockquote class="pullquote">"I burned through $2,180 of token usage on a $200 subscription this month. That difference is the product-market fit." <cite>— Simon Willison, paraphrased</cite></blockquote>
 
-          <p class="pullquote">"Because they are charge-neutral and have zero rest mass, photons can carry information quickly over long distances with minimal loss."<cite>— Li He, co-first author</cite></p>
+        <h4>The revenue picture</h4>
 
-          <p>The headline use case is AI hardware. A photonic chip that can do both linear data transport and nonlinear activation in the same medium would let processors handle camera, lidar, and sensor input without repeated electronic conversions. Energy use of large model training is the bottleneck the field is most willing to spend capital on; if exciton-polariton switching scales, the multiplicative effect on data-center power is what makes the result worth tracking past its lab milestone. The Penn group, with co-authors Li He, Zhi Wang, and Bumho Kim, has not yet announced a foundry partner.</p>
+        <p>Anthropic is reportedly headed to its first profitable quarter in Q2 2026, on a revenue run rate that internal sources have placed near $10.9 billion. Coding-agent customers are a disproportionate share of that. Cursor and GitHub Copilot together accounted for $1.2 billion of Anthropic's roughly $4 billion in revenue as of August 2025. The category has only grown since. The SpaceX-Anthropic compute agreement, disclosed earlier in May, contracts Anthropic for $1.25 billion a month in capacity from SpaceX's Colossus and Colossus II clusters through May 2029. That is a multi-year billion-dollar commitment to inference scale that only makes sense if the revenue continues to compound.</p>
 
-          <p class="source-footer"><a class="source-link" href="https://penntoday.upenn.edu/news/making-light-work-computing" target="_blank" rel="noopener">Read source →</a></p>
+        <p>OpenAI's numbers are larger by every measure. ChatGPT crossed 900 million weekly active users in February, with 50 million paying subscribers. The April Codex pricing change appears to have moved aggressive Codex users onto bills more aligned to actual cost. Willison's reading is that this rebalancing, painful for individual power users in the short term, is the visible signal of a business that has graduated from subsidized growth to genuine unit economics.</p>
+
+        <h4>The hiring signal</h4>
+
+        <p>The most-cited evidence beyond the revenue figures is the open-roles data. OpenAI has 703 open positions, of which roughly 230 are enterprise-focused. Anthropic has 390 open positions, of which roughly 105 are enterprise-focused. The fact that one-quarter to one-third of all hiring at both companies is dedicated to commercial deployment, not research, is the structural sign of a business converting research output into recurring revenue. Two years ago that ratio was inverted at both companies.</p>
+
+        <p>The Willison post sits inside a larger set of evidence accumulating this quarter. Cognition's $1 billion round on Wednesday, Fujitsu's Tokyo deal the same morning, the Pope's encyclical and the Olah-vs-Altman labor debate are all downstream of the same underlying fact pattern: enterprise customers are now writing nine-figure annual checks for frontier-model inference, the unit economics are positive at sufficient scale, and the labs are competing for share of a real budget. Willison's framing is not that the future is settled. It is that the question of whether anyone would pay can be retired.</p>
+
+        <p class="source-footer"><a class="source-link" href="https://simonwillison.net/2026/May/27/product-market-fit/" target="_blank" rel="noopener">Read source →</a></p>
+      </div>
+    </details>
+
+    <!-- STORY 6: Pope Leo XIV encyclical -->
+    <details class="story" data-tags="policy safety">
+      <summary>
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <rect width="120" height="80" fill="#d2ebe7" opacity="0.35"/>
+            <g stroke="#115e59" stroke-width="1.6" fill="none">
+              <circle cx="60" cy="40" r="22"/>
+            </g>
+            <g stroke="#0c3d3a" stroke-width="2" stroke-linecap="round">
+              <line x1="60" y1="26" x2="60" y2="54"/>
+              <line x1="50" y1="36" x2="70" y2="36"/>
+            </g>
+            <g fill="#115e59">
+              <circle cx="35" cy="20" r="1.6"/>
+              <circle cx="86" cy="22" r="1.6"/>
+              <circle cx="30" cy="58" r="1.6"/>
+              <circle cx="90" cy="58" r="1.6"/>
+            </g>
+          </svg>
         </div>
-      </details>
-
-      <!-- STORY 5: Nvidia earnings -->
-      <details class="story" data-tags="economic tech">
-        <summary>
-          <div class="tags">
-            <span class="tag tag-economic">Economic</span>
-            <span class="tag tag-tech">Tech</span>
-          </div>
-          <h3 class="headline">Nvidia books $75.2B of data-center revenue in a single quarter, and guides Q2 to $91B.</h3>
-          <p class="kicker">CNBC · 2026-05-20 · <a href="https://www.cnbc.com/2026/05/20/nvidia-nvda-earnings-report-q1-2027.html" target="_blank" rel="noopener">Source ↗</a></p>
-          <p class="teaser">Total Q1 FY27 revenue hit $81.6 billion, up 85% year-on-year. Data center alone rose 92% to $75.2 billion, with hyperscalers at $38B and the rest split across AI clouds, industrial, and enterprise.</p>
-          <span class="expand-control"></span>
-        </summary>
-        <div class="full-content">
-          <p>Nvidia reported total revenue of $81.6 billion for the first quarter of fiscal 2027, the three months ending April 26, up 85% year on year and ahead of consensus at $78.8 billion. Data-center revenue alone reached $75.2 billion, up 92% on the year and 21% sequentially, driven by the ramp of Blackwell 300 (B300) parts and continued demand for InfiniBand, Spectrum-X Ethernet, and NVLink. Net income hit a quarterly record of $58.3 billion, adjusted EPS came in at $1.87 against a $1.76 consensus, and the company raised its quarterly cash dividend twenty-five-fold from one cent to twenty-five cents while authorizing an additional $80 billion share repurchase.</p>
-
-          <p>The customer-mix detail is the most readable part of the print. Hyperscalers (Amazon, Microsoft, Google, Oracle, Meta, and now CoreWeave at scale) accounted for $38 billion, up 12% sequentially. The remainder, $37.4 billion across AI clouds, industrial customers, and enterprise, grew 31% sequentially and 74% year on year. The accelerating share of the non-hyperscaler bucket is the chart Nvidia wants investors to look at: it signals that frontier-model training is no longer the only thing buying Blackwell, and that inference deployments at sovereign clouds, financial-services labs, and large enterprises are catching up to the cap-ex cycle.</p>
-
-          <p>Guidance for Q2 FY27 lands at roughly $91 billion in revenue plus or minus 2%, which would imply the data-center segment alone clearing $85 billion. The stock dipped on the print despite the beat, with analysts citing valuation discipline at roughly 30× forward earnings rather than any softness in demand. Nvidia's market cap has crossed $5.2 trillion. The bottleneck the company continues to flag is not orders but TSMC CoWoS packaging capacity, which throttles how many B300 and Rubin parts the company can ship before the calendar Q4 holiday wave.</p>
-
-          <p class="source-footer"><a class="source-link" href="https://www.cnbc.com/2026/05/20/nvidia-nvda-earnings-report-q1-2027.html" target="_blank" rel="noopener">Read source →</a></p>
-        </div>
-      </details>
-
-      <!-- STORY 6: Publishers v Meta -->
-      <details class="story" data-tags="policy safety">
-        <summary>
+        <div class="summary-text">
           <div class="tags">
             <span class="tag tag-policy">Policy</span>
             <span class="tag tag-safety">Safety</span>
           </div>
-          <h3 class="headline">Hachette, Macmillan, Elsevier and Scott Turow sue Meta over Llama training on pirated books.</h3>
-          <p class="kicker">The Washington Post · 2026-05-05 · <a href="https://www.washingtonpost.com/national-security/2026/05/05/publishers-sue-meta-ai-copyright/" target="_blank" rel="noopener">Source ↗</a></p>
-          <p class="teaser">A class-action filed in San Francisco names Mark Zuckerberg personally and accuses Meta of training Llama on millions of titles copied from LibGen and Anna's Archive. The case lands after the Anthropic settlement reset the fair-use boundary.</p>
+          <h3 class="headline">Pope Leo XIV's first encyclical calls for AI "disarmament."</h3>
+          <p class="kicker">Vatican News · 2026-05-25 · <a href="https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-magnifica-humanitas-presentation-ai-disarmament.html" target="_blank" rel="noopener">Source ↗</a></p>
+          <p class="teaser">Magnifica Humanitas, signed May 15 and released May 25, is the first papal encyclical devoted to AI. It condemns lethal autonomous weapons, names AI as a test of human dignity, and was launched alongside remarks by Anthropic co-founder Chris Olah.</p>
           <span class="expand-control"></span>
-        </summary>
-        <div class="full-content">
-          <p>A coalition of publishing houses (Hachette, Macmillan, McGraw Hill, Elsevier, and Cengage) joined bestselling novelist and former Authors Guild president Scott Turow on May 5 in a class-action lawsuit against Meta Platforms and CEO Mark Zuckerberg. The complaint alleges that Meta knowingly trained successive Llama models on copies of millions of books and journal articles sourced from the pirate libraries LibGen, Z-Library, and Anna's Archive, and that internal communications surfaced in earlier discovery show Meta engineers explicitly debating the legal exposure before proceeding.</p>
-
-          <p>The case lands at an inflection point in the law. The class-action authors' suit against Anthropic ruled that training on copyrighted books can be fair use, but that storing pirated copies is not. The settlement ultimately rang in at $1.5 billion. Thomson Reuters v. Ross Intelligence, meanwhile, found that Ross's use of Westlaw headnotes was not fair use and is now on appeal. Federal judges are converging on a two-step test: courts now look first at how training data was sourced, and second at whether the AI's outputs reproduce protected expression.</p>
-
-          <p>For Meta the stakes are concrete. Llama is the largest open-weight model family in active circulation, with downloads in the tens of millions through Hugging Face. A settlement on Anthropic's scale would not threaten Meta's solvency but would set a precedent that any model trained on un-licensed scanned books carries a per-title liability. The plaintiffs are seeking statutory damages of up to $150,000 per infringed work plus injunctive relief that could require Meta to retrain or filter the affected model checkpoints. Discovery is expected to focus on the chain of custody by which the LibGen corpus entered Meta's training pipeline.</p>
-
-          <p class="source-footer"><a class="source-link" href="https://www.npr.org/2026/05/05/nx-s1-5812623/scott-turow-meta-lawsuit" target="_blank" rel="noopener">Read source →</a></p>
         </div>
-      </details>
+      </summary>
+      <div class="full-content">
+        <p>Pope Leo XIV signed his first encyclical, Magnifica Humanitas, on May 15, 2026. The Vatican released it publicly on May 25, exactly 135 years to the day after Pope Leo XIII signed Rerum Novarum, the foundational document of modern Catholic social teaching on workers' rights. The choice of date and the choice of name were deliberate. The new pope, who took the regnal name Leo specifically as a tribute to his predecessor's social-doctrine legacy, has now placed the question of human dignity in the age of artificial intelligence into the same magisterial lineage as the Catholic Church's nineteenth-century response to industrial capitalism.</p>
 
-      <!-- STORY 7: Gemini API breaking change -->
-      <details class="story" data-tags="tech">
-        <summary>
+        <p>The document is addressed "to all the Catholic faithful, to all Christians and to men and women of goodwill." It runs to encyclical-standard length and is structured as a development of Catholic social teaching in light of AI, situating new questions about labor, identity, truth and the common good within the tradition that runs from Rerum Novarum through John Paul II's Centesimus Annus to Francis's Laudato Si'.</p>
+
+        <h4>The argument</h4>
+
+        <p>The encyclical names the now-familiar set of AI-era concerns: job insecurity, manipulation of information, privacy violations, ideological bias, lethal autonomous weapons, and the futuristic prospect of an "enhanced human being." Where it goes further than prior Vatican statements is in identifying a deeper anthropological danger underneath the policy menu: that human beings, in adopting AI, may begin to see themselves and one another as something to be perfected or surpassed.</p>
+
+        <blockquote class="pullquote">"If the human being is treated as something to be perfected or surpassed, it becomes easier to accept that some lives are less useful, less desirable or less worthy." <cite>— Pope Leo XIV, Magnifica Humanitas</cite></blockquote>
+
+        <p>The document calls for what Pope Leo describes as the "disarmament" of AI, specifically condemning lethal autonomous weapons systems and asking states to renounce them. It pairs that condemnation with a separate apology, addressed to the historical record, for the Catholic Church's delayed condemnation of slavery, drawing a deliberate parallel between the moral pattern of late institutional response and the present moment.</p>
+
+        <h4>Anthropic's response from the Vatican</h4>
+
+        <p>The encyclical's public launch on May 25 included remarks by Chris Olah, Anthropic's co-founder. Olah used the platform to acknowledge that frontier AI labs, his own included, operate inside incentives and constraints that can sometimes conflict with the right course of action. He named the need for "people outside those incentives" who are willing to say hard things.</p>
+
+        <blockquote class="pullquote">"Every frontier AI lab, including Anthropic, operates inside a set of incentives and constraints that can sometimes conflict with doing the right thing. It is enormously important that there be people outside those incentives who are willing to say hard things." <cite>— Chris Olah, Anthropic co-founder</cite></blockquote>
+
+        <p>Olah's remarks framed three discernment questions the Church might productively press on: duty to the global poor and to displaced workers; the moral imagination of what human flourishing actually requires; and the harder question of what AI models are, internally, in their grown-from-data architecture.</p>
+
+        <blockquote class="pullquote">"They are grown, on a structure roughly modeled after the brain, on an enormous inheritance of human thought. We find internal states that functionally mirror joy, satisfaction, fear, grief, and unease. I don't know what that means." <cite>— Chris Olah, Anthropic co-founder</cite></blockquote>
+
+        <h4>What it changes</h4>
+
+        <p>The encyclical does not move policy in any government this week. What it does is move the moral framing. The Church's positions on labor (Rerum Novarum), capitalism (Centesimus Annus) and ecology (Laudato Si') have, over the long arc, shaped not just Catholic moral teaching but secular policy debates in countries with large Catholic populations. Magnifica Humanitas is the first major institutional moral framework that treats the question "what should AI not be allowed to do" as a question of human dignity rather than a question of competitiveness or technical risk. That reframing has long-term political effects that the immediate news cycle understates.</p>
+
+        <p class="source-footer"><a class="source-link" href="https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-magnifica-humanitas-presentation-ai-disarmament.html" target="_blank" rel="noopener">Read source →</a></p>
+      </div>
+    </details>
+
+    <!-- STORY 7: Trump scraps AI EO -->
+    <details class="story" data-tags="policy">
+      <summary>
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <rect width="120" height="80" fill="#d2ebe7" opacity="0.35"/>
+            <rect x="40" y="18" width="40" height="50" fill="none" stroke="#115e59" stroke-width="1.6"/>
+            <line x1="46" y1="28" x2="74" y2="28" stroke="#0c3d3a" stroke-width="1"/>
+            <line x1="46" y1="36" x2="74" y2="36" stroke="#0c3d3a" stroke-width="1"/>
+            <line x1="46" y1="44" x2="68" y2="44" stroke="#0c3d3a" stroke-width="1"/>
+            <line x1="46" y1="52" x2="70" y2="52" stroke="#0c3d3a" stroke-width="1"/>
+            <line x1="32" y1="14" x2="88" y2="74" stroke="#0c3d3a" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="summary-text">
+          <div class="tags">
+            <span class="tag tag-policy">Policy</span>
+          </div>
+          <h3 class="headline">Trump cancels AI executive order signing hours before the Oval ceremony.</h3>
+          <p class="kicker">CNBC · 2026-05-21 · <a href="https://www.cnbc.com/2026/05/21/trump-ai-executive-order-postponed.html" target="_blank" rel="noopener">Source ↗</a></p>
+          <p class="teaser">Tech, AI and cyber CEOs were already invited. The order would have directed federal agencies to shore up cybersecurity and work with the frontier labs on voluntary pre-deployment testing. Trump said he didn't like "certain aspects" and feared the order could dull the US lead over China.</p>
+          <span class="expand-control"></span>
+        </div>
+      </summary>
+      <div class="full-content">
+        <p>President Donald Trump scrapped a planned Oval Office signing ceremony for a federal artificial-intelligence executive order on the afternoon it was scheduled, telling reporters he had not liked "certain aspects" of the order's text and that he was concerned it could undermine the United States' competitive lead over China. Major technology, AI and cybersecurity executives had already been invited to the White House to attend the signing. Most of them learned the event was off only hours before they were due to arrive.</p>
+
+        <p>The order, in the form circulated to the agencies that had drafted it, would have done two main things. It would have directed federal agencies to shore up cybersecurity defenses in line with new AI threat modeling. And it would have set up a voluntary framework under which the leading US frontier AI labs would submit advanced models for pre-deployment testing by the Center for AI Standards and Innovation and other federal evaluators. Three of those labs — Google DeepMind, Microsoft and xAI — had already publicly agreed earlier in May to a parallel set of pre-deployment agreements with the same agency.</p>
+
+        <blockquote class="pullquote">"I didn't like certain aspects of it. I don't want to do anything that would interfere with our competitive position in AI." <cite>— Donald Trump, US President, to reporters on May 21</cite></blockquote>
+
+        <h4>The internal split</h4>
+
+        <p>The pulled signing is the most public sign of an internal disagreement inside the Trump White House between two factions on AI policy. One side, associated with the AI and cybersecurity offices, has been pushing for pre-deployment testing, voluntary safety commitments and a public-private partnership posture inherited and adapted from earlier executive efforts. The other side, drawing on the "America First" framing the president himself prefers, argues that any constraint on US frontier labs hands an advantage to Chinese competitors and should be avoided.</p>
+
+        <p>The order's drafters had worked through several months of revisions to satisfy both factions. The May 21 cancellation suggests the result did not satisfy either. The president told reporters he had reviewed the final text and decided he could not put his name to it without risking what he characterized as the country's strategic lead in AI. The order has not been formally withdrawn from circulation. White House officials told reporters it could return in revised form.</p>
+
+        <h4>What was lined up</h4>
+
+        <p>The voluntary pre-deployment-testing piece of the order would have formalized agreements that already exist on paper. The Center for AI Standards and Innovation announced in early May that it had reached pre-deployment testing arrangements with Google DeepMind, Microsoft and xAI. The order would have wrapped those agreements into a federal framework and pulled additional labs in. Anthropic and OpenAI, both notably absent from the May announcement, would have been the most obvious additions.</p>
+
+        <p>The cybersecurity component would have directed civilian federal agencies to update threat models in light of capabilities demonstrated by recent frontier models, including the capabilities that led Anthropic to restrict Claude Mythos Preview behind its Project Glasswing access program. That order would have been one of the few US federal policy moves explicitly tied to a specific frontier-model capability. Its delay leaves federal cybersecurity guidance running roughly six months behind the public state of the art.</p>
+
+        <p class="source-footer"><a class="source-link" href="https://www.cnbc.com/2026/05/21/trump-ai-executive-order-postponed.html" target="_blank" rel="noopener">Read source →</a></p>
+      </div>
+    </details>
+
+    <!-- STORY 8: NextEra / Dominion -->
+    <details class="story" data-tags="economic">
+      <summary>
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <rect width="120" height="80" fill="#d2ebe7" opacity="0.35"/>
+            <g stroke="#115e59" stroke-width="1.6" fill="none">
+              <line x1="22" y1="62" x2="36" y2="22"/>
+              <line x1="50" y1="62" x2="36" y2="22"/>
+              <line x1="22" y1="62" x2="50" y2="62"/>
+              <line x1="28" y1="46" x2="44" y2="46"/>
+              <line x1="32" y1="36" x2="40" y2="36"/>
+              <line x1="70" y1="62" x2="84" y2="22"/>
+              <line x1="98" y1="62" x2="84" y2="22"/>
+              <line x1="70" y1="62" x2="98" y2="62"/>
+              <line x1="76" y1="46" x2="92" y2="46"/>
+              <line x1="80" y1="36" x2="88" y2="36"/>
+            </g>
+            <line x1="36" y1="22" x2="84" y2="22" stroke="#0c3d3a" stroke-width="1.4"/>
+            <circle cx="60" cy="22" r="3" fill="#115e59"/>
+          </svg>
+        </div>
+        <div class="summary-text">
+          <div class="tags">
+            <span class="tag tag-economic">Economic</span>
+          </div>
+          <h3 class="headline">NextEra buys Dominion for $67B to feed Virginia's AI data centers.</h3>
+          <p class="kicker">CNBC · 2026-05-18 · <a href="https://www.cnbc.com/amp/2026/05/18/nextera-nee-dominion-energy-d-data-center-ai.html" target="_blank" rel="noopener">Source ↗</a></p>
+          <p class="teaser">All-stock combination creates the largest regulated utility in the world, serving roughly 10 million homes and businesses in the southeastern US. Closing expected in 12-18 months pending state, federal and shareholder approval.</p>
+          <span class="expand-control"></span>
+        </div>
+      </summary>
+      <div class="full-content">
+        <p>NextEra Energy agreed to acquire Dominion Energy in an all-stock transaction valued at approximately $67 billion, the companies disclosed on May 18. The combined entity would be the largest regulated utility business in the world, serving roughly 10 million homes and businesses across Florida, North Carolina, South Carolina and Virginia. The deal is expected to close in 12 to 18 months pending approval from state utility commissions, federal regulators and shareholders of both companies.</p>
+
+        <p>The strategic rationale is one number: data centers. Dominion is the regulated utility that serves Northern Virginia, the largest concentration of data center capacity on the planet. NextEra is the country's largest developer of regulated and merchant renewable generation. Combining the two creates a single counterparty that can underwrite the generation, transmission and grid-interconnect capacity that hyperscalers need to keep building Virginia data centers at the pace AI workloads demand.</p>
+
+        <h4>The demand picture</h4>
+
+        <p>US electricity consumption is growing at its fastest pace in decades, with the steepest growth concentrated in data center load. AI data centers alone are projected to consume between 15 and 25 percent of total US electricity demand by 2030. Northern Virginia's data center cluster has already exceeded the available generation capacity inside Dominion's service territory; new hyperscale builds are routinely waiting on multi-year interconnection queues. The capacity shortage is the binding constraint on how fast the cloud companies can deploy the inference and training compute they have already paid Nvidia for.</p>
+
+        <blockquote class="pullquote">"America's demand for electricity is growing faster than at any point in recent memory. Data centers, manufacturing, transportation and everyday life all require more power, and that need is accelerating." <cite>— Joint NextEra-Dominion announcement</cite></blockquote>
+
+        <p>The combined company would own roughly 75 gigawatts of generation capacity at close, mixing Dominion's regulated nuclear and natural-gas fleet with NextEra's wind, solar and storage portfolio. Its regulated rate base would put it in a position to fund the multi-billion-dollar transmission build-out that Virginia needs and that Dominion alone cannot finance on its current balance sheet. The deal effectively redirects NextEra's renewable development pipeline into the load centers that need it most.</p>
+
+        <h4>The regulatory path</h4>
+
+        <p>State commission approvals will be the slow part. Virginia, North Carolina and South Carolina regulators all have to sign off on what would be one of the largest utility combinations in US history, with implications for retail electricity rates in all three states. Florida already houses NextEra's regulated subsidiary Florida Power &amp; Light, the largest electric utility in the state. The Federal Energy Regulatory Commission will need to approve the transmission-asset combinations, and the antitrust review at the Department of Justice is expected to focus narrowly on PJM Interconnection market concentration rather than on the broader merger.</p>
+
+        <p>The transaction sits inside a year of consolidation moves driven by AI power demand. Earlier in May, I Squared Capital committed up to $1 billion to a US AI inference and edge colocation data-center platform. The Nvidia-IREN agreement to deploy up to 5 gigawatts of AI infrastructure announced in April moves on the same axis. The pattern is consistent: the physical layer of AI is now where the capital is flowing, and the utility sector is being reorganized to feed it.</p>
+
+        <p class="source-footer"><a class="source-link" href="https://www.cnbc.com/amp/2026/05/18/nextera-nee-dominion-energy-d-data-center-ai.html" target="_blank" rel="noopener">Read source →</a></p>
+      </div>
+    </details>
+
+    <!-- STORY 9: Nvidia earnings -->
+    <details class="story" data-tags="tech economic">
+      <summary>
+        <div class="thumb" aria-hidden="true">
+          <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <rect width="120" height="80" fill="#d2ebe7" opacity="0.35"/>
+            <rect x="40" y="22" width="40" height="36" fill="none" stroke="#115e59" stroke-width="1.6"/>
+            <rect x="48" y="30" width="24" height="20" fill="#115e59" opacity="0.25" stroke="#0c3d3a" stroke-width="1"/>
+            <g stroke="#0c3d3a" stroke-width="1" opacity="0.7">
+              <line x1="36" y1="28" x2="40" y2="28"/>
+              <line x1="36" y1="36" x2="40" y2="36"/>
+              <line x1="36" y1="44" x2="40" y2="44"/>
+              <line x1="36" y1="52" x2="40" y2="52"/>
+              <line x1="80" y1="28" x2="84" y2="28"/>
+              <line x1="80" y1="36" x2="84" y2="36"/>
+              <line x1="80" y1="44" x2="84" y2="44"/>
+              <line x1="80" y1="52" x2="84" y2="52"/>
+              <line x1="48" y1="18" x2="48" y2="22"/>
+              <line x1="56" y1="18" x2="56" y2="22"/>
+              <line x1="64" y1="18" x2="64" y2="22"/>
+              <line x1="72" y1="18" x2="72" y2="22"/>
+              <line x1="48" y1="58" x2="48" y2="62"/>
+              <line x1="56" y1="58" x2="56" y2="62"/>
+              <line x1="64" y1="58" x2="64" y2="62"/>
+              <line x1="72" y1="58" x2="72" y2="62"/>
+            </g>
+          </svg>
+        </div>
+        <div class="summary-text">
           <div class="tags">
             <span class="tag tag-tech">Tech</span>
+            <span class="tag tag-economic">Economic</span>
           </div>
-          <h3 class="headline">Gemini API ships a breaking change to the Interactions schema, with the legacy version disappearing June 8.</h3>
-          <p class="kicker">Google AI for Developers · 2026-05-26 · <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Source ↗</a></p>
-          <p class="teaser">The new Interactions schema became the default on May 26, with the legacy schema set to be removed on June 8. Production callers get a two-week window to migrate.</p>
+          <h3 class="headline">Nvidia data-center revenue prints $75.2B, up 92% year-on-year.</h3>
+          <p class="kicker">Nvidia · 2026-05-20 · <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000051/q1fy27pr.htm" target="_blank" rel="noopener">Source ↗</a></p>
+          <p class="teaser">Q1 FY27 total revenue $81.6B (+85% YoY). Gross margins held above 74%. Board approved an additional $80B buyback and raised the dividend to $0.25 from $0.01. Blackwell 300 ramp drove the data center number.</p>
           <span class="expand-control"></span>
-        </summary>
-        <div class="full-content">
-          <p>Google flipped the Gemini API's Interactions schema to its new shape as the default on May 26, with the legacy version scheduled for full removal on June 8. The Interactions API is the surface developers use to wire Gemini into multi-step agent workflows and tool-use loops, so the change touches anything from a small Cloud Run agent up to enterprise integrations through Vertex AI and Agentspace. Google's developer documentation flagged the cut-off as a hard deadline rather than a graceful sunset: callers still on the legacy schema after June 8 will see errors, not redirects.</p>
-
-          <p>The shape of the new schema reflects where Gemini's product roadmap has landed. The redesign promotes a single Interaction object that bundles input, output, tool calls, and structured outputs together, in line with the agent-first surface Google has been building since the Antigravity platform's GA at I/O. It also normalizes how Gemini 3.5 Flash and Gemini 3.1 Flash-Lite expose their action-and-thought traces, removing a quirk that had forced agent frameworks to special-case each model variant.</p>
-
-          <p>For teams running production traffic, the practical risk is the two-week window. Google's pattern with prior Gemini deprecations has been to honor sunset notices on the published date with no extension, and the Interactions schema sits inside the request body itself rather than in a header, so feature-flag rollouts that swap fields cleanly are non-trivial. The change has already triggered chatter in the LangChain and LlamaIndex repos; both projects shipped updated adapters within 48 hours, but downstream consumers will need to bump their dependencies and re-test before June 8.</p>
-
-          <p class="source-footer"><a class="source-link" href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Read source →</a></p>
         </div>
-      </details>
+      </summary>
+      <div class="full-content">
+        <p>Nvidia reported record fiscal first quarter FY27 results on May 20, 2026, for the quarter ended April 26. Total revenue was $81.6 billion, up 20 percent sequentially and up 85 percent year-on-year. Data center revenue, the line item that has driven the company's last three years of growth, was $75.2 billion, up 21 percent sequentially and up 92 percent year-on-year. GAAP gross margin was 74.9 percent. Non-GAAP gross margin was 75.0 percent. GAAP diluted earnings per share was $2.39.</p>
 
-      <!-- STORY 8: Anthropic Managed Agents -->
-      <details class="story" data-tags="tech application">
-        <summary>
-          <div class="tags">
-            <span class="tag tag-tech">Tech</span>
-            <span class="tag tag-application">Application</span>
-          </div>
-          <h3 class="headline">Anthropic's Claude Managed Agents add self-hosted sandboxes and MCP tunnels, keeping data inside the customer perimeter.</h3>
-          <p class="kicker">Anthropic Engineering · 2026-05-19 · <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Source ↗</a></p>
-          <p class="teaser">A public beta lets enterprises run agent code-execution inside their own VPC while continuing to orchestrate through Anthropic. A research-preview "MCP tunnels" feature lets internal tools be reached without exposing them to the public internet.</p>
-          <span class="expand-control"></span>
-        </summary>
-        <div class="full-content">
-          <p>Anthropic updated its Claude Managed Agents platform on May 19 with two features aimed squarely at regulated buyers: a public-beta self-hosted sandbox and a research preview of "MCP tunnels." The self-hosted sandbox lets a customer run the code-execution and tool-use portions of an agent inside their own virtual private cloud while continuing to use Anthropic's managed orchestrator for planning and turn-taking. The MCP tunnels feature opens an encrypted reverse-tunnel between the managed orchestrator and an internal MCP server, so an agent can reach line-of-business tools that live on a private network without those tools being exposed to the public internet.</p>
+        <p>The data center figure is the one to fix. At $75.2 billion of quarterly revenue, Nvidia's data center business is now annualizing above $300 billion. That single segment, run as a standalone company, would be among the ten largest businesses in the United States by revenue. It is the largest single source of inference and training compute capacity sold into the cloud market. Demand continues to outstrip supply, with the company's filings noting backlog measured in multiple quarters of capacity.</p>
 
-          <p>The product motion is the explicit answer to a question Anthropic's enterprise sales team has been hearing all year: how do you run a fully managed agent without pulling sensitive data and credentials into a third-party SaaS plane? Until now, the choice was either to self-host the entire stack (which negates the managed-platform value) or to accept Anthropic-side execution of every tool call, which is a non-starter for healthcare, financial, and government tenants. The new architecture lets the managed plane stay thin while keeping execution inside the customer perimeter.</p>
+        <h4>Blackwell 300 and what's next</h4>
 
-          <p>The release lands alongside competing moves from Salesforce (Agentforce Coworker, May 22), Camunda (ProcessOS, closed beta May 20), and ServiceNow's own May agent-governance push. Together they describe a market that is moving past the experimental-agent phase and beginning to wire production-safe agents into the same governance, audit, and identity systems that already manage human employees. For Anthropic, holding the high ground on data-residency and tunnel security is also a defense against Microsoft's same-week CUA launch.</p>
+        <p>The sequential growth came from the ramp of Blackwell 300, the latest generation in Nvidia's flagship AI accelerator family, plus continued strength in InfiniBand, Spectrum-X Ethernet and NVLink products that build out the rack-scale and cluster-scale interconnect. The company's networking revenue is now meaningfully larger than its consumer gaming business, a structural shift that took roughly eighteen months to complete.</p>
 
-          <p class="source-footer"><a class="source-link" href="https://www.anthropic.com/news" target="_blank" rel="noopener">Read source →</a></p>
-        </div>
-      </details>
+        <p>Nvidia's Rubin platform, announced at GTC in March, is in full production. Rubin-based products are scheduled to ship from cloud partners AWS, Google Cloud, Microsoft, Oracle Cloud Infrastructure, CoreWeave, Lambda, Nebius and Nscale in the second half of 2026. The OpenAI-Nvidia strategic partnership announced earlier this year commits Nvidia to deploy at least 10 gigawatts of systems for OpenAI, with Nvidia intending to invest up to $100 billion as the systems are stood up.</p>
 
-    </div>
-  </section>
+        <h4>Capital returns and the buyback math</h4>
 
-  <!-- ORNAMENT -->
-  <div class="ornament" aria-hidden="true">
-    <svg width="60" height="14" viewBox="0 0 60 14" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="6"  cy="7" r="1.6" fill="currentColor"/>
-      <circle cx="22" cy="7" r="1.6" fill="currentColor"/>
-      <circle cx="38" cy="7" r="1.6" fill="currentColor"/>
-      <circle cx="54" cy="7" r="1.6" fill="currentColor"/>
-    </svg>
+        <p>Two days before the print, on May 18, Nvidia's board approved an additional $80 billion share repurchase authorization and raised the quarterly dividend to $0.25 from $0.01. That dividend increase is symbolic: the company's earnings yield is still better used in buybacks at current valuations. The dividend bump is a signal to the institutional investor base that the company intends to remain a yield instrument as well as a growth one as the AI capex cycle matures.</p>
+
+        <blockquote class="pullquote">"Demand for InfiniBand, Spectrum-X Ethernet and NVLink solutions is outpacing supply." <cite>— Nvidia Q1 FY27 CFO commentary</cite></blockquote>
+
+        <p>The buyback authorization brings total announced repurchase capacity to figures that are large even by 2026 mega-cap standards. Combined with the Rubin shipment schedule and the OpenAI deployment commitment, it tells a story of a company that has decided the AI infrastructure cycle has at least another three years to run and is prepared to put balance-sheet capital behind that conviction.</p>
+
+        <h4>What it means for the rest of the stack</h4>
+
+        <p>The numbers ratify, after the fact, the capex projections that Meta, Microsoft, Google and Amazon have all made for 2026. Meta's $125-145 billion guidance, Microsoft and Google's similarly large 2026 capex postures, and the NextEra-Dominion utility combination all reflect the same demand picture from different angles. The Nvidia print is the cleanest revenue-side confirmation that the capex is being spent and that the chips it buys are being deployed against real workloads. The frontier labs' revenue numbers, Cognition's $26 billion valuation and the Fujitsu deployment commitments are the next layer up in the same stack.</p>
+
+        <p class="source-footer"><a class="source-link" href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000051/q1fy27pr.htm" target="_blank" rel="noopener">Read source →</a></p>
+      </div>
+    </details>
+
   </div>
 
   <footer class="colophon">
-    <div><span class="strong">AI News</span> · Daily · 2026-05-28 · Generated 2026-05-28</div>
-    <div><a href="../index.html">← All editions</a></div>
+    <div>
+      <span class="strong" style="color: var(--ink);">Apollo AI News</span> · Daily · 2026-05-28 · Generated 2026-05-28
+    </div>
+    <div>
+      <a href="../index.html">← Archive</a>
+    </div>
   </footer>
 
 </div>
 
 <script>
-(function(){
-  var bar = document.getElementById('filterbar');
-  var chips = document.querySelectorAll('#filter-chips button');
-  var hero = document.getElementById('hero');
-  var stories = document.querySelectorAll('#story-list .story');
-  var status = document.getElementById('filter-status');
-  var sentinel = document.createElement('div');
-  bar.parentNode.insertBefore(sentinel, bar);
+  (function () {
+    var stories = document.querySelectorAll('[data-tags]');
+    var chips = document.querySelectorAll('#filter-chips button');
+    var sr = document.getElementById('filter-sr');
+    var bar = document.getElementById('filterbar');
 
-  function applyFilter(filter){
-    var heroTags = (hero.getAttribute('data-tags')||'').split(/\s+/);
-    var matchHero = filter === 'all' || heroTags.indexOf(filter) !== -1;
-    hero.hidden = !matchHero;
-
-    var shown = 0, total = stories.length;
-    stories.forEach(function(s){
-      var tags = (s.getAttribute('data-tags')||'').split(/\s+/);
-      var match = filter === 'all' || tags.indexOf(filter) !== -1;
-      s.hidden = !match;
-      if(match) shown++;
-    });
-    chips.forEach(function(c){
-      c.setAttribute('aria-pressed', c.getAttribute('data-filter') === filter ? 'true' : 'false');
-    });
-    var label = filter === 'all' ? 'all' : filter;
-    var heroNote = matchHero && filter !== 'all' ? ' (including lead)' : (filter !== 'all' ? ' (lead hidden)' : '');
-    status.textContent = 'Showing ' + shown + ' of ' + total + ' stories — ' + label + heroNote;
-    try {
-      if(filter === 'all'){
-        history.replaceState(null, '', location.pathname);
-      } else {
-        history.replaceState(null, '', '#filter=' + filter);
-      }
-    } catch(e){}
-  }
-
-  chips.forEach(function(c){
-    c.addEventListener('click', function(){
-      applyFilter(c.getAttribute('data-filter'));
-    });
-  });
-
-  // Read hash on load
-  var m = (location.hash||'').match(/^#filter=([a-z]+)/);
-  if(m){ applyFilter(m[1]); }
-
-  // Sticky shadow
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        bar.classList.toggle('stuck', !en.isIntersecting);
+    function apply(filter) {
+      var visible = 0, total = stories.length;
+      stories.forEach(function (el) {
+        var tags = (el.getAttribute('data-tags') || '').split(/\s+/);
+        var match = filter === 'all' || tags.indexOf(filter) !== -1;
+        if (match) { el.hidden = false; visible++; } else { el.hidden = true; }
       });
-    }, { threshold: [1] });
-    io.observe(sentinel);
-  }
-})();
+      chips.forEach(function (b) {
+        var pressed = b.getAttribute('data-filter') === filter;
+        b.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+      });
+      if (sr) {
+        sr.textContent = filter === 'all'
+          ? 'Showing all ' + total + ' stories.'
+          : 'Showing ' + visible + ' of ' + total + ' stories. Filter: ' + filter + '.';
+      }
+      if (filter === 'all') {
+        if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+      } else {
+        if (history.replaceState) history.replaceState(null, '', '#filter=' + filter);
+      }
+    }
+
+    chips.forEach(function (b) {
+      b.addEventListener('click', function () {
+        apply(b.getAttribute('data-filter'));
+      });
+    });
+
+    // Initial filter from URL hash
+    var m = (location.hash || '').match(/^#filter=([\w-]+)$/);
+    if (m && document.querySelector('[data-filter="' + m[1] + '"]')) {
+      apply(m[1]);
+    }
+
+    // Sticky shadow on scroll
+    function onScroll() {
+      var top = bar.getBoundingClientRect().top;
+      if (top <= 0) bar.classList.add('stuck'); else bar.classList.remove('stuck');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
 </script>
+
 </body>
 </html>
