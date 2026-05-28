@@ -1091,6 +1091,37 @@ body{
   const statusEl = document.getElementById('filter-status');
   const filterBar = document.querySelector('.filter-bar');
 
+  // RECOMPUTE chip counts from live data-tags (the agent's hand-counted numbers in the HTML may be wrong)
+  const total = stories.length;
+  chips.forEach(c => {
+    const tag = c.dataset.filter;
+    const n = tag === 'all'
+      ? total
+      : [...stories].filter(s => (s.dataset.tags || '').split(/\s+/).includes(tag)).length;
+    const countEl = c.querySelector('.count');
+    if(countEl) countEl.textContent = n;
+    else c.textContent = c.textContent.replace(/\d+\s*$/, n);
+  });
+
+  // Find the "More today" (or similar) section count <span class="count">
+  // Strategy: find the count span that's NOT inside a .filter-chip
+  const moreCountEl = [...document.querySelectorAll('.count')].find(el => !el.closest('.filter-chip'));
+  // Capture suffix like " · 2026-05-27 — 2026-05-28" so we preserve the date range
+  const moreInitial = moreCountEl ? moreCountEl.textContent : '';
+  const moreSuffixMatch = moreInitial.match(/[·\-—].*$/);
+  const moreSuffix = moreSuffixMatch ? ' ' + moreSuffixMatch[0].trim() : '';
+  // Compute initial non-hero story count for the rundown
+  const nonHeroStories = [...stories].filter(s => !s.classList.contains('hero') && s.id !== 'hero');
+
+  function updateMoreCount(filter){
+    if(!moreCountEl) return;
+    const visibleN = filter === 'all'
+      ? nonHeroStories.length
+      : nonHeroStories.filter(s => (s.dataset.tags || '').split(/\s+/).includes(filter)).length;
+    const noun = visibleN === 1 ? 'story' : 'stories';
+    moreCountEl.textContent = `${visibleN} ${noun}${moreSuffix}`;
+  }
+
   function applyFilter(filter){
     let shown = 0;
     stories.forEach(s => {
@@ -1103,7 +1134,8 @@ body{
       c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false');
     });
     const label = filter === 'all' ? 'All' : (filter[0].toUpperCase() + filter.slice(1));
-    statusEl.textContent = `Showing ${shown} of ${stories.length} stories — ${label}`;
+    if(statusEl) statusEl.textContent = `Showing ${shown} of ${stories.length} stories — ${label}`;
+    updateMoreCount(filter);
     if(filter === 'all'){
       if(history.replaceState) history.replaceState(null,'',location.pathname + location.search);
     } else {
@@ -1113,18 +1145,21 @@ body{
 
   chips.forEach(c => c.addEventListener('click', () => applyFilter(c.dataset.filter)));
 
-  // Apply hash on load
+  // Apply hash on load, OR initialize counts for default 'all' state
   const hashMatch = (location.hash || '').match(/filter=([a-z]+)/);
   if(hashMatch) applyFilter(hashMatch[1]);
+  else updateMoreCount('all');
 
   // Stuck shadow on filter bar
-  const sentinel = document.createElement('div');
-  sentinel.style.cssText = 'position:absolute;top:-1px;height:1px;width:1px;';
-  filterBar.parentNode.insertBefore(sentinel, filterBar);
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(entries => {
-      filterBar.classList.toggle('is-stuck', !entries[0].isIntersecting);
-    }, {threshold:[1]}).observe(sentinel);
+  if(filterBar){
+    const sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;top:-1px;height:1px;width:1px;';
+    filterBar.parentNode.insertBefore(sentinel, filterBar);
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(entries => {
+        filterBar.classList.toggle('is-stuck', !entries[0].isIntersecting);
+      }, {threshold:[1]}).observe(sentinel);
+    }
   }
 })();
 </script>

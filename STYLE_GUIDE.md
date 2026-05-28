@@ -236,6 +236,19 @@ Implementation:
 - Hero is also a filterable element (treat as a story).
 - Update the URL hash (`#filter=tech`) on filter change so links are shareable; on page load, read the hash and pre-apply the filter.
 - Smooth: no animations needed beyond a 120ms fade-out on hidden elements (CSS transition on opacity then `hidden`).
+- **Chip counts are JS-computed, not hand-coded.** On page load, the script MUST recompute each chip's count by filtering live `data-tags` attributes:
+  ```js
+  const total = stories.length;
+  chips.forEach(c => {
+    const tag = c.dataset.filter;
+    const n = tag === 'all' ? total
+      : [...stories].filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+    const countEl = c.querySelector('.count');
+    if (countEl) countEl.textContent = n;
+  });
+  ```
+  Any count baked into the chip HTML at generation time is treated as a placeholder — JS overwrites it. This prevents drift if the agent miscounts during writing.
+- **The non-hero rundown count reacts to the filter.** Whatever subheader the "More today" / "More this week" rundown uses (e.g. `<span class="count">27 stories · 2026-05-27 — 2026-05-28</span>`), the JS MUST update its leading number on every filter change to reflect visible non-hero stories. Preserve any trailing date-range suffix when updating.
 - Accessibility: chips are `<button>` (focusable, keyboard-operable), use `aria-pressed`, announce filter change via `aria-live="polite"` region (visually hidden text like "Showing 4 of 10 stories — Tech").
 
 Placement & style of filter bar:
