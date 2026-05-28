@@ -263,8 +263,14 @@ Rules:
 
 ## Homepage (`index.html`) specifics
 
-- Same masthead identity as article pages (same SVG mark style, same palette family).
+- Same masthead identity as article pages (inlined `logo.svg`, same palette family).
 - **HERO**: feature the most recent edition prominently. Hero card with date, a "Big Picture" excerpt (~150–200 chars) drawn from the latest edition, CTA `Read today's briefing →`. Adapt a hero SVG motif.
+- **ABOUT** (placed directly below the hero, before the archive): a short editorial section headed `What is Apollo AI News?`. 3–5 sentences in the agent's own voice covering:
+  - The site publishes daily, weekly, monthly, quarterly, and annual AI-news editions.
+  - Each edition is written to be read end-to-end on the page itself — no clicking through to sources required.
+  - Coverage is tagged by category (Tech, Application, Economic, Policy, Safety, Trend) and the masthead filter lets the reader scope to one tag.
+  - The site is generated and published automatically by a Claude Opus 4.7 agent that searches the web, reads source articles, and writes the summaries.
+  - Apply Voice & Prose rules — factual and brief, no marketing language, no "we believe", no superlatives, no first-person plural posturing.
 - **ARCHIVE**: list ALL editions found in `daily/`, `weekly/`, `monthly/`, `quarterly/`, `yearly/` — grouped into 5 labeled sections (`Daily / Weekly / Monthly / Quarterly / Annual`). Within each, newest first. Two-column responsive grid (single column on mobile). Each edition as a small card with date/period + small accent chip noting cadence.
 - Cadences get slightly different accent chip colors so they're distinguishable, but the OVERALL palette stays unified within one rendering of the index.
 
