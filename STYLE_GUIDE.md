@@ -45,6 +45,42 @@ Aim for the visual quality of editorial publications like The Verge, Stratechery
 
 - **Dark mode** via `@media (prefers-color-scheme: dark)`: background `#15181c`, text `#e6e3dc`, secondary `#9a9690`, accent stays vivid (may shift one notch lighter for contrast).
 
+## Voice & prose
+
+The writing must not read like AI slop. Follow these rules in every paragraph the agent writes (leads, story summaries, themes, callouts).
+
+**Cut the throat-clearing.** No openers like `Here's what happened`, `It's worth noting`, `In a significant development`, `As the AI landscape evolves`, `In the past 24 hours we've seen`. Start with the fact.
+
+**No em dashes.** Use periods, commas, or colons. The em dash is the single strongest AI tell. If a sentence wants an em dash, split it.
+
+**Active voice, named actor.** `Anthropic raised $30B at a $900B valuation` — not `$30B was raised at a $900B valuation`. Not `The funding emerged from a Series F` — say who led it. Inanimate things do not take human verbs (`The decision indicates...` → name the decider).
+
+**Drop the adverbs.** `notably`, `significantly`, `dramatically`, `crucially`, `arguably`, `interestingly`, `largely`, `essentially`, `effectively`, `actually`, `simply`, `clearly`. Strip them on the editing pass. The verb should carry the weight.
+
+**No vague intensifiers.** `significant`, `substantial`, `key`, `critical`, `major`, `historic`, `unprecedented`, `groundbreaking`, `paradigm-shifting`, `game-changing`. Say the number, the comparison, or the consequence. `The third-largest seed round on record` beats `a significant raise`.
+
+**No "not X, but Y" / "It's not just X — it's Y".** State Y directly.
+
+**Skip the rhetorical questions.** No `What does this mean for AI?` No `So why now?` Tell the reader.
+
+**No meta-paragraphs about meaning.** Cut `Here's why this matters`, `The implications are far-reaching`, `Looking ahead, the question becomes`. If the importance isn't obvious from the facts, you haven't reported enough facts. The reader infers significance from concrete detail.
+
+**Vary sentence length.** Two short sentences in a row, then one long one. Don't end every paragraph with a punchy fragment.
+
+**Two beats three.** When listing, two items often reads cleaner than three. Don't pad to a list of three for cadence.
+
+**Trust the reader.** No `Importantly`, `Of course`, `Naturally`. No hedging filler (`it should be noted that`, `as one might expect`). State the thing.
+
+**Pull-quotes earn their place.** Only include a pull-quote when the source's exact phrasing carries information your summary cannot. If a quote sounds like marketing or generic punditry, cut it.
+
+**For "Big Picture" / lede paragraphs specifically:** Open with the single most consequential new fact, in one sentence. Add 2–4 sentences of concrete context (numbers, names, comparisons). Don't restate the headlines that follow.
+
+**For "Themes" sections (weekly+):** Each theme is a noun phrase naming a concrete pattern, not a vibe (`Hyperscalers move on custom silicon` > `Shifting compute dynamics`; `Frontier labs price-cut against open weights` > `Pricing pressure intensifies`). The theme paragraph then names the specific instances inside the period that show the pattern.
+
+**For headlines:** active verb, concrete numbers, no labels (`Cognition raises $1B at $26B` not `MAJOR FUNDING: Cognition closes Series F`). 6–14 words.
+
+If a paragraph could appear in any AI news roundup without changing a word, rewrite it.
+
 ## Content depth — read without leaving the page
 
 The goal is for a reader to consume every story IN FULL from this page, without needing to click through to the source. Each story must be substantial enough to stand on its own.
