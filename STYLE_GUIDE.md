@@ -44,6 +44,58 @@ Aim for the visual quality of editorial publications like The Verge, Stratechery
 
 - **Dark mode** via `@media (prefers-color-scheme: dark)`: background `#15181c`, text `#e6e3dc`, secondary `#9a9690`, accent stays vivid (may shift one notch lighter for contrast).
 
+## Content depth — read without leaving the page
+
+The goal is for a reader to consume every story IN FULL from this page, without needing to click through to the source. Each story must be substantial enough to stand on its own.
+
+For every story, the agent MUST:
+1. **WebFetch the source URL** (in addition to the WebSearch result snippet) to read what was actually published.
+2. **Write a 200–400 word summary in the agent's own words** — not a bullet-list rewrite, but a coherent mini-article covering: what happened, the key facts/numbers, the context, why it matters, and (where relevant) any caveats or open questions.
+3. **Optionally include 1–2 short attributed quotes** (1–3 sentences each, in quotation marks with attribution like `— Sam Altman, OpenAI`) when a direct quote adds color or precision the summary can't.
+4. **Always link to the source** at the end of the card (`Read source →`) — the deep read should already be on the page; the link is for primary-source verification.
+
+Boundaries:
+- **Do NOT republish the source article verbatim or near-verbatim.** Summarize in your own words. Direct quotes are limited to 1–2 short passages per story with clear attribution (fair-use territory).
+- If a source is paywalled / blocked / un-fetchable, do your best with the search snippet plus other publicly available context, and add a small `(source paywalled)` italic note in the card footer. Do not fabricate facts to fill space.
+- Numbers, names, and dates must come from the fetched content — never invent.
+
+Story-card layout to accommodate the deeper content:
+- Headline (1.5–2rem)
+- Tag chips (1–2)
+- Kicker line: source · publication date
+- The 200–400 word summary, set as proper editorial prose with paragraph breaks (typically 2–4 paragraphs)
+- Optional pull-quote(s) — set apart visually (left border in accent color, slightly larger font, italic)
+- Footer line: `Read source →` link
+
+## Tag filtering (interactive)
+
+The masthead includes a **filter bar** of tag chips that lets the reader pick a tag to scope what's shown on the page. This is the only interactive feature on the site — keep it lean.
+
+Behavior:
+- Default state: `All` is active; all stories visible.
+- Click a tag chip: show only stories tagged with that tag (including the hero if it matches; if it doesn't match, hide the hero entirely so the page reflows cleanly).
+- Click `All` to reset.
+- Single-select (clicking a tag deactivates any previously active tag — including `All`).
+- Each chip shows a count of stories carrying that tag in this edition. Counts are computed at render time.
+- Tags with zero stories in the edition: render the chip in a disabled/dim state and make it unclickable (or omit it entirely — your call, but be consistent).
+
+Implementation:
+- Inline `<script>` (vanilla JS, no libraries, no CDN).
+- Each filterable story element gets a `data-tags="tech application"` attribute (space-separated).
+- Each filter chip is a `<button data-filter="tech">` etc.
+- Click handler toggles which chip has `[aria-pressed="true"]`, then iterates story elements and toggles `hidden` attribute based on match.
+- Hero is also a filterable element (treat as a story).
+- Update the URL hash (`#filter=tech`) on filter change so links are shareable; on page load, read the hash and pre-apply the filter.
+- Smooth: no animations needed beyond a 120ms fade-out on hidden elements (CSS transition on opacity then `hidden`).
+- Accessibility: chips are `<button>` (focusable, keyboard-operable), use `aria-pressed`, announce filter change via `aria-live="polite"` region (visually hidden text like "Showing 4 of 10 stories — Tech").
+
+Placement & style of filter bar:
+- Directly BELOW the masthead identity row, attached to it visually (shared bottom border).
+- `position: sticky; top: 0;` so it follows the reader. On mobile, it can be a horizontally scrollable strip if it overflows.
+- Background matches page background; thin bottom rule when sticky-stuck (use `box-shadow` to indicate elevation).
+- Chips: same uppercase letter-spaced style as tag chips on cards, but slightly larger and with a clear active state (filled with the tag's hue when pressed; outlined when not).
+- An `All · 10` chip on the left, then one chip per tag with count, e.g. `Tech · 4`  `Application · 3`  `Economic · 2`  `Policy · 1`.
+
 ## Story tagging
 
 Every story (hero AND cards) is tagged with **1–2** category tags drawn from this fixed taxonomy:
