@@ -278,6 +278,22 @@ The hero artwork must use Pattern B. Per-story thumbnails may use either pattern
 
 **Hero grid alignment:** the hero grid containing the headline column and the SVG column MUST use `align-items: center` (NOT `start`). The headline column is often much taller than the SVG, and `align-items: start` leaves a large empty gap below the SVG that looks broken. Centering balances the gap top and bottom so the empty space reads as breathing room, not a layout bug.
 
+**Hero summary opt-out:** Non-hero story cards use a `summary` styled as `display: grid; grid-template-columns: 120px 1fr` for the thumbnail + text layout. The hero card MUST opt out of that grid — its inner `.hero` div is itself a grid, so the wrapping `<summary>` should be a plain block. Required CSS:
+
+```css
+.story summary {
+  display: grid;
+  grid-template-columns: 120px 1fr;  /* thumbnail | text */
+  gap: 1.25rem;
+  align-items: start;
+}
+.story.hero > summary {              /* hero opts out — content is itself a grid */
+  display: block;
+}
+```
+
+Without the opt-out, the hero's `.hero` div gets crammed into the 120px column and the hero SVG collapses to 0×0. This bug shipped once already; the rule is now mandatory.
+
 ## Required visual elements (every article page)
 
 1. **MASTHEAD** — top-of-page identity bar:
