@@ -86,6 +86,8 @@ Windows by cadence (set in each cadence prompt; reproduced here for reference):
 
 **Better fewer correct stories than more padded with off-window items.** If a slow day yields only 10 in-window Tech items instead of 18, ship 10. Never include an older "context" article as a story just to hit the count target — mention it inline within a related in-window story if it adds context.
 
+**Verification pass — do this explicitly before rendering:** After collecting candidates and before writing the HTML, line up each story's verified publication date next to the WINDOW. Drop every story where the date is outside the window OR where you could not extract a date from the source. Do NOT keep an off-window story because it "feels important" or "is recent enough" — the cutoff is strict. If after rejection the count falls below the cadence target, ship the smaller count.
+
 ## Voice & prose
 
 The writing must not read like AI slop. Follow these rules in every paragraph the agent writes (leads, story summaries, themes, callouts).
