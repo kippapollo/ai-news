@@ -291,6 +291,8 @@ The hero artwork must use Pattern B. Per-story thumbnails may use either pattern
 
 **Hero grid alignment:** the hero grid containing the headline column and the SVG column MUST use `align-items: center` (NOT `start`). The headline column is often much taller than the SVG, and `align-items: start` leaves a large empty gap below the SVG that looks broken. Centering balances the gap top and bottom so the empty space reads as breathing room, not a layout bug.
 
+**Big Picture width:** the Big Picture `<p>` paragraphs MUST fill their grid column. Do NOT apply `max-width: 62ch` (or similar reading-column constraints) — the grid already gives the paragraph a reasonable width inside the page max-width 1140px container, and capping further leaves a visible empty gap on the right that reads as a layout bug.
+
 **Hero summary opt-out:** Non-hero story cards use a `summary` styled as `display: grid; grid-template-columns: 120px 1fr` for the thumbnail + text layout. The hero card MUST opt out of that grid — its inner `.hero` div is itself a grid, so the wrapping `<summary>` should be a plain block. Required CSS:
 
 ```css
