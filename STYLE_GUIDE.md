@@ -248,7 +248,9 @@ Implementation:
   });
   ```
   Any count baked into the chip HTML at generation time is treated as a placeholder — JS overwrites it. This prevents drift if the agent miscounts during writing.
-- **The Big Picture section hides when a tag filter is active.** Big Picture is the day's editorial overview of the whole news cycle. When the reader filters to a single tag, the overview is no longer accurate for that scope, so it should be hidden. JS:
+- **The Big Picture section hides when a tag filter is active.** Big Picture is the day's editorial overview of the whole news cycle. When the reader filters to a single tag, the overview is no longer accurate for that scope, so it should be hidden.
+
+  JS (inside applyFilter):
   ```js
   const bigPicture = document.querySelector('.big-picture');
   function applyFilter(filter){
@@ -256,7 +258,12 @@ Implementation:
     // ...rest of filter logic
   }
   ```
-  Show it again when the reader returns to `All`.
+
+  **CSS — required.** The `.big-picture { display: grid }` rule has higher specificity than the UA `[hidden] { display: none }` rule, so the `hidden` attribute alone WILL NOT hide the section. Add an equally-specific override:
+  ```css
+  .big-picture[hidden] { display: none }
+  ```
+  Without this rule, setting `bp.hidden = true` has no visual effect.
 - **The non-hero rundown count reacts to the filter.** Whatever subheader the "More today" / "More this week" rundown uses (e.g. `<span class="count">27 stories · 2026-05-27 — 2026-05-28</span>`), the JS MUST update its leading number on every filter change to reflect visible non-hero stories. Preserve any trailing date-range suffix when updating.
 - Accessibility: chips are `<button>` (focusable, keyboard-operable), use `aria-pressed`, announce filter change via `aria-live="polite"` region (visually hidden text like "Showing 4 of 10 stories — Tech").
 
