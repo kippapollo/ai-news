@@ -17,6 +17,7 @@ Aim for the visual quality of editorial publications like The Verge, Stratechery
 - Print-friendly (no fixed positioning; links visible in print).
 - Light AND dark mode via `@media (prefers-color-scheme: dark)`.
 - Includes `<meta name="viewport" content="width=device-width, initial-scale=1">` and `<meta name="description">`.
+- Includes a favicon link: `<link rel="icon" type="image/svg+xml" href="…/favicon.svg">`. From `index.html` use `href="favicon.svg"`; from cadence pages (in subdirectories) use `href="../favicon.svg"`. The favicon file lives at the repo root and stays constant across editions — do NOT regenerate it.
 
 ## Typography
 
@@ -59,13 +60,49 @@ Boundaries:
 - If a source is paywalled / blocked / un-fetchable, do your best with the search snippet plus other publicly available context, and add a small `(source paywalled)` italic note in the card footer. Do not fabricate facts to fill space.
 - Numbers, names, and dates must come from the fetched content — never invent.
 
-Story-card layout to accommodate the deeper content:
+**Story-card UX — collapsed by default, expand inline:**
+
+Stories use a progressive-disclosure pattern so the page reads as a scannable index. Implement with the native `<details>` element so it works without JS, then enhance with CSS for smooth expansion.
+
+Collapsed state (always visible — what shows by default):
+- Tag chip(s) (1–2)
 - Headline (1.5–2rem)
-- Tag chips (1–2)
-- Kicker line: source · publication date
-- The 200–400 word summary, set as proper editorial prose with paragraph breaks (typically 2–4 paragraphs)
-- Optional pull-quote(s) — set apart visually (left border in accent color, slightly larger font, italic)
-- Footer line: `Read source →` link
+- Kicker line: source · publication date · small `Source ↗` external link (subtle, for verification)
+- 1–2 sentence **teaser** drawn from the summary — concrete, not "click to read more"-style filler
+- Expand control labeled `Read in full ▾` (button-styled, accent-color hover)
+
+Expanded state (revealed when reader clicks the expand control):
+- The full 200–400 word own-words summary (2–4 paragraphs of editorial prose)
+- Optional pull-quote(s) — set apart visually (left border in accent color, slightly larger font, italic, attribution line beneath)
+- A bottom `Read source →` link (full version of the kicker link)
+- Collapse control labeled `Collapse ▴`
+
+Implementation:
+```html
+<details class="story" data-tags="tech application">
+  <summary>
+    <div class="tag-row">…tag chips…</div>
+    <h3 class="headline">…</h3>
+    <p class="kicker">Source name · 2026-05-28 · <a href="…" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">1–2 sentence teaser.</p>
+    <span class="expand-control">Read in full ▾</span>
+  </summary>
+  <div class="full-content">
+    <p>…200–400 word summary…</p>
+    <blockquote class="pull-quote">"…" <cite>— Attribution</cite></blockquote>
+    <p class="source-footer"><a href="…" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</details>
+```
+
+CSS notes:
+- `details > summary { list-style: none; cursor: pointer; }` and `summary::-webkit-details-marker { display: none; }` — hide the default browser triangle (you have your own ▾/▴ glyph in the expand control).
+- Style the expand-control inside `summary` to look like a quiet text button; change its text content via CSS using `details[open] summary .expand-control::before { content: "Collapse ▴"; }` and matching default — OR via inline JS that flips text on toggle. Either is fine; choose what reads cleaner.
+- Smooth open/close: use `details[open] .full-content` with a `transition: opacity 180ms ease, transform 180ms ease;` and a small upward slide-in.
+
+Filter interaction: tag filters operate on the OUTER `<details>` element via `data-tags`. Filtered-out stories are `hidden`; remaining stories stay in whatever collapsed/expanded state the reader left them in.
+
+Hero behavior: the LEAD story is also a `<details>` with the same UX, but it MAY be `<details open>` by default if the cadence is daily (lead story expected to be read). For weekly+ cadences, lead also defaults collapsed to keep the page index-like. Pick what reads better per cadence.
 
 ## Tag filtering (interactive)
 
@@ -119,7 +156,7 @@ Rules:
 ## Required visual elements (every article page)
 
 1. **MASTHEAD** — top-of-page identity bar:
-   - Publication name `AI NEWS` in strong typography (uppercase, letter-spaced)
+   - Publication name `AI NEWS` in strong typography (uppercase, letter-spaced). **MUST be a link to the homepage.** From cadence pages use `<a href="../index.html">`; from `index.html` use `<a href="./">` or `<a href="index.html">`. The link is the publication mark — show no underline, but it must be a real `<a>` (with hover/focus states matching the design).
    - A small INLINE SVG decorative mark (~40–60px, abstract/geometric)
    - Thin rule below (1–2px, accent color)
    - Edition info: cadence label + date/period (tabular nums)
