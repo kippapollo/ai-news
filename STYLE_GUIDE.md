@@ -55,6 +55,37 @@ Aim for the visual quality of editorial publications like The Verge, Stratechery
 
 - **Dark mode** via `@media (prefers-color-scheme: dark)`: background `#15181c`, text `#e6e3dc`, secondary `#9a9690`, accent stays vivid (may shift one notch lighter for contrast).
 
+## Date discipline (hard rule)
+
+Every story must fall inside the edition's time window. The window is set by the cadence prompt. **Apply this rule before including any story.**
+
+For each candidate story:
+
+1. **Determine the verified publication date** from the fetched article. Look in this order:
+   - `<meta property="article:published_time">` or `<meta name="date">`
+   - JSON-LD `"datePublished"`
+   - `<time datetime="...">` element near the headline
+   - Visible dateline in the article body
+   - The URL's date segment if present (e.g. `/2026/05/27/`)
+
+2. **Compare to the window.** If the verified date is OUTSIDE the window, EXCLUDE the story.
+
+3. **If the date cannot be confirmed** from the source (no metadata, no dateline, no URL date segment), EXCLUDE the story. Don't guess.
+
+4. **The kicker line on every story card MUST display the verified publication date** in `YYYY-MM-DD` form. The reader uses these dates to audit the edition. Never show a guessed date.
+
+Windows by cadence (set in each cadence prompt; reproduced here for reference):
+
+| Cadence | Window |
+|---|---|
+| Daily | Last 24 hours from run time (UTC). |
+| Weekly | Prior 7 calendar days (Mon–Sun preceding the Monday run). |
+| Monthly | The previous full calendar month. |
+| Quarterly | The previous full calendar quarter. |
+| Yearly | The previous full calendar year. |
+
+**Better fewer correct stories than more padded with off-window items.** If a slow day yields only 10 in-window Tech items instead of 18, ship 10. Never include an older "context" article as a story just to hit the count target — mention it inline within a related in-window story if it adds context.
+
 ## Voice & prose
 
 The writing must not read like AI slop. Follow these rules in every paragraph the agent writes (leads, story summaries, themes, callouts).
