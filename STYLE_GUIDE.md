@@ -1,6 +1,16 @@
-# AI News — Design System
+# Apollo AI News — Design System
 
-Reference for the AI News Bot. Every generated HTML page (homepage and per-cadence editions) MUST follow this guide. Self-contained, editorial-quality, no external dependencies.
+Reference for the Apollo AI News Bot. Every generated HTML page (homepage and per-cadence editions) MUST follow this guide. Self-contained, editorial-quality, no external dependencies.
+
+## Brand
+
+- **Publication name**: `Apollo AI News` (display form). The wordmark and sun-mark are locked.
+- **Logo**: lives at repo root as `logo.svg`. Agent MUST read this file and INLINE its contents inside the masthead link on every page. Do NOT redesign the logo per edition — it is the brand mark.
+- **Favicon**: lives at repo root as `favicon.svg`. Same rule: do not regenerate.
+- **Brand accent** (fixed, used in logo and favicon only): burnt orange `#c2410c`. This is separate from the per-edition accent color which rotates.
+
+Page `<title>` format: `Apollo AI News — Daily · YYYY-MM-DD` (substitute cadence + date/period).
+Meta description: 1–2 sentences derived from the Big Picture lede.
 
 ## Philosophy
 
@@ -83,18 +93,51 @@ If a paragraph could appear in any AI news roundup without changing a word, rewr
 
 ## Content depth — read without leaving the page
 
-The goal is for a reader to consume every story IN FULL from this page, without needing to click through to the source. Each story must be substantial enough to stand on its own.
+The goal: a reader consumes every story IN FULL from this page without ever needing to click to the source. Each expanded story is a comprehensive own-words retelling that captures everything the source article reports.
 
 For every story, the agent MUST:
-1. **WebFetch the source URL** (in addition to the WebSearch result snippet) to read what was actually published.
-2. **Write a 200–400 word summary in the agent's own words** — not a bullet-list rewrite, but a coherent mini-article covering: what happened, the key facts/numbers, the context, why it matters, and (where relevant) any caveats or open questions.
-3. **Optionally include 1–2 short attributed quotes** (1–3 sentences each, in quotation marks with attribution like `— Sam Altman, OpenAI`) when a direct quote adds color or precision the summary can't.
-4. **Always link to the source** at the end of the card (`Read source →`) — the deep read should already be on the page; the link is for primary-source verification.
 
-Boundaries:
-- **Do NOT republish the source article verbatim or near-verbatim.** Summarize in your own words. Direct quotes are limited to 1–2 short passages per story with clear attribution (fair-use territory).
-- If a source is paywalled / blocked / un-fetchable, do your best with the search snippet plus other publicly available context, and add a small `(source paywalled)` italic note in the card footer. Do not fabricate facts to fill space.
-- Numbers, names, and dates must come from the fetched content — never invent.
+1. **WebFetch the source URL** and read the actual article in full (not just the search snippet).
+
+2. **Inventory the source.** Extract every concrete data point: every dollar amount, percentage, growth rate, headcount, model name, version number, named person and role, date, quote, comparison, methodology detail, caveat, and downstream consequence the article mentions. The reader must come away knowing what someone who read the source knows.
+
+3. **Write a comprehensive 800–1500 word retelling in the agent's own words.** Coherent editorial prose, multiple sections if useful (with `<h4>` subheads inside the `<details>` content). Cover:
+   - What happened (the news itself)
+   - The numbers, names, and concrete facts from the source
+   - The context (what came before, what the actors had previously said or done)
+   - The mechanics or method (how the thing works, if relevant)
+   - Caveats, dissenting voices, open questions, and limitations the article notes
+   - Downstream implications the article identifies
+
+4. **Include 4–8 short attributed direct quotes** (1–3 sentences each, in quotation marks with attribution like `— Dario Amodei, Anthropic CEO`). Use quotes for: the source's most precise wording on a key claim, statements that carry their speaker's voice, numbers stated in direct address, dissent or pushback. Distribute quotes across the piece rather than clustering them.
+
+5. **Footer:** end with `Read source →` link for primary-source verification.
+
+Fair-use boundaries:
+- The retelling is the agent's own composition. **Do NOT paste paragraphs of source text into the prose.** Each direct quote is bounded to 1–3 sentences and clearly attributed.
+- Numbers, names, dates, and quotes must come from the fetched content. Never invent.
+- If a source is paywalled, blocked, or un-fetchable: write what you can from the search snippet and any other publicly available context, then mark `(source paywalled — partial coverage)` in italic at the bottom of the card. Do not fabricate to fill space.
+
+**Per-story SVG thumbnail (always visible, in the summary row):**
+
+Each non-hero story card carries a small **generative SVG thumbnail** (~120×80px) inside the summary row, alongside the headline. The thumbnail is unique to the story — its composition is invented by the agent for that specific story — and stays visible in both collapsed and expanded states.
+
+Purpose: visual scanability. A reader skimming the page sees a column of distinct marks next to headlines and recognizes stories at a glance.
+
+Rules:
+- Abstract / geometric / typographic. NOT literal illustrations, NOT company-logo lookalikes, NOT emoji-like icons. Think Swiss editorial design: shapes, marks, simple invented iconography that suggests the story's subject without depicting it.
+- Uses the per-edition accent color + neutrals only. No third color.
+- Distinct per story — never reuse the same composition across cards in one edition.
+- Inline SVG, viewBox roughly `0 0 120 80` (proportions can vary a little for hero/feature stories). Width on desktop ~120px.
+- `aria-hidden="true"` and `role="presentation"` (decorative).
+- Composition idea generators: split-rect + connector, layered arcs, dot-field with one accented dot, two intersecting shapes, axis + plotted point, stacked bars, numeric glyph treatment (the year, the percentage, the dollar amount as a typographic mark), contour pattern, etc. Pick something that resonates with the story.
+
+Story-card layout (summary row):
+- CSS grid: `grid-template-columns: 120px 1fr; gap: 1.25rem;` on desktop.
+- Thumbnail in the left column, vertically aligned to the headline.
+- Right column: tag chips + headline + kicker + teaser + expand control.
+- On narrow screens (<600px): single column, thumbnail above the headline at full width (clipped to a thinner aspect ratio like 320×80).
+- Hero story uses the larger `hero-art` treatment (existing) — no separate small thumbnail needed for the hero.
 
 **Story-card UX — collapsed by default, expand inline:**
 
@@ -192,10 +235,9 @@ Rules:
 ## Required visual elements (every article page)
 
 1. **MASTHEAD** — top-of-page identity bar:
-   - Publication name `AI NEWS` in strong typography (uppercase, letter-spaced). **MUST be a link to the homepage.** From cadence pages use `<a href="../index.html">`; from `index.html` use `<a href="./">` or `<a href="index.html">`. The link is the publication mark — show no underline, but it must be a real `<a>` (with hover/focus states matching the design).
-   - A small INLINE SVG decorative mark (~40–60px, abstract/geometric)
-   - Thin rule below (1–2px, accent color)
-   - Edition info: cadence label + date/period (tabular nums)
+   - **Inline the contents of `logo.svg`** (read the file from repo root) inside an `<a href>` link to the homepage. From cadence pages use `<a href="../index.html">`; from `index.html` use `<a href="./">` or `<a href="index.html">`. The link has no underline but is a real `<a>` with hover/focus states. The logo IS the publication wordmark + sun mark — do not add separate "AI NEWS" text alongside it.
+   - Thin rule below the masthead row (1–2px, per-edition accent color — NOT the fixed brand accent)
+   - Edition info on the right side of the masthead row: cadence label + date/period (tabular nums)
 
 2. **HERO** — above-the-fold treatment for the LEAD/most-important story:
    - Large editorial headline: `clamp(2rem, 5vw, 3.5rem)`
