@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI News — 2026-05-28</title>
+<meta name="description" content="A curated daily briefing on the most important AI news from the last 24 hours." />
+<style>
+  :root {
+    --bg: #fafaf7;
+    --surface: #ffffff;
+    --ink: #15161a;
+    --ink-soft: #3c3f47;
+    --ink-mute: #6a6e78;
+    --rule: #e7e4dc;
+    --accent: #b8552a;
+    --accent-soft: #e9c4ad;
+    --card-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 6px 24px -16px rgba(20,18,12,0.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f0f10;
+      --surface: #16171a;
+      --ink: #ececea;
+      --ink-soft: #c4c5c2;
+      --ink-mute: #8a8c8e;
+      --rule: #26282d;
+      --accent: #f0a070;
+      --accent-soft: #5a3621;
+      --card-shadow: 0 1px 0 rgba(0,0,0,0.4), 0 6px 24px -16px rgba(0,0,0,0.7);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 120ms ease; }
+  a:hover { border-bottom-color: var(--accent); }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  .topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 48px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .topbar a { color: var(--ink-mute); }
+  .topbar .mark {
+    color: var(--ink);
+    font-weight: 600;
+    letter-spacing: 0.16em;
+  }
+  header.masthead { margin-bottom: 44px; }
+  header.masthead .kicker {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  header.masthead h1 {
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    font-weight: 700;
+  }
+  header.masthead .date {
+    font-size: 15px;
+    color: var(--ink-mute);
+    margin: 0;
+  }
+  section.lede {
+    margin: 0 0 56px;
+    padding: 28px 28px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+  }
+  section.lede h2 {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 14px;
+  }
+  section.lede p {
+    margin: 0;
+    font-size: 17px;
+    color: var(--ink-soft);
+  }
+  .stories-heading {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin: 0 0 18px;
+  }
+  article.story {
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+  }
+  article.story:first-of-type { border-top: 0; padding-top: 8px; }
+  article.story .num {
+    display: inline-block;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+  article.story h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 2px 0 12px;
+    font-weight: 650;
+  }
+  article.story p.summary {
+    margin: 0 0 14px;
+    color: var(--ink-soft);
+  }
+  article.story footer.meta {
+    font-size: 13.5px;
+    color: var(--ink-mute);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  article.story footer.meta .sep { opacity: 0.5; }
+  article.story footer.meta a { color: var(--ink-soft); border-bottom: 1px solid var(--rule); }
+  article.story footer.meta a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  footer.colophon {
+    margin-top: 72px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--ink-mute);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    .wrap { max-width: 100%; padding: 0; }
+    section.lede { background: #fff; border: 1px solid #ccc; }
+    a { color: #000; }
+    a::after { content: " (" attr(href) ")"; font-size: 11px; color: #555; }
+    article.story footer.meta a::after { content: ""; }
+  }
+  @media (max-width: 540px) {
+    .wrap { padding: 32px 18px 64px; }
+    header.masthead h1 { font-size: 34px; }
+    section.lede { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="topbar">
+      <span class="mark">AI News</span>
+      <a href="../index.html">Archive →</a>
+    </nav>
+
+    <header class="masthead">
+      <p class="kicker">Daily Briefing</p>
+      <h1>AI News — 2026-05-28</h1>
+      <p class="date">Thursday, May 28, 2026 · The last 24 hours in artificial intelligence</p>
+    </header>
+
+    <section class="lede">
+      <h2>The Big Picture</h2>
+      <p>Capital is once again the headline. Anthropic closed a $30 billion-plus financing at a roughly $900 billion valuation, edging past OpenAI to become the world's most valuable private AI company, while Cognition tripled its valuation to $26 billion on the strength of Devin's enterprise traction. Spending is matching the fundraising — ByteDance is sounding out a $70 billion capex year, and the agent layer keeps shipping: xAI added user-defined Custom Skills to Grok, and Microsoft pushed a fresh wave of computer-using-agent and voice features into Copilot Studio. The geopolitical undertow is harder, with Beijing extending overseas travel curbs to AI talent at Alibaba and DeepSeek, and Anthropic planting a flag in Seoul. Underneath the deals, the agentic build-out is being normalized at enterprise scale.</p>
+    </section>
+
+    <p class="stories-heading">Today's Stories</p>
+
+    <article class="story">
+      <span class="num">01</span>
+      <h3>Anthropic closes $30B-plus round at a $900B valuation, overtaking OpenAI</h3>
+      <p class="summary">Anthropic is finalizing a financing of more than $30 billion at a pre-money valuation above $900 billion, co-led by Sequoia, Dragoneer, Altimeter and Greenoaks, with each firm putting in roughly $2 billion. The round, which assembled in a matter of weeks after inbound interest in late April, would make Claude's maker the most valuable private AI company in the world, surpassing OpenAI's $852 billion mark set in March. Reports suggest an IPO could follow as early as October.</p>
+      <footer class="meta">
+        <span>Bloomberg</span><span class="sep">·</span><span>May 22, 2026</span><span class="sep">·</span><a href="https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">02</span>
+      <h3>Cognition raises $1B at a $26B valuation as Devin's enterprise base balloons</h3>
+      <p class="summary">AI-coding startup Cognition raised more than $1 billion at a $25 billion pre-money valuation, led by Lux Capital and General Catalyst with participation from Founders Fund, 8VC, Ribbit, Atreides and Layer Global. The company says Devin's annualized revenue run-rate has reached $492 million with 50% month-over-month growth over the past six months, and counts Citi, Goldman Sachs, Mercedes-Benz, NASA, and the U.S. Army and Navy among customers. The valuation is more than double the $10.2 billion mark set just eight months ago.</p>
+      <footer class="meta">
+        <span>TechCrunch</span><span class="sep">·</span><span>May 27, 2026</span><span class="sep">·</span><a href="https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">03</span>
+      <h3>ByteDance weighs up to $70B in capex as it races to scale AI infrastructure</h3>
+      <p class="summary">ByteDance is internally discussing capital expenditure of as much as $70 billion this year to build out data centers and AI infrastructure, more than doubling its 2025 spend, according to Bloomberg. The company is debating how aggressively to fund the buildout against rising memory and accelerator costs, with much of the spend expected to come from its roughly $50 billion in 2025 profit. The figure caps a week of upward revisions across Chinese AI capex plans amid global compute scarcity.</p>
+      <footer class="meta">
+        <span>Bloomberg</span><span class="sep">·</span><span>May 27, 2026</span><span class="sep">·</span><a href="https://www.bloomberg.com/news/articles/2026-05-27/bytedance-weighs-capex-of-as-much-as-70-billion-in-ai-push" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">04</span>
+      <h3>China extends overseas-travel curbs on AI talent to Alibaba and DeepSeek</h3>
+      <p class="summary">Beijing has expanded existing travel restrictions on government AI researchers to private-sector founders, researchers and executives at firms including Alibaba and DeepSeek, requiring agency approval before international trips. Officials are determining who falls under the restrictions based on strategic relevance rather than job title, signaling that Beijing increasingly treats private AI work as national-security infrastructure. The expansion follows similar restrictions on DeepSeek leaders quietly imposed in late 2025.</p>
+      <footer class="meta">
+        <span>Bloomberg</span><span class="sep">·</span><span>May 26, 2026</span><span class="sep">·</span><a href="https://www.bloomberg.com/news/articles/2026-05-26/china-expands-travel-curbs-to-top-ai-talent-at-private-firms" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">05</span>
+      <h3>Anthropic opens a Seoul office and names a Korea country head</h3>
+      <p class="summary">Anthropic appointed former Snowflake Korea chief KiYoung Choi as its first Representative Director of Korea ahead of opening a Seoul office in the coming weeks. The company notes that Korean users use Claude at more than 3.5 times the rate expected for the population, skewed toward technical and creative work, making the country one of Claude's most active per-capita markets. Senior Anthropic leadership will travel to Seoul to meet customers as the office launches.</p>
+      <footer class="meta">
+        <span>Anthropic</span><span class="sep">·</span><span>May 26, 2026</span><span class="sep">·</span><a href="https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">06</span>
+      <h3>Microsoft adds new workflows, voice and Work IQ features to Copilot Studio</h3>
+      <p class="summary">Microsoft's May Copilot Studio update ships an overhauled workflows experience, Work IQ extensibility for Copilot Studio agents, real-time voice experiences with sub-500ms latency for contact-center scenarios, and broader rollout of computer-using agents that drive desktop and web UIs the way a human would. Agent-to-agent communication moves to general availability, letting Copilot agents delegate tasks and exchange information across systems. The release lands two weeks after Microsoft pushed computer-using agents into general availability worldwide.</p>
+      <footer class="meta">
+        <span>Microsoft Copilot Blog</span><span class="sep">·</span><span>May 26, 2026</span><span class="sep">·</span><a href="https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/new-and-improved-computer-using-agents-a-new-workflows-experience-and-real-time-voice-experiences/" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">07</span>
+      <h3>xAI launches Custom Skills, letting Grok users codify reusable tasks</h3>
+      <p class="summary">xAI officially rolled out Custom Skills for Grok, a new automation primitive that lets users define personalized, reusable tasks in seconds and deploy them as daily-driver workflows. The launch capped a busy month for xAI that also brought a Grok 4.3 update with a million-token context and native video input, standalone speech-to-text and text-to-speech APIs, and a Quality Mode upgrade for the Grok Imagine image API. Custom Skills positions Grok closer to OpenAI's and Anthropic's user-extensible agent stacks.</p>
+      <footer class="meta">
+        <span>xAI</span><span class="sep">·</span><span>May 26, 2026</span><span class="sep">·</span><a href="https://x.ai/news" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">08</span>
+      <h3>Gemini API ships a breaking change to its Interactions schema</h3>
+      <p class="summary">Google flipped the new Interactions API schema on as the default in the Gemini API on May 26, with the legacy schema set to be removed entirely on June 8. Developers building on Gemini have a roughly two-week window to migrate request and response shapes or risk production breakage. The change lands on the heels of Gemini 3.1 Flash-Lite's general availability and a sustained push from Google to standardize the API surface for high-volume agentic workloads.</p>
+      <footer class="meta">
+        <span>Google AI for Developers</span><span class="sep">·</span><span>May 26, 2026</span><span class="sep">·</span><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">09</span>
+      <h3>Gemini 3.1 Flash-Lite goes generally available at $0.25 / million input tokens</h3>
+      <p class="summary">Google promoted Gemini 3.1 Flash-Lite to general availability across the Gemini API and Vertex AI, pricing it at $0.25 per million input tokens and $1.50 per million output tokens. Google says the model delivers 2.5× faster time-to-first-token and 45% higher output throughput versus 2.5 Flash, with multimodal support across text, image, video, audio and PDF inputs. Configurable "thinking" levels let developers trade reasoning depth against latency on the fly — a tooling choice clearly aimed at high-volume agentic workflows.</p>
+      <footer class="meta">
+        <span>Google Cloud</span><span class="sep">·</span><span>May 27, 2026</span><span class="sep">·</span><a href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <article class="story">
+      <span class="num">10</span>
+      <h3>U.S. Commerce expands frontier-model pre-deployment testing to five labs</h3>
+      <p class="summary">The Center for AI Standards and Innovation, housed in the U.S. Department of Commerce, now has voluntary pre-deployment access to frontier models from every major American AI developer after Google DeepMind, Microsoft and xAI joined OpenAI and Anthropic earlier this month. Testing runs through the TRAINS Taskforce, with NIH handling biosecurity, the national labs covering chemical and nuclear proliferation, and DoD and DHS leading cybersecurity work. The framework gives the federal government its widest structural visibility yet into unreleased frontier models.</p>
+      <footer class="meta">
+        <span>Al Jazeera</span><span class="sep">·</span><span>May 5, 2026</span><span class="sep">·</span><a href="https://www.aljazeera.com/economy/2026/5/5/microsoft-google-xai-give-us-access-to-ai-models-for-security-testing" target="_blank" rel="noopener">Read source →</a>
+      </footer>
+    </article>
+
+    <footer class="colophon">
+      <span>AI News · Daily edition · 2026-05-28</span>
+      <span><a href="../index.html">All editions</a></span>
+    </footer>
+  </div>
+</body>
+</html>
