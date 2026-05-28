@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AI News — Archive</title>
 <meta name="description" content="A curated archive of daily, weekly, monthly, quarterly and yearly AI briefings — focused on what actually shifted." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <style>
   :root {
     --bg: #f7f5ef;
@@ -13,13 +14,13 @@
     --ink-soft: #2a2f37;
     --ink-mute: #5a6068;
     --rule: #e1ddd2;
-    --accent: #115e59;
-    --accent-soft: #d6e9e6;
-    --accent-deep: #0c413e;
+    --accent: #6b21a8;
+    --accent-soft: #ead7f4;
+    --accent-deep: #4c1576;
     /* Cadence chip hues */
-    --cad-daily: #115e59;
+    --cad-daily: #6b21a8;
     --cad-weekly: #1e3a8a;
-    --cad-monthly: #6b21a8;
+    --cad-monthly: #115e59;
     --cad-quarterly: #c2410c;
     --cad-yearly: #881337;
   }
@@ -31,12 +32,12 @@
       --ink-soft: #c5c2bb;
       --ink-mute: #9a9690;
       --rule: #2b3038;
-      --accent: #3fb8a9;
-      --accent-soft: #143a37;
-      --accent-deep: #74d6c7;
-      --cad-daily: #3fb8a9;
+      --accent: #c6a4ea;
+      --accent-soft: #2a1a3a;
+      --accent-deep: #d9bef0;
+      --cad-daily: #c6a4ea;
       --cad-weekly: #7aa0f0;
-      --cad-monthly: #c6a4ea;
+      --cad-monthly: #3fb8a9;
       --cad-quarterly: #f0a070;
       --cad-yearly: #f4a6a6;
     }
@@ -71,18 +72,23 @@
     gap: 24px;
     flex-wrap: wrap;
   }
-  .pubname {
+  .pubname { display: flex; align-items: center; gap: 14px; }
+  .pubname a.brandlink {
     display: flex;
     align-items: center;
     gap: 14px;
+    color: var(--ink);
+    border-bottom: 0;
+    text-decoration: none;
   }
+  .pubname a.brandlink:hover { color: var(--accent-deep); border-bottom: 0; }
   .pubname .title {
     font-family: Georgia, "Times New Roman", Charter, serif;
     font-size: 26px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     font-weight: 700;
-    color: var(--ink);
+    color: inherit;
     line-height: 1;
   }
   .edition {
@@ -275,19 +281,21 @@
   <header class="masthead">
     <div class="masthead-row">
       <div class="pubname">
-        <svg width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="idx-mast-grad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#115e59"/>
-              <stop offset="100%" stop-color="#0c413e"/>
-            </linearGradient>
-          </defs>
-          <circle cx="23" cy="23" r="22" fill="none" stroke="#115e59" stroke-width="1.4"/>
-          <path d="M14 30 L23 12 L32 30" fill="none" stroke="url(#idx-mast-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="17.5" y1="24" x2="28.5" y2="24" stroke="#115e59" stroke-width="1.6" stroke-linecap="round"/>
-          <circle cx="23" cy="23" r="2.2" fill="#115e59"/>
-        </svg>
-        <span class="title">AI News</span>
+        <a class="brandlink" href="index.html" aria-label="AI News — home">
+          <svg width="46" height="46" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="idx-mast-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#6b21a8"/>
+                <stop offset="100%" stop-color="#4c1576"/>
+              </linearGradient>
+            </defs>
+            <circle cx="23" cy="23" r="22" fill="none" stroke="#6b21a8" stroke-width="1.4"/>
+            <path d="M14 30 L23 12 L32 30" fill="none" stroke="url(#idx-mast-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="17.5" y1="24" x2="28.5" y2="24" stroke="#6b21a8" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="23" cy="23" r="2.2" fill="#6b21a8"/>
+          </svg>
+          <span class="title">AI News</span>
+        </a>
       </div>
       <div class="edition">
         <div class="strong">Archive</div>
@@ -299,59 +307,64 @@
   <section class="hero">
     <div>
       <p class="kicker">Today's briefing · Daily · 2026-05-28</p>
-      <h1>Capital, compute, and a quieter signal about safety.</h1>
-      <p class="lede">Cognition raised $1B at $26B. Anthropic is closing roughly $30B at a $900B valuation. Snowflake committed $6B to AWS for agentic workloads. Cisco showed every frontier model breaks more easily under multi-turn attack than safety cards suggest — and California's new executive order begins the policy scaffolding for what happens when the wave lands.</p>
+      <h1>Production-grade agents arrive, and Beijing fences in its talent.</h1>
+      <p class="lede">Microsoft shipped computer-using agents to GA in Copilot Studio, becoming the first hyperscaler to put screen-and-keyboard automation behind a real production tier. Beijing widened overseas-travel curbs to AI staff at Alibaba and DeepSeek. Anthropic bought Stainless for $300M-plus; DeepMind absorbed the Contextual AI team for roughly $100M without a merger filing. Underneath, Nvidia booked $75.2B of data-center revenue in one quarter.</p>
       <a class="cta" href="daily/2026-05-28.html">Read today's briefing →</a>
-      <p class="meta">9 stories · Tech · Economic · Application · Policy · Safety · Trend</p>
+      <p class="meta">9 stories · Tech · Economic · Policy · Application · Trend · Safety</p>
     </div>
     <div class="hero-art">
-      <!-- Index hero SVG: minimal axis + dot stack -->
+      <!-- Index hero SVG: isometric stack with corner brackets — echoes today's daily -->
       <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%;">
         <defs>
           <linearGradient id="idx-grad" x1="0" y1="1" x2="1" y2="0">
-            <stop offset="0%" stop-color="#115e59" stop-opacity="0"/>
-            <stop offset="100%" stop-color="#115e59" stop-opacity="0.18"/>
+            <stop offset="0%" stop-color="#6b21a8" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#6b21a8" stop-opacity="0.18"/>
+          </linearGradient>
+          <linearGradient id="idx-stroke" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6b21a8"/>
+            <stop offset="100%" stop-color="#4c1576"/>
           </linearGradient>
         </defs>
         <rect width="320" height="320" fill="url(#idx-grad)"/>
-        <!-- vertical scale -->
-        <g stroke="#115e59" stroke-width="1" opacity="0.4">
-          <line x1="50" y1="40" x2="50" y2="280"/>
-          <line x1="50" y1="280" x2="290" y2="280"/>
+        <!-- isometric stack -->
+        <g stroke="url(#idx-stroke)" stroke-width="1.6" fill="none" opacity="0.9">
+          <path d="M60 220 L160 168 L260 220 L160 272 Z"/>
+          <path d="M76 185 L160 142 L244 185 L160 228 Z"/>
+          <path d="M92 152 L160 116 L228 152 L160 188 Z" opacity="0.78"/>
+          <path d="M108 120 L160 92 L212 120 L160 148 Z" opacity="0.55"/>
         </g>
-        <!-- bars (rising) -->
-        <g fill="#115e59" opacity="0.85">
-          <rect x="72"  y="240" width="22" height="40" rx="2"/>
-          <rect x="106" y="210" width="22" height="70" rx="2"/>
-          <rect x="140" y="180" width="22" height="100" rx="2"/>
-          <rect x="174" y="140" width="22" height="140" rx="2"/>
-          <rect x="208" y="100" width="22" height="180" rx="2"/>
-          <rect x="242" y="60"  width="22" height="220" rx="2"/>
-        </g>
-        <!-- accent overlay -->
-        <g stroke="#0c413e" stroke-width="1.6" fill="none" opacity="0.85" stroke-linecap="round">
-          <path d="M85 250 Q 130 200 175 165 T 290 70"/>
+        <!-- flow arc -->
+        <path d="M30 260 Q 160 80 290 260" stroke="#4c1576" stroke-width="1.4" fill="none" opacity="0.7" stroke-dasharray="2 5"/>
+        <!-- corner brackets -->
+        <g stroke="#4c1576" stroke-width="1.2" fill="none" opacity="0.75">
+          <line x1="14" y1="14" x2="32" y2="14"/>
+          <line x1="14" y1="14" x2="14" y2="32"/>
+          <line x1="306" y1="306" x2="288" y2="306"/>
+          <line x1="306" y1="306" x2="306" y2="288"/>
+          <line x1="306" y1="14" x2="288" y2="14"/>
+          <line x1="306" y1="14" x2="306" y2="32"/>
+          <line x1="14" y1="306" x2="32" y2="306"/>
+          <line x1="14" y1="306" x2="14" y2="288"/>
         </g>
         <!-- dot field -->
-        <g fill="#0c413e">
-          <circle cx="85"  cy="250" r="3"/>
-          <circle cx="118" cy="220" r="3"/>
-          <circle cx="152" cy="195" r="3"/>
-          <circle cx="186" cy="155" r="3"/>
-          <circle cx="220" cy="115" r="3"/>
-          <circle cx="254" cy="75"  r="3.5"/>
+        <g fill="#6b21a8">
+          <circle cx="50" cy="50" r="1.6"/>
+          <circle cx="270" cy="50" r="1.6"/>
+          <circle cx="50" cy="270" r="1.6"/>
+          <circle cx="270" cy="270" r="1.6"/>
+          <circle cx="160" cy="120" r="3.2"/>
         </g>
       </svg>
     </div>
   </section>
 
   <div class="ornament" aria-hidden="true">
-    <svg width="90" height="14" viewBox="0 0 90 14" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="6"  cy="7" r="2.2" fill="currentColor"/>
-      <line x1="14" y1="7" x2="38" y2="7" stroke="currentColor" stroke-width="1"/>
-      <path d="M45 1 L51 7 L45 13 L39 7 Z" fill="currentColor"/>
-      <line x1="52" y1="7" x2="76" y2="7" stroke="currentColor" stroke-width="1"/>
-      <circle cx="84" cy="7" r="2.2" fill="currentColor"/>
+    <svg width="96" height="14" viewBox="0 0 96 14" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 7 L12 1 L18 7 L12 13 Z" fill="currentColor"/>
+      <line x1="22" y1="7" x2="42" y2="7" stroke="currentColor" stroke-width="1"/>
+      <circle cx="48" cy="7" r="2.4" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <line x1="54" y1="7" x2="74" y2="7" stroke="currentColor" stroke-width="1"/>
+      <path d="M78 7 L84 1 L90 7 L84 13 Z" fill="currentColor"/>
     </svg>
   </div>
 
