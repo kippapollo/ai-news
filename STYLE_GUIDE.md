@@ -346,7 +346,7 @@ Without the opt-out, the hero's `.hero` div gets crammed into the 120px column a
 
 - Same masthead identity as article pages (inlined `logo.svg`, same palette family).
 - **HERO**: feature the most recent edition prominently. Hero card with date, a "Big Picture" excerpt (~150–200 chars) drawn from the latest edition, CTA `Read today's briefing →`. Adapt a hero SVG motif.
-- **ABOUT** (placed directly below the hero, before the archive): a short editorial section headed `What is Apollo AI News?`. 3–5 sentences in the agent's own voice covering:
+- **ABOUT** (placed at the BOTTOM of the homepage, after the archive and immediately before the footer/colophon): a short editorial section headed `What is Apollo AI News?`. 3–5 sentences in the agent's own voice covering:
   - The site publishes daily, weekly, monthly, quarterly, and annual AI-news editions.
   - Each edition is written to be read end-to-end on the page itself — no clicking through to sources required.
   - Coverage is tagged by category (Tech, Application, Economic, Policy, Safety, Trend) and the masthead filter lets the reader scope to one tag.
