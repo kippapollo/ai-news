@@ -265,6 +265,17 @@ Rules:
 - Tags appear: on each story card (above or below the headline), in the hero (kicker line above the lead headline), and as filter-style summary chips on the homepage hero/footer (e.g. "Today's edition: 4 Tech · 3 Application · 2 Economic · 1 Policy").
 - Tag colors are SEPARATE from the per-edition accent color. Tag colors stay consistent across editions so readers learn them; the per-edition accent color rotates for variety.
 
+## SVG sizing (hard rule — prevents zero-height grid collapse)
+
+Inline SVGs MUST have a defined intrinsic aspect ratio so they size correctly inside CSS grid/flex containers. Pick ONE of these patterns:
+
+- **Pattern A (preferred for fixed-size marks like thumbnails):** include both `width` and `height` HTML attributes on the `<svg>` element matching the viewBox (e.g. `<svg viewBox="0 0 120 80" width="120" height="80">`). The browser uses these for intrinsic sizing; CSS can still override.
+- **Pattern B (for responsive SVGs that fill their container):** include `viewBox` and add a matching `aspect-ratio` to the SVG's CSS class. Example: `.hero-art { width: 100%; height: auto; aspect-ratio: 480 / 320; }`.
+
+A `viewBox` alone is NOT enough. Without explicit `width`/`height` HTML attributes OR a CSS `aspect-ratio`, browsers can compute the SVG's intrinsic height as 0 in a grid cell, leaving the column blank. This has happened before and the fix above prevents it.
+
+The hero artwork must use Pattern B. Per-story thumbnails may use either pattern.
+
 ## Required visual elements (every article page)
 
 1. **MASTHEAD** — top-of-page identity bar:
