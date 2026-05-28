@@ -276,6 +276,8 @@ A `viewBox` alone is NOT enough. Without explicit `width`/`height` HTML attribut
 
 The hero artwork must use Pattern B. Per-story thumbnails may use either pattern.
 
+**Hero grid alignment:** the hero grid containing the headline column and the SVG column MUST use `align-items: center` (NOT `start`). The headline column is often much taller than the SVG, and `align-items: start` leaves a large empty gap below the SVG that looks broken. Centering balances the gap top and bottom so the empty space reads as breathing room, not a layout bug.
+
 ## Required visual elements (every article page)
 
 1. **MASTHEAD** — top-of-page identity bar:
