@@ -218,7 +218,7 @@ Every story (hero AND cards) is tagged with **1–2** category tags drawn from t
 
 | Tag | Meaning | Accent hue family |
 |---|---|---|
-| **Tech** | Model releases, research papers, benchmarks, infrastructure (chips, datacenters, compute) | blue family |
+| **Tech** | Model releases, research, benchmarks, infrastructure. Covers six sub-areas the agent must continuously sweep: **(1) Frontier models** (Anthropic, OpenAI, Google DeepMind, Meta, xAI, Mistral, Cohere, Inflection, etc. — new releases, capability jumps, benchmark results, scaling work); **(2) Open-source models** (Llama, Qwen, DeepSeek, Mistral OSS, Phi, Gemma, OLMo, Yi — releases, fine-tunes, license shifts, leaderboards); **(3) Agents** (agent frameworks, tool-use systems, planning research, browser/computer-use agents, multi-agent systems, agent evaluation); **(4) Frameworks** (inference engines like vLLM/llama.cpp/Ollama; orchestration like LangChain/LlamaIndex; protocols like MCP; SDKs; training stacks); **(5) Research** (papers, methods, evaluations, alignment, interpretability, scaling laws, novel architectures); **(6) General tech** (hardware: chips, datacenters, networking, power; compilers, kernels, low-level tooling). | blue family |
 | **Application** | Products, features, integrations, real-world deployments, user-facing launches | teal family |
 | **Economic** | Funding rounds, M&A, IPOs, revenue, leadership changes, market moves | green family |
 | **Policy** | Regulation, legislation, lawsuits, government action, geopolitics, export controls | amber family |
