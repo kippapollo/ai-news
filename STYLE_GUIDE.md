@@ -287,10 +287,14 @@ The hero artwork must use Pattern B. Per-story thumbnails may use either pattern
   gap: 1.25rem;
   align-items: start;
 }
-.story.hero > summary {              /* hero opts out — content is itself a grid */
+/* Hero opts out. Cover BOTH ways the agent may mark the hero: */
+.story.hero > summary,            /* if hero has class="story hero" */
+details#hero > summary {           /* if hero has id="hero" */
   display: block;
 }
 ```
+
+The selector MUST cover both forms — `class="story hero"` and `id="hero"` — because both are valid markup the agent may emit. Missing one form leaves the hero `.hero` div crammed into the 120px thumbnail column and the hero SVG collapses to 0×0.
 
 Without the opt-out, the hero's `.hero` div gets crammed into the 120px column and the hero SVG collapses to 0×0. This bug shipped once already; the rule is now mandatory.
 
