@@ -1,0 +1,1365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-06-09</title>
+<meta name="description" content="Apple unveils a Gemini-collaborated Siri AI rebuild at WWDC 2026, ships four new Apple Foundation Models split across on-device and Private Cloud Compute, opens Apple Intelligence to ChatGPT, Claude, Gemini and Grok as user-pickable defaults, lands Xcode 27 with Anthropic, OpenAI and Google coding agents built in, and brings the new Liquid Glass opacity slider, macOS Golden Gate, visionOS 27 spatial Siri, watchOS 27 Workout Buddy with perimenopause detection, AirPods Pro 3 biometric streaming, Apple Wallet Create-a-Pass and a rebuilt Spotlight to iOS 27, iPadOS 27 and macOS 27, with a free Private Cloud Compute tier for small developer shops under 2 million users; Craig Federighi confirms Siri AI will not ship in the EU or China at launch over Digital Markets Act access demands; Bruce Schneier publicly challenges Anthropic's Project Glasswing patch rate; Cisco discloses that its 1.8 billion-line code scan returns model-agnostic findings across six frontier models; BeyondTrust joins Glasswing; SpaceX kicks off its $75B IPO roadshow at a $135 fixed price for a $1.77T valuation; Tim Cook delivers what is treated as his last WWDC keynote as CEO before the September handover to John Ternus.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#1e3a8a;
+  --accent-soft:rgba(30,58,138,0.10);
+  --tag-tech:rgba(30,58,138,0.10);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.12);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#93c5fd;
+    --accent-soft:rgba(147,197,253,0.14);
+    --tag-tech:rgba(147,197,253,0.18);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(45,212,191,0.16);
+    --tag-application-ink:#5eead4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"kern","liga";
+}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent);
+}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{
+  position:sticky;top:0;z-index:10;background:var(--bg);
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px;
+}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{
+  font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;
+  padding:6px 11px;border-radius:999px;border:1px solid var(--rule);
+  background:transparent;color:var(--ink);cursor:pointer;font-weight:600;
+}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{
+  font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;
+  font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px;
+}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px;
+}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{
+  font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;
+  writing-mode:vertical-rl;transform:rotate(180deg);align-self:start;
+}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{
+  font-family:Georgia,"Times New Roman",Charter,serif;
+  font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700;
+}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{
+  display:flex;align-items:baseline;gap:18px;margin:0 0 28px;
+  border-bottom:1px solid var(--rule);padding-bottom:10px;
+}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{
+  list-style:none;cursor:pointer;outline:none;
+  display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start;
+}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){
+  .story summary{grid-template-columns:1fr;gap:12px}
+  .story-thumb{aspect-ratio:320 / 80;width:100%;height:auto}
+}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-weight:700;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:"Collapse \25B4"}
+.story:not([open]) .expand-control::after{content:"Read in full \25BE"}
+.expand-control{font-size:0;letter-spacing:normal}
+.expand-control::after{font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1 / -1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{
+  margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  font-size:0.84rem;color:var(--muted);
+}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2"  x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2"  y1="28" x2="9"  y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5"  y1="9.5"  x2="14"   y2="14"/>
+          <line x1="42"   y1="42"   x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5"  x2="42"   y2="14"/>
+          <line x1="9.5"  y1="46.5" x2="14"   y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Daily</strong>
+    2026 · 06 · 09
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<details class="story" id="hero" data-tags="tech application" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-tech">Tech</span>
+        <span class="tag tag-application">Application</span>
+      </div>
+      <h1>Apple ships a Gemini-trained Siri rebuild and four new Apple Foundation Models at WWDC 2026</h1>
+      <p class="dek">Craig Federighi introduces Siri AI as a "profoundly more intelligent, knowledgeable, and capable Siri," wired across iPhone, iPad, Mac, Apple Watch and Vision Pro, with a dedicated app for conversation history and a Settings panel that lets users swap ChatGPT, Claude, Google Gemini or Grok in as the default model behind Apple Intelligence prompts. Four new Apple Foundation Models (AFM Core, AFM Core Advanced, AFM Cloud, AFM Cloud Pro) split between Apple Silicon Neural Engines and Private Cloud Compute servers carry the load. AFM Cloud Pro runs on Google Cloud-hosted NVIDIA GPUs under Private Cloud Compute attestation. Apple confirms the models were co-developed with Google through distillation and training but contain no Gemini code or infrastructure in production. Tim Cook opens the keynote at Apple Park at 10:00 PT for what is treated as his last WWDC as CEO, with John Ternus formally taking the chief executive seat September 1.</p>
+      <p class="kicker">Apple Newsroom / TechCrunch / AppleInsider / Bloomberg · 2026-06-08 · <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hero-grad" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#1e3a8a" stop-opacity="0.85"/>
+          <stop offset="1" stop-color="#1e3a8a" stop-opacity="0.15"/>
+        </linearGradient>
+        <pattern id="hero-grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0 L0 0 0 24" fill="none" stroke="#1e3a8a" stroke-opacity="0.10" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hero-grid)"/>
+
+      <!-- Header band -->
+      <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+        <text x="34" y="30" font-size="9" letter-spacing="2.4">WWDC 2026 · APPLE PARK · JUN 8 · 10:00 PT</text>
+        <text x="34" y="44" font-size="7" letter-spacing="1.6" opacity="0.7">SIRI AI · APPLE FOUNDATION MODELS · iOS 27 · macOS GOLDEN GATE</text>
+      </g>
+
+      <!-- Four stacked tiers showing AFM architecture -->
+      <g transform="translate(34,72)" font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
+        <!-- AFM Cloud Pro tier (top) -->
+        <rect x="0" y="0" width="412" height="36" fill="url(#hero-grad)" stroke="#1e3a8a" stroke-width="1"/>
+        <text x="14" y="15" font-size="8" letter-spacing="1.6">AFM CLOUD PRO · GOOGLE CLOUD · NVIDIA GPU</text>
+        <text x="14" y="28" font-size="7" font-weight="500" opacity="0.85">PRIVATE CLOUD COMPUTE · AGENTIC TOOLS</text>
+
+        <!-- AFM Cloud tier -->
+        <rect x="0" y="44" width="412" height="36" fill="#1e3a8a" fill-opacity="0.30" stroke="#1e3a8a" stroke-width="1"/>
+        <text x="14" y="59" font-size="8" letter-spacing="1.6">AFM CLOUD · PRIVATE CLOUD COMPUTE BASE</text>
+        <text x="14" y="72" font-size="7" font-weight="500" opacity="0.85">HEAVY REQUESTS · IMAGE GEN VARIANT</text>
+
+        <!-- AFM Core Advanced tier -->
+        <rect x="0" y="88" width="412" height="36" fill="#1e3a8a" fill-opacity="0.15" stroke="#1e3a8a" stroke-width="1"/>
+        <text x="14" y="103" font-size="8" letter-spacing="1.6">AFM CORE ADVANCED · ON-DEVICE</text>
+        <text x="14" y="116" font-size="7" font-weight="500" opacity="0.85">SPARSE · MULTIMODAL · NEURAL ENGINE</text>
+
+        <!-- AFM Core tier -->
+        <rect x="0" y="132" width="412" height="36" fill="none" stroke="#1e3a8a" stroke-width="1"/>
+        <text x="14" y="147" font-size="8" letter-spacing="1.6">AFM CORE · ON-DEVICE BASE</text>
+        <text x="14" y="160" font-size="7" font-weight="500" opacity="0.85">WRITING TOOLS · SUMMARIES · SMART REPLY</text>
+      </g>
+
+      <!-- Right side label strip: Siri Extensions -->
+      <g transform="translate(34,256)" font-family="system-ui,sans-serif" fill="#1e3a8a">
+        <text x="0" y="0" font-size="8" font-weight="700" letter-spacing="1.6">SIRI EXTENSIONS · USER-PICKED DEFAULT</text>
+        <line x1="0" y1="6" x2="412" y2="6" stroke="#1e3a8a" stroke-width="0.6" opacity="0.4"/>
+        <g transform="translate(0,16)">
+          <rect x="0" y="0" width="98" height="22" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+          <text x="49" y="14" text-anchor="middle" font-size="8" font-weight="700">CHATGPT</text>
+        </g>
+        <g transform="translate(106,16)">
+          <rect x="0" y="0" width="98" height="22" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+          <text x="49" y="14" text-anchor="middle" font-size="8" font-weight="700">CLAUDE</text>
+        </g>
+        <g transform="translate(212,16)">
+          <rect x="0" y="0" width="98" height="22" fill="#1e3a8a" fill-opacity="0.15" stroke="#1e3a8a" stroke-width="1.2"/>
+          <text x="49" y="14" text-anchor="middle" font-size="8" font-weight="700">GEMINI · DEFAULT</text>
+        </g>
+        <g transform="translate(318,16)">
+          <rect x="0" y="0" width="98" height="22" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+          <text x="49" y="14" text-anchor="middle" font-size="8" font-weight="700">GROK</text>
+        </g>
+      </g>
+
+      <!-- Corner brackets -->
+      <g stroke="#1e3a8a" stroke-width="1.2" fill="none" opacity="0.55">
+        <line x1="14" y1="14" x2="32" y2="14"/>
+        <line x1="14" y1="14" x2="14" y2="32"/>
+        <line x1="466" y1="306" x2="448" y2="306"/>
+        <line x1="466" y1="306" x2="466" y2="288"/>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+<p>Tim Cook walked out at Apple Park at 10:00 PT Monday for what insiders treated as his last WWDC keynote as CEO. The succession story sat in the room from the first sentence; AppleInsider's pre-keynote running order, which surfaced over the weekend, had Cook opening, Federighi carrying Apple Intelligence, Mike Rockwell introducing the rebuilt Siri, Jeff Norris taking visionOS, David Clark on watchOS and Dr. Sumbul Desai closing Health. The September 1 handover to John Ternus, the senior vice president of Hardware Engineering Bloomberg's Mark Gurman has been reporting since May 25, was treated by the audience and the on-stage choreography as effectively decided. Cook stays on as board chair after the transition.</p>
+
+<p>The technical centerpiece is Siri AI. Federighi framed the rebuild in his on-stage segment: Apple is "introducing Siri AI, a profoundly more intelligent, knowledgeable, and capable Siri" that can answer questions about on-screen content, search across messages, emails and photos using personal context, and reach to the web when the request needs current data. Siri now has a dedicated app with conversation history that syncs across devices via iCloud. The model behind the conversational layer is a custom Apple Foundation Model co-developed with Google through distillation from Gemini-family teachers. Apple emphasized at the keynote and in the developer-track sessions that no Gemini code, infrastructure or production weights sit inside the Apple stack. AppleInsider's Wesley Hilliard headlined the point Monday afternoon: "Apple's new foundation models don't contain a drop of Gemini."</p>
+
+<h4>Four models, two tiers</h4>
+
+<p>The Foundation Models lineup is now four named variants. AFM Core is the base on-device model that handles Writing Tools, summaries, Smart Reply, image-aware tasks and the lightweight requests that fit on Apple Neural Engine silicon. AFM Core Advanced is a natively multimodal model with a sparse architecture that runs more capable features on-device without leaving the user's phone or Mac. AFM Cloud is the Private Cloud Compute base model for taxing requests that exceed on-device budget, with a dedicated image generation and editing variant. AFM Cloud Pro is the heaviest model, deployed on Google Cloud servers and NVIDIA GPUs but still wrapped in the Private Cloud Compute attestation protocol so third parties can verify Apple isn't reading the traffic. The on-device tier is what Apple controls end-to-end; the cloud tier is what Apple pays Google roughly $1 billion a year to run.</p>
+
+<blockquote class="pull-quote">"We use none of the models that Google deploys to their customers, nor do we use the infrastructure and means by which they deploy models to their customers." <cite>— Apple, WWDC 2026 Platforms State of the Union</cite></blockquote>
+
+<h4>Apple Intelligence Extensions and the user-picked default</h4>
+
+<p>The headline architectural decision is the Apple Intelligence Extensions framework. Users can set Claude, ChatGPT, Google Gemini or Grok as their preferred backend across Siri, Writing Tools, Image Playground, Visual Intelligence and the Apple Intelligence system features through Settings, with a dedicated App Store marketplace for adding third-party providers later. Gemini is the out-of-box default. Each external provider carries a distinct voice in spoken responses so users hear which model answered. The shift ends Apple's single-provider arrangement with OpenAI that shipped with iOS 18.2 and reframes the on-device Apple stack as a routing and privacy layer above a competitive model market.</p>
+
+<h4>Xcode 27 and Core AI</h4>
+
+<p>Xcode 27 ships with coding agents from Anthropic, OpenAI and Google built into the developer workflow. The agents handle test writing, multi-file refactors, interactive planning via a new <code>/plan</code> command, localization, String Catalog generation and translation across languages. Agent conversations live in the editor pane with full tab and split-window support. Xcode 27 is a dual-engine system: a local model running natively on Apple Silicon Neural Engines offers code and documentation suggestions tied to the active Swift and Apple SDK project structure in real time, while heavier code analysis and structural bug-finding routes to third-party frontier models. Apple's new Core AI framework gives developers direct API access to deploy full-scale large language models on Apple Silicon and leverage the Neural Engine for local processing. Apple Foundation Models framework — which exposed the 3B-parameter on-device Apple Intelligence base last year — gains image input alongside text and adds custom skills plus the ability to run jobs on Private Cloud Compute servers. Developers in the App Store Small Business Program with fewer than 2 million users get Private Cloud Compute access free.</p>
+
+<p>Apple Susan Prescott, the VP of Worldwide Developer Relations, framed it for the developer audience: "With new intelligence frameworks and agentic coding in Xcode 27, developers have the tools they need to focus on what they do best." Federighi closed the privacy theme of his segment with a one-line restatement: "We believe privacy in AI is non-negotiable." The Private Cloud Compute attestation layer is the practical instantiation of that line — independent third parties can audit the server-side handling of user requests, including when AFM Cloud Pro fans out a query onto Google-hosted NVIDIA hardware.</p>
+
+<p class="source-footer"><a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-label="The big picture">
+  <div class="label">Big picture</div>
+  <div>
+    <p>Apple's WWDC 2026 reset is the answer to the question the industry asked at WWDC 2025: how does the company that defined the on-device computing model price the API call to a frontier model it does not own. The Siri rebuild ships with four named Apple Foundation Models split across on-device Neural Engine and Private Cloud Compute, with the heaviest tier running on Google Cloud-hosted NVIDIA GPUs under Apple's attestation protocol. The Extensions architecture inverts Apple Intelligence into a routing layer above a user-picked model market spanning ChatGPT, Claude, Gemini and Grok. Tim Cook's last keynote as CEO is also Apple's first product launch that concedes the frontier and bets on the interface.</p>
+    <p>The keynote did not ship in Europe or China. Craig Federighi told MacRumors in an interview embargoed for Monday's launch that the EU rollout of Siri AI is paused because the European Commission rejected Apple's proposed Trusted System Agent and 18-month phased rollout under the Digital Markets Act. China's rollout is tied to a separate negotiation track. EU macOS, visionOS and watchOS users keep Siri AI; the iPhone and iPad features that depend on agentic device access do not ship. Federighi: "We're deeply disappointed that our EU users won't have Siri AI." The carve-out is the largest visible policy fracture between a US frontier-AI product and EU enforcement to date.</p>
+    <p>Anthropic spent the same day defending Project Glasswing. Bruce Schneier published a public critique of the program's patch rates, noting that of roughly 23,000 vulnerabilities Mythos flagged across 1,000 open-source projects, almost none have been patched. Cisco's Foundry Security Spec team published the model-independence result the same morning: six frontier models running across the 1.8 billion lines of Cisco code Mythos previewed produce broadly similar vulnerability surfaces, undercutting the "Mythos is uniquely good" narrative. BeyondTrust joined Project Glasswing as a launch partner. SpaceX kicked off its $75 billion IPO roadshow at a fixed $135 share price for a $1.77 trillion valuation, putting the largest IPO in market history on the public-market clock as Anthropic's confidential S-1 sits at the SEC. Tesla flipped Robotaxi to full 245 square mile Austin coverage on roughly 20 driverless vehicles over the weekend.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+<svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+  <line x1="2" y1="9" x2="22" y2="9" stroke="#1e3a8a" stroke-width="1.2"/>
+  <circle cx="28" cy="9" r="2.5" fill="#1e3a8a"/>
+  <rect x="36" y="3" width="12" height="12" transform="rotate(45 42 9)" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+  <circle cx="52" cy="9" r="2.5" fill="#1e3a8a" fill-opacity="0.5"/>
+  <line x1="58" y1="9" x2="78" y2="9" stroke="#1e3a8a" stroke-width="1.2"/>
+</svg>
+</div>
+
+<section>
+<div class="section-head">
+  <h2>More today</h2>
+  <span class="count">23 stories · 2026-06-08 — 2026-06-09</span>
+</div>
+
+<div class="cards">
+
+<!-- 1. Apple Foundation Models architecture -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
+    <rect x="14" y="12" width="92" height="11" fill="#1e3a8a" fill-opacity="0.65" stroke="#1e3a8a" stroke-width="0.6"/>
+    <text x="60" y="20" text-anchor="middle" font-size="5.4" fill="#f7f5ef" letter-spacing="0.8">AFM CLOUD PRO</text>
+    <rect x="14" y="26" width="92" height="11" fill="#1e3a8a" fill-opacity="0.35" stroke="#1e3a8a" stroke-width="0.6"/>
+    <text x="60" y="34" text-anchor="middle" font-size="5.4" letter-spacing="0.8">AFM CLOUD</text>
+    <rect x="14" y="40" width="92" height="11" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a" stroke-width="0.6"/>
+    <text x="60" y="48" text-anchor="middle" font-size="5.4" letter-spacing="0.8">AFM CORE ADVANCED</text>
+    <rect x="14" y="54" width="92" height="11" fill="none" stroke="#1e3a8a" stroke-width="0.6"/>
+    <text x="60" y="62" text-anchor="middle" font-size="5.4" letter-spacing="0.8">AFM CORE</text>
+  </g>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">FOUR MODELS · TWO TIERS</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Apple ships four named Foundation Models split across on-device Neural Engine and Private Cloud Compute</h3>
+<p class="kicker">AppleInsider · 2026-06-08 · <a href="https://appleinsider.com/articles/26/06/08/apples-new-foundation-models-dont-contain-a-drop-of-gemini-as-we-said-they-wouldnt" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Apple's WWDC 2026 model lineup names four variants: AFM Core (on-device base), AFM Core Advanced (on-device multimodal sparse), AFM Cloud (Private Cloud Compute base, with a dedicated image generation variant), and AFM Cloud Pro (the heaviest tier, running on Google Cloud servers with NVIDIA GPUs under Apple's attestation protocol). Apple confirmed at the Platforms State of the Union that the models were trained with distillation help from Google's Gemini teachers but contain no Gemini code or infrastructure in production. The on-device tier handles routing, privacy and lightweight tasks; the cloud tier handles the agentic and heavy-compute requests.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>AppleInsider's Monday-afternoon analysis by William Gallagher confirmed what the company had been signaling through the spring: the new Apple Foundation Models are "all-Apple through-and-through" despite the Gemini-collaboration headlines that dominated weekend press. The four-model lineup is structured around request difficulty and where the model runs.</p>
+
+<p>AFM Core is the on-device base model, the successor to the 3B-parameter Apple Intelligence model the Foundation Models framework exposed to developers at WWDC 2025. It handles Writing Tools, summaries, Smart Reply, light Visual Intelligence and the requests that complete within Apple Neural Engine budget. AFM Core Advanced is a natively multimodal version with a sparse architecture; Apple's language for "sparse" indicates a mixture-of-experts variant where only a fraction of parameters activate per token, letting more capable behavior fit on-device without the latency or memory cost of a dense model. Apple did not disclose total parameter counts.</p>
+
+<p>AFM Cloud is the Private Cloud Compute base model, the cloud tier the company uses for requests that exceed on-device capability. A dedicated AFM Cloud variant handles image generation and editing. AFM Cloud Pro is the heaviest model and the news inside the news: Apple is running it on Google Cloud servers using NVIDIA GPUs, wrapped in the Private Cloud Compute attestation protocol so external auditors can verify Apple's claim that Google does not see user traffic. This is the first time Apple has publicly named another hyperscaler as part of its inference path. The Gemini-trained-but-not-Gemini distinction matters because the legal and reputational stakes around Apple's model-training data overlap with separate questions about where Apple runs inference. Apple's statement: "We use none of the models that Google deploys to their customers, nor do we use the infrastructure and means by which they deploy models to their customers."</p>
+
+<blockquote class="pull-quote">"AFM Cloud Pro handles agentic tools and most demanding tasks, deployed on Google cloud servers and NVIDIA GPUs while maintaining Private Cloud Compute certification." <cite>— Apple, Platforms State of the Union, June 8</cite></blockquote>
+
+<h4>How Gemini contributed</h4>
+
+<p>The Gemini role was distillation and training assistance. Apple's pretraining pipeline used Gemini-family teacher models to produce supervision targets for Apple's own student models, a technique that lets the smaller student inherit some of the teacher's capability without inheriting its parameters. The same pattern Meta described for Llama 4 codistilling from Behemoth. Apple's distinction is that the Gemini teachers were "loaned" through Google's Gemini Cloud APIs for the training run rather than fine-tuned or modified in place, and the resulting Apple weights are then deployed independently. AppleInsider's framing: "Apple has confirmed the end result is pure Apple technology and code." The price tag, reportedly roughly $1 billion a year, covers the Gemini access during training plus the ongoing Google Cloud and NVIDIA GPU capacity for AFM Cloud Pro inference.</p>
+
+<p>The architectural choice has competitive consequences. By keeping the on-device tier under exclusive Apple control while paying Google for the frontier cloud capacity, Apple insulates the day-to-day Siri experience from frontier-model competitive shifts while still routing the hardest queries to whichever frontier model the user has selected through the Extensions framework. The bet is that the on-device tier is what Apple's hardware moat actually monetizes, and that the cloud tier is increasingly a commodity Apple should buy rather than build.</p>
+
+<p class="source-footer"><a href="https://appleinsider.com/articles/26/06/08/apples-new-foundation-models-dont-contain-a-drop-of-gemini-as-we-said-they-wouldnt" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 2. Xcode 27 -->
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="ui-monospace,SFMono-Regular,monospace" font-size="6.4" fill="#1e3a8a" font-weight="700">
+    <text x="10" y="20">$ xcode</text>
+    <text x="10" y="32">/plan _</text>
+  </g>
+  <g transform="translate(10,40)">
+    <rect x="0" y="0" width="32" height="14" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a" stroke-width="0.7"/>
+    <text x="16" y="10" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.6" font-weight="700" fill="#1e3a8a">CLAUDE</text>
+    <rect x="35" y="0" width="32" height="14" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a" stroke-width="0.7"/>
+    <text x="51" y="10" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.6" font-weight="700" fill="#1e3a8a">GPT</text>
+    <rect x="70" y="0" width="32" height="14" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a" stroke-width="0.7"/>
+    <text x="86" y="10" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.6" font-weight="700" fill="#1e3a8a">GEMINI</text>
+  </g>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.4" fill="#1e3a8a">XCODE 27 · /PLAN · DUAL ENGINE</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Xcode 27 ships with Anthropic, OpenAI and Google coding agents and a new /plan command for scoping work</h3>
+<p class="kicker">iPhone in Canada / Apple Developer · 2026-06-08 · <a href="https://www.iphoneincanada.ca/2026/06/08/apple-just-unveiled-xcode-27-with-chatgpt-claude-and-gemini-built-in/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Apple's Platforms State of the Union introduced Xcode 27 with built-in coding agents from Anthropic, OpenAI and Google. The agents handle test writing, multi-file refactors, interactive planning via a new <code>/plan</code> command, localization, String Catalog generation and translation. The IDE runs a dual-engine architecture: a local Apple Silicon Neural Engine model handles real-time suggestions tied to the active Swift project structure; heavier code analysis routes to third-party frontier models. Apple's new Core AI framework lets developers deploy full-scale LLMs on-device using the Neural Engine, and the App Store Small Business Program devs with fewer than 2 million users get Private Cloud Compute access free.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Xcode 27 is the largest single-version change to Apple's developer IDE since the SwiftUI transition. Apple revealed it during the Platforms State of the Union after the morning keynote, presenting it as the foundation for what the company called "a new era in software development on Apple Silicon." The framing is that local AI handles the latency-sensitive editing path while frontier models handle the heavier judgment calls.</p>
+
+<p>The agent surface lives in the editor pane with full tab and split-window support. Each tab can run a different agent against a different scope of the codebase. The new <code>/plan</code> command lets a developer scope work before any code changes happen: the agent reads the relevant files, asks clarifying questions, proposes a step-by-step approach and waits for approval before editing. Agents can set up localization, create String Catalogs and generate translations across the languages Apple supports for App Store distribution. Apple positioned the agents as task-completion tools rather than auto-complete extensions, picking up the language Cognition and Anthropic have used for Devin and Claude Code.</p>
+
+<h4>Dual-engine local plus cloud</h4>
+
+<p>The architecture matters because Apple is the first major IDE vendor to ship two separate inference paths in a single product. The local model is a highly tuned Apple Silicon variant — likely a sibling of AFM Core or AFM Core Advanced — that runs natively on the Neural Engine and produces code suggestions, documentation snippets and Swift-aware completions in real time, with the project structure and SDK surface as in-memory context. Heavy queries (multi-file refactors, full test suite generation, structural bug-finding across thousands of lines) hand off to a third-party model the developer has selected: Anthropic's Claude, OpenAI's GPT family or Google's Gemini coding model. Teams that prefer their own provider can configure Xcode 27 to route suggestions to a custom LLM endpoint instead.</p>
+
+<blockquote class="pull-quote">"With new intelligence frameworks and agentic coding in Xcode 27, developers have the tools they need to focus on what they do best." <cite>— Susan Prescott, Apple VP of Worldwide Developer Relations</cite></blockquote>
+
+<h4>Core AI framework and free Private Cloud Compute</h4>
+
+<p>Beneath Xcode 27, Apple shipped the Core AI framework as a system-wide developer surface for deploying full-scale large language models on Apple Silicon. Core AI exposes the Neural Engine through a Swift API that handles model loading, tokenization, KV-cache management and on-device tool calling without forcing the developer to write low-level Metal kernels. The Foundation Models framework, which last year exposed only the 3B-parameter on-device model, now adds image input alongside text, custom skills (developer-defined tool plugins) and the ability to dispatch jobs to Private Cloud Compute when on-device budget is exceeded.</p>
+
+<p>The pricing footnote landed loudly with the developer audience: members of the App Store Small Business Program with fewer than 2 million users get Private Cloud Compute access free. That gives small studios access to the same inference path Apple uses for AFM Cloud Pro without paying per-token rates. Larger developers will pay a usage-based tier Apple is publishing in the developer documentation through the week.</p>
+
+<p class="source-footer"><a href="https://developer.apple.com/videos/play/wwdc2026/258/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 3. Siri AI marketplace -->
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g transform="translate(60,40)" stroke="#1e3a8a" fill="none">
+    <circle r="5" stroke-width="1.4" fill="#1e3a8a"/>
+    <line x1="0" y1="-5" x2="0" y2="-22" stroke-width="1"/>
+    <line x1="0" y1="5" x2="0" y2="22" stroke-width="1"/>
+    <line x1="-5" y1="0" x2="-22" y2="0" stroke-width="1"/>
+    <line x1="5" y1="0" x2="22" y2="0" stroke-width="1"/>
+    <text x="0" y="-26" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.6" font-weight="700" fill="#1e3a8a">GPT</text>
+    <text x="0" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.6" font-weight="700" fill="#1e3a8a">CLAUDE</text>
+    <text x="-30" y="3" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.6" font-weight="700" fill="#1e3a8a">GROK</text>
+    <text x="30" y="3" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.6" font-weight="700" fill="#1e3a8a">GEMINI</text>
+  </g>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">EXTENSIONS · USER-PICKED</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">iOS 27 Extensions opens a third-party AI marketplace where users pick the model behind Siri</h3>
+<p class="kicker">AI Weekly / AppleInsider · 2026-06-08 · <a href="https://aiweekly.co/node/2611" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">The Apple Intelligence Extensions framework lets the user set Claude, ChatGPT, Google Gemini or Grok as the default model behind Siri, Writing Tools, Image Playground and Visual Intelligence through Settings. A dedicated App Store marketplace will accept new providers later. Each model carries a distinct voice in spoken responses so the user knows which model answered. Apple is ending the single-provider ChatGPT arrangement that shipped with iOS 18.2 and reframing Apple Intelligence as a routing layer above a competitive model market.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The Extensions framework is the architectural concession that defines the rest of Apple's AI strategy. Last year's Apple Intelligence shipped with ChatGPT integration as a single negotiated partnership; if the user wanted a different model, they used a different app. iOS 27 turns that model into a system-level marketplace. From Settings, the user picks the default backend across Siri, Writing Tools, Image Playground and Visual Intelligence. The default at first run is Gemini; Apple's marketplace will accept ChatGPT, Claude, Google Gemini and Grok as launch partners with more providers to be added through the iOS 27 cycle.</p>
+
+<p>The voice-distinction detail matters. When Siri AI answers a spoken question with the user's chosen model, the answer speaks in a model-specific voice signature so the user can tell whether ChatGPT or Claude or Gemini produced the response. Apple has not described the voice signatures in detail, but the design intent is that the user always knows which provider's reasoning is shaping the answer. The same is true in Writing Tools: a Rewrite suggestion from ChatGPT carries a small chip in the suggestion sheet noting the source model.</p>
+
+<h4>What this opens up</h4>
+
+<p>For ChatGPT, Anthropic, Google and xAI, the implication is that hundreds of millions of iPhone users can route their Apple Intelligence requests through whichever model the user prefers without leaving the Apple-native experience. For Apple, the implication is that the company is no longer in the position of having to be best at frontier reasoning to ship a competitive assistant. AppleInsider's read: Apple's pitch becomes "we own the interface, the privacy layer, and the on-device tier; you bring whichever frontier model fits your taste."</p>
+
+<blockquote class="pull-quote">"Apple is ending its single-provider ChatGPT model in favor of an open competitive platform." <cite>— AI Weekly analysis, June 8</cite></blockquote>
+
+<p>The compatibility ladder for Apple Intelligence requires iPhone 16+, iPhone 15 Pro/Pro Max, iPad mini A17 Pro, M1 or later iPads, MacBook Neo A18 Pro, M1 or later Macs, Apple Vision Pro, Apple Watch Series 9, Ultra 2 or SE 3 as the minimum. Older devices keep the legacy Siri. The Extensions framework also enables developers to define custom skills that route through the user's chosen model — a Slack skill that defaults to summarizing channel activity through whichever model the user has set, a Notion skill that drafts a page outline through Claude or Gemini or ChatGPT, without each developer signing a separate partnership with each model provider.</p>
+
+<p class="source-footer"><a href="https://aiweekly.co/node/2611" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 4. Siri AI not in EU or China -->
+<details class="story" data-tags="policy application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+    <text x="60" y="32" text-anchor="middle" font-size="22">EU · CN</text>
+    <text x="60" y="48" text-anchor="middle" font-size="6.5" letter-spacing="1.6">SIRI AI EXCLUDED</text>
+    <text x="60" y="60" text-anchor="middle" font-size="6.5" letter-spacing="1.6">DMA · NO TIMELINE</text>
+  </g>
+  <line x1="14" y1="68" x2="106" y2="68" stroke="#1e3a8a" stroke-width="0.8"/>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">FEDERIGHI · "DEEPLY DISAPPOINTED"</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Siri AI not coming to EU or China at launch: Federighi blames Digital Markets Act access demands</h3>
+<p class="kicker">MacRumors · 2026-06-08 · <a href="https://www.macrumors.com/2026/06/08/siri-ai-not-available-eu-china/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Apple confirmed Monday that the enhanced Siri AI announced at WWDC 2026 will not ship in the European Union or China when iOS 27 and iPadOS 27 release later this year. Craig Federighi told MacRumors the European Commission demanded that any AI assistant in the EU have "nearly unlimited access to a user's device" with autonomous action capabilities including reading and sending messages, making purchases and accessing files across apps. Apple proposed a Trusted System Agent intermediary and an 18-month phased rollout; the Commission rejected the proposals. Siri AI remains available on macOS 27, visionOS 27 and watchOS 27 in the EU; iPhone and iPad features that depend on agentic device access do not ship.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>MacRumors broke the EU and China carve-out under embargo Monday morning alongside the WWDC keynote. Apple's stance is that the European Commission's interpretation of Digital Markets Act interoperability requirements would force any AI assistant operating on an EU-distributed iPhone to expose autonomous capability — reading and sending messages, making purchases, accessing files across apps — to third-party assistants on equal terms. Apple's privacy and security framing is that this scope of access amounts to "nearly unlimited" device control and cannot be granted to unvetted third parties without breaking the device security model.</p>
+
+<p>Apple proposed two mitigations. The first was a "Trusted System Agent" intermediary that would sit between any virtual assistant and the device's privileged surfaces, brokering access through a privacy-preserving permission layer that all assistants would share equally. The second was an 18-month phased rollout that would have given Apple and EU developers time to build against the intermediary before Siri AI launched in the region. Per Apple, the European Commission rejected both proposals without offering an alternative path that would let Apple ship Siri AI in the EU on the company's preferred privacy footing.</p>
+
+<blockquote class="pull-quote">"We're deeply disappointed that our EU users won't have Siri AI. Their refusal to engage constructively on solutions that preserve privacy and security means we do not currently have a timeline." <cite>— Craig Federighi, Apple SVP of Software Engineering</cite></blockquote>
+
+<h4>What ships and what does not</h4>
+
+<p>The carve-out is partial. Siri AI does ship on macOS 27, visionOS 27 and watchOS 27 in the EU. The iPhone and iPad features that depend on the agentic device-access surfaces — reading messages, sending messages, navigating across apps, the new Siri conversation app, the expanded Visual Intelligence, the Camera-app Siri mode — do not. EU developers cannot test or integrate the iPhone-side Siri AI surfaces in their own apps either, which compounds the regional gap because EU-based developers building for global distribution lose visibility into how their apps behave on the new Siri stack.</p>
+
+<p>The China track is separate but produced the same result. Apple has not publicly described the Chinese regulatory requirements that paused the Siri AI launch in the People's Republic, but the timing aligns with ongoing approval cycles for foreign AI services under the Cyberspace Administration of China. macOS and visionOS remain unaffected.</p>
+
+<p>The political timing is awkward. The EU AI Act's high-risk obligations take effect August 2, 2026. Apple's carve-out lands six weeks before that deadline and reframes the EU-US frontier-AI policy gap from theoretical to immediate. EU users will see iPhones in stores that have the new Siri AI marketing collateral but a notice that the assistant is not available in their region. The Cupertino-Brussels relationship is the largest visible US-EU frontier-AI policy fracture to date.</p>
+
+<p class="source-footer"><a href="https://www.macrumors.com/2026/06/08/siri-ai-not-available-eu-china/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 5. Liquid Glass opacity slider -->
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="14" y="14" width="92" height="40" fill="#1e3a8a" fill-opacity="0.10" stroke="#1e3a8a" stroke-width="0.7"/>
+  <rect x="22" y="22" width="76" height="24" fill="#1e3a8a" fill-opacity="0.30" stroke="#1e3a8a" stroke-width="0.5"/>
+  <line x1="14" y1="62" x2="106" y2="62" stroke="#1e3a8a" stroke-width="0.7"/>
+  <line x1="14" y1="62" x2="60" y2="62" stroke="#1e3a8a" stroke-width="2.5"/>
+  <circle cx="60" cy="62" r="3" fill="#1e3a8a"/>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" letter-spacing="1.4" fill="#1e3a8a">CLEAR &lt;&mdash;&gt; TINTED</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Apple ships an opacity slider for Liquid Glass and rebuilds the design's readability foundations</h3>
+<p class="kicker">TechCrunch · 2026-06-08 · <a href="https://techcrunch.com/2026/06/08/apple-is-tweaking-its-controversial-liquid-glass-design/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Apple ships a slider in iOS 27 and macOS Golden Gate that lets users adjust Liquid Glass anywhere from "ultra clear" to "fully tinted" after a year of feedback that the 2025 transparency-heavy redesign hurt readability. The company also updated the foundations of how Liquid Glass is built, diffusing complex content behind interface elements to improve depth, sharpened icons, expanded sidebars to the window edge, and made refraction continue beneath sidebars rather than cutting off at the boundary. Liquid Glass customizations work in third-party apps at launch.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Apple's WWDC 2025 Liquid Glass debut produced more legibility complaints than any iOS design change since the iOS 7 flattening. The Cupertino response is the iOS 27 opacity slider, the most visible concession to user feedback in a single OS cycle. The slider exposes the alpha channel of the system glass material to user control. Set it to ultra clear and the iOS 26 behavior returns — windows are translucent, the wallpaper bleeds through, and the OS reads as more visually immersive but harder to scan. Set it to fully tinted and panels become opaque solid surfaces with high contrast against the background, more like macOS Sequoia.</p>
+
+<p>The bigger story is what changed underneath the slider. Apple wrote that the company "updated the foundations of how Liquid Glass is built to ensure exceptional readability" by diffusing complex content behind glass elements before rendering them. The practical effect: text and icons on top of glass surfaces get a calibrated background diffusion that maintains the glass aesthetic without the contrast collapse that plagued the first release. App icons across iOS and macOS were redesigned for cohesion with the updated Liquid Glass aesthetic. Sidebars now expand to the edge of the window; when the user scrolls UI sideways, refraction continues beneath the sidebar rather than getting cut off at the boundary, fixing a visual artifact that became a meme on Mac power-user forums last fall.</p>
+
+<blockquote class="pull-quote">"Like with all major design updates, there is a natural process where we take a bold leap forward, and then we continue to iterate. Our team really appreciates your feedback." <cite>— Apple statement at WWDC 2026 design session</cite></blockquote>
+
+<h4>Third-party apps get the same controls</h4>
+
+<p>Apple's developer release notes confirm that Liquid Glass customizations work inside third-party apps at launch. The new SwiftUI APIs for the glass material accept the user's chosen opacity as a system-provided value, so apps that adopt the material automatically respect the slider setting. The opacity slider is one of a small handful of system-wide user controls that override an app's design choice, joining font size and Reduce Transparency in the accessibility-adjacent slot.</p>
+
+<p>SiliconANGLE's morning analysis flagged the design backtrack as a sign of Apple under user pressure: the 2025 Liquid Glass push was framed as a bold visual reset, the 2026 update is framed as iteration. The internal Apple language at the design session was about "rebalancing" rather than backing off, but the slider's user-facing presence acknowledges that the 2025 default reading was wrong for a sizable share of users. The redesign ships on both iOS 27 and macOS 27 Golden Gate, and developers are expected to adopt the refined Liquid Glass APIs in apps shipping for the fall public release.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/06/08/apple-is-tweaking-its-controversial-liquid-glass-design/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 6. macOS Golden Gate -->
+<details class="story" data-tags="application tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g stroke="#1e3a8a" fill="none">
+    <path d="M14 56 L34 30 L60 50 L86 30 L106 56" stroke-width="1.6"/>
+    <line x1="20" y1="56" x2="20" y2="30" stroke-width="1"/>
+    <line x1="100" y1="56" x2="100" y2="30" stroke-width="1"/>
+    <line x1="34" y1="56" x2="34" y2="30" stroke-width="0.8"/>
+    <line x1="86" y1="56" x2="86" y2="30" stroke-width="0.8"/>
+    <line x1="14" y1="56" x2="106" y2="56" stroke-width="1.2"/>
+  </g>
+  <text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" letter-spacing="2" fill="#1e3a8a">GOLDEN GATE 27</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">macOS 27 Golden Gate brings rebuilt Spotlight, faster scheduler, sharper Liquid Glass and Siri AI in Spotlight</h3>
+<p class="kicker">OSXDaily / wccftech · 2026-06-08 · <a href="https://osxdaily.com/2026/06/08/macos-golden-gate-27-announced/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">macOS 27 is officially "Golden Gate." Apple positioned it as a refinement of last year's Tahoe — same Liquid Glass aesthetic with a transparency slider, plus a complete Spotlight rewrite. The new indexing infrastructure scans device content and adds fresh items almost immediately. Spotlight, Photos and Mail search all sit on the new index. Users can type Siri AI questions directly into Spotlight. Apple ships a faster scheduler and improved file preloading; tests showed photos loading 70 percent faster and app launches 30 percent faster. Window corners get a tighter radius. Sidebar icons regain color as Apple "reincorporates" older macOS design cues.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The Golden Gate name carries the same San Francisco-landmark theme Apple has used since Big Sur. The internal positioning is iterative rather than transformational: Tahoe rebalanced, with the Liquid Glass criticism addressed and a substantial under-the-hood rewrite of the parts of the OS that handle search and file indexing. The under-the-hood changes are the news inside the news.</p>
+
+<p>Spotlight's index is rebuilt from the ground up. The new infrastructure adds new files and content to the index almost immediately rather than waiting for the legacy throttled rescan cycle. Spotlight, Photos search and Mail search are all rewritten on top of the new index. Apple's claim is that the same hardware now produces noticeably faster results on the same query because the underlying database is more compact and the matching pipeline avoids redundant work. Spotlight on Golden Gate also accepts Siri AI questions directly: the user can type a natural-language question into Spotlight and get an inline Siri AI answer without leaving the Spotlight surface, which collapses what was previously a four-tap interaction into a one-key Spotlight invocation.</p>
+
+<h4>Performance changes the user feels</h4>
+
+<p>Apple disclosed concrete performance numbers at the State of the Union. Apps and Photos load 70 percent faster, app launches gain 30 percent across both first-party and third-party apps including unchanged third-party binaries, and AirDrop transfers 80 percent faster. The underlying improvements are a faster CPU scheduler tuned for the M-series mixed-core layout, better file preloading driven by the new Spotlight index, and reduced startup overhead in app launch through more aggressive prelink caching. The third-party app boost lands without requiring app updates because the scheduler and preloader change Apple Silicon kernel behavior rather than app code.</p>
+
+<blockquote class="pull-quote">"Apps and Photos load 70 percent faster, app launches gain 30 percent across both first-party and third-party apps, and AirDrop transfers 80 percent faster." <cite>— Apple Platforms State of the Union, June 8</cite></blockquote>
+
+<p>The design refresh sits alongside the performance work. Window corners gain a tighter radius for a more consistent layout across panels. Sidebar icons regain colour as Apple is "reincorporating" older macOS design cues that the Tahoe release flattened. The Liquid Glass slider in System Settings carries over from iOS 27, so users who set their iPhone to fully tinted Liquid Glass can mirror that setting on the Mac. Golden Gate ships to developers Monday and reaches the public this fall as a free upgrade.</p>
+
+<p class="source-footer"><a href="https://osxdaily.com/2026/06/08/macos-golden-gate-27-announced/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 7. visionOS 27 -->
+<details class="story" data-tags="application tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g transform="translate(60,42)">
+    <circle r="22" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <circle r="14" fill="#1e3a8a" fill-opacity="0.2" stroke="#1e3a8a" stroke-width="0.7"/>
+    <circle r="6" fill="#1e3a8a"/>
+    <path d="M-22 0 A 22 22 0 0 1 0 -22" fill="none" stroke="#1e3a8a" stroke-width="2.5"/>
+  </g>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.6" font-weight="700" letter-spacing="2" fill="#1e3a8a">SIRI MARBLE · visionOS 27</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">visionOS 27 turns panoramic photos into spatial scenes and pins a floating Siri marble in the user's field of view</h3>
+<p class="kicker">9to5Mac / AppleInsider · 2026-06-08 · <a href="https://9to5mac.com/2026/06/08/visionos-27-announced-with-new-features-for-vision-pro/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">visionOS 27 turns panoramic photos into spatial scenes the wearer can step inside, lets users pin their own panoramas as immersive environments, and embeds the new agentic Siri AI throughout the headset experience. Siri AI appears as a floating marble-like ball the user places anywhere in their field of view; the marble stays anchored in virtual space until moved. Curved windows, expandable notifications and design refinements ship alongside. Jeff Norris introduced the update during the keynote; Apple's framing is that visionOS 27 is the spatial computer's first AI-native release.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>visionOS 27 lands in the middle of an awkward transitional year for Vision Pro. The Vision Pro 2 hardware refresh slipped to 2028 according to Bloomberg's May 29 column, leaving the existing Vision Pro headset to carry a software update against a hardware bill of materials that has not changed since launch. Apple chose to invest in the agentic Siri AI surface and a set of immersive-content features that the existing hardware can render without changes.</p>
+
+<p>Spatial panoramas is the headline content feature. Photos captured as iPhone panoramas can be projected as spatial scenes inside Vision Pro: the user steps through the panorama as a partially immersive scene rather than viewing it as a flat 2D image. The same mechanism lets users add personal panoramas to the "My Environments" set, alongside the Apple-shipped Joshua Tree, White Sands and Mount Hood environments the headset has carried since launch. The effect is that a user can inhabit a panorama they captured at a moment they want to revisit — a wedding venue, a child's classroom on the first day of school, the view from a balcony on holiday. AppleInsider's framing was that this is the first Vision Pro feature that converts the user's existing photo library directly into immersive content without requiring the user to capture spatial-format video on the headset.</p>
+
+<h4>The floating Siri marble</h4>
+
+<p>Siri AI on visionOS appears as a floating marble-like ball the user places anywhere in their virtual space. Once placed, the marble stays anchored in that location until the user moves it, even as the user walks around the room. Looking at the marble and speaking invokes Siri; the response surface unfurls from the marble. The visualization is Apple's answer to the persistent-assistant interaction question that Meta's Orion glasses sidestepped by binding the assistant to the temple-mounted speaker. Apple's spatial answer is to put the assistant in the world.</p>
+
+<blockquote class="pull-quote">"Siri being everything in this new update… you can simply look at a 3D visualization of Siri in your field of view and ask the chatbot queries, appearing as a giant, floating marble-like ball that will stay cemented in virtual space wherever you place it." <cite>— AppleInsider, June 8</cite></blockquote>
+
+<p>The rest of visionOS 27 is iterative: curved windows for Safari, Apple TV and Freeform; expandable notifications that drag into a floating panel rather than dismissing immediately; design refinements that bring the visionOS Liquid Glass palette closer to iOS 27 and macOS Golden Gate. visionOS 26 fixed digital Personas — the avatar the headset projects of the wearer during FaceTime calls — so they did not look like cartoon renditions of users' bodies; visionOS 27 leaves Personas largely unchanged. The Mandalorian and Grogu screens at the Apple Park theater for invited developers Monday evening.</p>
+
+<p class="source-footer"><a href="https://9to5mac.com/2026/06/08/visionos-27-announced-with-new-features-for-vision-pro/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 8. watchOS 27 -->
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="36" y="14" width="48" height="52" rx="10" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+  <rect x="44" y="22" width="32" height="6" fill="#1e3a8a" fill-opacity="0.5"/>
+  <rect x="44" y="32" width="24" height="6" fill="#1e3a8a" fill-opacity="0.3"/>
+  <rect x="44" y="42" width="28" height="6" fill="#1e3a8a" fill-opacity="0.18"/>
+  <circle cx="60" cy="58" r="3" fill="#1e3a8a"/>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">WORKOUT BUDDY · PERIMENOPAUSE</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">watchOS 27 wires Siri AI into the wrist, expands Workout Buddy to Spanish and adds perimenopause detection to Cycle Tracking</h3>
+<p class="kicker">AppleInsider · 2026-06-08 · <a href="https://appleinsider.com/articles/26/06/08/coaching-wellness-features-ai-make-the-biggest-impact-in-watchos-27" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">watchOS 27 brings the agentic Siri AI to Apple Watch Series 9, Ultra 2 and SE 3, expands the Smart Stack with a Dynamic App Grid and ID integration, and rolls Workout Buddy out in Spanish with new coaching insights tied to fitness history. Cycle Tracking in the Health app now sends notifications when logged cycle patterns suggest perimenopause. Running gets better track precision and additional pace, distance and duration analytics. David Clark introduced the update Monday during the WWDC keynote.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Apple Watch is the device that most needs the agentic Siri rebuild. The wrist's small screen, audio-first interaction model and constant context proximity make it the natural surface for natural-language requests. watchOS 27 confirms that read by bringing Siri AI to every Apple Watch model from Series 9 onward, with the conversational model running through the on-device Apple Foundation Models tier for lightweight requests and the watch's iPhone tether for the heavier queries that route through Private Cloud Compute or the user's chosen third-party model.</p>
+
+<p>Workout Buddy, the AI coaching feature that launched in watchOS 26 in English, expands to Spanish in watchOS 27 with new coaching insights based on the wearer's fitness history. The model can now reference previous training periods when offering encouragement or pacing suggestions, so a runner training for a half marathon hears feedback shaped by the previous month's intervals rather than a generic Apple-default rubric. The running improvements include better track-precision GPS for users running circuits on a measured track and additional data points around pace, distance and workout duration that feed into the post-workout summary.</p>
+
+<h4>Cycle Tracking and perimenopause</h4>
+
+<p>The most concrete health addition is perimenopause detection inside Cycle Tracking. The Health app can now send notifications when the wearer's logged cycle patterns become suggestive of perimenopause, the transitional period before menopause in which cycle length and symptoms shift in ways that are clinically meaningful but easy to overlook in a busy life. Apple's framing positions the notification as an early-prompt for clinical conversation rather than a diagnosis. The feature integrates with the iOS 27 Health app's new perimenopause and menopause tracking surfaces Dr. Sumbul Desai introduced during the Health segment of the keynote.</p>
+
+<blockquote class="pull-quote">"Cycle Tracking in the Health app can provide notifications when your logged cycle patterns are suggestive of perimenopause." <cite>— Apple Newsroom, June 8</cite></blockquote>
+
+<h4>Smart Stack and Dynamic App Grid</h4>
+
+<p>The Smart Stack gains a Dynamic App Grid that surfaces the user's most recently used apps in the same surface as the Stack cards and Wallet ID. Smart Stack cards now learn from time-of-day patterns more aggressively — the morning commute card shows transit ETAs by default for users with a regular pattern; the late-night card defaults to Sleep mode and Do Not Disturb without requiring an active Focus. ID integration inside Smart Stack lets the user surface a transit card, a building access pass or a state-issued mobile ID directly from the watch face with a single tap on the Wallet card in the Stack.</p>
+
+<p>watchOS 27 ships to developers Monday alongside the rest of the OS lineup. The public release lands in the fall as a free upgrade for Series 9, Ultra 2 and SE 3.</p>
+
+<p class="source-footer"><a href="https://appleinsider.com/articles/26/06/08/coaching-wellness-features-ai-make-the-biggest-impact-in-watchos-27" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 9. iOS 27 widest compatibility -->
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+    <text x="60" y="34" text-anchor="middle" font-size="22">iPhone 11+</text>
+    <text x="60" y="52" text-anchor="middle" font-size="6.5" letter-spacing="1.4">WIDEST iOS COMPAT EVER</text>
+    <text x="60" y="64" text-anchor="middle" font-size="6.5" letter-spacing="1.4">iOS 27 · 7 YEAR REACH</text>
+  </g>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">PERFORMANCE FIRST</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">iOS 27 reaches every iPhone 11 or later — Apple's widest compatibility ever — with a performance-first agenda</h3>
+<p class="kicker">TechCrunch · 2026-06-08 · <a href="https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">iOS 27 ships to every iPhone from iPhone 11 onwards. Apple framed the release as "performance-first" with the most aggressive backwards-compatibility commitment in iPhone history. Apps and the Photos app load 30 percent faster; photos open 70 percent faster; AirDrop transfers move 80 percent faster. CPU scheduling and file preloading do most of the work, so the gains apply to unchanged third-party apps as well as Apple's first-party stack. Apple Intelligence features still require iPhone 16+ or iPhone 15 Pro/Pro Max, but the non-Intelligence iOS 27 surfaces reach a seven-year-old device population for the first time.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The compatibility cliff that arrived with the M1 transition and the Apple Intelligence rollout last year shrank the install base of cutting-edge iOS features to the iPhone 15 Pro and iPhone 16 lines. iOS 27 walks that cliff back for the parts of the release that do not depend on Neural Engine budget. The full iOS 27 system stack — Liquid Glass, the Spotlight rewrite, Image Playground, Mail and Phone updates, Wallet, the new dictation surface, Shortcuts natural-language workflows, the redesigned Phone and Safari surfaces — reaches every iPhone from the iPhone 11 forward.</p>
+
+<p>The seven-year reach is unprecedented for an iOS major release. Apple's pattern has typically been to support three to four iPhone generations on each major iOS version, with the oldest supported model running a degraded subset of features. iOS 27's compatibility list spans iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max, iPhone SE 2nd and 3rd generation, every iPhone 12, every iPhone 13, every iPhone 14, every iPhone 15, every iPhone 16 and the new iPhone 17 line. The Apple Intelligence requirements remain stricter: iPhone 16+, iPhone 15 Pro and Pro Max, M1 or later iPads, MacBook Neo A18 Pro, M1 or later Macs, Apple Vision Pro and Apple Watch Series 9, Ultra 2 or SE 3.</p>
+
+<blockquote class="pull-quote">"All iPhone and iPad apps will load up to 30 percent faster, including third-party ones." <cite>— Apple, WWDC 2026 keynote</cite></blockquote>
+
+<h4>Where the performance gains come from</h4>
+
+<p>The 30/70/80 percent numbers are Apple's headline performance disclosure for iOS 27. The drivers are concrete. The CPU scheduler was reworked to better exploit the mixed performance-and-efficiency cores on Apple Silicon under multitasking load. File preloading uses the new Spotlight index to predict which assets an app will request and warm them into memory before the app process asks for them. App launch goes through a more aggressive prelink cache so the dynamic linker does less work on cold start. AirDrop's transport stack was tightened against the bandwidth ceiling on Wi-Fi 7-capable iPhones, with most of the gain coming from removing redundant handshake round-trips during peer discovery.</p>
+
+<p>The third-party app gain is the most consequential because it lands without app developers needing to ship updated builds. The same binary launches faster on iOS 27 than on iOS 26 because the OS-level changes around scheduling and preloading apply equally to first-party and third-party apps. Developers will still be encouraged to adopt the Liquid Glass updates, the Foundation Models framework additions and the new Phone-and-Mail contextual APIs to deliver Apple Intelligence-aware behavior, but the baseline performance lift is automatic.</p>
+
+<p>The public beta arrives in July. The fall release lands as a free upgrade alongside the iPhone 18 introduction event Apple has not yet confirmed but the industry treats as a September fixture.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 10. Image Playground -->
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="14" y="14" width="38" height="52" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a" stroke-width="0.7"/>
+  <rect x="56" y="14" width="50" height="24" fill="#1e3a8a" fill-opacity="0.30" stroke="#1e3a8a" stroke-width="0.7"/>
+  <rect x="56" y="42" width="50" height="24" fill="#1e3a8a" fill-opacity="0.12" stroke="#1e3a8a" stroke-width="0.7"/>
+  <text x="33" y="44" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" fill="#1e3a8a">REALISTIC</text>
+  <text x="81" y="29" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" fill="#1e3a8a">EDIT</text>
+  <text x="81" y="56" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" fill="#1e3a8a">DESCRIBE A CHANGE</text>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.4" fill="#1e3a8a">IMAGE PLAYGROUND</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Image Playground gets realistic generation, "describe a change" editing, and a Genmoji suggestion engine</h3>
+<p class="kicker">TechCrunch · 2026-06-08 · <a href="https://techcrunch.com/2026/06/08/apples-image-playground-doesnt-suck-anymore/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Image Playground in iOS 27 generates realistic images at arbitrary sizes across nearly all of Apple's platforms. The upgraded app introduces higher-quality output, more artistic styles, better character consistency and richer editing controls. A simplified interface offers fewer controls and a "describe a change" option for in-place edits. A new Suggested Genmoji feature proactively creates graphics from the user's photo library and typed phrases. The model behind generation is the AFM Cloud image variant, which can also be invoked from any text field in iOS 27 through the system Image API.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Image Playground's first release, which shipped with iOS 18.2, drew a near-universal verdict in the developer and creator press: it produced stylized cartoons that read more as Apple's branding compromise than as image-generation Apple Intelligence promised. TechCrunch's headline on the iOS 27 version was a one-line update: "Apple's Image Playground doesn't suck anymore." The change is grounded in two things. Apple swapped in a substantially upgraded model and rebuilt the editing surface around prompt-driven editing rather than slider-driven generation.</p>
+
+<p>The model behind the new Image Playground is a dedicated AFM Cloud image variant, the same model the Foundation Models framework exposes to developers for image generation tasks. The model produces realistic photographs, painterly illustrations, vector-style graphics, retro pixel art and a long list of intermediate styles. Character consistency — a notorious weakness of the first release in which a Genmoji of a specific person rendered with shifting features across iterations — is materially better; the same character cue produces a recognizable subject across multiple generations. Output sizes are flexible: the user can ask for a 1:1 social tile, a 16:9 banner, a 4:5 portrait or any custom aspect ratio rather than choosing from a fixed set of presets.</p>
+
+<h4>Editing through description</h4>
+
+<p>The most concrete UX change is "describe a change." The previous Image Playground required the user to re-issue a fresh prompt to alter an output. The new release accepts natural-language edit instructions on an existing image. "Make the sky darker," "Add a small dog in the foreground," "Change the building to look like a Brutalist concrete tower" all produce in-place edits without losing the rest of the composition. The functionality borrows the in-context editing pattern Google Imagen and OpenAI's gpt-image-1 introduced in 2025 and integrates it as the default editing surface inside Apple Intelligence rather than as a separate creative tool.</p>
+
+<blockquote class="pull-quote">"A new Suggested Genmoji feature will proactively create graphics based on your photo library and typed phrases." <cite>— Apple, WWDC 2026 announcement</cite></blockquote>
+
+<h4>Genmoji and ambient integration</h4>
+
+<p>Genmoji becomes proactive. The Suggested Genmoji surface watches typed phrases and the user's photo library context and offers contextual Genmoji suggestions inline — type "Let's go to the beach later" in Messages and the keyboard surfaces a Genmoji of the user with sunglasses and a beach ball; type a friend's name plus a birthday wish and the suggestion engine offers a personalized birthday Genmoji. The integration extends Image Playground into the input surface of every text field rather than confining it to a standalone app.</p>
+
+<p>For developers, the new Image API in iOS 27 exposes the AFM Cloud image variant through a system call so any app can request image generation against the user's Apple Intelligence account without negotiating a separate model provider. The user's chosen Apple Intelligence Extensions default still applies, so a developer who calls the Image API gets generation from ChatGPT, Claude, Gemini or Apple's model based on the user's preference rather than the developer's choice.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/06/08/apples-image-playground-doesnt-suck-anymore/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 11. AirPods Pro 3 biometrics -->
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g stroke="#1e3a8a" fill="none">
+    <ellipse cx="32" cy="40" rx="10" ry="14" stroke-width="1.4"/>
+    <line x1="32" y1="54" x2="32" y2="62" stroke-width="1.4"/>
+    <ellipse cx="88" cy="40" rx="10" ry="14" stroke-width="1.4"/>
+    <line x1="88" y1="54" x2="88" y2="62" stroke-width="1.4"/>
+    <path d="M42 36 Q60 28 78 36" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <path d="M42 44 Q60 56 78 44" stroke-width="0.8" stroke-dasharray="2 2"/>
+  </g>
+  <text x="60" y="40" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.6" font-weight="700" fill="#1e3a8a">♥</text>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" letter-spacing="1.4" fill="#1e3a8a">CARDIO · WITHOUT WATCH</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">AirPods Pro 3 stream biometric data to iPhone so runners can track cardio without an Apple Watch</h3>
+<p class="kicker">Technetbook · 2026-06-08 · <a href="https://www.technetbooks.com/2026/06/apple-wwdc-2026-ecosystem-features.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Apple updated its connected-fitness protocol so AirPods Pro 3 can send raw local cardio biometric data — heart rate and a derived activity intensity signal — directly to an active running session on an iPhone. The change enables aggregated cardio tracking without an Apple Watch in the loop. AirPods users also gained a custom EQ in settings for shaping the listening profile per device. The biometric pathway uses the AirPods Pro 3 in-ear optical sensor cluster Apple introduced last year and was previously restricted to relaying through the paired Apple Watch.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The AirPods Pro 3 added an in-ear optical heart-rate sensor cluster at launch, but the biometric data path was previously routed through an Apple Watch when one was present. Users running with AirPods but no watch could not access the cardio data even though the sensor was active. iOS 27's connected-fitness protocol update closes that gap. AirPods Pro 3 now report raw cardio biometric data directly to an active running session on the paired iPhone, with the iPhone's Health app and the running app aggregating the data exactly as if it had come from a watch.</p>
+
+<p>The shift matters for the share of iPhone users who own AirPods Pro 3 but not an Apple Watch — a population Apple does not publish but the company's marketing has acknowledged is large. For runners in that population, the watch was the missing piece for cardio tracking, and the watch is also the most expensive accessory Apple sells. AirPods Pro 3 with biometric streaming gives Apple a workout-tracking story that does not require the user to buy a second device. The strategic effect is to expand the AirPods accessory's role from listening device to fitness sensor.</p>
+
+<h4>The custom EQ</h4>
+
+<p>The other AirPods update is a system-level custom EQ in Settings. Users can adjust the AirPods listening profile across the standard frequency bands per AirPods pair, with the profile syncing through iCloud across the user's devices. The custom EQ replaces what used to require either third-party AirPods control apps or Apple Music's audio settings as the primary surface for shaping AirPods response.</p>
+
+<blockquote class="pull-quote">"AirPods Pro 3 wireless earbuds, with the AirPods Pro 3 capable of sending raw local cardio related biometric data to a running session on an iPhone, thus enabling aggregated cardio tracking without an Apple Watch being present." <cite>— Technetbook, WWDC 2026 recap</cite></blockquote>
+
+<p>Health app integration goes both directions. The Health app on iOS 27 reads the AirPods Pro 3 cardio stream during workouts and ingests the data into the same charts and trends the Apple Watch produces. The Workout Buddy AI coaching feature on watchOS 27 can also use AirPods Pro 3 cardio data when the user is wearing AirPods but not the watch, so the coaching layer is consistent regardless of which device is collecting the data. The change ships on AirPods Pro 3 only — the AirPods Pro 2 and earlier did not include the in-ear optical sensor cluster and cannot retrofit the biometric path.</p>
+
+<p class="source-footer"><a href="https://www.technetbooks.com/2026/06/apple-wwdc-2026-ecosystem-features.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 12. Apple Wallet Create-a-Pass -->
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <rect x="20" y="18" width="80" height="40" rx="6" fill="#1e3a8a" fill-opacity="0.20" stroke="#1e3a8a" stroke-width="0.9"/>
+  <rect x="20" y="18" width="20" height="40" rx="6" fill="#1e3a8a" fill-opacity="0.55"/>
+  <line x1="46" y1="28" x2="92" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+  <line x1="46" y1="36" x2="80" y2="36" stroke="#1e3a8a" stroke-width="0.6"/>
+  <line x1="46" y1="44" x2="74" y2="44" stroke="#1e3a8a" stroke-width="0.6"/>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">CREATE-A-PASS · iOS 27</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Apple Wallet Create-a-Pass turns any physical ticket or membership card into a Wallet entry with a single QR scan</h3>
+<p class="kicker">Macworld / Apple Newsroom · 2026-06-08 · <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">iOS 27 Wallet adds a Create-a-Pass feature that converts physical tickets, gym cards, library cards, concert passes and membership cards into digital Wallet entries from a single QR scan, even when the issuing merchant does not officially support Wallet. Apple Cash gains a receipt-splitting feature that runs OCR on a receipt photo and generates per-person payment requests. Wallet also picks up ID integration improvements that surface state-issued mobile IDs and transit cards from inside Smart Stack on Apple Watch.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The Wallet update is the smallest individual feature in the iOS 27 lineup by frame time but one of the most useful for the long tail of users who carry a stack of cards Apple Wallet never officially supported. Concert tickets from independent venues, gym memberships from local studios, library cards, museum memberships, frequent-customer punch cards from a neighborhood coffee shop — the universe of cards that have a barcode or QR code printed but no formal Wallet integration is the universe Apple is bringing into the digital surface.</p>
+
+<p>The mechanism is straightforward. The user scans the card or ticket with the Camera in Wallet's Create-a-Pass mode. The OS extracts the barcode or QR data and adds the card to Wallet with a system-generated visual treatment based on what the camera saw. The card sits alongside the user's official Wallet entries (credit cards, transit cards, boarding passes) and presents the barcode for scanning by the original venue or merchant. Apple's framing positions this as a digital-wallet-for-everyone feature: users no longer have to wait for each merchant to negotiate a Wallet integration to get the card off the keychain.</p>
+
+<h4>Apple Cash receipt splitting</h4>
+
+<p>The Apple Cash update reads a receipt photo and generates per-person payment requests. The user takes a photo of a restaurant bill or takeout receipt, taps the people they want to split it with from Contacts, and Apple Cash uses on-device OCR plus the on-device Apple Foundation Model to identify line items, allocate them across the group based on user adjustments and produce individual payment requests with the correct amounts. The feature handles tax and tip allocation automatically and respects custom adjustments — if one person ordered a more expensive entrée, the user can drag the item to that person's row and the totals update.</p>
+
+<blockquote class="pull-quote">"iOS 27 will make the Wallet app even more like a real wallet, allowing users to turn any ticket, pass, or membership card into a digital card that can be stored in Apple Wallet even if it's not officially supported." <cite>— Macworld WWDC live blog, June 8</cite></blockquote>
+
+<p>The Smart Stack ID integration on Apple Watch surfaces transit cards, building access passes and state-issued mobile IDs directly inside the watch face Smart Stack. A user approaching a subway turnstile sees the transit card surface in the Stack a beat before they tap, with the card scrolling to the front of the Stack on proximity to the reader. The proximity-triggered card surfacing was previously limited to Express Mode transit cards and Apple Pay. iOS 27 generalizes the pattern.</p>
+
+<p class="source-footer"><a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 13. Phone app context -->
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g stroke="#1e3a8a" fill="none">
+    <circle cx="34" cy="40" r="14" stroke-width="1.4" fill="#1e3a8a" fill-opacity="0.18"/>
+    <path d="M26 40 L26 36 Q26 34 30 32 L38 32 Q42 34 42 36 L42 44 L36 50 L32 50 L26 44 Z" fill="#1e3a8a" stroke="#1e3a8a" stroke-width="0.6"/>
+    <line x1="48" y1="40" x2="86" y2="40" stroke-width="1" stroke-dasharray="3 2"/>
+    <rect x="86" y="22" width="20" height="36" fill="none" stroke-width="1"/>
+    <line x1="89" y1="30" x2="103" y2="30" stroke-width="0.6"/>
+    <line x1="89" y1="38" x2="103" y2="38" stroke-width="0.6"/>
+    <line x1="89" y1="46" x2="100" y2="46" stroke-width="0.6"/>
+  </g>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">PHONE · MAIL · MESSAGES</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">iOS 27 lets the Phone app pull context from Mail and Messages mid-call</h3>
+<p class="kicker">TechCrunch · 2026-06-08 · <a href="https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">The Phone app in iOS 27 can pull context from Mail and Messages while a call is in progress. The system surfaces relevant threads, appointments and attachments from the contact the user is talking with, so a customer-support call about a flight cancellation can pull up the booking confirmation and the airline's last reply without leaving the call screen. The feature uses the on-device Apple Foundation Model to find context relevance; nothing leaves the device. AI-powered reply suggestions in Messages and Safari tab management land in the same release.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The Phone-and-Mail integration is the iOS 27 feature with the most concrete day-to-day utility for the user who already has Apple Intelligence enabled. The OS watches who the user is talking to during an active call, asks the on-device Apple Foundation Model to identify what context from the user's Mail and Messages threads with that contact is relevant to a likely topic, and surfaces a small panel inside the call screen with the relevant items. A call with a doctor's office surfaces appointment confirmations and after-visit summaries; a call with an airline surfaces the latest itinerary and the chat thread with the agent from yesterday; a call with a friend planning dinner surfaces the restaurant address from a recent Messages thread and the OpenTable confirmation email.</p>
+
+<p>The model decides relevance using only on-device context. The contact's identifier, the topic-detection signals from the audio if the user has enabled Siri AI in the call surface, and the user's recent communication history with that contact all feed into the AFM Core ranking layer. Nothing about the call goes to Private Cloud Compute unless the user explicitly invokes Siri AI for a query and the query exceeds on-device budget. The privacy framing is unusually tight for what is otherwise a cross-cutting integration across Apple's communication apps.</p>
+
+<h4>Messages, Safari, dictation</h4>
+
+<p>Adjacent iOS 27 features in the same Apple Intelligence-aware track include AI-powered reply suggestions in Messages that read the most recent thread and propose contextually appropriate replies the user can edit before sending; Safari tab management that uses the on-device model to group tabs by topic and suggest closing stale tabs; one-tap password updating that watches password fields and offers to generate and save a new strong password with a single tap when the user is on an account-update flow; and a system-wide dictation refresh with spelling, punctuation and capitalization corrections handled inline by the on-device model.</p>
+
+<blockquote class="pull-quote">"The Phone app can now pull context from other apps like Mail and Messages mid-call." <cite>— TechCrunch WWDC 2026 recap, June 8</cite></blockquote>
+
+<p>Shortcuts in iOS 27 accepts natural-language prompts as the primary creation surface. Users can describe a workflow in plain English — "Every weekday at 7am, check the weather, read me the top three headlines, and start my workout playlist" — and Shortcuts generates the matching workflow with the appropriate actions wired up. The natural-language interface uses the on-device Apple Foundation Model to parse intent, the Foundation Models framework's tool-use API to find the available app actions that fit, and a small interactive review step that lets the user adjust the steps before saving the shortcut.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 14. Child safety / parental controls -->
+<details class="story" data-tags="application policy">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g stroke="#1e3a8a" fill="none">
+    <path d="M60 18 L78 28 L78 46 Q78 58 60 66 Q42 58 42 46 L42 28 Z" stroke-width="1.4" fill="#1e3a8a" fill-opacity="0.15"/>
+    <line x1="50" y1="40" x2="58" y2="48" stroke-width="1.4"/>
+    <line x1="58" y1="48" x2="72" y2="34" stroke-width="1.4"/>
+  </g>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">PARENTAL CONTROLS · CHILD ACCT</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-policy">Policy</span></div>
+<h3 class="headline">Apple's child-account setup ships system-wide parental controls with Time Allowances, Ask to Browse and Communication Safety</h3>
+<p class="kicker">SiliconANGLE · 2026-06-08 · <a href="https://siliconangle.com/2026/06/08/apple-refines-liquid-glass-design-expands-child-safety-tools-wwdc/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">iOS 27 introduces a redesigned Screen Time experience built around a new child-account Setup Assistant that runs through age-appropriate protections systemwide. Parents can set Time Allowances by category (Entertainment, Games, Social Media), schedule-based access management, Ask to Browse permissions for websites and Communication Safety filters that block gore and violent content. Under-13 accounts default to Ask to Buy and Ask to Browse. The expansion lands the week after Bernie Sanders' AI Sovereign Wealth Fund Act introduction and as multiple state legislatures move on age-verification rules.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Apple's child-safety expansion at WWDC 2026 is the most concrete consumer-facing response to a year of state-legislature pressure around age verification and platform accountability for content minors see. Texas, Florida, Utah and California all moved in 2025 and 2026 on age-appropriate-design rules that, in different ways, require platforms to ship default protections for users under 18. Apple's WWDC update bundles those protections into a single Setup Assistant flow new child accounts run through on first sign-in.</p>
+
+<p>The Setup Assistant walks the parent through app selection (with age-appropriate App Store filters), Time Allowances by category (Entertainment, Games, Social Media each get a separate daily budget), schedule-based access management (devices lock to a homework or sleep schedule with override workflow available to the parent), Communication Safety filters that block gore and violent content in incoming Messages attachments, Ask to Browse permissions that gate web access through parent approval per domain, and Ask to Buy defaults for any App Store or in-app purchase request from the child's device.</p>
+
+<h4>What the expansion changes from iOS 26</h4>
+
+<p>The iOS 26 child-account flow existed but required parents to find each setting separately in Settings. The iOS 27 change is that the Setup Assistant front-loads the configuration into the new-account flow and ships the controls in coherent bundles. Communication Safety, which was a separate Family Sharing feature, becomes the default for new under-13 accounts rather than an opt-in. App access management adds time-of-day controls (a child can use Messages between 3pm and 9pm but not after bedtime; can use a homework app any time but a game only on weekends) without requiring the parent to script Shortcuts.</p>
+
+<blockquote class="pull-quote">"Parents can manage what children see, who they can communicate with and when they can access apps." <cite>— Apple, WWDC 2026 child-safety expansion</cite></blockquote>
+
+<p>The expansion is intentionally scoped to under-13 accounts as the most aggressive default-protective profile, with under-18 accounts getting a lighter set of opt-in defaults. The split aligns with the way US state legislation has typically scoped age-verification requirements. SiliconANGLE's morning analysis flagged the expansion as Apple "putting parents in the driver's seat" without claiming the controls replace age-appropriate parental judgment — a careful framing because the same controls also lower Apple's exposure to platform-accountability lawsuits without taking on a content-moderation role.</p>
+
+<p class="source-footer"><a href="https://siliconangle.com/2026/06/08/apple-refines-liquid-glass-design-expands-child-safety-tools-wwdc/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 15. Spotlight indexing rebuild -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g stroke="#1e3a8a" fill="none" stroke-width="1.2">
+    <circle cx="46" cy="40" r="14"/>
+    <line x1="58" y1="52" x2="74" y2="68"/>
+  </g>
+  <g fill="#1e3a8a" font-family="ui-monospace,SFMono-Regular,monospace" font-size="6">
+    <text x="86" y="28">{ }</text>
+    <text x="86" y="40">idx</text>
+    <text x="86" y="52">fast</text>
+  </g>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" letter-spacing="1.4" fill="#1e3a8a">SPOTLIGHT · PHOTOS · MAIL</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Apple rebuilds the search index behind Spotlight, Photos and Mail with near-immediate ingestion</h3>
+<p class="kicker">Engadget · 2026-06-08 · <a href="https://www.engadget.com/2189698/everything-announced-at-apples-wwdc-2026-keynote/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Apple rebuilt the foundation of search powering Spotlight, Photos and Mail on iOS, iPadOS and macOS. The new indexing infrastructure ingests new files and data almost immediately rather than waiting for the legacy throttled rescan cycle. Spotlight, Photos search and Mail search all sit on the new index. The infrastructure handles natural-language query parsing through the on-device Apple Foundation Model, so a query like "photos of my dog at the beach last summer" returns matching images without the user constructing a date or album filter.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The Spotlight rewrite is one of the few infrastructure-layer changes Apple disclosed during the keynote in user-facing terms. The legacy Spotlight index had been a known sore spot for power users: file changes that happened after a sync from an external drive or a cloud-storage volume could take hours to appear in Spotlight results, photos imported from a camera might not appear in Photos search until the next overnight reindex, and Mail's local search index had a habit of falling out of sync with the user's IMAP folders. The rewrite addresses the data-freshness problem at the root.</p>
+
+<p>The new infrastructure ingests new files and data into the index almost immediately. The mechanism is closer to a real-time indexing pipeline than a periodic rescan: file system change events trigger immediate index updates, with batching used only to absorb burst load. Mail's index ties more tightly to the IMAP and Exchange sync layer so newly arrived messages are searchable within seconds. Photos ingests new images on import without the previous delay.</p>
+
+<h4>Natural-language search through AFM Core</h4>
+
+<p>The user-facing search experience gets a natural-language layer on top of the new index. A query that is not a simple keyword match — "photos of my dog at the beach last summer," "the email from Marie about the wedding venue," "the PDF that has the apartment lease" — routes through the on-device Apple Foundation Model, which converts the natural-language query into an index search predicate using the rich metadata Photos already extracts (faces, scenes, dates, locations) and Mail already indexes (senders, recipients, subjects, attachments).</p>
+
+<blockquote class="pull-quote">"The company says it rebuilt the foundation of search so that it's more stable and efficient, with infrastructure that will start indexing new files and data almost immediately." <cite>— Apple, WWDC 2026 Platforms State of the Union</cite></blockquote>
+
+<p>For developers, the new Foundation Models framework exposes the same natural-language-to-index pattern as a system API so any app that maintains its own searchable corpus can route through the on-device model for query understanding without shipping a separate model. The Notion-on-iOS app, the Bear notes app, the Day One journal app — any app with structured local content can offer the same natural-language search Apple's own apps now use. The privacy posture is consistent with the rest of Apple Intelligence: nothing leaves the device unless the user explicitly opts into Private Cloud Compute escalation.</p>
+
+<p class="source-footer"><a href="https://www.engadget.com/2189698/everything-announced-at-apples-wwdc-2026-keynote/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 16. Schneier critique of Glasswing -->
+<details class="story" data-tags="safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+    <text x="60" y="34" text-anchor="middle" font-size="22">23K</text>
+    <text x="60" y="50" text-anchor="middle" font-size="6.5" letter-spacing="1.6">VULNS FOUND</text>
+    <text x="60" y="62" text-anchor="middle" font-size="6.5" letter-spacing="1.6">PATCH RATE: NEAR-ZERO</text>
+  </g>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">SCHNEIER · "FISHY"</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Bruce Schneier publicly challenges Anthropic's Project Glasswing: 23,000 vulnerabilities found, almost none patched</h3>
+<p class="kicker">Schneier on Security · 2026-06-08 · <a href="https://www.schneier.com/blog/archives/2026/06/anthropics-project-glasswing-update.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Cryptographer Bruce Schneier posted a critique Monday of Anthropic's Project Glasswing update. Anthropic's Mythos model identified roughly 23,000 potential vulnerabilities across 1,000 open-source projects, but Schneier reports almost none of them have been patched. He disputes the narrative that Mythos is uniquely good at finding software vulnerabilities, calls Anthropic's refusal to release detailed data "a big problem," and flags "something fishy about the data that I don't understand." Comments on the post raise volume-overload, IPO-PR-timing and false-positive explanations.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Schneier's post lands at a delicate moment for Anthropic. The company filed its confidential S-1 with the SEC on June 1, the Series H at a $965 billion post-money valuation closed at the end of May, and Project Glasswing has been the centerpiece of Anthropic's enterprise-credibility story since the program launched in 2025. Schneier's critique attacks the program on the exact axis Anthropic has been promoting: that Mythos finds dangerous vulnerabilities and the program produces concrete patches that improve critical-infrastructure security.</p>
+
+<p>The data point that drives the critique is the patch rate. Anthropic's Project Glasswing update reported that Mythos has identified approximately 23,000 potential vulnerabilities across roughly 1,000 open-source projects since the program's launch. Schneier's reading of the same update is that "almost none of them has been patched." For a security program that exists to harden critical software, a near-zero patch rate raises a different question than the vulnerability count: are these real, exploitable vulnerabilities, are the maintainers ignoring them because the noise level is too high, or are the reports landing without sufficient context for maintainers to act on?</p>
+
+<h4>The model-uniqueness question</h4>
+
+<p>Schneier's second move is to attack the framing that Mythos is uniquely good at vulnerability detection. "It's now common wisdom that Mythos is better at finding software vulnerabilities than other models. Which is just not true." Cisco's Foundry Security Spec disclosure the same day backs Schneier up: a six-frontier-model scan across 1.8 billion lines of Cisco's own code returns broadly model-agnostic results. The implication is that any frontier model with strong code reasoning can do what Mythos does, and the program's value rests less on the model than on the harness, the targets and the partner relationships.</p>
+
+<blockquote class="pull-quote">"It's now common wisdom that Mythos is better at finding software vulnerabilities than other models. Which is just not true. There's something fishy about the data that I don't understand." <cite>— Bruce Schneier, June 8 post</cite></blockquote>
+
+<h4>What the comments raise</h4>
+
+<p>The comment thread under Schneier's post produced the three competing explanations the security community is sorting through. The volume-overload reading: maintainers receive too many reports to triage and the high-noise ratio causes valid vulnerabilities to get buried alongside false positives. The IPO-PR-timing reading: the timing of the Glasswing update lines up with Anthropic's confidential S-1 filing and the Series H close, so the report is functionally marketing collateral for the IPO. The false-positive reading: many of the 23,000 reports are not real exploitable vulnerabilities but plausible-looking patterns the model is overconfident about. Anthropic has not publicly responded to Schneier's critique, but the company's only public statement on the Project Glasswing data has been to ask stakeholders to "trust us" pending future data releases — a posture Schneier explicitly calls out as a problem.</p>
+
+<p class="source-footer"><a href="https://www.schneier.com/blog/archives/2026/06/anthropics-project-glasswing-update.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 17. Cisco Foundry Security Spec model agnostic -->
+<details class="story" data-tags="tech safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g stroke="#1e3a8a" fill="none">
+    <circle cx="30" cy="30" r="5" stroke-width="1" fill="#1e3a8a" fill-opacity="0.3"/>
+    <circle cx="60" cy="22" r="5" stroke-width="1" fill="#1e3a8a" fill-opacity="0.3"/>
+    <circle cx="90" cy="30" r="5" stroke-width="1" fill="#1e3a8a" fill-opacity="0.3"/>
+    <circle cx="30" cy="58" r="5" stroke-width="1" fill="#1e3a8a" fill-opacity="0.3"/>
+    <circle cx="60" cy="66" r="5" stroke-width="1" fill="#1e3a8a" fill-opacity="0.3"/>
+    <circle cx="90" cy="58" r="5" stroke-width="1" fill="#1e3a8a" fill-opacity="0.3"/>
+    <line x1="35" y1="32" x2="55" y2="24" stroke-width="0.5"/>
+    <line x1="65" y1="24" x2="85" y2="32" stroke-width="0.5"/>
+    <line x1="32" y1="35" x2="32" y2="53" stroke-width="0.5"/>
+    <line x1="88" y1="35" x2="88" y2="53" stroke-width="0.5"/>
+    <line x1="35" y1="60" x2="55" y2="64" stroke-width="0.5"/>
+    <line x1="65" y1="64" x2="85" y2="60" stroke-width="0.5"/>
+  </g>
+  <text x="60" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#1e3a8a">1.8B</text>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.4" fill="#1e3a8a">6 MODELS · MODEL-AGNOSTIC</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Cisco runs six frontier models against 1.8 billion lines of code and finds the results are model-agnostic</h3>
+<p class="kicker">Cisco Blogs / Schneier · 2026-06-08 · <a href="https://blogs.cisco.com/news/8-years-of-security-research-in-8-weeks-transforming-cybersecurity-with-ai" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Cisco disclosed Monday that its Foundry Security Spec harness scanned 1.8 billion lines of code across more than 25 coding languages in eight weeks. Paired with a human-guided harness, the system maintained a false-positive rate under 3 percent across the full corpus. The disclosure's headline finding: when run across six frontier AI models, the security findings were broadly model-agnostic. The result undercuts the framing that Anthropic's Mythos is uniquely capable of finding software vulnerabilities and reframes Project Glasswing as a harness-and-targets story rather than a model-uniqueness story.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Cisco's Foundry Security Spec is the open-spec, model-agnostic agentic-AI security evaluation framework Cisco open-sourced in May and has been running against its own code base since. The eight-week timeline Cisco disclosed Monday tells the throughput story: 1.8 billion lines of code across more than 25 coding languages, scanned in a window that the company's security research team estimates would have taken eight years to complete manually. The under-3-percent false positive rate is the headline accuracy claim, achieved by pairing the frontier LLMs with a human-guided harness rather than letting the model post raw findings.</p>
+
+<p>The headline finding for the wider industry is the model-independence result. Cisco ran the Foundry Security Spec harness against six different frontier models — the company has not enumerated which six, but the public selection candidates are Anthropic Claude Opus 4.8, OpenAI GPT-5.5, Google Gemini 3.5 Pro, Apple's AFM Cloud Pro, Microsoft MAI-Thinking-1 and xAI Grok 4 — and reports that the security findings were "broadly model-agnostic." The output of the harness depends more on the harness design, the prompting strategy, the target codebase and the human-in-the-loop verification step than on which specific frontier model is doing the reasoning.</p>
+
+<h4>What this does to the Glasswing narrative</h4>
+
+<p>Anthropic has positioned Mythos as a frontier-AI security model with capabilities other models do not match. The Cisco disclosure undercuts that framing. If the same six-model panel produces broadly similar findings against the same code, the value of Glasswing comes from the program's structure — the access to large proprietary code bases, the partner-network distribution to roughly 200 critical-infrastructure organizations, the human-guided verification harness — rather than from any unique capability of the Mythos model. Schneier explicitly cited the Cisco result in his Monday critique of Project Glasswing.</p>
+
+<blockquote class="pull-quote">"In just eight weeks, Cisco scanned 1.8 billion lines of code in over 25 coding languages across the breadth of Cisco's portfolio, a process that would have taken their world-class security research team eight years to complete." <cite>— Cisco Blogs, June 8</cite></blockquote>
+
+<p>The Foundry Security Spec itself is structured around eight core agent roles (Orchestrator, Indexer, Cartographer, Detector, Triager, Validator, Coverage-Guide, Reporter), five extension roles and roughly 130 functional requirements. The community-driven framework lives on GitHub and is licensed for organizations to fork and adapt to their own environments. Foundry integrates with GitHub's spec-kit and can pair with Project CodeGuard to create a continuous detection-to-prevention cycle. Cisco's argument is that open-sourcing the harness is the right counter-move against the closed-program approach Anthropic has taken with Glasswing.</p>
+
+<p class="source-footer"><a href="https://blogs.cisco.com/news/8-years-of-security-research-in-8-weeks-transforming-cybersecurity-with-ai" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 18. BeyondTrust joins Glasswing -->
+<details class="story" data-tags="safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g stroke="#1e3a8a" fill="none">
+    <path d="M60 16 L86 30 L86 50 Q86 60 60 66 Q34 60 34 50 L34 30 Z" stroke-width="1.4" fill="#1e3a8a" fill-opacity="0.10"/>
+  </g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+    <text x="60" y="40" text-anchor="middle" font-size="7.2" letter-spacing="1.4">BEYONDTRUST</text>
+    <text x="60" y="52" text-anchor="middle" font-size="6" letter-spacing="1.4">JOINS GLASSWING</text>
+  </g>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">~200 PARTNERS · 15+ COUNTRIES</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">BeyondTrust joins Project Glasswing as a privileged-access launch partner</h3>
+<p class="kicker">Yahoo Finance / Anthropic · 2026-06-08 · <a href="https://finance.yahoo.com/sectors/technology/articles/beyondtrust-selected-anthropics-project-glasswing-160000540.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-content"></span></p>
+<p class="teaser">BeyondTrust announced Monday that it has been selected to join Project Glasswing as part of the expanded cohort of organizations whose codebases are relied upon by governments and essential services. The privileged-access security vendor joins roughly 200 partners across 15+ countries Anthropic now lists for the program. The disclosure landed the same morning Bruce Schneier published his critique of the program's patch rate and Cisco published its model-independence result, putting Glasswing's customer-relations story alongside the harder questions about whether the program's findings translate into fixes.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>BeyondTrust is the privileged-access management vendor whose tooling sits between human or machine identities and the most sensitive admin surfaces of customer infrastructure. The selection for Project Glasswing positions the company's own codebase as one of the proprietary code bases Anthropic's Mythos model is now scanning for vulnerabilities, with the findings flowing into the customer's normal patch pipeline rather than into a public disclosure track. BeyondTrust's positioning matters because privileged-access vulnerabilities are the kind frontier-model security tooling can find quickly but also the kind exploitable in active campaigns within hours of disclosure.</p>
+
+<p>The expansion brings Anthropic's Glasswing partner roster to roughly 200 organizations across more than 15 countries — a figure Anthropic released alongside the June 2 program update and confirmed again Monday with the BeyondTrust selection. The partner roster spans hyperscale infrastructure (Cisco, Cloudflare), enterprise software (BeyondTrust), critical-infrastructure operators in energy, water, telecom and finance, and a set of government-adjacent security organizations Anthropic has not publicly named. The program retains its asymmetric structure: partners get private access to Mythos scans against their own code; Anthropic gets the right to publish aggregate program metrics; the public gets a periodic update post.</p>
+
+<blockquote class="pull-quote">"BeyondTrust announced that it had been selected to join Project Glasswing as part of an expanded cohort of organizations whose codebases are relied upon by governments or essential services." <cite>— Yahoo Finance, June 8</cite></blockquote>
+
+<h4>The same-day timing</h4>
+
+<p>The BeyondTrust selection landed the same morning Cisco published its model-independence finding and Schneier published his patch-rate critique. The simultaneity puts the program's expansion story alongside the harder methodological questions about what the program's findings actually deliver to customers. Anthropic has not responded publicly to the Schneier post; the BeyondTrust announcement is the Anthropic-adjacent message that did get carried in the major-finance press today. The IPO timing reads either as careful narrative management — expand the partner story alongside the critical-infrastructure pitch in the S-1 — or as a coincidence the company would rather not have happen the same day a major security researcher publicly questions the program's results. Either way the program now operates inside a public-discourse frame Anthropic does not fully control.</p>
+
+<p class="source-footer"><a href="https://finance.yahoo.com/sectors/technology/articles/beyondtrust-selected-anthropics-project-glasswing-160000540.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 19. SpaceX IPO roadshow -->
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+    <text x="60" y="32" text-anchor="middle" font-size="22">$135</text>
+    <text x="60" y="48" text-anchor="middle" font-size="6.5" letter-spacing="1.4">FIXED PRICE · $75B RAISE</text>
+    <text x="60" y="60" text-anchor="middle" font-size="6.5" letter-spacing="1.4">$1.77T VALUATION</text>
+  </g>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">SPCX · NASDAQ JUN 12</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">SpaceX kicks off the largest IPO roadshow in market history at a $135 fixed price and a $1.77 trillion valuation</h3>
+<p class="kicker">CNBC / Yahoo Finance · 2026-06-08 · <a href="https://www.cnbc.com/2026/06/03/spacex-ipo-stock-price-roadshow-musk.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">SpaceX began its IPO roadshow Monday at a fixed $135 per share price for 556.6 million shares, targeting a $75 billion raise at a $1.77 trillion valuation that would be the largest IPO in market history. The fixed-price structure removes the price-range dynamics that typically drive IPO marketing. Pricing finalizes June 11; the Nasdaq debut under ticker SPCX is scheduled for June 12. The IPO becomes the public-market pricing event AI-adjacent capital-markets desks treat as a leading indicator for Anthropic and OpenAI's own listings.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>SpaceX's roadshow opening on June 8 is the single largest public-market event in the AI-adjacent capital cycle this quarter. The $135 fixed price for 556.6 million shares produces a $75 billion raise — the largest in IPO history by raise size — at a $1.77 trillion valuation, the largest by valuation. The fixed-price structure is the unusual element. Most large IPOs price within a range that lets the syndicate manage demand into the close of the book; SpaceX has chosen to commit to $135 upfront and let demand sort itself against the fixed number, an approach that signals confidence the book will be oversubscribed without needing to lift the price into the marketing.</p>
+
+<p>The roadshow window is short. Pricing finalizes June 11; the Nasdaq debut under ticker SPCX is scheduled for June 12, a Friday. The compressed window matches the SpaceX-typical approach of moving fast on capital-markets events and limiting the time the market has to second-guess the number. Goldman Sachs and Morgan Stanley are co-leads on the syndicate. The SPCX share class is non-voting; Musk retains super-voting Class C shares that give him effective control of the company post-listing, an arrangement modeled on the Alphabet and Meta dual-class structures.</p>
+
+<h4>The signal for Anthropic and OpenAI</h4>
+
+<p>The IPO's signal for the broader AI capital cycle is what AI-adjacent capital-markets desks will watch all week. Anthropic's confidential S-1 sits at the SEC, filed June 1, with the company's $965 billion post-money private valuation as the implicit floor for the public-market mark. OpenAI is preparing its own confidential filing with a September listing target and an $730-850 billion valuation range. SpaceX's market reception sets the appetite question: if the largest IPO in history clears at $1.77 trillion without breaking, the appetite for an Anthropic listing in the $1 trillion neighborhood reads stronger. If SPCX prints weak demand at the fixed price, both AI labs may delay or adjust their own marketing.</p>
+
+<blockquote class="pull-quote">"SpaceX is targeting an IPO price of $135 per share for an offering of 556.6 million shares, targeting a $75 billion raise at a $1.75 trillion valuation – which would be the largest IPO in stock market history." <cite>— CNBC, June 3 report</cite></blockquote>
+
+<p>The fixed-price structure also affects how AI-adjacent retail trading platforms respond. Robinhood, Public and other retail-distribution venues had been signaling SPCX as the year's most-anticipated retail IPO since the May 20 S-1 confirmation. The retail flow will sit alongside institutional allocation through the syndicate, with the lockup structure giving Musk and SpaceX employees a six-month post-IPO sales window before secondary supply hits the market. The Friday debut leaves the AI capital-markets cycle a weekend to absorb the print before the following week's pricing events for the next layer of AI-adjacent listings.</p>
+
+<p class="source-footer"><a href="https://finance.yahoo.com/markets/stocks/articles/june-8-could-mark-beginning-130000277.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 20. Tim Cook handover formalized -->
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g fill="#1e3a8a">
+    <circle cx="34" cy="36" r="9"/>
+    <path d="M22 56 Q34 46 46 56 L46 64 L22 64 Z"/>
+  </g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+    <text x="60" y="40" text-anchor="middle" font-size="14">→</text>
+  </g>
+  <g fill="#1e3a8a">
+    <circle cx="86" cy="36" r="9"/>
+    <path d="M74 56 Q86 46 98 56 L98 64 L74 64 Z"/>
+  </g>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">COOK → TERNUS · SEP 1</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Tim Cook delivers his last WWDC keynote as CEO; John Ternus formally takes the seat September 1</h3>
+<p class="kicker">Bloomberg / AppleInsider · 2026-06-08 · <a href="https://appleinsider.com/articles/26/06/07/tim-cook-expected-to-head-wwdc-2026-keynote-for-the-last-time" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Tim Cook opened WWDC 2026 at 10:00 PT Monday for what insiders, Bloomberg's Mark Gurman and the Apple Park audience treated as his last keynote as CEO. The September 1 handover to John Ternus, currently senior vice president of Hardware Engineering, moved from speculation to the company's working assumption through the weekend. Cook stays on as Apple board chair after the transition. Ternus inherits a product line in the middle of a Vision Pro 2 deferral to 2028, a smart-glasses program ramping in parallel with Meta's Orion, and the Siri rebuild that depends on a third-party reasoning core for the first time in Apple's history.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The Tim Cook succession story has been the slow-moving Apple narrative since Bloomberg's Mark Gurman first wrote May 25 that Ternus's elevation was effectively decided. Through the weekend's Apple-watcher coverage, the language moved from "expected" to "effectively decided." Cook's WWDC opening Monday morning sat inside that frame: Cook walked out, set the keynote, and handed the substance of the morning to Craig Federighi without the personal-history asides that have marked some of his past WWDC openers. AppleInsider's pre-keynote read laid odds that Cook would also close the show himself rather than leaving the final moment to Ternus, a departure from the keynote-bookending pattern Cook has held since 2012.</p>
+
+<p>The September 1 transition date Bloomberg pegs is timed to clear the WWDC cycle and put Ternus in the CEO seat before the iPhone 18 introduction event the industry treats as a September fixture. Cook stays on as board chair after the transition, the same arrangement Steve Jobs's transition to Cook used in 2011. The handover is the longest-prepared CEO transition in Apple's modern history, with Cook in the seat since 2011 and Ternus in his current SVP role since 2021.</p>
+
+<h4>What Ternus inherits</h4>
+
+<p>The product surface Ternus walks into is mid-transition. The Vision Pro 2 hardware refresh moved to 2028 per Gurman's May 29 column, with the headset program prioritizing a Meta-style smart-glasses device that competes with Orion. The Siri AI rebuild that shipped at WWDC depends on a third-party reasoning core — Google Gemini for AFM Cloud Pro — for the first time in Apple's history, ending the on-device-only posture Apple Intelligence carried into the iOS 18.2 launch. The EU and China Siri carve-out is the most visible regulatory drag on the company's frontier-AI strategy, and the Cupertino-Brussels relationship is now the Ternus-era opening chapter rather than the Cook-era closing one.</p>
+
+<blockquote class="pull-quote">"John Ternus has been making decisions about Vision Pro that might be sensible, but won't be popular with users." <cite>— AppleInsider Podcast, June 5</cite></blockquote>
+
+<p>The financial backdrop is supportive. Apple closed FY2025 at roughly $400 billion in revenue with services growing into the largest single contributor for the first time. Apple Intelligence is the consumer-facing argument for the iPhone 18 cycle and the answer to the question Wall Street has been asking since Apple Intelligence's slow start in 2025: does Apple need to own the frontier model. The WWDC 2026 Extensions architecture is Apple's negative answer: no, Apple owns the interface and the privacy layer, and the company can buy frontier reasoning at a price the market will set. Ternus's CEO mandate will be to execute that posture across the next iPhone cycle and the smart-glasses launch his hardware team has been preparing.</p>
+
+<p class="source-footer"><a href="https://appleinsider.com/articles/26/06/07/tim-cook-expected-to-head-wwdc-2026-keynote-for-the-last-time" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 21. iOS 27 performance specifics -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+    <text x="22" y="42" font-size="14">30%</text>
+    <text x="22" y="58" font-size="5.2" letter-spacing="1.2">APP LAUNCH</text>
+    <text x="56" y="42" font-size="14">70%</text>
+    <text x="56" y="58" font-size="5.2" letter-spacing="1.2">PHOTOS</text>
+    <text x="90" y="42" font-size="14">80%</text>
+    <text x="90" y="58" font-size="5.2" letter-spacing="1.2">AIRDROP</text>
+  </g>
+  <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">FASTER · NO APP UPDATES</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Apple discloses the iOS 27 numbers: 30 percent app launch, 70 percent photo load, 80 percent AirDrop</h3>
+<p class="kicker">Apple Newsroom · 2026-06-08 · <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Apple's Newsroom post quantified the iOS 27 performance gains. Apps and Photos load up to 30 percent faster, including third-party ones; photos open 70 percent faster; AirDrop transfers move 80 percent faster. The underlying changes are CPU scheduling tuned for the mixed-core Apple Silicon layout, more aggressive prelink caching during app launch, file preloading driven by the new Spotlight index, and tightened transport-stack handshakes for AirDrop. Third-party apps see the gain without app updates because the changes are OS-level.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Performance numbers in iOS keynotes are usually the bullet point Apple writers gloss over and benchmark sites cross-check after the public beta. Apple disclosed three specific iOS 27 numbers Monday and tied each one to a concrete OS-level change. The numbers are large enough to draw scrutiny and concrete enough that the company will be held to them when the public beta lands in July.</p>
+
+<p>App launch up 30 percent: the driver is a more aggressive prelink cache during cold app launch. The dynamic linker on iOS resolves library symbols when an app's binary loads; Apple's prelink cache stores precomputed link tables so the linker does less work on subsequent launches. iOS 27 expands the prelink cache to cover more of the system-library surface, so cold launches of apps that depend on UIKit, SwiftUI, Combine and the larger system frameworks have less work to do before the app's main thread runs.</p>
+
+<p>Photos load 70 percent faster: the driver is the new Spotlight index plus the file-preloading layer that uses the index to predict which assets an app will request and warm them into memory before the request lands. Photos benefits more than other apps because the app's primary work — opening albums, loading thumbnails, rendering previews — is exactly the access pattern preloading captures. The same mechanism helps Mail open faster when it lands on a thread, and helps Files open faster when it lands on a folder.</p>
+
+<blockquote class="pull-quote">"Performance boosts: apps launch 30 percent faster, photos load 70 percent faster, AirDrop transfers 80 percent faster." <cite>— Apple Newsroom, June 8</cite></blockquote>
+
+<p>AirDrop up 80 percent: the driver is tightened transport-stack handshakes during peer discovery and a bandwidth-ceiling tune for Wi-Fi 7-capable iPhones. AirDrop spends a meaningful share of its end-to-end time on the discovery round-trips that pair the sender and receiver devices; iOS 27 removes redundant handshakes and lets the transport go straight to bulk transfer on devices that are already adjacent in the user's Apple ID cloud graph. For the Wi-Fi 7 path on iPhone 16 and later, the transport tune lifts the peak transfer rate closer to the radio's effective ceiling.</p>
+
+<h4>The third-party effect</h4>
+
+<p>The key claim that drew the most attention in the developer chat after the State of the Union is the third-party app boost. Apple's framing is that the OS-level changes apply equally to first-party and third-party apps without app updates because the work changes happen at the scheduler, linker and file-preloading layer rather than inside any specific app's binary. Developers building for iOS 27 will still benefit from adopting the new Liquid Glass APIs, the Foundation Models framework additions and the Phone-and-Mail context API, but those are productivity gains on top of a baseline performance lift the OS delivers automatically.</p>
+
+<p>The public beta lands in July. Independent benchmark sites including Geekbench, AnandTech and Computer Engineering subreddits will measure the specific gains on representative app workloads through the summer ahead of the fall public release.</p>
+
+<p class="source-footer"><a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 22. Private Cloud Compute free for small devs -->
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+    <text x="60" y="34" text-anchor="middle" font-size="18">&lt; 2M</text>
+    <text x="60" y="50" text-anchor="middle" font-size="6.5" letter-spacing="1.4">USERS = FREE PCC</text>
+    <text x="60" y="62" text-anchor="middle" font-size="6.5" letter-spacing="1.4">SMALL BIZ DEVELOPER</text>
+  </g>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.6" fill="#1e3a8a">PRIVATE CLOUD COMPUTE</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Apple makes Private Cloud Compute free for App Store Small Business Program developers under 2 million users</h3>
+<p class="kicker">runaihome / Apple Developer · 2026-06-08 · <a href="https://runaihome.com/blog/wwdc-2026-apple-foundation-models-core-ai-home-lab-2026/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">App Store Small Business Program developers with fewer than 2 million users get Private Cloud Compute access free in iOS 27. The free tier exposes the AFM Cloud server-side inference path Apple uses for the heavy queries Siri AI escalates beyond on-device budget. Larger developers will pay through a usage-based tier Apple is publishing in developer documentation through the week. The free tier reframes how indie shops and small studios access frontier-quality inference: no token billing, no separate provider account, and the user's Apple Intelligence Extensions default still applies.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The free-tier pricing decision is the most concrete commercial change inside the developer track this week. The App Store Small Business Program is Apple's reduced-fee structure for developers with under $1 million in annual proceeds and fewer than 2 million users; the program lowers Apple's commission to 15 percent from the standard 30 percent. The iOS 27 expansion bundles Private Cloud Compute inference into the same small-business tier at no marginal cost to the developer.</p>
+
+<p>For an indie developer building a journal app, a recipe app, a productivity tool, a fitness coach or any of the long tail of indie-monetized iPhone apps, the change collapses what was previously the dominant cost line of shipping AI features. The previous economics required the developer to negotiate a third-party API account with OpenAI, Anthropic or Google, pay per-token at the going market rate, manage usage caps to prevent runaway costs, and stand up their own server-side billing flow to recover the cost from end users. The iOS 27 free tier removes the per-token billing, removes the third-party account requirement, and routes inference through whichever model the user's Apple Intelligence Extensions setting designates — ChatGPT, Claude, Gemini or Apple's own.</p>
+
+<h4>What the free tier covers</h4>
+
+<p>Apple's developer documentation, available through the developer.apple.com surface from Monday afternoon, indicates the free tier covers a generous monthly compute budget per app installed on the user's Apple Intelligence-eligible device. The budget is denominated in compute units the developer documentation describes as approximating "a normal user's usage at maximum reasonable frequency." Apps that exceed the budget — high-frequency-call apps, apps doing automated background inference, apps that loop on the user's behalf — pay through the usage-based tier Apple's pricing page will detail through the week.</p>
+
+<blockquote class="pull-quote">"Developers will be able to use Private Cloud Compute for free if they have fewer than 2,000,000 users." <cite>— Apple, WWDC 2026 developer-track session</cite></blockquote>
+
+<p>The strategic effect is to compete with the OpenAI API economics specifically. OpenAI's per-token pricing for GPT-5.5 sits in the same band as Anthropic's Claude Opus 4.8 pricing; both are priced at levels that work for enterprise customers but punish indie developers shipping consumer apps. Apple's free tier for small developers undercuts that economic dynamic by routing the inference cost back to Apple's own infrastructure cost line. The bet is that Apple absorbs the inference cost for small developers in exchange for getting the indie iPhone developer ecosystem invested in the Apple Intelligence Extensions framework rather than building against OpenAI's API directly.</p>
+
+<p class="source-footer"><a href="https://developer.apple.com/wwdc26/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 23. AFM Cloud Pro on Google + NVIDIA -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g stroke="#1e3a8a" fill="none">
+    <rect x="14" y="20" width="32" height="44" fill="#1e3a8a" fill-opacity="0.15"/>
+    <text x="30" y="34" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a">APPLE</text>
+    <text x="30" y="44" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="500" fill="#1e3a8a">PRIVATE CLD</text>
+    <text x="30" y="54" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="500" fill="#1e3a8a">COMPUTE</text>
+    <line x1="46" y1="42" x2="74" y2="42" stroke-width="1" stroke-dasharray="2 2"/>
+    <rect x="74" y="20" width="32" height="44" fill="#1e3a8a" fill-opacity="0.30"/>
+    <text x="90" y="34" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a">GOOGLE</text>
+    <text x="90" y="44" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="500" fill="#1e3a8a">CLOUD ·</text>
+    <text x="90" y="54" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.4" font-weight="500" fill="#1e3a8a">NVIDIA GPU</text>
+  </g>
+  <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5" font-weight="700" letter-spacing="1.4" fill="#1e3a8a">AFM CLOUD PRO · ATTESTATION</text>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Apple confirms its heaviest model runs on Google Cloud and NVIDIA GPUs under Private Cloud Compute attestation</h3>
+<p class="kicker">AppleInsider · 2026-06-08 · <a href="https://appleinsider.com/articles/26/06/08/apples-new-foundation-models-dont-contain-a-drop-of-gemini-as-we-said-they-wouldnt" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">AFM Cloud Pro — the heaviest of Apple's four new Foundation Models, the one that handles agentic tools and the most demanding queries — runs on Google Cloud servers and NVIDIA GPUs. Apple wrapped the deployment in its Private Cloud Compute attestation protocol so third-party auditors can verify Google does not see user traffic. The disclosure is the first time Apple has publicly named another hyperscaler in its inference path. The Gemini-collaborated, no-Gemini-in-production line that dominated WWDC press coverage applies to model weights and code; the infrastructure-rental relationship with Google is separate.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The hyperscaler disclosure is the technical detail Apple did not call out at the keynote but that AppleInsider's William Gallagher surfaced in his Monday-afternoon analysis. AFM Cloud Pro, the heaviest of the four named Foundation Models, deploys on Google Cloud servers and NVIDIA GPUs. The deployment runs inside Apple's Private Cloud Compute attestation protocol — the same cryptographic verification layer Apple introduced with iOS 18 to let external auditors confirm that Apple's server-side handling of user data matches what Apple says it does — so Google's role is constrained to providing the compute capacity rather than touching user requests.</p>
+
+<p>The architectural pattern is unusual. Apple has historically used Google as a cloud provider for ancillary services (iCloud Drive backing storage on Google Cloud is the most public example), but the company has not previously routed user-facing AI inference through Google's infrastructure. AFM Cloud Pro changes that. The strategic logic is twofold. First, building the GPU capacity Apple would need for AFM Cloud Pro inference at scale would require Apple to procure NVIDIA H200, B200 and Vera Rubin systems in volumes comparable to Microsoft and Google's own AI capex commitments — a $30-50 billion commitment Apple has not been willing to make. Second, by paying Google for the rental capacity, Apple offloads the capital-intensive GPU procurement to a hyperscaler that already has the contractual relationships with NVIDIA and the data-center footprint to absorb the demand.</p>
+
+<h4>What the attestation buys</h4>
+
+<p>Private Cloud Compute attestation is the privacy machinery that makes the Google rental tenable. The protocol lets independent third parties — security researchers, regulators, journalists — verify that the server-side code handling user requests matches the published source. Apple ships the binary of its Private Cloud Compute inference server alongside a cryptographic measurement that third parties can compare against the running code on Google's hardware. The attestation tells the auditor whether the running server is the published Apple binary or whether something else is in the request path. If the running code does not match, the attestation fails and the request does not complete.</p>
+
+<blockquote class="pull-quote">"AFM Cloud Pro handles agentic tools and most demanding tasks, deployed on Google cloud servers and NVIDIA GPUs while maintaining Private Cloud Compute certification." <cite>— Apple, WWDC 2026 Platforms State of the Union</cite></blockquote>
+
+<p>The implication is that Apple has built a portable Private Cloud Compute stack that runs on Google's hardware while maintaining the cryptographic guarantees Apple originally designed for its own server farm. The same architecture could in principle run on AWS, Azure or Oracle Cloud, which gives Apple optionality on the inference-capacity question over time. The commercial relationship with Google is the $1 billion-a-year deal that covers both the Gemini training-time access and the ongoing AFM Cloud Pro inference rental. The combined relationship is unusual enough that AppleInsider treated it as a separate news beat from the keynote announcements through Monday afternoon.</p>
+
+<p class="source-footer"><a href="https://appleinsider.com/articles/26/06/08/apples-new-foundation-models-dont-contain-a-drop-of-gemini-as-we-said-they-wouldnt" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+<svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+  <line x1="2" y1="9" x2="22" y2="9" stroke="#1e3a8a" stroke-width="1.2"/>
+  <circle cx="28" cy="9" r="2.5" fill="#1e3a8a"/>
+  <rect x="36" y="3" width="12" height="12" transform="rotate(45 42 9)" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+  <circle cx="52" cy="9" r="2.5" fill="#1e3a8a" fill-opacity="0.5"/>
+  <line x1="58" y1="9" x2="78" y2="9" stroke="#1e3a8a" stroke-width="1.2"/>
+</svg>
+</div>
+
+<footer class="colophon">
+  <div>
+    <strong>Apollo AI News</strong> · Daily · 2026-06-09<br>
+    Generated 2026-06-09 by the Apollo AI News bot.
+  </div>
+  <div>
+    <a href="../index.html">← Back to all editions</a>
+  </div>
+</footer>
+
+</div>
+<script>
+(function(){
+  const stories = Array.from(document.querySelectorAll('details.story'));
+  const chips = Array.from(document.querySelectorAll('.filter-chip'));
+  const status = document.getElementById('filter-status');
+  const bigPicture = document.querySelector('.big-picture');
+  const moreCount = document.querySelector('.section-head .count');
+  const moreCountSuffix = moreCount ? moreCount.textContent.replace(/^\s*\d+\s*stories/, '').trim() : '';
+
+  function applyFilter(filter){
+    if(bigPicture) bigPicture.hidden = (filter !== 'all');
+    const total = stories.length;
+    let visible = 0;
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags || '').split(/\s+/);
+      const match = (filter === 'all') || tags.includes(filter);
+      s.hidden = !match;
+      if(match){
+        visible++;
+        if(s.id !== 'hero') visibleNonHero++;
+      }
+    });
+    if(status){
+      const label = filter === 'all' ? '' : ' — ' + filter.charAt(0).toUpperCase()+filter.slice(1);
+      status.textContent = 'Showing ' + visible + ' of ' + total + ' stories' + label;
+    }
+    if(moreCount){
+      moreCount.textContent = visibleNonHero + ' stories' + (moreCountSuffix ? ' ' + moreCountSuffix : '');
+    }
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    const url = new URL(window.location);
+    if(filter === 'all'){ url.hash = ''; }
+    else { url.hash = 'filter=' + filter; }
+    history.replaceState(null, '', url.toString());
+  }
+
+  // Compute counts from live data-tags
+  const total = stories.length;
+  chips.forEach(c => {
+    const tag = c.dataset.filter;
+    const n = tag === 'all' ? total
+      : stories.filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+    const countEl = c.querySelector('.count');
+    if(countEl) countEl.textContent = n;
+    if(tag !== 'all' && n === 0){
+      c.disabled = true;
+    }
+    c.addEventListener('click', () => applyFilter(tag));
+  });
+
+  // Initial filter from URL hash
+  const m = window.location.hash.match(/filter=([a-z]+)/);
+  applyFilter(m ? m[1] : 'all');
+
+  // Filter bar stuck-state shadow
+  const bar = document.querySelector('.filter-bar');
+  if(bar){
+    const sentinel = document.createElement('div');
+    sentinel.style.height = '1px';
+    sentinel.style.width = '1px';
+    bar.parentNode.insertBefore(sentinel, bar);
+    const io = new IntersectionObserver(([entry]) => {
+      bar.classList.toggle('is-stuck', !entry.isIntersecting);
+    }, { threshold: 0 });
+    io.observe(sentinel);
+  }
+})();
+</script>
+</body>
+</html>
