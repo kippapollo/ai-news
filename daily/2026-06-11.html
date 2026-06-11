@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-06-11</title>
+<meta name="description" content="Google DeepMind releases DiffusionGemma 26B-A4B under Apache 2.0 as the first production-grade open-weights text diffusion MoE, denoising 256-token blocks in parallel at 1,000+ tokens per second on a single H100. Anthropic publishes a two-part policy framework arguing governments need legal authority to block frontier deployments and commits $200 million to economic-impact research plus a $150 million national fellowship. Apple's WWDC 2026 day-three session lands Xcode 27 with a dual-engine code completion architecture that keeps inline completions on the Neural Engine and routes agentic work through an mcpbridge XPC channel to Anthropic, Google and OpenAI agents. Anthropic Claude Managed Agents add cron-style scheduled deployments and credential vaults in public beta with named customers Rakuten, Notion, Actively AI, Ando and Browserbase. Oracle posts $19.2 billion in Q4 revenue with cloud up 47% and remaining performance obligations jumping $85 billion in a single quarter to $638 billion. Jedify raises $24 million from Norwest and Snowflake Ventures for enterprise context graphs that sit between AI agents and structured plus unstructured business data. Tesla's Robotaxi fleet in Austin trails Waymo 42 to 577 in Texas as Musk waits on the FSD v15 rewrite. NVIDIA accelerates DiffusionGemma to 2,000 tokens per second on DGX Station while shipping a separate post arguing robotaxi safety must be built into NVIDIA Halos OS rather than bolted on.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#1e3a8a;
+  --accent-soft:rgba(30,58,138,0.10);
+  --tag-tech:rgba(30,58,138,0.10);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.12);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#93c5fd;
+    --accent-soft:rgba(147,197,253,0.14);
+    --tag-tech:rgba(147,197,253,0.18);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(45,212,191,0.16);
+    --tag-application-ink:#5eead4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"kern","liga";
+}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent);
+}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{
+  position:sticky;top:0;z-index:10;background:var(--bg);
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px;
+}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{
+  font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;
+  padding:6px 11px;border-radius:999px;border:1px solid var(--rule);
+  background:transparent;color:var(--ink);cursor:pointer;font-weight:600;
+}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{
+  font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;
+  font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px;
+}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px;
+}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{
+  font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;
+  writing-mode:vertical-rl;transform:rotate(180deg);align-self:start;
+}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{
+  font-family:Georgia,"Times New Roman",Charter,serif;
+  font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700;
+}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{
+  display:flex;align-items:baseline;gap:18px;margin:0 0 28px;
+  border-bottom:1px solid var(--rule);padding-bottom:10px;
+}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{
+  list-style:none;cursor:pointer;outline:none;
+  display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start;
+}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){
+  .story summary{grid-template-columns:1fr;gap:12px}
+  .story-thumb{aspect-ratio:320 / 80;width:100%;height:auto}
+}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-weight:700;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:"Collapse \25B4"}
+.story:not([open]) .expand-control::after{content:"Read in full \25BE"}
+.expand-control{font-size:0;letter-spacing:normal}
+.expand-control::after{font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1 / -1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{
+  margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  font-size:0.84rem;color:var(--muted);
+}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2"  x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2"  y1="28" x2="9"  y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5"  y1="9.5"  x2="14"   y2="14"/>
+          <line x1="42"   y1="42"   x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5"  x2="42"   y2="14"/>
+          <line x1="9.5"  y1="46.5" x2="14"   y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Daily</strong>
+    2026 · 06 · 11
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<details class="story" id="hero" data-tags="tech" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-tech">Tech</span>
+      </div>
+      <h1>Google DeepMind ships DiffusionGemma, an open-weights 26B MoE that denoises 256 tokens at a time</h1>
+      <p class="dek">DiffusionGemma 26B-A4B is the first production-grade open text-diffusion model from a frontier lab. Built on the Gemma 4 backbone with 8 of 128 experts active per token and 3.8 billion active parameters, it abandons sequential autoregression and instead refines a 256-token canvas in parallel through iterative denoising. Throughput lands at more than 1,000 tokens per second on a single NVIDIA H100, 700-plus on an RTX 5090, and up to 2,000 tokens per second on a DGX Station — roughly 4x an autoregressive model at the same parameter budget. The model is multimodal across text, image and video inputs with a 256K-token context window and 140-plus languages, and ships under Apache 2.0 on Hugging Face with day-zero support in Transformers, vLLM, MLX and Unsloth. Google is direct in the model card that quality lags Gemma 4 in absolute terms and recommends Gemma 4 for production today; the release is positioned as an experimental open building block for in-line editing, code infill and real-time agents where denoising's self-correction loop matters more than absolute log-likelihood.</p>
+      <p class="kicker">Google DeepMind · 2026-06-10 · <a href="https://deepmind.google/models/gemma/diffusiongemma/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hero-grad" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stop-color="#1e3a8a" stop-opacity="0.85"/>
+          <stop offset="1" stop-color="#1e3a8a" stop-opacity="0.15"/>
+        </linearGradient>
+        <pattern id="hero-grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0 L0 0 0 24" fill="none" stroke="#1e3a8a" stroke-opacity="0.10" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hero-grid)"/>
+
+      <!-- Title strip -->
+      <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+        <text x="32" y="30" font-size="9" letter-spacing="2.4">DIFFUSIONGEMMA · JUNE 10 · 256-TOKEN CANVAS · APACHE 2.0</text>
+        <text x="32" y="44" font-size="7" letter-spacing="1.6" opacity="0.7">26B TOTAL · 3.8B ACTIVE · BIDIRECTIONAL DENOISING</text>
+      </g>
+
+      <!-- Canvas grid representation -->
+      <g transform="translate(60, 70)">
+        <rect x="0" y="0" width="360" height="120" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+        <text x="180" y="-6" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" fill="#1e3a8a" letter-spacing="2.4">CANVAS = 256 TOKENS · DENOISED IN PARALLEL</text>
+
+        <!-- Token grid: 16 cols × 8 rows = 128 visible cells (representative) -->
+        <g>
+          <!-- Row 1: mostly noisy -->
+          <g transform="translate(8,8)">
+            <rect x="0" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.15"/>
+            <rect x="18" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.18"/>
+            <rect x="36" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.12"/>
+            <rect x="54" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.25"/>
+            <rect x="72" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.20"/>
+            <rect x="90" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.10"/>
+            <rect x="108" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.18"/>
+            <rect x="126" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.22"/>
+            <rect x="144" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.15"/>
+            <rect x="162" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.12"/>
+            <rect x="180" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.30"/>
+            <rect x="198" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.10"/>
+            <rect x="216" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.20"/>
+            <rect x="234" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.18"/>
+            <rect x="252" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.12"/>
+            <rect x="270" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.25"/>
+            <rect x="288" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.15"/>
+            <rect x="306" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.20"/>
+            <rect x="324" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.10"/>
+          </g>
+          <!-- Row 2: progressively cleaner -->
+          <g transform="translate(8,28)">
+            <rect x="0" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.45"/>
+            <rect x="18" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.55"/>
+            <rect x="36" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.30"/>
+            <rect x="54" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.50"/>
+            <rect x="72" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.40"/>
+            <rect x="90" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.60"/>
+            <rect x="108" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.35"/>
+            <rect x="126" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.55"/>
+            <rect x="144" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.50"/>
+            <rect x="162" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.40"/>
+            <rect x="180" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.65"/>
+            <rect x="198" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.35"/>
+            <rect x="216" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.55"/>
+            <rect x="234" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.45"/>
+            <rect x="252" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.50"/>
+            <rect x="270" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.40"/>
+            <rect x="288" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.65"/>
+            <rect x="306" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.45"/>
+            <rect x="324" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.50"/>
+          </g>
+          <!-- Row 3: nearly resolved -->
+          <g transform="translate(8,48)">
+            <rect x="0" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.85"/>
+            <rect x="18" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.90"/>
+            <rect x="36" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.75"/>
+            <rect x="54" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.95"/>
+            <rect x="72" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.80"/>
+            <rect x="90" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.90"/>
+            <rect x="108" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.85"/>
+            <rect x="126" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.95"/>
+            <rect x="144" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.80"/>
+            <rect x="162" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.95"/>
+            <rect x="180" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.90"/>
+            <rect x="198" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.85"/>
+            <rect x="216" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.95"/>
+            <rect x="234" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.80"/>
+            <rect x="252" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.95"/>
+            <rect x="270" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.90"/>
+            <rect x="288" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.85"/>
+            <rect x="306" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.95"/>
+            <rect x="324" y="0" width="14" height="14" fill="#1e3a8a" fill-opacity="0.80"/>
+          </g>
+          <!-- Row 4: finalized canvas -->
+          <g transform="translate(8,68)">
+            <rect x="0" y="0" width="338" height="14" fill="url(#hero-grad)" stroke="#1e3a8a" stroke-width="0.6"/>
+            <text x="169" y="11" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#f7f5ef" letter-spacing="2.4">FINALIZED ≈ 15–20 TOK / PASS</text>
+          </g>
+          <!-- Row 5: throughput band -->
+          <g transform="translate(8,90)">
+            <text x="0" y="9" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">H100: 1,000 TOK/S</text>
+            <text x="118" y="9" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">RTX 5090: 700 TOK/S</text>
+            <text x="242" y="9" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">DGX STATION: 2,000 TOK/S</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Bottom info strip -->
+      <g transform="translate(60, 224)" font-family="system-ui,sans-serif" fill="#1e3a8a">
+        <text x="0" y="0" font-size="7.5" font-weight="700" letter-spacing="1.6">SHIPS WITH:</text>
+        <line x1="0" y1="6" x2="360" y2="6" stroke="#1e3a8a" stroke-width="0.5" opacity="0.4"/>
+        <g transform="translate(0,16)" font-size="7.5" font-weight="700" letter-spacing="1.2">
+          <text x="0" y="14">TRANSFORMERS</text>
+          <text x="84" y="14">vLLM</text>
+          <text x="118" y="14">MLX</text>
+          <text x="146" y="14">UNSLOTH</text>
+          <text x="200" y="14">NIM</text>
+          <text x="226" y="14">CLOUD MODEL GARDEN</text>
+        </g>
+      </g>
+
+      <!-- License + context spec -->
+      <g transform="translate(60, 264)" font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
+        <rect x="0" y="0" width="170" height="32" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+        <text x="10" y="14" font-size="9" letter-spacing="2">APACHE 2.0</text>
+        <text x="10" y="26" font-size="6.4" letter-spacing="1.4" opacity="0.85">256K CONTEXT · 140+ LANGUAGES</text>
+
+        <rect x="186" y="0" width="170" height="32" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a" stroke-width="1.2"/>
+        <text x="196" y="14" font-size="9" letter-spacing="2">EXPERIMENTAL TIER</text>
+        <text x="196" y="26" font-size="6.4" letter-spacing="1.4" opacity="0.85">QUALITY &lt; GEMMA 4 · BUILD WITH CARE</text>
+      </g>
+
+      <!-- Corner brackets -->
+      <g stroke="#1e3a8a" stroke-width="1.2" fill="none" opacity="0.55">
+        <line x1="14" y1="14" x2="32" y2="14"/>
+        <line x1="14" y1="14" x2="14" y2="32"/>
+        <line x1="466" y1="306" x2="448" y2="306"/>
+        <line x1="466" y1="306" x2="466" y2="288"/>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+<p>Google DeepMind on June 10 released DiffusionGemma 26B-A4B, an open-weights text diffusion mixture-of-experts model that the team frames as a public building block rather than a competitor to Gemma 4 on absolute capability. The architecture takes the Gemma 4 backbone — 30 layers, 128 experts, 8 active per token, plus one shared expert — and grafts on a discrete text diffusion head. Generation no longer runs left-to-right one token at a time. Instead, the decoder applies bidirectional attention over a 256-token canvas and iteratively denoises the canvas through multiple forward passes, finalizing roughly 15 to 20 tokens per pass. An autoregressive encoder processes and caches the prompt context so the generation work is concentrated in the parallel decoder.</p>
+
+<p>The throughput numbers are the marketing line. A single NVIDIA H100 sustains more than 1,000 tokens per second; a consumer-grade RTX 5090 holds 700-plus; an NVIDIA DGX Station pushes the model to 2,000 tokens per second. NVIDIA's day-zero blog says that is "roughly 4x faster than an equivalent autoregressive model" at the same parameter budget. The total parameter count is 26 billion, but only 3.8 billion are active per token thanks to the sparse MoE routing, and the quantized weights fit inside the 24 GB VRAM ceiling of an RTX 4090 or 5090. Context window is 256K tokens. The vision encoder adds about 550 million parameters and accepts interleaved text, image and video inputs up to 60 seconds. The model speaks 140-plus languages.</p>
+
+<h4>How parallel denoising changes what the model can do</h4>
+
+<p>The architectural shift matters for a category of tasks autoregressive models handle poorly. Because the decoder applies bidirectional attention across the entire canvas, the model can revise tokens it has already committed to, by re-noising and re-denoising regions that look inconsistent with later context. Autoregressive transformers cannot do this — once a token is sampled, it is fixed. Google's developer guide leans into use cases where that property pays off: in-line editing of existing text, code infill where the model has to thread new content between fixed anchors above and below, and real-time interactive applications where the model can keep refining a draft as the user types.</p>
+
+<blockquote class="pull-quote">"DiffusionGemma abandons the sequential, token-by-token process of typical autoregressive Large Language Models."<cite>— Google DeepMind, DiffusionGemma model page</cite></blockquote>
+
+<p>The model card is unusually honest about the trade. On MMLU Pro the score lands at 77.6%, GPQA Diamond at 73.2%, LiveCodeBench v6 at 69.1%, and MMMU Pro at 54.3% for vision tasks. Those numbers sit below standard Gemma 4 at the same parameter budget. Google states it directly: "output quality is lower than standard Gemma 4," with a recommendation that production workloads still use Gemma 4 today. The trade is that the bottleneck moves from memory bandwidth to compute, which is exactly the regime modern accelerators are designed for, so the same hardware delivers more usable tokens per second.</p>
+
+<h4>What ships on day one</h4>
+
+<p>The weights are on Hugging Face at `google/diffusiongemma-26B-A4B-it` under Apache 2.0. Day-zero support lands in Hugging Face Transformers, vLLM, Apple's MLX runtime and Unsloth, with llama.cpp work in progress. The Google Cloud Model Garden carries the model behind the standard Vertex API, and NVIDIA NIM offers a containerized inference endpoint optimized for Blackwell's NVFP4 quantization. Unsloth simultaneously published a GGUF quantization at `unsloth/diffusiongemma-26B-A4B-it-GGUF` for local self-hosting.</p>
+
+<p>The licensing posture matters. Apache 2.0 is the maximally permissive open-weights license Google has used; previous Gemma releases shipped under the Gemma terms. Pairing the model with Apache 2.0 invites third-party fine-tunes, distillations and downstream commercial products without a separate license agreement. Combined with the lower active parameter count, that lowers the cost floor of running an in-house diffusion text model from "you need an A100" to "you can use the RTX card you already have."</p>
+
+<h4>The training cutoff and safety posture</h4>
+
+<p>The pre-training mixture spans web documents in 140-plus languages, code, math and images with a January 2025 cutoff. Google ran the standard preprocessing pipeline — CSAM filtering, sensitive personal data removal, quality and safety filtering. The card spells out the limitations: the model depends on training data quality, struggles with ambiguity and sarcasm in nuanced language, can generate factually incorrect text, and has limited common-sense reasoning. There is built-in reasoning and function-calling support, with variable image-token budgets between 70 and 1,120 tokens per image to trade resolution against latency.</p>
+
+<p>The strategic read: this is the first time a frontier lab has published an open, production-runnable diffusion language model with the same release rigor as a standard autoregressive Gemma. The 4x throughput claim is real on paper and will get stress-tested across the next month on agent loops, code-completion benchmarks and edit-in-place applications where the bidirectional canvas actually changes what the system can do. The quality gap to Gemma 4 is real too, and the model card's honesty about that gap is meant to keep production users from defaulting to DiffusionGemma when they should still be on Gemma 4.</p>
+
+<p class="source-footer"><a href="https://deepmind.google/models/gemma/diffusiongemma/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-label="The big picture">
+  <div class="label">Big picture</div>
+  <div>
+    <p>Two release patterns converged in a single 24-hour window. Google DeepMind put a frontier-lab text diffusion model into the open under Apache 2.0 and let NVIDIA do the hardware victory lap the same morning. Anthropic published a two-part policy paper that asks for civil penalties tied to global revenue against AI labs that ship dangerous frontier models, and in the same posting committed $200 million to an Economic Futures Research Fund and a $150 million national fellowship for workers exposed to AI displacement. The same lab is asking governments for the power to block its own deployments and trying to underwrite the policy research that will judge them. Sam Altman spent the same day meeting Senator Bernie Sanders about a public ownership stake in OpenAI, Anthropic and xAI.</p>
+    <p>Apple's WWDC continued underneath. Day three put Xcode 27's code completion entirely on the Apple Neural Engine with no source-code traffic to any server, and routed agentic tasks through a new `mcpbridge` XPC channel to Anthropic, Google and OpenAI agents only when the developer opts in. Anthropic and Google published Swift packages that implement Apple's new LanguageModel protocol the day before, so swapping Claude or Gemini into the Foundation Models framework now requires a single Swift Package Manager dependency change. Anthropic's Managed Agents moved scheduled cron-style deployments and credential vaults into public beta with named customers Rakuten, Notion, Actively AI, Ando and Browserbase, and the platform now bills the new features under existing Claude usage rather than per-credit like OpenAI's competing workspace agents.</p>
+    <p>The economic prints landed at the same time. Oracle posted a record $19.2 billion Q4 with cloud revenue up 47% to $9.9 billion and remaining performance obligations jumping $85 billion in one quarter to $638 billion, most of it large prepaid AI infrastructure contracts. Free cash flow ran a negative $23.7 billion for the year as Oracle pours money into capacity. Jedify raised $24 million from Norwest and Snowflake Ventures for context graphs that sit between agents and a customer's structured plus unstructured data. KPMG agreed to roll Microsoft Agent 365 governance across 276,000 employees. Tesla's Robotaxi fleet in Austin is 20 cars against Waymo's 577-vehicle Texas fleet while Musk waits on a 10-billion-parameter FSD v15 rewrite. The Databricks Data + AI Summit opens June 16 with Satya Nadella on the keynote stage. The day's pattern: every layer of the stack — model architecture, agent platform, policy contract, financing contract — was renegotiated at once.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+<svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+  <line x1="2" y1="9" x2="22" y2="9" stroke="#1e3a8a" stroke-width="1.2"/>
+  <circle cx="28" cy="9" r="2.5" fill="#1e3a8a"/>
+  <rect x="36" y="3" width="12" height="12" transform="rotate(45 42 9)" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+  <circle cx="52" cy="9" r="2.5" fill="#1e3a8a" fill-opacity="0.5"/>
+  <line x1="58" y1="9" x2="78" y2="9" stroke="#1e3a8a" stroke-width="1.2"/>
+</svg>
+</div>
+
+<section>
+<div class="section-head">
+  <h2>More today</h2>
+  <span class="count">14 stories · 2026-06-10 — 2026-06-11</span>
+</div>
+
+<div class="cards">
+
+<!-- 1. NVIDIA acceleration of DiffusionGemma -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="6" letter-spacing="2">TOKENS / SEC</text>
+    <rect x="14" y="20" width="22" height="48" fill="#1e3a8a" fill-opacity="0.25"/>
+    <text x="25" y="76" text-anchor="middle" font-size="5.4">H100</text>
+    <text x="25" y="18" text-anchor="middle" font-size="5.4" font-weight="800">1000</text>
+    <rect x="50" y="44" width="22" height="24" fill="#1e3a8a" fill-opacity="0.50"/>
+    <text x="61" y="76" text-anchor="middle" font-size="5.4">DGX SPK</text>
+    <text x="61" y="42" text-anchor="middle" font-size="5.4" font-weight="800">150</text>
+    <rect x="86" y="6" width="22" height="62" fill="#1e3a8a" fill-opacity="0.85"/>
+    <text x="97" y="76" text-anchor="middle" font-size="5.4">DGX STN</text>
+    <text x="97" y="4" text-anchor="middle" font-size="5.4" font-weight="800" fill="#1e3a8a">2000</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">NVIDIA ships day-zero DiffusionGemma acceleration across RTX, DGX Spark and DGX Station</h3>
+<p class="kicker">NVIDIA · 2026-06-10 · <a href="https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">NVIDIA's RTX AI Garage post landed the same morning as the DiffusionGemma release and put hard throughput numbers on the table: 1,000 tokens per second on an H100, 150 on DGX Spark, up to 2,000 on a DGX Station, with Hugging Face Transformers, vLLM and Unsloth carrying day-zero support. The acceleration leans on Tensor Cores and NVFP4 quantization on Blackwell. The model is open weights under Apache 2.0; llama.cpp support is described as coming soon.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The NVIDIA post, authored by Michael Fukuyama, is paired with the DeepMind release. The framing is straightforward: DiffusionGemma's parallel denoising is a workload that maps better to a tensor processor than autoregressive sampling does, because the bottleneck moves from memory bandwidth to compute. The numbers reflect that. A single H100 sustains 1,000 tokens per second. The Grace Blackwell-based DGX Spark, a developer workstation that fits under a desk, runs the model at 150 tokens per second. The DGX Station — NVIDIA's higher-end personal supercomputer — pushes throughput to 2,000 tokens per second. NVIDIA frames the headline performance as "roughly 4x faster than an equivalent autoregressive model" at the same parameter budget.</p>
+
+<p>The integration work is the part that makes the throughput available immediately. NVIDIA provided day-zero support inside Hugging Face Transformers, vLLM and Unsloth so developers can run inference with no custom kernels. The model uses NVFP4, NVIDIA's 4-bit floating-point format native to Blackwell, which lets the 26-billion-parameter model fit inside consumer-grade memory budgets. llama.cpp support is described as in flight rather than landed.</p>
+
+<blockquote class="pull-quote">"DiffusionGemma denoises up to 256 tokens in parallel by starting from noise and refining a whole block of text at once."<cite>— Michael Fukuyama, NVIDIA</cite></blockquote>
+
+<h4>What NVIDIA is actually selling here</h4>
+
+<p>The strategic message under the throughput chart is that next-generation text models are not necessarily larger — they are differently shaped, and the new shape rewards Blackwell-class tensor compute more than the prior autoregressive shape did. DGX Station gets the headline 2,000-token-per-second number not because it has more GPU memory than an H100, but because the parallel denoising workload saturates Blackwell's compute throughput where autoregressive decoding does not. The post lands two weeks after Jensen Huang's Computex framing that next-gen inference is "compute-bound, not memory-bound," and reads as the supporting evidence.</p>
+
+<p class="source-footer"><a href="https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 2. Anthropic Policy on the AI Exponential -->
+<details class="story" data-tags="policy safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">EXPONENTIAL</text>
+    <path d="M14 66 Q 40 62 60 50 T 106 14" fill="none" stroke="#1e3a8a" stroke-width="1.8"/>
+    <circle cx="14" cy="66" r="2.4" fill="#1e3a8a"/>
+    <circle cx="40" cy="56" r="2.4" fill="#1e3a8a"/>
+    <circle cx="74" cy="38" r="2.4" fill="#1e3a8a"/>
+    <circle cx="106" cy="14" r="3.2" fill="#1e3a8a"/>
+    <line x1="60" y1="40" x2="100" y2="20" stroke="#1e3a8a" stroke-width="0.6" stroke-dasharray="2 2" opacity="0.7"/>
+    <text x="22" y="76" font-size="5.4" font-weight="700">10^25 FLOPs</text>
+    <text x="74" y="22" font-size="5" font-weight="700">$500M REV</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Anthropic asks governments for power to block frontier deployments at the 10^25-FLOP line</h3>
+<p class="kicker">Anthropic · 2026-06-10 · <a href="https://www.anthropic.com/policy-on-the-ai-exponential" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">The "Policy on the AI Exponential" paper is built around two frameworks. The Advanced AI Framework asks legislatures for explicit legal authority to block or deter deployment of frontier AI models judged to risk catastrophic harm. The Economic Policy Framework names three unemployment thresholds — 5%, 10%, and an unspecified "unprecedented" level — and pre-commits to policy responses at each. Civil penalties scale with global annual revenue and escalate for repeat violations. The thresholds for who falls inside the rules: 10^25 training FLOPs, $500M in AI revenue, or $1B in AI R&D spend.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The framing is unusual for a frontier lab. Anthropic is asking governments to take responsibility for blocking the deployment of models the lab itself or its competitors might want to ship. The Advanced AI Framework specifies five concrete asks: legal authority to block or deter dangerous deployments, an ecosystem of qualified independent evaluators, gene synthesis screening and biosurveillance to harden against biological misuse, hardened critical infrastructure software, and a dedicated government tracking function for frontier cyber capabilities. Transparency requirements include published safety frameworks, system cards, regular risk reports and engagement with independent evaluators.</p>
+
+<p>The quantitative thresholds matter because they define who falls inside the rules. Models trained on more than 10^25 floating-point operations, or built by companies earning more than $500 million from AI or spending more than $1 billion on AI R&D, are inside the perimeter. That captures Anthropic, OpenAI, Google DeepMind, xAI, Meta and a small number of others; it explicitly excludes the long tail of fine-tuners and application builders. Civil penalties are tied to global annual revenue and escalate for repeat violations — the EU GDPR enforcement model applied to frontier AI.</p>
+
+<blockquote class="pull-quote">"AI is advancing at exponential speed, and the policymaking process was built for a slower world."<cite>— Anthropic, "Policy on the AI Exponential"</cite></blockquote>
+
+<h4>The Economic Policy Framework</h4>
+
+<p>The second half of the paper turns to economic disruption. Anthropic proposes a tiered response keyed to national unemployment: an initial 5% trigger, a 10% trigger that activates broader transfer programs, and an "unprecedented" level the paper does not numerically define but treats as the regime where existing labor-market institutions stop functioning. The framework asks for active program evaluation rather than committing to a specific policy mix — Anthropic wants the government to fund the research that decides what works, not to lock in answers in advance.</p>
+
+<p>The companion announcement — covered in a separate Washington Times Associated Press report — landed the same day: Anthropic is committing $200 million to an Economic Futures Research Fund that backs research trials and program evaluations of public policies it deems promising, and a $150 million national fellowship program for early-career professionals working to "extend the benefits of AI to communities across America." The combined $350 million commitment is the largest single allocation by a frontier lab to economic-impact research.</p>
+
+<h4>The political backdrop</h4>
+
+<p>The paper drops on the same day OpenAI CEO Sam Altman met Senator Bernie Sanders to discuss a plan for the public to take an ownership stake in frontier AI companies, using their stock to seed a public wealth fund. Anthropic's framing — civil penalties, transparency, government authority — is more conventional. The Altman/Sanders conversation is the radical wing. Both arrived publicly on June 10, two weeks after President Trump signed the voluntary AI executive order conditioning $42 billion in BEAD funding on the absence of state-level AI laws.</p>
+
+<p class="source-footer"><a href="https://www.anthropic.com/policy-on-the-ai-exponential" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 3. Anthropic $200M / $150M fellowship -->
+<details class="story" data-tags="economic policy">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="6" letter-spacing="2">ECON FUTURES</text>
+    <circle cx="40" cy="46" r="22" fill="#1e3a8a" fill-opacity="0.30" stroke="#1e3a8a" stroke-width="1.2"/>
+    <text x="40" y="44" text-anchor="middle" font-size="8.5" font-weight="800">$200M</text>
+    <text x="40" y="54" text-anchor="middle" font-size="4.6" letter-spacing="1.2">RESEARCH</text>
+    <circle cx="84" cy="46" r="18" fill="#1e3a8a" fill-opacity="0.18" stroke="#1e3a8a" stroke-width="1.2"/>
+    <text x="84" y="44" text-anchor="middle" font-size="7.5" font-weight="800">$150M</text>
+    <text x="84" y="54" text-anchor="middle" font-size="4.6" letter-spacing="1.2">FELLOWSHIP</text>
+    <text x="60" y="76" text-anchor="middle" font-size="5.4" letter-spacing="2">5% · 10% · UNPRECEDENTED</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-policy">Policy</span></div>
+<h3 class="headline">Anthropic pledges $200M for AI economic-impact research and $150M for a national fellowship</h3>
+<p class="kicker">U.S. News (AP) · 2026-06-10 · <a href="https://www.usnews.com/news/business/articles/2026-06-10/anthropic-pledges-200-million-to-research-ais-economic-impact-as-ceo-suggests-job-loss-solutions" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Dario Amodei posted an essay to his personal site arguing the labor market disruption from AI will be larger and last longer than from previous technology shifts. The $200 million Economic Futures Research Fund backs research trials and program evaluation of policies Anthropic finds promising. The $150 million national fellowship is aimed at early-career professionals taking AI into underserved communities. The pledges arrived alongside the Policy on the AI Exponential paper and a publicly disclosed meeting between Sam Altman and Senator Bernie Sanders on public stock ownership in AI companies.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic structured the $350 million combined pledge into two pieces. The Economic Futures Research Fund holds $200 million and is described as a research vehicle, not a grant-making program. It backs research trials and program evaluation of public policies the company considers promising. Anthropic's framing is that the right policy response to AI-driven labor disruption is still empirically unsettled, and the company wants to fund the experimental work that decides what works rather than commit ex ante to a particular intervention. The $150 million national fellowship is aimed at early-career professionals who will work to extend the benefits of AI to communities across America.</p>
+
+<p>Amodei's accompanying essay on his personal site reiterated his position that the government should promise economic support to those impacted financially by AI and argued the technology can produce larger labor-market disruptions than previous technology shifts. The Policy on the AI Exponential paper accompanies the essay and proposes that policy responses scale with unemployment: an initial response at 5%, an expanded response at 10%, and an unspecified "unprecedented" tier the paper treats as outside existing labor-market institutions.</p>
+
+<blockquote class="pull-quote">"The disruptions could be much larger than previous technological advancements, and those disruptions could last longer."<cite>— Dario Amodei, in the accompanying essay</cite></blockquote>
+
+<h4>The Altman meeting</h4>
+
+<p>The same day Anthropic's pledge appeared, OpenAI CEO Sam Altman met Senator Bernie Sanders about a parallel plan: a sovereign wealth fund seeded by mandatory equity stakes in OpenAI, Anthropic and xAI, with proceeds distributed to the public. Sanders introduced legislation in early June proposing a one-time 50% stock tax on the three frontier labs. The Altman conversation is the more politically radical version of what Anthropic's framework treats more conservatively. Both surfaced publicly on June 10, and both arrived inside a window in which the three frontier labs are actively pricing equity for either IPO (Anthropic confidentially filed an S-1 on June 1, OpenAI is reported targeting September) or public floats of related entities (SpaceX prices June 11 with a Nasdaq debut June 12).</p>
+
+<p class="source-footer"><a href="https://www.usnews.com/news/business/articles/2026-06-10/anthropic-pledges-200-million-to-research-ais-economic-impact-as-ceo-suggests-job-loss-solutions" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 4. Claude Managed Agents scheduled deployments + credential vaults -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="6" font-weight="700" letter-spacing="2">MANAGED AGENTS</text>
+    <circle cx="34" cy="44" r="16" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <path d="M34 32 L34 44 L42 50" fill="none" stroke="#1e3a8a" stroke-width="1.8"/>
+    <text x="34" y="74" text-anchor="middle" font-size="5.6" font-weight="700">CRON</text>
+    <rect x="62" y="30" width="44" height="28" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <line x1="62" y1="38" x2="106" y2="38" stroke="#1e3a8a" stroke-width="1"/>
+    <circle cx="68" cy="34" r="1.2" fill="#1e3a8a"/>
+    <circle cx="74" cy="34" r="1.2" fill="#1e3a8a"/>
+    <text x="84" y="50" text-anchor="middle" font-size="5.6" font-weight="700">VAULT</text>
+    <text x="84" y="74" text-anchor="middle" font-size="5.6" font-weight="700">ENV VARS</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Claude Managed Agents add cron-style scheduled deployments and credential vaults in public beta</h3>
+<p class="kicker">TechTimes · 2026-06-10 · <a href="https://www.techtimes.com/articles/318163/20260610/claude-managed-agents-add-cron-schedules-credential-vaultsanthropic-beta-puts-agents-autopilot.htm" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Anthropic moved Managed Agents into recurring-task territory. Agents now attach to cron schedules and start a fresh session on every trigger, with administrators able to pause, resume, archive or fire manual runs. Credential vaults store environment variables as placeholders inside the agent sandbox and attach actual secrets only at the network boundary to allowlisted domains. Rakuten runs weekly spreadsheet-to-deck reports on the new schedules; Notion uses the vault to roll out its own CLI under its security guidelines. The feature bills under existing Claude Platform usage rather than per-credit.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The two pieces of the launch — scheduled deployments and credential vaults — share an underlying premise: production agents need to look more like ops infrastructure than like chat sessions. Scheduled deployments attach a Managed Agent to a cron-style schedule on the Claude Platform. Each trigger spins up a new session, the agent runs the configured task and exits. Administrators can pause, resume, archive or manually trigger extra runs from the console. The use cases the launch post calls out — nightly data syncs, weekly compliance scans, daily digests — are workloads previously handled by hand-rolled cron jobs plus the OpenAI API.</p>
+
+<p>Credential vaults solve the secrets problem that breaks agent deployments in regulated companies. API keys are stored in the vault as placeholders. Inside the agent sandbox, the agent never sees the actual secret. When the agent calls an allowlisted external service, the network boundary injects the real key and removes it before the agent's session can log it. When the vault rotates, every agent's effective key rotates automatically. The construction is meant to neutralize prompt-injection attacks that try to exfiltrate credentials by tricking the agent into echoing them.</p>
+
+<blockquote class="pull-quote">"Teams across Rakuten use scheduled deployments to analyze data in a spreadsheet and produce a report or deck on a weekly or monthly schedule."<cite>— Yusuke Kaji, GM of AI for Business, Rakuten</cite></blockquote>
+
+<h4>Customer names and pricing posture</h4>
+
+<p>Anthropic put named customers behind the launch: Actively AI replaced its own scheduling infrastructure with scheduled deployments and called the change a stack simplification; Notion uses vaults to roll out the Notion CLI under its security team's strict guidelines; Rakuten built weekly spreadsheet-to-deck reporting on top of the schedules. Ando, Browserbase and Milana appear on the launch's customer list. Compatible third-party tools include Browserbase, KERNEL, Notion, Ramp and Sentry CLIs; Browserbase and KERNEL also bring browser automation into Managed Agents for the first time.</p>
+
+<blockquote class="pull-quote">"Environment variables in vaults let us securely roll out the Notion CLI, meeting our security team's strict guidelines."<cite>— Quan Nguyen, Public API Lead, Notion</cite></blockquote>
+
+<p>The pricing contrast with OpenAI's competing workspace agents is intentional. Anthropic attaches no separate fee to scheduled deployments — usage bills under existing Claude Platform pricing. OpenAI's workspace agents, which begin token-credit billing on July 6, charge approximately 7.25 credits for a GPT-5.5 run consuming 20,000 input tokens and 5,000 output tokens, with typical runs landing between 5 and 25 credits. For shops weighing which platform anchors their agent deployments, the per-run versus per-token economics is now the calculation the procurement teams have to do.</p>
+
+<p class="source-footer"><a href="https://www.techtimes.com/articles/318163/20260610/claude-managed-agents-add-cron-schedules-credential-vaultsanthropic-beta-puts-agents-autopilot.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 5. WWDC Day 3: Xcode 27 dual-engine code completion -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">XCODE 27 · DUAL ENGINE</text>
+    <rect x="10" y="22" width="46" height="44" fill="#1e3a8a" fill-opacity="0.30" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="33" y="42" text-anchor="middle" font-size="5.6" font-weight="800">ON DEVICE</text>
+    <text x="33" y="52" text-anchor="middle" font-size="5" letter-spacing="1">NEURAL ENGINE</text>
+    <text x="33" y="60" text-anchor="middle" font-size="4.6" opacity="0.85">INLINE COMPLETIONS</text>
+    <rect x="64" y="22" width="46" height="44" fill="none" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="87" y="42" text-anchor="middle" font-size="5.6" font-weight="800">OPT-IN CLOUD</text>
+    <text x="87" y="52" text-anchor="middle" font-size="5" letter-spacing="1">MCPBRIDGE / XPC</text>
+    <text x="87" y="60" text-anchor="middle" font-size="4.6" opacity="0.85">CLAUDE · GEMINI · GPT</text>
+    <line x1="56" y1="44" x2="64" y2="44" stroke="#1e3a8a" stroke-width="1" stroke-dasharray="2 2"/>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Xcode 27 keeps inline code completion on the Neural Engine and routes agent work through mcpbridge</h3>
+<p class="kicker">TechTimes · 2026-06-10 · <a href="https://www.techtimes.com/articles/318110/20260610/wwdc-2026-day-3-xcode-27-neural-engine-completes-code-without-sending-source-any-server.htm" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Day three of WWDC dropped Xcode 27's dual-engine architecture. The inline completion model is a Swift- and Apple-SDK-tuned model that runs exclusively on the Neural Engine; no source code transits any server. For multi-file refactors, test-suite generation and autonomous debugging, developers opt in to third-party agents from Anthropic, Google and OpenAI through the new `mcpbridge` binary, which translates Model Context Protocol calls into Apple's XPC sandbox transport rather than HTTP. The protocol exposes 20 Xcode capabilities — file reads, builds, test runs, live diagnostics, SwiftUI preview rendering — through structured JSON.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Apple split Xcode 27's AI work into two engines with very different privacy and latency profiles. The inline-completion model is Apple's own. It is specifically trained for Swift idioms and Apple SDK patterns, not a general-purpose LLM, and it runs entirely on the Apple Silicon Neural Engine. The unified high-bandwidth memory shared between the CPU, GPU and Neural Engine — M1's 68 GB/s, M1 Max's 400 GB/s — gives the model access to the working set without cross-bus transfer. Latency drops because there is no network round-trip. Source code never leaves the device.</p>
+
+<p>The agent track is separate. For multi-file refactors, test-suite generation and autonomous debugging — work the inline model is not sized for — developers opt in to third-party agents from Anthropic, Google or OpenAI through Xcode's settings panel. The mechanism is a new binary called `mcpbridge` that translates the Model Context Protocol over Apple's XPC, the sandboxed inter-process communication layer Apple uses for cross-process work on iOS and macOS. Routing MCP over XPC rather than HTTP keeps the agent inside Apple's sandbox primitives, which is the privacy posture Apple has spent the year building toward.</p>
+
+<blockquote class="pull-quote">"Inline completions never leave the device; agentic tasks do, when the developer chooses to invoke them."<cite>— Apple, WWDC 2026 session description</cite></blockquote>
+
+<h4>What the protocol exposes</h4>
+
+<p>The Xcode MCP surface gives external agents 20 capabilities: file reads, building, test runs, live diagnostics, SwiftUI preview rendering and 15 other Xcode internals, each addressed through structured JSON requests. The inline-completion model is not exposed through the API — Apple keeps it strictly inside the editor's own completion path, which the company says prevents app-level inference re-use of the Xcode-tuned weights.</p>
+
+<p>Xcode 27 reaches public release in September 2026 alongside iOS 27 and macOS Golden Gate. The day-three session paired naturally with Apple's day-two announcement of the LanguageModel protocol, which lets third-party cloud providers implement Foundation Models as Swift packages — Anthropic and Google published the Swift packages the day before, so the agentic-cloud path in Xcode is already plumbed.</p>
+
+<p class="source-footer"><a href="https://www.techtimes.com/articles/318110/20260610/wwdc-2026-day-3-xcode-27-neural-engine-completes-code-without-sending-source-any-server.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 6. Oracle Q4 earnings -->
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="13" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">ORACLE Q4 FY26</text>
+    <text x="60" y="34" text-anchor="middle" font-size="14" font-weight="800">$638B</text>
+    <text x="60" y="44" text-anchor="middle" font-size="5.4" font-weight="700" letter-spacing="1.4">REMAINING PERF. OBLIG.</text>
+    <line x1="20" y1="50" x2="100" y2="50" stroke="#1e3a8a" stroke-width="0.6" opacity="0.5"/>
+    <text x="22" y="62" font-size="5.4" font-weight="700">REV $19.2B · CLOUD +47%</text>
+    <text x="22" y="72" font-size="5.4" font-weight="700">CAPEX FCF -$23.7B</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Oracle posts record Q4 with $9.9B cloud, $85B single-quarter RPO jump to $638B</h3>
+<p class="kicker">Oracle Investor Relations · 2026-06-10 · <a href="https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Q4 revenue rose 21% to $19.2 billion. Cloud revenue grew 47% to $9.9 billion. Remaining performance obligations jumped $85 billion in a single quarter from $553 billion to $638 billion, almost entirely large prepaid AI infrastructure contracts where customers either paid Oracle for GPUs or supplied them. Prepaid plus customer-supplied hardware now totals $75 billion of the AI backlog. Free cash flow ran negative $23.7 billion for the year as Oracle continues to fund OCI capacity build-out; operating cash flow set a fiscal-year record of $32 billion, up 54%.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Oracle's Q4 numbers landed at the close on June 10 and reset the read on AI infrastructure backlog. Q4 revenue was $19.2 billion, up 21%. Cloud revenue at $9.9 billion grew 47% year over year. GAAP EPS rose 21% to $1.45; non-GAAP EPS rose 24% to $2.11. The full fiscal year hit $67.4 billion in revenue, up 17%, with cloud revenue at $34 billion, up 39%. Those numbers cleared the consensus bars heading into the print. The line that mattered to AI watchers was further down.</p>
+
+<p>Remaining performance obligations — Oracle's contracted but not yet recognized revenue — jumped $85 billion in Q4 alone, from $553 billion to $638 billion. Oracle's own filing language explained the composition: most of the Q3 and Q4 RPO increase came from "large scale AI contracts where the customer prepaid Oracle for the purchase of the GPUs, or the customer bought and supplied the GPUs to Oracle." The combined prepaid and customer-supplied hardware portion of those AI contracts now totals $75 billion. The number is the public market's clearest signal yet that frontier-lab capacity needs are running on multi-year prepayment terms that resemble project finance more than cloud usage.</p>
+
+<h4>The capex side</h4>
+
+<p>The cost of carrying that backlog showed up below the operating line. Free cash flow ran negative $23.7 billion for the fiscal year as Oracle continued to fund cloud infrastructure capacity. Operating cash flow at $32 billion was a record, up 54%, but reinvestment outran it. The math of OCI's expansion now requires Oracle to spend cash flow today against contracted revenue that flows in over the next several years. Investor questions on the call will turn on whether the prepayment structure carries enough margin to absorb the financing cost.</p>
+
+<p>The $638 billion RPO figure is the AI infrastructure print of the quarter — larger than any single capex announcement from a hyperscaler this year. Oracle's bet on AI infrastructure as a separate category from generic cloud, which the company has been making for two years, is now showing up in the books at a scale that compels even skeptical analysts to revise the company's terminal value upward. Whether the prepaid GPU contracts produce per-share earnings that justify the negative free cash flow window is the question the next several quarters will answer.</p>
+
+<p class="source-footer"><a href="https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 7. Jedify $24M Series A -->
+<details class="story" data-tags="economic tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">JEDIFY · CONTEXT GRAPH</text>
+    <circle cx="34" cy="46" r="4" fill="#1e3a8a"/>
+    <circle cx="60" cy="36" r="4" fill="#1e3a8a"/>
+    <circle cx="86" cy="46" r="4" fill="#1e3a8a"/>
+    <circle cx="46" cy="62" r="4" fill="#1e3a8a"/>
+    <circle cx="74" cy="62" r="4" fill="#1e3a8a"/>
+    <line x1="34" y1="46" x2="60" y2="36" stroke="#1e3a8a" stroke-width="1.2"/>
+    <line x1="60" y1="36" x2="86" y2="46" stroke="#1e3a8a" stroke-width="1.2"/>
+    <line x1="34" y1="46" x2="46" y2="62" stroke="#1e3a8a" stroke-width="1.2"/>
+    <line x1="86" y1="46" x2="74" y2="62" stroke="#1e3a8a" stroke-width="1.2"/>
+    <line x1="46" y1="62" x2="74" y2="62" stroke="#1e3a8a" stroke-width="1.2"/>
+    <line x1="60" y1="36" x2="60" y2="62" stroke="#1e3a8a" stroke-width="0.8" stroke-dasharray="2 2"/>
+    <text x="60" y="76" text-anchor="middle" font-size="6" font-weight="800">$24M SERIES A</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Jedify raises $24M from Norwest and Snowflake Ventures for enterprise context graphs</h3>
+<p class="kicker">SiliconANGLE · 2026-06-10 · <a href="https://siliconangle.com/2026/06/10/jedify-raises-24m-give-enterprise-ai-agents-business-context-lack/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Jedify takes Series A money to build customer-specific "context graphs" that link structured data — warehouses, CRM, financial systems — with the unstructured material around them: documents, playbooks, Slack threads, meeting recordings. Norwest Ventures leads, with Snowflake Ventures joining as a strategic investor and existing backers S Capital, Cerca Partners and Oceans Ventures rolling in. Norwest's Assaf Harel joins the board. Total raised to date is $33 million; the company is integrating with Snowflake's Cortex AI tools.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Jedify's product premise is the gap between the enterprise data graph an agent thinks it has access to and the operational context that actually decides whether the agent's answer is correct. Most agents in production read from a warehouse, a CRM, or a documentation index, but the context that defines what a customer means by "qualified pipeline" or which Slack thread holds the authoritative answer on a refund policy lives elsewhere. Jedify builds a customer-specific semantic model — a "context graph" — that links the structured operational data with the unstructured material around it and maintains the relationships, definitions and access permissions over time.</p>
+
+<p>The technology under the marketing is what the company calls Semantic Fusion, a patent-pending pipeline that builds and maintains the graph as a proprietary asset that improves with each agent interaction. The integration story is with Snowflake's Cortex AI tools — specifically Semantic Views and Cortex Analyst — which is why Snowflake Ventures joined the round as a strategic investor on the heels of Snowflake Summit 2026.</p>
+
+<blockquote class="pull-quote">"Agentic workflows need deep business understanding; Jedify turns fragmented knowledge into a live context graph."<cite>— Assaf Henkin, CEO, Jedify</cite></blockquote>
+
+<h4>Lead investor and board</h4>
+
+<p>Norwest Ventures led the $24 million Series A. Snowflake Ventures joined as a new strategic investor. Existing backers S Capital VC, Cerca Partners and Oceans Ventures participated. Norwest partner Assaf Harel joins the board. Total funding to date sits at $33 million, including an $8.5 million seed from September 2023. Valuation was not disclosed.</p>
+
+<blockquote class="pull-quote">"Jedify solves foundational problems through autonomous data fusion, offering enterprises flexibility rather than lock-in."<cite>— Assaf Harel, Norwest Ventures</cite></blockquote>
+
+<p>The market read for the round: agent context is now an explicit, separately-funded layer in the enterprise AI stack. The early agent deployments at Salesforce, ServiceNow and Microsoft Copilot ran on whatever ad-hoc context the host product was willing to expose. The Jedify thesis is that as agents move into autonomous production work — the Stripe migration class of task — the cost of getting the context wrong becomes higher than the cost of building and maintaining a dedicated context layer between the data and the model. The $24 million is what that thesis is worth at A.</p>
+
+<p class="source-footer"><a href="https://siliconangle.com/2026/06/10/jedify-raises-24m-give-enterprise-ai-agents-business-context-lack/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 8. NVIDIA Robotaxis Safety post -->
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">HALOS OS · BUILT IN</text>
+    <rect x="18" y="26" width="84" height="38" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <line x1="18" y1="38" x2="102" y2="38" stroke="#1e3a8a" stroke-width="0.6"/>
+    <line x1="18" y1="50" x2="102" y2="50" stroke="#1e3a8a" stroke-width="0.6"/>
+    <text x="60" y="36" text-anchor="middle" font-size="5" font-weight="700" letter-spacing="1.4">PERCEPTION LAYER</text>
+    <text x="60" y="48" text-anchor="middle" font-size="5" font-weight="700" letter-spacing="1.4">PLANNING LAYER</text>
+    <text x="60" y="60" text-anchor="middle" font-size="5" font-weight="700" letter-spacing="1.4">SAFETY LAYER</text>
+    <text x="60" y="74" text-anchor="middle" font-size="5.4" letter-spacing="2">JUNE 10 · NVIDIA</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">NVIDIA argues robotaxi safety must be built into Halos OS, not bolted on after the fact</h3>
+<p class="kicker">NVIDIA Blog · 2026-06-10 · <a href="https://blogs.nvidia.com/blog/robotaxis-safety-built-in/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">NVIDIA's second blog post of the day frames the company's Halos OS as the safety architecture for driverless vehicles and pushes back on the bolt-on safety pattern that has dominated industry retrofits. The post pairs with the DiffusionGemma acceleration release in the company's daily output and sits inside the broader Halos OS positioning NVIDIA has been building behind Drive — the autonomous stack used by Mercedes, Hyundai, Lucid and a long tail of robotaxi operators.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>NVIDIA's "For Robotaxis, Safety Must Be Built In, Not Bolted On" blog post pairs employee perspectives on autonomous mobility with the architectural argument for Halos OS as the safety stack underneath NVIDIA Drive. The framing is direct: safety primitives in autonomous vehicles cannot be added as a post-hoc supervisor on top of perception and planning, because the failure modes they need to catch are upstream of the supervisor. They have to be designed into the runtime that schedules perception, planning and control.</p>
+
+<p>Halos OS is the in-vehicle operating system NVIDIA has been positioning as the third pillar of its automotive stack, alongside Drive Hyperion (the hardware reference design) and Drive Thor (the SoC). The post is timed to land the same week Tesla's Robotaxi service in Austin remains capped at 20 unsupervised vehicles against Waymo's 577-vehicle Texas authorization, and the same month industry attention is focused on whether the FSD v15 rewrite Musk has been promising actually closes the gap to the Waymo-style sensor-rich, HD-map-anchored stack — which is exactly the architecture NVIDIA's customers run.</p>
+
+<p>The strategic message is that as robotaxi competition moves from demo cities to scaled deployments, the safety stack is the binding constraint, and the binding constraint is precisely what NVIDIA is positioning Halos OS to own.</p>
+
+<p class="source-footer"><a href="https://blogs.nvidia.com/blog/robotaxis-safety-built-in/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 9. Tesla Robotaxi vs Waymo in Texas -->
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">TEXAS DRIVERLESS · STATE AUTH</text>
+    <text x="14" y="38" font-size="6" font-weight="700">TESLA</text>
+    <rect x="14" y="42" width="20" height="14" fill="#1e3a8a" fill-opacity="0.30"/>
+    <text x="42" y="52" font-size="7" font-weight="800">42</text>
+    <text x="14" y="64" font-size="6" font-weight="700">WAYMO</text>
+    <rect x="14" y="68" width="86" height="6" fill="#1e3a8a"/>
+    <text x="104" y="74" font-size="7" font-weight="800">577</text>
+    <text x="60" y="30" text-anchor="middle" font-size="5" opacity="0.7" letter-spacing="1.2">RIDES/WK 500K · WAYMO US</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Tesla Robotaxi trails Waymo 42 to 577 in Texas as Musk waits on FSD v15 rewrite</h3>
+<p class="kicker">TechTimes · 2026-06-10 · <a href="https://www.techtimes.com/articles/318160/20260610/tesla-robotaxi-trails-waymo-42-577-texasaustin-map-masks-20-car-fleet-until-fsd-v15-rewrite.htm" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Tesla's active unsupervised Robotaxi fleet in Austin stands at roughly 20 vehicles, down from 25 in late April, against a Texas state authorization of 42 vehicles. Waymo's Texas authorization is 577, with 3,067 robotaxis nationwide and more than 500,000 paid rides per week across 10 US cities. Musk is holding back aggressive expansion pending the FSD v15 rewrite, which expands the driving model from roughly 1 billion to 10 billion parameters and is expected to deploy in late 2026 or early 2027. Reuters has separately reported intensive route-specific Tesla staff preparation before each launch city.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The Tesla Robotaxi-Waymo gap in Texas became the day's clearest single data point on where the autonomous-vehicle competition actually sits. Tesla's active unsupervised fleet in Austin is approximately 20 vehicles. The state of Texas authorizes Tesla for 42 vehicles statewide. Tesla expanded Austin's service area to the entire metro on June 3, covering roughly 245 square miles including Austin-Bergstrom International Airport. The fleet number — down from a late-April peak of 25 — has not grown to fill the authorization.</p>
+
+<p>Waymo's Texas authorization is 577. Nationally Waymo operates 3,067 robotaxis running its fifth-generation driver and serves more than 500,000 paid rides per week across 10 US cities. The Texas deployment alone is 13.7x Tesla's authorized fleet and roughly 29x Tesla's deployed fleet. The article's framing is that Tesla's Austin map showing service across the whole metro masks how few vehicles actually run that map.</p>
+
+<h4>Why the fleet has not grown</h4>
+
+<p>Musk has tied aggressive expansion to the FSD v15 rewrite. The next version of Tesla's driving model expands from roughly 1 billion parameters to 10 billion — a 10x scale-up in the model itself, beyond the architectural rebuild. Expected deployment window is late 2026 to early 2027, which means the current Tesla fleet runs on FSD v14 in the markets where unsupervised operation is permitted, and the company is choosing to keep the fleet small rather than push v14 into more cities.</p>
+
+<p>Reuters has separately reported intensive route-specific staff preparation and annotation work by Tesla in advance of each launch city. The article cites 17 known incidents logged between July 2025 and April 2026, two involving minor injuries and one requiring hospitalization. Traffic-safety researchers have publicly questioned Tesla's methodology for safety statistics as "potentially misleading marketing." Waymo, with the larger fleet, also runs a larger absolute incident base, but the sensor-rich, HD-map-anchored architecture and operational design domain make the per-mile picture different.</p>
+
+<p class="source-footer"><a href="https://www.techtimes.com/articles/318160/20260610/tesla-robotaxi-trails-waymo-42-577-texasaustin-map-masks-20-car-fleet-until-fsd-v15-rewrite.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 10. Databricks Summit preview -->
+<details class="story" data-tags="application tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">DATA + AI SUMMIT</text>
+    <text x="60" y="36" text-anchor="middle" font-size="14" font-weight="800">JUNE 15–18</text>
+    <text x="60" y="46" text-anchor="middle" font-size="5.4" font-weight="700" letter-spacing="1.6">30,000+ ATTENDEES</text>
+    <line x1="20" y1="52" x2="100" y2="52" stroke="#1e3a8a" stroke-width="0.6" opacity="0.5"/>
+    <text x="60" y="64" text-anchor="middle" font-size="5.4" letter-spacing="1">NADELLA · BROCKMAN · GHODSI</text>
+    <text x="60" y="74" text-anchor="middle" font-size="5.4" letter-spacing="1">CONTEXT LAYER FOR AGENTS</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Databricks Summit opens June 15 with Nadella, Brockman and a roadmap for the agent context layer</h3>
+<p class="kicker">SiliconANGLE · 2026-06-10 · <a href="https://siliconangle.com/2026/06/10/databricks-enterprise-ai-databrickssummit/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">The Data + AI Summit runs June 15-18 at the Moscone Center with more than 30,000 in-person attendees expected and tens of thousands more virtual across 150+ countries. The keynote lineup pairs Databricks co-founders Ali Ghodsi, Matei Zaharia, Arsalan Tavakoli-Shiraji and Reynold Xin with Satya Nadella in a pre-recorded fireside, Greg Brockman, and Magesh Bagavathi. theCUBE's preview frames the agenda around the "context layer for agents" — the same architecture pattern that Jedify, Snowflake's Cortex Sense, and Microsoft's Work IQ APIs are all converging on.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>Databricks Data + AI Summit 2026 opens June 15 at the Moscone Center in San Francisco and runs through June 18, drawing more than 30,000 in-person attendees plus tens of thousands of virtual participants from 150-plus countries. theCUBE's preview, updated June 10, sets up the event as Databricks' rebuttal to Snowflake's Summit a week earlier and to the broader narrative that the data warehouse and lakehouse vendors are now competing for the agent control plane.</p>
+
+<p>The headline lineup pairs Databricks co-founders — Ali Ghodsi, Matei Zaharia, Arsalan Tavakoli-Shiraji and Reynold Xin, the original creators of Apache Spark, Delta Lake and MLflow — with Satya Nadella in a pre-recorded fireside chat, OpenAI president Greg Brockman in person, and Magesh Bagavathi as a guest speaker. The product announcements will include Databricks' 2026 roadmap and a discussion of how the Mosaic AI acquisition shapes the company's positioning for enterprise AI engineering.</p>
+
+<blockquote class="pull-quote">"The winners in enterprise AI won't be determined by who has the largest model, but by delivering the right context to the right agent at the right time."<cite>— Rob Strechay, theCUBE Research</cite></blockquote>
+
+<h4>The agent context thesis</h4>
+
+<p>theCUBE's preview pulls on a single thread: enterprises now deploying AI-powered development workflows are shipping software 27% faster than manual-only baselines, but only 34% have mature governance and data management practices. The implication is that the bottleneck for scaling agents into production is not model capability — it is the absence of an enterprise context layer that hands the right business knowledge to the right agent at the right time.</p>
+
+<blockquote class="pull-quote">"Enterprises deploying AI-powered development workflows are delivering software 27% faster."<cite>— Paul Nashawaty, theCUBE Research Principal Analyst</cite></blockquote>
+
+<p>That diagnosis aligns the Summit's planned content with the same pattern Snowflake announced at its Summit (Cortex Sense), Microsoft is rolling out via Work IQ APIs (generally available June 16), and Jedify just raised $24 million to build. Whatever Ghodsi unveils on June 16 is going to be measured against that template, and against the question of whether Databricks' lakehouse architecture genuinely produces a different shape of context graph than Snowflake's Iceberg-anchored approach.</p>
+
+<p class="source-footer"><a href="https://siliconangle.com/2026/06/10/databricks-enterprise-ai-databrickssummit/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 11. KPMG / Microsoft Agent 365 -->
+<details class="story" data-tags="application economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">KPMG × MICROSOFT</text>
+    <text x="60" y="36" text-anchor="middle" font-size="14" font-weight="800">276,000</text>
+    <text x="60" y="46" text-anchor="middle" font-size="5.4" font-weight="700" letter-spacing="1.6">PROFESSIONALS</text>
+    <line x1="20" y1="52" x2="100" y2="52" stroke="#1e3a8a" stroke-width="0.6" opacity="0.5"/>
+    <text x="60" y="64" text-anchor="middle" font-size="5.4" letter-spacing="1">AGENT 365 + COPILOT</text>
+    <text x="60" y="74" text-anchor="middle" font-size="5.4" letter-spacing="1">TRUSTED AI FRAMEWORK</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">KPMG rolls Microsoft Agent 365 and Copilot across 276,000 employees worldwide</h3>
+<p class="kicker">Microsoft Source · 2026-06-09 · <a href="https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">KPMG extends its Microsoft partnership to embed Agent 365 governance into the firm's Trusted AI framework and to expand Copilot access across all 276,000 member-firm professionals globally. Agent 365 becomes the management plane KPMG uses to monitor and secure AI agents across the entire client base — the same governance template Microsoft pitched at Build in late May as the enterprise control surface for the agent era. Two years after the initial KPMG/Copilot rollout, the consultancy is now a full-stack reference customer for Microsoft's agent platform.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The KPMG-Microsoft announcement, on Microsoft's Source newsroom dated June 9 and amplified through partner channels into June 10, is the largest single enterprise reference for Microsoft Agent 365 since the platform reached general availability May 1. KPMG will use Agent 365 to enhance its Trusted AI framework and help clients manage, monitor and secure AI agents across their organizations. The KPMG-internal piece is the equally large rollout: Copilot access expands to all 276,000+ professionals across the firm's member-firm network globally, two years after the initial deployment.</p>
+
+<p>The framing on both sides is governance-first. Agent 365 functions as the management plane — how agents get deployed, managed, monitored and updated, with centralized visibility and oversight. KPMG's pitch to its own clients is that the firm can hand them not just Microsoft's agent platform, but a verified deployment and governance pattern KPMG has run on itself first at the 276,000-employee scale.</p>
+
+<h4>The wider enterprise-AI pattern</h4>
+
+<p>The rollout slots into the broader pattern of the week. KPMG-Microsoft is the consulting-firm distribution channel. NTT DATA's expansion with Google Cloud, announced June 8, aims to co-innovate up to 500 AI agents using Gemini Enterprise. Both partnerships reflect the same realization: enterprise AI deployments are now bottlenecked on governance and integration, not model capability, and the system-integrator channel that historically distributed ERP rollouts is the channel through which agent rollouts will scale. Microsoft and Google are both leaning hard into that distribution path.</p>
+
+<p class="source-footer"><a href="https://news.microsoft.com/source/2026/06/09/kpmg-and-microsoft-scale-trusted-enterprise-ai-agents-globally-through-deployment-of-agent-365-and-copilot/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 12. Apple Core AI / LanguageModel protocol -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">CORE AI · LANGUAGEMODEL</text>
+    <rect x="14" y="22" width="92" height="14" fill="#1e3a8a" fill-opacity="0.20" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="60" y="32" text-anchor="middle" font-size="5.6" font-weight="700">protocol LanguageModel</text>
+    <text x="22" y="48" font-size="5" font-weight="700">+ APPLE</text>
+    <text x="22" y="58" font-size="5" font-weight="700">+ ANTHROPIC</text>
+    <text x="22" y="68" font-size="5" font-weight="700">+ GOOGLE</text>
+    <rect x="64" y="42" width="42" height="28" fill="none" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="85" y="54" text-anchor="middle" font-size="5" font-weight="700" letter-spacing="0.4">CoreAILM</text>
+    <text x="85" y="64" text-anchor="middle" font-size="5" font-weight="700" letter-spacing="0.4">MLXLM</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Apple's LanguageModel protocol lands as Swift packages from Anthropic and Google ahead of CoreAI open source</h3>
+<p class="kicker">Apple Developer / TechTimes · 2026-06-09 · <a href="https://www.techtimes.com/articles/318039/20260609/wwdc-2026-developer-tools-foundation-models-now-swaps-ai-providers-without-code-changes.htm" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">Apple's new LanguageModel Swift protocol lets a single session interface back any model — on-device Apple Foundation Models, server-hosted Apple, Anthropic Claude or Google Gemini — through the same API. Anthropic and Google both shipped Swift packages implementing the protocol on day one. Apple confirmed Foundation Models will go open source later this summer, and two additional implementations — CoreAILanguageModel and MLXLanguageModel — open source as well, exposing Apple Neural Engine and Mac GPU paths for a wide range of local models.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The architectural change is straightforward and consequential. iOS 27, macOS 27 (Golden Gate), iPadOS 27, watchOS 27 and visionOS 27 apps that use Foundation Models now write against a single `LanguageModel` Swift protocol. Behind the protocol can sit Apple's on-device model, Apple's Private Cloud Compute server model, Anthropic Claude (via the new Anthropic Swift package), Google Gemini (via the Firebase Apple SDK), or any other implementer. Switching from one to another is a Swift Package Manager dependency change. The session logic and the rest of the app stay the same.</p>
+
+<p>The day-two CoreAI session paired with the day-three Xcode 27 announcement. CoreAI is the new framework that replaces Core ML and offers a memory-safe Swift API for loading, specializing and running AI models entirely on-device. Apple is open-sourcing the Foundation Models framework utilities package, and the framework already runs on Linux servers via Swift's open-source runtime. Two additional implementations of the LanguageModel protocol — `CoreAILanguageModel` and `MLXLanguageModel` — are open source so developers can route requests through either the Apple Neural Engine or the Mac GPU through MLX.</p>
+
+<blockquote class="pull-quote">"A developer team can prototype an app using Apple's on-device model, then route complex queries to Google's Gemini or Anthropic's Claude — or swap between them — by updating a Swift Package Manager dependency."<cite>— Apple, WWDC Foundation Models session</cite></blockquote>
+
+<h4>What the Small Business Program gets</h4>
+
+<p>Developers in the App Store Small Business Program with fewer than two million total first-time App Store downloads can use the next generation of Apple Foundation Models on Private Cloud Compute at zero cloud API cost. The free tier is bounded by App Store status, not by usage volume. It removes the cloud API line item from the unit economics of small apps that previously priced themselves around an OpenAI or Anthropic key.</p>
+
+<p>The combined posture — protocol-level swappability, free Private Cloud Compute access for small developers, open-source frameworks — is the most aggressive move Apple has made to make iOS apps the path of least resistance for cross-lab model use. The trade for Anthropic and Google is that they get Swift-native distribution to every iPhone, iPad, Mac, Watch and Vision Pro app developer; the trade for Apple is that the Foundation Models framework genuinely becomes the system AI layer, the way Core Audio became the audio layer.</p>
+
+<p class="source-footer"><a href="https://www.techtimes.com/articles/318039/20260609/wwdc-2026-developer-tools-foundation-models-now-swaps-ai-providers-without-code-changes.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 13. DiffusionGemma Hugging Face model card detail -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">BENCHMARKS · DG vs G4</text>
+    <text x="22" y="32" font-size="5.4" font-weight="700">MMLU PRO</text>
+    <rect x="60" y="26" width="38" height="6" fill="#1e3a8a" fill-opacity="0.5"/>
+    <text x="100" y="32" text-anchor="end" font-size="5.4" font-weight="800">77.6</text>
+    <text x="22" y="42" font-size="5.4" font-weight="700">GPQA-D</text>
+    <rect x="60" y="36" width="34" height="6" fill="#1e3a8a" fill-opacity="0.6"/>
+    <text x="100" y="42" text-anchor="end" font-size="5.4" font-weight="800">73.2</text>
+    <text x="22" y="52" font-size="5.4" font-weight="700">LIVECODE</text>
+    <rect x="60" y="46" width="30" height="6" fill="#1e3a8a" fill-opacity="0.7"/>
+    <text x="100" y="52" text-anchor="end" font-size="5.4" font-weight="800">69.1</text>
+    <text x="22" y="62" font-size="5.4" font-weight="700">MMMU PRO</text>
+    <rect x="60" y="56" width="22" height="6" fill="#1e3a8a" fill-opacity="0.8"/>
+    <text x="100" y="62" text-anchor="end" font-size="5.4" font-weight="800">54.3</text>
+    <text x="60" y="74" text-anchor="middle" font-size="5" letter-spacing="2">QUALITY GAP TO GEMMA 4 IS REAL</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">DiffusionGemma model card spells out the speed/quality trade: 4x faster, but lower scores than Gemma 4</h3>
+<p class="kicker">Hugging Face · 2026-06-10 · <a href="https://huggingface.co/google/diffusiongemma-26B-A4B-it" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">The model card pegs MMLU Pro at 77.6%, GPQA Diamond at 73.2%, LiveCodeBench v6 at 69.1% and MMMU Pro at 54.3% for vision. Google's wording is unusually direct: "output quality is lower than standard Gemma 4" and Gemma 4 remains the production recommendation. The 25.2-billion total parameter count masks 3.8 billion active per token via 8-of-128 expert routing plus a shared expert. Training data spans 140-plus languages with a January 2025 cutoff and standard preprocessing (CSAM filtering, sensitive personal data removal, quality and safety filtering). Variable image-token budgets between 70 and 1,120 trade resolution against latency.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The Hugging Face model card for `google/diffusiongemma-26B-A4B-it` is the operational document developers will read before they decide whether to use the model. Total parameters are 25.2 billion; the active parameter count per token is 3.8 billion through the sparse mixture-of-experts router selecting 8 of 128 experts plus one shared expert always applied. Layer count is 30, with the vision encoder adding about 550 million parameters. The architectural twist is that the encoder is autoregressive — used to process and cache the prompt context — and the decoder applies bidirectional attention across a 256-token generation canvas, denoising the canvas through repeated forward passes that finalize 15 to 20 tokens at a time.</p>
+
+<p>The benchmark numbers tell the trade-off in detail. MMLU Pro: 77.6%. GPQA Diamond: 73.2%. LiveCodeBench v6: 69.1%. MMMU Pro for vision tasks: 54.3%. Each is below standard Gemma 4 at the same parameter budget, sometimes meaningfully. The card's framing is honest: the performance gap reflects the diffusion-based generation trade-off, and the speed gain comes at the cost of absolute quality. Google recommends Gemma 4 for production work and recommends DiffusionGemma for applications where parallel denoising's edit-in-place property or its raw throughput is the binding constraint.</p>
+
+<blockquote class="pull-quote">"Output quality is lower than standard Gemma 4. We recommend Gemma 4 for production work."<cite>— Google DeepMind, DiffusionGemma model card</cite></blockquote>
+
+<h4>Training data, safety filtering and intended use</h4>
+
+<p>Pre-training spans web documents in 140-plus languages, code, mathematics and images, with a January 2025 data cutoff. Preprocessing includes CSAM filtering, sensitive personal data removal, and quality plus safety filtering. The intended-use list runs through content creation (text generation, chatbots, summarization), image data extraction, NLP research and language learning, and knowledge exploration and document analysis. The limitations list is unusually transparent: the model depends on training data quality and diversity, struggles with ambiguity, sarcasm and nuanced language, can produce factually incorrect outputs, and has limited common-sense reasoning. Function calling and a built-in reasoning mode are supported; image-token budgets are variable between 70 and 1,120 tokens per image.</p>
+
+<p class="source-footer"><a href="https://huggingface.co/google/diffusiongemma-26B-A4B-it" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- 14. MarkTechPost DiffusionGemma deep architecture coverage -->
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="116" height="76" fill="none" stroke="#1e3a8a" stroke-width="1" stroke-opacity="0.25"/>
+  <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+    <text x="60" y="14" text-anchor="middle" font-size="5.6" font-weight="700" letter-spacing="2">UNIFORM STATE DIFFUSION</text>
+    <circle cx="34" cy="46" r="14" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <text x="34" y="50" text-anchor="middle" font-size="6" font-weight="800">x_t</text>
+    <path d="M50 46 L74 46" stroke="#1e3a8a" stroke-width="1.4"/>
+    <polygon points="74,42 80,46 74,50" fill="#1e3a8a"/>
+    <circle cx="92" cy="46" r="14" fill="#1e3a8a" fill-opacity="0.30" stroke="#1e3a8a" stroke-width="1.4"/>
+    <text x="92" y="50" text-anchor="middle" font-size="6" font-weight="800">x_0</text>
+    <text x="60" y="74" text-anchor="middle" font-size="5" letter-spacing="1.6">RE-NOISE TO SELF-CORRECT</text>
+  </g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">MarkTechPost: DiffusionGemma uses Uniform State Diffusion and lets the model re-noise to revise tokens</h3>
+<p class="kicker">MarkTechPost · 2026-06-10 · <a href="https://www.marktechpost.com/2026/06/10/google-ai-releases-diffusiongemma-a-26b-moe-open-model-using-text-diffusion-for-up-to-4x-faster-generation/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+<p class="teaser">MarkTechPost's launch-day write-up gets into the mechanics. DiffusionGemma uses a Uniform State Diffusion mechanism over a 256-token canvas, finalizes 15-20 tokens per forward pass, and lets the model re-noise regions during decoding — a capability autoregressive transformers cannot match, because once a sample is committed it stays committed. The bidirectional attention pattern is what makes the self-correction loop possible, and it is the architectural reason the throughput math works out: the bottleneck moves from memory bandwidth to compute.</p>
+</div>
+</summary>
+<div class="full-content">
+<p>The MarkTechPost coverage is the cleanest mechanical description of how DiffusionGemma actually generates. The model uses a Uniform State Diffusion mechanism: every token in the canvas occupies one of a finite set of states, and the denoising step samples a transition for each token in parallel based on the current state of every other token. Each forward pass advances the canvas one denoising step closer to a final sample. The model finalizes roughly 15 to 20 tokens per pass — that is, commits them as no-longer-noisy — and continues denoising the rest.</p>
+
+<p>The architectural payoff is the re-noising step. If, partway through decoding, the model decides a committed region is inconsistent with later context, it can re-noise that region and re-denoise. Autoregressive transformers cannot do this; once a token is sampled, the rest of the sequence is conditioned on that sample and the model has no mechanism to revise upstream choices. Bidirectional attention across the canvas makes the re-noising loop coherent — every token sees every other token at every step. The Uniform State Diffusion formulation is what makes it tractable to train.</p>
+
+<h4>Why the bottleneck moves</h4>
+
+<p>Autoregressive decoding is memory-bandwidth bound: each token requires a fresh KV-cache read and write. Parallel denoising over a 256-token canvas is compute-bound: each forward pass processes all 256 tokens at once and the work scales with the number of denoising steps, not the sequence length. Modern accelerators are designed around the compute-bound regime — the Tensor Cores on H100 and Blackwell are at their best when they have parallel work to do. NVIDIA's day-zero acceleration post reads as the obvious sequel: the new model shape is exactly the workload Blackwell rewards.</p>
+
+<p class="source-footer"><a href="https://www.marktechpost.com/2026/06/10/google-ai-releases-diffusiongemma-a-26b-moe-open-model-using-text-diffusion-for-up-to-4x-faster-generation/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+</section>
+
+<footer class="colophon">
+  <div>
+    <strong>Apollo AI News</strong> · Daily · 2026-06-11<br>
+    Generated by a Claude Opus 4.7 agent · Apache 2.0 source for all model citations
+  </div>
+  <div>
+    <a href="../index.html">← Back to homepage</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var stories = Array.prototype.slice.call(document.querySelectorAll('.cards .story, details#hero'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.filter-chip'));
+  var bigPicture = document.querySelector('.big-picture');
+  var statusEl = document.getElementById('filter-status');
+  var countEl = document.querySelector('.section-head .count');
+  var originalCountText = countEl ? countEl.textContent : '';
+
+  function refreshChipCounts(){
+    var total = stories.length;
+    chips.forEach(function(c){
+      var tag = c.dataset.filter;
+      var n;
+      if (tag === 'all') {
+        n = total;
+      } else {
+        n = stories.filter(function(s){
+          var tags = (s.dataset.tags || '').split(/\s+/);
+          return tags.indexOf(tag) !== -1;
+        }).length;
+      }
+      var cEl = c.querySelector('.count');
+      if (cEl) cEl.textContent = n;
+      if (n === 0 && tag !== 'all') {
+        c.setAttribute('disabled', 'disabled');
+        c.style.opacity = '0.4';
+      }
+    });
+  }
+
+  function applyFilter(filter){
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    var visible = 0;
+    var visibleNonHero = 0;
+    stories.forEach(function(s){
+      var tags = (s.dataset.tags || '').split(/\s+/);
+      var match = (filter === 'all') || tags.indexOf(filter) !== -1;
+      s.hidden = !match;
+      if (match) {
+        visible++;
+        if (s.id !== 'hero') visibleNonHero++;
+      }
+    });
+    chips.forEach(function(c){
+      c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false');
+    });
+    if (statusEl) {
+      var label = filter === 'all' ? 'All' : (filter.charAt(0).toUpperCase() + filter.slice(1));
+      statusEl.textContent = 'Showing ' + visible + ' of ' + stories.length + ' stories — ' + label;
+    }
+    if (countEl) {
+      var suffix = originalCountText.replace(/^\d+\s*stories/, '').trim();
+      countEl.textContent = visibleNonHero + ' stories ' + suffix;
+    }
+    if (filter === 'all') {
+      if (location.hash) history.replaceState(null, '', location.pathname);
+    } else {
+      history.replaceState(null, '', '#filter=' + filter);
+    }
+  }
+
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      if (c.hasAttribute('disabled')) return;
+      applyFilter(c.dataset.filter);
+    });
+  });
+
+  refreshChipCounts();
+  var initial = 'all';
+  var m = location.hash.match(/filter=([a-z]+)/);
+  if (m) initial = m[1];
+  applyFilter(initial);
+
+  // Sticky shadow
+  var bar = document.querySelector('.filter-bar');
+  if (bar && 'IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    sentinel.style.height = '1px';
+    bar.parentNode.insertBefore(sentinel, bar);
+    new IntersectionObserver(function(entries){
+      bar.classList.toggle('is-stuck', !entries[0].isIntersecting);
+    }, { threshold: [1] }).observe(sentinel);
+  }
+})();
+</script>
+</body>
+</html>
