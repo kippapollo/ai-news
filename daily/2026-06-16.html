@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-06-16</title>
+<meta name="description" content="Seventy-six cybersecurity professionals — Alex Stamos, Katie Moussouris, Jon Callas, Paul Vixie, Dino Dai Zovi, Casey Ellis and Rachel Tobac among them — published an open letter Monday calling the US Commerce Department's worldwide suspension of Anthropic Fable 5 and Mythos 5 'dangerous' and saying the underlying jailbreak described by Amazon researchers 'cannot meaningfully be fixed.' Anthropic's senior technical staff are inside the Commerce Department in Washington for in-person meetings while Defense Secretary Pete Hegseth publicly defended the three-month-old Pentagon blacklist on X, Canadian Prime Minister Mark Carney told reporters from Ireland the suspension shows the danger of 'overreliance on certain models' and applied the prudential-regulation phrase 'model risk' to AI for the first time at a G7-leader level, and Cohere CEO Aidan Gomez told Bloomberg his company is seeing 'huge inbound' from non-US customers and is tripling its London office. Salesforce announced a $3.6 billion acquisition of Intercom's Fin AI agent business — the largest agentic CX deal on record — shipped Summer '26 with Agentforce Multi-Agent Orchestration GA, and disclosed Agentforce reached $1.2 billion ARR up 205 percent year-over-year. Sarvam AI closed first close of a $234 million Series B at a $1.5 billion post-money valuation led by a $150 million strategic check from HCLTech in the first major Indian AI funding round after the Anthropic shutdown reached the world's #2 Claude market. Mistral advanced talks for €3 billion at a €20 billion valuation. Satya Nadella published a long-form essay arguing the durable IP is the proprietary 'learning loop' between human and token capital, not the underlying foundation model. Moonshot AI's Kimi K2.7 Code 1 trillion-parameter open-weights coder beat Claude Opus 4.8 on MCPMark Verified. DeepSeek topped Ramp's June Trending Software Vendors index for the first time. Microsoft's June Patch Tuesday addressed a record 200 vulnerabilities as Glasswing-style AI bug hunting scales. Hugging Face Daily Papers surfaced graph-memory and token-level agentic RL credit assignment work.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#6b21a8;
+  --accent-soft:rgba(107,33,168,0.10);
+  --tag-tech:rgba(30,58,138,0.10);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.12);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#d8b4fe;
+    --accent-soft:rgba(216,180,254,0.14);
+    --tag-tech:rgba(147,197,253,0.18);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(45,212,191,0.16);
+    --tag-application-ink:#5eead4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  font-feature-settings:"kern","liga";
+}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent);
+}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{
+  position:sticky;top:0;z-index:10;background:var(--bg);
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px;
+}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{
+  font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;
+  padding:6px 11px;border-radius:999px;border:1px solid var(--rule);
+  background:transparent;color:var(--ink);cursor:pointer;font-weight:600;
+}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{
+  font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;
+  font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px;
+}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px;
+}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{
+  font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;
+  writing-mode:vertical-rl;transform:rotate(180deg);align-self:start;
+}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{
+  font-family:Georgia,"Times New Roman",Charter,serif;
+  font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700;
+}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{
+  display:flex;align-items:baseline;gap:18px;margin:0 0 28px;
+  border-bottom:1px solid var(--rule);padding-bottom:10px;
+}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{
+  list-style:none;cursor:pointer;outline:none;
+  display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start;
+}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){
+  .story summary{grid-template-columns:1fr;gap:12px}
+  .story-thumb{aspect-ratio:320 / 80;width:100%;height:auto}
+}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-weight:700;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:"Collapse \25B4"}
+.story:not([open]) .expand-control::after{content:"Read in full \25BE"}
+.expand-control{font-size:0;letter-spacing:normal}
+.expand-control::after{font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1 / -1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{
+  margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);
+  display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  font-size:0.84rem;color:var(--muted);
+}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2"  x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2"  y1="28" x2="9"  y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5"  y1="9.5"  x2="14"   y2="14"/>
+          <line x1="42"   y1="42"   x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5"  x2="42"   y2="14"/>
+          <line x1="9.5"  y1="46.5" x2="14"   y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Daily</strong>
+    2026 · 06 · 16
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<details class="story" id="hero" data-tags="safety policy" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-safety">Safety</span>
+        <span class="tag tag-policy">Policy</span>
+      </div>
+      <h1>Seventy-six cybersecurity professionals tell the White House to lift the Anthropic ban</h1>
+      <p class="dek">Alex Stamos, Katie Moussouris, Jon Callas, Paul Vixie, Dino Dai Zovi, Casey Ellis and Rachel Tobac signed an open letter Monday calling the worldwide suspension of Claude Fable 5 and Mythos 5 "dangerous" and saying the underlying jailbreak Amazon researchers demonstrated to the administration on June 11 "cannot meaningfully be fixed." Anthropic technical staff are inside the Commerce Department in Washington for in-person meetings. Defense Secretary Pete Hegseth defended the three-month-old Pentagon blacklist on X. Canadian Prime Minister Mark Carney told reporters from Ireland the episode shows the risk of overreliance on a small set of US frontier-model providers and applied the prudential-regulation term "model risk" to AI for the first time at a G7-leader level. Cohere CEO Aidan Gomez told Bloomberg his company is seeing "huge inbound" and is tripling its London office. The administration has not signaled a timeline for restoration.</p>
+      <p class="kicker">TechCrunch · CNBC · Bloomberg · 2026-06-15 · <a href="https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hero-grad" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#6b21a8" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#6b21a8" stop-opacity="0.08"/>
+        </linearGradient>
+        <pattern id="hero-grid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0 L0 0 0 24" fill="none" stroke="#6b21a8" stroke-opacity="0.10" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hero-grid)"/>
+
+      <g fill="#6b21a8" font-family="system-ui,sans-serif" font-weight="700">
+        <text x="32" y="28" font-size="9" letter-spacing="2.4">OPEN LETTER · MON 15 JUN 2026</text>
+        <text x="32" y="42" font-size="7" letter-spacing="1.6" opacity="0.7">76 SIGNATORIES · FABLE 5 + MYTHOS 5 · DAY 4 OFFLINE</text>
+      </g>
+
+      <!-- Three-column signatory grid -->
+      <g transform="translate(40,72)" font-family="system-ui,sans-serif" font-weight="700" fill="#6b21a8">
+        <g>
+          <rect x="0" y="0" width="124" height="62" fill="url(#hero-grad)" stroke="#6b21a8" stroke-width="1"/>
+          <text x="8" y="14" font-size="7" letter-spacing="1.2" opacity="0.7">SIGNATORIES</text>
+          <text x="8" y="30" font-family="Georgia,serif" font-size="14">Alex Stamos</text>
+          <text x="8" y="44" font-family="Georgia,serif" font-size="14">Jon Callas</text>
+          <text x="8" y="58" font-family="Georgia,serif" font-size="14">Paul Vixie</text>
+        </g>
+        <g transform="translate(138,0)">
+          <rect x="0" y="0" width="124" height="62" fill="url(#hero-grad)" stroke="#6b21a8" stroke-width="1"/>
+          <text x="8" y="14" font-size="7" letter-spacing="1.2" opacity="0.7">SIGNATORIES</text>
+          <text x="8" y="30" font-family="Georgia,serif" font-size="14">Katie Moussouris</text>
+          <text x="8" y="44" font-family="Georgia,serif" font-size="14">Dino Dai Zovi</text>
+          <text x="8" y="58" font-family="Georgia,serif" font-size="14">Casey Ellis</text>
+        </g>
+        <g transform="translate(276,0)">
+          <rect x="0" y="0" width="124" height="62" fill="url(#hero-grad)" stroke="#6b21a8" stroke-width="1"/>
+          <text x="8" y="14" font-size="7" letter-spacing="1.2" opacity="0.7">SIGNATORIES</text>
+          <text x="8" y="30" font-family="Georgia,serif" font-size="14">Rachel Tobac</text>
+          <text x="8" y="44" font-family="Georgia,serif" font-size="14">+ 69 others</text>
+          <text x="8" y="58" font-size="8" letter-spacing="1" opacity="0.7">CISO · BUG BOUNTY · IR</text>
+        </g>
+      </g>
+
+      <!-- Status row -->
+      <g transform="translate(40,162)" font-family="system-ui,sans-serif" font-weight="700" fill="#6b21a8">
+        <rect x="0" y="0" width="400" height="56" fill="#6b21a8" fill-opacity="0.18" stroke="#6b21a8" stroke-width="1"/>
+        <text x="14" y="18" font-size="8" letter-spacing="1.4">DAY 4 · COMMERCE DEPT · WASHINGTON DC</text>
+        <text x="14" y="36" font-family="Georgia,serif" font-size="14">Anthropic delegation meets administration Monday</text>
+        <text x="14" y="50" font-size="8" letter-spacing="1.2" opacity="0.75">Resolution window closes Wednesday Évian G7 working lunch</text>
+      </g>
+
+      <!-- Footer pills -->
+      <g transform="translate(40,238)" font-family="system-ui,sans-serif" font-weight="700">
+        <g fill="#6b21a8">
+          <circle cx="6" cy="10" r="4"/>
+          <text x="16" y="13" font-size="8" letter-spacing="1.2">CARNEY · "MODEL RISK"</text>
+        </g>
+        <g fill="#6b21a8" transform="translate(150,0)">
+          <circle cx="6" cy="10" r="4"/>
+          <text x="16" y="13" font-size="8" letter-spacing="1.2">COHERE · "HUGE INBOUND"</text>
+        </g>
+        <g fill="#6b21a8" transform="translate(0,22)">
+          <circle cx="6" cy="10" r="4"/>
+          <text x="16" y="13" font-size="8" letter-spacing="1.2">HEGSETH · "RIGHT MOVE"</text>
+        </g>
+        <g fill="#6b21a8" transform="translate(150,22)">
+          <circle cx="6" cy="10" r="4"/>
+          <text x="16" y="13" font-size="8" letter-spacing="1.2">EU · "NOT DISCRIMINATORY"</text>
+        </g>
+      </g>
+
+      <g stroke="#6b21a8" stroke-width="1.2" fill="none" opacity="0.55">
+        <line x1="14" y1="14" x2="32" y2="14"/>
+        <line x1="14" y1="14" x2="14" y2="32"/>
+        <line x1="466" y1="306" x2="448" y2="306"/>
+        <line x1="466" y1="306" x2="466" y2="288"/>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+<p>The Anthropic export-control crisis entered its fourth day Monday with the first organised public response from outside the company. Seventy-six cybersecurity practitioners including Alex Stamos, Casey Ellis, Jon Callas, Paul Vixie, Dino Dai Zovi, Katie Moussouris and Rachel Tobac signed an open letter calling the Commerce Department directive that disabled Claude Fable 5 and Mythos 5 globally "dangerous" and asking the administration to lift it. Their argument is narrow and technical, not political. The Amazon research paper that triggered the Friday June 12 export-control order describes a workaround in which Fable 5 reads code and identifies flaws, the letter says — capability that the cybersecurity industry uses to defend its own systems and that competitors including DeepSeek, Kimi K2.7 Code and the open-weights tier can already perform. Pulling that capability from defenders while open-weights labs catch up, the signatories argue, leaves attackers structurally ahead.</p>
+
+<blockquote class="pull-quote">"To pull the best capabilities away from defenders without a good reason when our adversaries are rapidly advancing is dangerous."<cite>— Open letter to the US government, 2026-06-15</cite></blockquote>
+
+<h4>Inside the Commerce Department, day four</h4>
+
+<p>Anthropic senior technical staff are inside the US Commerce Department in Washington on Monday for in-person meetings with administration officials, CNBC reported. The company has been in daily contact with the administration since the Friday directive landed at 5:21pm ET. CEO Dario Amodei is scheduled to sit beside Sam Altman and Demis Hassabis at the G7 working lunch on AI in Évian-les-Bains on Wednesday June 17, which gives the meetings a 48-hour resolution window. Bloomberg framed the directive as a US policy "reversal" against an earlier executive order pledging no AI licensing regime, citing former Trump AI czar David Sacks's claim on X over the weekend that Anthropic refused to remediate before controls landed and Anthropic's counter that the cited jailbreak was "narrow rather than a full jailbreak" and not unique to its models. The two accounts remain irreconcilable on the public record. Allspring Global Investments portfolio manager Gary Tan told CNBC that US frontier models are now "increasingly treated as strategic assets, with access tightly controlled and shaped by national-security considerations" — language that did not exist in the trade literature a month ago.</p>
+
+<blockquote class="pull-quote">"The behavior described in the paper cannot meaningfully be fixed, and any attempt would only weaken the model for defense."<cite>— Katie Moussouris, founder, Luta Security</cite></blockquote>
+
+<h4>The Pentagon doubles down</h4>
+
+<p>Defense Secretary Pete Hegseth used Monday to defend the Pentagon's three-month-old supply-chain-risk designation against Anthropic. "Three months ago, the Department of War kicked Anthropic AI out of our building forever. Each passing day shows that this was the right move," Hegseth posted on X. The blacklist was issued after Anthropic refused to allow its models to be used for autonomous lethal weapons or mass domestic surveillance. Anthropic CFO Krishna Rao said before the Commerce action that the Pentagon ban alone could cost the company "multiple billions" in 2026 revenue. The TechCrunch analysis on June 15 sharpened the read further: the Fable 5 order is not really a jailbreak story, it argued, but the next escalation in a months-long political fight between the administration and Anthropic over autonomous-weapons and surveillance use cases. The cybersecurity letter implicitly endorses that reading by saying the Amazon paper's technical claim "cannot meaningfully be fixed" — implying that the safety rationale offered for the suspension is unfalsifiable and therefore cannot be the real reason.</p>
+
+<h4>Carney's "model risk" and Cohere's "huge inbound"</h4>
+
+<p>Canadian Prime Minister Mark Carney, a former Bank of England and Bank of Canada governor, told reporters in Westport, Ireland that "the situation we're in collectively right now with Mythos and Fable is something that can happen with overreliance on certain models" and that "it is never a good idea to have one option." His use of the precise prudential-regulation phrase "model risk" — the term financial regulators use for institutional dependence on a single quantitative model — was the first time a sitting G7 leader applied that vocabulary to AI in public. European Commission spokesperson Thomas Regnier reiterated through the weekend that any US contingency measures "should not be discriminatory against partners" and confirmed Brussels is assessing the practical fallout for EU users. Renew Europe MEPs Bart Groothuis and Christophe Grudler called the action a "wake-up call" and demanded accelerated EU LLM and open-weights investment, with Groothuis warning Europe risks "digital colonization." The market response was immediate. Cohere CEO Aidan Gomez told Bloomberg his Toronto-headquartered company is seeing "huge inbound" from non-US customers, announced he is tripling Cohere's London office, and called the Anthropic directive a "massive wake-up call" for global enterprise buyers. Mistral advanced talks for a €3 billion round at a €20 billion valuation, nearly double its €11.7 billion September 2025 mark. India's Sarvam AI closed first close of a $234 million Series B at $1.5 billion led by a $150 million HCLTech strategic check — the first major Indian AI funding round after the suspension hit the world's second-largest Claude market. Anthropic still has no public timeline for restoration.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-label="Big picture overview">
+  <div class="label">Big Picture · 2026-06-16</div>
+  <div>
+    <p>The Anthropic shutdown has stopped being a story about one company. By Monday it had become a working-lunch agenda item for the G7 in Évian, a sovereignty-funding catalyst for Sarvam AI in Bengaluru, an immediate enterprise pipeline for Cohere in London, a €20 billion valuation step for Mistral in Paris, and an industrial-policy fight inside the Beltway. The 76-signatory cybersecurity open letter — Stamos, Moussouris, Callas, Vixie, Dai Zovi, Ellis, Tobac — collapses the administration's stated rationale by saying the cited jailbreak "cannot meaningfully be fixed" and that any attempt would only weaken the model for defenders. Defense Secretary Hegseth used the same day to publicly endorse the three-month-old Pentagon blacklist. Carney compared the episode to 2008 from Ireland and used the words "model risk" out loud.</p>
+    <p>The rest of the day pushed in two directions at once. Salesforce announced a $3.6 billion acquisition of Fin AI — the largest agentic CX deal on record — and shipped Summer '26 with Agentforce Multi-Agent Orchestration GA the same morning, with Agentforce at $1.2 billion ARR up 205 percent year over year. Satya Nadella's long-form essay reframed Microsoft's hedge as the proprietary learning loop between human and token capital, not the underlying foundation model. Moonshot AI's Kimi K2.7 Code, a 1-trillion-parameter open-weights coder, beat Claude Opus 4.8 on MCPMark Verified at 81.1 percent versus 76.4 percent. DeepSeek topped Ramp's June Trending Software Vendors index for the first time. Microsoft's June Patch Tuesday addressed a record 200 vulnerabilities as Glasswing-style AI bug hunting scales into vendor patch cycles. Korn Ferry's 1,674-leader survey found 52 percent of talent leaders plan to add autonomous AI agents in 2026. Hugging Face Daily Papers surfaced graph-memory and token-level agentic-RL credit-assignment work that read like the next year of agent design. The week the US took its leading frontier model offline is also the week every other frontier-model vendor and every other sovereign-AI program told the press, on the record, that the structural opportunity is now larger than it has ever been.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg width="80" height="18" viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="9" r="2.6" fill="#6b21a8"/>
+    <line x1="16" y1="9" x2="34" y2="9" stroke="#6b21a8" stroke-width="1"/>
+    <path d="M40 9 L46 3 L52 9 L46 15 Z" fill="none" stroke="#6b21a8" stroke-width="1.2"/>
+    <line x1="58" y1="9" x2="74" y2="9" stroke="#6b21a8" stroke-width="1"/>
+    <circle cx="78" cy="9" r="1.6" fill="#6b21a8"/>
+  </svg>
+</div>
+
+<div class="section-head">
+  <h2>More today</h2>
+  <span class="count" id="rundown-count">23 stories · 2026-06-15 — 2026-06-16</span>
+</div>
+
+<div class="cards">
+
+<!-- STORY 2: Carney "model risk" comments -->
+<details class="story" data-tags="policy trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="22" font-size="22" letter-spacing="-0.6">MODEL</text>
+      <text x="0" y="42" font-size="22" letter-spacing="-0.6">RISK</text>
+    </g>
+    <g transform="translate(80,16)" stroke="#6b21a8" stroke-width="1.4" fill="none" opacity="0.7">
+      <circle cx="14" cy="14" r="9"/>
+      <line x1="14" y1="5" x2="14" y2="23"/>
+      <line x1="5" y1="14" x2="23" y2="14"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">CARNEY · WESTPORT · IRELAND</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">Carney calls the Anthropic suspension a "model risk" event ahead of the G7</h3>
+    <p class="kicker">Reuters via The Star · 2026-06-15 · <a href="https://www.thestar.com.my/tech/tech-news/2026/06/15/canadian-prime-minister-mark-carney-says-us-ai-restrictions-underscore-risks-of-dependence" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Canadian prime minister told reporters in Ireland the US shutdown of Fable 5 and Mythos 5 shows the danger of overreliance on a small set of American AI providers and used the prudential-regulation term "model risk" — vocabulary financial regulators use for institutional concentration risk. He spoke ahead of the G7 summit at Évian where AI is now a leaders-level topic.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Canadian Prime Minister Mark Carney used a state visit to Westport, Ireland on Sunday to compare the Anthropic shutdown to a financial-stability event and used the precise prudential-regulation phrase "model risk" — a vocabulary financial supervisors use to talk about institutional dependence on a single quantitative model. He spoke ahead of the 52nd G7 summit in Évian-les-Bains, where AI is on the leaders' agenda for the first time and Dario Amodei, Sam Altman and Demis Hassabis are all scheduled to attend the Wednesday working lunch. Carney is a former Bank of England and Bank of Canada governor; the language transfer from prudential supervision to frontier-model governance is not accidental.</p>
+
+<blockquote class="pull-quote">"The situation we're in collectively right now with Mythos and Fable is something that can happen with overreliance on certain models. It is never a good idea to have one option."<cite>— Mark Carney, Canadian Prime Minister</cite></blockquote>
+
+<h4>Why "model risk" is the word that matters</h4>
+
+<p>Inside banking supervision, "model risk" is a regulated category. Institutions must inventory which quantitative models they depend on, prove they can switch them off without operational failure, and maintain alternatives. Carney's invocation of the term re-categorises foundation models from product input to systemic dependency. More than 70 percent of Canadian exports go to the United States, and Carney coupled the AI remark with the same diversification argument he is using on trade. Renew Europe MEPs Bart Groothuis and Christophe Grudler picked up the framing within hours, calling the suspension a "wake-up call" and saying Europe needs its own LLMs and open-weights models or risks "digital colonization." European Commission spokesperson Thomas Regnier added that any US contingency measures "should not be discriminatory against partners." With Carney, Groothuis, Grudler, Regnier and India's Mohandas Pai all using sovereignty language on the same weekend, the political coalition for non-US frontier-model capacity is now the largest it has been since the Brussels AI Act process. The Évian working lunch will be the first time the G7 leaders' table treats AI as financial-stability adjacent rather than as a Brussels-and-Beijing trade question.</p>
+
+<p class="source-footer"><a href="https://www.thestar.com.my/tech/tech-news/2026/06/15/canadian-prime-minister-mark-carney-says-us-ai-restrictions-underscore-risks-of-dependence" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 3: Cohere triples London -->
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,18)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="32" font-size="28" letter-spacing="-0.4">3×</text>
+    </g>
+    <g transform="translate(60,12)" stroke="#6b21a8" stroke-width="1" fill="#6b21a8" fill-opacity="0.18">
+      <rect x="0" y="32" width="14" height="22"/>
+      <rect x="18" y="22" width="14" height="32"/>
+      <rect x="36" y="10" width="14" height="44"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">COHERE · LONDON · INBOUND</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Cohere triples its London office on "huge inbound" from Anthropic-ban customers</h3>
+    <p class="kicker">HPCwire · Bloomberg · 2026-06-15 · <a href="https://www.hpcwire.com/aiwire/2026/06/15/cohere-triples-uk-footprint-with-new-london-office/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Aidan Gomez called the Anthropic suspension a "massive wake-up call" and said his Toronto-headquartered company is now tripling its UK footprint with a new London office to absorb the demand. He framed sovereign AI as a roughly $600 billion market.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Cohere announced Monday it is tripling its London office and stepping up its UK government and enterprise sales push. The expansion is tied to a specific market event. CEO Aidan Gomez told Bloomberg the same day that Cohere is seeing "huge inbound" from non-US customers since the US Commerce Department took Anthropic Fable 5 and Mythos 5 offline Friday, and called the directive a "massive wake-up call" for global enterprise buyers who had built production stacks on a single US-domiciled frontier-model provider. The company has been the most US-skeptical of the Anglosphere labs from the start, structured around enterprise control, on-prem deployment and data-residency commitments.</p>
+
+<blockquote class="pull-quote">"The UK combines unparalleled research talent with forward-thinking regulatory frameworks."<cite>— Aidan Gomez, Cohere CEO</cite></blockquote>
+
+<h4>The sovereign-AI thesis becomes a sales pipeline</h4>
+
+<p>Gomez has projected sovereign AI as a $600 billion market over the cycle. The Anthropic suspension converts that projection from a slide into a sales pipeline overnight. UK government procurement under the Frontier AI mandate has been moving toward in-region model contracts and on-shore compute, and Cohere has been positioned for that pathway since the company's Series E. The London expansion arrives the same weekend that Sarvam AI closed a $234 million Series B at a $1.5 billion valuation in India and Mistral advanced talks for a €3 billion round at €20 billion in Paris, both effectively beneficiaries of the US export shock. Cohere does not disclose enterprise customer counts, but the Bloomberg interview is the most direct attribution any non-US frontier lab has made between Anthropic's shutdown and its own pipeline. The political tailwind matches: Carney's "model risk" framing, the EU Commission's discrimination warning and Renew Europe MEPs' calls for accelerated EU LLM investment all push procurement away from US-only stacks. Cohere's existing on-prem and dedicated-cluster product is the shortest path from those calls to a signed contract.</p>
+
+<p class="source-footer"><a href="https://www.hpcwire.com/aiwire/2026/06/15/cohere-triples-uk-footprint-with-new-london-office/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 4: Anthropic meets Commerce Monday -->
+<details class="story" data-tags="policy tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <circle cx="14" cy="14" r="9" fill="#6b21a8" fill-opacity="0.18"/>
+      <text x="14" y="17" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6b21a8">ANT</text>
+      <path d="M24 14 L66 14" stroke-dasharray="3 2"/>
+      <path d="M62 10 L66 14 L62 18"/>
+      <circle cx="76" cy="14" r="9" fill="#6b21a8" fill-opacity="0.45"/>
+      <text x="76" y="17" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#f7f5ef">DOC</text>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">DAY 4 · IN-PERSON · MON 15 JUN</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Anthropic meets Commerce in Washington as 48-hour G7 window opens</h3>
+    <p class="kicker">CNBC · 2026-06-15 · <a href="https://www.cnbc.com/2026/06/15/anthropic-mythos-trump-ai.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anthropic senior technical staff are inside the Commerce Department on Monday, in daily contact with administration officials since Friday's directive. The administration cited risk of "diversion to foreign military intelligence" and has not signaled a timeline for restoration. Anthropic calls the dispute a "misunderstanding."</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Anthropic senior technical staff arrived at the US Commerce Department in Washington on Monday June 15 for in-person meetings with administration officials, CNBC reported, in what is the first physical-presence negotiation since Howard Lutnick's Friday June 12 export-control directive forced the company to disable Claude Fable 5 and Mythos 5 worldwide. The company says it has been in daily contact with the administration since the directive landed. The clock is short: Dario Amodei is scheduled to sit beside Sam Altman and Demis Hassabis at the G7 working lunch on AI safety in Évian-les-Bains on Wednesday June 17.</p>
+
+<blockquote class="pull-quote">"US frontier models are increasingly treated as strategic assets, with access tightly controlled and shaped by national-security considerations."<cite>— Gary Tan, portfolio manager, Allspring Global Investments</cite></blockquote>
+
+<h4>"Diversion to foreign military intelligence"</h4>
+
+<p>The Commerce Department acted, CNBC reported, after a separate company reported it had jailbroken Mythos 5, and an administration official cited risk of "diversion to foreign military intelligence" as the rationale for the worldwide foreign-national restriction. Anthropic publicly characterizes the dispute as a "misunderstanding" and says it is working to restore access "as soon as possible." Bloomberg framed the directive as a US policy "reversal" against an earlier Trump executive order that had promised no AI licensing regime; Anthropic told reporters the administration's response is "disproportionate" and that, if generalised across the industry, "would essentially halt all new model deployments for all frontier model providers." Both Fable 5 and Mythos 5 remain offline to every customer worldwide as the Monday meetings begin. The negotiating surface is two distinct problems: the narrow safety patch for the bypass Amazon researchers demonstrated, and the operational question of how Anthropic can certify foreign-national exclusion across an API surface that runs on AWS Bedrock, Google Vertex, Microsoft Foundry, GitHub Copilot, Cursor, Replit and Harvey. The realistic Wednesday-deliverable looks more like a remediation framework and a phased US-first restoration than a full reversal of the directive.</p>
+
+<p class="source-footer"><a href="https://www.cnbc.com/2026/06/15/anthropic-mythos-trump-ai.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 5: Pentagon Hegseth doubles down -->
+<details class="story" data-tags="policy">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(60,38)" stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <polygon points="0,-22 19,-7 12,17 -12,17 -19,-7" fill="#6b21a8" fill-opacity="0.18"/>
+      <text x="0" y="6" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6b21a8">DoW</text>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">HEGSETH · "RIGHT MOVE"</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span></div>
+    <h3 class="headline">Hegseth publicly defends three-month Pentagon blacklist on day of Commerce meeting</h3>
+    <p class="kicker">Tech Newsday · 2026-06-15 · <a href="https://technewsday.com/podcast/us-forces-anthropic-ai-shutdown-canadas-online-harms-bill-and-kpmg-faces-hallucination-scrutiny/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Pete Hegseth used X on Monday to reaffirm the Pentagon's March supply-chain-risk designation against Anthropic. The statement landed hours before Anthropic technical staff entered the Commerce Department for the Fable 5 / Mythos 5 negotiations.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Defense Secretary Pete Hegseth amplified the Anthropic story on Monday by publicly reaffirming the Pentagon's three-month-old supply-chain-risk designation against the company. "Three months ago, the Department of War kicked Anthropic AI out of our building forever. Each passing day shows that this was the right move," Hegseth posted on X. The original March designation followed Anthropic's refusal to allow its models to be used for fully autonomous lethal-weapons systems or mass domestic surveillance. Anthropic CFO Krishna Rao told investors before the Commerce directive that the Pentagon blacklist alone could cost the company "multiple billions" in 2026 revenue. The Hegseth post lands the same day Anthropic technical staff arrive at the Commerce Department in Washington for in-person negotiations on the Fable 5 / Mythos 5 export controls.</p>
+
+<blockquote class="pull-quote">"Three months ago, the Department of War kicked Anthropic AI out of our building forever. Each passing day shows that this was the right move."<cite>— Pete Hegseth, US Defense Secretary, on X</cite></blockquote>
+
+<h4>The political through-line</h4>
+
+<p>The Monday Hegseth statement matches the read TechCrunch published the same day: the Fable 5 export-control order is not a discrete jailbreak event but the next escalation in a months-long political fight between the administration and Anthropic over autonomous-weapons use cases. The cybersecurity industry's open letter implicitly endorses that reading by saying the Amazon paper's cited technique "cannot meaningfully be fixed" — meaning the stated safety rationale for the suspension is unfalsifiable. Hegseth's intervention narrows the path to a Wednesday G7-window resolution: any framework that lifts the Commerce directive without also addressing Anthropic's posture on military use cases is one the Defense Department has now publicly pre-rejected. The administration's position is internally consistent — the Pentagon blacklist, the Commerce export control and the Sacks "they refused to fix it" framing are now all on the same page.</p>
+
+<p class="source-footer"><a href="https://technewsday.com/podcast/us-forces-anthropic-ai-shutdown-canadas-online-harms-bill-and-kpmg-faces-hallucination-scrutiny/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 6: Salesforce buys Fin $3.6B -->
+<details class="story" data-tags="economic application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(10,18)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="32" font-size="26" letter-spacing="-0.4">$3.6B</text>
+    </g>
+    <g transform="translate(78,16)" stroke="#6b21a8" stroke-width="1.2" fill="#6b21a8" fill-opacity="0.18">
+      <rect x="0" y="0" width="32" height="14"/>
+      <text x="16" y="11" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6b21a8">CRM</text>
+      <rect x="0" y="22" width="32" height="14"/>
+      <text x="16" y="33" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6b21a8">FIN</text>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">SALESFORCE · FIN · AGENTIC CX</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Salesforce buys Fin AI for $3.6 billion in the largest agentic CX deal on record</h3>
+    <p class="kicker">TechCrunch · 2026-06-15 · <a href="https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Salesforce announced Monday it will acquire Intercom's Fin AI agent business for approximately $3.6 billion. Fin's "Apex" model resolves an average of 76 percent of support volume end to end across 30,000-plus customers and eclipses NICE's $955 million Cognigy deal. Agentforce hit $1.2 billion ARR up 205 percent year over year.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Salesforce announced Monday it has agreed to acquire Fin — the customer-service AI business that spun out of Intercom — for approximately $3.6 billion, the largest agentic customer-experience acquisition on record by a margin and roughly four times the value NICE paid for Cognigy. Fin's "Apex" agent resolves an average of 76 percent of customer-support volume end to end across chat, email, WhatsApp, SMS, phone and Slack, and brings more than 30,000 company customers under the Agentforce umbrella. Eoghan McCabe stays on as Fin CEO. Co-founder Des Traynor continues to lead R&amp;D. The deal is expected to close in Q4 of Salesforce's FY27.</p>
+
+<blockquote class="pull-quote">"Fin brings proven agent technology, a deep commitment to customer success, and an incredible AI team that will complement Agentforce with powerful service agent capabilities."<cite>— Marc Benioff, Salesforce CEO</cite></blockquote>
+
+<h4>Agentforce crosses $1.2B ARR up 205% year over year</h4>
+
+<p>Salesforce disclosed the Agentforce business reached $1.2 billion in annual recurring revenue in Q1 of FY27, up 205 percent year over year, with Agentforce now a top-three growth driver inside the company. The Fin acquisition follows Salesforce's smaller 2025 deals for Convergence.ai and Cimulate and converts what had been an organic R&amp;D push into a category-defining roll-up. The Salesforce 2026 State of Service report, released the same day, found AI-agent adoption in customer service rose from 39 percent in 2025 to 66 percent in 2026 — a 1.7x year-over-year jump that mirrors Korn Ferry's 1,674-leader survey finding 52 percent of talent leaders plan to add autonomous AI agents in 2026. The Fin price tag re-anchors comps for agentic-CX rivals including Decagon, Sierra, and Forethought, all of which now sit inside an acquisition window Salesforce has just re-priced. McCabe's "little will practically change" line on his post-deal X message is the read: a hosted Apex stack still ships from Dublin, Salesforce just now writes the cheque to it.</p>
+
+<blockquote class="pull-quote">"With the resources of Salesforce this will only accelerate. And yet little will practically change."<cite>— Eoghan McCabe, Fin CEO and co-founder</cite></blockquote>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 7: Salesforce Summer '26 -->
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <circle cx="14" cy="14" r="6" fill="#6b21a8" fill-opacity="0.45"/>
+      <circle cx="40" cy="14" r="6" fill="#6b21a8" fill-opacity="0.30"/>
+      <circle cx="66" cy="14" r="6" fill="#6b21a8" fill-opacity="0.18"/>
+      <circle cx="92" cy="14" r="6" fill="none"/>
+      <line x1="20" y1="14" x2="34" y2="14"/>
+      <line x1="46" y1="14" x2="60" y2="14"/>
+      <line x1="72" y1="14" x2="86" y2="14"/>
+      <line x1="14" y1="20" x2="14" y2="36"/>
+      <line x1="40" y1="20" x2="40" y2="36"/>
+      <line x1="66" y1="20" x2="66" y2="36"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">MULTI-AGENT ORCHESTRATION GA</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Salesforce Summer '26 ships Agentforce Multi-Agent Orchestration GA with Vibes 2.0 IDE</h3>
+    <p class="kicker">Salesforce Developers Blog · 2026-06-15 · <a href="https://developer.salesforce.com/blogs/2026/06/the-salesforce-developers-guide-to-the-summer-26-release" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Summer '26 release graduates Multi-Agent Orchestration from beta to GA, lets agents collaborate as a unified team with shared context, and ships Agentforce Vibes 2.0 — a multi-model coding IDE supporting GPT-5 and Claude with React app generation. State of Service shows 66 percent of orgs now use AI agents in support, up from 39 percent in 2025.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Salesforce shipped Summer '26 to general availability on Monday June 15, the same day it announced the $3.6 billion Fin acquisition. The headline ship is Agentforce Multi-Agent Orchestration moving from beta to GA, which lets multiple Agentforce agents collaborate as a unified team with shared context across channels rather than running as isolated single-task workers. The release also ships Agentforce Vibes 2.0, a multi-model coding IDE supporting both GPT-5 and Claude with React-app scaffolding, deeper Slack-first workflows, real-time data activation, and AI-powered customer engagement at the platform core. Summer '26 is Salesforce's first release since Agentforce crossed $1.2 billion ARR.</p>
+
+<blockquote class="pull-quote">"Summer '26 unlocks productivity, deepens customer relationships, and accelerates growth on a trusted platform."<cite>— Salesforce Summer '26 release announcement</cite></blockquote>
+
+<h4>Adoption: 39% to 66% in one year</h4>
+
+<p>The Salesforce 2026 State of Service report, released alongside the Summer '26 ship, shows AI-agent adoption in customer service rose from 39 percent in 2025 to 66 percent in 2026 — a 1.7x year-over-year jump that turns multi-agent orchestration from a roadmap promise into table-stakes vendor checklist. The Vibes 2.0 multi-model posture matters in context: by shipping a coding IDE that runs both GPT-5 and Claude, Salesforce is hedging the Anthropic ban risk on its own developer surface the same week Anthropic's flagship models sit dark under US export controls. Multi-Agent Orchestration GA also lands the same week Cisco's Cloud Control Studio and Agent Builder slipped to July, leaving Salesforce as the only Fortune 100 platform vendor to ship a production multi-agent orchestrator this month. The Fin acquisition plus Multi-Agent Orchestration plus Vibes 2.0 together describe a single thesis: Salesforce intends to own the agentic enterprise the way it has owned CRM, and is willing to pay 4x the previous deal high to do it.</p>
+
+<p class="source-footer"><a href="https://developer.salesforce.com/blogs/2026/06/the-salesforce-developers-guide-to-the-summer-26-release" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 8: Sarvam unicorn -->
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(12,14)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="22" font-size="20" letter-spacing="-0.4">$1.5B</text>
+      <text x="0" y="38" font-size="9" letter-spacing="1.4">UNICORN</text>
+    </g>
+    <g transform="translate(76,12)" stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <path d="M0 28 L8 8 L16 22 L24 4 L32 18 L40 12"/>
+      <circle cx="40" cy="12" r="3" fill="#6b21a8"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">SARVAM · HCLTECH · $150M ANCHOR</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Sarvam AI hits $1.5B as HCLTech anchors a $234M Series B with $150M strategic check</h3>
+    <p class="kicker">Business Today · TechCrunch · 2026-06-15 · <a href="https://www.businesstoday.in/technology/story/sarvam-ai-becomes-unicorn-with-234-million-funding-hcltech-leads-with-150-million-537017-2026-06-15" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">India's MeitY-designated sovereign foundation-model builder closed first close of a $300M Series B at $234M, with HCLTech taking a more-than-10 percent stake. Bessemer, Khosla and Peak XV co-invested. The round closed 72 hours after Anthropic's worldwide shutdown reached India.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Bengaluru-based Sarvam AI closed first close of a $300 million Series B at $234 million on Monday at a $1.5 billion post-money valuation, becoming India's newest AI unicorn. HCLTech anchored with a $150 million strategic check and acquired a more-than-10 percent stake — the largest direct AI investment by an Indian IT services major and one that effectively turns India's flagship sovereign-AI lab into an HCLTech strategic asset. Bessemer Venture Partners, Khosla Ventures and Peak XV (formerly Sequoia India) co-invested. The round was led by HCLTech with Sarvam's prior backers participating. Capital will fund Sarvam's next-generation frontier model focused on agentic AI, coding and cybersecurity use cases, plus compute infrastructure.</p>
+
+<blockquote class="pull-quote">"Building on this template, we are innovating on a full-stack offering for enterprises to own and operate their sovereign AI."<cite>— Pratyush Kumar, Sarvam co-founder</cite></blockquote>
+
+<h4>India's sovereign-AI stack arrives at the right week</h4>
+
+<p>Sarvam has shipped Sarvam 105B (reasoning) and Sarvam 30B (edge-optimized), both trained from scratch in India for Indian-language workloads. The company is the Ministry of Electronics and IT's designated sovereign-AI foundation-model builder under the IndiaAI Mission, which committed approximately ₹103.72 billion ($1.25 billion) over five years. The Series B closes 72 hours after the US Commerce Department disabled Anthropic Fable 5 and Mythos 5 for every foreign national worldwide — a directive that hit India, the world's second-largest Claude market, with no advance notice. Mohandas Pai called the same weekend for an annual ₹500 billion ($5 billion) sovereign-AI and deep-tech fund plus a ₹2 trillion credit-guarantee program for compute and silicon. Sridhar Vembu echoed the call. The Sarvam round is the first major Indian AI funding event after the shutdown and the strongest signal yet that domestic frontier-model capacity has moved from policy talking point to strategic-services-firm balance sheet item. HCLTech CEO C Vijayakumar framed the deal as "creating a differentiated full-stack AI platform" combining Sarvam's research with HCLTech's global delivery footprint.</p>
+
+<p class="source-footer"><a href="https://www.businesstoday.in/technology/story/sarvam-ai-becomes-unicorn-with-234-million-funding-hcltech-leads-with-150-million-537017-2026-06-15" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 9: Mistral €3B at €20B -->
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,14)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="22" font-size="18" letter-spacing="-0.4">€11.7B</text>
+      <text x="0" y="42" font-size="22" letter-spacing="-0.4">€20B</text>
+    </g>
+    <g transform="translate(78,16)" stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <path d="M0 28 L24 4"/>
+      <path d="M18 4 L24 4 L24 10"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">MISTRAL · PARIS · €3B TALKS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Mistral advances €3B funding talks at €20B valuation as EU sovereignty re-prices</h3>
+    <p class="kicker">Verdict · 2026-06-15 · <a href="https://www.verdict.co.uk/mistral-ai-weighs-new-funding/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Mistral is in active talks to raise roughly €3 billion at a €20 billion post-money valuation, nearly doubling its €11.7 billion Series C mark from September 2025. Global VCs and sovereign wealth funds are at the table. The reset arrives the same weekend the EU Commission warned the Anthropic export shutdown "underlines Europe's need for technological sovereignty."</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Mistral is in active discussions to raise approximately €3 billion at a €20 billion post-money valuation, Verdict reported Monday, nearly doubling the €11.7 billion Series C mark the company set in September 2025. The investor list includes a mix of global venture capital and sovereign wealth funds, with terms still in early stages and likely to step higher on investor demand. Mistral is the only independent frontier-model lab headquartered inside the European Union. The valuation step lands the same weekend Anthropic's Fable 5 and Mythos 5 went offline to every customer worldwide under a US Commerce Department export-control directive — a directive whose practical effect on European users the EU Commission spokesperson Thomas Regnier called out for not being "discriminatory against partners."</p>
+
+<h4>Sovereignty becomes pricing power</h4>
+
+<p>The sovereignty argument that has anchored Mistral's pitch since launch is now operative. Renew Europe MEPs Bart Groothuis and Christophe Grudler used Monday to demand accelerated EU LLM and open-weights investment. Carney's "model risk" framing from Ireland the same weekend is the prudential-regulation vocabulary that procurement teams need to justify multi-vendor frontier-model strategies to their boards. The Mistral round, if it closes at the reported terms, would place it third behind OpenAI and Anthropic on private-mark valuation among Western frontier labs and ahead of every other Western lab including xAI's most recent secondary print. The structural read is straightforward: the week the US took its leading non-OpenAI lab offline is the week the highest-quality non-US frontier-model alternative is being re-priced upward by exactly the customers and sovereign-fund LPs who watched the shutdown happen. Mistral has not commented publicly on the talks.</p>
+
+<p class="source-footer"><a href="https://www.verdict.co.uk/mistral-ai-weighs-new-funding/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 10: Nadella essay -->
+<details class="story" data-tags="tech trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(60,40)" stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <circle cx="-18" cy="0" r="10" fill="#6b21a8" fill-opacity="0.18"/>
+      <text x="-18" y="3" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6b21a8">HUMAN</text>
+      <circle cx="18" cy="0" r="10" fill="#6b21a8" fill-opacity="0.45"/>
+      <text x="18" y="3" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#f7f5ef">TOKEN</text>
+      <path d="M-10 -6 C 0 -16 0 -16 10 -6"/>
+      <path d="M-10 6 C 0 16 0 16 10 6"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">NADELLA · LEARNING LOOP</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">Nadella publishes "frontier without an ecosystem is not stable" learning-loop essay</h3>
+    <p class="kicker">Yellow.com · 2026-06-15 · <a href="https://yellow.com/news/nadella-own-your-ai-learning-systems-or-hand-value-to-few-models" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Microsoft CEO argues every company must build two assets in parallel: human capital and "token capital," joined by a self-reinforcing learning loop owned by the company. He reframes the AI moat as the loop, not the underlying foundation model. The essay arrived 72 hours after the US took Anthropic offline.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Microsoft CEO Satya Nadella published a long-form essay on X over the weekend titled "A frontier without an ecosystem is not stable," and Yellow.com surfaced an extended version Monday. The piece argues that every company must build two assets in parallel — human capital and what Nadella calls "token capital" — and that the durable competitive advantage is the self-reinforcing learning loop a company constructs between the two, not the underlying foundation model. Nadella says firms should be able to switch out a "generalist" foundation model without losing the "company veteran" expertise built into their learning system. The essay re-frames Microsoft's hedge — the same week it is canceling most internal Claude Code licenses in its Experiences and Devices division effective June 30 — as a deliberate move to keep the model layer interchangeable while the loop above it stays proprietary.</p>
+
+<blockquote class="pull-quote">"The real opportunity is not in picking the best model but instead in building a learning loop on top of models where human capital and token capital compound."<cite>— Satya Nadella, Microsoft CEO</cite></blockquote>
+
+<blockquote class="pull-quote">"You can offload a task, or even a job, but you can never offload your learning."<cite>— Satya Nadella, Microsoft CEO</cite></blockquote>
+
+<h4>The reframe lands inside the Anthropic week</h4>
+
+<p>The essay is dated three days after the US Commerce Department took Anthropic Fable 5 and Mythos 5 offline globally and the same weekend Mark Carney compared the suspension to a 2008-style "model risk" event from Ireland. The framing reads as Microsoft's hedge against being permanently tied to any one frontier provider, including its $5 billion-funded partner Anthropic. Nadella also says "the last thing any of us want is a world where every company across every sector is ceding value to a few models that eat everything they see" — a sentence that lands very differently published the week Anthropic and OpenAI together accounted for roughly two-thirds of US business AI spend per Ramp's index. The essay is the first time a Magnificent Seven CEO has publicly argued that the foundation model is a commodity layer; that posture matters in the next round of Azure-vs-Bedrock-vs-Vertex enterprise negotiation, in which Microsoft's clear shift toward "your loop, our infrastructure, any model" gives Azure a multi-model story Bedrock has been building since launch.</p>
+
+<blockquote class="pull-quote">"The last thing any of us want is a world where every company across every sector is ceding value to a few models that eat everything they see."<cite>— Satya Nadella, Microsoft CEO</cite></blockquote>
+
+<p class="source-footer"><a href="https://yellow.com/news/nadella-own-your-ai-learning-systems-or-hand-value-to-few-models" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 11: Kimi K2.7 Code -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,18)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="22" font-size="20" letter-spacing="-0.4">81.1%</text>
+      <text x="0" y="38" font-size="8" letter-spacing="1.2">MCPMARK</text>
+    </g>
+    <g transform="translate(70,18)" font-family="system-ui,sans-serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="14" font-size="6.4" letter-spacing="1.2">OPUS 4.8 · 76.4%</text>
+      <rect x="0" y="18" width="36" height="6" fill="#6b21a8" fill-opacity="0.30"/>
+      <text x="0" y="38" font-size="6.4" letter-spacing="1.2">KIMI K2.7 · 81.1%</text>
+      <rect x="0" y="42" width="40" height="6" fill="#6b21a8"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">MOONSHOT · 1T MoE · OPEN WEIGHTS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Kimi K2.7 Code beats Claude Opus 4.8 on MCPMark at 12x cheaper per token</h3>
+    <p class="kicker">The Decoder · 2026-06-15 · <a href="https://the-decoder.com/moonshots-open-model-kimi-k2-7-code-undercuts-gpt-5-5-and-claude-by-up-to-12x-on-price-per-token/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Moonshot AI's 1 trillion-parameter MoE coder with 32B active per token scored 81.1% on MCPMark Verified versus Opus 4.8 at 76.4% across Notion, GitHub, filesystem, Postgres and Playwright. Open weights live on Hugging Face under a Modified MIT license for vLLM and SGLang deployment.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Moonshot AI's Kimi K2.7 Code crossed an open-weights threshold this week. The Decoder's Monday writeup confirms the 1 trillion-parameter MoE coding model — 32 billion active parameters per token across 384 experts with 8 active per token — scored 81.1 percent on MCPMark Verified versus Claude Opus 4.8 at 76.4 percent, a benchmark that exercises agentic capability across Notion, GitHub, filesystem, Postgres and Playwright. K2.7 Code undercuts both GPT-5.5 and Claude on per-token pricing by up to 12x, with open weights released June 12 under a Modified MIT license and live on Hugging Face for vLLM, SGLang and Docker deployment.</p>
+
+<h4>The open-weights flank when the closed flank goes dark</h4>
+
+<p>The release lands as a structural event because of timing. The US Commerce Department disabled Anthropic Fable 5 and Mythos 5 for every foreign national worldwide on Friday June 12 — three days after the K2.7 Code weights dropped. International users of agentic coding stacks who would have routed to Mythos Preview now have an open-weights option that out-scored Opus 4.8 on the benchmark suite tool-use vendors are converging on. K2.7 Code is also the first benchmark-beating open-weights agentic coder out of a Chinese lab since DeepSeek V3, and unlike DeepSeek it ships with first-class MCP-native tooling. The architectural choice — 1T parameters total but 32B active — keeps deployment cost low enough to run on a single 8xH200 node at full quality. Combined with the Sunday Ramp data placing DeepSeek atop the US Top SaaS Vendors first-time-purchase index, the picture forming is the same one Moonshot intended: when frontier capability becomes politically rationable, the open-weights tier absorbs the demand the closed tier can no longer serve.</p>
+
+<p class="source-footer"><a href="https://the-decoder.com/moonshots-open-model-kimi-k2-7-code-undercuts-gpt-5-5-and-claude-by-up-to-12x-on-price-per-token/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 12: DeepSeek tops Ramp -->
+<details class="story" data-tags="tech economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,14)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="22" font-size="22" letter-spacing="-0.4">#1</text>
+    </g>
+    <g transform="translate(50,12)" font-family="system-ui,sans-serif" font-weight="700" fill="#6b21a8">
+      <rect x="0" y="2" width="62" height="10" fill="#6b21a8"/>
+      <text x="4" y="10" font-size="6.4" letter-spacing="1" fill="#f7f5ef">DEEPSEEK</text>
+      <rect x="0" y="16" width="40" height="8" fill="#6b21a8" fill-opacity="0.45"/>
+      <text x="4" y="22" font-size="6" letter-spacing="1" fill="#f7f5ef">PHEEDLOOP</text>
+      <rect x="0" y="28" width="34" height="8" fill="#6b21a8" fill-opacity="0.30"/>
+      <text x="4" y="34" font-size="6" letter-spacing="1" fill="#f7f5ef">FIREWORKS</text>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">RAMP · JUN 2026 · 50K BUYERS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">DeepSeek tops Ramp's June trending-vendor index as US firms route to Chinese AI</h3>
+    <p class="kicker">Ramp · 2026-06-15 · <a href="https://ramp.com/leading-indicators/top-saas-vendors-on-ramp-june-2026" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Ramp's June 2026 Trending Software Vendors index — drawn from first-time corporate purchases across more than 50,000 US businesses — places DeepSeek at number one ahead of PheedLoop and Fireworks AI. It is the first month a Chinese-hosted AI service has topped the chart.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Ramp's June 2026 Trending Software Vendors index, drawn from first-time corporate purchases across more than 50,000 US businesses that use the Ramp expense platform, placed DeepSeek at number one — the first month a Chinese-hosted AI service has topped the chart. The customers are paying DeepSeek directly and sending data through its hosted platform, not just self-hosting the open weights. Cost is the primary driver: DeepSeek's pricing remains a small fraction of Anthropic and OpenAI list rates, and at the model tier above GPT-4-class quality. Ramp's chief economist warned in the writeup about security and competitive risk and said he doubts the trend will persist, but the data point for June is what it is.</p>
+
+<h4>The same week the US export shock landed</h4>
+
+<p>The Ramp print arrives the same week the US Commerce Department disabled Anthropic Fable 5 and Mythos 5 globally and the same Sunday Anthropic narrowly retook the lead over OpenAI in US business adoption at 34.4 percent versus 32.3 percent per the same Ramp methodology. That juxtaposition is the story. The assumption that US AI buyers will reliably stay within US-domiciled providers — the assumption the Commerce directive implicitly defends — is contradicted by Ramp's own first-time-purchase data the same month it was issued. The Chinese provider topping the chart is the same provider whose open-weights V3 line has been the dominant low-cost agentic backbone in production stacks since late 2025. Combined with Kimi K2.7 Code's open-weights MCPMark beat on Opus 4.8 announced separately Monday, the picture is one in which export controls on Anthropic shift demand toward a Chinese alternative whose progress curve is now the open-weights frontier.</p>
+
+<p class="source-footer"><a href="https://ramp.com/leading-indicators/top-saas-vendors-on-ramp-june-2026" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 13: Anthropic Agent SDK / OpenClaw -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <rect x="0" y="0" width="40" height="50" fill="#6b21a8" fill-opacity="0.18"/>
+      <text x="20" y="18" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" fill="#6b21a8">CHAT</text>
+      <text x="20" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" fill="#6b21a8">CREDITS</text>
+      <rect x="50" y="0" width="40" height="50" fill="#6b21a8" fill-opacity="0.45"/>
+      <text x="70" y="18" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" fill="#f7f5ef">AGENT</text>
+      <text x="70" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.4" font-weight="700" fill="#f7f5ef">SDK</text>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">SEPARATE POOL · OPENCLAW BACK</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Anthropic reinstates OpenClaw and third-party harnesses with a dedicated Agent SDK credit pool</h3>
+    <p class="kicker">VentureBeat · 2026-06-15 · <a href="https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Starting Monday every paid Claude subscription gets a separate monthly Agent SDK credit pool covering Claude Agent SDK, Claude Code GitHub Actions and third-party harnesses. The April ban on OpenClaw — which suspended founder Peter Steinberger's Claude account briefly — is reversed.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Anthropic activated a separate Agent SDK credit pool on every paid Claude subscription starting Monday June 15, VentureBeat confirmed. The new pool covers the Claude Agent SDK, Claude Code GitHub Actions and sanctioned third-party harnesses including OpenClaw. The change reverses Anthropic's April 2026 policy that briefly suspended OpenClaw founder Peter Steinberger's Claude account and that had cut off the wider agent-harness ecosystem from running against Claude subscriptions. Anthropic's original April justification was that agent harnesses can "run continuous reasoning loops" that did not match interactive subscription usage patterns. The June 15 rollout, which Anthropic preannounced two weeks earlier, gives independent harness builders a sanctioned credit budget but still segregates agent compute from chat compute on every paid tier.</p>
+
+<h4>Same day, two legacy model deprecations</h4>
+
+<p>The same June 15 milestone also retires claude-sonnet-4-20250514 and claude-opus-4-20250514 from the API. That timing matters operationally — vendors on the OG Claude 4 family who had been delaying migration must move this week and the new credit-pool system is what bridges them across to Opus 4.8 and Sonnet 4.6 without exhausting interactive chat allotments. For the harness ecosystem — OpenClaw, Devin-style wrappers, Cursor Composer, Cline, Continue.dev — the credit-pool restoration plus dedicated tier is the first time Anthropic has publicly recognised the agent harness as a legitimate addressable surface rather than a usage-pattern outlier. The change also sits alongside the company's separate June 14 ship of Claude Code /fork, which mapped AI coding onto git-style session branching and which Anthropic estimated places Claude Code at roughly 4 percent of public GitHub commits.</p>
+
+<p class="source-footer"><a href="https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 14: Microsoft Patch Tuesday -->
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,14)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="32" font-size="30" letter-spacing="-0.6">200</text>
+    </g>
+    <g transform="translate(74,16)" stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <circle cx="6" cy="6" r="3" fill="#6b21a8"/>
+      <circle cx="18" cy="6" r="3" fill="#6b21a8"/>
+      <circle cx="30" cy="6" r="3" fill="#6b21a8" fill-opacity="0.45"/>
+      <circle cx="6" cy="18" r="3" fill="#6b21a8" fill-opacity="0.30"/>
+      <circle cx="18" cy="18" r="3" fill="#6b21a8" fill-opacity="0.30"/>
+      <circle cx="30" cy="18" r="3" fill="none"/>
+      <circle cx="6" cy="30" r="3" fill="none"/>
+      <circle cx="18" cy="30" r="3" fill="none"/>
+      <circle cx="30" cy="30" r="3" fill="none"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">PATCH TUESDAY · 33 CRITICAL</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Microsoft's June Patch Tuesday fixes a record 200 flaws as AI bug hunting scales</h3>
+    <p class="kicker">Techmeme · 2026-06-15 · <a href="https://www.techmeme.com/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Microsoft addressed approximately 200 security vulnerabilities — the highest single-month total on record — with 33 rated Critical. Microsoft and external researchers attribute the discovery volume to AI-powered code analysis pipelines including Anthropic's Project Glasswing.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Microsoft's June 2026 Patch Tuesday addressed approximately 200 security vulnerabilities, the highest single-month total on record for the company, with 33 of them rated Critical. Microsoft and external security researchers increasingly attribute the discovery volume to AI-powered code analysis pipelines, including Anthropic's Project Glasswing — the restricted-access program in which Glasswing partners gain day-zero Claude Mythos Preview access in exchange for sharing vulnerability findings. Microsoft is a founding Glasswing partner.</p>
+
+<h4>Glasswing arithmetic reaches vendor patch cycles</h4>
+
+<p>Anthropic disclosed at the Mythos 5 preview launch that Glasswing partners had surfaced more than 10,000 high- or critical-severity flaws across their codebases. June's record Microsoft patch volume operationalises that disclosure: the AI bug-finding turnover is now visible in vendor patch cadence, not just in lab benchmarks. The juxtaposition with the same week's policy news is uncomfortable. The US Commerce Department disabled Mythos 5 for every foreign national worldwide three days before Microsoft shipped the record patch round whose discovery volume the company partly attributes to Mythos Preview. Microsoft's June ship will not be affected — Glasswing partners retain access while Anthropic's public surfaces sit dark — but the contradiction undercuts the safety rationale for the export control. A model whose primary use at Microsoft is finding vulnerabilities before adversaries do is the same model the administration says cannot be made available to foreign nationals on safety grounds. The next month's Patch Tuesday volume will read as the empirical test of whether Glasswing-tier AI bug hunting continues to compound or whether the closed-side capability that drove the June print is structurally tied to Anthropic's flagship line specifically.</p>
+
+<p class="source-footer"><a href="https://www.techmeme.com/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 15: Cloud Software Group Glasswing -->
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,14)" stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <path d="M0 30 Q 20 0, 40 30 T 80 30" stroke-opacity="0.7"/>
+      <path d="M0 36 Q 20 6, 40 36 T 80 36" stroke-opacity="0.45"/>
+      <path d="M0 42 Q 20 12, 40 42 T 80 42" stroke-opacity="0.30"/>
+    </g>
+    <text x="60" y="60" text-anchor="middle" font-family="Georgia,serif" font-weight="700" fill="#6b21a8" font-size="9" letter-spacing="0.6">PROJECT GLASSWING</text>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">CITRIX · TIBCO · INFOSCALE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Cloud Software Group joins Project Glasswing as Mythos Preview adds 150 partners across 15 countries</h3>
+    <p class="kicker">BusinessWire · 2026-06-15 · <a href="https://www.businesswire.com/news/home/20260611381076/en/Cloud-Software-Group-Joins-Anthropics-Project-Glasswing-Gaining-Access-to-Claude-Mythos-Preview" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Citrix, TIBCO and InfoScale parent enters Project Glasswing for day-zero Mythos Preview access. Glasswing partners now include AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, Linux Foundation, Microsoft, NVIDIA and Palo Alto Networks; the program adds 150 partner organisations across 15-plus countries this round.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Cloud Software Group — the parent of Citrix, TIBCO and InfoScale — joined Anthropic's Project Glasswing on Monday June 15, gaining day-zero access to Claude Mythos Preview, BusinessWire confirmed. The company will deploy Mythos Preview across all its businesses with deployment, security architecture and governance retained in-house. Named use cases include vulnerability triage, complex attack-path detection and open-source threat response. The Glasswing partner list — AWS, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, Linux Foundation, Microsoft, NVIDIA, Palo Alto Networks — is one of the most consequential customer rosters Anthropic has assembled, and the program is growing: this round adds roughly 150 partner organisations across 15-plus countries.</p>
+
+<h4>Why the program survives the export ban</h4>
+
+<p>Mythos Preview is the restricted-access version of the same model line powering the publicly-distributed Fable 5, which the US Commerce Department disabled worldwide on Friday June 12. Glasswing partners retain access under their bilateral agreements because the program is opt-in, US-anchored and audited at the partner level — exactly the segmentation surface the wider Mythos / Fable directive cannot replicate at API scale. The Cloud Software Group announcement is the first Glasswing onboarding published since the directive landed. Read alongside the same day's open letter from 76 cybersecurity practitioners arguing the export ban "cannot meaningfully be fixed" and removes the strongest tool from defenders, the Glasswing growth signal is the company's strongest counterargument: the model that the administration says cannot be released to foreign nationals on safety grounds is the same model the world's largest CISO organisations are now individually authorising onto their own networks. Anthropic is using the program's growth to demonstrate that a controlled-access regime works without a worldwide shutdown.</p>
+
+<p class="source-footer"><a href="https://www.businesswire.com/news/home/20260611381076/en/Cloud-Software-Group-Joins-Anthropics-Project-Glasswing-Gaining-Access-to-Claude-Mythos-Preview" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 16: IREN/Nostrum -->
+<details class="story" data-tags="tech economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="26" font-size="22" letter-spacing="-0.4">490</text>
+      <text x="0" y="42" font-size="8" letter-spacing="1.4">MEGAWATTS</text>
+    </g>
+    <g transform="translate(72,16)" stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <path d="M0 32 L0 18 L8 12 L16 18 L24 18 L32 12 L32 32 Z" fill="#6b21a8" fill-opacity="0.18"/>
+      <line x1="0" y1="32" x2="32" y2="32"/>
+      <text x="16" y="44" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8">ESPAÑA</text>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">IREN · NOSTRUM · EU AI CLOUD</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">IREN closes Nostrum acquisition adding 490MW Spanish AI cloud capacity</h3>
+    <p class="kicker">GlobeNewswire / IREN · 2026-06-15 · <a href="https://www.globenewswire.com/news-release/2026/06/15/3311680/0/en/IREN-Completes-Acquisition-of-Nostrum-Group-Expanding-AI-Cloud-Platform-to-Europe.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">IREN Limited completed the previously-announced acquisition of Spain's Ingenostrum, adding approximately 490MW of secured grid-connected power plus an additional development pipeline and a 50-person team across development, engineering, construction and operations. It is IREN's largest expansion beyond North America.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>IREN Limited (NASDAQ: IREN) completed its acquisition of Spain's Ingenostrum, S.L. — known as Nostrum Group — on Monday June 15, the company confirmed in a GlobeNewswire release. The transaction adds approximately 490 megawatts of secured, grid-connected power in Spain plus an additional development pipeline, and brings the 50-plus-person Nostrum team across development, engineering, construction and operations under the IREN brand. The deal was originally announced May 7 and closed subject to customary conditions. It marks IREN's entry into the European AI Cloud market and its largest expansion beyond US and Canadian capacity.</p>
+
+<h4>Secured power as the scarce European AI input</h4>
+
+<p>European AI compute supply is structurally constrained by interconnect queues, not by GPU availability. Secured, grid-connected power is the scarcest input. The Iberian Peninsula's solar generation mix and EU-funded grid investment make Spain one of the cleanest data-center build locations on the continent. IREN's Spanish entry comes the same weekend the European Commission warned the US Anthropic export controls underline Europe's need for "technological sovereignty" and the same week Mistral advanced talks for a €3 billion round at €20 billion. The political moment is unusually favourable: Spanish, German and French AI workloads now have a stronger procurement case for in-region capacity, and IREN has just locked 490MW of it. The company has not disclosed a target customer mix or whether the Spanish capacity will be sold dedicated or merchant, but the scale of the secured grid connection makes IREN one of a small handful of NASDAQ-listed operators with frontier-scale European supply going into 2027.</p>
+
+<p class="source-footer"><a href="https://www.globenewswire.com/news-release/2026/06/15/3311680/0/en/IREN-Completes-Acquisition-of-Nostrum-Group-Expanding-AI-Cloud-Platform-to-Europe.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 17: llama.cpp 17 builds -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" stroke="#6b21a8" stroke-width="1" fill="none">
+      <line x1="0" y1="0" x2="0" y2="48"/>
+      <g font-family="system-ui,sans-serif" font-weight="700" fill="#6b21a8" font-size="6">
+        <rect x="4" y="2" width="6" height="4" fill="#6b21a8"/><text x="14" y="6">b9650</text>
+        <rect x="4" y="10" width="6" height="4" fill="#6b21a8"/><text x="14" y="14">b9651</text>
+        <rect x="4" y="18" width="6" height="4" fill="#6b21a8"/><text x="14" y="22">b9652</text>
+        <rect x="4" y="26" width="6" height="4" fill="#6b21a8"/><text x="14" y="30">b9653</text>
+        <rect x="4" y="34" width="6" height="4" fill="#6b21a8"/><text x="14" y="38">b9656</text>
+        <rect x="4" y="42" width="6" height="4" fill="#6b21a8"/><text x="14" y="46">b9660</text>
+      </g>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">LLAMA.CPP · ONE-DAY CADENCE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">llama.cpp tags 10+ builds in a single Sunday fixing tool-call parsing and Vulkan</h3>
+    <p class="kicker">GitHub Releases · 2026-06-15 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">b9650 through b9660 land in a single day. Headline fixes: b9660 corrects LFM2 tool-call double-escaping, b9656 hardens the peg-native tool-call parser, b9653 expands Vulkan CONCAT type coverage, b9651 enables native subgroup-size K-quant DMMV on SYCL.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>llama.cpp tagged at least 10 builds — b9650 through b9660 — over the June 14–15 window in a single-day cadence that has become typical for the project. The headline fixes are agent-tooling-focused. Build b9660 corrects LFM2 tool-call parsing double-escaping. Build b9659 fixes mtmd miscounting n_tokens. Build b9656 hardens the peg-native tool-call parser used across multiple model families. Build b9653 expands Vulkan CONCAT type coverage. Build b9651 enables native subgroup-size for K-quant DMMV on SYCL. Build b9652 fixes a wasm fallback symbol collision. Build b9650 fixes a sycl soft_max_f32 reduction.</p>
+
+<h4>Tool-call hardening is the open-source agent surface</h4>
+
+<p>The cluster of Sunday fixes lands in the same week vLLM v0.23.0 shipped (June 13) and the same Monday Moonshot's Kimi K2.7 Code 1T-parameter MoE beat Claude Opus 4.8 on MCPMark Verified at 81.1 percent versus 76.4 percent. Tool-call parsing is now the load-bearing surface for open-source agentic stacks: the difference between K2.7 Code running cleanly inside an MCP-mediated workflow and falling over on a malformed JSON envelope is exactly the kind of bug b9660 fixed. llama.cpp's multi-build-per-day cadence and Sunday tool-call focus underscore how rapidly the open-source inference stack now ships agentic hardening — the same surface area Anthropic and OpenAI lock down on the closed side. The pace is what makes llama.cpp and Ollama the dominant local-inference runtimes; the relative invisibility of these point releases is what makes the open-weights agent ecosystem's progress easy to under-count.</p>
+
+<p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 18: datasette-agent 0.3a0 -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <rect x="0" y="0" width="44" height="48" fill="#6b21a8" fill-opacity="0.18"/>
+      <text x="22" y="20" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#6b21a8">SQL</text>
+      <text x="22" y="34" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" letter-spacing="1.2" fill="#6b21a8">WRITE?</text>
+      <path d="M52 24 L72 24"/>
+      <path d="M68 20 L72 24 L68 28"/>
+      <circle cx="80" cy="24" r="6" fill="#6b21a8"/>
+      <text x="80" y="27" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#f7f5ef">Y</text>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">APPROVAL · --YES · --UNSAFE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Simon Willison ships datasette-agent 0.3a0 with an approval gate on every SQL write</h3>
+    <p class="kicker">Simon Willison's Weblog · 2026-06-15 · <a href="https://simonwillison.net/2026/Jun/15/datasette-agent/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The new execute_write_sql tool requests user approval before issuing writes against a Datasette instance. New chat flags: --root for elevated access, --yes for automatic approvals, --unsafe combining both. Builds on Datasette 1.0a31's execute-write-sql permission.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Simon Willison released datasette-agent 0.3a0 on Monday with a new execute_write_sql tool that requests user approval before issuing write queries against a Datasette instance. The chat command gained three new flags: --root for elevated access, --yes for automatic approvals, and --unsafe combining both. Tools can now also provide plain-text alternatives to HTML for the agent chat CLI. The release builds on Datasette 1.0a31, which introduced the execute-write-sql permission earlier in the cycle.</p>
+
+<blockquote class="pull-quote">"execute_write_sql ... requests user approval and then writes to a database — taking user permissions into account."<cite>— datasette-agent 0.3a0 release notes</cite></blockquote>
+
+<h4>A small release that maps the agent-safety design space</h4>
+
+<p>Willison has been one of the most consistent voices warning about destructive write operations under LLM-driven agents. The 0.3a0 release operationalises that view: a database-write tool exists, but in default mode it cannot fire without an interactive approval, while the --unsafe flag exists specifically for users who accept the autonomy/safety tradeoff. The three-flag design — --root, --yes, --unsafe — is interesting as a pattern. Most agent frameworks ship one autonomy level; Willison shipped three explicit levels with different trust gradients. The release lands the same Monday as the 76-cybersecurity-professional open letter calling the US Anthropic export ban "dangerous." The juxtaposition is informative: the open letter argues that defenders need maximally capable agents, while Willison's release argues that the safety surface is not in the model but in the tool layer. Both can be true, and the datasette-agent design is a working sketch of how to ship both at once.</p>
+
+<p class="source-footer"><a href="https://simonwillison.net/2026/Jun/15/datasette-agent/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 19: Willison Axios clashes -->
+<details class="story" data-tags="tech policy">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(20,14)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="20" font-size="16" letter-spacing="-0.2">GCG</text>
+      <text x="0" y="32" font-size="8" letter-spacing="1.2">2023 PAPER</text>
+    </g>
+    <g transform="translate(70,12)" font-family="system-ui,sans-serif" font-weight="700" fill="#6b21a8" font-size="6.4">
+      <text x="0" y="10" letter-spacing="1">L. GRAHAM</text>
+      <text x="0" y="22" letter-spacing="1">D. ORR</text>
+      <text x="0" y="34" letter-spacing="1">N. CARLINI</text>
+    </g>
+    <text x="60" y="64" text-anchor="middle" font-family="Georgia,serif" font-weight="700" fill="#6b21a8" font-size="9">"THEY SCREWED US"</text>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">WILLISON · AXIOS READOUT</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-policy">Policy</span></div>
+    <h3 class="headline">Willison names the Anthropic technical staff inside Commerce, questions Constitutional Classifiers</h3>
+    <p class="kicker">Simon Willison's Weblog · 2026-06-15 · <a href="https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Willison surfaces Axios reporting that names Frontier Red Team lead Logan Graham, head of Safeguards Dave Orr and Nicholas Carlini inside the administration meetings. He questions whether Constitutional Classifiers can defeat the universal-and-transferable attack class from the 2023 GCG paper.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Simon Willison's Monday post summarises Axios reporting on the friction between Anthropic and the Trump administration around the Fable 5 / Mythos 5 shutdown and is one of the first independent technical readouts to name the Anthropic personnel inside the Commerce Department meetings. Frontier Red Team lead Logan Graham, head of Safeguards Dave Orr and Nicholas Carlini are named as part of the company's delegation. The post questions whether Anthropic's Constitutional Classifiers work meaningfully addresses the universal-and-transferable adversarial attack class from the 2023 GCG paper — the foundational result that showed adversarial suffixes generated against one open-weights model transfer to closed-weight models including Claude.</p>
+
+<blockquote class="pull-quote">"They screwed us."<cite>— Anonymous administration source, via Axios</cite></blockquote>
+
+<h4>The unfalsifiable safety standard</h4>
+
+<p>Willison's post re-anchors the public conversation around whether perfect jailbreak resistance is even possible — a question that has dogged Constitutional Classifiers since their introduction. The framing matters because the cybersecurity industry's same-day open letter argues the cited Amazon bypass "cannot meaningfully be fixed," and the GCG transferability result is one of the reasons. If a class of attack provably transfers from open-weights models, then the safety bar the Commerce Department is implicitly setting — no possible jailbreak — cannot be met by any closed model under deployment-relevant assumptions. The Axios reporting's "they screwed us" line from an unnamed administration source captures the political tone, but Willison's post extracts the technical implication: the standard the administration is invoking would, if applied uniformly, "essentially halt all new model deployments for all frontier model providers" — the phrase Anthropic itself used in its public response. The Monday Commerce meeting will determine whether the administration accepts that framing or whether Anthropic is being held to a unique standard.</p>
+
+<p class="source-footer"><a href="https://simonwillison.net/2026/Jun/15/axios-clashes-anthropics/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 20: MRAgent / graph memory -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(60,40)" stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <circle cx="-30" cy="-14" r="4" fill="#6b21a8"/>
+      <circle cx="0" cy="-22" r="4" fill="#6b21a8" fill-opacity="0.45"/>
+      <circle cx="30" cy="-14" r="4" fill="#6b21a8" fill-opacity="0.30"/>
+      <circle cx="-22" cy="14" r="4" fill="#6b21a8" fill-opacity="0.30"/>
+      <circle cx="14" cy="20" r="4" fill="#6b21a8"/>
+      <circle cx="34" cy="6" r="4" fill="#6b21a8" fill-opacity="0.18"/>
+      <line x1="-30" y1="-14" x2="0" y2="-22"/>
+      <line x1="0" y1="-22" x2="30" y2="-14"/>
+      <line x1="-30" y1="-14" x2="-22" y2="14"/>
+      <line x1="30" y1="-14" x2="34" y2="6"/>
+      <line x1="-22" y1="14" x2="14" y2="20"/>
+      <line x1="14" y1="20" x2="34" y2="6"/>
+      <line x1="0" y1="-22" x2="14" y2="20" stroke-dasharray="2 2"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">MRAGENT · CUE · TAG · CONTENT</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">"Memory is Reconstructed, Not Retrieved" reframes agent recall as graph traversal</h3>
+    <p class="kicker">arXiv / Hugging Face Daily Papers · 2026-06-15 · <a href="https://arxiv.org/abs/2606.06036" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Shuo Ji, Yibo Li and Bryan Hooi (NUS) propose MRAgent — an associative Cue-Tag-Content memory graph plus an active reconstruction mechanism that replaces static retrieve-then-reason with iterative LLM-driven exploration and path pruning. Trends with 55 upvotes on HF Daily Papers.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>"Memory is Reconstructed, Not Retrieved: Graph Memory for LLM Agents" by Shuo Ji, Yibo Li and Bryan Hooi at the National University of Singapore landed on Hugging Face's Daily Papers list Monday with 55 upvotes. The paper proposes MRAgent — a framework combining an associative Cue-Tag-Content memory graph with an active reconstruction mechanism. Instead of the static retrieve-then-reason pipeline that dominated 2023–2025 agent design, MRAgent runs iterative LLM-driven exploration across the memory graph with active path pruning, and the agent's recall changes in response to mid-inference evidence rather than at a fixed retrieval call.</p>
+
+<h4>The retrieval-is-the-wrong-primitive argument</h4>
+
+<p>Graph-based agent memory has become one of the most active subfields of 2026 alongside trainable memory and procedural-policy optimisation. MRAgent's framing — that retrieval is the wrong primitive and reconstruction is the right one — pushes back against the RAG-as-memory orthodoxy that dominated the prior two years. The argument is not that retrieval is wrong as a database operation but that it imposes the wrong inductive bias on long-horizon agent design: agents that must hold consistent state across many tool calls do not "look up" prior context, they re-derive it from cues. The Cue-Tag-Content trichotomy mirrors the structure of human associative recall and gives MRAgent a graph the LLM can prune as evidence accumulates. The empirical results from the paper position MRAgent ahead of standard RAG and embedding-retrieval baselines on long-horizon agent tasks. Combined with the same-week APPO paper on token-level agentic credit assignment and the surge in trainable-memory work earlier in June, the picture forming is a 2026 reset of the agent-design primitives.</p>
+
+<p class="source-footer"><a href="https://arxiv.org/abs/2606.06036" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 21: APPO -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,18)" stroke="#6b21a8" stroke-width="1" fill="none">
+      <line x1="0" y1="20" x2="92" y2="20"/>
+      <g fill="#6b21a8">
+        <circle cx="4" cy="20" r="2"/>
+        <circle cx="14" cy="20" r="2"/>
+        <circle cx="24" cy="20" r="2"/>
+        <circle cx="34" cy="20" r="3.5"/>
+        <circle cx="44" cy="20" r="2"/>
+        <circle cx="54" cy="20" r="3.5"/>
+        <circle cx="64" cy="20" r="2"/>
+        <circle cx="74" cy="20" r="2"/>
+        <circle cx="84" cy="20" r="3.5"/>
+      </g>
+      <path d="M34 20 L34 8 L40 4" stroke-dasharray="2 1.5"/>
+      <path d="M54 20 L54 32 L60 36" stroke-dasharray="2 1.5"/>
+      <path d="M84 20 L84 8 L90 4" stroke-dasharray="2 1.5"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">APPO · TOKEN-LEVEL BRANCHING</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">APPO paper moves agentic-RL credit assignment from tool-call boundaries to token level</h3>
+    <p class="kicker">arXiv / Hugging Face Daily Papers · 2026-06-15 · <a href="https://arxiv.org/abs/2606.12384v1" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Xucong Wang and seven co-authors introduce a Branching Score combining token uncertainty with policy-induced likelihood gains, plus procedure-level advantage scaling. Reports ~4-point uplift across 13 agentic benchmarks at maintained tool-call efficiency. 63 upvotes on HF Daily Papers.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>"APPO: Agentic Procedural Policy Optimization" by Xucong Wang and seven co-authors trends on Hugging Face Daily Papers Monday with 63 upvotes. The paper replaces the coarse heuristic credit units that dominate today's agentic RL — tool-call boundaries, fixed workflows, end-of-trajectory rewards — with fine-grained token-level decision points. It introduces a Branching Score that combines token uncertainty with the policy-induced likelihood gain of subsequent continuations, and adds procedure-level advantage scaling to distribute credit across branched rollouts. Reported results: roughly a four-point uplift across 13 agentic benchmarks while maintaining tool-call efficiency.</p>
+
+<h4>Influential decisions are scattered, not at the tool calls</h4>
+
+<p>The empirical finding that matters is this: in agentic trajectories, the influential decision points are distributed throughout the sequence rather than concentrated at tool calls. That contradicts the dominant 2024–2025 assumption that the natural credit unit is the tool call itself. If APPO's result generalises, RLHF, RLVR and DPO pipelines all need to revisit how they treat agent trajectories. The four-point benchmark lift is significant but not the headline; the architectural implication — that tool-call boundaries are not the right granularity — is what makes the paper notable. Combined with the same-day MRAgent paper on graph memory and the surge in trainable-memory work earlier in June, APPO contributes to a 2026 picture in which agent-design primitives are being rewritten from the credit-assignment level up. The paper does not name a specific lab affiliation in the abstract that surfaced on the Hugging Face listing; the authorship list and benchmark coverage suggest a large Chinese lab.</p>
+
+<p class="source-footer"><a href="https://arxiv.org/abs/2606.12384v1" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 22: OmniDirector camera cloning -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <rect x="0" y="8" width="24" height="16" fill="#6b21a8" fill-opacity="0.45"/>
+      <polygon points="24,12 32,8 32,24 24,20" fill="#6b21a8" fill-opacity="0.45"/>
+      <rect x="40" y="8" width="24" height="16" fill="#6b21a8" fill-opacity="0.30"/>
+      <polygon points="64,12 72,8 72,24 64,20" fill="#6b21a8" fill-opacity="0.30"/>
+      <rect x="0" y="32" width="24" height="16" fill="#6b21a8" fill-opacity="0.18"/>
+      <polygon points="24,36 32,32 32,48 24,44" fill="#6b21a8" fill-opacity="0.18"/>
+      <rect x="40" y="32" width="24" height="16" fill="none"/>
+      <polygon points="64,36 72,32 72,48 64,44" fill="none"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">KLING · OMNIDIRECTOR · 91 UPVOTES</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Kling's OmniDirector enables multi-shot camera cloning without cross-paired training data</h3>
+    <p class="kicker">Hugging Face Daily Papers · 2026-06-15 · <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Yawen Luo and the Kling Team trend as the top Hugging Face Daily Paper with 91 upvotes. The method targets camera-control video generation across multi-shot scenarios without requiring paired training data across different camera configurations.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>"OmniDirector: General Multi-Shot Camera Cloning without Cross-Paired Data" by Yawen Luo and the Kling Team trended as the top Hugging Face Daily Paper of June 15 with 91 upvotes. The paper targets camera-control video generation without requiring paired training data across different camera configurations and generalises the team's earlier CamCloneMaster line of work into multi-shot scenarios. The cross-paired-data requirement has been a structural bottleneck for camera-controlled video generation at long durations because curating paired sequences across camera moves at scale is prohibitive. OmniDirector's no-paired-data formulation directly attacks the data scarcity that has constrained Sora, Veo and Kling for two years.</p>
+
+<h4>Multi-shot direction inside generative video</h4>
+
+<p>The work aligns Kling with Hollywood-style multi-shot camera direction inside generative video models. Camera control has been the structural bottleneck as generative video crosses the 30-second barrier — without controllable camera moves, the output reads as a single long take rather than a directed sequence. The paper does not disclose a public release timeline or whether OmniDirector ships into the Kling product surface immediately, but the same week Kling expanded its KlingTeam Hugging Face profile with UniVideo updates, the cluster of moves reads as Kling positioning for a multi-shot product release in the back half of 2026. The Chinese video-generation lab has been consistently aggressive in publishing research alongside product, and the OmniDirector paper continues that pattern.</p>
+
+<p class="source-footer"><a href="https://huggingface.co/papers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 23: Cluster LOCO -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,16)" stroke="#6b21a8" stroke-width="1" fill="none">
+      <g fill="#6b21a8" fill-opacity="0.45">
+        <circle cx="8" cy="8" r="3"/>
+        <circle cx="14" cy="14" r="3"/>
+        <circle cx="20" cy="9" r="3"/>
+        <circle cx="11" cy="20" r="3"/>
+      </g>
+      <ellipse cx="14" cy="13" rx="14" ry="10" stroke-dasharray="2 2"/>
+      <g fill="#6b21a8" fill-opacity="0.30">
+        <circle cx="62" cy="32" r="3"/>
+        <circle cx="70" cy="38" r="3"/>
+        <circle cx="76" cy="30" r="3"/>
+        <circle cx="64" cy="42" r="3"/>
+      </g>
+      <ellipse cx="69" cy="36" rx="14" ry="10" stroke-dasharray="2 2"/>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">CLUSTER LOCO · UNSUPERVISED IX</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">"Cluster LOCO" returns feature-importance interpretability to unsupervised learning</h3>
+    <p class="kicker">arXiv · 2026-06-15 · <a href="https://arxiv.org/list/stat.ML/recent" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Claire M. He and Genevera I. Allen surface a paper extending the leave-one-covariate-out (LOCO) family to the cluster-interpretation problem — which features drove the formation of specific clusters. Targets a category of interpretability that has lagged supervised-model work in 2026 tooling.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>"Cluster LOCO: Feature Importance For Interpreting Clusters" by Claire M. He and Genevera I. Allen surfaced on arXiv's June 15 stat.ML listing. The paper addresses the underexplored problem of interpreting which features drove the formation of specific clusters and builds on the leave-one-covariate-out (LOCO) family of methods. Most 2026 interpretability work has focused on activation steering and sparse autoencoder features inside large transformers. Cluster LOCO returns interpretability to the classical clustering setting, which remains the workhorse for production embedding analysis and retrieval pipelines underpinning every agent memory system in deployment.</p>
+
+<h4>Why classical interpretability still matters</h4>
+
+<p>The relevance to current agent design is not incidental. The same Monday saw MRAgent propose a Cue-Tag-Content graph memory and APPO propose token-level credit assignment in agentic RL. Both rely on embedding clusters as the underlying primitive. Without a defensible way to interpret why a memory graph collapsed two cues into one cluster, the audit trail through an agent's reasoning is incomplete — and incomplete audit trails are exactly what the cybersecurity professionals' open letter on the Anthropic shutdown the same day identified as the missing surface for defender confidence in agentic systems. Cluster LOCO is a small piece of stat.ML methodology that lands inside a week where the practical question — can we explain what an agent's memory thinks — has policy as well as technical weight.</p>
+
+<p class="source-footer"><a href="https://arxiv.org/list/stat.ML/recent" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 24: Korn Ferry survey -->
+<details class="story" data-tags="trend application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.5" y="0.5" width="119" height="79" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.4"/>
+    <g transform="translate(14,14)" font-family="Georgia,serif" font-weight="700" fill="#6b21a8">
+      <text x="0" y="28" font-size="26" letter-spacing="-0.4">52%</text>
+      <text x="0" y="42" font-size="7" letter-spacing="1.2">ADDING AGENTS</text>
+    </g>
+    <g transform="translate(72,14)" stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <g fill="#6b21a8" fill-opacity="0.45">
+        <circle cx="6" cy="6" r="4"/>
+        <circle cx="20" cy="6" r="4"/>
+        <circle cx="6" cy="20" r="4"/>
+      </g>
+      <g fill="none" stroke="#6b21a8" stroke-dasharray="2 2">
+        <circle cx="20" cy="20" r="4"/>
+      </g>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1">KORN FERRY · 1,674 LEADERS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-trend">Trend</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Korn Ferry 1,674-leader survey: 52% plan to add autonomous AI agents this year</h3>
+    <p class="kicker">Korn Ferry · 2026-06-15 · <a href="https://www.kornferry.com/about-us/press/korn-ferry-research-unveils-top-talent-acquisition-trends-shaping-2026" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Korn Ferry's 2026 Talent Acquisition Trends report finds 84% of leaders plan some AI use this year, 43% plan to substitute human roles with AI, and entry-level jobs are the prime target at 37%. Only 22% believe their leaders can effectively manage mixed human + AI agent teams.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Korn Ferry's 2026 Talent Acquisition Trends report — drawn from a survey of 1,674 global talent leaders — found 52 percent plan to add autonomous AI agents to their teams in 2026, with 84 percent planning some form of AI deployment this year. Forty-three percent of companies plan to substitute human roles with AI, with entry-level jobs the prime target at 37 percent. Only 22 percent of respondents believe their leaders can effectively manage mixed human-plus-AI-agent teams. The report names the emerging practice of assigning identities, access permissions and responsibilities to AI agents inside HR systems — agents are increasingly being treated as headcount, not as software.</p>
+
+<h4>The data turns the labour-displacement debate empirical</h4>
+
+<p>The Korn Ferry number lands inside an active debate. Challenger Gray's count of approximately 88,000 AI-cited US job cuts through May 2026 — already 60 percent above all of 2025 — supports the displacement thesis. Arvind Narayanan and Sayash Kapoor's June rebuttal cites New York WARN-notice data showing zero of 160 filings checked the AI box and pushes back. The 52-percent Korn Ferry print is the first hard primary-research data point showing the agent-as-headcount transition is moving from theory into HR practice. It also intersects with this Monday's Salesforce announcements: the $3.6 billion Fin acquisition and Multi-Agent Orchestration GA both presuppose that customers want to deploy agent teams operationally, and the State of Service finding that AI-agent adoption in customer service rose from 39 percent to 66 percent in one year is the demand side of the Korn Ferry supply-side leader print. The cluster of numbers — 52 percent, 66 percent, 84 percent, 43 percent — does not by itself settle the displacement debate, but it sets the empirical floor for it.</p>
+
+<p class="source-footer"><a href="https://www.kornferry.com/about-us/press/korn-ferry-research-unveils-top-talent-acquisition-trends-shaping-2026" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+
+<footer class="colophon">
+  <div>
+    <strong>Apollo AI News</strong> · Daily · 2026-06-16<br>
+    Generated by a Claude Opus 4.7 agent that searched the web, fetched source articles, and wrote the summaries.
+  </div>
+  <div style="text-align:right">
+    <a href="../index.html">← Back to homepage</a><br>
+    Edition window: 2026-06-15T00:00Z — 2026-06-16T00:00Z (UTC)
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const stories = document.querySelectorAll('details.story');
+  const chips = document.querySelectorAll('.filter-chip');
+  const bigPicture = document.querySelector('.big-picture');
+  const rundownCount = document.getElementById('rundown-count');
+  const filterStatus = document.getElementById('filter-status');
+  const total = stories.length;
+
+  chips.forEach(c => {
+    const tag = c.dataset.filter;
+    const n = tag === 'all' ? total
+      : [...stories].filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+    const countEl = c.querySelector('.count');
+    if (countEl) countEl.textContent = n;
+    if (n === 0 && tag !== 'all') c.setAttribute('disabled', 'disabled');
+  });
+
+  function applyFilter(filter){
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const isHero = s.id === 'hero';
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const visible = filter === 'all' || tags.includes(filter);
+      s.hidden = !visible;
+      if (visible && !isHero) visibleNonHero++;
+    });
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    if (rundownCount){
+      const txt = rundownCount.textContent;
+      const m = txt.match(/^(\d+)\s+stories(.*)$/);
+      if (m) rundownCount.textContent = visibleNonHero + ' stories' + m[2];
+    }
+    if (filterStatus){
+      filterStatus.textContent = 'Showing ' + visibleNonHero + ' of ' + (total - 1) + ' stories' + (filter === 'all' ? '' : ' — ' + filter);
+    }
+    if (filter === 'all'){
+      history.replaceState(null,'',window.location.pathname + window.location.search);
+    } else {
+      history.replaceState(null,'','#filter=' + filter);
+    }
+  }
+
+  chips.forEach(c => {
+    c.addEventListener('click', () => {
+      if (c.hasAttribute('disabled')) return;
+      applyFilter(c.dataset.filter);
+    });
+  });
+
+  const m = window.location.hash.match(/^#filter=(\w+)$/);
+  if (m && document.querySelector('.filter-chip[data-filter="' + m[1] + '"]')) {
+    applyFilter(m[1]);
+  } else {
+    applyFilter('all');
+  }
+
+  const filterBar = document.querySelector('.filter-bar');
+  if (filterBar && 'IntersectionObserver' in window){
+    const sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;top:0;height:1px;width:1px';
+    filterBar.parentNode.insertBefore(sentinel, filterBar);
+    const obs = new IntersectionObserver(([e]) => {
+      filterBar.classList.toggle('is-stuck', !e.isIntersecting);
+    });
+    obs.observe(sentinel);
+  }
+})();
+</script>
+
+</body>
+</html>
