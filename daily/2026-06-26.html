@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-06-26</title>
+<meta name="description" content="Anthropic's June 10 letter to the Senate Banking Committee, surfacing widely on June 25, accuses Alibaba of running 28.8 million Claude exchanges across roughly 25,000 fraudulent accounts between April 22 and June 5 in what it calls the largest known model-distillation attack against the company, sending Alibaba Hong Kong shares to a sixteen-month low. Google promotes computer use from a standalone Gemini 2.5 model to a native tool inside Gemini 3.5 Flash at 78.4 on OSWorld-Verified for one-fifth the GPT-5.5 token price, ByteDance Seed and Renmin University open-source iLLaDA-8B trained on 12 trillion tokens as a fully bidirectional masked diffusion language model, Alibaba's Wan-AI ships Wan-Streamer v0.1 unifying perception, reasoning and generation at 200 millisecond model-side latency, llama.cpp tags eight builds in a single day, Ollama publishes v0.30.11, the Anthropic Python SDK posts v0.112.0 with system.message streaming events and a new refusal category, and Claude Code 2.1.191 ships /rewind across /clear with a thirty-seven percent CPU reduction during streaming. Hugging Face Daily Papers crowns Tencent's multimodal-code-intelligence survey at 263 upvotes, Intern Robotics' EBench at 95, Shanghai Jiao Tong's agent-native memory benchmark at 88, Alibaba's Wan-Streamer at 66, an open-domain DomainShuttle at 55 and StepFun's ShutterMuse at 37. Salesforce launches Agentforce Commerce with three GA agents and ChatGPT-Google-Gemini integrations, Anthropic ships Claude Tag in Slack on Opus 4.8 and reports its internal version writes 65 percent of its product code, Microsoft positions Copilot in Excel for finance, and Epic puts Emmie, Penny and Art in production across 85 percent of its hospital base. Sunrun, Tesla and Renew Home formalize a 16.8 gigawatt virtual power plant aimed at hyperscaler AI campuses, Qualcomm details a China-specific Dragonfly lineup engineered to clear US export thresholds with ByteDance signed, and Forrester finds 90 percent of US marketing agencies on generative AI primarily to cut cost rather than to differentiate.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#6b21a8;
+  --accent-soft:rgba(107,33,168,0.08);
+  --tag-tech:rgba(30,58,138,0.10);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.12);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#d8b4fe;
+    --accent-soft:rgba(216,180,254,0.12);
+    --tag-tech:rgba(147,197,253,0.18);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(45,212,191,0.16);
+    --tag-application-ink:#5eead4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){
+  .story summary{grid-template-columns:1fr;gap:12px}
+  .story-thumb{aspect-ratio:320 / 80;width:100%;height:auto}
+}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-weight:700;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:"Collapse \25B4"}
+.story:not([open]) .expand-control::after{content:"Read in full \25BE"}
+.expand-control{font-size:0;letter-spacing:normal}
+.expand-control::after{font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1 / -1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:0.84rem;color:var(--muted)}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2"  x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2"  y1="28" x2="9"  y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5"  y1="9.5"  x2="14"   y2="14"/>
+          <line x1="42"   y1="42"   x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5"  x2="42"   y2="14"/>
+          <line x1="9.5"  y1="46.5" x2="14"   y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Daily</strong>
+    2026 · 06 · 26
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<details class="story" id="hero" data-tags="safety policy" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-safety">Safety</span>
+        <span class="tag tag-policy">Policy</span>
+      </div>
+      <h1>Anthropic tells the Senate that Alibaba ran 28.8 million Claude conversations through 25,000 fake accounts to distill Mythos Preview, and Hong Kong sells Alibaba to a sixteen-month low</h1>
+      <p class="dek">A June 10 letter from Anthropic to the Senate Banking Committee, made public on June 25 by CNBC and Bloomberg, accuses Alibaba's Qwen lab and affiliated entities of running roughly 28.8 million conversations through about 25,000 fraudulent Claude accounts between April 22 and June 5 to distill capabilities from the Mythos Preview model. Anthropic calls it the largest known distillation attack against the company, names DeepSeek, Moonshot and MiniMax as prior offenders at smaller scale, and points to the Pentagon's addition of Alibaba to its Chinese military companies list earlier this month. Alibaba's Hong Kong shares fell as much as 4.9 percent on the report, hitting a sixteen-month low, with ADRs down 3.99 percent on June 24 and Baidu and Xiaomi also off more than three percent.</p>
+      <p class="kicker">CNBC · Bloomberg · Anthropic letter · 2026-06-25 · <a href="https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#6b21a8" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#6b21a8" stop-opacity="0.05"/>
+        </linearGradient>
+        <pattern id="hgrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0 L0 0 0 24" fill="none" stroke="#6b21a8" stroke-opacity="0.12" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgrid)"/>
+
+      <g fill="#6b21a8" font-family="system-ui,sans-serif" font-weight="700">
+        <text x="28" y="28" font-size="9" letter-spacing="2.4">ANTHROPIC v ALIBABA · LETTER 2026-06-10</text>
+        <text x="28" y="42" font-size="7" letter-spacing="1.6" opacity="0.7">SENATE BANKING · SCOTT · WARREN</text>
+      </g>
+
+      <g transform="translate(28, 76)" font-family="Georgia,serif" fill="#6b21a8">
+        <text x="0" y="0" font-size="68" font-weight="700" letter-spacing="-0.03em">28.8M</text>
+        <text x="0" y="22" font-size="9" letter-spacing="2.2" font-family="system-ui,sans-serif" opacity="0.78" font-weight="700">EXCHANGES · APR 22 → JUN 5</text>
+      </g>
+
+      <g transform="translate(28, 140)" font-family="system-ui,sans-serif" fill="#6b21a8">
+        <rect x="0" y="0" width="184" height="50" fill="url(#hg)" stroke="#6b21a8" stroke-width="0.8"/>
+        <text x="10" y="16" font-size="7" font-weight="700" letter-spacing="1.6" opacity="0.85">ACCOUNT FLEET</text>
+        <text x="10" y="36" font-size="18" font-weight="700" letter-spacing="0.2">~25,000 FAKE</text>
+      </g>
+
+      <g transform="translate(224, 70)" stroke="#6b21a8" stroke-width="1" fill="none">
+        <rect x="0" y="0" width="232" height="172" rx="3" stroke-dasharray="2 3" opacity="0.65"/>
+        <text x="14" y="22" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#6b21a8" letter-spacing="0.4">PRIOR DISTILLATION CAMPAIGNS</text>
+        <line x1="14" y1="30" x2="218" y2="30" stroke="#6b21a8" stroke-width="0.4"/>
+        <g font-family="system-ui,sans-serif" font-size="9" fill="#6b21a8" font-weight="600" letter-spacing="0.3">
+          <text x="14" y="48">› DeepSeek &mdash; ~150,000 exchanges</text>
+          <text x="14" y="64">› Moonshot AI &mdash; ~3.4M exchanges</text>
+          <text x="14" y="80">› MiniMax &mdash; ~13M exchanges</text>
+          <text x="14" y="96">› Alibaba (Qwen) &mdash; ~28.8M (claimed)</text>
+        </g>
+        <line x1="14" y1="108" x2="218" y2="108" stroke="#6b21a8" stroke-width="0.4" stroke-dasharray="2 2"/>
+        <g font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#6b21a8">
+          <text x="14" y="126">9988.HK &minus;4.9%  &middot;  16-mo low</text>
+          <text x="14" y="142">BABA ADR &minus;3.99% (Jun 24)</text>
+        </g>
+        <text x="14" y="158" font-family="system-ui,sans-serif" font-size="7" letter-spacing="1.6" fill="#6b21a8" opacity="0.75">CONTEXT: PENTAGON CMC LIST · JUN 2026</text>
+      </g>
+
+      <g transform="translate(28, 252)" font-family="system-ui,sans-serif" font-weight="700" fill="#6b21a8">
+        <text x="0" y="0" font-size="7" letter-spacing="1.6">DAY 9 · MYTHOS 5 + FABLE 5 GLOBAL SUSPENSION</text>
+        <g stroke="#6b21a8" stroke-width="1.4" stroke-linecap="round" fill="none">
+          <line x1="0" y1="18" x2="380" y2="18"/>
+          <circle cx="40" cy="18" r="3" fill="#6b21a8"/>
+          <circle cx="120" cy="18" r="3" fill="#6b21a8"/>
+          <circle cx="200" cy="18" r="3" fill="#6b21a8"/>
+          <circle cx="280" cy="18" r="3" fill="#6b21a8"/>
+          <circle cx="360" cy="18" r="6" fill="#6b21a8" stroke="#6b21a8"/>
+        </g>
+        <g font-size="7" letter-spacing="0.4" fill="#6b21a8" font-weight="600">
+          <text x="34" y="34">JUN 17</text>
+          <text x="114" y="34">JUN 20</text>
+          <text x="194" y="34">JUN 22</text>
+          <text x="274" y="34">JUN 24</text>
+          <text x="350" y="34">JUN 26</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="full-content">
+    <p>Anthropic sent a five-page letter to Senator Tim Scott of South Carolina and Senator Elizabeth Warren of Massachusetts, the chair and ranking member of the Senate Banking, Housing and Urban Affairs Committee, on June 10, 2026. CNBC and Bloomberg obtained copies of the letter and published their reporting on June 24, with the wave of follow-up coverage and the market reaction landing through June 25. The letter accuses Alibaba and entities affiliated with the company's Qwen large-language-model lab of operating a coordinated campaign to distill capabilities from Anthropic's Mythos Preview model, using roughly 25,000 fraudulent customer accounts to run approximately 28.8 million model exchanges over a six-week window beginning April 22 and ending June 5. Anthropic frames the campaign as the largest distillation attack the company has documented to date and notes that the bulk of the traffic was directed at coding and agentic-reasoning capabilities, precisely the surfaces where Mythos Preview was setting state-of-the-art numbers before its global suspension.</p>
+
+    <h4>The mechanics that Anthropic alleges</h4>
+
+    <p>Distillation, in the technical sense the letter uses, is the process of training a smaller or weaker model to imitate the outputs of a stronger one by harvesting a large corpus of input-output pairs and using them as supervision. The economics are attractive to a follower lab: every dollar Anthropic spent training Mythos Preview is converted into a cheap supervision signal for the imitator, which gets the resulting capability without the research bill. Anthropic's letter lays out a fingerprint pattern across the 25,000-account cohort. The accounts were created with disposable email addresses and prepaid payment methods. They drew traffic in tightly correlated bursts. They concentrated on the same narrow set of evaluation-style prompts that a researcher would use to construct a training corpus rather than the broader distribution of real-world Claude usage. The letter names three prior campaigns Anthropic has tied to other Chinese labs at smaller scale: DeepSeek at roughly 150,000 exchanges, Moonshot AI at 3.4 million, and MiniMax at 13 million. The Alibaba volume, at 28.8 million, is more than double Moonshot and MiniMax combined.</p>
+
+    <blockquote class="pull-quote">"Alibaba has carried out the largest known distillation attack on Anthropic to date."<cite>— Anthropic, letter to Senator Tim Scott and Senator Elizabeth Warren, June 10 2026</cite></blockquote>
+
+    <h4>The policy frame that puts the letter in front of Banking, not Commerce</h4>
+
+    <p>The choice of committee is deliberate. Anthropic could have routed the complaint through the Bureau of Industry and Security at the Department of Commerce, which oversees export controls and which already issued a June 12 directive treating Mythos 5 and Fable 5 as restricted exports. Sending it to Senate Banking instead pushes the question into the investor-protection and capital-markets domain. Alibaba is a US-listed issuer, traded on the New York Stock Exchange as BABA. If a foreign issuer is engaged in conduct that violates the terms of service of US commercial counterparties and that may be tied to a Chinese-military designation, the question of whether US investors should be exposed to it becomes a banking-committee question. The letter explicitly notes that Alibaba "ignored the Trump Administration's warnings" and that the company was added to the Pentagon's Chinese military companies list earlier in June. The committee can do little directly. The framing matters: it invites the Treasury Department's Office of Foreign Assets Control, the SEC, and the cross-agency Outbound Investment Rule machinery into a conversation that has, until now, mostly been Commerce's.</p>
+
+    <h4>The market response and the China-AI selloff</h4>
+
+    <p>Hong Kong sold the news. Alibaba's H-shares fell as much as 4.9 percent on June 25 and closed at a sixteen-month low, taking the year-to-date decline to roughly 33 percent. The US-listed ADRs dropped 3.99 percent on the prior trading session. The broader China-AI complex traded in sympathy: Xiaomi and Baidu both fell more than 3 percent. Bloomberg's coverage framed the selloff as evidence that the cohort of Chinese AI champions, which had rallied on Qwen, DeepSeek and MiniMax releases earlier in the year, now faces a discount for regulatory and access risk that western models do not. Goldman Sachs analysts noted in a separate Friday-morning note that the discount may persist through the next earnings cycle if Beijing's response is muted, and may compound if Beijing retaliates against US firms operating in China.</p>
+
+    <blockquote class="pull-quote">"Chinese technology companies could face tougher hurdles in the global AI race, even though they have continued to offer reasonably priced products."<cite>— Bloomberg analysis of the Alibaba selloff, June 25 2026</cite></blockquote>
+
+    <h4>Inside Anthropic's nine-day product suspension</h4>
+
+    <p>The letter lands in the middle of an unprecedented commercial decision at Anthropic. Mythos 5 and Fable 5 have been suspended for paying customers worldwide for nine consecutive days, since June 17. The trigger described publicly in WIRED's reporting earlier in the week was a White House intervention against SK Telecom's Project Glasswing access, plus a separate Amazon-environment jailbreak. The Alibaba distillation campaign now reads as a third concurrent pressure on the same product surface. The cybersecurity industry open letter pressing Anthropic to restore Mythos access for vetted defenders passed one hundred signatures earlier in the week and now sits at one hundred and seventeen names, including chief information security officers from Nvidia, Google, Adobe, Zoom and Sophos. Anthropic's own product page reframed the suspension on June 19 as a two-track Trusted Access program: Mythos 5 to Glasswing-class cybersecurity partners "in consultation with the US government", and Fable 5 with the biology and chemistry safeguards removed for vetted biomedical research.</p>
+
+    <h4>What the letter does and does not ask for</h4>
+
+    <p>Anthropic does not ask the Senate Banking Committee for a specific remedy. The letter requests "consideration" of the conduct and offers to brief committee staff on the technical evidence. The pattern matches a public-pressure playbook more than a legal action: write to the committee that creates the most reputational risk for the target, share the letter with reporters who cover the committee, let the market and the policy ecosystem do the work. Two structural questions follow. The first is whether Anthropic will pursue a civil claim. Terms-of-service violations of the scale described would, in any other commercial context, support tortious interference or breach-of-contract claims and conceivably Computer Fraud and Abuse Act exposure if the accounts were created with fraudulent payment instruments. The second is whether Alibaba responds with a substantive technical rebuttal or with the kind of denial it issued through Reuters on June 24, calling the letter "speculative and politically motivated." A substantive rebuttal would require Alibaba to produce its own training-data audit. Neither outcome is straightforward, and neither lands in the next twenty-four hours.</p>
+
+    <p class="source-footer"><a href="https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<section class="big-picture" aria-label="Big Picture">
+  <div class="label">Big Picture</div>
+  <div>
+    <p>Anthropic's June 10 letter to the Senate Banking Committee, surfaced widely on June 25 by CNBC and Bloomberg, accuses Alibaba's Qwen lab and affiliated entities of running roughly 28.8 million Claude exchanges through about 25,000 fraudulent accounts between April 22 and June 5 in what the company calls its largest known distillation attack, citing earlier campaigns at DeepSeek, Moonshot AI and MiniMax at 150,000, 3.4 million and 13 million exchanges respectively, and tying the timing to the Pentagon's addition of Alibaba to the Chinese military companies list earlier this month and to the Commerce Department's June 12 Mythos 5 and Fable 5 export-control directive. Hong Kong sold the news, taking Alibaba H-shares down as much as 4.9 percent to a sixteen-month low, the ADRs down 3.99 percent on the prior session, and pulling Xiaomi and Baidu more than three percent lower. The letter lands on day nine of Anthropic's global Mythos 5 and Fable 5 paying-customer suspension, with the cybersecurity industry open letter now at 117 signatures.</p>
+
+    <p>Google promotes computer use from the standalone Gemini 2.5 model launched in October 2025 to a native tool inside Gemini 3.5 Flash, scoring 78.4 on OSWorld-Verified for one-fifth the GPT-5.5 token price (input $1.50 versus $5, output $9 versus $30) and a thirteen-point generational gain over Gemini 3 Flash, with Gemini in Chrome adding a Select from screen tool tied to the new capability and Gemini 3.5 Pro continuing to slip past its June general-availability window. Mistral ships six connector capabilities for Vibe with GA admin scopes, multi-account access, a Connectors Debugger walking an eleven-step verification path and a directory now past sixty integrations including Outlook, Jira, Notion, Linear and Confluence. Claude Code 2.1.191 lets /rewind reach back across a /clear, blocks credential reads inside sandboxes, hardens MCP capability discovery and OAuth, and cuts streaming CPU by roughly 37 percent through 100-millisecond text-update coalescing. OpenAI updates the Codex CLI to 0.142.2 with MCP tool search and macOS proxy support. The Anthropic Python SDK ships v0.112.0 with system.message streaming events, a new refusal category, User Profile ID request headers and a memory-tool parent-directory permissions fix. llama.cpp tags eight builds between 01:21 and 22:49 UTC headlined by SYCL tensor parallelism reporting +20.2 percent prefill and +78.6 percent decode on dual Intel GPUs for Llama-3.3-70B. Ollama publishes v0.30.11 with auto-install of Claude Code and opencode plus thinking-capability detection.</p>
+
+    <p>Hugging Face Daily Papers crowns Tencent's Beyond NL2Code multimodal-code-intelligence survey at 263 upvotes, Intern Robotics' EBench at 95 with a 26-task generalist-manipulation diagnostic across five capability and four generalization dimensions exposing wildly divergent profiles among pi-0, pi-0.5, XVLA and InternVLA-A1 at near-identical scalar success rates, Shanghai Jiao Tong's Are We Ready for an Agent-Native Memory System at 88 with code at OpenDataBox/MemoryData benchmarking twelve agent memory systems across five workloads and eleven datasets, Alibaba Wan-AI's Wan-Streamer v0.1 at 66 collapsing the VAD-ASR-TTS-video cascade into one block-causal Transformer at 200-millisecond model-side and 550-millisecond total latency, an open-domain video-subject DomainShuttle at 55, StepFun's ShutterMuse at 37 with the 130,000-sample CaptureGuide-Dataset for capture-time photography guidance, KAIST AI's MVTrack4Gen at 26 supervising 4D video generation with multi-view point tracks, ByteDance Seed and Renmin University's iLLaDA-8B at 30 trained from scratch on 12 trillion tokens as a fully bidirectional masked diffusion language model with +21.6 BBH and +14.5 MATH over LLaDA, and NVIDIA's Causal-rCM at 17 distilling Wan2.1-1.3B into a two-step block-causal autoregressive student at 84.63 VBench-T2V.</p>
+
+    <p>Salesforce launches Agentforce Commerce with three GA agents (Shopper, Buyer, Merchant), an 88 percent time-to-task reduction on catalog management, native ChatGPT, Google AI Mode and Gemini integrations arriving summer 2026, and 78 of the Top 2000 North American retailers on the platform. Anthropic ships Claude Tag in Slack for Enterprise and Team plans on Opus 4.8 with shared per-channel memory and reports its internal version writes 65 percent of its product team's code, retiring the prior Slack app on August 3. Microsoft positions Copilot in Excel for the era of Frontier Finance across FP&amp;A, accounting, tax, compliance and treasury workflows. Epic puts Emmie patient-facing chatbot, Penny revenue-cycle assistant and Art clinician assistant in production across 85 percent of its hospital base, with Penny already drafting denied-claim appeal letters and a Microsoft-built native AI scribe rolling in. Sunrun, Tesla and Renew Home formalize a 16.8 gigawatt virtual power plant aimed at hyperscaler AI campuses, pooling 7.8 gigawatts of home batteries with more than nine gigawatts of smart thermostats across nine million homes and offering 300 megawatts deployable today in Virginia's Data Center Alley against 41 gigawatts of US datacenter power demand projected for 2026. Qualcomm details a China-specific Dragonfly lineup engineered to clear US export thresholds with a ByteDance custom-silicon deal already signed and China at 46 percent of fiscal-2025 revenue. Forrester finds 90 percent of US marketing agencies on generative AI primarily to cut cost rather than to differentiate, with 63 percent flagging accuracy and bias as the top barrier. Google's AI talent exodus continues, with Jonas Adler and Alexander Pritzel leaving Gemini for Anthropic alongside Nobel laureate John Jumper, while Noam Shazeer's prior move to OpenAI from his Character.AI reverse-acquihire continues to define the cohort.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg"><g fill="#6b21a8"><circle cx="14" cy="9" r="2"/><circle cx="40" cy="9" r="3.4"/><circle cx="66" cy="9" r="2"/></g><g stroke="#6b21a8" stroke-width="0.6"><line x1="20" y1="9" x2="34" y2="9"/><line x1="46" y1="9" x2="60" y2="9"/></g></svg>
+</div>
+
+<section aria-label="More today">
+  <div class="section-head">
+    <h2>More today</h2>
+    <span class="count">25 stories · 2026-06-25 — 2026-06-26</span>
+  </div>
+  <div class="cards" id="cards">
+</content>
+</invoke>
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="120" height="80" fill="none"/>
+    <rect x="14" y="14" width="92" height="52" fill="none" stroke="#6b21a8" stroke-width="0.8"/>
+    <rect x="20" y="22" width="42" height="6" fill="#6b21a8" opacity="0.35"/>
+    <rect x="20" y="32" width="58" height="6" fill="#6b21a8" opacity="0.55"/>
+    <rect x="20" y="42" width="34" height="6" fill="#6b21a8" opacity="0.75"/>
+    <circle cx="92" cy="50" r="9" fill="#6b21a8" opacity="0.18"/>
+    <circle cx="92" cy="50" r="3" fill="#6b21a8"/>
+    <text x="14" y="78" font-family="system-ui,sans-serif" font-size="6" letter-spacing="1.4" fill="#6b21a8" font-weight="700">78.4 OSWORLD</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Google bakes computer use into Gemini 3.5 Flash, scoring 78.4 on OSWorld-Verified at one-fifth the GPT-5.5 token price</h3>
+    <p class="kicker">Tech Times · 2026-06-25 · <a href="https://www.techtimes.com/articles/319071/20260625/gemini-computer-use-baked-gemini-35-flash-screen-control-now-pairs-search-maps.htm" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Google promotes computer use from a standalone Gemini 2.5 model launched in October 2025 to a native tool inside Gemini 3.5 Flash, letting one agent see a screen, query Search and call Maps in a single call.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Google moved computer use out of the experimental Gemini 2.5 Computer Use model, which it launched as a standalone API in October 2025, and into a native tool inside Gemini 3.5 Flash. Until June 25 an agent that needed to see a screen, click a button and also answer a domain question had to route between the computer-use model and the general-purpose Gemini chat model. The native tool collapses that into a single Gemini 3.5 Flash call that composes screen interaction with function calling, Search grounding and Maps lookups. Google reports a score of 78.4 on OSWorld-Verified, the standard benchmark for desktop agents on real applications, placing Gemini 3.5 Flash fifth of sixteen entries on the leaderboard. GPT-5.5 sits one position ahead at 78.7. Claude Fable 5 leads at 85.0 and Claude Opus 4.8 follows at 83.4, both of which are currently behind the Trusted Access gate.</p>
+
+    <p>The pricing comparison is the part that will move workloads. Gemini 3.5 Flash is priced at $1.50 per million input tokens and $9 per million output tokens. GPT-5.5 is $5 input and $30 output. For an agent that spends most of its day reading and acting on a screen, the per-task cost difference is roughly a factor of three to four at parity capability. Google also extended the tool into Gemini in Chrome, which gains a Select from screen affordance that hands a marquee region of the browser viewport to the model as the input frame. Gemini 3.5 Flash itself improved 13.3 points generation over generation, with the prior Gemini 3 Flash scoring 65.1 on OSWorld-Verified. The launch lands on the same day Google quietly retired two Gemini API previews, gemini-3.1-flash-image-preview and gemini-3-pro-image-preview, redirecting traffic to the generally-available Nano Banana 2 and Nano Banana Pro.</p>
+
+    <blockquote class="pull-quote">"Computer use is now a built-in tool supported in Gemini 3.5 Flash, delivering our best performance yet for agentic computer use tasks."<cite>— Google announcement, June 25 2026</cite></blockquote>
+
+    <p>The unanswered question is Gemini 3.5 Pro. Sundar Pichai targeted general availability for June at Google I/O on May 19, and the launch window has now closed without a Pro release. Multiple scoops on June 24 attributed to DeepMind cited dissatisfaction with the current state of the model and pushed the target out of the month. The 3.5 Flash computer-use release reads as Google's compensating move: ship the part of the 3.5 family that is ready, get it priced aggressively, and let agent developers pick it up while the Pro flagship continues to bake.</p>
+
+    <p class="source-footer"><a href="https://www.techtimes.com/articles/319071/20260625/gemini-computer-use-baked-gemini-35-flash-screen-control-now-pairs-search-maps.htm" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.7" fill="none">
+      <rect x="10" y="14" width="22" height="22"/>
+      <rect x="40" y="14" width="22" height="22"/>
+      <rect x="70" y="14" width="22" height="22"/>
+      <rect x="10" y="44" width="22" height="22"/>
+      <rect x="40" y="44" width="22" height="22"/>
+      <rect x="70" y="44" width="22" height="22"/>
+    </g>
+    <g fill="#6b21a8" opacity="0.6"><circle cx="21" cy="25" r="3"/><circle cx="51" cy="25" r="3"/><circle cx="81" cy="25" r="3"/><circle cx="21" cy="55" r="3"/><circle cx="51" cy="55" r="3"/><circle cx="81" cy="55" r="3"/></g>
+    <line x1="100" y1="14" x2="100" y2="66" stroke="#6b21a8" stroke-width="1.4"/>
+    <text x="105" y="44" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#6b21a8">60+</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Mistral ships connector controls in Vibe with admin scopes, an eleven-step debugger and a directory past sixty integrations</h3>
+    <p class="kicker">Mistral AI · 2026-06-25 · <a href="https://mistral.ai/news/more-control-over-connectors/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Mistral's June 25 engineering post lands six connector capabilities for the Vibe agent platform with multi-account access, scoped API keys and a Connectors Debugger going GA, alongside the simultaneously-tagged mistral-vibe PyPI build.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Mistral's Vibe agent platform gets the connector-side upgrade enterprises have been waiting for. Six capabilities ship together. Enriched admin controls move to GA, letting administrators block any write action or specific calls like delete_file on a connected knowledge base. API keys with connector scopes move to GA, so a service account can be issued credentials that only see Notion read endpoints, for example, and not the rest of an organization's Mistral surface. Multi-account connectors move to GA, fixing the long-standing case where a user with two Gmail accounts could only attach one. The Connectors Debugger enters Public Preview, walking through an eleven-step verification process that surfaces what the connector sees and what it cannot. Connectors in Vibe Code move to GA. Connectors in Workflows enters Public Preview. The directory now spans more than sixty integrations.</p>
+
+    <p>The functional headline is that async agents now reach Outlook, Jira, Notion, Linear and Confluence through the new connector layer. The administrative headline is that Mistral has built the two-permissions-rule architecture that big buyers ask for: a connector respects both the permissions in the source platform and the controls an administrator sets in Mistral Studio or Vibe. The two layers compose, with the more restrictive winning. The mistral-vibe Python package was tagged on PyPI on June 25 alongside the documentation post, lining up the SDK and the platform release.</p>
+
+    <blockquote class="pull-quote">"A connector should respect two sets of rules at once: the permissions already set in the source platform, and the controls your administrators set in Mistral Studio or Vibe."<cite>— Mistral AI engineering team, June 25 2026</cite></blockquote>
+
+    <p>The release reads as Mistral's bid to land at the same enterprise procurement table as Anthropic's Claude Tag in Slack, which shipped two days earlier, and OpenAI's recent connector work for ChatGPT Business. Mistral has the structural advantage that European customers continue to favor a European-headquartered provider on data-residency grounds. The connector-controls release operationalizes that preference by making the European-procurement question audit-friendly: an administrator can prove to a compliance reviewer which calls a connector has been blocked from making.</p>
+
+    <p class="source-footer"><a href="https://mistral.ai/news/more-control-over-connectors/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 18 60 L 18 30 Q 18 22 26 22 L 90 22" fill="none" stroke="#6b21a8" stroke-width="1.2"/>
+    <polygon points="86,18 96,22 86,26" fill="#6b21a8"/>
+    <text x="22" y="46" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#6b21a8" letter-spacing="-0.02em">/rewind</text>
+    <g fill="#6b21a8" opacity="0.55">
+      <rect x="64" y="48" width="6" height="14"/>
+      <rect x="74" y="42" width="6" height="20"/>
+      <rect x="84" y="36" width="6" height="26"/>
+      <rect x="94" y="30" width="6" height="32"/>
+    </g>
+    <text x="64" y="72" font-family="system-ui,sans-serif" font-size="6" letter-spacing="0.8" fill="#6b21a8" font-weight="700">CPU &minus;37%</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Claude Code 2.1.191 ships /rewind across /clear, sandbox credential lockdown, and a 37 percent CPU cut on streaming responses</h3>
+    <p class="kicker">DevelopersIO · Anthropic · 2026-06-25 · <a href="https://dev.classmethod.jp/en/articles/20260625-cc-updates-v2-1-191/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anthropic's coding harness lands a broad reliability and performance update on June 25, letting /rewind reach back across a /clear, blocking credential reads inside sandboxes, and cutting streaming CPU by roughly 37 percent through 100-millisecond text-update coalescing.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Claude Code's June 25 release covers the work between v2.1.187 on June 23 and v2.1.191 on June 24-25, with v2.1.188 and v2.1.189 skipped on the npm registry. The headline behavior change is that /rewind now resumes a conversation from before /clear was run. Until this build, /clear was effectively destructive: the conversation was gone, and the only recovery path was to reissue the prompts. /rewind crossing the clear boundary makes the command honest about what it does, which is hide the conversation from the model context rather than delete it.</p>
+
+    <p>The security change is a new sandbox.credentials setting. When enabled, the sandbox prevents reads of credential files and secret environment variables from inside the sandboxed process. This closes a class of supply-chain attacks where a tool call would read a developer's AWS or GitHub credentials from inside the sandbox and exfiltrate them. Organization-level model restrictions now apply across the model picker, command flags and configuration, removing the previous gap where an enterprise allow-list could be bypassed by command-line flag. The performance change is the 37 percent CPU reduction on streaming, achieved by coalescing text-delta updates into 100-millisecond windows rather than rendering each delta individually.</p>
+
+    <p>MCP server reliability got a broad pass. Capability discovery calls (tools/list, prompts/list, resources/list) now retry transient network errors with exponential backoff. OAuth discovery and token requests retry once after network issues. Headless environments skip the browser popup that previously stalled remote login. The build also fixes five-minute MCP tool hangs, Korean and CJK character corruption, hooks with comma-separated matchers failing silently, and the long-standing bug where the managed setting forceRemoteSettingsRefresh did not take effect, leaving stale proxy responses cached.</p>
+
+    <blockquote class="pull-quote">"Reduced CPU usage during streaming responses by approximately 37 percent by coalescing text updates to 100ms."<cite>— Claude Code 2.1.191 release notes</cite></blockquote>
+
+    <p>The release lands two days after Anthropic shipped Claude Tag in Slack on Opus 4.8, which the company said internally writes 65 percent of its product team's code. Claude Code's own ergonomics are a precondition for that internal usage scaling outside Anthropic.</p>
+
+    <p class="source-footer"><a href="https://dev.classmethod.jp/en/articles/20260625-cc-updates-v2-1-191/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="14" y="34" font-family="Georgia,serif" font-size="28" font-weight="700" fill="#6b21a8" letter-spacing="-0.05em">codex</text>
+    <line x1="14" y1="42" x2="106" y2="42" stroke="#6b21a8" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1.4">
+      <text x="14" y="54">0.142.2</text>
+      <text x="14" y="66">MCP &middot; PROXY &middot; UI</text>
+    </g>
+    <circle cx="100" cy="60" r="5" fill="none" stroke="#6b21a8" stroke-width="1.4"/>
+    <circle cx="100" cy="60" r="1.6" fill="#6b21a8"/>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">OpenAI ships Codex CLI 0.142.2 with MCP tool search and macOS proxy support, day after GPT-5.5 Instant quality refresh</h3>
+    <p class="kicker">Releasebot · 2026-06-25 · <a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">OpenAI's June 25 Codex release adds MCP tool search, macOS proxy support, dark-mode plugin logos, richer safety-buffering UI and clearer error guidance for expired Amazon Bedrock credentials.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>OpenAI tagged Codex 0.142.2 on June 25, the day after the GPT-5.5 Instant quality refresh on June 24. The MCP changes are the headline. Codex now searches across registered MCP servers for a tool that matches a request, rather than requiring the caller to know which server provides which tool. The change is small in commit size and large in ergonomics: an agent that has a dozen MCP servers connected no longer has to enumerate them. macOS proxy support fixes the long-standing case where users behind a corporate proxy could not get Codex to authenticate through the system proxy stack on Macs.</p>
+
+    <p>The smaller fixes are the kind that accumulate inside enterprise rollouts. Remote stdio MCP servers now correctly handle absolute working directories across operating systems. The plugin logos render in dark mode. Validation error messages are richer. Expired Amazon Bedrock credentials now produce an actionable recovery message rather than a generic stack trace. The safety-buffering UI gives the user visibility into where in the pipeline a response is being held back.</p>
+
+    <p>The release lands against a stalled GPT-5.6 launch window. Polymarket has collapsed June-22-to-28 odds from 83 percent earlier this month to 18 percent, with July now pricing near 94 percent. TestingCatalog reported on June 24 that some Pro subscribers have early GPT-5.6 and GPT-5.6 Pro builds visible, alongside a 1.5-million-token context window and faster Codex response times. The Codex CLI improvements read as the part of the GPT-5.6 launch that ships on its own clock rather than waiting for the model.</p>
+
+    <blockquote class="pull-quote">"GPT-5.6 has been delayed and will no longer release this week. New target is mid-July."<cite>— leo (@synthwavedd) summarizing scoops on June 24 2026</cite></blockquote>
+
+    <p class="source-footer"><a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="14" y="14" width="92" height="52" fill="none" stroke="#6b21a8" stroke-width="0.8"/>
+    <text x="20" y="30" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6b21a8" letter-spacing="0.8">v0.112.0</text>
+    <g font-family="system-ui,sans-serif" font-size="5.5" fill="#6b21a8" font-weight="600" letter-spacing="0.4">
+      <text x="20" y="42">+ system.message stream</text>
+      <text x="20" y="50">+ refusal category</text>
+      <text x="20" y="58">+ user profile ID hdr</text>
+    </g>
+    <circle cx="98" cy="22" r="4" fill="#6b21a8"/>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Anthropic Python SDK v0.112.0 adds system.message streaming events, a refusal category and User Profile ID headers</h3>
+    <p class="kicker">GitHub · anthropics/anthropic-sdk-python · 2026-06-25 · <a href="https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.112.0" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anthropic ships v0.112.0 adding a system.message streaming event, a new refusal category and a User Profile ID request header, alongside a memory-tool parent-directory permissions fix.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Anthropic tagged v0.112.0 of the Python SDK on June 25. The feature commit adds client support for system.message streaming events. Until this build, the SDK exposed message events for assistant turns but not for the system-message-level events that the API has begun emitting for refusal-fallback middleware and policy explanations. The bug fix routes the memory tool to create parent directories with correct permissions, closing a case where a tool call that wrote into a deep path would fail silently if any intermediate directory was missing. Two API-support additions sit alongside: a new refusal category and a User Profile ID request header.</p>
+
+    <p>The refusal category addition lines up with the Mythos and Fable suspension architecture. As Anthropic moves toward a Trusted Access program, the SDK has to expose enough refusal granularity that clients can distinguish between policy-driven refusals, model-uncertainty refusals and customer-policy refusals. The User Profile ID header gives enterprise customers a way to attribute usage to specific end-users for compliance and metering purposes without baking the identifier into the prompt body. Both are infrastructure for the broader Trusted Access posture.</p>
+
+    <p>v0.112.0 follows v0.111.0 and v0.110.0 from June 18, which added the date-pinned code_execution_20260120 tool and refusal-fallback middleware tagging. The SDK has been on a roughly weekly cadence through June, tracking the same period in which Claude Code itself has shipped v2.1.187 through v2.1.191.</p>
+
+    <blockquote class="pull-quote">"Add support for system.message streaming events."<cite>— anthropic-sdk-python v0.112.0 changelog</cite></blockquote>
+
+    <p class="source-footer"><a href="https://github.com/anthropics/anthropic-sdk-python/releases/tag/v0.112.0" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.7" fill="none" opacity="0.6">
+      <line x1="14" y1="20" x2="106" y2="20"/>
+      <line x1="14" y1="28" x2="106" y2="28"/>
+      <line x1="14" y1="36" x2="106" y2="36"/>
+      <line x1="14" y1="44" x2="106" y2="44"/>
+      <line x1="14" y1="52" x2="106" y2="52"/>
+      <line x1="14" y1="60" x2="106" y2="60"/>
+      <line x1="14" y1="68" x2="106" y2="68"/>
+      <line x1="14" y1="76" x2="106" y2="76"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5" font-weight="700">
+      <text x="78" y="19">b9785</text><text x="78" y="27">b9786</text><text x="78" y="35">b9787</text><text x="78" y="43">b9788</text><text x="78" y="51">b9789</text><text x="78" y="59">b9790</text><text x="78" y="67">b9801</text><text x="78" y="75">b9802</text>
+    </g>
+    <rect x="14" y="14" width="56" height="62" fill="#6b21a8" opacity="0.10"/>
+    <text x="18" y="48" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#6b21a8">8 BUILDS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">llama.cpp tags eight builds in a single day, lands SYCL tensor parallelism at +20.2 percent prefill and +78.6 percent decode on dual Intel GPUs</h3>
+    <p class="kicker">GitHub · ggml-org/llama.cpp · 2026-06-25 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">llama.cpp tags builds b9785 through b9802 between 01:21 and 22:49 UTC, headlined by a SYCL tensor-parallel split-mode for dual-Intel-GPU setups using ring all-reduce with BF16 compression.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>The llama.cpp release shelf moved more than once on June 25. Eight tagged builds went out between 01:21 and 22:49 UTC. The headline change is b9788's SYCL tensor parallelism through a new --split-mode tensor flag. The implementation uses a ring all-reduce with BF16 compression of the activations. The reported speedup on Llama-3.3-70B is +20.2 percent on prefill and +78.6 percent on decode against the prior split-mode-row default. The decode number is the load-bearing one for chat workloads: token-per-second on the autoregressive loop is what users feel. Intel Arc owners with dual cards are the immediate beneficiaries; the same code path will lift other SYCL targets as drivers catch up.</p>
+
+    <p>The smaller fixes are the kind that accumulate inside a fast-moving runtime. b9785 ships chat-capability security hardening. b9786 adds OpenCL support for non-contiguous rows in norm operations, important for tensor-parallel layouts. b9787 fixes failed unit tests for conv_3d operations in the SYCL backend. b9789 patches a quantizing-MoE with multi-token-prediction regression. The b9802 binary release ships 27 assets covering macOS arm64 and x64, Linux, Windows CUDA 12 and 13, Vulkan, ROCm, OpenVINO, SYCL and Android. The underlying commit beac530 is GPG-verified by GitHub.</p>
+
+    <blockquote class="pull-quote">"Llama-3.3-70B shows +20.2% prefill and +78.6% decode improvements."<cite>— llama.cpp build b9788 changelog</cite></blockquote>
+
+    <p>The release pace puts llama.cpp at eight builds in a single day against typical low-single-digit cadence. The trigger appears to be the SYCL tensor-parallel work landing alongside ordinary daily fixes; the maintainers chose to tag each as they merged rather than batch. For downstream packagers like Ollama and LM Studio, the rapid-fire tagging means a pull this week will likely land on different runtime behavior depending on which build the wrapping project pinned to.</p>
+
+    <p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="42" cy="40" r="22" fill="none" stroke="#6b21a8" stroke-width="1.4"/>
+    <circle cx="42" cy="40" r="14" fill="none" stroke="#6b21a8" stroke-width="0.8" opacity="0.6"/>
+    <circle cx="42" cy="40" r="6" fill="#6b21a8"/>
+    <text x="74" y="34" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6b21a8">v0.30.11</text>
+    <text x="74" y="48" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="0.6" fill="#6b21a8" font-weight="700">+ THINKING DETECT</text>
+    <text x="74" y="58" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="0.6" fill="#6b21a8" font-weight="700">+ AUTO-INSTALL CC</text>
+    <text x="74" y="68" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="0.6" fill="#6b21a8" font-weight="700">+ MLX SPEC DECODE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Ollama v0.30.11 adds thinking-capability detection, auto-install of Claude Code and opencode, MLX speculative-decoding fix</h3>
+    <p class="kicker">GitHub · ollama/ollama · 2026-06-25 · <a href="https://github.com/ollama/ollama/releases" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Ollama publishes the v0.30.11 pre-release on June 25 with agent-tooling integrations that auto-install Claude Code and opencode when missing, plus MLX speculative decoding fixes and CUDA sm_86 support.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Ollama's v0.30.11 pre-release lands the agent-tool installation cooperative behavior. When a user invokes Claude Code or opencode through Ollama and the underlying tool is missing, Ollama now installs it rather than failing with a misleading error. The thinking-capability detection in the opencode integration lets Ollama route requests to a thinking-enabled path when the model supports it and to the regular path otherwise, eliminating the per-model conditional the user used to write themselves.</p>
+
+    <p>The platform fixes are the part that will land in enterprise rollouts. Vulkan GPU classification on Windows hybrid graphics systems is fixed; the prior behavior was to misclassify integrated and discrete GPUs in laptops with both, leading to inference running on the wrong device. The MLX runner gets a speculative-decoding fix that was producing inconsistent token-per-second numbers on Apple Silicon. CUDA sm_86 architecture support adds older Ampere-generation cards (RTX 3060, A40 generation) back into the compatibility matrix. The llm runtime preserves generation headroom for shifted prompts, fixing the case where a long prompt being trimmed at the front would leave too little context budget at the back. The release tracks llama.cpp engine build 9672 carried over from v0.30.10 on June 17, with the eight new llama.cpp builds tagged today not yet integrated.</p>
+
+    <blockquote class="pull-quote">"llm: preserve generation headroom for shifted prompts."<cite>— Ollama v0.30.11 changelog</cite></blockquote>
+
+    <p class="source-footer"><a href="https://github.com/ollama/ollama/releases" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="14" y="36" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#6b21a8" letter-spacing="-0.04em">263</text>
+    <text x="14" y="48" font-family="system-ui,sans-serif" font-size="6" letter-spacing="2" font-weight="700" fill="#6b21a8" opacity="0.7">UPVOTES &middot; TOP</text>
+    <g stroke="#6b21a8" stroke-width="0.8" fill="none">
+      <rect x="76" y="14" width="32" height="8"/>
+      <rect x="76" y="26" width="32" height="8"/>
+      <rect x="76" y="38" width="32" height="8"/>
+      <rect x="76" y="50" width="32" height="8"/>
+      <rect x="76" y="62" width="32" height="8"/>
+    </g>
+    <g fill="#6b21a8" opacity="0.55">
+      <rect x="78" y="16" width="14" height="4"/>
+      <rect x="78" y="28" width="22" height="4"/>
+      <rect x="78" y="40" width="10" height="4"/>
+      <rect x="78" y="52" width="28" height="4"/>
+      <rect x="78" y="64" width="18" height="4"/>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Hugging Face Daily Papers crowns Tencent's Beyond NL2Code multimodal-code-intelligence survey at 263 upvotes leading 32 papers on June 25</h3>
+    <p class="kicker">Hugging Face Daily Papers · 2026-06-25 · <a href="https://huggingface.co/papers?date=2026-06-25" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The June 25 Daily Papers feed surfaces 32 papers led by Tencent's 263-upvote NL2Code survey organizing the field into four domains, with Intern Robotics EBench at 95 and Shanghai Jiao Tong's agent-memory benchmark at 88.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>The Tencent-led survey, Beyond NL2Code: A Structured Survey of Multimodal Code Intelligence, takes the top of the Hugging Face Daily Papers leaderboard for June 25 at 263 upvotes. Nineteen co-authors organize the multimodal-code-generation field into four domains: GUI generation, scientific visualization, structured graphics and frontier frameworks. The argument is that the standard NL2Code framing collapses too much: a model that can generate a Python script for a numerical computation is not the same model that can generate the layout-aware code for a dashboard, and the benchmarks that have grown up around the old NL2Code framing systematically underweight the second case. The survey proposes a taxonomy that splits the work along axes the existing leaderboards do not surface.</p>
+
+    <p>The runner-up of the day is Intern Robotics' EBench at 95 upvotes. It diagnoses generalist mobile manipulation across 26 tasks tagged along five capability dimensions (long-horizon, dexterous-and-precise, mobile, spatial, vision-language) and four generalization dimensions (object, scene, instruction, embodiment). The headline finding is that models with near-identical scalar success rates exhibit strikingly different capability profiles: pi-0.5 leads on retention from train to test, InternVLA-A1 dominates mobile manipulation but collapses on dexterous, and XVLA owns a disjoint set of atomic skills. The implication is that the existing single-scalar leaderboard hides which model is right for which task.</p>
+
+    <p>Shanghai Jiao Tong's Are We Ready For An Agent-Native Memory System at 88 upvotes treats agent memory as a first-class data-management object and benchmarks twelve memory systems plus two baselines across five workloads on eleven datasets. The team decomposes agent memory into representation-and-storage, extraction, retrieval-and-routing and maintenance modules. The headline finding is that no architecture wins everywhere: graph-based methods excel on single-hop factual recall but struggle with temporal reasoning, localized maintenance is more cost-efficient than global reorganization, and conservative consolidation beats aggressive summarization. Code is at github.com/OpenDataBox/MemoryData.</p>
+
+    <blockquote class="pull-quote">"Correctness depends not only on syntax but also on layout, data semantics, interaction behavior, and domain-specific constraints."<cite>— Xuanle Zhao et al., Beyond NL2Code (arXiv:2606.15932)</cite></blockquote>
+
+    <p>The day's open-source releases include the Wan-Streamer v0.1 unified Transformer (66 upvotes), the iLLaDA-8B diffusion language model (30 upvotes), StepFun's ShutterMuse plus the 130,000-sample CaptureGuide-Dataset (37), KAIST AI's MVTrack4Gen for 4D video generation (26), NVIDIA's Causal-rCM distillation recipe (17) and Meta AI's Autodata agentic data scientist (8). Several open-domain video-subject papers, a Domain-MoT design called DomainShuttle at 55 and the OpenDataBox MemoryData benchmark code drop sit alongside.</p>
+
+    <p class="source-footer"><a href="https://huggingface.co/papers?date=2026-06-25" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.6" fill="none">
+      <rect x="14" y="14" width="16" height="14"/>
+      <rect x="36" y="14" width="16" height="14"/>
+      <rect x="58" y="14" width="16" height="14"/>
+      <rect x="80" y="14" width="16" height="14"/>
+      <rect x="14" y="34" width="16" height="14"/>
+      <rect x="36" y="34" width="16" height="14"/>
+      <rect x="58" y="34" width="16" height="14"/>
+      <rect x="80" y="34" width="16" height="14"/>
+      <rect x="14" y="54" width="16" height="14"/>
+      <rect x="36" y="54" width="16" height="14"/>
+      <rect x="58" y="54" width="16" height="14"/>
+      <rect x="80" y="54" width="16" height="14"/>
+    </g>
+    <g fill="#6b21a8" opacity="0.6">
+      <rect x="14" y="14" width="16" height="14"/>
+      <rect x="58" y="14" width="16" height="14"/>
+      <rect x="36" y="34" width="16" height="14"/>
+      <rect x="80" y="34" width="16" height="14"/>
+      <rect x="14" y="54" width="16" height="14"/>
+      <rect x="58" y="54" width="16" height="14"/>
+    </g>
+    <text x="100" y="78" font-family="system-ui,sans-serif" font-size="6" letter-spacing="0.4" fill="#6b21a8" font-weight="700">26 TASKS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Intern Robotics EBench evaluates four generalist manipulation models across 26 tasks, exposes profile divergence at near-identical success rates</h3>
+    <p class="kicker">arXiv · Hugging Face Papers · 2026-06-25 · <a href="https://arxiv.org/abs/2606.18239" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">EBench replaces single-scalar success rates with a 26-task diagnostic battery across five capability and four generalization dimensions, ranking pi-0, pi-0.5, XVLA and InternVLA-A1 with sharply different profiles.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Intern Robotics' EBench paper, arXiv 2606.18239, takes 95 upvotes on Hugging Face Daily Papers for June 25. Lead author Ning Gao, with Jinliang Zheng, Xing Gao, Haoxiang Ma, Hanqing Wang and twenty other co-authors, argues that the current generalist-manipulation leaderboards conceal more than they reveal. The headline metric, scalar success rate, can be identical across two models that fail in entirely different ways. EBench replaces the scalar with 26 manipulation tasks across nine scene categories, tagged along five capability dimensions (long-horizon, dexterous-and-precise, mobile, spatial, vision-language) and four generalization dimensions (object, scene, instruction, embodiment).</p>
+
+    <p>The four models evaluated are pi-0, pi-0.5, XVLA and InternVLA-A1. pi-0.5 posts the highest aggregate test success rate and the best train-to-test retention, which is the metric that predicts production performance. InternVLA-A1 dominates the mobile-manipulation sub-leaderboard but collapses on dexterous-and-precise tasks. XVLA shows strengths on a disjoint set of atomic skills, suggesting it would compose well with another model rather than replacing one. The capability-profile divergence is the part that lands.</p>
+
+    <blockquote class="pull-quote">"Models with near success rates exhibit strikingly different capability profiles."<cite>— EBench paper, arXiv 2606.18239</cite></blockquote>
+
+    <p>The practical consequence is that picking a generalist manipulation model is becoming a per-deployment question rather than a leaderboard question. A warehouse pick-and-place workload should pick InternVLA-A1. A surgical-assist or precision-assembly workload should not. The benchmark itself, with annotations and the evaluation harness, is being open-sourced alongside the paper.</p>
+
+    <p class="source-footer"><a href="https://arxiv.org/abs/2606.18239" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.7" fill="none">
+      <rect x="14" y="20" width="92" height="44" rx="2"/>
+      <line x1="37" y1="20" x2="37" y2="64"/>
+      <line x1="60" y1="20" x2="60" y2="64"/>
+      <line x1="83" y1="20" x2="83" y2="64"/>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="0.4" fill="#6b21a8" font-weight="700">
+      <text x="18" y="32">REPR</text>
+      <text x="41" y="32">EXTR</text>
+      <text x="64" y="32">RTRV</text>
+      <text x="87" y="32">MAINT</text>
+    </g>
+    <g fill="#6b21a8" opacity="0.45">
+      <rect x="18" y="38" width="15" height="18"/>
+      <rect x="41" y="42" width="15" height="14"/>
+      <rect x="64" y="36" width="15" height="20"/>
+      <rect x="87" y="44" width="15" height="12"/>
+    </g>
+    <text x="14" y="76" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="1.4" fill="#6b21a8" font-weight="700">12 SYS &middot; 5 WORKLOADS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Shanghai Jiao Tong's Are We Ready For An Agent-Native Memory System benchmarks twelve memory architectures across eleven datasets</h3>
+    <p class="kicker">arXiv · 2026-06-25 · <a href="https://arxiv.org/abs/2606.24775" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Wei Zhou and team at SJTU treat agent memory as a first-class data-management object, benchmarking twelve systems plus two baselines across five workloads spanning eleven datasets to argue no architecture wins everywhere.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>arXiv 2606.24775 takes the day's top organic-paper slot at 88 upvotes. Authors Wei Zhou, Xuanhe Zhou, Shaokun Han, Hongming Xu, Guoliang Li, Zhiyu Li, Feiyu Xiong and Fan Wu decompose agent memory into four modules: representation and storage, extraction, retrieval and routing, and maintenance. The benchmark evaluates twelve representative agent memory systems plus two reference baselines across five workloads on eleven datasets. The ablations quantify representation fidelity, retrieval precision, update correctness and long-horizon stability.</p>
+
+    <p>The findings cluster into three claims that should shape downstream agent-design work. First, graph-based methods excel in single-hop factual recall but struggle with temporal reasoning. The implication is that an agent that needs to answer "when did the user last say X" should not lean on the graph backbone alone. Second, localized maintenance (updating the affected memory neighborhood) is more cost-efficient than global reorganization (rebuilding the structure from scratch). Third, conservative consolidation (keeping more raw evidence around) outperforms aggressive summarization, which loses too much context to recover later. Hybrid filtering approaches remain most competitive across diverse workloads.</p>
+
+    <blockquote class="pull-quote">"No single architecture dominates across all scenarios; instead, effectiveness depends heavily on how well the memory structure aligns with the workload bottleneck."<cite>— Wei Zhou et al., Are We Ready For An Agent-Native Memory System</cite></blockquote>
+
+    <p>Code and the evaluation pipeline are at github.com/OpenDataBox/MemoryData with a companion awesome-agent-memory paper list. The benchmark and the paper land at the moment that agent-memory products (Mem0, Letta, OpenAI Memory, Anthropic shared-channel Claude Tag memory) have begun shipping at production scale, giving practitioners an external evaluation surface rather than self-reported numbers.</p>
+
+    <p class="source-footer"><a href="https://arxiv.org/abs/2606.24775" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.8" fill="none">
+      <path d="M 14 56 Q 30 30 60 40 Q 90 50 106 24" />
+    </g>
+    <circle cx="60" cy="40" r="3" fill="#6b21a8"/>
+    <text x="14" y="20" font-family="system-ui,sans-serif" font-size="6" letter-spacing="1.6" font-weight="700" fill="#6b21a8">PERCEPTION → REASON → GEN</text>
+    <text x="14" y="76" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6b21a8">200 ms / 550 ms</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Alibaba's Wan-AI ships Wan-Streamer v0.1, collapsing VAD-ASR-TTS-video cascades into one block-causal Transformer at 200 ms model-side latency</h3>
+    <p class="kicker">arXiv · Wan-AI · 2026-06-25 · <a href="https://arxiv.org/abs/2606.25041" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Wan-AI releases an end-to-end real-time interactive foundation model that processes language, audio and video as input and output in a single block-causal Transformer, replacing the cascaded VAD plus ASR plus LLM plus TTS plus video pipeline.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>arXiv 2606.25041, lead author Lianghua Huang with 23 co-authors from Alibaba's Wan-AI team, lands at 66 upvotes on Hugging Face Daily Papers for June 25. The contribution is architectural. Real-time interactive agents until now have run a cascaded pipeline: voice-activity detection decides when the user is speaking, an ASR transcribes, an LLM reasons, a TTS speaks, a video model animates an avatar. Each stage adds latency and accumulates error. Wan-Streamer v0.1 replaces the cascade with a single Transformer that takes language, audio and video as input and emits all three as output.</p>
+
+    <p>The latency numbers are the load-bearing claim. Model-side response latency is approximately 200 ms. Total interaction latency, accounting for the roughly 350 ms of network transmission, is approximately 550 ms. That is below the threshold at which conversational turn-taking feels unnatural. The streaming unit duration is 160 ms at 25 frames per second, which is the rate at which audio and video frames are emitted into the channel for native cross-modal synchronization. Output runs at 192p resolution under full-duplex operation. The architecture uses block-causal attention with streamable causal encoders and decoders. Full-duplex behavior, which lets the agent produce listening cues like nods or short backchannels while the user is still speaking, depends on the unified causal stack rather than a turn-taking scheduler bolted on top.</p>
+
+    <blockquote class="pull-quote">"Full-duplex capability, where agents produce listening behaviors while users speak, demands unified causal modeling."<cite>— Wan-AI team, Wan-Streamer v0.1</cite></blockquote>
+
+    <p>Wan-Streamer v0.1 is the latest in Wan-AI's video-generation series, sitting alongside Wan2.2 Animate-14B, S2V-14B, T2V-A14B and TI2V-5B. Weights for the streaming model are not yet on the Hugging Face Wan-AI organization page; the paper is the only public artifact at the moment. The economic implication is that the agent-companion product category, which has been split between voice-only stacks (Sesame, Hume) and video-avatar stacks (HeyGen, Synthesia), now has a unified architecture that the Chinese hyperscalers can ship into the consumer market without licensing either stack.</p>
+
+    <p class="source-footer"><a href="https://arxiv.org/abs/2606.25041" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="14" y="36" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#6b21a8" letter-spacing="-0.04em">12T</text>
+    <text x="14" y="48" font-family="system-ui,sans-serif" font-size="6" letter-spacing="1.6" font-weight="700" fill="#6b21a8" opacity="0.7">PRE-TRAINING TOKENS</text>
+    <g fill="#6b21a8" opacity="0.5">
+      <circle cx="68" cy="22" r="3.5"/>
+      <circle cx="78" cy="22" r="3.5"/>
+      <circle cx="88" cy="22" r="3.5"/>
+      <circle cx="98" cy="22" r="3.5"/>
+      <circle cx="68" cy="34" r="3.5"/>
+      <circle cx="78" cy="34" r="3.5"/>
+      <circle cx="88" cy="34" r="3.5"/>
+      <circle cx="98" cy="34" r="3.5"/>
+    </g>
+    <text x="68" y="70" font-family="system-ui,sans-serif" font-size="6" letter-spacing="0.4" fill="#6b21a8" font-weight="700">+21.6 BBH</text>
+    <text x="68" y="76" font-family="system-ui,sans-serif" font-size="6" letter-spacing="0.4" fill="#6b21a8" font-weight="700">+14.5 MATH</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">ByteDance Seed and Renmin University open-source iLLaDA-8B, a fully bidirectional masked diffusion LM trained from scratch on twelve trillion tokens</h3>
+    <p class="kicker">arXiv · GSAI-ML · 2026-06-25 · <a href="https://arxiv.org/abs/2606.25331" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">iLLaDA scales the original LLaDA recipe to twelve trillion pre-training tokens plus a 25-billion-token instruction corpus for twelve epochs, posting +21.6 BBH and +14.5 MATH over LLaDA and shipping base and instruct weights on Hugging Face under Apache 2.0.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>arXiv 2606.25331, lead author Shen Nie with Qiyang Min, Shaoxuan Xu, Zihao Huang, Yuxuan Song and corresponding authors Chongxuan Li and Ji-Rong Wen at Renmin University, posts iLLaDA-8B as a fully bidirectional masked diffusion language model trained from scratch on twelve trillion tokens. The model preserves the masked-diffusion training objective through both pre-training and instruction tuning. The instruction corpus is twenty-five billion tokens, run for twelve epochs. Architectural changes from the original LLaDA include grouped-query attention to cut inference cache memory, tied input and output embeddings to cut parameter count and a modified learning-rate schedule for large-scale training.</p>
+
+    <p>The benchmark gains are large. iLLaDA-Base beats LLaDA-Base by +21.6 points on Big-Bench Hard and +14.9 points on ARC-Challenge. iLLaDA-Instruct beats LLaDA-Instruct by +14.5 points on MATH and +16.5 points on HumanEval. The model remains competitive with Qwen2.5 7B on several benchmarks and behind on others, which the authors note honestly. The paper adds variable-length generation and confidence-based scoring for multiple-choice tasks. Weights are at github.com/ML-GSAI/LLaDA under Apache License 2.0, with iLLaDA-8B-Base and iLLaDA-8B-Instruct on the GSAI-ML Hugging Face organization.</p>
+
+    <blockquote class="pull-quote">"iLLaDA keeps the masked diffusion objective throughout pre-training and supervised fine-tuning, scaling pre-training to 12T tokens and fine-tuning on a 25B-token instruction corpus for 12 epochs."<cite>— Shen Nie et al., Improved Large Language Diffusion Models</cite></blockquote>
+
+    <p>The release matters beyond the benchmark numbers because it tests whether a fully bidirectional diffusion training run can scale to the token counts used by frontier autoregressive labs. Twelve trillion tokens is in the same range Anthropic, OpenAI and Google use for the flagship pre-training corpora of their dense models. The result puts another data point on the question of whether the diffusion-LM architecture is a fundamentally different path or a variant of the same scaling story. The authors' position is the former.</p>
+
+    <p class="source-footer"><a href="https://arxiv.org/abs/2606.25331" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="14" y="14" width="42" height="52" fill="none" stroke="#6b21a8" stroke-width="1"/>
+    <circle cx="35" cy="38" r="9" fill="none" stroke="#6b21a8" stroke-width="1"/>
+    <circle cx="35" cy="38" r="4" fill="#6b21a8"/>
+    <path d="M 26 30 L 44 30 L 44 46 L 26 46 Z" fill="none" stroke="#6b21a8" stroke-width="0.4" opacity="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="0.4" fill="#6b21a8">
+      <text x="62" y="24">COMPOSITION</text>
+      <text x="62" y="36">POSE</text>
+      <text x="62" y="48">CAPTURE</text>
+    </g>
+    <text x="62" y="70" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6b21a8">130K</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">StepFun publishes ShutterMuse capture-time photography MLLM with a 130,000-sample CaptureGuide-Dataset and CaptureGuide-Bench</h3>
+    <p class="kicker">arXiv · StepFun · 2026-06-25 · <a href="https://arxiv.org/abs/2606.25763" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">StepFun's ShutterMuse is trained with supervised and reinforcement fine-tuning to assist photographers in real time, shipping the CaptureGuide-Dataset of 130,000 samples plus a benchmark for both photographer-side and subject-side tasks.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>arXiv 2606.25763 by Jiayu Li, Yixiao Fang, Tianyu Hu, Wei Cheng, Ping Huang, Zheheng Fan, Gang Yu and Xingjun Ma at StepFun fills a gap that aesthetic-cropping benchmarks have left open. Existing benchmarks evaluate post-hoc crop prediction. ShutterMuse targets the moment of capture: given a live viewfinder frame, advise the photographer on composition refinement and, separately, advise the subject on a pose recommendation conditioned on the scene. CaptureGuide-Bench introduces both tasks. CaptureGuide-Dataset spans 130,000 samples with textual rationales and structured visual annotations.</p>
+
+    <p>The training pipeline combines supervised fine-tuning on the labeled corpus with reinforcement fine-tuning that rewards rationale-quality and decision-quality. Source code is largely borrowed from ByteDance's USO project, with the dataset and benchmark released on GitHub and Hugging Face. The model reports the best overall photographer-side performance among evaluated baselines and competitive subject-side pose recommendation at substantially lower inference cost than general-purpose MLLMs.</p>
+
+    <blockquote class="pull-quote">"Existing aesthetic cropping benchmarks mainly evaluate post-hoc crop prediction."<cite>— Jiayu Li et al., ShutterMuse</cite></blockquote>
+
+    <p>The commercial implication is that consumer-camera apps (Apple's Camera, Google Pixel Camera, Samsung Expert RAW) and prosumer mirrorless firmware have a credible reference open-weights model they can fine-tune for in-viewfinder guidance. The 37-upvote ranking on Hugging Face Daily Papers reflects the niche but loyal photography-tools community.</p>
+
+    <p class="source-footer"><a href="https://arxiv.org/abs/2606.25763" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.8" fill="none">
+      <path d="M 14 60 L 30 60 L 30 30 L 50 30 L 50 50 L 70 50 L 70 26 L 90 26 L 90 44 L 106 44"/>
+    </g>
+    <g fill="#6b21a8">
+      <circle cx="30" cy="30" r="2"/>
+      <circle cx="50" cy="50" r="2"/>
+      <circle cx="70" cy="26" r="2"/>
+      <circle cx="90" cy="44" r="2"/>
+    </g>
+    <text x="14" y="18" font-family="system-ui,sans-serif" font-size="6" letter-spacing="1.6" font-weight="700" fill="#6b21a8">2-STEP DISTILL</text>
+    <text x="14" y="76" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6b21a8">84.63 VBench</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">NVIDIA Causal-rCM distills Wan2.1-1.3B into a 2-step block-causal autoregressive student at 84.63 on VBench-T2V</h3>
+    <p class="kicker">arXiv · NVIDIA · 2026-06-25 · <a href="https://arxiv.org/abs/2606.25473" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">NVIDIA researchers publish a unified teacher-forcing and self-forcing recipe that turns the bidirectional Wan2.1-1.3B video diffusion backbone into a few-step autoregressive streaming generator suitable for interactive world models.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>arXiv 2606.25473 by Kaiwen Zheng, Guande He, Min Zhao, Jintao Zhang, Huayu Chen, Jianfei Chen, Chen-Hsuan Lin, Ming-Yu Liu, Jun Zhu and Qianli Ma at NVIDIA introduces a teacher-forcing and self-forcing open recipe for autoregressive diffusion distillation. Applied to the bidirectional Wan2.1-1.3B video-diffusion backbone, the distilled 2-step block-causal student scores 84.63 on VBench-T2V with one to two sampling steps, taking real-time streaming video generation and interactive world models toward interactive frame rates.</p>
+
+    <p>The architectural problem is that bidirectional diffusion gives high-quality global coherence but requires access to both past and future frames at sampling time, which makes real-time streaming impossible. The Causal-rCM recipe trains a student that retains the teacher's distributional behavior at one or two steps and processes blocks of frames causally, so it can be deployed as an online autoregressive generator. The 84.63 score is competitive with the bidirectional teacher's quality (NVIDIA's prior rCM applied to Wan2.1 reported student 85 vs teacher 84) while running at interactive frame rates.</p>
+
+    <blockquote class="pull-quote">"While the bidirectional Wan 2.1 backbone provides high-quality global coherence, it relies on access to both past and future frames and therefore cannot support real-time streaming."<cite>— Causal-rCM authors, arXiv 2606.25473</cite></blockquote>
+
+    <p>The downstream implication is that the interactive-world-model genre, which has been split between research demos (DeepMind's Genie series, World Labs) and game-engine research (Decart's Oasis, Microsoft's Muse), now has a published open-recipe distillation pipeline from NVIDIA that can be reproduced. Combined with the Wan-Streamer v0.1 release the same day, the open ecosystem now has both the perception-reasoning-generation Transformer and the few-step distillation backbone needed to assemble a streaming generative-video stack.</p>
+
+    <p class="source-footer"><a href="https://arxiv.org/abs/2606.25473" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="14" y="32" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#6b21a8" letter-spacing="-0.03em">中国</text>
+    <line x1="14" y1="38" x2="106" y2="38" stroke="#6b21a8" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="0.4" fill="#6b21a8" font-weight="700">
+      <text x="14" y="50">DRAGONFLY · CHINA SKU</text>
+      <text x="14" y="60">EXPORT-CLEAR · BYTEDANCE</text>
+      <text x="14" y="70">46% FY25 REVENUE</text>
+    </g>
+    <rect x="84" y="46" width="22" height="22" fill="none" stroke="#6b21a8" stroke-width="0.8"/>
+    <text x="86" y="62" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6b21a8">46%</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span> <span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Qualcomm plans China-specific Dragonfly data-center chips engineered to clear US export thresholds, with ByteDance signed</h3>
+    <p class="kicker">TrendForce · 2026-06-25 · <a href="https://www.trendforce.com/news/2026/06/25/news-qualcomm-reportedly-plans-china-ai-chip-push-with-export-control-compliant-custom-chips/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">One day after unveiling its Dragonfly data-center portfolio with Meta as anchor customer, Qualcomm confirms a separate China-targeted Dragonfly lineup with nerfed AI accelerators built to clear US export-control thresholds, with a ByteDance custom-silicon deal already signed.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>TrendForce's June 25 report extends the Investor Day picture from June 24 in a direction that matters for China-AI exposure. Qualcomm is preparing a China-specific Dragonfly lineup with AI accelerators engineered to fall below the BIS performance thresholds that triggered the October 2023 and April 2025 export-control tightening. The strategy looks like Nvidia's H20 playbook applied to Qualcomm's new AI300 generation: design a SKU that the local market can buy without triggering an export license. ByteDance is the named anchor customer for the China track, having signed a custom-silicon agreement structured to comply with the export thresholds. Two additional unnamed hyperscalers are signed for custom silicon projects alongside Microsoft and Meta on the global track.</p>
+
+    <p>The financial math underneath the strategy is unambiguous. China accounted for 46 percent of Qualcomm's total revenue in fiscal 2025. The data-center revenue target the company put on the Investor Day slide ($15 billion by FY2029 inside an expanded $40 billion non-handset envelope) depends on China being a participant, not a residual. CFO Akash Palkhiwala guided FY2027 data-center revenue to $5 billion, with roughly $1 billion of that from newly secured custom-silicon customers. The HBC-based AI250 accelerator launches mid-2027, HBC Gen2 with AI300 ships 2028, and the Dragonfly C1000 CPU with 250-plus Oryon cores above 5 GHz ships 2028.</p>
+
+    <blockquote class="pull-quote">"All the server CPUs produced are selling."<cite>— Cristiano Amon, CEO, Qualcomm</cite></blockquote>
+
+    <p>The Washington implication is that the new BIS rules that were drafted to keep Nvidia's premium silicon out of China will also force Qualcomm to maintain two product lines. The cost of that bifurcation is non-trivial and falls in part on the silicon team and in part on the compiler team that Modular brings in. Modular's value as a CUDA-agnostic compiler stack across the global Dragonfly platform takes on a second dimension once Qualcomm has to ship a China-only variant: the compiler stack lets workloads recompile without rewriting against a different runtime.</p>
+
+    <p class="source-footer"><a href="https://www.trendforce.com/news/2026/06/25/news-qualcomm-reportedly-plans-china-ai-chip-push-with-export-control-compliant-custom-chips/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.7" fill="none">
+      <line x1="14" y1="40" x2="50" y2="40"/>
+      <line x1="70" y1="40" x2="106" y2="40"/>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="5" letter-spacing="0.4" fill="#6b21a8" font-weight="700" text-anchor="middle">
+      <text x="32" y="36">PREVIEW</text>
+      <text x="32" y="50">RETIRED</text>
+      <text x="88" y="36">NANO BANANA</text>
+      <text x="88" y="50">GA</text>
+    </g>
+    <g stroke="#6b21a8" stroke-width="1.4" fill="none">
+      <line x1="20" y1="20" x2="44" y2="32"/>
+      <line x1="44" y1="20" x2="20" y2="32"/>
+    </g>
+    <polyline points="56,40 64,36 64,44 56,40" fill="#6b21a8"/>
+    <text x="14" y="76" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="1.2" fill="#6b21a8" font-weight="700">CUTOVER 2026-06-25</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Google retires Gemini 3.1 Flash Image Preview and Gemini 3 Pro Image Preview, directs traffic to Nano Banana 2 and Nano Banana Pro</h3>
+    <p class="kicker">Google AI for Developers · 2026-06-25 · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Google's Gemini API deprecation schedule retires two preview image models on June 25, directing developers to the now-GA Nano Banana 2 and Nano Banana Pro replacements, as the long-promised Gemini 3.5 Pro general-availability date continues to slip past its June window.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>The June 25 cutover follows Google's published deprecation calendar exactly. gemini-3.1-flash-image-preview shuts down on June 25, replaced by gemini-3.1-flash-image, the Nano Banana 2 model that went GA earlier in the spring. gemini-3-pro-image-preview shuts down the same day, replaced by gemini-3-pro-image, the Nano Banana Pro model. Both replacements are the GA versions of the native visual-generation stack inside the Gemini API. The retirement is the kind of routine maintenance that would be unremarkable if not for the surrounding context: Gemini 3.5 Pro remains in limited Vertex AI preview, having missed its targeted June general-availability date set at Google I/O on May 19.</p>
+
+    <p>Reports surfaced this week attribute the Pro delay to DeepMind dissatisfaction with the current state of the model. The internal sources, surfaced by leo (@synthwavedd) on June 24, said the model "will no longer launch this month." Google has not confirmed publicly. The product cadence reads as Google shipping what is ready (3.5 Flash with native computer use, Nano Banana 2 and Pro for images) and holding what is not (3.5 Pro), with the deprecation cutover acting as a forcing function that prevents developers from continuing to depend on the preview models past the announced sunset.</p>
+
+    <blockquote class="pull-quote">"DeepMind are not satisfied with the current state of 3.5 Pro and it will no longer launch this month."<cite>— leo (@synthwavedd), citing scoops on June 24 2026</cite></blockquote>
+
+    <p>Earlier in June Google retired the experimental GMP Contextual View tool on June 15. The deprecation pace has accelerated through the quarter; the API team appears to be in the middle of a coherent cleanup ahead of the 3.5 Pro launch whenever that lands.</p>
+
+    <p class="source-footer"><a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="tech economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.7" fill="none">
+      <circle cx="32" cy="40" r="14"/>
+      <circle cx="88" cy="40" r="14"/>
+      <path d="M 46 40 L 74 40" stroke-width="1.4"/>
+      <polygon points="70,36 78,40 70,44" fill="#6b21a8"/>
+    </g>
+    <text x="22" y="44" font-family="system-ui,sans-serif" font-size="7" fill="#6b21a8" font-weight="700">GOOGLE</text>
+    <text x="73" y="44" font-family="system-ui,sans-serif" font-size="6" fill="#6b21a8" font-weight="700">ANTHROPIC</text>
+    <text x="14" y="22" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="1.2" fill="#6b21a8" font-weight="700">RESEARCHER EXODUS</text>
+    <text x="14" y="76" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6b21a8" letter-spacing="-0.02em">IPO window</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span> <span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Google AI researcher exodus to Anthropic and OpenAI accelerates into the IPO window, taking Jumper, Adler, Pritzel and Shazeer</h3>
+    <p class="kicker">TechCrunch · 2026-06-25 · <a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">TechCrunch's June 24 piece, widely amplified through June 25, tracks Jonas Adler and Alexander Pritzel leaving Google for Anthropic, Noam Shazeer's move from Google to OpenAI and AlphaFold co-creator John Jumper's recent exit, framing the wave against confidential IPO filings at both rival labs.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>The pattern is now too consistent to read as individual departures. Jonas Adler, who led an AI-coding effort at Google, and Alexander Pritzel, who led a pretraining stream, are leaving Google's Gemini effort for Anthropic per Bloomberg's reporting carried into TechCrunch's June 24 piece. Noam Shazeer, who has been at Google since 2000 apart from his three-year run at Character.AI, announced his departure for OpenAI; Google paid roughly $2.7 billion in the 2024 Character.AI reverse-acquihire that returned him. John Jumper, the 2024 Nobel Prize co-laureate for AlphaFold, is also leaving DeepMind for Anthropic after nearly nine years.</p>
+
+    <p>The structural explanation is in the IPO timing. Anthropic filed confidentially for a US IPO on June 1. OpenAI followed about a week later. Anthropic last raised at a valuation above $965 billion. OpenAI was valued at $852 billion in March. For a researcher whose equity at Google is denominated in vested Alphabet RSUs trading on a relatively flat curve, switching into a pre-IPO grant at a $965 billion private valuation is a one-time arbitrage with finite duration. Once both companies are public, the window closes.</p>
+
+    <blockquote class="pull-quote">"As OpenAI and Anthropic prepare to go public, this trend could continue. It's a great time for the companies to recruit top AI talent with a promise of equity."<cite>— Amanda Silberling and Lucas Ropek, TechCrunch, June 24 2026</cite></blockquote>
+
+    <p>Google's response will be the test. The company has historically not matched offer-letter signing bonuses outside of the Demis Hassabis-protected research scope. Whether Sundar Pichai authorizes an exception for the next round of retentions is the question the next quarter answers. The Gemini 3.5 Pro launch slipping past June is harder to read on its own; combined with the talent departure cadence, it reads as the moment Google has to decide whether the Bay Area AI talent market will continue to function as a free-for-all or whether DeepMind's compensation grid needs a structural reset.</p>
+
+    <p class="source-footer"><a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.8" fill="none">
+      <circle cx="30" cy="30" r="9"/>
+      <circle cx="60" cy="30" r="9"/>
+      <circle cx="90" cy="30" r="9"/>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="0.4" fill="#6b21a8" font-weight="700" text-anchor="middle">
+      <text x="30" y="50">SHOPPER</text>
+      <text x="60" y="50">BUYER</text>
+      <text x="90" y="50">MERCHANT</text>
+    </g>
+    <line x1="14" y1="58" x2="106" y2="58" stroke="#6b21a8" stroke-width="0.4"/>
+    <text x="14" y="72" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="1.4" fill="#6b21a8" font-weight="700">CHATGPT · AI MODE · GEMINI</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Salesforce launches Agentforce Commerce with Shopper, Buyer and Merchant agents and native ChatGPT, Google AI Mode and Gemini integrations</h3>
+    <p class="kicker">Salesforce · 2026-06-25 · <a href="https://www.salesforce.com/news/stories/agentforce-commerce-announcement/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Salesforce releases its biggest Agentforce push into commerce with three generally-available agents, an 88 percent time-to-task reduction on catalog management for Merchant Agent customers, and integrations with the major consumer AI surfaces.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Salesforce's Agentforce Commerce package puts three agents in production at the same moment. Shopper Agent runs on a retailer's own properties (website, app), handling discovery and conversion. Buyer Agent serves B2B procurement workflows, including reordering from past invoices over WhatsApp and SMS without requiring portal logins. Merchant Agent is the operator-side tool. The early customer reports an 88 percent time-to-task reduction on catalog management work that has historically taken a merchandiser hours per SKU. The agents share an underlying memory of the customer relationship across service, loyalty and marketing on the same platform.</p>
+
+    <p>The integration story is the part that will shape the 2026 shopping season. The ChatGPT integration syncs product catalogs from Salesforce Business Manager with no third-party tools, with GA scheduled for July. Google Search AI Mode and the Gemini app integrations arrive in summer 2026. The economic backdrop is the second-quarter holiday-shopping signal: AI-influenced sales hit 20 percent of global online sales last holiday season, totaling $262 billion, and AI-referred traffic converts at eight times the rate of social-media traffic. Retailers running shopper agents grew sales 59 percent faster than competitors that stayed on the sidelines. Salesforce reports that 78 of the Top 2000 North American online retailers run on its platform, generating $192.6 billion in combined 2025 web sales.</p>
+
+    <blockquote class="pull-quote">"The brands that win will have their Shopper Agent live on their own properties for the 2026 shopping season."<cite>— Nitin Mangtani, EVP, Salesforce</cite></blockquote>
+
+    <p>An Agentic Commerce Summer Tour brings the demos to 25 cities with Forter, Adyen, Astound Digital and Merkle as partners. The launch sits inside Agentforce, which Salesforce reported at $1.2 billion ARR at the most recent earnings print.</p>
+
+    <p class="source-footer"><a href="https://www.salesforce.com/news/stories/agentforce-commerce-announcement/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="14" y="14" width="92" height="52" rx="3" fill="none" stroke="#6b21a8" stroke-width="0.8"/>
+    <text x="22" y="34" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#6b21a8">@Claude</text>
+    <line x1="22" y1="40" x2="76" y2="40" stroke="#6b21a8" stroke-width="0.4" opacity="0.4"/>
+    <g fill="#6b21a8" opacity="0.5">
+      <circle cx="26" cy="50" r="2"/><rect x="32" y="48" width="38" height="4" rx="1"/>
+      <circle cx="26" cy="58" r="2"/><rect x="32" y="56" width="48" height="4" rx="1"/>
+    </g>
+    <text x="76" y="76" font-family="system-ui,sans-serif" font-size="6" letter-spacing="0.8" fill="#6b21a8" font-weight="700">65% INTERNAL</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Anthropic launches Claude Tag in Slack on Opus 4.8, says internal version writes 65 percent of its product team's code</h3>
+    <p class="kicker">Anthropic · 2026-06-25 · <a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anthropic embeds @Claude as a persistent shared teammate in Slack channels with task breakdown, tool access and shared per-channel memory, retiring the prior Slack app on August 3.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Claude Tag enters beta on Claude Enterprise and Claude Team plans. The model under the hood is Opus 4.8. The behavioral upgrade against the prior Slack app is that Claude Tag has task decomposition, tool use, and a shared per-channel memory that lets the next person in the channel pick up where the last person left off. The current Slack app, which has shipped for over a year, retires on August 3, 2026, with a 30-day admin opt-in window for migration. Admins configure channel access, tool connections and memory scope before the cutover.</p>
+
+    <p>The marketing claim that lands is the internal-usage number. Anthropic says its internal Claude Tag generates 65 percent of its product team's code. The figure is consistent with what Mike Krieger has told reporters over the last quarter about the company's own product engineering becoming Claude-first. The visible behavior in Slack is that Claude replies in the originating thread with a description of what it built, so the work and its progress remain in the channel rather than disappearing into a side tool.</p>
+
+    <p>The product fits the agent-companion category Slack has been opening up through its new Agentforce-style APIs. The two-month migration window is unusually long for a deprecation, which suggests Anthropic is using the wind-down period to migrate enterprise customers without churn risk. The replacement is materially more capable, but it also has access to richer per-channel memory than the prior app, which means admins have a real configuration decision to make rather than a pass-through upgrade.</p>
+
+    <p class="source-footer"><a href="https://www.anthropic.com/news/introducing-claude-tag" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.6" fill="none">
+      <rect x="14" y="20" width="92" height="44"/>
+      <line x1="34" y1="20" x2="34" y2="64"/>
+      <line x1="54" y1="20" x2="54" y2="64"/>
+      <line x1="74" y1="20" x2="74" y2="64"/>
+      <line x1="94" y1="20" x2="94" y2="64"/>
+      <line x1="14" y1="32" x2="106" y2="32"/>
+      <line x1="14" y1="44" x2="106" y2="44"/>
+      <line x1="14" y1="56" x2="106" y2="56"/>
+    </g>
+    <g fill="#6b21a8" opacity="0.45">
+      <rect x="14" y="20" width="20" height="12"/>
+      <rect x="54" y="32" width="20" height="12"/>
+      <rect x="74" y="44" width="20" height="12"/>
+      <rect x="34" y="56" width="20" height="8"/>
+    </g>
+    <text x="14" y="76" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="1.4" fill="#6b21a8" font-weight="700">FP&amp;A &middot; TAX &middot; TREASURY</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Microsoft positions Copilot in Excel for the era of Frontier Finance with FP&amp;A, accounting, tax, compliance and treasury workflows</h3>
+    <p class="kicker">Microsoft 365 Blog · 2026-06-25 · <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/25/copilot-in-excel-built-for-the-era-of-frontier-finance/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Microsoft pushes Copilot deeper into finance with a June 25 launch targeting Financial Planning and Analysis, accounting, tax, compliance and treasury workflows inside Excel.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Microsoft's Copilot in Excel update reorganizes the surface around named finance workflows rather than the generic prompt box. FP&amp;A runs through Copilot for budgeting, variance and scenario analysis. Accounting users get reconciliation and close support. Tax, Compliance and Treasury get their own task-specific paths. The framing of the launch is the broader Frontier Firm pitch tying Azure, Copilot, GitHub, Microsoft 365 and security into one enterprise plane. Microsoft's MAI in-house model family, including MAI-Thinking-1 as the flagship reasoning model, sits behind Copilot alongside OpenAI-served models, with routing handled by the platform.</p>
+
+    <p>The launch lands as Microsoft continues the broader rollout of Frontier Tuning, the reinforcement-learning pipeline unveiled at Microsoft Build that operates inside customer-policy boundaries on a customer's own data. Frontier Tuning is the precondition for taking Copilot from a generic assistant to a workflow-specific operator on regulated finance work. Microsoft announced seven new MAI models earlier in June to reduce its dependence on OpenAI for the production traffic that Copilot now carries.</p>
+
+    <p>The competitive picture inside Excel is sharper than it was a quarter ago. Anthropic's Claude integration into Excel through the API ecosystem and Google's Gemini-in-Sheets feature both compete for the same finance-team time. Microsoft's structural advantage is that Copilot lives inside the workbook a finance team has already opened, with reach into the broader Microsoft 365 graph (mailbox, calendar, OneDrive). The June 25 release converts that distribution advantage into a finance-specific product story.</p>
+
+    <p class="source-footer"><a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/25/copilot-in-excel-built-for-the-era-of-frontier-finance/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.6" fill="none">
+      <rect x="14" y="14" width="28" height="52" rx="2"/>
+      <rect x="46" y="14" width="28" height="52" rx="2"/>
+      <rect x="78" y="14" width="28" height="52" rx="2"/>
+    </g>
+    <g font-family="Georgia,serif" font-size="13" font-weight="700" fill="#6b21a8" text-anchor="middle">
+      <text x="28" y="44">Art</text>
+      <text x="60" y="44">Penny</text>
+      <text x="92" y="44">Emmie</text>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="5" letter-spacing="0.4" fill="#6b21a8" font-weight="700" text-anchor="middle" opacity="0.7">
+      <text x="28" y="60">CLINICIAN</text>
+      <text x="60" y="60">REV CYCLE</text>
+      <text x="92" y="60">PATIENT</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Epic at UGM puts Emmie patient chatbot, Penny revenue-cycle agent and Art clinician assistant in production across 85 percent of its hospital base</h3>
+    <p class="kicker">Healthcare IT News · 2026-06-25 · <a href="https://www.healthcareitnews.com/news/epic-unveils-ai-agents-showcases-new-foundational-models" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Epic's annual user meeting puts revenue-cycle and patient-facing agents into production while previewing CoMET, new foundational medical-event models built with Microsoft.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>The three agents Epic unveiled at UGM are Art (clinician), Emmie (patient-facing) and Penny (revenue-cycle). Penny is the one already in production, generating appeal letters for denied insurance claims and supporting billing-code questions. The role is the most consequential commercial use case in the hospital. Denied claims are an addressable revenue leak inside US hospitals, and the manual cost of writing the appeal letter is the friction that keeps hospitals from pursuing borderline denials. Penny removes that friction. The economic logic is what Judy Faulkner emphasized.</p>
+
+    <blockquote class="pull-quote">"Penny can generate appeal letters for insurance claims that get denied."<cite>— Judy Faulkner, CEO, Epic</cite></blockquote>
+
+    <p>The native AI scribe is being rolled out in partnership with Microsoft, embedding ambient documentation directly into the clinical workflow. Emmie sits on the patient-facing side, handling the kinds of pre-visit and post-visit questions that have historically gone to nursing-line staff. Art assists clinicians with summarization and chart review. Epic also previewed CoMET, a class of generative medical-event models in development with Microsoft, intended to let doctors use real-world evidence to support treatment decisions. The headline penetration number is that 85 percent of Epic's healthcare customers are now live with generative AI across the Art, Emmie and Penny tools.</p>
+
+    <p>The competitive picture sits against Oracle's Cerner, which has its own generative-AI strategy through the Oracle ecosystem, and against the standalone scribe companies (Abridge, Suki, Nabla) that have built up substantial enterprise footprints in the past two years. Epic's structural advantage remains the EHR data graph, into which scribe and agent products dock natively. The UGM agent announcements are the move that converts that advantage into commercial product surface.</p>
+
+    <p class="source-footer"><a href="https://www.healthcareitnews.com/news/epic-unveils-ai-agents-showcases-new-foundational-models" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="14" y="38" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#6b21a8" letter-spacing="-0.04em">16.8</text>
+    <text x="14" y="50" font-family="system-ui,sans-serif" font-size="7" letter-spacing="1.4" font-weight="700" fill="#6b21a8" opacity="0.7">GIGAWATTS</text>
+    <g stroke="#6b21a8" stroke-width="0.6" fill="none">
+      <rect x="62" y="20" width="14" height="18"/>
+      <rect x="80" y="14" width="14" height="24"/>
+      <rect x="62" y="44" width="14" height="20"/>
+      <rect x="80" y="42" width="14" height="22"/>
+    </g>
+    <g fill="#6b21a8" opacity="0.55">
+      <rect x="62" y="22" width="14" height="16"/>
+      <rect x="80" y="16" width="14" height="22"/>
+      <rect x="62" y="46" width="14" height="18"/>
+      <rect x="80" y="44" width="14" height="20"/>
+    </g>
+    <text x="14" y="76" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="0.8" fill="#6b21a8" font-weight="700">SUNRUN · TESLA · RENEW HOME</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Sunrun, Tesla and Renew Home formalize 16.8 gigawatt virtual power plant aimed at hyperscaler AI campuses</h3>
+    <p class="kicker">Energy Storage News · 2026-06-25 · <a href="https://www.ess-news.com/2026/06/25/sunrun-tesla-renew-home-announce-plans-for-16-8-gw-virtual-power-plant-program/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Sunrun, Tesla and Renew Home pool 7.8 gigawatts of home batteries with more than nine gigawatts of smart thermostats across nine million homes, offering 300 megawatts deployable today in Virginia's Data Center Alley.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>The framework is the largest distributed-energy-resources commercial offering announced to date. Total dispatchable capacity is 16.8 gigawatts. Battery systems contribute 7.8 gigawatts; smart thermostats and HVAC contribute more than nine gigawatts. The footprint is up to 12 million existing devices across nine million customer homes spanning the lower 48, Alaska, Hawaii and Puerto Rico. The pitch to hyperscalers is concrete: 300 megawatts deployable in Virginia's Data Center Alley today, scaling to 500 megawatts by 2030. California carries 4.66 gigawatts of the program (27.7 percent of total capacity); Texas, Puerto Rico and Florida together exceed 50 percent.</p>
+
+    <p>The economic frame is that AI datacenter power demand is now the binding constraint on hyperscaler growth. US datacenter power demand is projected at 41 gigawatts for 2026 and 66 gigawatts for 2027. New utility-scale generation cannot interconnect on that timeline. The distributed alternative routes around the queue: existing batteries and thermostats already on the local distribution network can be aggregated and bid as a single resource, reducing peak load by an amount that frees up the capacity hyperscalers need.</p>
+
+    <blockquote class="pull-quote">"The grid of the 1800s cannot power the innovation of 2026."<cite>— Mary Powell, CEO, Sunrun</cite></blockquote>
+
+    <p>Residential customers received more than $67 million in direct payments for program participation during 2025. The Brattle Group estimates the program could yield $110 billion to $170 billion in US electricity-bill savings over the next decade. Sunrun shares rose as much as 26 percent on the announcement.</p>
+
+    <p class="source-footer"><a href="https://www.ess-news.com/2026/06/25/sunrun-tesla-renew-home-announce-plans-for-16-8-gw-virtual-power-plant-program/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="economic application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="14" y="40" font-family="Georgia,serif" font-size="34" font-weight="700" fill="#6b21a8" letter-spacing="-0.05em">90%</text>
+    <text x="14" y="52" font-family="system-ui,sans-serif" font-size="6" letter-spacing="1.6" font-weight="700" fill="#6b21a8" opacity="0.7">AGENCIES ON GENAI</text>
+    <g stroke="#6b21a8" stroke-width="0.6" fill="none">
+      <rect x="76" y="14" width="30" height="6"/>
+      <rect x="76" y="24" width="30" height="6"/>
+      <rect x="76" y="34" width="30" height="6"/>
+      <rect x="76" y="44" width="30" height="6"/>
+    </g>
+    <g fill="#6b21a8" opacity="0.55">
+      <rect x="76" y="14" width="19" height="6"/>
+      <rect x="76" y="24" width="22" height="6"/>
+      <rect x="76" y="34" width="17" height="6"/>
+      <rect x="76" y="44" width="15" height="6"/>
+    </g>
+    <text x="76" y="76" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="0.8" fill="#6b21a8" font-weight="700">FORRESTER 2026</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span> <span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Forrester finds 90 percent of US marketing agencies use generative AI as a cost-cutting tool, warns of creativity tradeoffs</h3>
+    <p class="kicker">Forrester · 2026-06-25 · <a href="https://www.forrester.com/press-newsroom/forrester-nine-in-10-us-marketing-agencies-use-ai-to-cut-costs-at-the-expense-of-creativity/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Forrester's 2026 agency research says genAI adoption is universal but tilted toward productivity over creative differentiation, with majority barriers around accuracy, legal exposure and privacy.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>Forrester's June 25 release puts the marketing-agency AI picture on a single chart that the industry has been avoiding. Ninety percent of US agencies use generative AI. Fifty percent use agentic AI for marketing execution. Eighty-one percent identify enhancing staff productivity as the primary genAI objective, ahead of any creative or differentiation goal. Seventy-four percent use genAI to summarize documents and communications. Seventy percent apply it to research and competitive intelligence. The internal usage is concentrated on tasks that previously took junior staff time. The strategic positioning is concentrated on cost reduction.</p>
+
+    <p>The barriers Forrester names rank in a coherent order. Sixty-three percent of respondents identify accuracy and bias as the top concern. Sixty-two percent cite legal concerns, including IP exposure and client contract terms. Fifty-five percent flag privacy and security risks tied to client data being routed through third-party models. Fifty-four percent lack the in-house expertise to deploy AI agents in production. Fifty-one percent face data-infrastructure gaps that prevent integration. The most striking number sits at the commercial side: 61 percent classify AI as a cost of business, while only 31 percent plan to monetize agentic AI within the next 24 months.</p>
+
+    <blockquote class="pull-quote">"AI has fundamentally transformed marketing agencies, but the industry is at risk of mistaking efficiency for effectiveness."<cite>— Jay Pattisall, VP, Forrester</cite></blockquote>
+
+    <p>The implication is that the agency business model is at a crossroads it has not publicly acknowledged. Cost-cutting on production work compresses agency margins because clients eventually price out the cost reduction in the next round of contract negotiations. The path Forrester points at, treating agentic AI as a service to charge for rather than a cost to absorb, is the strategic move only a minority of agencies are positioning for.</p>
+
+    <p class="source-footer"><a href="https://www.forrester.com/press-newsroom/forrester-nine-in-10-us-marketing-agencies-use-ai-to-cut-costs-at-the-expense-of-creativity/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#6b21a8" stroke-width="0.7" fill="none">
+      <rect x="14" y="20" width="30" height="44"/>
+      <rect x="76" y="20" width="30" height="44"/>
+      <line x1="44" y1="42" x2="76" y2="42" stroke-width="1.4"/>
+      <polygon points="68,38 76,42 68,46" fill="#6b21a8"/>
+    </g>
+    <g fill="#6b21a8" font-family="Georgia,serif" font-size="9" font-weight="700" text-anchor="middle">
+      <text x="29" y="44">HBM</text>
+      <text x="29" y="56">DRAM</text>
+      <text x="91" y="44">CLAUDE</text>
+      <text x="91" y="56">SERIES H</text>
+    </g>
+    <text x="60" y="78" font-family="system-ui,sans-serif" font-size="5.5" letter-spacing="1.4" fill="#6b21a8" font-weight="700" text-anchor="middle">MICRON × ANTHROPIC</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span> <span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Micron and Anthropic formalize four-pillar pact spanning HBM and SSD supply, Claude deployment and a Series H equity check</h3>
+    <p class="kicker">StorageNewsletter · 2026-06-25 · <a href="https://www.storagenewsletter.com/2026/06/25/micron-and-anthropic-announce-strategic-agreement-to-scale-next-generation-ai-infrastructure/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Micron's June 25 release formalizes a multi-year HBM, DRAM and SSD supply pact with Anthropic, joint memory-architecture co-design, enterprise Claude deployment across Micron operations, and a strategic check into the $65 billion Series H at a $965 billion post-money valuation.</p>
+    <span class="expand-control"></span>
+  </div>
+  <div class="full-content">
+    <p>The deal covers four interlocking pieces. Multi-year supply runs across HBM, DRAM, Micron's 6550 ION QLC SSDs and 9550 NVMe SSDs. Micron joins Samsung and SK hynix in Anthropic's Series H, which closed on May 28 at $65 billion raised and a $965 billion post-money valuation. Claude rolls out to Micron engineering, manufacturing and enterprise functions. Joint memory-and-storage architecture co-design for AI datacenters runs across both companies' roadmap teams. The pact lands one day after Micron's Q3 FY2026 print of $41.46 billion in revenue and the disclosure of $100 billion in take-or-pay Strategic Customer Agreements with $22 billion in upfront customer cash.</p>
+
+    <p>The technical roadmap matters. Micron's HBM4 12-high ramp is tracking twice as fast as the HBM3E 12-high ramp it succeeded. HBM4E is in development on the 1-gamma DRAM node with volume production targeted for calendar 2027. The cooperative-design clause means Anthropic gets visibility into the next-generation HBM specification ahead of competitors, which the company will fold into its training-system specifications. The strategic logic mirrors the Samsung-Anthropic and SK-hynix-Anthropic equity-plus-supply structures: lock in supply and architectural alignment with cash and seats at the same time.</p>
+
+    <blockquote class="pull-quote">"Memory and storage are central to training and serving Claude efficiently."<cite>— Tom Brown, co-founder and chief compute officer, Anthropic</cite></blockquote>
+
+    <p>Micron stock rose roughly 5.5 percent on the announcement and the broader Q3 strength, with MU crossing $1,200 and a market cap above $1.2 trillion as of the after-hours print. The structural read is that the HBM market has consolidated into a three-player oligopoly (Samsung, SK hynix, Micron) where the AI labs increasingly pre-commit demand through Strategic Customer Agreements rather than relying on the open spot market, removing volatility from the supplier side and producing the gross-margin expansion Micron printed on the same earnings call.</p>
+
+    <p class="source-footer"><a href="https://www.storagenewsletter.com/2026/06/25/micron-and-anthropic-announce-strategic-agreement-to-scale-next-generation-ai-infrastructure/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+</div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg"><g fill="#6b21a8"><circle cx="14" cy="9" r="2"/><circle cx="40" cy="9" r="3.4"/><circle cx="66" cy="9" r="2"/></g><g stroke="#6b21a8" stroke-width="0.6"><line x1="20" y1="9" x2="34" y2="9"/><line x1="46" y1="9" x2="60" y2="9"/></g></svg>
+</div>
+
+<footer class="colophon">
+  <div>
+    <strong>Apollo AI News</strong> &middot; Daily &middot; 2026 &middot; 06 &middot; 26<br>
+    Generated 2026-06-26 by the Apollo AI News Bot (Claude Opus 4.7).
+  </div>
+  <div>
+    <a href="../index.html">← Back to home</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const stories = document.querySelectorAll('details.story, details#hero');
+  const chips = document.querySelectorAll('.filter-chip');
+  const bigPicture = document.querySelector('.big-picture');
+  const status = document.getElementById('filter-status');
+  const sectionCount = document.querySelector('.section-head .count');
+  const sectionCountSuffix = sectionCount ? (sectionCount.textContent.match(/\s·\s.+$/) || [''])[0] : '';
+
+  function recountChips(){
+    const total = stories.length;
+    chips.forEach(c => {
+      const tag = c.dataset.filter;
+      const n = tag === 'all' ? total
+        : Array.from(stories).filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const countEl = c.querySelector('.count');
+      if (countEl) countEl.textContent = n;
+      if (tag !== 'all' && n === 0) c.setAttribute('disabled','');
+    });
+  }
+
+  function applyFilter(filter){
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    let visibleNonHero = 0;
+    let visibleTotal = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const match = filter === 'all' || tags.includes(filter);
+      if (match) {
+        s.removeAttribute('hidden');
+        visibleTotal++;
+        if (s.id !== 'hero') visibleNonHero++;
+      } else {
+        s.setAttribute('hidden','');
+      }
+    });
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    if (sectionCount) sectionCount.textContent = visibleNonHero + ' stories' + sectionCountSuffix;
+    if (status) status.textContent = 'Showing ' + visibleTotal + ' of ' + stories.length + ' stories — ' + (filter === 'all' ? 'All tags' : filter.charAt(0).toUpperCase() + filter.slice(1));
+    if (history && history.replaceState) {
+      const hash = filter === 'all' ? '' : '#filter=' + filter;
+      history.replaceState(null, '', location.pathname + location.search + hash);
+    }
+  }
+
+  chips.forEach(c => c.addEventListener('click', () => {
+    if (c.hasAttribute('disabled')) return;
+    applyFilter(c.dataset.filter);
+  }));
+
+  const filterBar = document.querySelector('.filter-bar');
+  if (filterBar && 'IntersectionObserver' in window) {
+    const sentinel = document.createElement('div');
+    sentinel.style.position = 'absolute';
+    sentinel.style.top = '-1px';
+    document.body.prepend(sentinel);
+    new IntersectionObserver(([e]) => {
+      filterBar.classList.toggle('is-stuck', !e.isIntersecting);
+    }).observe(sentinel);
+  }
+
+  recountChips();
+  const initial = (location.hash.match(/^#filter=([a-z]+)$/) || [])[1] || 'all';
+  applyFilter(initial);
+})();
+</script>
+
+</body>
+</html>
