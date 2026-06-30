@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-06-30</title>
+<meta name="description" content="Samsung and SK Hynix unveil a combined 2,655 + 2,100 trillion won (≈$3.1 trillion) decade-long capex plan with $590 billion of memory-fab and HBM-packaging investment to clear the AI memory shortage; Jefferies sees DRAM prices up 40–50 percent in Q3 and another 30–40 percent in Q4, Apple Mac and iPad list prices already moved. Anthropic and Governor Gavin Newsom sign a half-price Claude deal covering all California state agencies and local governments, the first US state to make Claude its default AI tool, while California CIO Chris Givens tells TechCrunch the Pentagon's 'supply-chain risk' designation 'just didn't come up.' Austrian Digital State Secretary Alexander Pröll's letter to EU Tech Commissioner Henna Virkkunen asking the bloc to 'pursue the strategic establishment of Anthropic' goes public; The Information reports Amazon engineers are distilling Claude into smaller Nova-adjacent models ahead of next year's compute-hour-to-token pricing migration; Meta tells engineers internally they may no longer use Claude Code or Codex on any project that could touch Muse Spark training. Arena (formerly LMSYS) tells Marina Temkin it crossed $100 million in annual run-rate eight months after its September 2025 commercial launch, up from $30M ARR at its January Series A; the team has raised $250M total at a $1.7B post. Mozilla's 0DIN bug-bounty program publishes a Claude Code DNS-tunneled supply-chain attack — malicious code never enters the repo, lives in a TXT record, executes on setup-script error. Bloomberg and the LA Times reveal Anthropic's Claude served as an LLM layer inside Palantir's Maven Smart System and recommended ≈1,000 targets on day one of a Pentagon AI-targeting trial; a February strike on Minab killed roughly 120 children in a school the targeting database had logged as a naval facility seven years earlier. A Wall Street Journal town hall transcript has Deloitte public-sector lead Jason Manstof telling staff the billable-hour book of business will shrink to a 'thin sliver' by 2035; McKinsey already books more than 30 percent of fees on outcome-based contracts. ggml-org tags six llama.cpp builds in nineteen hours including the first DeepSeek-V4-Pro/Flash CPU graph-input support and a /v1/models dedup; Claude Code 2.1.196 turns on a 5-minute streaming idle watchdog by default and ships organization default models; Codex CLI hits 0.143.0-alpha.31 just before midnight UTC. Hugging Face Daily Papers leads with NVIDIA's PhysisForcing physics-informed world simulator (39 upvotes), UBC's Four Axioms of Thought Representation (36), ByteDance Seed's wrist-translation human-to-robot bridging action (33), the Qwen-Image-2.0-RL technical report (+78 Elo on text-to-image, +93 on editing), and inclusionAI's policy-adaptive SingGuard guardrail.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#6b21a8;
+  --accent-soft:rgba(107,33,168,0.08);
+  --tag-tech:rgba(30,58,138,0.10);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.12);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#c4b5fd;
+    --accent-soft:rgba(196,181,253,0.12);
+    --tag-tech:rgba(147,197,253,0.18);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(45,212,191,0.16);
+    --tag-application-ink:#5eead4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){
+  .story summary{grid-template-columns:1fr;gap:12px}
+  .story-thumb{aspect-ratio:320 / 80;width:100%;height:auto}
+}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-weight:700;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:"Collapse \25B4"}
+.story:not([open]) .expand-control::after{content:"Read in full \25BE"}
+.expand-control{font-size:0;letter-spacing:normal}
+.expand-control::after{font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1 / -1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:0.84rem;color:var(--muted)}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2"  x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2"  y1="28" x2="9"  y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5"  y1="9.5"  x2="14"   y2="14"/>
+          <line x1="42"   y1="42"   x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5"  x2="42"   y2="14"/>
+          <line x1="9.5"  y1="46.5" x2="14"   y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Daily</strong>
+    2026 · 06 · 30
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<details class="story" id="hero" data-tags="economic tech" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span>
+      </div>
+      <h1>Samsung and SK Hynix commit $590B of new memory capacity to break the AI-driven RAMageddon</h1>
+      <p class="dek">President Lee Jae Myung used a Monday press conference in Seoul to unveil a combined ten-year industrial plan worth 4,755 trillion won — about $3.1 trillion — of which Samsung and SK pledged $590 billion specifically for AI memory: four new fabs in the southwest, an HBM packaging hub in the centre, and 30 trillion won of next-generation chip R&amp;D. Jefferies told clients to expect DRAM prices up 40–50 percent in Q3 and 30–40 percent in Q4. Apple has already raised Mac and iPad list prices.</p>
+      <p class="kicker">TechCrunch · 2026-06-29 · <a href="https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#6b21a8" stop-opacity="0.5"/>
+          <stop offset="1" stop-color="#6b21a8" stop-opacity="0.04"/>
+        </linearGradient>
+        <pattern id="hgrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0 L0 0 0 24" fill="none" stroke="#6b21a8" stroke-opacity="0.12" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgrid)"/>
+
+      <g fill="#6b21a8" font-family="system-ui,sans-serif" font-weight="700">
+        <text x="28" y="28" font-size="9" letter-spacing="2.4">SAMSUNG + SK HYNIX · 2026–2035 PLAN · MONDAY 06·29</text>
+        <text x="28" y="42" font-size="7" letter-spacing="1.6" opacity="0.78">PRESIDENT LEE JAE MYUNG · MINISTRY OF TRADE, INDUSTRY &amp; ENERGY</text>
+      </g>
+
+      <g transform="translate(28, 74)" fill="#6b21a8" font-family="Georgia,serif">
+        <text x="0" y="0" font-size="13" font-weight="700" letter-spacing="0.2">CAPEX ALLOCATION · KRW TRILLION</text>
+      </g>
+
+      <g transform="translate(28, 90)" font-family="system-ui,sans-serif" font-size="8" fill="#6b21a8">
+        <text x="0" y="10" font-weight="700">FOUR NEW MEMORY FABS · SOUTHWEST</text>
+        <rect x="0" y="14" width="380" height="14" fill="url(#hg)" stroke="#6b21a8" stroke-width="0.6"/>
+        <text x="386" y="24" font-weight="700">800T₩</text>
+
+        <text x="0" y="50" font-weight="700">HBM PACKAGING HUB · CENTRAL REGION</text>
+        <rect x="0" y="54" width="42" height="14" fill="url(#hg)" stroke="#6b21a8" stroke-width="0.6"/>
+        <text x="48" y="64" font-weight="700">81T₩</text>
+
+        <text x="0" y="90" font-weight="700">NEXT-GEN CHIP R&amp;D · 15 YEARS</text>
+        <rect x="0" y="94" width="16" height="14" fill="url(#hg)" stroke="#6b21a8" stroke-width="0.6"/>
+        <text x="22" y="104" font-weight="700">30T₩</text>
+
+        <text x="0" y="130" font-weight="700">TOTAL · $590B USD ≈ 911 TRILLION ₩</text>
+      </g>
+
+      <line x1="28" y1="234" x2="452" y2="234" stroke="#6b21a8" stroke-width="0.6"/>
+
+      <g transform="translate(28, 248)" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#6b21a8">
+        <text x="0" y="0">JEFFERIES · DRAM PRICE FORECAST</text>
+        <text x="0" y="14" font-size="8" opacity="0.78">Q3 2026 · +40 TO +50 %</text>
+        <text x="0" y="26" font-size="8" opacity="0.78">Q4 2026 · +30 TO +40 %</text>
+        <text x="0" y="38" font-size="8" opacity="0.78">2027 · +40 TO +45 %</text>
+      </g>
+
+      <g transform="translate(240, 248)" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#6b21a8">
+        <text x="0" y="0">DOWNSTREAM SIGNAL</text>
+        <text x="0" y="14" font-size="8" opacity="0.78">APPLE · MAC + IPAD LIST PRICE UP</text>
+        <text x="0" y="26" font-size="8" opacity="0.78">MS XBOX HARDWARE · UP</text>
+        <text x="0" y="38" font-size="8" opacity="0.78">NEW CAPACITY ONLINE · NOT BEFORE 2028</text>
+      </g>
+
+      <g transform="translate(28, 310)" font-family="system-ui,sans-serif" font-weight="700" fill="#6b21a8">
+        <text x="0" y="0" font-size="7" letter-spacing="1.6">SAMSUNG + SK CONTROL ≈80% OF GLOBAL HBM SUPPLY</text>
+      </g>
+    </svg>
+  </div>
+  <div class="full-content">
+    <p>South Korean president Jae Myung Lee opened the working week with a Seoul press conference unveiling a ten-year national plan that pulls Samsung Electronics and SK Group into a joint industrial buildout aimed squarely at the AI memory shortage. Samsung committed 2,655 trillion won, roughly $1.7 trillion, of capex through 2035, with 425 trillion won earmarked for the Honam region in the southwest. SK Group put up a 2,100 trillion won roadmap, with 1,100 trillion won for additional semiconductor production capacity and 1,000 trillion won for AI data-centre development. The number that matters for the global memory market is the slice the two companies will spend together on new memory output: 800 trillion won, about $518 billion, for four new fabs in the southwest, plus 81 trillion won, about $52 billion, for an HBM packaging hub in the central region, plus 30 trillion won of next-generation chip R&amp;D — $590 billion of memory-specific investment inside the broader $900 billion-plus AI commitment.</p>
+
+    <p>Lee framed the plan around three pillars and a regional politics. "Semiconductors, physical AI, and AI data centres are the triple axis for South Korea's next industrial era," he told the press conference, arguing that the country has to become "irreplaceable" in supply or lose the lever it currently holds over the AI economy. Samsung selected Gwangju, about 300 kilometres south of Seoul, for the new fab and Haenam at the southern tip of the peninsula for the AI data centre. SK Hynix will route its share of the expansion through SK Group's 15-gigawatt national AI data-centre capacity plan. Lee was explicit that the existing semiconductor cluster around Yongin and Pyeongtaek "has already reached its limits" and that the southwest sites had been chosen for "expected incentives around power, water, workforce and living conditions."</p>
+
+    <h4>Why the shortage is the headline</h4>
+    <p>RAMageddon is not industry slang for a generic supply hiccup. Samsung, SK Hynix and Micron together produce the world's HBM3E and HBM4 stacks; Samsung and SK alone hold roughly 80 percent of the high-bandwidth memory market on which every AI accelerator depends. Jefferies Equity Research told clients on Monday morning that memory prices will "jump 40 to 50 percent in Q3 2026 and another 30 to 40 percent in Q4," followed by 40 to 45 percent in 2027, with no real relief until new fab capacity comes online in 2028. The Decoder traced the shortage's consumer-electronics fingerprint directly to Apple's recent Mac and iPad list-price increases — a leading indicator that the squeeze has already crossed from data-centre B2B contracts into shrink-wrapped retail boxes.</p>
+
+    <p>The June 28 Power On newsletter from Mark Gurman put Microsoft Xbox alongside Apple on the same point: both companies named the AI-driven memory shortage in their justifications. The Financial Times' Sunday scoop that Google has been rationing Meta's Gemini API access since March because Google Cloud cannot supply the GPU capacity Meta is buying, and TechCrunch's Sunday declaration that Micron is "the next Nvidia" after its stock briefly cleared Meta and Tesla in market cap on a $41.45 billion fiscal Q3, complete the same picture from three different angles: the bottleneck on AI infrastructure for at least the next eighteen months is memory, not flops, and the price for being in front of that bottleneck is now being collected by anyone with HBM fabs.</p>
+
+    <blockquote class="pull-quote">The government's role is to invest its capabilities so that companies can invest without losses and with better prospects.<cite>— President Jae Myung Lee, press conference, Seoul, 2026-06-29</cite></blockquote>
+
+    <h4>Construction is the constraint</h4>
+    <p>The execution-risk frame around the plan is the one every previous memory super-cycle has tripped over. Semiconductor fabs take three to five years to build, qualify, and ramp. Several analysts cited in the TechCrunch piece warned that "by the time they are ready, the demand that caused them will have ebbed, leaving companies with oversupply and crashing prices." The 1996, 2008 and 2019 DRAM cycles all turned that way. What is different this time, according to people in the Lee government, is that the demand curve is being driven by inference workloads and Nvidia's product roadmap rather than by PC and smartphone refresh cycles, both of which respond to consumer macro in a way that AI capex does not. The South Korean Ministry of Trade, Industry and Energy is betting that hyperscaler and neocloud capex stays sticky through the construction window.</p>
+
+    <p>The financing model is the other novelty. Lee waved off the framing that the chaebol were being arm-twisted: "The government's role is to invest its capabilities so that companies can invest without losses and with better prospects." In practice that means MOTIE-coordinated power, water and workforce incentives, plus a regional-development overlay aimed at moving capital out of the Seoul belt. Compared with the United States CHIPS Act — direct subsidy in exchange for committed capacity — the Korean structure is closer to a public-private bargain to socialise siting risk while leaving capex on company balance sheets.</p>
+
+    <blockquote class="pull-quote">Semiconductors, physical AI, and AI data centres are the triple axis for South Korea's next industrial era.<cite>— President Jae Myung Lee, on the rationale for the southwest fab cluster</cite></blockquote>
+
+    <h4>The customer side of the page</h4>
+    <p>Reuters' figures, cited in the TechCrunch reporting, put 2026 AI infrastructure spend at Alphabet, Amazon, Meta and Microsoft at around $650 billion combined for the calendar year. None of those four can build memory output. The Korean plan is the supply-side reply to that demand number, and it is sized accordingly: $590 billion of memory-specific capex commitments to land somewhere between 2028 and 2032. Anthropic's April pact with Micron — disclosed two weeks ago — bundles HBM supply, joint memory architecture co-design, enterprise Claude deployment and a Series H equity check at the $965 billion post-money valuation, and is the cleanest example of the new vertical arrangement: frontier-model companies signing memory contracts the way they used to sign GPU contracts. The Korean plan is what makes those contracts feasible.</p>
+
+    <p>The market signal in real time has been concentrated in the same names. SK Hynix shares hit fresh highs early Monday in Seoul on the announcement; Samsung Electronics opened firmer; Micron held the prior session's gains; Taiwan's TSMC ticked up on the read-through to its CoWoS HBM packaging business. The downstream signal is more uncomfortable. The IDC analyst CNBC quoted on Saturday called the memory crunch an "absolute existential crisis" for smaller device makers, and the Apple and Microsoft price moves suggest the cost is starting to be passed through to consumers rather than absorbed.</p>
+
+    <p class="source-footer"><a href="https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<section class="big-picture" aria-label="Big Picture">
+  <div class="label">Big Picture</div>
+  <div>
+    <p>Monday in Seoul was the supply-side answer to Sunday in Basel and Mountain View. South Korea's Lee Jae Myung used a working-week press conference to announce a $590 billion joint Samsung–SK memory and AI buildout, four new fabs in the southwest plus an HBM packaging hub in the centre, on a decade-long horizon priced into the $900 billion-plus national capex roadmap. Jefferies told clients to write Q3 DRAM up 40 to 50 percent and Q4 up another 30 to 40 percent. Apple has already moved Mac and iPad list prices; Microsoft has done the same on Xbox. The supply curve does not begin to bend until 2028.</p>
+    <p>The diplomatic and policy layer kept tracking the June 12 US export-control wall. Anthropic and Governor Gavin Newsom signed a half-price Claude deal covering every California state agency and local government, making California the first US state to make Claude its default AI tool; the state's CIO told TechCrunch the Pentagon's separate "supply-chain risk" designation against Anthropic "just didn't come up" during contract talks. Austrian Digital State Secretary Alexander Pröll's letter to EU Tech Commissioner Henna Virkkunen went public in full, pressing the bloc to "pursue the strategic establishment of Anthropic within the European Union." The Information reported Amazon engineers are distilling Claude into in-house Nova-adjacent models to cut costs ahead of next year's compute-hour-to-token pricing migration, while Meta told engineers internally they may no longer use Claude Code or Codex on any project that might touch Muse Spark training data.</p>
+    <p>Two security and one consulting story did the rest of the day's heavy lifting. Mozilla's 0DIN bug-bounty program disclosed a Claude Code supply-chain attack where the malicious payload never enters the GitHub repo at all — the setup script reads commands from a DNS TXT record and executes them when Claude Code hits a routine error, opening a reverse shell to attacker infrastructure with the developer's machine credentials. Bloomberg and the LA Times revealed Anthropic's Claude served as the LLM layer inside Palantir's Maven Smart System, which recommended roughly 1,000 targets on the first day of a Pentagon trial; a February strike on the town of Minab killed about 120 children in a school the targeting database had logged as a naval facility on seven-year-old imagery, because intelligence analysts' updates lived in databases that were never wired to MIDB. A Wall Street Journal town-hall transcript had Deloitte public-sector lead Jason Manstof telling staff the billable-hour book will shrink to a "thin sliver" by 2035, with McKinsey already booking over 30 percent of fees on outcome-based contracts.</p>
+    <p>Dev tooling kept its Monday-morning weight. ggml-org tagged six llama.cpp builds in nineteen hours including b9840's first DeepSeek-V4-Pro/Flash CPU graph-input support, b9842's /v1/models endpoint dedup, and b9837's --reasoning-preserve Jinja flag; Claude Code 2.1.196 turned on a 5-minute streaming idle watchdog by default, added organization-default models, and cut /code-review tokens 25 percent; OpenAI cut Codex CLI 0.142.4 and 0.143.0-alpha.31 within the same day. Hugging Face Daily Papers ranked NVIDIA's PhysisForcing physics-informed world simulator first at 39 upvotes, UBC's Four Axioms of Thought Representation second at 36, ByteDance Seed's wrist-translation human-to-robot bridging action third at 33, the Qwen-Image-2.0-RL technical report at 27 with +78 Elo on text-to-image and +93 on image editing, and inclusionAI's policy-adaptive SingGuard multimodal guardrail at 30. Arena, the post-LMSYS leaderboard business, told TechCrunch's Marina Temkin it had crossed $100 million in annual run-rate eight months after its September 2025 commercial launch, more than tripling the $30 million ARR disclosed at its $1.7 billion Series A in January.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg width="80" height="18" viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="6" width="6" height="6" fill="#6b21a8"/>
+    <line x1="14" y1="9" x2="34" y2="9" stroke="#6b21a8" stroke-width="1"/>
+    <circle cx="40" cy="9" r="3.5" fill="none" stroke="#6b21a8" stroke-width="1.4"/>
+    <line x1="46" y1="9" x2="66" y2="9" stroke="#6b21a8" stroke-width="1"/>
+    <rect x="68" y="6" width="6" height="6" fill="none" stroke="#6b21a8" stroke-width="1.4"/>
+  </svg>
+</div>
+
+<section class="cards" aria-label="More today">
+  <div class="section-head">
+    <h2>More Today</h2>
+    <span class="count">22 stories · 2026-06-29</span>
+  </div>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <rect x="14" y="22" width="92" height="36" rx="2"/>
+      <line x1="14" y1="34" x2="106" y2="34"/>
+      <text x="20" y="30" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" stroke="none" letter-spacing="0.8">CA · STATE OF CALIFORNIA</text>
+      <text x="20" y="46" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#6b21a8" stroke="none">CLAUDE</text>
+      <text x="76" y="46" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6b21a8" stroke="none">−50%</text>
+      <line x1="20" y1="52" x2="100" y2="52" stroke-width="0.6"/>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">California signs every state agency and local government onto Claude at half price</h3>
+    <p class="kicker">TechCrunch · 2026-06-29 · <a href="https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Governor Gavin Newsom's deal makes Claude the default AI tool for California state and local government, with workforce training bundled in. The Pentagon's "supply-chain risk" designation against Anthropic "just didn't come up," state CIO Chris Givens told TechCrunch.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Governor Gavin Newsom and Anthropic disclosed a procurement-vehicle deal at 11:10 PDT on Monday that opens discounted Claude access to every California state agency and to every local government across the state. Pricing was framed as roughly half of standard commercial rates; Anthropic also bundled workforce training and technical-support services into the package. TechCrunch's Amanda Silberling reported the agreement covers conversational chat for document drafting, code generation for state IT teams, and analytical work for policy and budget shops; the article did not specify a contract term or a guaranteed-spend floor.</p>
+
+  <p>The deal is the first in which a US state has taken Claude as a horizontal default tool rather than buying it through one-off agency contracts. It also lands inside Newsom's March 2026 executive order pushing AI adoption with safety guard-rails attached. "AI should not replace the human work of government; it should help our workers move faster, solve problems more effectively, and deliver better results for Californians," he said in the joint statement. State Chief Information Officer Chris Givens, asked by TechCrunch whether the Pentagon's June "supply-chain risk" designation against Anthropic had figured into procurement, said it "just didn't come up" — a notable line, because the same designation has effectively blocked Anthropic from Department of Defense suppliers since the company refused to drop the human-oversight and no-domestic-surveillance carve-outs that broke its DoD negotiation in April.</p>
+
+  <blockquote class="pull-quote">While others in Washington are designing policy and creating contracts in the shadow of misuse, we're focused on doing this the right way.<cite>— Governor Gavin Newsom, March 2026 executive order on government AI adoption</cite></blockquote>
+
+  <p>The structural significance is that California is now a customer one tier above the federal government — by spend, agency count and procurement signal — while the federal government is parked at OpenAI on the Defense side after the Hegseth carve-out fight, and at Anthropic on the civilian-Annex-A re-authorisation list after Howard Lutnick's June 27 letter. Anthropic is now negotiating with two parallel American government structures with different procurement guardrails, and the California half is the one that comes with explicit training spend.</p>
+
+  <p>The frame in which to read the discount is the run-rate cost shock Anthropic is starting to impose on US enterprise. The Information's parallel reporting Monday on Amazon engineers distilling Claude internally is the same dollar pressure from a different angle, and the half-price headline on the California contract is what landing-it-anyway looks like at a moment when commercial enterprise renewals are increasingly negotiated against in-house distillation as the BATNA.</p>
+
+  <p class="source-footer"><a href="https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#6b21a8" stroke="none" font-family="Georgia,serif">
+      <text x="14" y="34" font-size="22" font-weight="700">$100M</text>
+      <text x="14" y="50" font-size="8" font-weight="600" letter-spacing="1.2" font-family="system-ui,sans-serif">ARENA · 8 MONTHS</text>
+      <text x="14" y="62" font-size="7" font-weight="500" letter-spacing="1" font-family="system-ui,sans-serif" opacity="0.7">FROM $30M ARR · JANUARY 2026</text>
+    </g>
+    <g stroke="#6b21a8" stroke-width="0.8" fill="none"><line x1="78" y1="58" x2="106" y2="22"/><circle cx="106" cy="22" r="2.6" fill="#6b21a8"/></g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Arena tells TechCrunch it crossed $100M ARR eight months after going commercial</h3>
+    <p class="kicker">TechCrunch · 2026-06-29 · <a href="https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The post-LMSYS leaderboard has more than tripled the $30M ARR it disclosed at January's $1.7B Series A. Andreessen Horowitz, Felicis, Kleiner Perkins and Lightspeed are in. CEO Anastasios Angelopoulos: "people still see us as an open source project."</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Arena, the UC Berkeley-originated crowdsourced model-comparison platform that grew out of the LMSYS Chatbot Arena, told TechCrunch's Marina Temkin on Monday that it had crossed $100 million in annual run-rate revenue eight months after launching its commercial AI Evaluations service in September 2025. The figure is more than triple the $30 million ARR Arena disclosed when it raised its $250 million Series A in January at a $1.7 billion post-money valuation. Andreessen Horowitz, Felicis Ventures, Kleiner Perkins and Lightspeed Venture Partners led that round alongside The House Fund, LDVP, Laude Ventures and UC Investments.</p>
+
+  <p>The business model is consumption-based pricing on top of the free crowdsourced leaderboard, which now houses more than 10 million pairwise model evaluations contributed by users picking the better answer to their own prompts. Model labs and enterprises pay for access to the underlying performance analytics — the structured data behind the rankings — and increasingly for evaluation runs on private models pre-release.</p>
+
+  <blockquote class="pull-quote">A lot of people don't even understand that our business is making any money at all; people still see us as an open source project.<cite>— Anastasios Angelopoulos, Arena CEO and co-founder</cite></blockquote>
+
+  <h4>Founders and product surface</h4>
+  <p>Anastasios Angelopoulos is CEO; Wei-Lin Chiang, a fellow Berkeley postdoc, is CTO. Databricks co-founder Ion Stoica provided early advisory guidance before the company incorporated in April 2025. The leaderboard now covers text generation, coding, vision tasks and image creation, and added an Agent Mode this quarter to score long-running tool-using workflows. The Agent Mode launch is the one that materially changed enterprise interest, because reliable agent eval has been an open problem and Arena's crowdsourced volume makes it the cleanest substitute for handcrafted scenarios.</p>
+
+  <h4>Competitive position</h4>
+  <p>Arena does not yet have a direct crowdsourced competitor — Yupp, the a16z crypto-backed crowdsourced comparison startup, shut down in March — but it competes for the same enterprise dollars as the human-labeling shops. Angelopoulos named Mercor, Surge and Scale AI as the primary rivals; the post-training services market they serve grew sharply through the first half of the year, with Mercor surpassing $1 billion in annualised revenue earlier in 2026 from a $500 million print last September, and Handshake's AI-training gross revenue going from $550 million in January to about $1 billion by April.</p>
+
+  <p class="source-footer"><a href="https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#6b21a8" stroke-width="1.2">
+      <circle cx="32" cy="40" r="20"/>
+      <circle cx="86" cy="40" r="12"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="7" font-weight="700">
+      <text x="22" y="42" letter-spacing="0.6">CLAUDE</text>
+      <text x="76" y="42" letter-spacing="0.6">DISTILL</text>
+    </g>
+    <line x1="54" y1="40" x2="72" y2="40" stroke="#6b21a8" stroke-width="1" stroke-dasharray="2 2"/>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Amazon engineers distill Claude before the compute-hour-to-token pricing flip</h3>
+    <p class="kicker">The Decoder citing The Information · 2026-06-29 · <a href="https://the-decoder.com/amazon-engineers-are-reportedly-distilling-anthropic-models-to-cut-costs-before-new-token-based-pricing-kicks-in/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The Information reports Amazon engineers are training smaller Nova-adjacent models on Claude outputs to absorb the cost shock from next year's pricing transition. Amazon says the new structure "won't raise costs." Bedrock's own distillation service does not currently offer Claude as a teacher.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Information reported Monday — and The Decoder summarised — that Amazon engineers are quietly running distillation jobs on Anthropic's Claude models so they can ship smaller, cheaper variants into Amazon's own product surfaces before the Amazon–Anthropic commercial structure flips next year from compute-hours to a token-based pricing model. Amazon possesses contractual distillation rights inside the partnership, comparable to Apple's rights under its Gemini agreement with Google. The Bedrock distillation product Amazon sells to customers does not currently offer Claude as a teacher model: it ships Amazon's own Nova line and Meta's Llama models as the available templates. The engineering effort described is internal.</p>
+
+  <p>An Amazon spokesperson told The Information that "the changes from the expanded partnership won't raise costs." Anthropic countered, emphasising that "lower prices relative to the performance its models deliver" justify the new schedule. Both lines are difficult to evaluate without the contract, but the engineering response is the real signal: Amazon teams treating the new pricing structure as a known cost shock and pre-emptively distilling the part of the workload they can move to a cheaper model.</p>
+
+  <h4>What Amazon is actually doing</h4>
+  <p>Distillation here means training smaller AWS-controlled student models — likely Nova-aligned — on Claude outputs across the domains Amazon needs covered: customer support, code review, internal copilots, retail copy, and selected agentic flows. The student inherits a fraction of the teacher's capability at a fraction of the inference cost; Amazon can then route the easy 80 percent of a workload to its own model and reserve Claude API calls for the residual hard 20 percent. The article framed this as a fiscally-responsible adaptation to the new pricing, not a hostile move; Amazon has separately committed up to $25 billion in additional investment to Anthropic this year and up to $50 billion to OpenAI.</p>
+
+  <h4>Industry frame</h4>
+  <p>Distillation is the central battleground in 2026's AI economics, and Amazon's behaviour is the same response — at scale and under licence — that Anthropic accused Alibaba of running without licence three weeks ago. The Senate Banking Committee letter put Qwen at 28.8 million Claude exchanges across 25,000 accounts between April 22 and June 5. Amazon's volumes inside the contract are presumably orders of magnitude larger and entirely permitted. The economic point is the same: at frontier model prices, the cheapest way to put a Claude into your stack is to teach a smaller model to imitate the parts of it you need.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/amazon-engineers-are-reportedly-distilling-anthropic-models-to-cut-costs-before-new-token-based-pricing-kicks-in/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <circle cx="60" cy="40" r="22"/>
+      <line x1="60" y1="18" x2="60" y2="62"/>
+      <ellipse cx="60" cy="40" rx="14" ry="22"/>
+      <ellipse cx="60" cy="40" rx="22" ry="14"/>
+    </g>
+    <g fill="#6b21a8" stroke="none" font-family="system-ui,sans-serif" font-size="6" font-weight="700">
+      <text x="32" y="14" letter-spacing="1.2">EU → ANTHROPIC</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Austria's letter to Brussels asking the EU to "pursue the strategic establishment of Anthropic" goes public</h3>
+    <p class="kicker">The Decoder · 2026-06-29 · <a href="https://the-decoder.com/eu-seeks-ai-independence-as-austria-proposes-luring-anthropic-to-europe/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Austrian Digital State Secretary Alexander Pröll's full text reaches Brussels: Anthropic, in his framing, would be "set free" in Europe rather than constrained. Pröll: "A technology that you don't produce yourself and can only use with permission is not a tool. It is a dependency."</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Alexander Pröll, Austria's State Secretary for Digitalization, wrote to EU Commissioner for Technological Sovereignty Henna Virkkunen asking the bloc to "pursue the strategic establishment of Anthropic within the European Union" by offering legal certainty, market access, capital and what Pröll called alignment with European values. The letter was first surfaced in Saturday's daily and went public in full on Monday after The Decoder's Matthias Bastian translated and summarised it.</p>
+
+  <p>Pröll framed the proposal explicitly as a response to the US export-control wall erected on June 12, when the Commerce Department blocked all foreign-national access to Claude Mythos 5 and Claude Fable 5. The letter argues that Europe's 450-million-person single market is now structurally exposed to American policy: "A technology that you don't produce yourself and can only use with permission is not a tool. It is a dependency." Pröll picked Anthropic specifically — rather than OpenAI or Google DeepMind — on the argument that the company's safety-first culture would be "set free" in Europe rather than constrained, an inversion of the usual American framing.</p>
+
+  <blockquote class="pull-quote">A technology that you don't produce yourself and can only use with permission is not a tool. It is a dependency.<cite>— Alexander Pröll, Austrian State Secretary for Digitalization</cite></blockquote>
+
+  <h4>The realistic chance</h4>
+  <p>Anthropic is unlikely to relocate. The company is American-incorporated, its workforce sits in San Francisco, its largest enterprise customers are American, and reporting since spring 2025 has placed Claude inside National Security Agency contract work. The Trump administration's retaliatory posture, demonstrated through the Pentagon "supply-chain risk" designation that landed on Anthropic after the company refused to drop human-oversight carve-outs in DoD negotiation, makes a major European footprint expensive at home.</p>
+
+  <h4>The Chinese alternative trap</h4>
+  <p>Pröll's letter also rebuts the standing European fallback of running Chinese open-weight models locally. The Decoder summarised the argument as "swapping one dependency for another" — Beijing can change licence terms, gate higher tiers, or freeze export of the next generation of weights when it chooses. The implication is that real European AI sovereignty has to be built rather than rented, and that revenue paid to Anthropic by European customers is the only short-term leverage the EU actually holds while it tries to do that.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/eu-seeks-ai-independence-as-austria-proposes-luring-anthropic-to-europe/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <rect x="14" y="18" width="38" height="44" rx="3"/>
+      <rect x="68" y="18" width="38" height="44" rx="3"/>
+      <line x1="52" y1="40" x2="68" y2="40" stroke-dasharray="3 3"/>
+      <line x1="60" y1="34" x2="60" y2="46" stroke-width="2"/>
+    </g>
+    <g fill="#6b21a8" stroke="none" font-family="system-ui,sans-serif" font-size="7" font-weight="700">
+      <text x="20" y="42" letter-spacing="0.6">META</text>
+      <text x="74" y="42" letter-spacing="0.6">CLAUDE</text>
+      <text x="74" y="52" letter-spacing="0.6" font-size="6">CODEX</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Meta tells engineers internally: no Claude Code or Codex on anything that could touch Muse Spark training</h3>
+    <p class="kicker">The Decoder citing The Information · 2026-06-29 · <a href="https://the-decoder.com/meta-restricts-use-of-claude-code-and-codex-to-keep-rival-ai-out-of-its-training-data/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Internal Meta documents obtained by The Information lay out the restriction: rival-model outputs may not flow into Muse Spark training pipelines, and certain projects involving Claude Code or Codex were paused outright. Memo warns "leaked rival model outputs could trigger serious escalations with partner organisations."</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Internal Meta documents obtained by The Information and summarised Monday by The Decoder lay out a corporate policy that prevents Meta engineers from running Anthropic's Claude Code or OpenAI's Codex on projects whose outputs could enter Meta Superintelligence Labs' training pipelines. Specific projects involving the two coding agents were paused outright. The policy framing in the memo cited fear that "leaked rival model outputs could trigger serious escalations with partner organisations" — a reference to the OpenAI, Anthropic and Google terms-of-service language that explicitly bars using model outputs to train competing systems.</p>
+
+  <p>The first-order effect is on engineers working on MetaCode, Meta's internal coding assistant under Superintelligence Labs. Engineers may continue to use Claude or Codex on projects with clear separation from Muse Spark training data — and human review is required even there. Documentation, test-case generation and code analysis that could find its way into training corpora are off-limits in practice.</p>
+
+  <h4>The Muse Spark angle</h4>
+  <p>Muse Spark is Meta's first proprietary foundation model since the formation of Superintelligence Labs around the Alexandr Wang acquihire in summer 2025; it was launched as a Llama replacement in April. Meta's stated AI capex for 2026 is in the $115 billion to $135 billion range, with the explicit objective of standing up infrastructure and a model line that does not depend on competitor APIs. Using Claude or Codex to write training data for that line would either contaminate it or trip a contractual landmine, and the company appears to have decided to address both risks at the same time.</p>
+
+  <blockquote class="pull-quote">Meta maintains clear rules for the responsible use of AI tools.<cite>— Meta statement to The Information</cite></blockquote>
+
+  <h4>Distillation in both directions</h4>
+  <p>The restriction is the inverse of the Amazon distillation story landed the same day. Amazon, with explicit contractual rights, is teaching Nova models from Claude outputs. Meta, without those rights against OpenAI or Anthropic, is policing the boundary in the other direction. The escalation in distillation disputes — Anthropic accusing Alibaba of 28.8 million Claude exchanges across 25,000 accounts, Elon Musk in April acknowledging xAI partially distilled OpenAI — has put every major lab on alert for the trace fingerprints competitor outputs leave in a training run.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/meta-restricts-use-of-claude-code-and-codex-to-keep-rival-ai-out-of-its-training-data/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <circle cx="30" cy="40" r="14"/>
+      <line x1="44" y1="40" x2="76" y2="40" stroke-dasharray="2 2"/>
+      <rect x="76" y="26" width="32" height="28" rx="2"/>
+      <text x="22" y="44" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#6b21a8" stroke="none">DNS</text>
+      <text x="82" y="44" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#6b21a8" stroke="none">SHELL</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">0DIN bug bounty: Claude Code runs DNS-tunneled malware on routine setup-script error</h3>
+    <p class="kicker">The Decoder citing 0DIN/Mozilla · 2026-06-29 · <a href="https://the-decoder.com/claude-code-runs-a-github-repos-hidden-malware-without-verification-giving-attackers-full-control/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Mozilla's 0DIN GenAI bug-bounty program publishes a Claude Code supply-chain attack where the malicious payload lives in a DNS TXT record, the setup script pulls it on error, and a reverse shell opens to the attacker. "The malicious code never exists in the repository itself."</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Mozilla's 0DIN GenAI bug-bounty program disclosed a Claude Code supply-chain attack on Monday in which the malicious payload never enters the GitHub repository at all. The attack is staged through a setup script that fetches commands from a DNS TXT record at runtime; when Claude Code hits a routine error while installing the project, the script's error-handler runs the DNS-fetched commands, which open a reverse shell back to attacker-controlled infrastructure. From there the attacker can extract API keys, login credentials and any other secrets in the developer's environment, and maintain persistent access.</p>
+
+  <p>"The malicious code never exists in the repository itself, making it invisible to scanners, code reviews, and the AI agent," the 0DIN advisory reads. The vector is not a clever Claude jailbreak; the vector is the trust developers and AI coding agents place in the contents of a setup script on a fresh clone. A single repository link, distributed through a job posting, a Slack channel, a tutorial blog or a community-Discord thread, is enough to compromise any developer who opens it under Claude Code or under another tool with the same trust model.</p>
+
+  <h4>Where the trust boundary failed</h4>
+  <p>The advisory's mitigation is procedural rather than technical: AI coding agents should display the contents of any setup script before executing it, and developers should treat any third-party repository's setup instructions as untrusted code that requires the same scrutiny as a downloaded executable. The article did not name a CVE or list a vendor patch.</p>
+
+  <p>The disclosure lands the same day Claude Code 2.1.196 shipped with a new restriction on its own behaviour: credential reads are now blocked inside the sandbox, and untrusted workspaces are tagged "⏸ Pending approval." The 2.1.196 release notes do not name the 0DIN attack, but the sandbox tightening is the right shape of mitigation for the broader class of indirect-prompt-injection-via-trusted-repo attacks the 0DIN write-up describes.</p>
+
+  <blockquote class="pull-quote">The malicious code never exists in the repository itself, making it invisible to scanners, code reviews, and the AI agent.<cite>— 0DIN advisory, Mozilla GenAI bug bounty</cite></blockquote>
+
+  <p class="source-footer"><a href="https://the-decoder.com/claude-code-runs-a-github-repos-hidden-malware-without-verification-giving-attackers-full-control/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety policy">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1" fill="none">
+      <line x1="10" y1="40" x2="110" y2="40"/>
+      <line x1="40" y1="20" x2="40" y2="60" stroke-width="0.7" stroke-dasharray="3 3"/>
+      <line x1="80" y1="20" x2="80" y2="60" stroke-width="0.7" stroke-dasharray="3 3"/>
+      <circle cx="40" cy="40" r="6"/>
+      <circle cx="80" cy="40" r="2.5" fill="#6b21a8"/>
+    </g>
+    <g fill="#6b21a8" stroke="none" font-family="system-ui,sans-serif" font-weight="700" font-size="6">
+      <text x="32" y="18" letter-spacing="1.2">NAVAL BASE</text>
+      <text x="72" y="74" letter-spacing="1.2">SCHOOL</text>
+      <text x="32" y="74" letter-spacing="1.2" opacity="0.7">2019 NOTE</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-policy">Policy</span></div>
+    <h3 class="headline">Bloomberg, LA Times: Claude inside Palantir's Maven recommended 1,000 targets day one; Minab school strike killed 120 children</h3>
+    <p class="kicker">The Decoder citing Bloomberg/LA Times · 2026-06-29 · <a href="https://the-decoder.com/the-us-military-used-ai-to-pick-thousands-of-targets-but-missed-a-note-saying-one-was-a-school/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">A February US strike on Minab killed about 120 children in what had become a school in 2019. The Maven Smart System, with Claude as its LLM layer, was not connected to the intelligence database holding the analyst's note. Seven-year-old imagery. Three thousand targets struck in the opening days.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Bloomberg and the Los Angeles Times jointly broke a long-form investigation Monday — recapped same day by The Decoder — into a February 2026 US missile strike on a building in Minab, Iran, that killed approximately 120 children. The building had been a naval facility until 2019, when it was repurposed as an elementary school. The strike was generated through Palantir's Maven Smart System, the targeting workflow the Department of Defense has been operationalising for combatant commands, with Anthropic's Claude integrated as the LLM layer that converts unstructured intelligence into structured target candidates. On the opening day of the trial Claude/Maven recommended roughly 1,000 targets; more than 3,000 were struck in the early days.</p>
+
+  <h4>How the school disappeared</h4>
+  <p>The analyst who had documented the building's conversion to a school in 2019 filed the change in one of two intelligence databases that, according to the investigation, were never wired to MIDB — the Modernised Integrated Database that Maven actually queries when assembling target options. MIDB, a 1980s system that still relies on heavy manual input, was being replaced by MARS, but MARS has slipped for years. The Government Accountability Office had flagged MIDB's deficiencies as far back as 2020. The imagery Maven used in February was seven years old; the school sign was not in it. The building was reviewed multiple times in the Maven pipeline without anyone catching the gap.</p>
+
+  <blockquote class="pull-quote">There is no excuse for a command failing to verify the accuracy of its intelligence.<cite>— Jack Shanahan, retired USAF lieutenant general, first director of the Joint Artificial Intelligence Center</cite></blockquote>
+
+  <p>The Defense Intelligence Agency, which owns both MIDB and MARS, declined to comment on the specific failures. Jack Shanahan, who founded the Joint AI Center in 2018 and ran Project Maven, told the LA Times that targeting had become a neglected career specialism over the past two decades and that no command should be reading Maven's outputs without a manual verification step. The Pentagon has since announced an "agentic AI" initiative that will run automated cross-checks between Maven targets and public services including Google Maps, surfacing anomalies for human review. The reform is the right shape; the underlying failure was that Maven's authoritative target database was never connected to the intelligence systems that hold the corrections.</p>
+
+  <h4>What this changes for vendors</h4>
+  <p>The investigation puts a specific commercial product — Palantir Maven — and a specific integrated LLM — Claude — at the centre of a civilian-casualty incident, with the chain-of-custody fault sitting in the database plumbing rather than in the model. Both companies will face scrutiny on the question of whether their integration agreement included any duty to flag stale imagery or absent database links, and what the failure mode looks like under the human-oversight carve-out Anthropic insisted on in its (separately collapsed) DoD negotiation.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/the-us-military-used-ai-to-pick-thousands-of-targets-but-missed-a-note-saying-one-was-a-school/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="trend economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1" fill="none">
+      <path d="M10 64 L46 60 L70 50 L92 22 L110 18"/>
+      <line x1="10" y1="68" x2="110" y2="68" stroke-width="0.6"/>
+      <line x1="58" y1="20" x2="58" y2="64" stroke-width="0.5" stroke-dasharray="2 2"/>
+    </g>
+    <g fill="#6b21a8" stroke="none" font-family="system-ui,sans-serif" font-size="6" font-weight="700">
+      <text x="14" y="74" letter-spacing="1.2">2026</text>
+      <text x="100" y="74" letter-spacing="1.2">2035</text>
+      <text x="34" y="14" letter-spacing="1.2">BILLABLE HR</text>
+      <text x="64" y="14" letter-spacing="1.2">AI AGENT WORK</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-trend">Trend</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Deloitte tells consultants the billable hour is a "thin sliver" by 2035; McKinsey already booking 30 percent on outcomes</h3>
+    <p class="kicker">The Decoder citing the Wall Street Journal · 2026-06-29 · <a href="https://the-decoder.com/deloitte-tells-its-own-consultants-ai-is-coming-for-the-billable-hour/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">An internal Deloitte town hall transcript published by the Wall Street Journal: public-sector lead Jason Manstof shows a chart of the hourly-billing market shrinking to a "thin sliver" by 2035 as AI agents take over routine analysis. One staffer's reaction: "They heavily implied our model is toast."</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>A leaked internal Deloitte town-hall presentation, published in the Wall Street Journal on Monday and summarised by The Decoder's Maximilian Schreiner, has the firm's public-sector consulting lead Jason Manstof telling staff that the hourly-billing book of business is shrinking to a "thin sliver" of total professional-services revenue by 2035, with AI-agent-driven outcome work absorbing the rest. The chart of the contraction reportedly drew audible reaction from the audience; one staffer captured the room as "they heavily implied our model is toast. We're basically getting replaced by robots."</p>
+
+  <p>The shift Manstof was describing is a transition that started two years ago across the Big Three strategy houses. McKinsey senior partner Shelley Stewart III has now confirmed publicly that more than 30 percent of McKinsey's global fees are billed on outcome-based contracts — a step away from the hour-multiplied-by-leverage-pyramid economics that defined the industry through the 1990s and 2000s. BCG has been moving in the same direction. Pat Petitti, CEO of the AI-consulting marketplace Catalant, told the WSJ the transition is an "existential scramble" for firms whose pyramid economics depended on the time of associates who can now be replaced for the routine 70 percent of an engagement.</p>
+
+  <blockquote class="pull-quote">They heavily implied our model is toast. We're basically getting replaced by robots.<cite>— Deloitte staffer reacting to the internal town-hall projection</cite></blockquote>
+
+  <h4>Why it does not just become subscription</h4>
+  <p>Outcome-based and subscription pricing is a software-industry economic model that consulting firms are now trying to import. The mechanical risk is well understood: when projects miss timelines, the firm absorbs the loss; when client and firm disagree about whether the outcome was met, the receivable is at risk; the revenue line gets less predictable. Deloitte spokespeople responded to the WSJ that the firm is making "significant investments to lead this human-led, AI-powered shift," which is the polite description of standing up a software-pricing organisation underneath a partnership-pricing brand.</p>
+
+  <p>The story matters as a leading indicator of where AI's labour-substitution effect lands first. Consulting is a high-margin labour business with a precise per-hour denominator and a measurable per-engagement outcome; that combination makes it a clean test surface for AI-agent replacement, and the consulting industry is the first to publicly admit the test is producing the predicted result.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/deloitte-tells-its-own-consultants-ai-is-coming-for-the-billable-hour/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#6b21a8" stroke-width="1.2">
+      <rect x="10" y="18" width="48" height="44" rx="3"/>
+      <rect x="62" y="18" width="48" height="44" rx="3"/>
+      <circle cx="34" cy="40" r="6" fill="#6b21a8" stroke="none"/>
+      <path d="M68 56 L80 36 L88 46 L100 26" stroke-linejoin="round"/>
+    </g>
+    <g fill="#6b21a8" stroke="none" font-family="system-ui,sans-serif" font-size="6" font-weight="700">
+      <text x="14" y="74" letter-spacing="1.2">PAID</text>
+      <text x="64" y="74" letter-spacing="1.2">FREE · US</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Google opens Nano Banana personalised image generation to free US Gemini users</h3>
+    <p class="kicker">TechCrunch · 2026-06-29 · <a href="https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The "Create an illustration of me and my favourite things" feature, until now restricted to Plus, Pro and Ultra subscribers, lands free for US Gemini users on Monday. Pulls preferences from Gmail, Photos, YouTube and Search; the Gemini app crossed 750 million MAU last month.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Google opened Nano Banana–powered personalised image generation inside the Gemini app to all eligible US free-tier users on Monday, dropping the prior restriction to Plus, Pro and Ultra subscribers. Lauren Forristal's TechCrunch piece, posted three hours into the news cycle, walked through the feature: a user can say "Create an illustration of me and my favourite things" and Gemini composes it by pulling preference data from Gmail, Google Photos, YouTube and Search, and reaching into Photos for the user's actual face rather than a manual upload.</p>
+
+  <p>Google introduced Personal Intelligence — the umbrella programme this image feature lives inside — earlier in 2026, reaching all US users by March and extending to India and Japan in April. The image-generation slice was announced in April. Monday's rollout is the third major opening of Personal Intelligence and the first that puts personalised generative imagery into the hands of the entire US free-tier base.</p>
+
+  <h4>Defaults and toggles</h4>
+  <p>The personalisation is opt-in across both surface and per-prompt. Once a user accepts the consent flow, every Gemini prompt routes through personalisation by default; a Tools-menu toggle lets the user disable it for an individual request. The article did not list per-day generation limits or compare numerically with OpenAI's image surface inside ChatGPT.</p>
+
+  <h4>The footnote that matters</h4>
+  <p>Google disclosed in the same blog window that the Gemini app crossed 750 million monthly active users last month, paired with a Daily Brief feature, a UI refresh, broader access to the Gemini Omni video model, and the Gemini Spark personal-agent surface. The 750 million number puts Gemini's MAU base inside the same order of magnitude as ChatGPT's claimed user base, and Monday's free-tier image feature is the kind of move a company makes when it is contesting at scale, not when it is feature-matching.</p>
+
+  <p class="source-footer"><a href="https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#6b21a8" font-family="ui-monospace,Menlo,monospace" font-size="8" font-weight="700" stroke="none">
+      <text x="14" y="22">b9842</text>
+      <text x="14" y="34">b9840</text>
+      <text x="14" y="46">b9839</text>
+      <text x="14" y="58">b9838</text>
+      <text x="14" y="70">b9837</text>
+    </g>
+    <g stroke="#6b21a8" stroke-width="0.6" fill="none">
+      <line x1="60" y1="18" x2="60" y2="72"/>
+      <circle cx="60" cy="22" r="2.4" fill="#6b21a8"/>
+      <circle cx="60" cy="34" r="3.2" fill="#6b21a8"/>
+      <circle cx="60" cy="46" r="2" fill="#6b21a8"/>
+      <circle cx="60" cy="58" r="2" fill="#6b21a8"/>
+      <circle cx="60" cy="70" r="2.4" fill="#6b21a8"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="7" font-weight="600" stroke="none">
+      <text x="68" y="22" opacity="0.85">/v1/models dedup</text>
+      <text x="68" y="34" opacity="0.85">DeepSeek-V4 CPU</text>
+      <text x="68" y="46" opacity="0.7">tailwind ignored wt</text>
+      <text x="68" y="58" opacity="0.7">remove regex-partial</text>
+      <text x="68" y="70" opacity="0.85">--reasoning-preserve</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">ggml-org tags six llama.cpp builds in 19 hours; b9840 lands DeepSeek-V4 CPU support</h3>
+    <p class="kicker">GitHub Releases · 2026-06-29 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Six builds Monday: b9837 adds --reasoning-preserve, b9838 removes the regex-partial dependency, b9839 restores Tailwind scanning in ignored worktrees, b9840 implements DeepSeek-V4 graph-input handling for the CPU backend, b9842 deduplicates the /v1/models endpoint.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>ggml-org pushed six llama.cpp builds inside a nineteen-hour window on Monday, between b9837 at 00:05 UTC and b9842 at 16:18 UTC. The merge cadence is the same shape as Sunday's six-build run between b9829 and b9835, and is consistent with what the project's GitHub-tagged release cycle has looked like across June.</p>
+
+  <h4>What landed</h4>
+  <p>b9837 (PR #25105) introduces a <code>--reasoning-preserve</code> flag inside the Jinja chat template processor, letting models that emit reasoning traces ship those traces through downstream tool calls without being stripped. b9838 (PR #25118) removes the unused <code>regex-partial</code> dependency from common utilities, a footprint cleanup. b9839 (PR #24879) restores Tailwind scanning inside worktrees the build had previously been told to ignore, fixing a UI build regression. b9840 (PR #24162) is the day's structural change: support for DeepSeek-V4 graph-input handling and state management, plus compatibility with antirez DS4 GGUFs. b9842 (PR #25131), authored by Adrien Gallouët, deduplicates preset and cached model entries surfaced by the <code>/v1/models</code> OpenAI-compatible endpoint, which had been emitting duplicates when the same model was registered through more than one path.</p>
+
+  <h4>Why the DeepSeek-V4 change matters</h4>
+  <p>DeepSeek-V4 was announced in late April as DeepSeek-V4-Pro at 1.6 trillion parameters with 49 billion activated and DeepSeek-V4-Flash at 284 billion parameters with 13 billion activated; both expose a one-million-token context. b9840's CPU support means the V4 family is now a first-class citizen on the most widely deployed local inference engine in the world, which has run on roughly every locally-hosted Llama, Qwen, DeepSeek and Mistral install since the b8000 series last winter. The CPU path is the one Ollama and LM Studio ship by default.</p>
+
+  <p>Sunday's notable contributions feed into this. Kashif Rasul's long-pending DFlash v2 sliding-window-per-layer-types implementation landed as PR #22105 in b9831; ModelBest's MiniCPM5 chat and tool-call parser landed as PR #24889 in b9833. Both unblock DeepSeek-V4 in a different way: DFlash v2 fixes an attention path V4 needs for its hybrid Compressed-Sparse Attention plus Heavily Compressed Attention scheme, and the MiniCPM5 parser is the structural template for the tool-call grammar V4 ships with.</p>
+
+  <p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#6b21a8" font-family="Georgia,serif" stroke="none">
+      <text x="14" y="38" font-size="22" font-weight="700">2.1.196</text>
+      <text x="14" y="56" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1">CLAUDE CODE · 06·29 · 23:27Z</text>
+    </g>
+    <g stroke="#6b21a8" stroke-width="0.8" fill="none">
+      <rect x="80" y="20" width="28" height="44" rx="3"/>
+      <line x1="86" y1="32" x2="102" y2="32"/>
+      <line x1="86" y1="44" x2="102" y2="44"/>
+      <line x1="86" y1="56" x2="102" y2="56"/>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Claude Code 2.1.196 turns the streaming idle watchdog on by default and adds organization-default models</h3>
+    <p class="kicker">Anthropic GitHub Releases · 2026-06-29 · <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">2.1.196 lands at 23:27 UTC with the streaming idle watchdog default-enabled (aborts and retries after five minutes without an event), org/role default model picker in /model, sandbox credential-read blocking, and a 25 percent token reduction on /code-review.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Claude Code 2.1.196 shipped at 23:27 UTC Monday, the only Claude Code build of the day, with two structural changes and a long list of fixes. The structural changes are the streaming idle watchdog and organization-default model administration.</p>
+
+  <h4>Streaming idle watchdog on by default</h4>
+  <p>The watchdog aborts the active model stream and retries the request when no events have crossed the socket for five minutes. It is now on by default for all providers, including third-party-proxied Bedrock and Vertex configurations; <code>CLAUDE_ENABLE_STREAM_WATCHDOG=0</code> disables it for users who route through long-tail providers with intentionally bursty patterns. The change targets the long-tail failure mode where a stream hangs without an error event and the user is left staring at a half-rendered turn for an unbounded period.</p>
+
+  <h4>Org and role default models</h4>
+  <p>Admins can now set a default model at the organisation tier, with role-level overrides; the <code>/model</code> picker surfaces the active default as "Org default" or "Role default" when the user has not manually selected. This is the surface area Anthropic needs for enterprise rollouts where finance wants Haiku for routine tasks and engineering wants Opus for high-stakes commits — and it is the kind of governance surface that has been blocking Claude Code from fully replacing Cursor in some large enterprise accounts.</p>
+
+  <h4>Other things in the release</h4>
+  <p>Sandbox credential reads are now blocked, untrusted workspaces show "⏸ Pending approval," and <code>claude mcp list</code>/<code>get</code> no longer spawn <code>.mcp.json</code> servers from repo self-approval via committed <code>.claude/settings.json</code> — a tightening that lines up exactly with the 0DIN supply-chain disclosure landed the same day. The <code>/code-review</code> workflow saw a 25 percent token reduction, per-frame terminal UI rendering work dropped, and Remote Control is now disabled when <code>ANTHROPIC_BASE_URL</code> points to a non-Anthropic host. Voice dictation, PowerShell <code>git diff</code>, <code>claude agents</code> side panel, MCP OAuth scope handling on enterprise IdPs, <code>/cd</code> session reappearance and a Bedrock <code>/context</code> token-reporting bug were all fixed. Clickable file attachments and readable session-default names rounded out the user-facing additions.</p>
+
+  <p class="source-footer"><a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#6b21a8" font-family="ui-monospace,Menlo,monospace" font-weight="700" stroke="none">
+      <text x="14" y="32" font-size="13">0.142.4</text>
+      <text x="14" y="60" font-size="13">0.143.0-α31</text>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700" stroke="none">
+      <text x="14" y="44" letter-spacing="1.2" opacity="0.7">05:04 UTC · MAINTENANCE</text>
+      <text x="14" y="72" letter-spacing="1.2" opacity="0.7">23:21 UTC · PRE-RELEASE</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">OpenAI cuts Codex CLI 0.142.4 and 0.143.0-alpha.31 within the same day</h3>
+    <p class="kicker">openai/codex Releases · 2026-06-29 · <a href="https://github.com/openai/codex/releases" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">0.142.4 is a maintenance-only stable release at 05:04 UTC; 0.143.0-alpha.31 is the next prerelease at 23:21 UTC. The 0.143 alpha train has been cutting once or twice a day for a fortnight and is still unannotated.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>OpenAI tagged Codex CLI 0.142.4 on the stable channel at 05:04 UTC Monday and 0.143.0-alpha.31 on the prerelease channel at 23:21 UTC. The 0.142.4 release notes list no user-facing changes; the prior 0.142.3 was the same shape. The 0.143 prerelease line has been cutting once or twice a day for two weeks now (alpha.22 through alpha.31 by this evening), the GitHub release pages do not carry annotations for those tags either.</p>
+
+  <h4>What the cadence implies</h4>
+  <p>Two-a-day prerelease cuts with no public notes mean OpenAI is iterating against an internal harness rather than a public changelog right now. The most likely guess from the cadence and prior 0.142.x notes — usage-credit redemption, smarter plugin browsing, configurable rollout token budgets, flexible multi-agent delegation, indexed web search, scheduled time reminders, plus Linux TUI, disconnect-resilience and plugin loading fixes — is that 0.143 is the train for the next set of Codex Remote consolidation work. The June 27 Codex Remote GA on Web/Mac/iOS is in the same era; the 0.143 line is presumably what is being integrated against on the CLI side.</p>
+
+  <p>The unannotated alpha pattern is unusual for OpenAI Codex but consistent with the increasingly common pattern of CLI vendors prereleasing every commit and only writing release notes at the version-promotion boundary. The signal worth tracking for downstream users is the eventual 0.143.0 release notes; until then, the alpha cuts are not safe to rely on for production CI.</p>
+
+  <p class="source-footer"><a href="https://github.com/openai/codex/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1" fill="none">
+      <circle cx="36" cy="40" r="20"/>
+      <circle cx="84" cy="40" r="20"/>
+      <path d="M16 40 L104 40" stroke-dasharray="3 3"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="7" font-weight="700" stroke="none">
+      <text x="26" y="42" letter-spacing="0.6">REAL</text>
+      <text x="78" y="42" letter-spacing="0.6">SIM</text>
+      <text x="46" y="18" letter-spacing="1.2" font-size="6">PHYSIS</text>
+      <text x="32" y="76" letter-spacing="1.2" font-size="6">+22% R-BENCH · NVIDIA</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">PhysisForcing leads HF Daily Papers: NVIDIA's physics-informed world simulator nets +22% on R-Bench</h3>
+    <p class="kicker">arXiv 2606.28128 / Hugging Face · 2026-06-29 · <a href="https://arxiv.org/abs/2606.28128" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">NVIDIA's PhysisForcing combines pixel-trajectory and semantic relational alignment losses inside a DiT world model for robotic manipulation. 22.3 percent improvement on R-Bench for Wan2.2-I2V-A14B, WorldArena closed-loop success up from 16.0 to 24.0 percent. 39 upvotes leads the day.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The day's leading paper on Hugging Face Daily Papers was NVIDIA's PhysisForcing, posted Friday by Peiwen Zhang, Yufan Deng, Shangkun Sun and a dozen co-authors including Enze Xie and Ming-Yu Liu. It took the top of the Monday upvote queue at 39 points. The paper takes aim at the failure mode that has been plaguing DiT-based video world models when they are pressed into service as simulators for robot policy learning: physically implausible outputs — objects that deform during contact, robot-object trajectories that drift through walls, motion paths that snap discontinuously between frames.</p>
+
+  <h4>The two losses</h4>
+  <p>PhysisForcing introduces two supervision losses on top of the standard DiT next-token-style training objective. A pixel-level trajectory alignment loss supervises DiT features against reference point trajectories — so the model is pushed to put pixels exactly where the trajectory of the ground-truth point would have them. A semantic relational alignment loss aligns DiT features against inter-region relations extracted from a frozen video-understanding encoder, which forces the latent representation to preserve which-thing-is-near-which-thing structure rather than just per-pixel similarity.</p>
+
+  <h4>Results</h4>
+  <p>The numbers are concrete. On R-Bench, Wan2.2-I2V-A14B (a 14B Wan-2.2 image-to-video backbone) improved 22.3 percent overall, 7.1 percentage points above vanilla fine-tuning. Cosmos3-Nano improved 9.2 percent, 3.7 above vanilla fine-tuning. PAI-Bench and EZS-Bench showed parallel gains. The biggest jump was in the closed-loop downstream robot policy: WorldArena closed-loop task-success rate climbed from 16.0 percent to 24.0 percent when the policy was trained on PhysisForcing simulator rollouts.</p>
+
+  <p>The interpretation is the structural one. World-model simulators have been promising for robot policy data generation but unusable in practice because the policy learns to exploit physically impossible dynamics that do not survive sim-to-real transfer. PhysisForcing's two losses do not change the model architecture; they only re-weight what the same DiT is trained to make consistent. The size of the closed-loop gain (the 16→24 jump) is the part that matters for the rest of the robotics field: it says the trick generalises across both the world model and the downstream policy.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.28128" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1" fill="none">
+      <circle cx="30" cy="24" r="6"/>
+      <circle cx="60" cy="24" r="6"/>
+      <circle cx="90" cy="24" r="6"/>
+      <circle cx="45" cy="56" r="6"/>
+      <circle cx="75" cy="56" r="6"/>
+      <line x1="30" y1="30" x2="45" y2="50"/>
+      <line x1="60" y1="30" x2="45" y2="50"/>
+      <line x1="60" y1="30" x2="75" y2="50"/>
+      <line x1="90" y1="30" x2="75" y2="50"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700" stroke="none">
+      <text x="22" y="76" letter-spacing="1.2">4 AXIOMS · 23 TASKS · NONE PASS</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">UBC paper: no LLM passes all four "Latent Thought" axioms across 23 reasoning benchmarks</h3>
+    <p class="kicker">arXiv 2606.27378 / Hugging Face · 2026-06-29 · <a href="https://arxiv.org/abs/2606.27378" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Fahd Seddik and Fatemeh Fard at UBC Okanagan formalise four functional axioms — Causality, Minimality, Separability, Stability — for latent thought representations in LLMs. None of dense, reasoning-distilled, or RL-trained candidates satisfies all four. 36 upvotes, second on the daily.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The University of British Columbia Okanagan paper from Fahd Seddik and Fatemeh Fard is the day's second-place daily paper at 36 upvotes. It tackles a meta-problem in interpretability: every existing test for whether a model's internal "thoughts" are real representations relies on a downstream benchmark, which conflates representation quality with raw model capacity. The authors propose evaluating thought representations directly through four functional axioms that are independent of downstream accuracy.</p>
+
+  <h4>The four axioms</h4>
+  <p>The four axioms are Causality (the representation must causally drive the output, not co-occur with it); Minimality (it should contain only the information the output requires, not extraneous content); Separability (representations of different inputs should be distinguishable); and Stability (the representation should be invariant to surface variations that do not change semantics). They evaluate against 23 reasoning tasks spanning factual QA, spatial reasoning, mathematical reasoning and code tasks.</p>
+
+  <h4>The finding</h4>
+  <p>None of the candidate models — dense transformers, reasoning-distilled models trained on chain-of-thought traces, and RL-trained reasoners — satisfies all four axioms simultaneously. Representations reliably distinguish task types but fail to distinguish individual questions inside a task. The representations encode "minimal information beyond what already exists in input embeddings," which is the strongest negative finding in the paper: the model's "thinking" is not adding much information over its input on the metrics where it should.</p>
+
+  <p>The structural conclusion is uncomfortable for the interpretability and chain-of-thought-faithfulness research streams: downstream-accuracy benchmarks were hiding a representational gap that persists across architectures and training regimes, and the gap is not closed by reasoning-distillation or RL. The axioms are now a reusable diagnostic anyone can drop on a new model.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.27378" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <circle cx="32" cy="38" r="10"/>
+      <line x1="32" y1="48" x2="32" y2="68"/>
+      <line x1="24" y1="58" x2="40" y2="58"/>
+      <circle cx="88" cy="38" r="10"/>
+      <rect x="78" y="48" width="20" height="14" rx="2"/>
+      <path d="M50 40 Q60 22 70 40" stroke-dasharray="2 3"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700" stroke="none">
+      <text x="22" y="14" letter-spacing="1.2">HUMAN</text>
+      <text x="76" y="14" letter-spacing="1.2">ROBOT</text>
+      <text x="42" y="76" letter-spacing="1.2">WRIST TRANSLATION ONLY</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">ByteDance Seed: pass only the wrist's translation when transferring human skill to bi-manual robots</h3>
+    <p class="kicker">arXiv 2606.28133 / Hugging Face · 2026-06-29 · <a href="https://arxiv.org/abs/2606.28133" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">ByteDance Seed's "Translation as a Bridging Action" replaces full 6-DoF hand-pose transfer with the relative wrist translation in the initial head-camera frame, then runs a π0-style VLA with interleaved action tokens. 33 upvotes, third on the daily.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>ByteDance Seed's "Translation as a Bridging Action: Transferring Manipulation Skills from Humans to Robots," by Sijin Chen, Kaixuan Jiang, Haixin Shi and a six-author cohort, takes the day's third slot on Hugging Face Daily Papers at 33 upvotes. The setup: standard human-to-robot manipulation transfer pipelines try to recover full 6-degree-of-freedom hand pose from human demonstration video and then re-target that pose onto the robot's gripper. That step has been the wall in the field for years because hand-pose estimation is noisy and the noise compounds along the trajectory.</p>
+
+  <h4>The bridging action</h4>
+  <p>The paper's argument is that you do not need the rotation. Translating only the wrist's position, expressed in the frame of the initial head-mounted camera, is a sufficient shared representation between the human demonstrator and the bi-manual robot. The model — described as π0-style, after Physical Intelligence's π0 vision-language-action architecture — uses interleaved action tokens with attention masking to handle the missing components of the action when training across embodiments where some axes are unavailable.</p>
+
+  <h4>Why it scales</h4>
+  <p>The authors claim two things. First, the wrist-translation representation transfers human knowledge more effectively than noisy 6-DoF transfer on novel bi-manual manipulation tasks. Second, the gain scales with the amount of available human data. The project page lives at translation-as-a-bridging-action.github.io.</p>
+
+  <p>This is the second NVIDIA-and-China robotics paper Daily Papers has surfaced in three days (PhysisForcing being the first); both share the structural pattern of skipping a hard part of the standard pipeline (full physics simulation; full pose recovery) in favour of a smaller, more learnable representation that downstream policy learning can lift on.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.28133" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#6b21a8" stroke="none" font-family="Georgia,serif">
+      <text x="14" y="34" font-size="22" font-weight="700">+93</text>
+      <text x="14" y="52" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2">ELO · EDIT</text>
+    </g>
+    <g fill="#6b21a8" stroke="none" font-family="Georgia,serif">
+      <text x="74" y="34" font-size="22" font-weight="700">+78</text>
+      <text x="74" y="52" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2">ELO · T2I</text>
+    </g>
+    <line x1="14" y1="64" x2="106" y2="64" stroke="#6b21a8" stroke-width="0.6"/>
+    <text x="14" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1.2">QWEN-IMAGE-2.0-RL · GRPO + ON-POLICY DISTILL</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Qwen-Image-2.0-RL technical report: +78 Elo on text-to-image, +93 Elo on editing via GRPO and on-policy distillation</h3>
+    <p class="kicker">arXiv 2606.27608 / Hugging Face · 2026-06-29 · <a href="https://arxiv.org/abs/2606.27608" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Twenty-eight Qwen team authors describe a GRPO RL post-training with task-specific composite reward models, hybrid classifier-free guidance, and on-policy distillation that merges specialised policies. +2.61 on Qwen-Image-Bench, +78 Elo on text-to-image, +93 Elo on image editing.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Qwen's twenty-eight-author technical report on Qwen-Image-2.0-RL was the day's fourth most-upvoted paper at 27 points. It documents a post-training stack on top of the base Qwen-Image-2.0 model that combines reinforcement learning from human feedback, on-policy distillation, and task-specific composite reward models that were themselves trained by fine-tuning vision-language models on alignment, aesthetics, portrait fidelity, instruction accuracy and face-identity-preservation signals.</p>
+
+  <h4>The training stack</h4>
+  <p>The optimiser is GRPO, paired with a hybrid classifier-free guidance strategy that the report claims stabilises RL on diffusion-based image generation where naive GRPO collapses. Prompt curation by reward-range filtering and per-category reward-weight calibration handle the imbalance issue that has plagued multi-reward RL on image models: different reward heads disagree about what is a good image, and the report describes a calibration regime that lets the RL pipeline trade between them without one dominating. On-policy distillation then merges the specialised policies trained for each reward head into a single model that the report claims captures the gains of each without scaling to multiple specialists at inference.</p>
+
+  <h4>The numbers</h4>
+  <p>Qwen-Image-Bench overall improves +2.61 points to 57.84. Text-to-image Elo goes up +78 to 1193. Image-editing Elo goes up +93 to 1349. The deltas are large enough to put Qwen-Image-2.0-RL at the front of the Chinese open-weight image-generation pack, and probably ahead of the closed Adobe/Imagen tier on the editing axis where Qwen has been investing the heaviest.</p>
+
+  <p>The structural takeaway is that GRPO is now the production RL post-training recipe for diffusion image generation in the same way it was for text generation in the GLM-2 era; the report makes the case that the hybrid CFG and reward-calibration moves are the two engineering changes that close the gap to text-domain RL.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.27608" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <path d="M14 60 L36 40 L58 50 L80 30 L102 36" />
+      <circle cx="14" cy="60" r="2.6" fill="#6b21a8"/>
+      <circle cx="36" cy="40" r="2.6" fill="#6b21a8"/>
+      <circle cx="58" cy="50" r="2.6" fill="#6b21a8"/>
+      <circle cx="80" cy="30" r="2.6" fill="#6b21a8"/>
+      <circle cx="102" cy="36" r="2.6" fill="#6b21a8"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700" stroke="none">
+      <text x="14" y="18" letter-spacing="1.2">SINGGUARD · POLICY-ADAPTIVE</text>
+      <text x="14" y="76" letter-spacing="1.2" opacity="0.7">MULTIMODAL · DYNAMIC REASONING</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">inclusionAI's SingGuard: a multimodal policy-adaptive guardrail with dynamic reasoning</h3>
+    <p class="kicker">arXiv 2606.22873 / Hugging Face · 2026-06-29 · <a href="https://arxiv.org/abs/2606.22873" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Ant Group's inclusionAI lab proposes SingGuard, a multimodal LLM guardrail whose internal policy is itself adaptive: the safety classifier reasons over the conversation context before deciding what policy to apply. 30 upvotes, the day's safety-tooling pick.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>inclusionAI, Ant Group's open-research lab, published SingGuard as a policy-adaptive multimodal guardrail with dynamic reasoning. The paper sits at 30 Hugging Face upvotes — the day's most-upvoted safety-tooling result. The structural argument is that fixed-policy guardrails over-refuse on legitimate use and under-refuse on adversarial use because the policy is static; SingGuard's guardrail head reasons over the conversation and the modalities present before selecting which policy clauses to apply at the moment.</p>
+
+  <h4>What the dynamism buys</h4>
+  <p>Multimodal guardrails have historically struggled because the policy that should govern an image attached to a text prompt depends on the context the text is asking for. SingGuard's approach is to expose the guardrail to the same context as the model and let it reason about what is being requested before classifying. The paper frames this as adapting to "policy variation across deployment contexts" — the same model deployed to a healthcare partner and to a consumer chat surface needs different refusal behaviour, and SingGuard is structured so the surface-level policy can change without retraining the guardrail.</p>
+
+  <p>The publication slot — and inclusionAI's track record — matters for the broader safety stack. Most production multimodal guardrails ship as black-box classifiers from the model labs themselves; an open, policy-adaptive guardrail that is competitive against those classifiers is the building block for third-party safety vendors who want to ship a single product across multiple foundation-model providers.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.22873" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1" fill="none">
+      <circle cx="30" cy="40" r="20"/>
+      <text x="20" y="44" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#6b21a8" stroke="none">9B</text>
+      <circle cx="86" cy="40" r="20"/>
+      <text x="74" y="44" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#6b21a8" stroke="none">397B</text>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700" stroke="none">
+      <text x="22" y="14" letter-spacing="1.2">ORNITH · DENSE</text>
+      <text x="72" y="14" letter-spacing="1.2">ORNITH · MOE</text>
+      <text x="20" y="76" letter-spacing="1.2" opacity="0.7">SIMON WILLISON · 103 TOK/S</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Simon Willison takes Ornith-1.0 for a spin: 9B/31B dense, 35B/397B MoE, Apache 2.0 base</h3>
+    <p class="kicker">simonwillison.net · 2026-06-29 · <a href="https://simonwillison.net/2026/Jun/29/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">DeepReinforce ships Ornith-1.0 as a self-scaffolding agentic-coding model line built on Gemma 4 and Qwen 3.5. Simon ran the 35B-MoE quantised to Q4_K_M (20 GB), hit 103 tokens/second on the pelican benchmark, and reports it drives multi-step agent harnesses competently.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Simon Willison's Monday post reviews Ornith-1.0, an open-source MIT-licensed agentic-coding model line from a lab calling itself DeepReinforce. The line ships in four sizes — 9B dense, 31B dense, 35B MoE and 397B MoE — and is built on top of Apache 2.0-licensed Gemma 4 and Qwen 3.5 bases. Simon tested the 35B-MoE in LM Studio at Q4_K_M quantisation (a 20 GB GGUF), driving it through his standard pelican-as-an-agent harness via the Pi framework.</p>
+
+  <h4>What he found</h4>
+  <p>The model ran at 103 tokens per second on the pelican task on his M-series Mac. More importantly to him, the model held its scaffolding across many tool calls in succession — the long-tail failure mode where smaller models trip out of agent context after the third or fourth function-call round trip. His phrasing: "it seems to be able to run the agent harness over many tool calls in a proficient way." The 397B MoE is the size DeepReinforce points to for frontier comparisons; Simon stuck with the 35B because that is what local hardware will run.</p>
+
+  <p>The release is the latest example of the "build on top of an open base, ship a coding-and-agent variant" recipe that has dominated the open-weight market for the last three months. Combined with the b9840 llama.cpp landing of DeepSeek-V4 CPU support, the open-source agent-coding stack has materially closed against the Claude Code / Codex CLI surface on every axis except long-running cloud delegation, which is the surface area Anthropic and OpenAI are now competing on.</p>
+
+  <p class="source-footer"><a href="https://simonwillison.net/2026/Jun/29/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#6b21a8" font-family="Georgia,serif" stroke="none">
+      <text x="14" y="34" font-size="22" font-weight="700">27B</text>
+      <text x="14" y="52" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2">QWEN 3.6</text>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="7" font-weight="700" stroke="none">
+      <text x="70" y="22" letter-spacing="1.2">HN #1</text>
+      <text x="70" y="36" letter-spacing="1.2" font-size="6" opacity="0.7">549 POINTS</text>
+      <text x="70" y="54" letter-spacing="1.2" font-size="6" opacity="0.7">LOCAL DEV</text>
+      <text x="70" y="66" letter-spacing="1.2" font-size="6" opacity="0.7">SWEET SPOT</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">Hacker News' top story: Qwen 3.6 27B is the local-development sweet spot, 549 points</h3>
+    <p class="kicker">quesma.com via Hacker News · 2026-06-29 · <a href="https://quesma.com/blog/qwen-36-is-awesome/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">A Quesma engineering post arguing Qwen 3.6 27B hits the right point on the size/quality/cost curve for everyday local development work topped Hacker News with 549 points. The comment thread reads as a settling of the local-model debate around Qwen.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The day's top Hacker News story was a Quesma engineering blog post arguing that Qwen 3.6 27B is the sweet spot for local development. It hit the front page Sunday and crossed 549 points by Monday morning. The argument: 27B is large enough to handle real coding and analysis tasks without falling off context, small enough to run quantised on a single high-end consumer GPU, and the Qwen 3.6 generation specifically closed enough capability gaps to displace Llama-derived models in the author's daily workflow.</p>
+
+  <p>The comment thread is the part worth reading. The previous local-development debate had Qwen, Llama-derived models like Mistral's open releases, and DeepSeek's quantised variants trading the consensus position over the past nine months. The Quesma post's reception — a 549-point top-of-front-page outcome with the comment thread visibly converging — reads as a market signal that Qwen has won the local-coding default for the moment. The b9840 llama.cpp DeepSeek-V4 CPU support is the next plate to drop; if the V4-Flash 13B-active quant gets a positive runtime test from the same population of engineers in the next week, the local default could move again.</p>
+
+  <p>Other AI-adjacent stories on the same Monday front page: "Model Training as Code" from Aleph Alpha at 178 points, "What happens when you run a CUDA kernel?" at 195, and a 121-point repost of a January 2024 paper on knowledge distillation from black-box LLMs — that last one is the seven-month-old reference paper the Amazon distillation reporting is mostly built on.</p>
+
+  <p class="source-footer"><a href="https://quesma.com/blog/qwen-36-is-awesome/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1" fill="none">
+      <rect x="14" y="20" width="92" height="40" rx="3"/>
+      <line x1="14" y1="32" x2="106" y2="32"/>
+    </g>
+    <g fill="#6b21a8" font-family="ui-monospace,Menlo,monospace" font-size="6" font-weight="700" stroke="none">
+      <text x="20" y="42" opacity="0.85">SimFoundry · MODULAR SCENE GEN</text>
+      <text x="20" y="52" opacity="0.7">Vesta · GENERALIST EMBODIED RM</text>
+      <text x="20" y="62" opacity="0.55">MultiHashFormer · HASH LM</text>
+    </g>
+    <text x="20" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1.2">NVIDIA · TAIL OF HF DAILY</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">NVIDIA pads the tail of HF Daily Papers with SimFoundry and Vesta; MultiHashFormer takes 16</h3>
+    <p class="kicker">Hugging Face Daily Papers · 2026-06-29 · <a href="https://huggingface.co/papers/date/2026-06-29" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">NVIDIA's SimFoundry modular scene generator and the Vesta generalist embodied reasoning model take 6 and 4 upvotes respectively. MultiHashFormer, a hash-based generative LM, lands at 16. The tail of the daily reads as a single NVIDIA Physical-AI grant push.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The lower-upvote slots on Monday's Hugging Face Daily Papers are worth scanning together because they read as a single NVIDIA Physical-AI publication wave. SimFoundry (arXiv 2606.28276) is NVIDIA's modular and automated scene-generation platform for policy learning and evaluation — the bones a closed-loop simulator like the one PhysisForcing reports against would sit inside. Vesta (arXiv 2606.20905) is NVIDIA's generalist embodied reasoning model, pitched as a unified base for multi-domain embodied AI tasks. Together with PhysisForcing at the top of the daily, the cluster looks like a coordinated release window from NVIDIA's robotics group built around the same simulator-and-policy stack.</p>
+
+  <h4>MultiHashFormer</h4>
+  <p>MultiHashFormer (arXiv 2606.28057) took 16 upvotes for a novel application of hash-based mechanisms inside the generative-LM architecture — an efficiency play that aims at the same problem space as MoE routing but using hash-based dispatch rather than learned gating. The paper is the kind of cross-pollination result the daily routinely surfaces from outside the major labs.</p>
+
+  <p>The structural read for the wider research community is that NVIDIA is now publishing more Physical-AI architecture work in any single week than the academic robotics labs combined, and that the work is dropping pre-packaged with simulators, reward models and base policies. The downstream impact will be on academic labs that need to choose between building their own evaluation surfaces and inheriting NVIDIA's.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers/date/2026-06-29" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1.2" fill="none">
+      <path d="M22 60 L34 30 L46 60 L58 30 L70 60 L82 30 L94 60"/>
+      <line x1="14" y1="68" x2="106" y2="68" stroke-width="0.6"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700" stroke="none">
+      <text x="14" y="18" letter-spacing="1.2">CORDYCEPS · CI/CD · 300+ REPOS</text>
+      <text x="14" y="76" letter-spacing="1.2" opacity="0.7">MICROSOFT · GOOGLE · CLOUDFLARE</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Novee Security's Cordyceps disclosure: 300+ Microsoft, Google, Cloudflare CI/CD pipelines exposed</h3>
+    <p class="kicker">The Hacker News · 2026-06-29 · <a href="https://thehackernews.com/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Novee Security disclosed Cordyceps, a CI/CD pipeline vulnerability class affecting more than 300 GitHub repositories at Microsoft, Google and Cloudflare. The attack pattern is the same shape as the Claude Code 0DIN finding: trusted automation contexts are the wrong place to extend root.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Novee Security disclosed Cordyceps on Monday, a class of CI/CD pipeline vulnerabilities affecting more than 300 GitHub repositories belonging to Microsoft, Google and Cloudflare among others. The pattern is structurally adjacent to the 0DIN Claude Code disclosure landed the same day: an automated agent or pipeline that runs with elevated permissions trusts upstream metadata or scripts it should not, and execution-context controls were not in place to prevent a malicious upstream from escalating into the build environment.</p>
+
+  <p>The detailed write-up is on Novee Security's site; the high-level coverage is on The Hacker News. The disclosure landed in the same week as Black Hat 2026 briefings on AI offensive security, which suggests Novee was timing the publication for conference attention. The structural takeaway for AI-coding-agent vendors is that the threat models for CI/CD pipelines and for AI coding agents have converged: both run as automation with credentials, both consume third-party code or instructions, and both fail in the same place when the upstream is malicious.</p>
+
+  <p class="source-footer"><a href="https://thehackernews.com/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#6b21a8" stroke-width="1" fill="none">
+      <rect x="14" y="18" width="92" height="44" rx="3"/>
+      <line x1="14" y1="30" x2="106" y2="30"/>
+      <circle cx="22" cy="24" r="2" fill="#6b21a8"/>
+      <circle cx="30" cy="24" r="2" fill="none" stroke="#6b21a8" stroke-width="0.7"/>
+      <circle cx="38" cy="24" r="2" fill="none" stroke="#6b21a8" stroke-width="0.7"/>
+    </g>
+    <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="7" font-weight="700" stroke="none">
+      <text x="20" y="44" letter-spacing="0.6">SENTRY</text>
+      <text x="20" y="56" font-size="6" letter-spacing="0.4" opacity="0.7">ERROR MONITORING</text>
+    </g>
+    <text x="14" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#6b21a8" letter-spacing="1.2">HIJACK VECTOR · VENTUREBEAT</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">VentureBeat: AI coding agents can be hijacked through the error-monitoring tools developers already trust</h3>
+    <p class="kicker">VentureBeat · 2026-06-29 · <a href="https://venturebeat.com/security/ai-coding-agents-can-be-hijacked-through-the-error-monitoring-tools-developers-already-trust" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Louis Columbus reports on a third Monday AI-tooling supply-chain vector: this one through the error-monitoring SaaS pipelines (Sentry-class tools) that AI coding agents inhale uncritically as ground truth. Enterprise stacks lack the telemetry to detect the hijack.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>VentureBeat's Louis Columbus filed a Monday piece on a third AI-coding-agent supply-chain vector that the industry has not been thinking about: error-monitoring SaaS. Tools like Sentry, Bugsnag and their AI-native peers feed runtime errors into the agent's context as authoritative information about what went wrong in production. If the upstream error data can be tampered with — by an attacker with write access to the monitoring pipeline, or by injection into the error payload itself — the AI agent receives instructions disguised as a stack trace, and may execute them as remediation steps with the developer's local credentials.</p>
+
+  <p>The article frames this as the third leg of a trifecta with the 0DIN Claude Code DNS-tunneled supply-chain attack and the Novee Cordyceps CI/CD disclosure, both landed the same day. The common thread is that AI coding agents extend their effective trust boundary out to whatever upstream telemetry they consume, and most enterprise security stacks have no instrumentation to detect when that telemetry has been weaponised. The defence is the same in all three cases: human review of the precise text being fed into the agent, and capabilities-based rather than blanket-trust execution of any commands the agent surfaces.</p>
+
+  <p>The Monday cluster is the clearest signal yet that AI coding agents have crossed into the threat-model surface area that previous decades' enterprise security architectures were built around. The reaction inside vendors will tell. Claude Code 2.1.196's sandbox credential-read block, untrusted-workspace tagging and MCP capability-discovery hardening are the right kind of moves; whether OpenAI's Codex CLI line picks up the same posture is the open question.</p>
+
+  <p class="source-footer"><a href="https://venturebeat.com/security/ai-coding-agents-can-be-hijacked-through-the-error-monitoring-tools-developers-already-trust" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg width="80" height="18" viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="9" r="2.4" fill="none" stroke="#6b21a8" stroke-width="1.2"/>
+    <line x1="26" y1="9" x2="36" y2="9" stroke="#6b21a8" stroke-width="1"/>
+    <circle cx="40" cy="9" r="3.2" fill="#6b21a8"/>
+    <line x1="44" y1="9" x2="54" y2="9" stroke="#6b21a8" stroke-width="1"/>
+    <circle cx="60" cy="9" r="2.4" fill="none" stroke="#6b21a8" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<footer class="colophon">
+  <div><strong>Apollo AI News</strong> · Daily · 2026-06-30 · Generated by an automated agent that searched the web, fetched each source, and wrote the prose.</div>
+  <div><a href="../index.html">← Back to archive</a></div>
+</footer>
+
+</div>
+<script>
+(function(){
+  const stories = Array.from(document.querySelectorAll('details.story'));
+  const chips = Array.from(document.querySelectorAll('.filter-chip'));
+  const bigPicture = document.querySelector('.big-picture');
+  const countEl = document.querySelector('.cards .section-head .count');
+  const originalCountText = countEl ? countEl.textContent : '';
+  const status = document.getElementById('filter-status');
+
+  function totalCount(){ return stories.length; }
+
+  function recomputeChipCounts(){
+    const total = stories.length;
+    chips.forEach(c => {
+      const tag = c.dataset.filter;
+      const n = tag === 'all' ? total
+        : [...stories].filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const span = c.querySelector('.count');
+      if (span) span.textContent = n;
+      if (tag !== 'all' && n === 0) { c.setAttribute('disabled', ''); }
+    });
+  }
+
+  function applyFilter(filter){
+    let visibleNonHero = 0;
+    let visibleTotal = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const match = filter === 'all' || tags.includes(filter);
+      s.hidden = !match;
+      if (match) {
+        visibleTotal++;
+        if (s.id !== 'hero') visibleNonHero++;
+      }
+    });
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    if (countEl) {
+      const trailing = originalCountText.replace(/^\d+\s*stories?/, '').trim();
+      countEl.textContent = visibleNonHero + ' stories' + (trailing ? ' ' + trailing : '');
+    }
+    if (status) {
+      const label = filter === 'all' ? 'All stories' : filter[0].toUpperCase()+filter.slice(1);
+      status.textContent = 'Showing ' + visibleTotal + ' of ' + totalCount() + ' stories — ' + label;
+    }
+    if (filter === 'all') {
+      if (location.hash) history.replaceState(null, '', location.pathname);
+    } else {
+      history.replaceState(null, '', '#filter=' + filter);
+    }
+  }
+
+  chips.forEach(c => c.addEventListener('click', () => applyFilter(c.dataset.filter)));
+
+  const hashMatch = (location.hash||'').match(/^#filter=([a-z]+)$/);
+  recomputeChipCounts();
+  applyFilter(hashMatch ? hashMatch[1] : 'all');
+
+  const fb = document.querySelector('.filter-bar');
+  if (fb) {
+    const sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;top:0;height:1px;width:1px;';
+    fb.parentNode.insertBefore(sentinel, fb);
+    new IntersectionObserver(([e]) => fb.classList.toggle('is-stuck', !e.isIntersecting)).observe(sentinel);
+  }
+})();
+</script>
+</body>
+</html>
