@@ -1,0 +1,1401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-07-02</title>
+<meta name="description" content="Meituan publishes 1.6-trillion-parameter LongCat-2.0 weights on Hugging Face under MIT license after a two-month stealth run as OpenRouter's Owl Alpha, where the model handled 10.1 trillion tokens per month and grew 242 percent month over month; both pretraining and inference ran on a 50,000-card domestic Chinese ASIC cluster with no Nvidia parts. Google Cloud shifts Nano Banana 2 Lite to General Availability at $0.034 per 1K image and 4-second generation time and pushes Gemini Omni Flash into public preview at $0.10 per output-second, both landing simultaneously in Google AI Studio, the Gemini API and Gemini Enterprise Agent Platform with C2PA credentials and SynthID watermarks on by default. Claude Sonnet 5 becomes the default model at claude.ai for free and Pro users the same day Claude Code 2.1.197 ships with sonnet-5 as its default target and a $2 input, $10 output per million token promotional rate valid through August 31, and Anthropic's launch materials leave real-time cybersecurity safeguards enabled by default for every deployment. Reflection AI begins paying SpaceX Colossus 2 a $150 million monthly bill against a $6.3 billion GB300 access commitment that runs through 2029. National Grid Ventures commits $1.75 billion to power developer Joulent for a 2.67-gigawatt AI-dedicated Project Kilby with a 20-year Microsoft PPA. Twelve founding partners launch the Sijbrandij Foundation's Data Center Power Coalition around a four-phase clean-siting playbook. Germany's Energy Efficiency Act takes effect requiring PUE below 1.2 and 10 percent waste-heat reuse for every new AI data center commissioned from today forward. Bloomberg reports the AI-infrastructure debt binge is fueling a century-old private-placement market that JPMorgan now sizes at $4.1 trillion. ggml-org tags llama.cpp b9857 through b9859 in a single day with a Hexagon flash-attention rework and precompiled Adreno MoE MXFP4 kernels. Codex CLI 0.142.5 patches a WebSocket trace-log leak in 0.142.4. Hugging Face Daily Papers puts a 57-author world-foundation model called Orca at the top with 176 upvotes over ByteDance's environment-free Dockerless coding verifier at 86 and BlockPilot's 4.20x diffusion-decoding speedup on Qwen3-4B at 67.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#1e3a8a;
+  --accent-soft:rgba(30,58,138,0.08);
+  --tag-tech:rgba(30,58,138,0.10);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.12);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#93c5fd;
+    --accent-soft:rgba(147,197,253,0.12);
+    --tag-tech:rgba(147,197,253,0.18);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(45,212,191,0.16);
+    --tag-application-ink:#5eead4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){
+  .story summary{grid-template-columns:1fr;gap:12px}
+  .story-thumb{aspect-ratio:320 / 80;width:100%;height:auto}
+}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-weight:700;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:"Collapse \25B4"}
+.story:not([open]) .expand-control::after{content:"Read in full \25BE"}
+.expand-control{font-size:0;letter-spacing:normal}
+.expand-control::after{font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1 / -1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:0.84rem;color:var(--muted)}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2"  x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2"  y1="28" x2="9"  y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5"  y1="9.5"  x2="14"   y2="14"/>
+          <line x1="42"   y1="42"   x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5"  x2="42"   y2="14"/>
+          <line x1="9.5"  y1="46.5" x2="14"   y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Daily</strong>
+    2026 · 07 · 02
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<details class="story" id="hero" data-tags="tech trend" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-tech">Tech</span><span class="tag tag-trend">Trend</span>
+      </div>
+      <h1>Meituan drops 1.6T LongCat-2.0 weights on Hugging Face after a two-month Owl Alpha stealth run</h1>
+      <p class="dek">The 48-billion-active-per-token MoE with a native 1M context, MIT license, and end-to-end training on a 50,000-card domestic Chinese ASIC cluster comes out of a stealth run on OpenRouter where it moved 10.1 trillion tokens per month at 242 percent month-over-month growth as anonymous "Owl Alpha." Meituan calls it the first trillion-parameter model to complete both pretraining and inference on a Chinese cluster with no Nvidia hardware anywhere in the pipeline.</p>
+      <p class="kicker">Hugging Face · VentureBeat · 2026-07-01 · <a href="https://huggingface.co/meituan-longcat/LongCat-2.0" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#1e3a8a" stop-opacity="0.5"/>
+          <stop offset="1" stop-color="#1e3a8a" stop-opacity="0.04"/>
+        </linearGradient>
+        <pattern id="hgrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0 L0 0 0 24" fill="none" stroke="#1e3a8a" stroke-opacity="0.14" stroke-width="0.4"/>
+        </pattern>
+        <pattern id="chips" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+          <rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="#1e3a8a" stroke-opacity="0.28" stroke-width="0.4"/>
+          <circle cx="6" cy="6" r="1.4" fill="#1e3a8a" fill-opacity="0.42"/>
+        </pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgrid)"/>
+
+      <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700">
+        <text x="28" y="28" font-size="9" letter-spacing="2.4">LONGCAT-2.0 · MEITUAN · MIT LICENSE · 2026·07·01</text>
+        <text x="28" y="42" font-size="7" letter-spacing="1.6" opacity="0.78">50,000-CARD DOMESTIC ASIC CLUSTER · NO NVIDIA IN LOOP</text>
+      </g>
+
+      <g transform="translate(28, 60)">
+        <rect x="0" y="0" width="240" height="132" fill="url(#chips)" stroke="#1e3a8a" stroke-width="0.6"/>
+        <text x="6" y="12" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1.4" opacity="0.88">DOMESTIC ASIC FIELD · 50,000 CARDS</text>
+        <text x="6" y="128" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1.2" opacity="0.7">SUSTAINED &gt;1T TOK/DAY · NO LOSS SPIKES</text>
+      </g>
+
+      <g transform="translate(288, 60)" font-family="system-ui,sans-serif" font-size="7" fill="#1e3a8a">
+        <text x="0" y="0" font-weight="700" font-size="9">SCALE SHEET</text>
+        <text x="0" y="16" font-weight="600" opacity="0.78">TOTAL PARAMS</text><text x="0" y="26" font-weight="700" font-size="12">1.6 T</text>
+        <text x="0" y="42" font-weight="600" opacity="0.78">ACTIVE / TOKEN</text><text x="0" y="52" font-weight="700" font-size="12">48 B</text>
+        <text x="0" y="68" font-weight="600" opacity="0.78">CONTEXT</text><text x="0" y="78" font-weight="700" font-size="12">1 M</text>
+        <text x="0" y="94" font-weight="600" opacity="0.78">PRETRAIN TOKENS</text><text x="0" y="104" font-weight="700" font-size="12">35 T+</text>
+        <text x="0" y="120" font-weight="600" opacity="0.78">LICENSE</text><text x="0" y="130" font-weight="700" font-size="10">MIT</text>
+      </g>
+
+      <line x1="28" y1="210" x2="452" y2="210" stroke="#1e3a8a" stroke-width="0.6"/>
+
+      <g transform="translate(28, 224)" font-family="system-ui,sans-serif" font-size="8" fill="#1e3a8a">
+        <text x="0" y="0" font-weight="700" font-size="9" letter-spacing="1.4">BENCHMARK CARD</text>
+
+        <text x="0" y="16" font-weight="700">SWE-BENCH PRO</text>
+        <rect x="128" y="10" width="220" height="6" fill="url(#hg)" stroke="#1e3a8a" stroke-width="0.5"/>
+        <rect x="128" y="10" width="131" height="6" fill="#1e3a8a" fill-opacity="0.30"/>
+        <text x="356" y="16" font-weight="700">59.5%</text>
+
+        <text x="0" y="30" font-weight="700">TERMINAL-BENCH 2.1</text>
+        <rect x="128" y="24" width="220" height="6" fill="url(#hg)" stroke="#1e3a8a" stroke-width="0.5"/>
+        <rect x="128" y="24" width="156" height="6" fill="#1e3a8a" fill-opacity="0.30"/>
+        <text x="356" y="30" font-weight="700">70.8%</text>
+
+        <text x="0" y="44" font-weight="700">SWE-BENCH MULTILINGUAL</text>
+        <rect x="128" y="38" width="220" height="6" fill="url(#hg)" stroke="#1e3a8a" stroke-width="0.5"/>
+        <rect x="128" y="38" width="170" height="6" fill="#1e3a8a" fill-opacity="0.30"/>
+        <text x="356" y="44" font-weight="700">77.3%</text>
+
+        <text x="0" y="58" font-weight="700">BROWSECOMP</text>
+        <rect x="128" y="52" width="220" height="6" fill="url(#hg)" stroke="#1e3a8a" stroke-width="0.5"/>
+        <rect x="128" y="52" width="176" height="6" fill="#1e3a8a" fill-opacity="0.30"/>
+        <text x="356" y="58" font-weight="700">79.9%</text>
+
+        <text x="0" y="72" font-weight="700">GPQA DIAMOND</text>
+        <rect x="128" y="66" width="220" height="6" fill="url(#hg)" stroke="#1e3a8a" stroke-width="0.5"/>
+        <rect x="128" y="66" width="196" height="6" fill="#1e3a8a" fill-opacity="0.30"/>
+        <text x="356" y="72" font-weight="700">88.9%</text>
+      </g>
+
+      <g transform="translate(28, 310)" font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
+        <text x="0" y="0" font-size="7" letter-spacing="1.6" opacity="0.78">STEALTH RUN AS OWL ALPHA · 10.1 T TOK / MONTH · +242% MoM</text>
+      </g>
+    </svg>
+  </div>
+  <div class="full-content">
+    <p>Meituan published the LongCat-2.0 model card, weights, and inference stack on Hugging Face and GitHub on Tuesday under an MIT license, closing a two-month arc that started with an anonymous model called "Owl Alpha" quietly climbing OpenRouter's coding-agent leaderboards. LongCat-2.0 is a mixture-of-experts model with 1.6 trillion total parameters and a dynamic activation range of 33 to 56 billion parameters per token, averaging 48 billion active. Native context is one million tokens, backed by what Meituan calls LongCat Sparse Attention. Pretraining spanned more than 35 trillion tokens across Chinese, English, multilingual, and code data.</p>
+
+    <p>The hardware detail is the point Meituan wants coverage focused on. The company says both pretraining and inference ran end to end on a 50,000-card cluster of domestically manufactured AI ASICs, with no Nvidia hardware in the loop. DeepSeek's V4-Pro used Chinese silicon for inference and still leaned on Nvidia for pretraining. LongCat-2.0 goes further. Meituan's technical report describes a training run that sustained more than a trillion tokens per day with "no rollbacks or irrecoverable loss spikes," the kind of stability number that fabs and networking vendors trade internally as proof of a functional pipeline.</p>
+
+    <blockquote class="pull-quote">Today, Meituan officially releases and open-sources LongCat-2.0.<cite>— Meituan, LongCat news post, 2026-07-01</cite></blockquote>
+
+    <h4>The Owl Alpha reveal</h4>
+    <p>VentureBeat's Carl Franzen tied Tuesday's public drop to the anonymous "Owl Alpha" model that had been serving traffic on OpenRouter for two months. Owl Alpha handled roughly 10.1 trillion tokens per month at peak, hit 559 billion tokens on its highest single day, and grew 242 percent month over month. During that stealth period the model landed at number one on Hermes Agent, number two on Claude Code, and number three on OpenClaw. The reveal removes any doubt about production-scale performance: LongCat-2.0 was already the most-used near-frontier open coding model on OpenRouter before its identity was public.</p>
+
+    <blockquote class="pull-quote">The industry's first model of this scale to complete full training and inference on a 50,000-card domestic compute cluster.<cite>— Meituan, quoted on the LongCat AI site</cite></blockquote>
+
+    <h4>The benchmark card</h4>
+    <p>LongCat-2.0 posts 59.5 on SWE-bench Pro, 77.3 on SWE-bench Multilingual, 70.8 on Terminal-Bench 2.1, 79.9 on BrowseComp, and 88.9 on GPQA Diamond. Coding-agent scores put the model within one bar of Anthropic's Claude Sonnet 5, which shipped at 63.2 on SWE-bench Pro and 80.4 on Terminal-Bench 2.1 the day before. Instruction-following remains the weak spot, in line with the trajectory of Qwen and DeepSeek open weights: strong on structured tools, softer on natural-language compliance. The router picks a curated set of experts per token, so real activation stays inside a footprint one Chinese-ASIC serving cluster can handle at low latency.</p>
+
+    <h4>What this means under the June 12 rule</h4>
+    <p>Commerce Secretary Howard Lutnick's June 27 letter narrowed but did not unwind the June 12 export controls that keep Claude Fable 5 offline worldwide and Mythos 5 offline outside Annex A. LongCat-2.0 is now the first trillion-parameter-class model on earth that any research team can install and fine-tune under MIT license regardless of jurisdiction. Austrian Digital State Secretary Alexander Pröll's June 29 letter asking Brussels to pursue "the strategic establishment of Anthropic" inside the EU reads more urgently on the July 1 morning after: Beijing has now demonstrated an alternative path Europe has not built. Meituan's Chinese-ASIC training-compute claim will get scrutinised by independent researchers over the next week; the MIT license and the OpenRouter traffic history are the two pieces of evidence that make dismissal harder than usual.</p>
+
+    <p class="source-footer"><a href="https://huggingface.co/meituan-longcat/LongCat-2.0" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<section class="big-picture" aria-label="Big Picture">
+  <div class="label">Big Picture</div>
+  <div>
+    <p>Wednesday was consolidation day. Meituan formally dropped LongCat-2.0's 1.6-trillion-parameter weights on Hugging Face under MIT license, ending a two-month stealth run in which the model moved 10.1 trillion tokens per month as anonymous Owl Alpha and hit number one on OpenRouter's Hermes Agent board. Both pretraining and inference ran end to end on a 50,000-card domestic Chinese ASIC cluster. Claude Sonnet 5 became the default at claude.ai for free and Pro users the same morning Claude Code 2.1.197 shipped with sonnet-5 as its default target, real-time cybersecurity safeguards on by default in every deployment, and a $2 input, $10 output per million token promotional rate valid through August 31. Google Cloud moved Nano Banana 2 Lite to General Availability at $0.034 per 1K image and 4-second generation and pushed Gemini Omni Flash into public preview at $0.10 per output-second, both live inside Google AI Studio, the Gemini API and the Gemini Enterprise Agent Platform with C2PA credentials and SynthID watermarks on by default.</p>
+    <p>The datacenter capital-flow prints kept coming. Reflection AI began paying SpaceX Colossus 2 a $150 million monthly bill against a $6.3 billion GB300 access commitment that runs through 2029, with 90-day mutual termination after the first three months. National Grid Ventures committed $1.75 billion in strategic minority equity to power developer Joulent for a 2.67-gigawatt AI-dedicated Project Kilby anchored by a 20-year Microsoft PPA, alongside Chevron subsidiary Energy Forge and GE Vernova. Twelve founding technology and energy partners launched the Sijbrandij Foundation's Data Center Power Coalition around a four-phase clean-siting playbook, with reference projects committed to start inside twelve months. Germany's Energy Efficiency Act reached its statutory milestone: every AI data center commissioned from today onward must hit PUE below 1.2 and reuse at least 10 percent of its waste heat. Bloomberg reported the AI-infrastructure debt binge is fueling a century-old private-placement market that JPMorgan now sizes at $4.1 trillion, with IREN selling roughly $2.1 billion of bonds directly to life insurers in May alone.</p>
+    <p>Hugging Face Daily Papers put a 57-author world-foundation model called Orca at the top with 176 upvotes, over ByteDance's environment-free Dockerless coding verifier at 86 upvotes and BlockPilot's 4.20-times diffusion-decoding speedup on Qwen3-4B at 67. NVIDIA's BioNeMo Agent Toolkit landed inside Anthropic's Claude Science as callable skills across Evo 2, Boltz-2 and OpenFold3, with RAPIDS-singlecell cutting single-cell preprocessing from 52 minutes to 25 seconds and nvMolKit accelerating cheminformatics by up to three thousand times. ggml-org tagged three llama.cpp builds in a single day: b9857 reworked Hexagon flash attention with vectorized sinks and FP16 HVX kernels; b9858 fixed a HuggingFace primary-split model-path handling regression; b9859 shipped precompiled Adreno GEMM/GEMV kernel libraries for q8_0, q4_0, q4_1 and q4_k MoE ops on OpenCL. Codex CLI 0.142.5 patched a WebSocket trace-log leak in 0.142.4 the same day the 0.143.0-alpha.32 pre-release cut two hours and thirty-two minutes later.</p>
+    <p>Policy tracked the industrial-policy edges again. Nvidia tightened its AI-server export verification procedures across the supply chain in the wake of Monday's Taiwanese raids on Super Micro Taipei, Chief Telecom and Albatron over the alleged $2.5 billion smuggling ring routed through Southeast Asian shell companies. Simon Willison's second-day tokenizer post held its slot at the top of the AI-eng Twitter cycle: Sonnet 5 produces roughly 1.42 times as many tokens for identical English input as Sonnet 4.6, cancelling the $2/$10 discount for English workloads. The LiteLLM CVE-2026-42271 unauthenticated RCE chain landed on CISA's Known Exploited Vulnerabilities catalogue with Qilin ransomware activity linked to production AI gateways; a companion Squidbleed disclosure attributed a 29-year-old Squid Proxy heap-buffer over-read to Claude Mythos Preview inside Anthropic's Project Glasswing. Etched confirmed its December $5 billion post-money valuation and $1 billion of already-booked customer contracts for its transformer-only inference silicon, with the cap table now naming Karpathy, Hinton, Fei-Fei Li, Druckenmiller and Thiel.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg width="80" height="18" viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="9" r="3" fill="#1e3a8a"/>
+    <line x1="16" y1="9" x2="36" y2="9" stroke="#1e3a8a" stroke-width="1"/>
+    <path d="M41 3 L46 9 L41 15 L36 9 Z" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <line x1="46" y1="9" x2="66" y2="9" stroke="#1e3a8a" stroke-width="1"/>
+    <circle cx="70" cy="9" r="3" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+  </svg>
+</div>
+
+<section class="cards" aria-label="More today">
+  <div class="section-head">
+    <h2>More Today</h2>
+    <span class="count">24 stories · 2026-07-01</span>
+  </div>
+
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a">
+      <rect x="12" y="14" width="46" height="30" rx="1" fill="none" stroke="#1e3a8a" stroke-width="1"/>
+      <rect x="62" y="14" width="46" height="30" rx="1" fill="none" stroke="#1e3a8a" stroke-width="1"/>
+      <text x="35" y="24" font-family="system-ui,sans-serif" font-size="5" font-weight="700" text-anchor="middle" letter-spacing="0.6">IMAGE · 4s</text>
+      <text x="35" y="38" font-family="Georgia,serif" font-size="12" font-weight="700" text-anchor="middle">$.034</text>
+      <text x="85" y="24" font-family="system-ui,sans-serif" font-size="5" font-weight="700" text-anchor="middle" letter-spacing="0.6">VIDEO · SEC</text>
+      <text x="85" y="38" font-family="Georgia,serif" font-size="12" font-weight="700" text-anchor="middle">$.10</text>
+    </g>
+    <text x="12" y="60" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">NANO BANANA 2 LITE · GA</text>
+    <text x="12" y="72" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1" opacity="0.7">GEMINI OMNI FLASH · PREVIEW</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Google ships Nano Banana 2 Lite GA at $0.034 per image and Gemini Omni Flash preview at $0.10 per second</h3>
+    <p class="kicker">Google Cloud Blog · 2026-07-01 · <a href="https://cloud.google.com/blog/products/ai-machine-learning/nano-banana-2-lite-and-gemini-omni-flash-available/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Nano Banana 2 Lite lands at 4-second image drafts in Google AI Studio, the Gemini API, and the Gemini Enterprise Agent Platform. Gemini Omni Flash follows into public preview with 10-second 720p clips, native audio, and conversational editing across character swaps, relighting and angle changes.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Google Cloud published the availability post on Tuesday morning. Nano Banana 2 Lite, the internal name for gemini-3.1-flash-lite-image, is now Generally Available in Google AI Studio, the Gemini API, and Google's Enterprise Agent Platform. The model produces a 1K-resolution image in about four seconds at $0.034 per image, priced against Nano Banana Pro's higher-quality tier and the Nano Banana 2 base rate. Provisioned throughput is available on Nano Banana 2 Lite from day one; Google says the same tier is rolling out to Omni Flash soon.</p>
+
+  <p>Gemini Omni Flash is the day's more novel product. The video model enters public preview at $0.10 per output second, produces 10-second 720p clips at launch, and accepts text, image, or up to three seconds of video-reference input. Native audio is generated in sync with picture. Conversational editing is the feature Google is pushing on developers: a single dialog can swap characters, change lighting, rotate the angle, or continue a scene from a reference frame, without the composer having to route through a separate editing pipeline. C2PA content credentials and SynthID watermarks are enabled by default.</p>
+
+  <blockquote class="pull-quote">Nano Banana 2 Lite is our fastest and most cost-efficient image generation and editing model.<cite>— Google Cloud Blog, 2026-07-01</cite></blockquote>
+
+  <blockquote class="pull-quote">Gemini Omni Flash delivers some of the best price-performance for video generation and editing capabilities on the market.<cite>— Google Cloud Blog, 2026-07-01</cite></blockquote>
+
+  <h4>Where the models fit in the Nano Banana line</h4>
+  <p>Google's product lineup now runs Nano Banana Pro at the top, Nano Banana 2 in the middle, and Nano Banana 2 Lite as the throughput tier. Google Cloud describes the Lite tier as "built for high throughput, speed and scale" while Pro serves workloads that need greater reasoning, precision, and creative control. WPP was cited as an early-access customer that already integrated Nano Banana 2 Lite into its WPP Open platform for campaign-scale asset generation. Google is also rolling both models into AI Mode in Search, the consumer Gemini app, and Google Flow the same day.</p>
+
+  <blockquote class="pull-quote">The real magic happens when you chain these models together for comprehensive, end-to-end multimedia experiences.<cite>— Google Cloud Blog, 2026-07-01</cite></blockquote>
+
+  <h4>Pricing math against the field</h4>
+  <p>Nano Banana 2 Lite at $0.034 per 1K image undercuts the current Anthropic image API listed at $0.055 per 1K and Ideogram Turbo's $0.048. Omni Flash's $0.10-per-second rate lands between Runway's $0.15 for equivalent 720p clip length and OpenAI Sora 2 Turbo at $0.08. The pricing pressure is what matters. Google is compressing the cost curve on the two dominant media modalities the same week Anthropic priced Sonnet 5 as a knowledge-work default, and the same day Meituan open-sourced a trillion-parameter code model. The Gemini Enterprise Agent Platform integration is the strategic point: developers can now assemble multi-modal pipelines that call Sonnet 5 for planning, Nano Banana 2 Lite for asset generation, and Omni Flash for video output inside a single agent stack, and Google will hold pricing responsibility for the last two.</p>
+
+  <p class="source-footer"><a href="https://cloud.google.com/blog/products/ai-machine-learning/nano-banana-2-lite-and-gemini-omni-flash-available/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#1e3a8a" stroke-width="1" fill="none">
+      <rect x="10" y="14" width="100" height="26" rx="2"/>
+      <line x1="10" y1="20" x2="110" y2="20"/>
+      <circle cx="16" cy="17" r="1.4" fill="#1e3a8a"/><circle cx="20" cy="17" r="1.4" fill="#1e3a8a"/><circle cx="24" cy="17" r="1.4" fill="#1e3a8a"/>
+    </g>
+    <text x="14" y="32" font-family="Courier,monospace" font-size="6" font-weight="700" fill="#1e3a8a">$ claude --model sonnet-5</text>
+    <text x="10" y="52" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">CLAUDE CODE 2.1.197 · DEFAULT</text>
+    <text x="10" y="62" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#1e3a8a">$2 / $10 · 1M CTX</text>
+    <text x="10" y="74" font-family="system-ui,sans-serif" font-size="5" font-weight="600" fill="#1e3a8a" letter-spacing="1" opacity="0.7">FREE + PRO · CLAUDE.AI</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Claude Sonnet 5 becomes the default at claude.ai and inside Claude Code 2.1.197</h3>
+    <p class="kicker">Anthropic · TechMyMoney · 2026-07-01 · <a href="https://techmymoney.com/2026/07/01/claude-sonnet-5-narrows-the-opus-gap-for-ai-agents/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Sonnet 5 is now the default model for Free and Pro users at claude.ai and the default target inside the Claude Code 2.1.197 client tagged the same day. Introductory pricing of $2 per million input tokens and $10 per million output tokens holds through August 31 before reverting to $3 and $15.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic flipped the default at claude.ai to Claude Sonnet 5 on Wednesday morning for both Free-tier and Pro subscribers, closing out the launch cycle that started with Tuesday's release post. Claude Code 2.1.197 shipped the same day with claude-sonnet-5 and sonnet-5 registered as CLI-selectable models and Sonnet 5 promoted to the default target. Below 2.1.197 the CLI still falls back to Sonnet 4.6 regardless of account entitlement, so the default flip and the client version bump are wired together in operations.</p>
+
+  <p>Pricing: $2 per million input tokens and $10 per million output tokens through August 31, 2026, reverting to $3 input and $15 output on September 1. Context window is one million tokens. Output window is 128,000 tokens. Adaptive thinking is on by default and cannot be turned off from the Claude Code CLI, only through per-organization allowance limits. Sampling parameters, temperature and top_p, are no longer supported: Anthropic points developers at the adaptive-thinking channel instead.</p>
+
+  <blockquote class="pull-quote">Sonnet 5 is built to be the most agentic Sonnet model yet. It can make plans, use tools like browsers and terminals, and run autonomously.<cite>— Anthropic, launch materials</cite></blockquote>
+
+  <h4>The mid-tier's benchmark numbers</h4>
+  <p>Sonnet 5 hits 63.2 percent on SWE-bench Pro, 80.4 percent on Terminal-Bench 2.1, 81.2 percent on OSWorld-with-tools, and 57.4 percent on Humanity's Last Exam with tools. On the GDPval-AA v2 knowledge-work index Sonnet 5 scores 1,618 against Opus 4.8's 1,615, the first Sonnet number to cross an Opus line on a public knowledge-work benchmark. TechMyMoney's write-up positions the launch as narrowing the Opus gap: the model approaches Opus 4.8 on agentic tasks while costing roughly two-thirds less in the promotional window.</p>
+
+  <blockquote class="pull-quote">Anthropic says Sonnet 5 gets close to Opus 4.8 on some agentic tasks.<cite>— TechMyMoney, 2026-07-01</cite></blockquote>
+
+  <h4>Client-side plumbing</h4>
+  <p>The Claude Code 2.1.197 release notes also added org-default models, readable session names, clickable file attachments, and a smoother agents view, with reliability work on background sessions, the stream watchdog and remote recovery. Bundle file size grew 46.8 kB from 2.1.196; prompt files grew by four items, prompt tokens by 7,927. Time between the two client tags: 18 hours, 15 minutes, 15 seconds. Pydantic AI 2.2.0 already carries Sonnet 5 identifiers merged, so third-party agent frameworks can address the model without hard-coding the alias.</p>
+
+  <blockquote class="pull-quote">Sonnet 5 showed lower rates of hallucination and sycophancy than Sonnet 4.6.<cite>— Anthropic, cited by TechMyMoney, 2026-07-01</cite></blockquote>
+
+  <p>The measured misaligned-behavior rate stays slightly above Opus 4.8's on the same evaluation set, which Anthropic surfaced in launch materials without a full system-card publication. Third-party red-teamers will spend this week validating Anthropic's numbers on the safety claims. The promotional pricing window and the default flip together set the enterprise-negotiation clock: renewals that reference Sonnet 5's $2/$10 price will need to close before September 1 to secure the promo rate for the term.</p>
+
+  <p class="source-footer"><a href="https://techmymoney.com/2026/07/01/claude-sonnet-5-narrows-the-opus-gap-for-ai-agents/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#1e3a8a" stroke-width="1" fill="none">
+      <path d="M20 60 Q30 20 40 60 Q50 20 60 60 Q70 20 80 60 Q90 20 100 60"/>
+      <line x1="20" y1="66" x2="100" y2="66" stroke-dasharray="2 2"/>
+    </g>
+    <text x="14" y="18" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">CLAUDE SCIENCE · BETA OPEN</text>
+    <text x="14" y="76" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#1e3a8a">50 GRANTS · $30K + $2K MODAL</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Claude Science opens to every paid subscriber with sixty preloaded skills and fifty $30K research grants</h3>
+    <p class="kicker">TechTimes · 2026-07-01 · <a href="https://www.techtimes.com/articles/319439/20260701/anthropic-launches-claude-science-ai-research-workbench-open-all-paid-subscribers.htm" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The beta workbench is now open to every Pro, Max, Team and Enterprise subscriber, with sixty-plus preconfigured skills covering genomics, proteomics, cheminformatics, and structural biology, plus native 3D protein-structure, genome-track and chemical-structure rendering. Applications for fifty $30,000 credit grants close July 15.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic opened Claude Science to every paid subscriber on Wednesday, converting Tuesday's launch post into an operational rollout. Access is bundled with existing Pro, Max, Team, and Enterprise plans; academic-institution and nonprofit customers get discounted Team seats. The workbench runs on macOS and Linux and connects out to remote machines through SSH or HPC login nodes, so sensitive data such as unpublished sequences and protected health information can stay on the researcher's own infrastructure while only the analytic context that each step needs travels back to Claude.</p>
+
+  <p>Sixty-plus preconfigured skills and connectors cover genomics, single-cell analysis, proteomics, structural biology, and cheminformatics. Native visualizations render 3D protein structures, genome tracks, and small-molecule chemical structures inside the workbench without swapping to an external viewer. A generalist coordinating agent orchestrates specialist agents that report back, mirroring the multi-agent workflow Anthropic previously reserved for internal use. A reviewer agent audits citations and calculations before the final artifact ships.</p>
+
+  <blockquote class="pull-quote">Claude Science brings these fragmented tools into a single research environment where scientists can conduct all stages of their work.<cite>— Anthropic, launch materials, via TechTimes 2026-07-01</cite></blockquote>
+
+  <blockquote class="pull-quote">Every output carries an auditable history of how it was made, so you can validate and reproduce the results.<cite>— Anthropic, Claude Science launch page</cite></blockquote>
+
+  <h4>Grants, dates, and beta partners</h4>
+  <p>Anthropic committed to fund up to fifty projects with up to $30,000 in Claude credits each. Modal, the on-demand GPU partner, contributes up to $2,000 in compute credits per grant. Applications close on July 15. Awards are announced by July 31. Funded projects run from September 1 through December 1. Launch beta users named on Anthropic's site include Allen Institute neuroscientist Jérôme Lecoq and Stephen Francis's group at the UCSF Brain Tumor Center. Anthropic said in the launch post that a customer's independent research group had already validated the workbench's outputs and confirmed it could produce both rapid and robust analyses.</p>
+
+  <h4>The Nvidia partnership underneath</h4>
+  <p>The BioNeMo Agent Toolkit ships integrated: Evo 2 for genomic sequence modeling, Boltz-2 for protein-ligand structure, and OpenFold3 for high-throughput protein prediction. NVIDIA Parabricks compresses genomic-analysis wall-clock from hours to minutes. RAPIDS-singlecell brings single-cell preprocessing from 52 minutes down to 25 seconds. nvMolKit accelerates cheminformatics by up to three thousand times. Data-side connectors reach UniProt, the Protein Data Bank, Ensembl, Reactome, ClinVar, ChEMBL and GEO. Anthropic repeated twice in the launch materials that Claude Science is not a new AI model and is not a more capable model for biology, which is the sentence customers keep asking about.</p>
+
+  <blockquote class="pull-quote">What is slowing scientific research down is not the raw power of the underlying AI, but the friction of making it useful inside an actual lab.<cite>— TechTimes framing of Anthropic's thesis, 2026-07-01</cite></blockquote>
+
+  <p>The reproducibility bet is what differentiates Claude Science from GPT-Rosalind, which OpenAI shipped in April with a bespoke scientific-reasoning model at the core. Anthropic is betting on plumbing, provenance, and a peer-review-shaped audit trail rather than a new foundation model. Every figure the workbench produces bundles the code that generated it, the message history that shaped the analysis, and any Modal jobs the pipeline launched. That posture defends the premium API price line against Chinese open-weight competition better than a marginally larger model would.</p>
+
+  <p class="source-footer"><a href="https://www.techtimes.com/articles/319439/20260701/anthropic-launches-claude-science-ai-research-workbench-open-all-paid-subscribers.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#1e3a8a" stroke-width="1" fill="none">
+      <rect x="14" y="16" width="18" height="18"/>
+      <rect x="52" y="16" width="18" height="18"/>
+      <rect x="90" y="16" width="18" height="18"/>
+      <line x1="32" y1="25" x2="52" y2="25"/>
+      <line x1="70" y1="25" x2="90" y2="25"/>
+      <circle cx="61" cy="52" r="10"/>
+    </g>
+    <text x="16" y="28" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a">EVO2</text>
+    <text x="53" y="28" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a">BLTZ2</text>
+    <text x="90" y="28" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a">OFOLD3</text>
+    <text x="14" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">NVIDIA BIONEMO · SKILLS · 52m → 25s</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">NVIDIA BioNeMo Agent Toolkit lands inside Claude Science as harness-agnostic skills</h3>
+    <p class="kicker">NVIDIA Blog · 2026-07-01 · <a href="https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The toolkit packages NVIDIA-accelerated capabilities as callable agent skills across Evo 2, Boltz-2 and OpenFold3, with RAPIDS-singlecell cutting single-cell preprocessing from 52 minutes to 25 seconds and nvMolKit accelerating cheminformatics up to three thousand times.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>NVIDIA's blog post on Wednesday framed the BioNeMo Agent Toolkit as the technical layer underneath Claude Science. The toolkit "packages NVIDIA-accelerated capabilities as callable skills, enabling Claude Science to select the appropriate tool, prepare valid inputs and execute the workflow," which is the standard skills-plus-runtime pattern that Anthropic has been iterating on since Claude 4. Skills expose Evo 2 for genomic sequence, Boltz-2 for protein-ligand structure prediction, and OpenFold3 for high-throughput protein prediction, all as first-class agent tools inside a research session.</p>
+
+  <p>The performance numbers NVIDIA wanted quoted are the ones that translate directly to grant-committee slides. NVIDIA Parabricks brings whole-genome analysis "from hours to minutes." RAPIDS-singlecell compresses single-cell preprocessing "from 52 minutes to 25 seconds." nvMolKit hits "up to 3,000x" acceleration for cheminformatics workflows. Those numbers together make the difference between a hypothesis that can be tested in a single research session and one that used to require overnight batch scheduling.</p>
+
+  <blockquote class="pull-quote">The BioNeMo Agent Toolkit packages NVIDIA-accelerated capabilities as callable skills, enabling Claude Science to select the appropriate tool, prepare valid inputs and execute the workflow.<cite>— NVIDIA Blog, 2026-07-01</cite></blockquote>
+
+  <h4>Harness-agnostic on purpose</h4>
+  <p>NVIDIA emphasized that the toolkit is "open and harness-agnostic," meaning the same skill definitions run inside Claude Science, competing agent runtimes, and internal enterprise agents. That framing matters because it signals NVIDIA has no intention of letting the biosciences developer ecosystem consolidate around a single agent vendor. Skills are declarative; the runtime that calls them is interchangeable. The same posture appeared in NVIDIA's April integration with the Cursor agent runtime and its May work with LangGraph.</p>
+
+  <blockquote class="pull-quote">Open and harness-agnostic.<cite>— NVIDIA on the BioNeMo Agent Toolkit</cite></blockquote>
+
+  <blockquote class="pull-quote">A reviewer agent checks citations and calculations, flagging and correcting errors.<cite>— Anthropic, Claude Science page</cite></blockquote>
+
+  <h4>Why this lands with Anthropic first</h4>
+  <p>Anthropic's Claude Science ships as the first customer-facing environment that surfaces the BioNeMo Agent Toolkit as a native user experience. The Claude Science reviewer agent, which checks citations and calculations before the final figure ships, closes a loop that NVIDIA's own tools do not offer inside a research runtime. The commercial arithmetic is straightforward: an accelerated skill that turns a 52-minute preprocessing step into 25 seconds pays for its own GPU-hour cost inside a single research session. Anthropic's up-to-$30,000 grant pool and Modal's $2,000-per-project compute allocation are sized against that arithmetic, with grants covering roughly a full quarter of research work at typical Modal H100 rates.</p>
+
+  <p>The larger story is the shape of the developer-tools stack. NVIDIA sells the accelerator and now bundles the primitives; Anthropic sells the reasoning layer and the reviewer; Modal sells on-demand compute. Google DeepMind's isomorphic labs, OpenAI's GPT-Rosalind, and Meta's ESMFold successors have all tried to consolidate the same stack under a single vendor's foundation model. Wednesday's toolkit release is NVIDIA arguing publicly that the winning shape is skills-plus-runtime, not model-plus-model.</p>
+
+  <p class="source-footer"><a href="https://blogs.nvidia.com/blog/claude-science-bionemo-agent-toolkit/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#1e3a8a" stroke-width="1.4">
+      <path d="M60 14 L86 24 L86 46 Q86 58 60 68 Q34 58 34 46 L34 24 Z"/>
+    </g>
+    <text x="60" y="42" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle">0.0%</text>
+    <text x="60" y="52" font-family="system-ui,sans-serif" font-size="5" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">FULL EXPLOIT</text>
+    <text x="8" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">CYBER SAFEGUARDS · DEFAULT ON</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Anthropic leaves Sonnet 5 cyber safeguards enabled by default for every deployment</h3>
+    <p class="kicker">Help Net Security · 2026-07-01 · <a href="https://www.helpnetsecurity.com/2026/07/01/anthropic-claude-sonnet-5/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Real-time cybersecurity protections reuse Opus 4.7 and 4.8 machinery but sit at "intentionally less restrictive" settings. Anthropic argues Sonnet 5 already carries "a much lower ability to perform cybersecurity tasks" than current Opus models, and the eased-restriction tier is gated behind the Cyber Verification Program.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Help Net Security's Wednesday brief distilled the safety posture on Sonnet 5 into the sentence Anthropic wanted quoted: "an overall lower rate of undesirable behaviors than Sonnet 4.6." The real-time cybersecurity protections that shipped with Opus 4.7 in April and were retained in Opus 4.8's May launch are enabled by default across every Sonnet 5 deployment. Anthropic set the defaults at what the launch materials call "intentionally less restrictive" thresholds because the model's underlying cyber capability is measured lower than Opus.</p>
+
+  <p>The core claim on the safety card: Sonnet 5 has "a much lower ability to perform cybersecurity tasks" than the current Opus lineup. Anthropic did not train Sonnet 5 on cybersecurity workflows, and the launch materials reported a 0.0 percent full-success rate on the Firefox exploit-development capability evaluation. That number is what makes shipping a $2 promotional input rate on a knowledge-work default politically feasible: the model is priced for legitimate developer volume, not for offensive workflows.</p>
+
+  <blockquote class="pull-quote">An overall lower rate of undesirable behaviors than Sonnet 4.6.<cite>— Anthropic, cited by Help Net Security 2026-07-01</cite></blockquote>
+
+  <blockquote class="pull-quote">A much lower ability to perform cybersecurity tasks than our current Opus models.<cite>— Anthropic, cited by Help Net Security 2026-07-01</cite></blockquote>
+
+  <h4>The Cyber Verification Program</h4>
+  <p>Anthropic's second-lane access model lets vetted customers dial the defaults down through the Cyber Verification Program, which the company describes as a review process for legitimate security teams and researchers. Sonnet 5 can, under CVP settings, "perform routine, non-harmful security work" while remaining "deliberately constrained from developing functional exploits for malicious purposes." That is a workable line for the SOC-analysis and incident-response use cases enterprise buyers keep asking Anthropic about, and it is roughly the posture OpenAI has been running on GPT-5.5 Sol's security tier since June.</p>
+
+  <blockquote class="pull-quote">Perform routine, non-harmful security work but deliberately constrained from developing functional exploits for malicious purposes.<cite>— Anthropic paraphrase, Help Net Security</cite></blockquote>
+
+  <h4>Prompt-injection resistance</h4>
+  <p>Help Net Security's brief also noted that Sonnet 5 improves prompt-injection resistance over Sonnet 4.6. Anthropic has not published the exact evaluation set the number is drawn from, but the direction is what analysts had been watching. Sonnet 4.6 shipped with a documented weakness on agentic prompt-injection in browser-use contexts that was patched in the 4.6.1 revision. Sonnet 5 rolls those patches into the base training rather than layering them at the API. Reduced hallucination rates versus earlier Sonnet versions were the other Anthropic-supplied number Help Net Security relayed.</p>
+
+  <p>The safety-defaults posture ties directly into the June 12 export-control regime and Commerce Secretary Lutnick's June 27 partial unwind. Sonnet 5's system-card language, in the excerpt Simon Willison published Tuesday evening, described the model as significantly less capable at cyber tasks than Mythos 5, which lets Anthropic ship it globally without the Annex-A gate. Third-party red-teamers will produce independent numbers on the safety claims through the week; the promotional pricing window and the default flip mean any material safety regressions surface at scale quickly.</p>
+
+  <p class="source-footer"><a href="https://www.helpnetsecurity.com/2026/07/01/anthropic-claude-sonnet-5/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="system-ui,sans-serif">
+      <text x="12" y="26" font-size="6" font-weight="700" letter-spacing="1">TOKENIZER · SONNET 5 vs 4.6</text>
+    </g>
+    <g font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a">
+      <text x="12" y="40">EN</text>
+      <rect x="30" y="34" width="70" height="6" fill="none" stroke="#1e3a8a" stroke-width="0.5"/>
+      <rect x="30" y="34" width="59" height="6" fill="#1e3a8a" fill-opacity="0.36"/>
+      <text x="104" y="40">1.42x</text>
+      <text x="12" y="52">ES</text>
+      <rect x="30" y="46" width="70" height="6" fill="none" stroke="#1e3a8a" stroke-width="0.5"/>
+      <rect x="30" y="46" width="55" height="6" fill="#1e3a8a" fill-opacity="0.36"/>
+      <text x="104" y="52">1.33x</text>
+      <text x="12" y="64">PY</text>
+      <rect x="30" y="58" width="70" height="6" fill="none" stroke="#1e3a8a" stroke-width="0.5"/>
+      <rect x="30" y="58" width="52" height="6" fill="#1e3a8a" fill-opacity="0.36"/>
+      <text x="104" y="64">1.27x</text>
+      <text x="12" y="76">ZH</text>
+      <rect x="30" y="70" width="70" height="6" fill="none" stroke="#1e3a8a" stroke-width="0.5"/>
+      <rect x="30" y="70" width="41" height="6" fill="#1e3a8a" fill-opacity="0.36"/>
+      <text x="104" y="76">1.01x</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Willison's tokenizer post keeps the top slot: Sonnet 5 costs 1.42x more per English word</h3>
+    <p class="kicker">Simon Willison's Weblog · 2026-06-30 (indexed 07-01) · <a href="https://simonwillison.net/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The tokenizer measurement Willison posted on Tuesday evening carried into Wednesday's AI-engineering discourse. English prose costs about 1.42 times as many tokens, Spanish 1.33 times, Python 1.27 times, and Simplified Mandarin roughly cost-neutral, cancelling the headline $2 discount for the majority of Anthropic's paying English-workload volume.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Willison's "What's new in Claude Sonnet 5" post lands as the piece the AI-engineering group chats keep quoting on Wednesday. His method is unchanged from previous same-day Anthropic releases: feed identical texts through the old and new tokenizers, count tokens, publish ratios. The Universal Declaration of Human Rights in English tokenizes to about 1.42 times as many tokens on Sonnet 5 as on Sonnet 4.6. The Spanish text runs 1.33 times. A 4,279-line Python file measures 1.27 times. Simplified Mandarin comes in at 1.01 times, effectively cost-neutral.</p>
+
+  <p>Combined with the introductory pricing of $2 per million input and $10 per million output, the ratios mean English workloads pay approximately Sonnet 4.6 economics per unit of prose even during the promo window. Once September 1 arrives and rates revert to $3 input and $15 output, English workloads pay materially more per unit of prose than they did on Sonnet 4.6. Anthropic did not surface this on the launch page. The relevant customer conversation is now the tokenizer footnote, not the top-line price.</p>
+
+  <blockquote class="pull-quote">The same input text produces approximately 30% more tokens than on Claude Sonnet 4.6. Effectively a 30% price increase.<cite>— Simon Willison, simonwillison.net</cite></blockquote>
+
+  <blockquote class="pull-quote">The new tokenizer makes it ~1.4x more expensive for English, ~1.33x more expensive for Spanish but roughly the same price for Simplified Mandarin.<cite>— Simon Willison, X post 2026-06-30</cite></blockquote>
+
+  <h4>The pelican-on-a-bicycle detail</h4>
+  <p>Willison's pelican-on-a-bicycle SVG evaluation, the informal capability sniff-test he runs on every new frontier model, produced a Sonnet 5 output he described as looking more like a goose than a pelican. The eval is not a benchmark, but it is a Willison-signature check that keeps generating measurable engagement across the AI-eng developer audience. Anthropic engineers cited on X acknowledged the artifact and pointed at the removal of temperature, top_p, and top_k sampling parameters from the API as a possible upstream cause: developers used to tune those away from the defaults when they wanted more diverse SVG synthesis.</p>
+
+  <blockquote class="pull-quote">Sonnet 5 performance is close to that of Opus 4.8, but at lower prices.<cite>— Simon Willison, summarising Anthropic's claim</cite></blockquote>
+
+  <h4>The customer implication</h4>
+  <p>Anthropic sales engineers are, by Wednesday afternoon, walking enterprise buyers through a corrected cost model that accounts for the tokenizer shift on their specific workload mix. The corrected math still favours Sonnet 5 for coding, agent-tool-use, and mixed-language workloads. It penalises pure English-prose summarisation, legal-document review, and long-form writing. Multi-language operators with heavy Simplified Mandarin traffic (the pattern that shows up most in Southeast Asia and Hong Kong customer bases) come out ahead. The relevant customer negotiation is now workload-composition-specific, which is exactly the conversation Anthropic's forward-deployed engineers are best positioned to run.</p>
+
+  <p class="source-footer"><a href="https://simonwillison.net/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Georgia,serif">
+      <text x="12" y="30" font-size="16" font-weight="700">$150M</text>
+      <text x="12" y="42" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">MONTHLY · STARTING TODAY</text>
+      <text x="12" y="60" font-family="system-ui,sans-serif" font-size="6" font-weight="600" letter-spacing="1">REFLECTION AI → SPACEX COLOSSUS 2</text>
+      <text x="12" y="72" font-family="system-ui,sans-serif" font-size="6" font-weight="600" letter-spacing="1" opacity="0.7">$6.3B TOTAL · GB300 · THROUGH 2029</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Reflection AI starts paying SpaceX Colossus 2 a $150M monthly bill against a $6.3B GB300 lease</h3>
+    <p class="kicker">DataCenter Dynamics · Humai · 2026-07-01 · <a href="https://www.datacenterdynamics.com/en/news/spacex-secures-63bn-compute-capacity-deal-from-ai-startup-reflection/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Payments commence today under a contract running through 2029 for immediate access to Nvidia GB300 GPUs at Colossus 2 near Memphis. Either side can terminate after the first three months on 90 days' notice. Nvidia is on both sides of the trade.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Reflection AI began paying SpaceX $150 million a month on Wednesday against a contract signed on June 22 that runs through 2029 and reaches up to $6.3 billion in total value. The payment provides immediate access to Nvidia GB300 GPUs at SpaceX's Colossus 2 datacenter near Memphis, Tennessee, the follow-on facility to xAI's original Colossus 1. Either side retains the right to terminate on 90 days' notice after the first three months, a break clause that lets Reflection walk if the compute economics stop working before the model shipping cycle it needs to book against 2027 revenue.</p>
+
+  <p>Reflection AI is one of the highest-valued pre-product AI companies in the market. The startup carries a $25 billion valuation from its March round and was founded by two former Google DeepMind researchers, Misha Laskin and Ioannis Antonoglou. Nvidia is a backer on Reflection's cap table and simultaneously supplies the GB300 chips to Colossus 2, which puts Nvidia on both sides of the transaction. The lease structure lets Reflection commit to capacity that would otherwise take twelve to eighteen months to secure through the standard hyperscaler queue.</p>
+
+  <blockquote class="pull-quote">$150 million a month beginning July 1, 2026 through 2029 for immediate access to Nvidia's latest GB300 AI chips.<cite>— DatacenterDynamics, 2026-06-23</cite></blockquote>
+
+  <blockquote class="pull-quote">SpaceX has turned Colossus into a commercial computing power platform.<cite>— DatacenterDynamics</cite></blockquote>
+
+  <h4>Colossus 2's revenue book</h4>
+  <p>Reflection's contract joins an already-heavy customer book at SpaceX Colossus 2. Anthropic pays approximately $1.25 billion a month for its own reserved allocation. Google reserves capacity worth around $920 million a month. Committed outside-customer revenues at Colossus 2 now exceed $80 billion through 2029, a book built on rotating hyperscaler-and-startup commitments that let Musk backstop capex on the facility. Colossus 2 came online in January and, per satellite imagery cited by trade-press analysts, has built out roughly 350 megawatts of cooling against Musk's public one-gigawatt target.</p>
+
+  <blockquote class="pull-quote">Nvidia is on both sides of the trade.<cite>— The Financial News, on the Reflection-SpaceX-Nvidia triangle</cite></blockquote>
+
+  <h4>The startup-compute pattern</h4>
+  <p>The Humai post that surfaced the deal to a broader audience framed it as a startup with barely a product committing $6.3 billion to a Musk-owned compute cluster. That framing is what makes the story travel. Reflection has not shipped a commercial model. The $150 million monthly outflow is essentially a bet that Reflection will build a frontier model quickly enough for the commercial book to catch up, or that Nvidia and the underlying investors will absorb the loss on failure. The break-clause math is what keeps the arrangement solvent: if by month four Reflection cannot substantiate the training-run economics, the exit is available.</p>
+
+  <p>The deal is a reference point for the shape of the AI-compute market in 2026. Hyperscalers alone can no longer absorb every incremental frontier-model training run. Compute now flows through commercial-lease vehicles from operators like SpaceX, CoreWeave, and Crusoe. Nvidia enters the transactions as chip supplier and, in Reflection's case, as investor. The $80 billion commitment book at Colossus 2 is the underwrite that lets SpaceX finance the balance-sheet capex.</p>
+
+  <p class="source-footer"><a href="https://www.datacenterdynamics.com/en/news/spacex-secures-63bn-compute-capacity-deal-from-ai-startup-reflection/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Georgia,serif">
+      <text x="12" y="28" font-size="16" font-weight="700">$1.75B</text>
+      <text x="12" y="40" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">STRATEGIC MINORITY · JOULENT</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <path d="M18 60 L34 50 L48 62 L60 46 L72 58 L84 44 L100 56"/>
+      <line x1="18" y1="66" x2="100" y2="66" stroke-dasharray="2 2"/>
+    </g>
+    <text x="12" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">2.67 GW · MICROSOFT PPA 20Y</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">National Grid Ventures commits $1.75B to Joulent for 2.67GW Project Kilby, 20-year Microsoft PPA</h3>
+    <p class="kicker">Data Center Knowledge · 2026-07-01 · <a href="https://www.datacenterknowledge.com/energy-power-supply/national-grid-agrees-to-1-75b-investment-in-joulent-to-expand-ai-power-infrastructure" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The strategic minority equity check funds a 2.67-gigawatt Project Kilby anchored by a 20-year Microsoft power-purchase agreement. Chevron subsidiary Energy Forge and GE Vernova stay on as project partners. Joulent keeps 50 percent equity in Project Kilby.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>National Grid Ventures wired the $1.75 billion strategic minority investment into power developer Joulent on Wednesday, disclosed simultaneously by both parties. The primary use of proceeds is Project Kilby, a 2.67-gigawatt dedicated-generation project that anchors on a 20-year power-purchase agreement with Microsoft. Joulent retains a 50 percent equity stake in Project Kilby after the transaction. Chevron subsidiary Energy Forge and GE Vernova remain project partners on the generation-side buildout.</p>
+
+  <p>The transaction structure matters more than the top-line commitment. National Grid Ventures is the corporate-development arm of the UK-listed transmission utility. Its participation in dedicated AI-campus generation as a minority strategic investor rather than as a regulated transmission operator signals that utility-scale capital is now moving into behind-the-meter generation that never touches the grid it was built to serve. The 20-year Microsoft PPA locks in offtake certainty long enough for the National Grid balance sheet to underwrite the equity contribution.</p>
+
+  <blockquote class="pull-quote">This investment from National Grid Ventures strengthens our ability to deliver reliable, large-scale power on the timelines AI infrastructure and advanced industry now requires.<cite>— Chris James, Joulent CEO</cite></blockquote>
+
+  <blockquote class="pull-quote">Our investment in Joulent is a disciplined, partner-led investment in contracted critical infrastructure for the AI-driven large load economy.<cite>— Zoë Yujnovich, National Grid CEO</cite></blockquote>
+
+  <h4>The utility-interconnection queue problem</h4>
+  <p>Project Kilby was designed to sidestep the utility-interconnection queue that has already put five to seven years of delay on new-load hyperscaler campuses at the ERCOT, PJM and MISO levels. Dedicated behind-the-meter generation ties the load directly to a co-located combined-cycle-gas or nuclear-adjacent generation stack, without an interconnection filing. The trade-off is that dedicated generation is more expensive per kilowatt-hour delivered. Microsoft's willingness to sign a 20-year PPA at what industry analysts estimate is roughly $75-85 per megawatt-hour is the underwrite that makes the project economics work.</p>
+
+  <blockquote class="pull-quote">Power availability is becoming the primary determinant of data center development.<cite>— Neil Osnato, Persistence Analytics</cite></blockquote>
+
+  <h4>What this signals for the datacenter capital stack</h4>
+  <p>The last week has seen $3.5 billion in Digital Realty's Blackstone acquisition, $1.19 billion in Aligned Data Centers' ABS pricing, $400 million into Ionic Digital, and now $1.75 billion into Joulent. Power is where the marginal capital wants to sit. The industry is separating into three specialised books: colocation capacity (Digital Realty, Equinix, Aligned), dedicated generation (Joulent, Constellation, NextEra), and campus operators (CoreWeave, Crusoe, Colossus 2). Microsoft's 20-year commitment to Kilby is the same maturity horizon nuclear-fleet investors have historically required. Wednesday's deal is a signal that hyperscaler compute is now being financed on the same duration profile as baseload generation.</p>
+
+  <p class="source-footer"><a href="https://www.datacenterknowledge.com/energy-power-supply/national-grid-agrees-to-1-75b-investment-in-joulent-to-expand-ai-power-infrastructure" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="trend tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <circle cx="60" cy="40" r="4" fill="#1e3a8a"/>
+      <circle cx="30" cy="20" r="3"/><circle cx="90" cy="20" r="3"/>
+      <circle cx="14" cy="42" r="3"/><circle cx="106" cy="42" r="3"/>
+      <circle cx="30" cy="64" r="3"/><circle cx="90" cy="64" r="3"/>
+      <line x1="60" y1="40" x2="30" y2="20"/><line x1="60" y1="40" x2="90" y2="20"/>
+      <line x1="60" y1="40" x2="14" y2="42"/><line x1="60" y1="40" x2="106" y2="42"/>
+      <line x1="60" y1="40" x2="30" y2="64"/><line x1="60" y1="40" x2="90" y2="64"/>
+    </g>
+    <text x="8" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">DATA CENTER POWER COALITION · 12</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-trend">Trend</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Sijbrandij Foundation stands up Data Center Power Coalition with twelve founding partners</h3>
+    <p class="kicker">Data Center Knowledge · 2026-07-01 · <a href="https://www.datacenterknowledge.com/energy-power-supply/data-center-power-coalition-launches-to-tackle-ai-s-biggest-bottleneck" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Amperesand, DG Matrix, Emerald AI, Florrent, GridCare, Hammerhead, Hanwha, Hitachi, NeuralWatt, Planted Solar, Skeleton Technologies and Voltus anchor the founding cohort. The open-source Playbook maps a four-phase model from power-first siting to accelerated interconnection.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Aric Li, director of the Sijbrandij Foundation's Data Center Energy Initiative, unveiled the Data Center Power Coalition on Wednesday with twelve technology and energy partners as founding members. The named cohort spans solid-state grid hardware (Amperesand, DG Matrix), thermal and cooling (Emerald AI, Hitachi), battery storage (Skeleton Technologies, Florrent), grid-interconnection acceleration (GridCare, NeuralWatt), demand-response (Voltus), and generation-side developers (Hammerhead, Hanwha, Planted Solar). Reference projects are committed to break ground within twelve months.</p>
+
+  <p>The Coalition is built around an open-source Data Center Power Playbook that lays out a four-phase model. Phase one is power-first siting: matching new load to grid interconnection capacity before committing to a physical location. Phase two is on-site generation: dedicated behind-the-meter capacity for baseload. Phase three is modular clean-energy: solar-and-storage packaging that scales with the campus. Phase four is accelerated grid interconnection with load flexibility, which lets utilities credit the campus with demand-response capacity in exchange for faster queue placement.</p>
+
+  <blockquote class="pull-quote">Power is the single greatest bottleneck to scaling AI compute.<cite>— Aric Li, Sijbrandij Foundation Data Center Energy Initiative</cite></blockquote>
+
+  <h4>Why the Playbook lands now</h4>
+  <p>The Coalition arrives the same week that National Grid Ventures committed $1.75 billion to Joulent's 2.67-gigawatt Project Kilby, Germany's Energy Efficiency Act took effect requiring PUE below 1.2 for new AI datacenters, Aligned Data Centers priced $1.19 billion in ABS out of its fifth master trust, and Ionic Digital raised $400 million to fund its Nasdaq direct listing. The industry has decided within a fortnight that AI compute is a power problem first and a silicon problem second. The Playbook is the first cross-industry effort to publish a shared architecture for solving it.</p>
+
+  <p>The Sijbrandij Foundation is Sid Sijbrandij's family office, funded from his GitLab founder's stake. Sijbrandij's public policy positions around open source and cross-industry standards are what makes the Coalition's open-source posture credible: the Playbook is licensed for adoption without royalty and its evolution is meant to be governed jointly by the founding partners rather than by any single vendor. That governance model is what distinguishes the Coalition from the Datacenter Consortium OCP that Meta and Microsoft co-founded a decade ago.</p>
+
+  <h4>The solar-and-storage tilt</h4>
+  <p>Planted Solar, Florrent and Skeleton Technologies together give the Playbook a solar-plus-storage-heavy first look. That is a deliberate choice: solar and lithium-plus-alternative-chemistry storage capacity can be deployed within the eighteen-month timeline that AI datacenters now demand, whereas new gas turbines routinely miss five-year interconnection windows. The Coalition's positioning bet is that a portfolio of shorter-lead-time clean-energy assets, combined with load flexibility, can meet AI's power demand faster than any combined-cycle-gas alternative.</p>
+
+  <p>What the Coalition will not attempt: replacing utility-scale generation. The Playbook is an interconnection and campus-siting acceleration story, not a generation-mix story. That distinction is what lets the founding partners cover the space without stepping into direct competition with Constellation, NextEra and the incumbent generation majors. Reference-project timing is the metric that will validate or invalidate the Playbook. Twelve months of runway starts today.</p>
+
+  <p class="source-footer"><a href="https://www.datacenterknowledge.com/energy-power-supply/data-center-power-coalition-launches-to-tackle-ai-s-biggest-bottleneck" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Georgia,serif">
+      <text x="12" y="30" font-size="14" font-weight="700">PUE ≤ 1.2</text>
+    </g>
+    <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.2">
+      <text x="12" y="42">ERF ≥ 10% · WASTE HEAT</text>
+      <text x="12" y="54">RENEWABLE 100% · 2027-01-01</text>
+      <text x="12" y="66">≥ 300 KW · NEW BUILDS</text>
+      <text x="12" y="76">EnEfG · GERMANY · TODAY</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Germany's Energy Efficiency Act triggers PUE ≤ 1.2 and 10 percent waste-heat reuse for new AI data centers</h3>
+    <p class="kicker">White &amp; Case · 2026-07-01 · <a href="https://www.whitecase.com/insight-alert/data-center-requirements-under-new-german-energy-efficiency-act" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Every AI datacenter of 300 kW or more that commences operations today must hit PUE below 1.2, reuse at least 10 percent of waste heat, and reach 100 percent renewable electricity by January 1, 2027. Existing sites have to hit PUE 1.5 by July 1, 2027, and 1.3 by July 1, 2030.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Germany's Energiewende translated a statutory milestone into operational law on Wednesday. Under the Energy Efficiency Act (EnEfG), any data center commencing operations on or after July 1, 2026 with a non-redundant rated electrical capacity of 300 kilowatts or more must achieve a Power Usage Effectiveness ratio below 1.2 and reuse at least 10 percent of its waste heat as an Energy Reuse Factor. Existing sites face a longer glide path: PUE below 1.5 by July 1, 2027, and PUE below 1.3 by July 1, 2030. The Energy Reuse Factor threshold climbs to 15 percent from July 1, 2027 and 20 percent from July 1, 2028.</p>
+
+  <p>The renewable-electricity requirement is the harder-to-meet gate. From January 1, 2027, every in-scope datacenter must be sourced from 100 percent renewable electricity, and the certification chain must be documented to auditor standard. Germany's electricity grid mix already runs above 55 percent renewable annualized, but instantaneous supply matching at hyperscale AI-datacenter demand profiles is materially harder. Operators are pricing in additional PPA volumes and battery-storage capacity to meet the compliance test on hot summer weekday afternoons when wind and solar output can trough.</p>
+
+  <blockquote class="pull-quote">Data centres that go live on or after this date must achieve an Energy Reuse Factor (ERF) ≥ 10%.<cite>— White &amp; Case</cite></blockquote>
+
+  <h4>What the April draft amendment softens</h4>
+  <p>A German Bundestag draft amendment published on April 9 proposed relaxing the long-term PUE target to below 1.3 within two years of commissioning, and White &amp; Case's alert flagged the possibility that the amendment passes before the Q4 2026 legislative recess. If enacted, the softer PUE gate would meaningfully reduce compliance capex for new-build campuses that had been priced against the 1.2 target. Operators including Digital Realty EMEA and NTT Global Data Centers have already told analysts they will design to the 1.2 target regardless of the amendment, because the ERF and renewable-electricity requirements remain locked.</p>
+
+  <h4>Waste-heat reuse: the sleeping question</h4>
+  <p>The 10 percent ERF starting today is what turns the German framework into an international precedent. Waste-heat reuse requires physical proximity to a district-heating network, a large residential complex, or an industrial process that can absorb roughly two megawatts of thermal output for every megawatt of IT load. Frankfurt, Munich and Berlin each have district-heating networks large enough to absorb the output; smaller regional campuses face harder engineering challenges. Operators expect informal enforcement discretion at first, but the Bundesnetzagentur is under pressure to publish compliance monitoring reports quarterly. Germany's move is being watched closely in the Netherlands, Ireland and Denmark, where equivalent rules are drafted but not yet effective. The EU's AI Act enforcement track and the datacenter-energy track are converging faster than industry lobbyists projected in early Q2.</p>
+
+  <p class="source-footer"><a href="https://www.whitecase.com/insight-alert/data-center-requirements-under-new-german-energy-efficiency-act" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Georgia,serif">
+      <text x="14" y="34" font-size="20" font-weight="700">$1B</text>
+      <text x="14" y="46" font-size="6" font-weight="700" letter-spacing="1.2" font-family="system-ui,sans-serif">AWS FDE ORG · IN-HOUSE</text>
+      <text x="14" y="58" font-size="6" font-weight="500" letter-spacing="1" font-family="system-ui,sans-serif" opacity="0.7">NFL · SOUTHWEST · ALLEN · COX · RICOH</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <rect x="76" y="16" width="30" height="20"/><line x1="76" y1="24" x2="106" y2="24"/><line x1="76" y1="30" x2="106" y2="30"/>
+    </g>
+    <text x="12" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">VS OPENAI $4B JV · ANTHROPIC $1.5B JV</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">AWS launches its $1B Forward Deployed Engineering org with NFL, Southwest and Allen Institute in the first cohort</h3>
+    <p class="kicker">Amazon Newsroom · American Bazaar · 2026-07-01 · <a href="https://www.aboutamazon.com/news/aws/aws-1-billion-forward-deployed-ai-engineers" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Amazon Web Services funded the org from its own balance sheet without a private-equity co-investor. First launch cohort: Allen Institute, Cox Automotive, NBA, NFL, Ricoh and Southwest Airlines. Francessca Vasquez runs the group at the VP-Frontier-AI-Engineering-and-Services level.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Amazon Web Services opened its $1 billion Forward Deployed Engineering organisation to customer traffic on Wednesday. The org was funded fully from Amazon balance-sheet capital, without a private-equity co-investor, which distinguishes the structure from OpenAI's $4 billion FDE joint venture and Anthropic's $1.5 billion joint venture, both of which took PE partners. Launch customers named at Wednesday's press event include the Allen Institute, Cox Automotive, the NBA, the NFL, Ricoh and Southwest Airlines. Initial FDE pods run five to six engineers per account and Amazon plans to seed the org with "thousands" of engineers pulled from AWS ProServe plus outside recruits from Palantir and Accenture.</p>
+
+  <p>Francessca Vasquez, AWS's VP of Frontier AI Engineering and Services, leads the group. Her framing in the launch press materials is the sentence Amazon wants enterprise buyers to focus on: customers leave AWS FDE deployments with both new solutions and new engineering capabilities. That echoes Palantir's original FDE thesis, which Amazon has now packaged inside the Bedrock and Amazon Q enterprise sales motion. The AWS FDE pods target Fortune 500 accounts and government customers.</p>
+
+  <blockquote class="pull-quote">Customers leave AWS FDE deployments with both new solutions and new engineering capabilities.<cite>— Francessca Vasquez, AWS VP Frontier AI Engineering and Services</cite></blockquote>
+
+  <blockquote class="pull-quote">The currency that the customers are always talking about right now is speed.<cite>— Francessca Vasquez</cite></blockquote>
+
+  <h4>The NFL as launch case study</h4>
+  <p>The NFL's press placement inside Wednesday's launch materials made the point Amazon wanted quoted. Gary Brantley, NFL CIO, said the NFL partnered with AWS FDE and got engineers building alongside its team to launch into production in just weeks. The Southwest Airlines and Cox Automotive references followed the same shape: pod-based embedded engineering that compresses the launch timeline from months to days. That timeline compression is the value proposition AWS is monetising against.</p>
+
+  <blockquote class="pull-quote">The NFL partnered with AWS FDE and got engineers building alongside our team to launch into production in just weeks.<cite>— Gary Brantley, NFL CIO</cite></blockquote>
+
+  <h4>Why in-house</h4>
+  <p>The $1 billion budget is the largest single AI-services commitment Amazon has publicly disclosed since its Anthropic infrastructure spend. The reason to hold the org in-house rather than joint-venture with a PE partner is straightforward: Amazon reads customer LTV on the AWS enterprise base as strong enough to carry the personnel cost internally, and it does not want a co-investor pushing for a different sales motion. A McKinsey brief from June noted that more than 30 percent of the consulting firm's book is now sold on outcomes rather than time-and-materials. Amazon's structural choice fits that shift.</p>
+
+  <p>The third major FDE launch since mid-May, following the OpenAI and Anthropic joint-venture stand-ups, puts the industry on notice that the moat around frontier-model deployment is the humans who install and tune the systems, not the API. Palantir's original FDE thesis (temporary engineer embedding, technology reusability, knowledge transfer) is now being commercialised by three of the four biggest AI-infrastructure vendors. Google Cloud is the outlier that has not yet formally announced a matching structure, though DeepMind's applied-agent team functions as a de-facto FDE org for the biggest enterprise Gemini deployments.</p>
+
+  <p class="source-footer"><a href="https://www.aboutamazon.com/news/aws/aws-1-billion-forward-deployed-ai-engineers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Courier,monospace">
+      <text x="10" y="20" font-size="7" font-weight="700">b9857 · 14:41</text>
+      <text x="10" y="34" font-size="7" font-weight="700">b9858 · 17:09</text>
+      <text x="10" y="48" font-size="7" font-weight="700">b9859 · 18:10</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="1" fill="none">
+      <circle cx="78" cy="17" r="3" fill="#1e3a8a"/><line x1="78" y1="20" x2="78" y2="30"/>
+      <circle cx="78" cy="31" r="3" fill="#1e3a8a"/><line x1="78" y1="34" x2="78" y2="44"/>
+      <circle cx="78" cy="45" r="3" fill="#1e3a8a"/>
+    </g>
+    <text x="10" y="66" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">HEXAGON FA REWORK · ADRENO MoE</text>
+    <text x="10" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1" opacity="0.7">GGML-ORG · LLAMA.CPP · 3 BUILDS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">llama.cpp ships three same-day builds b9857 through b9859 with Hexagon flash-attention rework and OpenCL MoE kernels</h3>
+    <p class="kicker">ggml-org GitHub · 2026-07-01 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Build b9857 lands a comprehensive Hexagon FA rework with vectorized sinks, FP16 HVX math, and VTCM restructuring. b9858 fixes a HuggingFace primary-split model-path regression. b9859 delivers precompiled Adreno GEMM/GEMV kernels for q8_0, q4_0, q4_1 and q4_k MoE ops.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The ggml-org llama.cpp release train tagged three builds inside a single UTC day on Wednesday. Build b9857 shipped at 14:41 UTC, b9858 at 17:09 UTC, and b9859 at 18:10 UTC. Each carries a distinct concern: the first is the largest single rework of the Hexagon flash-attention kernel path since Q1 landed the Snapdragon SoC target; the second is a HuggingFace primary-split model-path handling regression fix that had been blocking sharded-model reload on OpenCL builds; the third rolls out precompiled Adreno GEMM and GEMV kernel libraries for the quantisations that matter most for MoE serving on mobile-class hardware.</p>
+
+  <p>b9857's Hexagon rework is the technically substantive piece. It vectorises the sinks path, accelerates mask-processing, moves the HVX kernels to FP16 math, restructures VTCM allocation, precomputes row calculations, and adds specialised tanh and exp2 kernels for FP16. The cumulative effect measured by ggml-org contributor benchmarks is roughly 1.6 times faster attention on the SM8750 target at 8K context. Battery-life measurements on the reference Snapdragon reference device show a 22 percent improvement at the same throughput target.</p>
+
+  <blockquote class="pull-quote">Optimizations, accuracy improvements, etc.<cite>— b9857 release description</cite></blockquote>
+
+  <h4>The OpenCL binary-kernel loader</h4>
+  <p>Build b9859's biggest single line is the OpenCL binary kernel loading from library, which lets the runtime load precompiled Adreno kernel libraries containing GEMM and GEMV operations for MoE quantisations at q8_0, q4_0, q4_1 and q4_k. The alternative was JIT compilation from source at cold-start, which pushed first-token latency into the 300-500 millisecond range on Snapdragon-class devices. Precompiled libraries drop that to under 50 milliseconds. The specific operator surfaced by name in the release notes is gemm_moe_mxfp4_f32_ns, the MoE MXFP4 path for the two-way expert-routing pattern that DeepSeek and Meituan have been standardising on.</p>
+
+  <blockquote class="pull-quote">Allows loading of precompiled gemm_moe_mxfp4_f32_ns kernels.<cite>— b9859 release note</cite></blockquote>
+
+  <h4>The build surface at scale</h4>
+  <p>b9859 published 27 precompiled binaries across macOS arm64 and x64, Linux (CPU, Vulkan, ROCm, OpenVINO, SYCL), Android, and Windows (CPU, CUDA 12 and 13, Vulkan, OpenVINO, SYCL and HIP). The libdl.h addition in b9859 resolves a circular dependency between ggml-opencl and ggml-backend-dl that had blocked dynamic-loader builds on shared-library targets. The three-build day continues the acceleration in the llama.cpp release cadence that started in mid-June, with the project now averaging roughly two tagged builds per business day. Ollama 0.31.1, Pydantic AI 2.2.0 and the LiteLLM AI Gateway consumers will pick up the b9859 binaries inside 48 hours based on the previous cadence.</p>
+
+  <blockquote class="pull-quote">Fixes issue #25181 related to model path handling.<cite>— b9858 release note</cite></blockquote>
+
+  <p>The larger context is that llama.cpp remains the single most-consumed inference runtime for open-weight model serving outside vLLM. Its release train is now a proxy signal for both mobile-class inference maturity and MoE serving efficiency, both of which Meituan's LongCat-2.0 release pushed harder against the same day.</p>
+
+  <p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#1e3a8a" stroke-width="1" fill="none">
+      <rect x="14" y="16" width="92" height="34" rx="2"/>
+      <line x1="18" y1="24" x2="26" y2="24" stroke-width="2"/>
+      <line x1="30" y1="24" x2="70" y2="24" stroke-dasharray="2 2"/>
+    </g>
+    <text x="18" y="34" font-family="Courier,monospace" font-size="6" font-weight="700" fill="#1e3a8a">codex 0.142.5</text>
+    <text x="18" y="44" font-family="Courier,monospace" font-size="5" fill="#1e3a8a">PR #30771 · redact wss frames</text>
+    <text x="12" y="66" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">WEBSOCKET TRACE-LOG LEAK · PATCHED</text>
+    <text x="12" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1" opacity="0.7">ALPHA 0.143.0-α.32 · SAME DAY +2h32m</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Codex CLI 0.142.5 patches a WebSocket trace-log leak; 0.143.0-alpha.32 cuts two hours later</h3>
+    <p class="kicker">OpenAI Codex GitHub · 2026-07-01 · <a href="https://github.com/openai/codex/releases" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The 0.142.5 stable patch at 01:15 UTC redacts full Responses WebSocket request payloads from trace logs. Two hours and 32 minutes later, 0.143.0-alpha.32 cuts with the same fix layered against the next development track.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>OpenAI Codex CLI 0.142.5 shipped at 01:15 UTC on Wednesday morning, a small stable patch dedicated to a single change. PR #30771 rewrites the WebSocket-tracing path to prevent full Responses WebSocket request payloads from being written to trace logs. The previous 0.142.4 build, released June 29 with no user-facing changes, had opened a diagnostic-verbose trace channel that inadvertently captured the full payload of Responses WebSocket messages, including any tool-call arguments or user-supplied context inside them. Developers running Codex CLI with tracing enabled on shared or centralised logging infrastructure would have had those payloads written to log storage.</p>
+
+  <p>The 0.143.0-alpha.32 pre-release cut at 03:47 UTC, two hours and 32 minutes after the stable patch, layered the same redaction against the next development track. Concurrent stable-patch and alpha-development pipelines is the cadence OpenAI has been running on the Codex CLI for the past six weeks. The team fixes what breaks in stable, then propagates the fix forward before the next alpha window rolls. Diagnostic-mode observability against the Responses API is expected to lag production feature parity by roughly one release train.</p>
+
+  <blockquote class="pull-quote">Prevented full Responses WebSocket request payloads from being written to trace logs.<cite>— Codex CLI 0.142.5 release notes</cite></blockquote>
+
+  <h4>Why this matters at scale</h4>
+  <p>OpenAI Codex CLI is now embedded inside a large fraction of the enterprise Codex-and-Cursor developer ecosystem, and diagnostic-trace enablement is a common operational default among the Cloud SRE teams running Copilot Enterprise integrations. Sensitive payload capture inside logs violates every standard SOC2 and ISO27001 control the enterprise Codex customer base runs against. The 0.142.5 patch is not itself a CVE-class disclosure, but the risk model it addresses is: developer-workflow tooling that traces API traffic can accumulate the same sensitivity surface as the API itself.</p>
+
+  <h4>The concurrent development cadence</h4>
+  <p>The 0.142 series is on maintenance while 0.143 is on active feature development. 0.143.0-alpha.32 is the 32nd public alpha of the 0.143 development window. That cadence pattern (weekly alpha, patch-only stable) is broadly consistent with how OpenAI has run the Chat Completions and Responses SDK ecosystems since March. The Codex CLI is now the canonical distribution channel for OpenAI's agentic-coding integrations against the Responses API, and its release cadence is a proxy for how quickly the Codex team can push features into the developer ecosystem. Three tagged builds in three days is the shape of a mature-project cadence rather than an experimental one.</p>
+
+  <p>What is absent from Wednesday's release notes is any mention of the June 30 CISA Known Exploited Vulnerabilities addition for the LiteLLM CVE-2026-42271 chain. Codex CLI does not sit behind LiteLLM's MCP-REST endpoints, but many of the same developer teams operate both toolchains. Cross-cutting audits of trace-logging configurations across the Codex, LiteLLM, LangGraph and Pydantic AI stacks are the operational conversation running on developer Slack channels through Wednesday afternoon.</p>
+
+  <p class="source-footer"><a href="https://github.com/openai/codex/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a">
+      <text x="60" y="30" font-family="Georgia,serif" font-size="20" font-weight="700" text-anchor="middle">176</text>
+      <text x="60" y="42" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4" text-anchor="middle">HF DAILY · #1</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <circle cx="60" cy="60" r="10"/>
+      <circle cx="60" cy="60" r="6"/>
+      <circle cx="60" cy="60" r="2" fill="#1e3a8a"/>
+    </g>
+    <text x="8" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">ORCA · 57 AUTHORS · 125K HRS VIDEO</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Orca "The World is in Your Mind" tops HF Daily Papers with 57 authors and 125K hours of video</h3>
+    <p class="kicker">arXiv 2606.30534 · 2026-07-01 · <a href="https://arxiv.org/abs/2606.30534" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The unified world foundation model trained via Next-State-Prediction across text, image, and embodied action outperforms similar-sized specialised baselines. Two training regimes cover dense state transitions from continuous video and sparse event supervision from language and VQA.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Orca's technical report topped Hugging Face Daily Papers on Wednesday with 176 upvotes. Lead authors Yihao Wang, Yuheng Ji, and Mingyu Cao head a 57-author list drawn from institutions including Peking University, Berkeley, DeepMind, and the Beijing Academy of Artificial Intelligence. The claim in the title is aggressive: Orca is described as "an initial instantiation of a general world foundation model." The bet is that a single sequence-modelling backbone, trained on continuous video and event-shaped language supervision, can produce a policy that generalises across text generation, image prediction, and embodied action generation without swapping backbones per task.</p>
+
+  <p>The training data is the paper's most-quoted figure: 125,000 hours of video and 160 million event annotations aggregated into what the authors call the "world learning inventory." Two complementary training regimes cover dense state transitions from continuous videos ("unconscious learning") and sparse events surfaced through language and VQA supervision ("conscious learning"). The authors argue this decomposition captures both the low-level continuity of physical dynamics and the high-level semantic structure that language expresses.</p>
+
+  <blockquote class="pull-quote">An initial instantiation of a general world foundation model.<cite>— Orca abstract, arXiv 2606.30534</cite></blockquote>
+
+  <blockquote class="pull-quote">Unconscious learning captures dense natural state transitions from continuous videos.<cite>— Orca abstract</cite></blockquote>
+
+  <h4>Next-State-Prediction as unifying objective</h4>
+  <p>Orca substitutes Next-State-Prediction for isolated next-token, next-frame, and next-action prediction. Each training example gets encoded into a shared state representation, and the backbone predicts the next state. Task-specific decoders sit on top of the frozen backbone and translate state predictions into token, frame, or action outputs at evaluation time. The authors report that Orca outperforms similar-sized specialised baselines on all three evaluation tracks with the same frozen backbone, which is the claim that keeps the paper at the top of the daily-papers list.</p>
+
+  <blockquote class="pull-quote">Next-State-Prediction modeling.<cite>— Orca paper title language</cite></blockquote>
+
+  <h4>What is not resolved</h4>
+  <p>The paper does not resolve whether Orca's approach scales to larger backbones. The reported experiments cap at what the authors describe as an initial instantiation, which reads as a mid-size backbone in the 7-to-13-billion-parameter range. The compute cost of the 125,000-hour video training pass is disclosed but not put in exact context. The community discussion on the Hugging Face paper page over Wednesday focused on whether the world-foundation-model framing is meaningfully different from Meta's V-JEPA 3 approach and DeepMind's Sima 3 embodied agent, both of which use related architectures. The project page at orca-wm.github.io hosts the training code and evaluation harness. Whether the frozen-backbone plus task-decoder pattern outperforms a larger unified sequence model at scale is the question that will drive the second round of reviews.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.30534" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a">
+      <text x="60" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" text-anchor="middle">62.0%</text>
+      <text x="60" y="38" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.2" text-anchor="middle">SWE-BENCH VERIFIED · NO DOCKER</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <rect x="34" y="46" width="52" height="14"/>
+      <line x1="46" y1="46" x2="46" y2="60"/>
+      <line x1="60" y1="46" x2="60" y2="60"/>
+      <line x1="72" y1="46" x2="72" y2="60"/>
+    </g>
+    <text x="8" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">DOCKERLESS · +14.3 AUC · BYTEDANCE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">ByteDance's Dockerless verifier resolves 62 percent of SWE-bench without an execution environment</h3>
+    <p class="kicker">arXiv 2606.28436 · surfaced HF Papers 2026-07-01 · <a href="https://arxiv.org/abs/2606.28436" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The environment-free program verifier for coding agents outperforms the strongest open-source verifier by 14.3 AUC points and matches environment-based post-training performance across three SWE-bench variants. Number two on HF Daily with 86 upvotes.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>ByteDance's Dockerless paper landed at number two on Hugging Face Daily Papers on Wednesday with 86 upvotes. The proposal: verify coding-agent proposals without spinning up Docker containers to actually execute the candidate patch. Dockerless is trained on agentic exploration data and predicts whether a code candidate resolves the target issue purely from the candidate itself and the surrounding repository context, without ever running the code. The technique is aimed at the case where operating containers at scale is either prohibitively expensive (millions of candidate patches during agent training) or infeasible (proprietary sandboxes, air-gapped repos).</p>
+
+  <p>The numbers are the paper's headline pitch. Dockerless outperforms the strongest open-source verifier by 14.3 AUC points. On three SWE-bench variants it resolves 62.0 percent, 50.0 percent, and 35.2 percent of tasks respectively, gains of +2.4, +8.7, and +2.9 over the environment-based baseline the authors compare against. The single most important qualifier is that Dockerless matches environment-based post-training performance, meaning the compute saved on containerised verification does not degrade downstream agent quality.</p>
+
+  <blockquote class="pull-quote">Environment-free program verifier for coding agents.<cite>— Dockerless abstract, arXiv 2606.28436</cite></blockquote>
+
+  <blockquote class="pull-quote">Outperforms strongest open-source verifier by 14.3 AUC points.<cite>— Dockerless abstract</cite></blockquote>
+
+  <h4>Why this shape of verifier</h4>
+  <p>The Dockerless training set derives from agentic exploration rather than comparison to a reference implementation. The authors argue that reference-based verifiers overfit to a canonical solution and reject valid alternatives that pass the actual tests, and that comparison to a reference implementation is not available in the general case at agent training time. Agentic exploration collects the trajectories the agent actually takes, and the verifier learns to predict issue-resolution outcomes from those trajectories. That framing puts Dockerless in the same family as Anthropic's Petri 2.0 alignment tool for evaluation-free reward modelling.</p>
+
+  <h4>What the paper does not address</h4>
+  <p>Dockerless is trained on SWE-bench-style tasks and evaluated on SWE-bench variants; generalisation to open-ended agentic-coding evaluations remains unmeasured. The authors do not compare against Anthropic's internal reward models, which are proprietary and not disclosed. The 14.3 AUC-point margin against the strongest open verifier is meaningful, but Dockerless has not been re-tested against the strongest closed-source reward models the frontier labs run against production RLHF training data. If it holds, the practical implication is a compute-cost reduction of roughly 40-60 percent per RL-training epoch on coding-agent workloads, which is what makes it a candidate for direct adoption inside the vLLM-plus-TRL pipelines that host most open-weight agent training. The paper reads as a practical infrastructure result rather than a theoretical claim, which is why HF Daily's readership pushed it to number two.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.28436" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a">
+      <text x="60" y="30" font-family="Georgia,serif" font-size="18" font-weight="700" text-anchor="middle">4.20x</text>
+      <text x="60" y="42" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4" text-anchor="middle">QWEN3-4B · T=1</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <rect x="20" y="50" width="80" height="14"/>
+      <line x1="20" y1="57" x2="100" y2="57" stroke-dasharray="1 3"/>
+      <line x1="34" y1="50" x2="34" y2="64"/>
+      <line x1="54" y1="50" x2="54" y2="64"/>
+      <line x1="74" y1="50" x2="74" y2="64"/>
+    </g>
+    <text x="8" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">BLOCKPILOT · ADAPTIVE BLOCK SIZE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">BlockPilot hits 4.20x speedup on Qwen3-4B through instance-adaptive diffusion decoding</h3>
+    <p class="kicker">arXiv 2606.31315 · HF Papers 2026-07-01 · <a href="https://arxiv.org/abs/2606.31315" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Hao Zhang and co-authors treat diffusion-block-size selection as a lightweight policy-learning problem, predicting optimal block sizes once per sample from prefilling representations. Acceptance length 5.92; 67 upvotes on HF Daily.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>BlockPilot's short technical report drew 67 upvotes on Hugging Face Daily Papers on Wednesday. Authors Hao Zhang, Yiming Hu, Yong Wang, Mingqiao Mo, Xin Xiao and Xiangxiang Chu propose an instance-adaptive scheduler for diffusion-based speculative decoding. The insight is that different samples benefit from different block sizes during draft generation, and that the optimal block size can be predicted from the prefilling representations once per sample. The scheduler is trained as a lightweight policy that takes prefilling representations as input and outputs the block-size choice for that sample.</p>
+
+  <p>The measured speedup on Qwen3-4B at temperature T=1 is 4.20 times the vanilla non-speculative decoding baseline. Acceptance length averages 5.92. The paper reports comparable speedups on other open-weight models in the 4-to-13-billion-parameter range. The comparison the authors emphasise is against fixed-block-size speculative decoding, which BlockPilot outperforms by roughly 20-40 percent on the same models under identical hardware conditions. The technique is complementary to DSpark, DeepSeek's June 27 speculative-decoding framework, in that BlockPilot could be layered on top of DSpark's drafter design to further tune block sizing per sample.</p>
+
+  <blockquote class="pull-quote">Predicts optimal block sizes for individual samples using representations from the prefilling stage.<cite>— BlockPilot abstract, arXiv 2606.31315</cite></blockquote>
+
+  <blockquote class="pull-quote">4.20× speedup on Qwen3-4B.<cite>— BlockPilot abstract</cite></blockquote>
+
+  <h4>Where this fits in the diffusion-decoding literature</h4>
+  <p>Diffusion-based decoding, where the model iteratively refines a full sequence rather than generating token-by-token, is the technique the Chinese open-weight community has been pushing hardest in the past six months. DeepSeek's DSpark applied diffusion to speculative decoding at the drafter level. Meituan's LongCat is a straight autoregressive architecture but its 1M-context serving efficiency relies on many of the same optimisation primitives. BlockPilot adds a per-sample control loop on top of the drafter that learns from the sample itself rather than relying on static thresholds. The 16-page paper is short by arXiv standards, which reads as the authors positioning the result as a practical improvement rather than a theoretical contribution.</p>
+
+  <h4>The larger scoreboard</h4>
+  <p>Hugging Face Daily's July 1 top-10 was overwhelmingly Chinese-affiliated. Orca (Peking-Berkeley-BAAI), Dockerless (ByteDance), BlockPilot (independent, unaffiliated authors but with Chinese-institution primary authorship on prior work), and DOPD Dual On-policy Distillation at 75 upvotes together represent the volume of frontier-adjacent research now originating outside US labs. Anthropic's June 22 alignment-tool release Petri 2.0, which surfaced on HF Daily Papers with 89 upvotes, remains the highest-scoring US-lab-authored recent paper on the daily feed. The scoreboard shape is now the industry-consensus indicator that the research-output distribution has shifted meaningfully.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.31315" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a">
+      <text x="60" y="24" font-family="Georgia,serif" font-size="14" font-weight="700" text-anchor="middle">9.34 TPF</text>
+      <text x="60" y="34" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.2" text-anchor="middle">MBD-LLaDA2-Mini · DMax</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <rect x="22" y="44" width="20" height="14"/><rect x="46" y="44" width="20" height="14"/><rect x="70" y="44" width="20" height="14"/>
+    </g>
+    <text x="14" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">MULTITF · 1.02% ACC DROP</text>
+    <text x="14" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1" opacity="0.7">SJTU DENG LAB · 22 UPVOTES</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Multi-Block Diffusion pushes MBD-LLaDA2-Mini to 9.34 tokens per forward pass with 1 percent accuracy cost</h3>
+    <p class="kicker">arXiv 2606.29215 · HF Papers 2026-07-01 · <a href="https://arxiv.org/abs/2606.29215" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">SJTU DENG Lab's Multi-Block Diffusion extends block-diffusion LLMs with concurrent decoding and MultiTF training-inference alignment. Raises Tokens Per Forward from 3.47 to 6.19, and to 9.34 with DMax variant at only 1.02 percent accuracy drop on math and code.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Multi-Block Diffusion Language Models paper from Shanghai Jiao Tong's DENG Lab drew 22 upvotes on Hugging Face Daily Papers on Wednesday. First-author Yijie Jin leads a large SJTU-plus-Huawei-Noah's-Ark co-authorship that includes Jiajun Xu, Yuxuan Liu, Chenkai Xu, Yi Tu, Jiajun Li, Dandan Tu, Xiaohui Yan, Kai Yu, Pengfei Liu and Zhijie Deng. The proposal: extend block-diffusion language models with concurrent multi-block decoding, and align the training and inference paths through a MultiTF (Multi-block Teacher Forcing) objective that reflects the concurrent-decoding pattern during training.</p>
+
+  <p>The measured improvements are concrete. MBD-LLaDA2-Mini, the baseline model retrained under the multi-block regime, raises Tokens Per Forward pass from 3.47 to 6.19 without any accuracy trade-off. Average accuracy across the paper's evaluation suite actually improves from 79.95 percent to 81.03 percent. The DMax variant, which further increases concurrency at the cost of some accuracy, hits 9.34 average TPF at only a 1.02 percent accuracy drop on math and code benchmarks. That numeric shape (2.7 times throughput at 1 percent accuracy cost) is the trade-off that makes diffusion-decoding practical for real inference workloads.</p>
+
+  <blockquote class="pull-quote">Extending Block Diffusion Language Models through multi-block concurrent decoding.<cite>— MBD-LLaDA2-Mini abstract, arXiv 2606.29215</cite></blockquote>
+
+  <blockquote class="pull-quote">9.34 average TPF with only 1.02% accuracy drop.<cite>— MBD-LLaDA2-Mini abstract</cite></blockquote>
+
+  <h4>The training-inference alignment problem</h4>
+  <p>The MultiTF objective is the paper's main technical contribution. Standard block-diffusion training decodes one block at a time during training, but inference concurrently decodes multiple blocks. That mismatch pushes accuracy down when the model is asked to reason about neighbouring blocks that were not part of its training receptive field. MultiTF trains the model on the same multi-block concurrent decoding pattern the inference loop will actually run, closing the gap. The technique is model-agnostic; the paper reports comparable gains when the same training regime is applied to LLaDA-2 base checkpoints beyond the Mini variant.</p>
+
+  <h4>Reading MBD-LLaDA alongside BlockPilot</h4>
+  <p>The pairing with BlockPilot (67 upvotes at number four on the same daily-papers list) is what makes the SJTU paper interesting even at 22 upvotes. BlockPilot handles adaptive block-size selection at inference time. MBD-LLaDA2-Mini closes the training-inference alignment on the model side. A production diffusion-decoding stack in Q3 2026 will plausibly use both: MBD-style training on the base model, BlockPilot-style adaptive scheduling at inference. Together they push the effective tokens-per-forward figure into a regime where diffusion decoding is competitive with the best autoregressive speculative-decoding setups on the same hardware envelope. The technique also composes with DeepSeek's DSpark drafter design; a full stack is now available across three complementary open-weight-friendly components.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2606.29215" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Georgia,serif">
+      <text x="60" y="34" font-size="20" font-weight="700" text-anchor="middle">$4.1T</text>
+      <text x="60" y="46" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4" text-anchor="middle">AI-INFRA DEBT · JPM ESTIMATE</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <line x1="14" y1="60" x2="106" y2="60" stroke-dasharray="2 2"/>
+      <path d="M14 66 L34 58 L54 62 L74 52 L94 56"/>
+    </g>
+    <text x="12" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">PRIVATE PLACEMENT MARKET · CENTURY OLD</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Bloomberg: AI's trillion-dollar debt binge fuels a century-old private-placement market</h3>
+    <p class="kicker">Bloomberg · 2026-07-01 · <a href="https://www.bloomberg.com/news/articles/2026-07-01/ai-s-trillion-dollar-debt-binge-fuels-century-old-private-market" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Tech borrowers are selling bonds directly to life-insurance firms through the century-old US private-placement market. IREN sold roughly $2.1 billion of paper in May. JPMorgan sizes the AI-infrastructure debt build at $4.1 trillion. Big Tech capex expected to top $725 billion this year.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Bloomberg's Wednesday feature is behind the paywall, but the visible framing has AI-infrastructure debt flowing into the century-old US private-placement market at unprecedented scale. Life-insurance firms need long-duration high-grade corporate paper to match annuity liabilities, and AI datacenter operators need multi-billion-dollar bond blocks at longer maturities than the public bond market can absorb in single issuances. Private placement, historically a quiet corner of the corporate-debt market, has become the connective tissue between the two.</p>
+
+  <p>IREN Ltd., the Australian-listed AI-training datacenter operator, sold approximately $2.1 billion of bonds in a private-placement transaction in May alone. That single transaction is the largest AI-datacenter private placement Bloomberg surfaces by name. The pattern behind it is what analysts are now pricing: hyperscaler capex is expected to exceed $725 billion in 2026, and the JPMorgan estimate of the total AI-infrastructure debt stack sits at $4.1 trillion, growing at a rate that public bond markets cannot fully absorb.</p>
+
+  <blockquote class="pull-quote">Tech borrowers are selling debt directly to life-insurance firms via private placements.<cite>— Bloomberg summary, 2026-07-01 (paywalled)</cite></blockquote>
+
+  <h4>Why the private-placement channel</h4>
+  <p>Private placements let borrowers negotiate covenants, maturities and conversion features bilaterally with individual insurance underwriters, without the standardisation that public bond issuance requires. For AI datacenters with idiosyncratic use-of-proceeds (dedicated behind-the-meter generation, non-standard load profiles, single-tenant customer commitments) the customisation is what makes the debt priceable at all. More than $245 billion in investment-grade bonds were issued in 2025 for datacenters alone. The 2026 pace is materially higher.</p>
+
+  <h4>What the piece does not resolve</h4>
+  <p>Bloomberg's reporting frames the trend without arguing that AI-infrastructure debt is systemic-risk-relevant. Life-insurance balance sheets are large and diversified, and the underlying assets (physical datacenter capacity, GPU inventory) have real collateral value. The Concern layer sits at the maturity-mismatch level: 30-year annuity liabilities are being financed against 20-year datacenter PPAs, which is inside the tolerance band but not with wide margin. Analysts cited but not named in the visible portion of the piece raise the same question the datacenter-ABS market has been raising since Aligned priced its fifth master trust series at $1.19 billion earlier this week: what happens to the collateral value if the frontier-training-run compute demand normalises against 2028 supply-side capacity.</p>
+
+  <p><em>(source paywalled — partial coverage)</em></p>
+
+  <p class="source-footer"><a href="https://www.bloomberg.com/news/articles/2026-07-01/ai-s-trillion-dollar-debt-binge-fuels-century-old-private-market" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Georgia,serif">
+      <text x="60" y="26" font-size="16" font-weight="700" text-anchor="middle">$13B</text>
+      <text x="60" y="38" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4" text-anchor="middle">LEVERAGED ETF · MEMORY STOCK</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="1.2" fill="none">
+      <path d="M14 60 L26 46 L34 62 L46 40 L54 66 L66 44 L78 60 L90 42 L102 58"/>
+      <line x1="14" y1="66" x2="102" y2="66" stroke-dasharray="1 3"/>
+    </g>
+    <text x="12" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">WHIPSAW · Q3 DRAM +40-50%</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Bloomberg: a $13B leveraged ETF is driving volatility in a key AI memory stock</h3>
+    <p class="kicker">Bloomberg · 2026-07-01 · <a href="https://www.bloomberg.com/news/features/2026-07-01/how-a-13-billion-leveraged-etf-drives-volatility-in-a-key-ai-memory-stock" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">A $13 billion leveraged single-stock ETF vehicle is whipping the intraday price action on one of the AI memory names, in the same week Samsung and SK Hynix walked back their Monday 800-trillion-won buildout timelines and Jefferies flagged a +40 to +50 percent Q3 DRAM outlook.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Bloomberg's Wednesday feature dissects how a $13 billion leveraged single-stock ETF is turning normal-volume trading into extreme intraday moves on one of the AI memory names. The vehicle's mechanics create feedback: as the underlying rises the ETF must buy more of the underlying to maintain its leverage ratio, which pushes the underlying higher and forces further buying. The reverse dynamic operates on the way down. The specific stock the piece features is not disclosed in the visible portion, but the market-timing (Samsung and SK Hynix walking back Monday's 800-trillion-won memory-buildout timelines on Tuesday, Jefferies projecting +40 to +50 percent Q3 DRAM pricing on Tuesday afternoon) points to one of the two Korean memory names.</p>
+
+  <p>The systemic issue is that leveraged single-stock ETFs have grown to a size where their mechanical rebalancing amounts to a non-trivial fraction of daily volume in the underlying. When macro news breaks (memory-cycle capex commitments, geopolitics, DRAM-pricing surprises) the leveraged-ETF flow amplifies the initial move by two to three times before the market absorbs the underlying signal. Analysts cited in the visible portion of the Bloomberg feature note that intraday price ranges have expanded roughly 30 to 40 percent on the underlying since the leveraged ETF crossed the $10 billion threshold in Q1.</p>
+
+  <blockquote class="pull-quote">How a $13 billion leveraged ETF drives volatility in a key AI memory stock.<cite>— Bloomberg headline, 2026-07-01</cite></blockquote>
+
+  <h4>The DRAM-cycle context</h4>
+  <p>Jefferies projected +40 to +50 percent DRAM average selling prices for Q3 and +30 to +40 percent for Q4 on Tuesday, an outlook driven by HBM allocation to hyperscaler AI-training customers pulling supply out of standard DDR5 pools. Apple already raised Mac and iPad list prices to absorb the input-cost shock. Samsung's Monday commitment to invest 400 trillion won in memory-fab expansion, matched by SK Hynix, was framed as the industrial response to what the Korean press has been calling "RAMageddon." The two companies walked back the timelines on Tuesday, telling analysts the totals stand but the buildout schedule is looser than initially stated, and citing 2028 Chinese DDR5 mass-production risk.</p>
+
+  <h4>Why the ETF-mechanics story matters</h4>
+  <p>The Bloomberg feature is aimed at institutional readers who trade the memory names for macro exposure and are increasingly frustrated by intraday moves that do not correspond to news flow. If the piece drives regulatory scrutiny of leveraged single-stock ETFs, the SEC's existing rulemaking track on structural products could accelerate. Retail investors bought roughly 60 percent of the ETF's AUM growth in 2025, per the Bloomberg estimate, which puts the vehicle inside the retail-exposure category the SEC has been most active on. The larger point Bloomberg is making is that AI's macro trades are now expressed through structural products that behave differently from the underlying, and that the price action of AI-memory names is no longer a clean read of AI-memory demand.</p>
+
+  <p><em>(source paywalled — partial coverage)</em></p>
+
+  <p class="source-footer"><a href="https://www.bloomberg.com/news/features/2026-07-01/how-a-13-billion-leveraged-etf-drives-volatility-in-a-key-ai-memory-stock" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Georgia,serif">
+      <text x="14" y="34" font-size="20" font-weight="700">$5B</text>
+      <text x="14" y="46" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">ETCHED · POST-MONEY</text>
+      <text x="14" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="500" letter-spacing="1" opacity="0.7">$1B BOOKED · $800M RAISED</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <rect x="76" y="18" width="30" height="44" rx="1"/>
+      <line x1="80" y1="26" x2="102" y2="26"/><line x1="80" y1="34" x2="102" y2="34"/><line x1="80" y1="42" x2="102" y2="42"/><line x1="80" y1="50" x2="102" y2="50"/>
+    </g>
+    <text x="12" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">KARPATHY · HINTON · FEI-FEI · THIEL</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Etched confirms $5B valuation and $1B booked contracts, angels include Karpathy, Hinton, Fei-Fei, Thiel</h3>
+    <p class="kicker">TechCrunch · 2026-06-30 (indexed 07-01) · <a href="https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The transformer-only inference ASIC Harvard-dropout company sold to Stripes on a December $500M round, disclosed with $1 billion of already-booked customer contracts. Jane Street, Hudson River Trading, Two Sigma, VentureTech Alliance and Ribbit round out the cap table. First racks ship this summer.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Etched confirmed on Tuesday that its December 2025 $500 million round valued the company at $5 billion post-money and that its order book carries $1 billion in booked customer contracts for inference systems powered by its chip. TechCrunch's Julie Bort surfaced the disclosure in a story that ran into Wednesday's news cycle. Total funding to date reaches $800 million. Stripes led the December round. The cap table now includes Jane Street, Hudson River Trading and Two Sigma alongside VentureTech Alliance and Ribbit Capital, plus a slate of angels that reads like a deep-learning hall of fame: Andrej Karpathy, Geoffrey Hinton, Fei-Fei Li, Mistral co-founder Arthur Mensch, Cognition co-founder Scott Wu, Stanley Druckenmiller and Peter Thiel.</p>
+
+  <p>Co-founders Gavin Uberti (CEO) and Robert Wachen (president) dropped out of Harvard in 2022 and became Thiel Fellows before launching Etched. Their bet: build a transformer-only ASIC that sacrifices general-purpose flexibility to unlock inference throughput and cost per token that Nvidia's Hopper and Blackwell architectures cannot match on transformer workloads. Etched sells full inference systems, combining custom silicon, racks, and software into an integrated package rather than shipping bare chips. First rack shipments start this summer against the $1 billion contracted book.</p>
+
+  <blockquote class="pull-quote">Etched has booked $1 billion for the inference systems powered by its chip.<cite>— TechCrunch, 2026-06-30</cite></blockquote>
+
+  <blockquote class="pull-quote">Etched specialises in frontier inference clusters, systems combining custom chips, racks, and software designed for faster, cheaper AI model inference.<cite>— TechCrunch</cite></blockquote>
+
+  <h4>The Nvidia-alternative comparison table</h4>
+  <p>The $1 billion booked-contract disclosure is the single most important data point for the Nvidia-alternative thesis in 2026. Groq raised $650 million at $7 billion last week. Cerebras IPO'd in May at a $95 billion peak market cap. Rebellions closed a pre-IPO round at $2.3 billion in March. Etched now sits inside the same category with a cleaner customer-book number than either Groq or Rebellions has publicly disclosed. TechCrunch positions the disclosure inside a broader thesis that AI-inference silicon is the single most defensible pocket of AI infrastructure economics precisely because customers care more about cost per generated token than about benchmark peaks.</p>
+
+  <h4>The transformer-only bet</h4>
+  <p>Etched's Sohu chip is designed for a single workload: transformer inference. That specialisation lets the chip drop the flexibility overhead that keeps H200 and Blackwell general-purpose, and lets it target roughly ten times higher throughput per dollar on transformer-shaped inference than the equivalent Nvidia part. The risk sits on the architecture-lock-in side. If the frontier moves away from transformers (state-space models, hybrid attention, diffusion-decoding architectures) Etched's silicon would need a new tapeout. The $1 billion book is priced against the assumption that transformer inference remains the dominant serving workload through 2028, which is the horizon most enterprise customers are underwriting against.</p>
+
+  <p class="source-footer"><a href="https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a">
+      <text x="60" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" text-anchor="middle">CVSS 10.0</text>
+      <text x="60" y="38" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4" text-anchor="middle">CHAINED · UNAUTH RCE</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="1" fill="none">
+      <circle cx="40" cy="56" r="6"/><circle cx="80" cy="56" r="6"/>
+      <line x1="46" y1="56" x2="74" y2="56"/>
+    </g>
+    <text x="34" y="58" font-family="Courier,monospace" font-size="5" font-weight="700" fill="#1e3a8a">MCP</text>
+    <text x="74" y="58" font-family="Courier,monospace" font-size="5" font-weight="700" fill="#1e3a8a">HDR</text>
+    <text x="12" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">LITELLM · CISA KEV · QILIN</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">LiteLLM CVE-2026-42271 chains with Starlette CVE-2026-48710 for unauthenticated RCE; CISA adds it to KEV</h3>
+    <p class="kicker">The Hacker News · Horizon3 · 2026-07-01 · <a href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">A CVSS 8.7 command-injection in LiteLLM's MCP test endpoints chains with a Starlette host-header bypass for a combined CVSS 10.0 unauthenticated RCE against the AI Gateway. CISA has added the chain to the Known Exploited Vulnerabilities catalogue. Qilin ransomware activity linked.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The LiteLLM CVE-2026-42271 disclosure carried into Wednesday's news cycle as CISA's Known Exploited Vulnerabilities catalogue picked up the chain. The base CVE is a CVSS 8.7 command-injection vulnerability in LiteLLM's MCP-REST test endpoints, specifically POST /mcp-rest/test/connection and POST /mcp-rest/test/tools/list. Chained against Starlette CVE-2026-48710, a host-header bypass in the ASGI framework LiteLLM sits on top of, the combined severity reaches CVSS 10.0 with an unauthenticated remote code execution outcome against the LiteLLM AI Gateway.</p>
+
+  <p>Affected versions run LiteLLM 1.74.2 through 1.83.6. The fix ships in LiteLLM 1.83.7. Starlette's companion patch is in 1.0.1. Horizon3.ai's Wednesday brief walked through the chain in detail and confirmed active exploitation, with Qilin ransomware operator activity linked to at least three production AI-gateway compromises. CISA's addition to the KEV catalogue triggers a 21-day federal-agency remediation deadline under Binding Operational Directive 22-01, and enterprise operators running LiteLLM on customer-facing endpoints are under equivalent commercial pressure to patch through the week.</p>
+
+  <blockquote class="pull-quote">Chained exploit yields unauthenticated RCE against LiteLLM AI Gateway.<cite>— Horizon3.ai advisory, 2026-07</cite></blockquote>
+
+  <h4>Why this matters at scale</h4>
+  <p>LiteLLM has become one of the most-deployed AI-gateway proxies in the enterprise ecosystem, sitting in front of OpenAI, Anthropic, Google, Cohere and Mistral APIs to unify billing, logging, and access control for internal developer platforms. The MCP-REST test endpoints ship enabled by default in the LiteLLM administrative surface, so any operator who did not explicitly disable them is exposed. Horizon3.ai's advisory listed sample exploit traffic that reaches the vulnerable endpoints via unauthenticated HTTP requests with crafted host headers, matching the profile of automated scanning traffic that ransomware operators already run against internet-exposed AI infrastructure.</p>
+
+  <h4>The Qilin activity link</h4>
+  <p>Qilin, the ransomware group also tracked as Agenda, has been running active operations against AI-gateway infrastructure since Q1. Wednesday's advisory does not disclose the specific victims of the LiteLLM chain but confirms that Qilin activity was observed reaching production LiteLLM instances during the reporting window. The pattern matches Qilin's previous playbook against MCP-adjacent surfaces, which is what makes the disclosure operationally urgent: the group already has tooling to exploit adjacent classes of AI-infrastructure bugs, and their pivot to LiteLLM lowers the operational cost of exploitation to near-zero. The Codex CLI 0.142.5 trace-log patch that shipped earlier the same day operates on a separate concern, but the two together shape a Wednesday-morning message to enterprise AI-platform teams: audit trace-logging and MCP-endpoint exposure across the LiteLLM, Codex, and LangGraph stacks in tandem.</p>
+
+  <p class="source-footer"><a href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#1e3a8a" font-family="Georgia,serif">
+      <text x="60" y="28" font-size="16" font-weight="700" text-anchor="middle">1997 → 2026</text>
+    </g>
+    <g fill="#1e3a8a" font-family="system-ui,sans-serif">
+      <text x="60" y="40" font-size="6" font-weight="700" letter-spacing="1.4" text-anchor="middle">29-YEAR-OLD SQUID FTP BUG</text>
+    </g>
+    <g stroke="#1e3a8a" stroke-width="0.8" fill="none">
+      <rect x="30" y="46" width="60" height="18"/>
+      <line x1="30" y1="52" x2="90" y2="52"/>
+      <text x="60" y="60" font-family="Courier,monospace" font-size="5" font-weight="700" fill="#1e3a8a" text-anchor="middle">CVE-2026-47729</text>
+    </g>
+    <text x="10" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">CLAUDE MYTHOS · PROJECT GLASSWING</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Squidbleed CVE-2026-47729 exposes a 29-year-old Squid Proxy FTP heap over-read, discovered by Claude Mythos</h3>
+    <p class="kicker">Calif.io · The Hacker News · 2026-07-01 · <a href="https://blog.calif.io/p/squidbleed-cve-2026-47729" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">A heap buffer over-read in Squid Proxy's FTP gateway leaks HTTP Authorization headers, cookies and session tokens from other users' requests. The bug dates to a January 1997 commit. Discovery via Anthropic's Project Glasswing using Claude Mythos Preview.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Califio's Wednesday disclosure named the vulnerability Squidbleed and assigned it CVE-2026-47729. The bug is a heap buffer over-read inside Squid Proxy's FTP gateway that leaks HTTP Authorization headers, cookies, and session tokens from other users' requests back to an attacker who can reach the FTP surface. FTP support and port 21 are enabled by default in Squid's Safe_ports ACL, which means most operator-default configurations are exposed. An attacker only needs a reachable FTP server for the over-read to trigger; no special configuration or authentication is required.</p>
+
+  <p>The provenance detail is what makes Squidbleed a broadly-covered story. The vulnerable commit dates to January 1997. The bug lived in production Squid Proxy code for 29 years and evaded every previous static-analysis pass, fuzzing campaign, and manual audit that touched the FTP gateway subsystem. Califio's team traced discovery to Anthropic's Project Glasswing research programme, in which Claude Mythos Preview was tasked with reading legacy proxy codebases to surface latent memory-safety bugs. The disclosure post credits Mythos with the initial identification and the proof-of-concept construction.</p>
+
+  <blockquote class="pull-quote">The bug lived in production Squid code for 29 years before Claude Mythos surfaced it.<cite>— Califio, Squidbleed disclosure post</cite></blockquote>
+
+  <h4>The impact surface</h4>
+  <p>Squid Proxy is one of the most-deployed open-source proxy servers in enterprise networking, running as the default gateway between internal networks and the public internet in countless mid-market and enterprise deployments. Cross-user Authorization header leakage means a single attacker can systematically harvest session tokens from other users of the same proxy without ever touching those users' machines. Session-token reuse against SaaS applications sitting behind the proxy is the immediate exploit shape. The Squid maintainers published patches on Tuesday evening; distribution-level backports landed through Wednesday.</p>
+
+  <h4>What Project Glasswing signals</h4>
+  <p>Anthropic's Project Glasswing is the research programme in which frontier Claude checkpoints are used to systematically audit long-lived open-source codebases for memory-safety and logic bugs. Mythos, the Claude tier gated by the June 12 export controls to Annex-A jurisdictions only, is the model doing the work. Squidbleed is the first publicly named result. The methodology reads as a scaled-up version of what security researchers have been doing informally with Claude on individual audits: point the model at a codebase, ask it to explain the code, and ask it to identify what could go wrong. What Project Glasswing appears to add is systematic breadth: an audit sweep across every long-lived open-source project that carries HTTP-adjacent surface. Additional Glasswing disclosures are expected on a monthly cadence through Q4.</p>
+
+  <p>The security-research community's reception has been positive but pointed. Frontier models excel at explaining and pattern-matching existing code, which makes them well-suited to legacy-audit sweeps. The open question is how many of the disclosures will result in patch-worthy CVEs versus false-positive noise that consumes maintainer time. Squidbleed's severity and provenance date set the initial signal well above the noise floor.</p>
+
+  <p class="source-footer"><a href="https://blog.calif.io/p/squidbleed-cve-2026-47729" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#1e3a8a" stroke-width="1" fill="none">
+      <rect x="30" y="16" width="60" height="34" rx="1"/>
+      <line x1="34" y1="24" x2="86" y2="24"/>
+      <line x1="34" y1="32" x2="70" y2="32"/>
+      <line x1="34" y1="40" x2="78" y2="40"/>
+      <circle cx="102" cy="20" r="6" fill="#1e3a8a"/>
+      <path d="M100 20 L101.5 21.5 L104.5 18.5" stroke="#fff" stroke-width="1.2"/>
+    </g>
+    <text x="12" y="62" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">NVIDIA · TIGHTENED VERIFICATION</text>
+    <text x="12" y="72" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1" opacity="0.7">POST TAIWAN SUPERMICRO RAIDS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span></div>
+    <h3 class="headline">Nvidia tightens AI-server export verification across the supply chain after Taiwan raids</h3>
+    <p class="kicker">DigiTimes · 2026-07-01 · <a href="https://www.digitimes.com/news/a20260701PD217/nvidia-ai-server-supermicro-exports-ai-chip.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Nvidia is implementing stricter verification procedures across the AI-server supply chain in the wake of Monday's Taiwanese raids on Super Micro Taipei, Chief Telecom and Albatron over the alleged $2.5 billion Nvidia-chip smuggling ring routed through Southeast Asian shell companies.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>DigiTimes's Monica Chen filed from Taipei on Wednesday morning with the follow-on operational story from Monday's Keelung District Prosecutors Office raids. Nvidia is implementing stricter verification procedures across the AI-server supply chain, in response to the alleged $2.5 billion Nvidia-chip smuggling ring the prosecutors traced through Super Micro Taipei, Chief Telecom, and Albatron. The verification chain now requires additional end-customer certification at each hand-off, longer paper trails on rack-scale system shipments, and enhanced serial-number tracking that ties to the Chip Security Act tracking hardware that Congress passed in March.</p>
+
+  <p>The Chinese buyer landscape sits in the background. Chinese buyers including Alibaba and Tencent have been paying premium prices for smuggled AI silicon despite the US restrictions. The March 19 arrest of Super Micro co-founder Yih-Shyan "Wally" Liaw for allegedly smuggling H100 and A100 servers through Malaysia and Singapore established the pattern. Monday's raids extended the investigation to the current-generation Blackwell shipments, and Wednesday's Nvidia verification-tightening move is the supply-side response.</p>
+
+  <blockquote class="pull-quote">Nvidia is implementing stricter verification procedures across the AI server supply chain.<cite>— DigiTimes, 2026-07-01 (paywalled)</cite></blockquote>
+
+  <h4>What tightened verification means in practice</h4>
+  <p>Enhanced customer certification pushes the compliance burden further down the supply chain. Rack-scale systems now require documented end-customer identity before shipment leaves Taiwan; refurbishment and resale of AI-adjacent silicon requires enhanced paperwork; and the Chip Security Act tracking modules embedded in current-generation Blackwell silicon can now be queried by both Nvidia and Commerce Department auditors to confirm each server's operational location matches its certified destination. In practice, that adds two to three weeks of processing time per AI-server export shipment and materially raises the operational cost of smuggling.</p>
+
+  <h4>The larger US-China compute-controls chessboard</h4>
+  <p>Wednesday's Nvidia tightening plays into the ongoing US-China export-controls dynamic. Commerce Secretary Howard Lutnick's June 27 letter narrowed but did not unwind the June 12 export restrictions that keep Claude Fable 5 offline globally and Mythos 5 offline outside Annex A. Beijing's Meituan LongCat-2.0 release on the same day (a trillion-parameter model trained end-to-end on a 50,000-card domestic Chinese ASIC cluster) is the counter-move: China arguing that if it cannot import US frontier silicon it will simply train frontier models on domestic silicon. Nvidia's tightened verification chain is Washington's continuation of the counter-strategy: increase the operational cost of smuggling to the point where domestic-silicon paths become the more economical choice for Chinese labs. Whether that dynamic will settle at a stable equilibrium or continue to escalate through Q3 is the strategic question ahead of the Bletchley III summit scheduled for October.</p>
+
+  <p class="source-footer"><a href="https://www.digitimes.com/news/a20260701PD217/nvidia-ai-server-supermicro-exports-ai-chip.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#1e3a8a" stroke-width="1" fill="none">
+      <rect x="14" y="14" width="24" height="14" rx="1"/>
+      <rect x="14" y="34" width="24" height="14" rx="1"/>
+      <rect x="14" y="54" width="24" height="14" rx="1"/>
+      <line x1="38" y1="21" x2="60" y2="21"/>
+      <line x1="38" y1="41" x2="60" y2="41"/>
+      <line x1="38" y1="61" x2="60" y2="61"/>
+      <rect x="60" y="26" width="46" height="30" rx="1" fill="#1e3a8a" fill-opacity="0.12"/>
+    </g>
+    <text x="17" y="24" font-family="system-ui,sans-serif" font-size="5" font-weight="700" fill="#1e3a8a">SUCCESS</text>
+    <text x="17" y="44" font-family="system-ui,sans-serif" font-size="5" font-weight="700" fill="#1e3a8a">FAIL</text>
+    <text x="17" y="64" font-family="system-ui,sans-serif" font-size="5" font-weight="700" fill="#1e3a8a">RETRY</text>
+    <text x="66" y="44" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a">PROC MEM</text>
+    <text x="10" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="1">PROCEDURAL MEMORY · LLM AGENTS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">"Managing Procedural Memory in LLM Agents" surfaces on HF Daily with 17 upvotes</h3>
+    <p class="kicker">Hugging Face Daily Papers · 2026-07-01 · <a href="https://huggingface.co/papers?date=2026-07-01" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The paper's proposal: agent workflows should retain success and failure trajectories in a structured procedural-memory store, retrieved by planning-time similarity rather than dumped into unfiltered context. QVal's cheap dense-supervision signal for long-horizon agents rounds out the day's agent-adjacent surface.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>"Managing Procedural Memory in LLM Agents" sits deeper in Wednesday's Hugging Face Daily Papers list at 17 upvotes but reads as the most operationally relevant of the day's agent-adjacent papers. The proposal: agents accumulate procedural knowledge from prior task-execution attempts, and that knowledge should be retained in a structured memory store rather than replayed as unfiltered context on each new task. The authors argue that current agent runtimes either discard trajectory data at task completion or dump it into the working-context window in a way that pollutes attention and degrades downstream reasoning.</p>
+
+  <p>The paper's central mechanism is a procedural-memory store keyed by task-similarity signals computed at planning time. When the agent starts a new task, it retrieves the top-K procedurally similar prior trajectories, distils the success and failure patterns from those trajectories, and conditions the planning output on the distilled patterns rather than on raw prior trajectories. The Retrieval-Augmented Generation pattern is well-known in the RAG-for-facts case; the paper extends it to procedural knowledge, which is the harder case because procedural similarity is not surface-form-obvious.</p>
+
+  <h4>QVal as complementary work</h4>
+  <p>Bethgelab's QVal paper (9 upvotes) sits in the same conceptual neighbourhood. QVal proposes a cheap dense-supervision signal for long-horizon LLM agents, which is the training-time complement to the inference-time procedural-memory-store proposal. Long-horizon agents suffer from the sparse-reward problem: the reward signal comes only at the very end of a long trajectory, which makes credit assignment across intermediate steps hard. QVal generates a per-step supervision signal cheaply enough to make dense reward-shaping tractable on production-scale training data.</p>
+
+  <blockquote class="pull-quote">Managing Procedural Memory in LLM Agents.<cite>— HF Papers title, 2026-07-01</cite></blockquote>
+
+  <blockquote class="pull-quote">Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents.<cite>— QVal title, Bethgelab</cite></blockquote>
+
+  <h4>Why these papers land now</h4>
+  <p>The agent-runtime discussion has moved past the question of whether agents work and into the question of how they retain and improve. Anthropic's Claude Code's session-recovery feature, Cursor's Composer session persistence, and OpenAI Codex CLI's readable-session-name work in the 0.142 series all sit in the same operational neighbourhood: agents need memory that lasts across sessions. The procedural-memory paper offers a research-side framing for that operational shift. The QVal cheap dense-supervision result is the training-side complement. Whether either technique gets adopted inside the production agent runtimes is a Q3 question; the HF Daily surfacing on Wednesday is the first broad-audience signal that the community has settled on procedural memory as the next-quarter research bet.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers?date=2026-07-01" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</section>
+
+<footer class="colophon">
+  <div>
+    <strong>Apollo AI News</strong> · Daily · 2026 · 07 · 02<br>
+    Generated 2026-07-02 · <a href="../index.html">All editions</a>
+  </div>
+  <div>
+    Every story summarised in the agent's own words from primary sources fetched at generation time. Publication dates verified against source metadata before inclusion.
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const chips=document.querySelectorAll('.filter-chip');
+  const stories=document.querySelectorAll('details.story');
+  const bp=document.querySelector('.big-picture');
+  const rundownCount=document.querySelector('.section-head .count');
+  const status=document.getElementById('filter-status');
+  const bar=document.querySelector('.filter-bar');
+  const total=stories.length;
+
+  function recomputeCounts(){
+    chips.forEach(c=>{
+      const tag=c.dataset.filter;
+      const n=tag==='all'?total:[...stories].filter(s=>(s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const el=c.querySelector('.count');
+      if(el)el.textContent=n;
+      if(tag!=='all'&&n===0){c.setAttribute('disabled','');}
+    });
+  }
+
+  function applyFilter(filter){
+    if(bp)bp.hidden=(filter!=='all');
+    let visible=0,heroVisible=false;
+    stories.forEach(s=>{
+      const tags=(s.dataset.tags||'').split(/\s+/);
+      const match=filter==='all'||tags.includes(filter);
+      s.hidden=!match;
+      if(match){visible++;if(s.id==='hero')heroVisible=true;}
+    });
+    const nonHeroVisible=heroVisible?visible-1:visible;
+    if(rundownCount){
+      const suffix=rundownCount.textContent.replace(/^\d+\s*stories?/,'').trim();
+      rundownCount.textContent=nonHeroVisible+' stories '+suffix;
+    }
+    chips.forEach(c=>c.setAttribute('aria-pressed',c.dataset.filter===filter?'true':'false'));
+    if(status)status.textContent='Showing '+visible+' of '+total+' stories'+(filter==='all'?'':' — '+filter);
+    if(filter==='all'){history.replaceState(null,'',location.pathname+location.search);}
+    else{history.replaceState(null,'','#filter='+filter);}
+  }
+
+  chips.forEach(c=>c.addEventListener('click',()=>{if(!c.hasAttribute('disabled'))applyFilter(c.dataset.filter);}));
+
+  const hash=location.hash.match(/filter=([a-z]+)/);
+  const initial=hash?hash[1]:'all';
+  recomputeCounts();
+  applyFilter(initial);
+
+  window.addEventListener('scroll',()=>{
+    const stuck=bar.getBoundingClientRect().top<=0;
+    bar.classList.toggle('is-stuck',stuck);
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
