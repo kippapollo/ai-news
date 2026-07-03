@@ -1,0 +1,1276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-07-03</title>
+<meta name="description" content="Anthropic opens early-stage talks with Samsung Electronics to manufacture a custom AI chip on Samsung Foundry's 2-nanometer process and use its advanced packaging, joining every other frontier hyperscaler in bringing silicon in house. Microsoft commits $2.5 billion and 6,000 embedded engineers to launch the Frontier Company under Rodrigo Kede Lima with six-to-twelve-month client engagements, matching the AWS $1 billion Forward Deployed Engineering unit unveiled the same week. Anthropic redeploys Claude Fable 5 globally after Commerce Secretary Howard Lutnick's June 30 letter withdrew the June 12 export-control order; Mythos 5 stays restricted to a set of approved US organisations through Project Glasswing. Meta shares close up nearly 9 percent as CNBC and Forbes confirm the company will sell excess AI compute through a new cloud business modelled on AWS Bedrock; JPMorgan pegs the opportunity at roughly $20 billion per gigawatt of external capacity. Mark Zuckerberg tells an internal town hall that Meta's agentic development 'hasn't really accelerated in the way that we expected' over the last four months and that the May reorganisation that cut 10 percent of the workforce and reassigned 7,000 employees to AI teams was not as clean as it could have been. Together AI closes an $800 million Series C at an $8.3 billion post-money led by Aramco Ventures with $1.15 billion in annual bookings; Crusoe is in active talks to raise roughly $3 billion at a $30 billion valuation on 4.9 gigawatts of contracted power and a 40-gigawatt pipeline. Cognition ships Devin Security Swarm at $90 per run with 36 out of 50 published GHSA vulnerabilities found and three criticals no other tool caught. Claude Code 2.1.198 lands Claude in Chrome GA, background agents that commit, push and open draft PRs, an agent_needs_input notification hook and a /dataviz skill. NVIDIA drops Nemotron-Labs-TwoTower at 98.7 percent quality and 2.42x throughput plus Generative Pretrained Controllers at 99.98 percent motion-clip success. Tesla caps employee third-party AI spend at $200 per week starting July 6 while raising 2026 capex to more than $25 billion. TwelveLabs closes $100 million Series B at $207 million total raised. Oxmiq Labs takes $35 million Series A under Raja Koduri. Hugging Face Daily Papers puts Johns Hopkins' PerceptionRubrics at the top with 33 upvotes. ggml-org tags llama.cpp b9860 exposing a new llama_ftype_name() C API. Anthropic proposes an industry-wide jailbreak-severity scoring framework with Amazon, Microsoft and Google.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#115e59;
+  --accent-soft:rgba(17,94,89,0.09);
+  --tag-tech:rgba(30,58,138,0.10);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#5eead4;
+    --accent-soft:rgba(94,234,212,0.12);
+    --tag-tech:rgba(147,197,253,0.18);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(94,234,212,0.20);
+    --tag-application-ink:#99f6e4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){
+  .story summary{grid-template-columns:1fr;gap:12px}
+  .story-thumb{aspect-ratio:320 / 80;width:100%;height:auto}
+}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-weight:700;color:var(--accent);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:"Collapse \25B4"}
+.story:not([open]) .expand-control::after{content:"Read in full \25BE"}
+.expand-control{font-size:0;letter-spacing:normal}
+.expand-control::after{font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1 / -1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:0.84rem;color:var(--muted)}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2"  x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2"  y1="28" x2="9"  y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5"  y1="9.5"  x2="14"   y2="14"/>
+          <line x1="42"   y1="42"   x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5"  x2="42"   y2="14"/>
+          <line x1="9.5"  y1="46.5" x2="14"   y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Daily</strong>
+    2026 · 07 · 03
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<details class="story" id="hero" data-tags="tech economic" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span>
+      </div>
+      <h1>Anthropic opens Samsung 2nm chip talks, joining every hyperscaler with in-house AI silicon plans</h1>
+      <p class="dek">The Information first, then Bloomberg and TechCrunch, confirm early-stage work on a custom Anthropic AI accelerator with Samsung Electronics as prospective fab and packaging partner on the SF2 node. The company recently hired Clive Chan, an early member of OpenAI's chip team. Google, Amazon, Meta and Microsoft all already run in-house silicon; OpenAI unveiled the Broadcom-designed Jalapeño inference chip last month.</p>
+      <p class="kicker">The Information · Bloomberg · TechCrunch · 2026-07-02 · <a href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#115e59" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#115e59" stop-opacity="0.05"/>
+        </linearGradient>
+        <pattern id="hgrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0 L0 0 0 24" fill="none" stroke="#115e59" stroke-opacity="0.14" stroke-width="0.4"/>
+        </pattern>
+        <pattern id="wafer" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+          <circle cx="7" cy="7" r="2.2" fill="none" stroke="#115e59" stroke-opacity="0.34" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgrid)"/>
+
+      <g fill="#115e59" font-family="system-ui,sans-serif" font-weight="700">
+        <text x="28" y="28" font-size="9" letter-spacing="2.4">ANTHROPIC × SAMSUNG · SF2 NODE · 2026·07·02</text>
+        <text x="28" y="42" font-size="7" letter-spacing="1.6" opacity="0.78">EARLY-STAGE · CUSTOM ACCELERATOR + ADVANCED PACKAGING</text>
+      </g>
+
+      <g transform="translate(28, 60)">
+        <circle cx="82" cy="66" r="62" fill="none" stroke="#115e59" stroke-width="1.4"/>
+        <circle cx="82" cy="66" r="62" fill="url(#wafer)" opacity="0.9"/>
+        <line x1="82" y1="4" x2="82" y2="128" stroke="#115e59" stroke-width="0.4" stroke-dasharray="2 2"/>
+        <line x1="20" y1="66" x2="144" y2="66" stroke="#115e59" stroke-width="0.4" stroke-dasharray="2 2"/>
+        <text x="82" y="18" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="1.4">300 MM · GAA · SF2</text>
+        <text x="82" y="140" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="1.4" opacity="0.8">SAMSUNG FOUNDRY · HWASEONG</text>
+      </g>
+
+      <g transform="translate(220, 60)" font-family="system-ui,sans-serif" font-size="7" fill="#115e59">
+        <text x="0" y="0" font-weight="700" font-size="9" letter-spacing="1.6">SILICON PROGRAMME CARD</text>
+        <text x="0" y="18" font-weight="600" opacity="0.78">PROCESS</text><text x="0" y="28" font-weight="700" font-size="13">SF2 · 2 nm GAA</text>
+        <text x="0" y="46" font-weight="600" opacity="0.78">PACKAGING</text><text x="0" y="56" font-weight="700" font-size="13">SAINT · SoIC</text>
+        <text x="0" y="74" font-weight="600" opacity="0.78">STATUS</text><text x="0" y="84" font-weight="700" font-size="13">EARLY DESIGN</text>
+        <text x="0" y="102" font-weight="600" opacity="0.78">TALENT</text><text x="0" y="112" font-weight="700" font-size="11">Clive Chan (ex-OpenAI)</text>
+      </g>
+
+      <line x1="28" y1="210" x2="452" y2="210" stroke="#115e59" stroke-width="0.6"/>
+
+      <g transform="translate(28, 224)" font-family="system-ui,sans-serif" font-size="8" fill="#115e59">
+        <text x="0" y="0" font-weight="700" font-size="9" letter-spacing="1.4">HYPERSCALER IN-HOUSE SILICON</text>
+
+        <text x="0" y="16" font-weight="700">GOOGLE · TPU v7</text>
+        <rect x="128" y="10" width="220" height="6" fill="url(#hg)" stroke="#115e59" stroke-width="0.5"/>
+        <rect x="128" y="10" width="220" height="6" fill="#115e59" fill-opacity="0.28"/>
+        <text x="356" y="16" font-weight="700">SHIPPING</text>
+
+        <text x="0" y="30" font-weight="700">AWS · TRAINIUM 3</text>
+        <rect x="128" y="24" width="220" height="6" fill="url(#hg)" stroke="#115e59" stroke-width="0.5"/>
+        <rect x="128" y="24" width="220" height="6" fill="#115e59" fill-opacity="0.28"/>
+        <text x="356" y="30" font-weight="700">SHIPPING</text>
+
+        <text x="0" y="44" font-weight="700">META · MTIA v3</text>
+        <rect x="128" y="38" width="220" height="6" fill="url(#hg)" stroke="#115e59" stroke-width="0.5"/>
+        <rect x="128" y="38" width="188" height="6" fill="#115e59" fill-opacity="0.28"/>
+        <text x="356" y="44" font-weight="700">RAMP</text>
+
+        <text x="0" y="58" font-weight="700">MICROSOFT · MAIA 200</text>
+        <rect x="128" y="52" width="220" height="6" fill="url(#hg)" stroke="#115e59" stroke-width="0.5"/>
+        <rect x="128" y="52" width="176" height="6" fill="#115e59" fill-opacity="0.28"/>
+        <text x="356" y="58" font-weight="700">RAMP</text>
+
+        <text x="0" y="72" font-weight="700">OPENAI · JALAPEÑO</text>
+        <rect x="128" y="66" width="220" height="6" fill="url(#hg)" stroke="#115e59" stroke-width="0.5"/>
+        <rect x="128" y="66" width="120" height="6" fill="#115e59" fill-opacity="0.28"/>
+        <text x="356" y="72" font-weight="700">UNVEILED</text>
+
+        <text x="0" y="86" font-weight="700">ANTHROPIC · TBD</text>
+        <rect x="128" y="80" width="220" height="6" fill="url(#hg)" stroke="#115e59" stroke-width="0.5"/>
+        <rect x="128" y="80" width="28" height="6" fill="#115e59" fill-opacity="0.28"/>
+        <text x="356" y="86" font-weight="700">EARLY TALKS</text>
+      </g>
+
+      <g transform="translate(28, 320)" font-family="system-ui,sans-serif" font-weight="700" fill="#115e59">
+        <text x="0" y="0" font-size="7" letter-spacing="1.6" opacity="0.78">SOURCES · THE INFORMATION · BLOOMBERG · TECHCRUNCH · 2026-07-02</text>
+      </g>
+    </svg>
+  </div>
+  <div class="full-content">
+    <p>The Information broke it first on Thursday: Anthropic has begun early-stage design work on a custom AI accelerator and opened talks with Samsung Electronics about manufacturing it on Samsung Foundry's SF2 two-nanometer process, with Samsung's advanced packaging line as the second half of the ask. Bloomberg and TechCrunch confirmed the report within hours. The company is still deciding what the processor should do, how powerful it should be, and how it should sit inside a server, so nothing about the design is fixed. What is fixed is the intent: Anthropic wants to stop being the only frontier lab shipping product without its own silicon underneath.</p>
+
+    <p>Google runs Trillium and the TPU v7 for both training and inference. Amazon has Trainium 3 and Inferentia deployed at scale across AWS Bedrock. Meta ramped MTIA v3 through the first half of 2026 as the workhorse for ranking and open-model serving. Microsoft's MAIA 200 is inside Copilot production regions. OpenAI unveiled its first Broadcom-designed inference chip, codenamed Jalapeño, in June. Every frontier hyperscaler except Anthropic was already on its own silicon roadmap. Thursday's report closes that gap on paper.</p>
+
+    <blockquote class="pull-quote">Anthropic has begun early-stage work on a custom AI chip and held talks with Samsung Electronics as a potential manufacturing partner.<cite>— The Information, 2026-07-02</cite></blockquote>
+
+    <h4>The Samsung angle matters more than the chip</h4>
+    <p>Samsung Foundry has been fighting to keep leading-edge customers since TSMC pulled ahead on N2. SF2 is Samsung's second-generation gate-all-around node and the process the company is betting its foundry business on. Anthropic joining Samsung on SF2 would put the process alongside a customer with defensible frontier-model workloads, which is the piece Samsung's pitch to Qualcomm, Nvidia and OpenAI has been missing. The Information notes Anthropic is also considering Samsung's advanced packaging facilities. SAINT, Samsung's 3D stacking family, is the plausible target, aligning with how OpenAI's Jalapeño uses Broadcom-designed compute stacked on HBM4.</p>
+
+    <p>The Samsung Electronics stock is up on the report in Seoul. Analysts on the report attribute the move to the strategic signal, not the immediate dollar value: the design contract itself may end up small, but Samsung being publicly named as Anthropic's foundry partner reads across the whole SF2 pipeline. Amazon's continuing $8 billion equity commitment in Anthropic already routes the frontier lab's training workloads through Trainium, and the Google Cloud deal that closed in May pipes additional capacity through TPU v7. Anthropic's public compute story has been that it is the only frontier lab with contracted access to all three major accelerator families, an argument the Amazon-Google-Nvidia access story was built around. A custom Anthropic chip is the argument that the lab has now graduated from renting silicon strategies to owning one.</p>
+
+    <blockquote class="pull-quote">Anthropic's plans are at an early stage and the company is still determining what the processor should do, how powerful it should be and how it would fit into a server.<cite>— The Information, paraphrased by TechCrunch, 2026-07-02</cite></blockquote>
+
+    <h4>Clive Chan and the hiring signal</h4>
+    <p>Anthropic recently brought on Clive Chan, an early member of OpenAI's own custom-chip team. Chan's OpenAI work fed into the Jalapeño design cycle with Broadcom, so the hire imports both the technical and organisational muscle Anthropic did not previously have. Bloomberg reports the company has been hiring silicon engineers, packaging specialists and RTL leads through the second quarter, though headcount inside the effort remains small. A serious frontier accelerator programme typically runs three to five years from first design freeze to production silicon. Anthropic is still in the definition phase, so first tape-out would not be expected before 2028 at the earliest.</p>
+
+    <blockquote class="pull-quote">The project is still nascent, no detailed design or manufacturing work has begun, and the company may not proceed.<cite>— The Information, 2026-07-02</cite></blockquote>
+
+    <h4>What this means for the "sovereign silicon" argument</h4>
+    <p>Wednesday's Meituan LongCat 2.0 open-source release, which trained end to end on a 50,000-card domestic Chinese ASIC cluster, is the strategic backdrop against which Anthropic's Samsung talks read. Beijing has demonstrated a national-scale AI supply chain independent of Nvidia. Europe has been asking Brussels to "pursue the strategic establishment of Anthropic" inside the EU. The US frontier labs need to show they can operate on non-Nvidia silicon too, both to reduce cost-of-serve and to answer the sovereignty pressure explicitly. Samsung's SF2 line runs in South Korea, which places Anthropic's silicon supply chain outside the direct Taiwan-Strait exposure that TSMC's N2 introduces. The strategic geography of the deal is at least as important as its technical content.</p>
+
+    <p>The catch is that Anthropic may not proceed. All three sources emphasise the design is unspecified, the volume commitments are absent, and the deal is preliminary. The company is publicly leaving the door open to walking away. But even the fact that the news is public reshapes the pricing conversation with Nvidia, Google Cloud and AWS. A frontier-lab customer walking around with a plausible in-house silicon story on paper is a stronger negotiator on the next commitment cycle. That is the near-term operational effect of the Samsung report, whether or not tape-out ever happens.</p>
+
+    <p class="source-footer"><a href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/" target="_blank" rel="noopener">Read source →</a></p>
+  </div>
+</summary>
+</details>
+
+<section class="big-picture" aria-label="Big Picture">
+  <div class="label">Big Picture</div>
+  <div>
+    <p>Thursday was the day the enterprise-AI-deployment build-out and the frontier silicon story cross-pollinated. Anthropic opened early-stage design talks with Samsung Electronics for a custom AI accelerator on Samsung Foundry's SF2 two-nanometer process, joining every other frontier hyperscaler with in-house silicon on the roadmap. Microsoft committed $2.5 billion and 6,000 engineers to a new Frontier Company under Rodrigo Kede Lima, embedding solution architects, deployment engineers, trainers and strategists inside client organisations on six-to-twelve-month engagements, matching Amazon's $1 billion Forward Deployed Engineering unit unveiled two days earlier and answering the Anthropic and OpenAI joint ventures set up in May. Anthropic completed the global redeployment of Claude Fable 5 after Commerce Secretary Howard Lutnick's June 30 letter withdrew the June 12 export-control order; Mythos 5 stays limited to a set of approved US organisations through Project Glasswing.</p>
+    <p>Meta shares closed up 9 percent on CNBC's confirmation that the company will sell excess AI compute through a new cloud business modelled on AWS Bedrock, with JPMorgan estimating $20 billion in potential annual revenue per gigawatt of external capacity against Meta's 2026 AI capex guide of $125 to $145 billion. Mark Zuckerberg told an internal town hall the same day that agentic development at Meta "hasn't really accelerated in the way that we expected" over the last four months, and that the May reorganisation that cut 10 percent of the workforce and reassigned roughly 7,000 employees to AI teams was not as clean as it could have been. Together AI closed an $800 million Series C at an $8.3 billion post-money led by Aramco Ventures, running $1.15 billion in annual bookings. Crusoe is in active talks to raise roughly $3 billion at a $30 billion valuation, sitting on 4.9 gigawatts of contracted power and a 40-gigawatt pipeline. TwelveLabs took $100 million Series B co-led by NEA and NAVER Ventures at $207 million total raised. Oxmiq Labs pulled $35 million Series A under Raja Koduri to collapse GPU, CPU and TPU into a single open-source silicon architecture.</p>
+    <p>Cognition shipped Devin Security Swarm at $90 per run, finding 36 out of 50 published GHSA vulnerabilities on the benchmark and three criticals no other tool caught, at 30 percent lower cost per finding than the next most accurate alternative. Claude Code 2.1.198 landed Claude in Chrome as generally available, background agents that commit, push and open draft pull requests when finishing code work, an agent_needs_input notification hook, and a new /dataviz skill for chart and dashboard design. NVIDIA released Nemotron-Labs-TwoTower at 98.7 percent quality and 2.42x generation throughput with diffusion-based decoding, and Generative Pretrained Controllers trained on 600 hours of motion data at 99.98 percent success reproducing motion clips with emergent recovery behaviours the training set did not include. xAI shipped a Grok Voice Agent Builder at $0.05 per minute. Tesla capped employee third-party AI spend at $200 per week starting July 6, while raising 2026 capex above $25 billion, exempting xAI beta products from the limit.</p>
+    <p>Hugging Face Daily Papers put Johns Hopkins' PerceptionRubrics at the top with 33 upvotes, ahead of Microsoft Research's ELDR expert-locality-aware decode routing for disaggregated MoE serving and Tsinghua's TurboServe streaming video generation stack, both at 19. MemSyco-Bench formalised sycophancy in agent memory as a benchmarking target. ggml-org tagged llama.cpp b9860 with a new llama_ftype_name() C API on top of b9857's Hexagon flash-attention rework and b9852's Q1_0 OpenCL support for Adreno. Anthropic proposed an industry-wide jailbreak-severity scoring framework alongside Amazon, Microsoft and Google, in the same week the Center for AI Safety and Scale AI Labs reported Fable 5 hitting 16.1 percent on the Remote Labor Index across 240 real deliverables in 23 domains. Cognition, Snorkel AI and Devin's team together shipped Senior SWE-Bench for measuring realistically under-specified long-horizon software work, closing a gap in the coding-agent leaderboard. UBTECH's UWORLD U1 humanoid orders passed 13,361 units against the Shenzhen launch, with the emotion-model-driven long-term-memory version being pushed to 100 donated units for structured psychological support.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg width="80" height="18" viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="9" r="3" fill="#115e59"/>
+    <line x1="16" y1="9" x2="36" y2="9" stroke="#115e59" stroke-width="1"/>
+    <path d="M41 3 L46 9 L41 15 L36 9 Z" fill="none" stroke="#115e59" stroke-width="1.4"/>
+    <line x1="46" y1="9" x2="66" y2="9" stroke="#115e59" stroke-width="1"/>
+    <circle cx="70" cy="9" r="3" fill="none" stroke="#115e59" stroke-width="1.4"/>
+  </svg>
+</div>
+
+<section class="cards" aria-label="More today">
+  <div class="section-head">
+    <h2>More Today</h2>
+    <span class="count">25 stories · 2026-07-02</span>
+  </div>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#115e59" stroke-width="1" fill="none">
+      <rect x="12" y="14" width="96" height="46" rx="2"/>
+    </g>
+    <g fill="#115e59">
+      <circle cx="24" cy="30" r="2.2"/><circle cx="34" cy="30" r="2.2"/><circle cx="44" cy="30" r="2.2"/><circle cx="54" cy="30" r="2.2"/><circle cx="64" cy="30" r="2.2"/><circle cx="74" cy="30" r="2.2"/><circle cx="84" cy="30" r="2.2"/><circle cx="94" cy="30" r="2.2"/>
+      <circle cx="24" cy="42" r="2.2"/><circle cx="34" cy="42" r="2.2"/><circle cx="44" cy="42" r="2.2"/><circle cx="54" cy="42" r="2.2"/><circle cx="64" cy="42" r="2.2"/><circle cx="74" cy="42" r="2.2"/>
+    </g>
+    <text x="14" y="76" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#115e59">$2.5B · 6,000 FTE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Microsoft launches $2.5 billion Frontier Company to embed 6,000 engineers inside enterprise clients</h3>
+    <p class="kicker">CNBC · TechCrunch · The Decoder · 2026-07-02 · <a href="https://www.cnbc.com/2026/07/02/microsoft-commits-2point5-billion-6000-employees-ai-implementation-unit.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Rodrigo Kede Lima, most recently president of Microsoft Asia, runs a new field organisation of 2,000 solution architects, 1,800 deployment engineers, 1,200 trainers and 1,000 strategists. Engagements run six to twelve months with Microsoft personnel operating as virtual employees of the customer.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Microsoft announced The Microsoft Frontier Company on Thursday, a $2.5 billion investment to stand up a 6,000-person embedded engineering organisation whose whole job is co-designing, deploying and operating enterprise AI systems inside customer teams. Rodrigo Kede Lima, most recently president of Microsoft Asia and a long-time enterprise sales leader, will run it. The workforce breaks down as 2,000 solution architects, 1,800 deployment engineers, 1,200 trainers, and 1,000 strategists. All 6,000 go through a six-week AI induction before deployment.</p>
+
+  <p>Standard engagements run six to twelve months, unlike a Microsoft field engagement, which typically peaks at weeks. During that period Frontier Company personnel operate as virtual employees of the customer, with mandates to co-innovate, deploy and continuously improve AI systems tied to measurable business outcomes. Kede Lima's team sits above Microsoft's existing partner ecosystem and works alongside, not through, integrator partners on complex client accounts.</p>
+
+  <blockquote class="pull-quote">Co-design, co-innovate, deploy and continuously improve AI systems at scale based on measurable business outcomes.<cite>— Microsoft, Frontier Company charter, 2026-07-02</cite></blockquote>
+
+  <h4>The 48-hour hyperscaler arms race</h4>
+  <p>Amazon Web Services committed $1 billion two days earlier to its own in-house Forward Deployed Engineering organisation under Francessca Vasquez. OpenAI and Anthropic stood up equivalent joint ventures in May, Anthropic's backed by Goldman Sachs, Blackstone and Hellman &amp; Friedman in a $1.5 billion deal, OpenAI's with a $4 billion private-equity partner. Microsoft is the largest commitment yet by roughly 2.5 times AWS. The move restructures the enterprise-AI channel in real time. What used to be Accenture, Deloitte and Bain revenue is being pulled inside the frontier labs and hyperscalers, on the argument that the models change too fast for a traditional consulting fee schedule and the outcomes are too hard to specify in a fixed-scope statement of work.</p>
+
+  <blockquote class="pull-quote">Microsoft drops $2.5 billion on a 6,000-person army to conquer enterprise AI deployment.<cite>— Windows News headline, 2026-07-02</cite></blockquote>
+
+  <h4>Why now</h4>
+  <p>Frontier Company is Microsoft's answer to the customer complaint that landed in Satya Nadella's inbox through the second quarter: enterprise customers said they were paying for Azure AI credits they could not deploy against production workloads inside their own compliance perimeter. Kede Lima's charter targets that gap directly. Every embedded engineer is authorised to reach back into Microsoft Research, the Azure AI product organisation, and the sales organisation without a change-request queue. Standard six-to-twelve-month engagements imply the model expects to deliver a running production system before rotating off, not a design document. GeekWire framed the move as Microsoft doing to consulting what AWS did to enterprise software fifteen years ago, on a compressed timeline.</p>
+
+  <p class="source-footer"><a href="https://www.cnbc.com/2026/07/02/microsoft-commits-2point5-billion-6000-employees-ai-implementation-unit.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech policy">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#115e59" stroke-width="1.2" fill="none">
+      <circle cx="34" cy="40" r="18"/>
+      <circle cx="86" cy="40" r="18"/>
+      <path d="M52 40 L68 40" stroke-dasharray="2 2"/>
+    </g>
+    <text x="34" y="43" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#115e59" text-anchor="middle">FABLE 5</text>
+    <text x="86" y="43" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#115e59" text-anchor="middle">MYTHOS 5</text>
+    <text x="34" y="70" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">GLOBAL</text>
+    <text x="86" y="70" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">GLASSWING ONLY</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-policy">Policy</span></div>
+    <h3 class="headline">Anthropic completes Fable 5 global redeployment; Mythos 5 stays limited to approved US orgs</h3>
+    <p class="kicker">VentureBeat · MacDailyNews · Al Jazeera · 2026-07-02 · <a href="https://venturebeat.com/technology/anthropic-is-bringing-back-claude-fable-5-globally-after-us-lifts-export-control-order-where-can-enterprises-access-it" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The Fable 5 restoration follows Commerce Secretary Howard Lutnick's June 30 withdrawal of the June 12 export-control order. Fable 5 will count against up to 50 percent of weekly usage limits through July 7 for Pro, Max, Team and selected enterprise plans. Mythos 5 stays gated behind Project Glasswing trusted-access channels.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic finished redeploying Claude Fable 5 to global availability on Thursday, closing the arc that opened when a US government export-control order pulled the model offline on June 12 at 5:21 PM ET. Commerce Secretary Howard Lutnick's June 30 letter withdrew the June 12 licensing requirement for both Fable and Mythos, though the letter kept Mythos 5 under case-by-case export licensing for non-approved jurisdictions. VentureBeat reported that enterprise plans got Fable 5 back first, with consumer Pro and Max subscribers following through Wednesday and Thursday. Australian access came back through the AEDT timezone rollover.</p>
+
+  <p>Fable 5 will count against up to 50 percent of weekly usage limits through July 7 for Pro, Max, Team and selected enterprise plans, phasing into the standard entitlement mix afterwards. Anthropic said the model's classifier safeguards have been updated since the June 12 shutdown, and the jailbreak-severity scoring framework proposed with Amazon, Microsoft and Google (see separate story) reads as the first public product of that update cycle.</p>
+
+  <blockquote class="pull-quote">We're grateful to our users for their patience, and to everyone who worked with us on redeploying the models.<cite>— Anthropic statement, via Al Jazeera 2026-07-01</cite></blockquote>
+
+  <h4>The Mythos exception</h4>
+  <p>Mythos 5 remains restricted. The Australian Computer Society's Information Age reported that Australia regains Fable but not Mythos, with the more capable model staying inside Anthropic's Project Glasswing trusted-access programme for a set of approved US organisations. That set includes US federal agencies operating under specific authorisations, a small number of frontier-model safety-research partners, and the previously-disclosed Palantir Maven pipeline. The two-tier posture matches what Anthropic proposed to Commerce during the June negotiations: Fable global under standard commercial terms, Mythos restricted, with an audited transition path from Fable to Mythos for approved customers.</p>
+
+  <blockquote class="pull-quote">The government likely realised it had overreacted and feared establishing a problematic regulatory precedent.<cite>— Francesco Bailo, University of Sydney, to Al Jazeera, 2026-07-01</cite></blockquote>
+
+  <h4>What the market read</h4>
+  <p>Anthropic's enterprise pipeline was substantially frozen through the three-week export-control window. Customers had signed statements of work assuming Fable 5 capability and could not deploy against them. The redeployment unfreezes that pipeline and lets the Sonnet 5 default flip at claude.ai carry a Fable 5 escalation path for the tasks Sonnet 5 cannot handle. The MacDailyNews framing was that Anthropic emerged with more capability, tighter guardrails, and a rebooted relationship with US regulators. Tanishq Abraham of Sophont raised the harder question in Al Jazeera coverage: how much of this cycle sets precedent for how frontier labs interact with government going forward.</p>
+
+  <p class="source-footer"><a href="https://venturebeat.com/technology/anthropic-is-bringing-back-claude-fable-5-globally-after-us-lifts-export-control-order-where-can-enterprises-access-it" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <path d="M12 60 Q30 22 48 50 T90 30 T110 26" stroke-width="1.4"/>
+      <line x1="12" y1="66" x2="110" y2="66" stroke-dasharray="2 2"/>
+    </g>
+    <g fill="#115e59">
+      <circle cx="110" cy="26" r="2.8"/>
+      <text x="14" y="18" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1">META CLOUD · WALL ST +9%</text>
+      <text x="14" y="76" font-family="Georgia,serif" font-size="10" font-weight="700">$20B / GW · JPM</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Meta pops 9% on plans to sell excess AI compute through new cloud business</h3>
+    <p class="kicker">CNBC · Forbes · Cloud Computing News · 2026-07-02 · <a href="https://www.cnbc.com/2026/07/02/metas-push-into-cloud-excites-wall-street-despite-lower-margins.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Meta will compete with AWS, Azure, Google Cloud and CoreWeave for external AI compute. The company is weighing hosted access to Muse Spark models in an AWS Bedrock-style layer alongside raw capacity. JPMorgan estimates every gigawatt of external capacity could generate $20 billion in annual revenue.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Meta shares closed up nearly 9 percent on Wednesday and held the move through Thursday's session after CNBC and Forbes confirmed the company will stand up a cloud business selling excess AI compute to external customers. The move directly targets the biggest overhang on the Meta stock: whether the $125 to $145 billion 2026 AI capex guide can produce a return on capital before the depreciation catches up. External compute sales are the argument that the capex is dual-use.</p>
+
+  <p>Two product shapes are on the table internally. One sells raw computing capacity, storage and networking, competing directly with AWS EC2, Azure VMs, Google Cloud and CoreWeave for the neocloud tier. The other sells hosted access to AI models, including Meta's Muse Spark family, in a managed layer explicitly modelled on AWS Bedrock. CNBC reported both are being scoped in parallel, with the Bedrock-style layer viewed internally as the higher-margin second phase.</p>
+
+  <blockquote class="pull-quote">Meta's plan to launch a cloud business eases the biggest overhang on the stock.<cite>— CNBC headline, 2026-07-01</cite></blockquote>
+
+  <blockquote class="pull-quote">Jim Cramer says Meta is entering AI's most lucrative game. JPMorgan thinks it could be a $20 billion business.<cite>— Benzinga, 2026-07-02</cite></blockquote>
+
+  <h4>The $20B-per-gigawatt claim</h4>
+  <p>JPMorgan's estimate that every gigawatt of external AI capacity could generate roughly $20 billion in annual revenue is the number that moved the stock. The math anchors on published AWS Bedrock and Azure OpenAI Service ARPU per H100-equivalent hour, back-solved through Meta's disclosed data-center power roadmap. Meta's 2026 disclosed capacity build sits above 8 gigawatts across active and near-term-online sites. If even 20 percent of that gets exposed externally on the JPMorgan math, the business hits meaningful scale by 2028. FourWeekMBA compared the pattern to AWS in 2006, with the caveat that Meta's public infrastructure story lacks a decade of enterprise trust.</p>
+
+  <p>The internal Meta debate is about margin structure. Selling raw capacity dilutes gross margin against consumer advertising, which is what CNBC's follow-up piece on Thursday morning framed as the reason Wall Street will need to accept lower blended margins for the higher revenue profile. Zuckerberg's town hall the same day (see separate story) was the counterpoint: the company acknowledged the agentic-AI roadmap has slipped, so the cloud pivot lands as insurance revenue against a longer path to consumer AI monetisation.</p>
+
+  <p class="source-footer"><a href="https://www.cnbc.com/2026/07/02/metas-push-into-cloud-excites-wall-street-despite-lower-margins.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="trend application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <path d="M12 40 L108 40" stroke-dasharray="3 3"/>
+      <path d="M12 60 L30 58 L46 55 L64 52 L82 50 L108 50" stroke-width="1.4"/>
+      <path d="M12 30 L30 25 L46 22 L64 20 L82 18 L108 18" stroke-width="1.4" opacity="0.4"/>
+    </g>
+    <text x="14" y="18" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">EXPECTED</text>
+    <text x="14" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">ACTUAL · -4 MO</text>
+    <text x="14" y="78" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#115e59">10% CUT · 7,000 REASSIGNED</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-trend">Trend</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Zuckerberg tells Meta town hall agentic development "hasn't accelerated in the way we expected"</h3>
+    <p class="kicker">Reuters · Yahoo Finance · 2026-07-02 · <a href="https://finance.yahoo.com/technology/ai/articles/exclusive-zuckerberg-says-ai-agent-201123441.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Reuters obtained the town-hall recording. Zuckerberg said Meta's bets on the new AI structure "haven't come to fruition yet" and admitted the May reorganisation that cut 10 percent of the global workforce and reassigned about 7,000 employees to AI teams was not as "clean" as it could have been.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Reuters obtained a recording of Mark Zuckerberg's Thursday internal town hall and reported his direct admission that Meta's agentic AI development has slipped. His exact framing: "the trajectory of the agentic development over at least the last four months hasn't really accelerated in the way that we expected." Zuckerberg went further and said the company's bets on the new organisational structure around agents "haven't come to fruition yet." The bets he was referring to were the May reorganisation that cut roughly 10 percent of Meta's global workforce and reassigned about 7,000 employees to newly-created AI teams inside a consolidated Superintelligence Labs and Applied AI organisation.</p>
+
+  <p>Zuckerberg admitted the reorganisation "wasn't as clean" as it could have been and that executives had miscalculated on the timing of the changes. That is a rare public concession from Meta's founder, and it lands the same day the company's stock closed up 9 percent on the cloud pivot. The two stories are the same story: Meta is monetising infrastructure earlier because the consumer-facing agent story is a quarter to two quarters behind schedule.</p>
+
+  <blockquote class="pull-quote">The trajectory of the agentic development over at least the last four months hasn't really accelerated in the way that we expected.<cite>— Mark Zuckerberg, Meta town hall, 2026-07-02</cite></blockquote>
+
+  <blockquote class="pull-quote">The bets we made on this new structure haven't come to fruition yet.<cite>— Mark Zuckerberg, Meta town hall, 2026-07-02</cite></blockquote>
+
+  <h4>The morale angle</h4>
+  <p>Reuters's original report and follow-up pieces at Yahoo Finance and DQIndia framed the town hall as a partial acknowledgement of the pushback inside Applied AI over the reassignment of experienced engineers into data-labelling roles for post-training pipelines. Thousands of those reassigned engineers had been on product teams and had joined Meta on product-track contracts. The revolt at Applied AI, as The Next Web called it, is what forced Zuckerberg to acknowledge the reorganisation was uneven. AWS's Amazon and Microsoft's Frontier Company launches this week put additional pressure on Meta by pulling talent toward those employers with clearer enterprise mandates.</p>
+
+  <p class="source-footer"><a href="https://finance.yahoo.com/technology/ai/articles/exclusive-zuckerberg-says-ai-agent-201123441.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#115e59">
+      <text x="60" y="34" font-family="Georgia,serif" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="-0.02em">$800M</text>
+      <text x="60" y="48" font-family="system-ui,sans-serif" font-size="7" font-weight="700" text-anchor="middle" letter-spacing="1">SERIES C · $8.3B POST</text>
+    </g>
+    <line x1="20" y1="56" x2="100" y2="56" stroke="#115e59" stroke-width="0.6"/>
+    <text x="60" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="1">ARAMCO LED · $1.15B ARR</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Together AI closes $800 million Series C at $8.3 billion post-money led by Aramco Ventures</h3>
+    <p class="kicker">Business Wire · TechCrunch · 2026-07-02 · <a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Vista Equity Partners, General Catalyst, Emergence, Nvidia, Salesforce Ventures, March Capital, Pegatron VC and SentinelOne joined. Bookings sit at $1.15 billion annualised. The valuation is up from about $3.3 billion at the January 2025 Series B.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Together AI closed an $800 million Series C at an $8.3 billion post-money valuation on Wednesday. Aramco Ventures led. The syndicate list is unusual: Vista Equity Partners, General Catalyst, Emergence, Nvidia, Salesforce Ventures, March Capital, Pegatron VC and SentinelOne all joined. Aramco leading a US neocloud round signals a Middle Eastern sovereign posture on AI infrastructure that reads across to the parallel Crusoe talks (see separate story). Bookings at close: $1.15 billion annualised.</p>
+
+  <p>Together AI operates a cloud platform for training and running open-source AI models. The pitch is that enterprise customers do not want to sit inside a hyperscaler's proprietary API surface and pay the frontier lab a premium for a model they cannot customise. Together lets a customer fine-tune Llama, Qwen, DeepSeek or the newly-open Meituan LongCat 2.0 on the customer's own dataset, serve it at scale on Together's clusters, and route through a hyperscaler only for last-mile deployment.</p>
+
+  <blockquote class="pull-quote">AI's future lies in enabling millions of developers and businesses, not just a few big cloud vendors.<cite>— Vipul Ved Prakash, CEO, Together AI</cite></blockquote>
+
+  <h4>Why the number matters</h4>
+  <p>Together's $8.3 billion post-money puts the company at 7.2x forward ARR at close. That is compressed against the frontier-lab peer group (Anthropic and OpenAI both trade above 20x on secondary) but sits on top of a clean bookings ramp and a model-agnostic thesis that hedges against any single frontier lab winning the customer relationship. The Series C proceeds are earmarked for expanded GB300 capacity and next-generation open-model serving stacks. Nvidia joining the round formalises the vendor-customer capacity commitment Together has been running through the second quarter.</p>
+
+  <p class="source-footer"><a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#115e59">
+      <text x="60" y="30" font-family="Georgia,serif" font-size="18" font-weight="700" text-anchor="middle">~$3B</text>
+      <text x="60" y="42" font-family="system-ui,sans-serif" font-size="6" font-weight="700" text-anchor="middle" letter-spacing="1">AT ~$30B VALUATION</text>
+    </g>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <rect x="18" y="50" width="18" height="18"/>
+      <rect x="40" y="50" width="18" height="18"/>
+      <rect x="62" y="50" width="18" height="18"/>
+      <rect x="84" y="50" width="18" height="18"/>
+    </g>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.8">4.9 GW CONTRACTED · 40 GW PIPELINE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Crusoe in active talks for ~$3 billion round at ~$30 billion valuation</h3>
+    <p class="kicker">Bloomberg · Techmeme · Yahoo Finance · 2026-07-02 · <a href="https://finance.yahoo.com/technology/ai/articles/crusoe-talks-raise-3-billion-215816435.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Bloomberg reported Crusoe is in active talks for a fresh round expected to price around a $30 billion post-money. The neocloud sits on 4.9 gigawatts of contracted compute power and more than 40 gigawatts in the total project pipeline, three years after pivoting from a cryptocurrency business.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Bloomberg reported Thursday that Crusoe is in active talks to raise approximately $3 billion in a fresh round expected to value the AI-infrastructure company in the $30 billion range. The pricing is not yet final. That puts Crusoe at 3x its Series E post-money from the second half of 2025, which had capped at more than $10 billion after a $1.375 billion raise. The Series E investor set included Founders Fund and Fidelity; the new round's likely composition has not been reported, but the size and pace suggest existing investors extending on top of a sovereign or PIF-style anchor.</p>
+
+  <p>The operational number underneath the valuation is 4.9 gigawatts of contracted power and more than 40 gigawatts in the total project pipeline. Those numbers are what push Crusoe's valuation past most public data-center REITs on a per-megawatt basis. Crusoe originated as a cryptocurrency infrastructure business in 2018, pivoted to AI compute during the 2024 buildout cycle, and reclassified as a "neocloud" in 2025. The company is now the second-largest US neocloud by contracted capacity behind CoreWeave.</p>
+
+  <blockquote class="pull-quote">Crusoe is in active talks to raise ~$3B in a funding round expected to value the company in the ~$30B range.<cite>— Bloomberg via Techmeme, 2026-07-02</cite></blockquote>
+
+  <h4>The pipeline arithmetic</h4>
+  <p>4.9 gigawatts contracted supports a run-rate somewhere in the range of $4 to $8 billion in annualised gross revenue, depending on utilisation and pricing. The 40-gigawatt pipeline is aspirational and dependent on power siting, interconnection queue position and financing execution. Crusoe's earlier deals have leaned on stranded-flare gas and grid-adjacent renewables to price under standard hyperscaler energy inputs. The new round proceeds will accelerate site development and back a wider set of GB300 and Rubin platform purchases against forward customer contracts.</p>
+
+  <p class="source-footer"><a href="https://finance.yahoo.com/technology/ai/articles/crusoe-talks-raise-3-billion-215816435.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1.2">
+      <circle cx="30" cy="40" r="6"/>
+      <circle cx="55" cy="40" r="6"/>
+      <circle cx="80" cy="40" r="6"/>
+      <line x1="36" y1="40" x2="49" y2="40"/>
+      <line x1="61" y1="40" x2="74" y2="40"/>
+      <path d="M86 40 L100 20 L100 60 Z" fill="#115e59" opacity="0.15"/>
+    </g>
+    <text x="14" y="18" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">DEVIN SECURITY SWARM</text>
+    <text x="14" y="72" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#115e59">36 / 50 · $90 / RUN</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Cognition ships Devin Security Swarm; finds 36 of 50 GHSA vulns at $90 per run</h3>
+    <p class="kicker">Cognition · PRNewswire · Devin.ai blog · 2026-07-02 · <a href="https://cognition.com/blog/introducing-devin-security-swarm" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The Agentic MapReduce architecture distributes exploitability validation across parallel bounded-shard agents. Three critical vulnerabilities were found only by Devin. Cost per finding is 30 percent lower than the next most accurate alternative. Available globally to enterprise customers today.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Cognition launched Devin Security Swarm on Thursday. The system uses what Cognition calls an Agentic MapReduce architecture: parallel bounded-shard agents scan a large codebase for vulnerability patterns, validate exploitability at runtime inside a sandbox, and open remediation pull requests when the fix is defensible without human judgement. Cost is $90 per full-codebase run. On a benchmark of 50 real-world vulnerabilities tied to published GitHub Security Advisories across 14 languages, Devin Security Swarm found 36, more than any other AI-powered scanner tested. Three of those critical findings were exclusive to Devin and missed by every other tool in the benchmark.</p>
+
+  <p>The context Cognition cites: monthly security findings across a typical enterprise codebase have climbed from about 1,000 to more than 10,000 over the last six months, driven in part by the 42 percent of code that is now AI-generated or AI-assisted. AI agents write faster than security teams review. The Swarm is the argument that agents should review as fast as they write.</p>
+
+  <blockquote class="pull-quote">Devin Security Swarm found 36 of 50 vulnerabilities across 14 languages at 30 percent lower cost per finding than the next most accurate alternative.<cite>— Cognition, launch blog, 2026-07-02</cite></blockquote>
+
+  <blockquote class="pull-quote">Three critical vulnerabilities were found exclusively by Devin and missed by every other tool tested.<cite>— Cognition, launch blog, 2026-07-02</cite></blockquote>
+
+  <h4>The Six-Week Security Program</h4>
+  <p>Cognition also stood up the Devin Security Program: a six-week structured engagement to assess an organisation's application security posture, clear its existing vulnerability backlog, and leave an agent running against the codebase for continuous discovery. That is the same shape as the Microsoft Frontier Company (see separate story) and the AWS FDE unit: an outcome-priced, time-bounded engagement that leaves a running system inside the customer's perimeter. Cognition is smaller, cheaper, and more focused, and the Devin brand recognition inside developer teams gives it a channel the hyperscaler consulting arms do not have.</p>
+
+  <p class="source-footer"><a href="https://cognition.com/blog/introducing-devin-security-swarm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#115e59">
+      <text x="18" y="30" font-family="Georgia,serif" font-size="18" font-weight="700">$1B</text>
+      <text x="18" y="46" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1">AWS FDE ORG</text>
+    </g>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <circle cx="86" cy="40" r="24"/>
+    </g>
+    <g fill="#115e59">
+      <text x="86" y="43" font-family="system-ui,sans-serif" font-size="6" font-weight="700" text-anchor="middle" letter-spacing="0.4">6 LAUNCH</text>
+      <text x="86" y="72" font-family="Georgia,serif" font-size="7" font-weight="700" text-anchor="middle">VASQUEZ</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">AWS confirms $1 billion Forward Deployed Engineering unit under Francessca Vasquez</h3>
+    <p class="kicker">AboutAmazon · The Information · 2026-07-02 · <a href="https://www.aboutamazon.com/news/aws" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Amazon Web Services formally stood up its Forward Deployed Engineering organisation Wednesday. The launch cohort names Allen Institute, Cox Automotive, NBA, NFL, Ricoh and Southwest. The unit embeds frontier AI engineers directly inside customer teams to build production agentic systems, matching the Anthropic and OpenAI joint ventures from May.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Amazon Web Services confirmed the $1 billion in-house Forward Deployed Engineering organisation on Wednesday, with Francessca Vasquez as its founding leader. The launch cohort of six is Allen Institute, Cox Automotive, NBA, NFL, Ricoh and Southwest Airlines. The unit's charter is to embed frontier AI engineers inside customer teams to co-build agentic production systems, an operating model that reads as the AWS-native answer to the Palantir Forward Deployed Engineer role.</p>
+
+  <p>AWS is the third major forward-deployed launch in eight weeks. Anthropic stood up its equivalent joint venture in May with Goldman Sachs, Blackstone and Hellman &amp; Friedman inside a $1.5 billion vehicle. OpenAI's $4 billion FDE joint venture with a private-equity backer followed within days. Microsoft's Frontier Company (see separate story) landed Thursday at $2.5 billion. All four operating models compete for the same enterprise-AI-deployment budget, and the collective commitment is now above $9 billion in twelve months.</p>
+
+  <blockquote class="pull-quote">AWS is putting $1 billion behind a new organisation of frontier engineers embedded directly inside enterprise customers.<cite>— AWS launch materials, 2026-07-01</cite></blockquote>
+
+  <h4>Why AWS did not use partners</h4>
+  <p>Amazon has traditionally leaned on the AWS Partner Network for enterprise deployments. Standing up an in-house FDE unit signals AWS believes the partner network cannot move fast enough on frontier-model integrations. The launch cohort telegraphs the target market. Cox Automotive and Southwest are legacy-enterprise decarbonisation-and-modernisation accounts. NBA and NFL are content-and-fan-experience accounts. Ricoh is Japan-manufacturing-with-heavy-integration. Allen Institute is the science partnership. The mix is a bet AWS wants to be seen deploying against every enterprise segment at once, not consolidating on one vertical.</p>
+
+  <p class="source-footer"><a href="https://www.aboutamazon.com/news/aws" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#115e59" stroke-width="1" fill="none">
+      <rect x="10" y="12" width="100" height="22" rx="2"/>
+      <line x1="10" y1="18" x2="110" y2="18"/>
+      <circle cx="16" cy="15" r="1.2" fill="#115e59"/><circle cx="20" cy="15" r="1.2" fill="#115e59"/><circle cx="24" cy="15" r="1.2" fill="#115e59"/>
+    </g>
+    <text x="14" y="28" font-family="Courier,monospace" font-size="5" font-weight="700" fill="#115e59">/dataviz · agent commit &amp; push</text>
+    <text x="10" y="48" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">CLAUDE CODE 2.1.198 · JUL 02</text>
+    <text x="10" y="62" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#115e59">CHROME · GA</text>
+    <text x="10" y="76" font-family="system-ui,sans-serif" font-size="5" font-weight="600" fill="#115e59" letter-spacing="1" opacity="0.7">NOTIFICATION HOOK · agent_needs_input</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Claude Code 2.1.198 ships Chrome GA, PR-opening background agents, /dataviz and agent notification hooks</h3>
+    <p class="kicker">Anthropic release notes · Releasebot · 2026-07-02 · <a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Background agents now commit, push and open draft pull requests when finishing code work. A new Notification hook fires on agent_needs_input and agent_completed. Claude in Chrome goes generally available. The /dataviz skill for chart and dashboard design ships in the same tag.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Claude Code 2.1.198 tagged Thursday, roughly 18 hours after Wednesday's 2.1.197 default-model flip to Sonnet 5. The release makes Claude in Chrome generally available across all supported platforms, closes several reliability issues, and adds three product features that materially change how background agents behave.</p>
+
+  <p>The first is the git integration. Background agents now commit, push and open draft pull requests when they finish a code-writing task, without a user in the loop. That closes the last piece of the autonomous-coding workflow. Previously the agent finished the diff and stopped; the reviewer had to open the PR. In 2.1.198 the reviewer gets the PR in their queue when the diff is ready.</p>
+
+  <p>The second is the Notification hook, with two events: <code>agent_needs_input</code> and <code>agent_completed</code>. Both fire out to a user-configured endpoint, letting a background agent pause work and page a human operator through Slack, email or a custom webhook when it hits an ambiguity or when it lands the final result. That is the piece that lets long-running background agents run overnight without a human process babysitting them.</p>
+
+  <blockquote class="pull-quote">Background agents now commit, push, and open draft PRs when finishing code work.<cite>— Anthropic, Claude Code 2.1.198 release notes, 2026-07-02</cite></blockquote>
+
+  <blockquote class="pull-quote">Claude in Chrome is generally available.<cite>— Anthropic, Claude Code 2.1.198 release notes, 2026-07-02</cite></blockquote>
+
+  <h4>/dataviz and the skills expansion</h4>
+  <p>The third feature is the /dataviz skill: a preconfigured Claude Code skill for producing charts, dashboards and stat-tile UIs on demand inside a session. It builds on the "dataviz" skill Anthropic published for the main Claude.ai product earlier in June and imports the same colour-system-aware defaults, sequential-and-diverging palette validation, and legend and axis mark specs. The skill is designed to intercept any request to render a table with 4-plus rows or 3-plus columns and route to a styled HTML output instead of ASCII. This closes a common failure mode where agents produce plain-text tables that read poorly and disable the reviewer's ability to interrogate the data.</p>
+
+  <p>The bundle also fixed a mid-response retry regression that had appeared in 2.1.196 when the network drop landed inside a streamed tool call, and cleaned up several agents-view refresh issues introduced by the Sonnet 5 default. The 2.1.198 tag is the operational baseline enterprise customers were waiting for before rolling Sonnet 5 to team-wide default.</p>
+
+  <p class="source-footer"><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#115e59" stroke-width="1" fill="none">
+      <rect x="10" y="14" width="42" height="52" rx="2"/>
+      <rect x="68" y="14" width="42" height="52" rx="2"/>
+      <line x1="52" y1="40" x2="68" y2="40" stroke-dasharray="2 2"/>
+    </g>
+    <text x="31" y="30" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">CONTEXT</text>
+    <text x="31" y="52" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#115e59" text-anchor="middle">98.7%</text>
+    <text x="89" y="30" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">DENOISE</text>
+    <text x="89" y="52" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#115e59" text-anchor="middle">2.42×</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">NEMOTRON-LABS-TWOTOWER</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">NVIDIA drops Nemotron-Labs-TwoTower diffusion decoder at 98.7% quality and 2.42× throughput</h3>
+    <p class="kicker">NVIDIA AI blog · 2026-07-02 · <a href="https://blogs.nvidia.com/blog/nemotron-labs-twotower/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The architecture separates a context tower from a denoising tower, running diffusion-based decoding for long-horizon agent workflows. NVIDIA reports 98.7% of the reference model's quality at 2.42× generation throughput on standard reasoning benchmarks.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>NVIDIA released Nemotron-Labs-TwoTower on Thursday, a diffusion-based language model that separates a context encoder tower from a denoising decoder tower, letting the two run at different compute budgets. NVIDIA reports 98.7 percent of the reference autoregressive model's quality at 2.42x generation throughput. The result matters most for long-horizon agent workflows, where generation cost is the dominant serving line-item and marginal quality loss is tolerated in exchange for wall-clock latency.</p>
+
+  <p>TwoTower generalises the block-diffusion decoding work that has been climbing the Hugging Face daily-papers list through Q2, including BlockPilot's 4.20x speedup on Qwen3-4B (last week's top story) and the Multi-Block Diffusion work from SJTU. NVIDIA's contribution is the tower separation: context stays cached on GPU across decoding steps rather than being recomputed each pass. That is the piece that unlocks the throughput multiplier on real agent traces, not the single-token benchmark speed.</p>
+
+  <blockquote class="pull-quote">98.7 percent quality at 2.42x generation throughput.<cite>— NVIDIA, Nemotron-Labs-TwoTower model card, 2026-07-02</cite></blockquote>
+
+  <h4>Where TwoTower fits in the Nemotron line</h4>
+  <p>NVIDIA's Nemotron family now runs across three post-training stacks: Nemotron Nano and Super for edge and datacenter, Nemotron-Labs for research releases with looser production guarantees, and Nemotron-Q for quantised deployments. TwoTower is a Labs release, meaning NVIDIA is not committing to a specific enterprise SLA yet, but it is downloading the weights against a research license and inviting third-party benchmarking. The model card ships with reproducible eval harnesses on GSM8K, MATH, HumanEval, MMLU and the RewardBench 2.0 alignment suite.</p>
+
+  <p class="source-footer"><a href="https://blogs.nvidia.com/blog/nemotron-labs-twotower/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1.2">
+      <circle cx="30" cy="30" r="8"/>
+      <line x1="30" y1="38" x2="30" y2="60"/>
+      <line x1="30" y1="46" x2="20" y2="60"/>
+      <line x1="30" y1="46" x2="40" y2="60"/>
+      <line x1="30" y1="48" x2="18" y2="42"/>
+      <line x1="30" y1="48" x2="42" y2="42"/>
+    </g>
+    <text x="60" y="26" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="0.8">GPC · 99.98%</text>
+    <text x="60" y="40" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="0.8" opacity="0.7">600h MOTION</text>
+    <text x="60" y="60" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#115e59">EMERGENT RECOVERY</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">NVIDIA Generative Pretrained Controllers hit 99.98% success on 600 hours of motion data</h3>
+    <p class="kicker">NVIDIA AI · 2026-07-02 · <a href="https://blogs.nvidia.com/blog/generative-pretrained-controllers/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">GPC tokenises motor skills and applies GPT-style training to learn transferable robot control policies. NVIDIA reports 99.98% success reproducing training clips and emergent recovery behaviours the system was never explicitly trained on.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>NVIDIA released Generative Pretrained Controllers on Thursday as a physical-AI research artifact: a controller architecture that tokenises motor skills and applies GPT-style autoregressive training on more than 600 hours of motion data. NVIDIA reports 99.98 percent success reproducing training clips and, importantly, emergent recovery behaviours the training set did not explicitly contain. When the system falls out of its expected state, it recovers to a nearby-in-motion-space clip rather than freezing or collapsing.</p>
+
+  <p>The training data is a mix of motion capture, teleoperation traces, and inverse-kinematic synthesis across humanoid, quadruped and manipulator platforms. NVIDIA presents the result as evidence that motor-skill tokenisation is a viable substrate for a "foundation controller" analogous to a foundation model. Emergent recovery is the trained behaviour that matters for adoption: teleoperation and reinforcement-learning-only controllers typically die when perturbed off the training distribution. A GPC that recovers by generating a plausible continuation of its motor-token sequence is closer to what a factory floor can accept.</p>
+
+  <blockquote class="pull-quote">99.98% success reproducing motion clips with emergent recovery behaviours.<cite>— NVIDIA, Generative Pretrained Controllers technical report, 2026-07-02</cite></blockquote>
+
+  <h4>Adjacent to UBTECH's UWORLD U1</h4>
+  <p>UBTECH's UWORLD U1 humanoid launch (see separate story) landed the same week. UBTECH's stack is proprietary end-to-end; NVIDIA's GPC is an argument that the controller layer can be commoditised on top of NVIDIA silicon, with the humanoid maker specialising in mechanical design, sensors, and the emotion-model surface. That is the same skills-plus-runtime posture NVIDIA took on Claude Science's BioNeMo integration on Wednesday: expose primitives, let the customer own the higher-level product.</p>
+
+  <p class="source-footer"><a href="https://blogs.nvidia.com/blog/generative-pretrained-controllers/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <circle cx="24" cy="40" r="12"/>
+      <path d="M36 40 Q54 30 72 40 Q90 50 108 40"/>
+      <circle cx="108" cy="40" r="3" fill="#115e59"/>
+    </g>
+    <text x="14" y="20" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="0.8">GROK VOICE AGENT BUILDER</text>
+    <text x="14" y="70" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#115e59">$0.05 / MIN</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">xAI ships Grok Voice Agent Builder at $0.05 per minute with 80+ voices and cloning</h3>
+    <p class="kicker">xAI on X · 2026-07-02 · <a href="https://x.com/xai" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">A no-code platform to deploy Grok Voice agents against support, sales and workflow-automation lines at a flat $0.05 per minute. Ships with playbooks, knowledge bases, voice cloning and guardrails. First xAI product with a fixed per-minute rate.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>xAI shipped Grok Voice Agent Builder on Thursday. The pitch is simple: deploy a voice agent for support, sales or workflow automation without writing code, at $0.05 per minute of active call time. The builder ships with a template library of playbooks, knowledge-base ingestion for grounding, 80-plus stock voices, and voice cloning against a customer-provided sample. Guardrails include topic containment, PII redaction and cost caps per session.</p>
+
+  <p>The $0.05-per-minute pricing is the aggressive move. Competing voice agents on the market (11 Labs Agents, Retell, Vapi, Bland) price between $0.08 and $0.20 per minute, though the underlying LLM and TTS costs sit closer to $0.03. xAI is subsidising the launch to build volume, betting that voice-first workflows will dominate the incoming service-agent market. The Tesla and SpaceX customer channel through Musk-adjacent orgs is the near-term deployment path.</p>
+
+  <blockquote class="pull-quote">Grok Voice agents at $0.05 per minute. No-code deployment for support, sales, and workflow automation.<cite>— xAI on X, 2026-07-02</cite></blockquote>
+
+  <p class="source-footer"><a href="https://x.com/xai" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <rect x="20" y="22" width="80" height="36" rx="3"/>
+      <line x1="20" y1="32" x2="100" y2="32"/>
+    </g>
+    <text x="60" y="30" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.8">TESLA · INTERNAL MEMO</text>
+    <text x="60" y="48" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#115e59" text-anchor="middle">$200 / wk</text>
+    <text x="60" y="72" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">EFFECTIVE JULY 6 · xAI EXEMPT</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Tesla caps employee third-party AI spend at $200 per week starting July 6</h3>
+    <p class="kicker">The Information · Crypto Briefing · 2026-07-02 · <a href="https://www.theinformation.com/articles/tesla-caps-employee-ai-spend-200-per-week-adoption-push" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">An internal memo obtained by The Information sets a $200 weekly ceiling on employee AI-tool spend from July 6. The cap follows engineers running weekly token bills into the low four digits. Beta xAI products are exempt from the limit.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Tesla will impose a $200-per-week limit on employee spending on third-party AI tools starting July 6, according to an internal memo obtained by The Information. The cap follows several months in which some software engineers ran up weekly token bills in the thousands of dollars. Tesla is raising 2026 capex to more than $25 billion for AI infrastructure at the same time, so the limit is not a cost-reduction move overall. It is a routing move: employees who want unlimited AI tool spend can use in-house or xAI beta products, which are exempt from the cap.</p>
+
+  <p>The subtext is that Tesla is testing an internal-first AI stack and using the third-party spend cap to accelerate migration. Musk's xAI Grok family sits inside the exemption, which functionally makes Grok Tesla's employee-preferred external AI. Grok Voice Agent Builder's Thursday launch (see separate story) at $0.05 per minute reads as the paired product-market move: Tesla employees who need voice-agent capability now have an xAI-branded option and no external option under the $200 cap.</p>
+
+  <blockquote class="pull-quote">Tesla told employees last month it would impose a $200-per-week limit for staff's AI spending beginning July 6.<cite>— The Information, internal memo, 2026-07-02</cite></blockquote>
+
+  <p class="source-footer"><a href="https://www.theinformation.com/articles/tesla-caps-employee-ai-spend-200-per-week-adoption-push" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <rect x="12" y="14" width="42" height="52" rx="2"/>
+      <rect x="66" y="14" width="42" height="52" rx="2"/>
+    </g>
+    <text x="33" y="28" font-family="Georgia,serif" font-size="7" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">INTERN</text>
+    <text x="33" y="46" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59" text-anchor="middle">SWE</text>
+    <text x="33" y="58" font-family="system-ui,sans-serif" font-size="5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">SPEC · SMALL</text>
+    <text x="87" y="28" font-family="Georgia,serif" font-size="7" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">SENIOR</text>
+    <text x="87" y="46" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59" text-anchor="middle">SWE</text>
+    <text x="87" y="58" font-family="system-ui,sans-serif" font-size="5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">UNDER-SPEC · LONG</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Senior SWE-Bench launches to measure long-horizon, under-specified engineering work</h3>
+    <p class="kicker">Snorkel AI · 2026-07-02 · <a href="https://senior-swe-bench.snorkel.ai/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The open-source benchmark reframes coding-agent evaluation around vague specs, complex dependencies, and subjective decisions. Positions itself explicitly against the "intern-style" tasks dominant in existing SWE-Bench, SWE-Bench Pro and SWE-Bench Multilingual scoring.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Senior SWE-Bench launched Thursday from Snorkel AI with co-authors from several coding-agent teams. The benchmark's positioning is direct: existing SWE-Bench, SWE-Bench Pro and SWE-Bench Multilingual measure "intern-style" tasks with a clear specification, a bounded diff and a passing test as the win condition. Senior SWE-Bench measures the opposite: realistically under-specified long-horizon engineering work with vague specs, cross-file dependencies, subjective design decisions, and test outcomes that require judgement rather than pass-fail scoring.</p>
+
+  <p>The benchmark ships with a first cohort of tasks pulled from open-source projects where senior engineers led the design work. Each task is scored across multiple axes: design quality (does the diff meet the design constraints not written in the spec), integration correctness (does it work with the rest of the codebase), and remediation depth (does it fix the root cause versus paper over the symptom). Scoring is human-in-the-loop for the subjective axes; the human raters are senior engineers with domain context.</p>
+
+  <blockquote class="pull-quote">Senior SWE-Bench measures long-horizon, realistically under-specified senior engineering work.<cite>— Snorkel AI benchmark landing page, 2026-07-02</cite></blockquote>
+
+  <h4>Why the benchmark matters for procurement</h4>
+  <p>Enterprise AI-coding procurement has been leaning on SWE-Bench Pro numbers as a proxy for real developer productivity, and vendors have priced against them. Anthropic's 63.2 percent on SWE-bench Pro for Sonnet 5 (last week) was cited as evidence for the $2/$10 promotional pricing. Senior SWE-Bench is the argument that those numbers are the wrong measurement for senior-engineer replacement work. Devin, Codex, Claude Code and Cursor will all be measured against it in the coming weeks, and enterprise procurement will reprice against the new scores.</p>
+
+  <p class="source-footer"><a href="https://senior-swe-bench.snorkel.ai/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <path d="M60 12 L92 24 L92 46 Q92 62 60 72 Q28 62 28 46 L28 24 Z"/>
+    </g>
+    <text x="60" y="42" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59" text-anchor="middle">16.1%</text>
+    <text x="60" y="52" font-family="system-ui,sans-serif" font-size="5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="1">FABLE 5 · RLI</text>
+    <text x="6" y="76" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" letter-spacing="0.8">240 REMOTE PROJECTS · 23 DOMAINS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">CAIS and Scale AI Labs put Fable 5 at 16.1% on the Remote Labor Index</h3>
+    <p class="kicker">CAIS · Scale AI · 2026-07-02 · <a href="https://www.safe.ai/rli" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The Center for AI Safety and Scale AI Labs updated the Remote Labor Index. Fable 5 hit 16.1% on 240 real remote-work projects across 23 domains, ranking first among public models. RLI measures whether AI systems deliver work clients accept as real deliverables.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Center for AI Safety and Scale AI Labs released the updated Remote Labor Index on Thursday. Fable 5 placed first among public frontier models at 16.1 percent, up from the previous top score in the low double digits. The benchmark is unusual: it measures whether an AI system produces deliverables that a paying remote-work client actually accepts, not whether it passes an internal quality check. Two hundred forty projects across 23 domains form the eval set, with clients from Scale's remote-work operations serving as raters.</p>
+
+  <p>The methodology is the argument for the benchmark. Coding-agent scores that top 80 percent on SWE-Bench Pro do not translate directly to a remote-work client accepting a delivered project. Real work needs judgement about scope, communication with the client mid-project, and the taste to deliver something the client thought they wanted but did not fully articulate. The 16.1 percent number is small and honest. It says the frontier is measurably improving on real deliverables but is not yet close to replacing a competent remote worker on median.</p>
+
+  <blockquote class="pull-quote">Fable 5 delivered work clients would accept as real deliverables 16.1% of the time.<cite>— CAIS and Scale AI Labs, Remote Labor Index 2026-07-02</cite></blockquote>
+
+  <h4>The safety angle</h4>
+  <p>Center for AI Safety uses the RLI as the input to its labour-displacement forecasting work. A model that hits a certain RLI threshold begins to disrupt the remote-work labour market meaningfully. The 16.1 percent number lets the CAIS team update its economic-transition timeline and the associated safety-planning inputs to policy actors, which is why the release is co-signed by Scale AI. The framing avoids extrapolation and simply publishes the number.</p>
+
+  <p class="source-footer"><a href="https://www.safe.ai/rli" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#115e59">
+      <text x="60" y="34" font-family="Georgia,serif" font-size="18" font-weight="700" text-anchor="middle">$100M</text>
+      <text x="60" y="48" font-family="system-ui,sans-serif" font-size="6" font-weight="700" text-anchor="middle" letter-spacing="1">SERIES B · $207M TOTAL</text>
+    </g>
+    <line x1="20" y1="56" x2="100" y2="56" stroke="#115e59" stroke-width="0.6"/>
+    <text x="60" y="70" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.8">NEA + NAVER · VIDEO UNDERSTANDING</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">TwelveLabs closes $100 million Series B co-led by NEA and NAVER Ventures</h3>
+    <p class="kicker">TechStartups · Business Wire · 2026-07-02 · <a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Amazon, Radical Ventures, Korea Investment Partners, Index Ventures, Quadrille Capital and Red Bull Ventures joined. Total raised to date reaches $207 million. TwelveLabs sells an AI platform for video understanding and indexing.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>TwelveLabs closed a $100 million Series B on Wednesday co-led by NEA and NAVER Ventures. Amazon, Radical Ventures, Korea Investment Partners, Index Ventures, Quadrille Capital and Red Bull Ventures joined. Total raised to date reaches $207 million. The company builds video-understanding infrastructure: multimodal embedding, semantic search across long-form video, and per-scene indexing at production scale, sold through both an API and hosted-service tier.</p>
+
+  <p>Global video data is growing 40 percent annually. TwelveLabs's pitch is that most enterprise video (surveillance archives, media archives, customer support recordings, industrial-inspection footage) is currently un-indexed. Standard AI infrastructure is designed for text and image, not multi-hour video with fast semantic search. Anthropic's Pydantic AI 2.2.0 integration with TwelveLabs Pegasus this week (yesterday's coverage) put the company at the top of Claude Code's supported video-understanding stack, which is the enterprise wedge the round is scaled against.</p>
+
+  <p class="source-footer"><a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <rect x="12" y="22" width="28" height="36" rx="2"/>
+      <rect x="46" y="22" width="28" height="36" rx="2"/>
+      <rect x="80" y="22" width="28" height="36" rx="2"/>
+    </g>
+    <text x="26" y="46" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#115e59" text-anchor="middle">GPU</text>
+    <text x="60" y="46" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#115e59" text-anchor="middle">CPU</text>
+    <text x="94" y="46" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#115e59" text-anchor="middle">TPU</text>
+    <text x="60" y="76" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#115e59" text-anchor="middle">$35M · KODURI</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Oxmiq Labs takes $35 million Series A to collapse GPU, CPU and TPU into one architecture</h3>
+    <p class="kicker">TechStartups · Business Wire · 2026-07-02 · <a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Raja Koduri, formerly of Intel and Apple, leads. Samsung Catalyst Fund and Fudomo co-lead the round; MediaTek and Pegatron VC join. Total raised reaches $60 million. The architecture is open-source and targets a single silicon shape running GPU, CPU and TPU workloads.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Oxmiq Labs closed a $35 million Series A on Wednesday. Samsung Catalyst Fund and Fudomo co-led. MediaTek and Pegatron VC joined. Total raised reaches $60 million. Raja Koduri, most recently at Intel and Apple, runs the company. Oxmiq's argument is that the accelerator, general-purpose CPU and TPU-style matrix engine can be collapsed into a single open-source architecture, licensed rather than sold as fixed silicon, and manufactured across multiple foundries. The Samsung Catalyst investment reads as a fabless-friendly hedge against TSMC's leading-node lock.</p>
+
+  <p>The pitch is compressed but consequential: three-way silicon consolidation cuts on-die inter-block data movement, which is the biggest energy line in a modern accelerator. If Oxmiq's architecture actually delivers, hyperscaler custom-silicon programmes have an alternative to designing bespoke ASICs against a specific workload. The open-source licensing route also means Chinese customers (limited by US export controls on leading-edge Nvidia parts) have a defensible on-shore path if they license the Oxmiq design and fab it locally.</p>
+
+  <p class="source-footer"><a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <circle cx="60" cy="40" r="24"/>
+      <line x1="60" y1="16" x2="60" y2="64"/>
+      <line x1="36" y1="40" x2="84" y2="40"/>
+    </g>
+    <text x="60" y="42" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#115e59" text-anchor="middle">MEMS</text>
+    <text x="60" y="76" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#115e59" text-anchor="middle">$55M · TIMING</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Stathera closes $55 million Series B for MEMS precision timing chips in AI data centres</h3>
+    <p class="kicker">TechStartups · Business Wire · 2026-07-02 · <a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Maverick Silicon led. Celesta Capital, BDC Capital, MediaTek Innovation Fund, TXC Corporation and Ultratech Capital Partners joined. Total raised reaches $75 million. Stathera sells MEMS-based clock and precision timing chips to AI data centres where network synchronisation costs pile up at scale.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Stathera closed a $55 million Series B on Wednesday. Maverick Silicon led. Celesta Capital, BDC Capital, MediaTek Innovation Fund, TXC Corporation and Ultratech Capital Partners joined. Total raised: $75 million. The Montreal-based company sells MEMS-based precision timing chips into AI data-centre networking. Modern AI clusters rely on precise clock synchronisation across thousands of GPUs. Timing drift adds up as scheduler waste and network jitter. Stathera's MEMS oscillators trade off against the quartz-crystal reference designs that dominate the current market, with better temperature stability and lower drift for a comparable silicon cost.</p>
+
+  <p>The AI-data-centre wedge is Stathera's fastest-growing segment. TXC Corporation's presence in the syndicate is the operational tell: TXC is one of the largest quartz-timing incumbents. That investment suggests either partnership (Stathera manufactures under TXC channels) or hedged competition (TXC keeps an option on the MEMS path in case its own quartz roadmap slows).</p>
+
+  <p class="source-footer"><a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <path d="M20 40 Q40 20 60 40 Q80 60 100 40" stroke-width="1.4"/>
+      <line x1="20" y1="52" x2="100" y2="52" stroke-dasharray="2 2"/>
+    </g>
+    <text x="14" y="24" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="0.8">OMEN AI · DATACENTER FLUID</text>
+    <text x="14" y="72" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#115e59">$31M · 10–14 GW</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Omen AI closes $31 million Series A for real-time data-centre fluid analysis</h3>
+    <p class="kicker">TechStartups · Business Wire · 2026-07-02 · <a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Nava Ventures led. CRV joined. Sheryl Sandberg co-invested. Total raised: $41.5 million. Sensors already monitor 10 to 14 gigawatts of compute capacity. The pitch: liquid-cooling failure detection before catastrophic downtime, sold to hyperscalers and neoclouds.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Omen AI closed a $31 million Series A on Wednesday. Nava Ventures led, CRV joined, Sheryl Sandberg co-invested. Total raised sits at $41.5 million. The company builds real-time fluid analysis sensors that monitor liquid cooling loops in data centres and flag pre-failure conditions before they turn into downtime. Sensors are already deployed against 10 to 14 gigawatts of compute capacity, which is a meaningful share of the operator install base.</p>
+
+  <p>Liquid cooling has become the dominant thermal path for GB200 and GB300 racks. When a coolant pump fails or a chemistry problem develops, the rack goes from "handling 130 kilowatts safely" to "burning" in minutes. Traditional pressure and flow sensors catch symptoms too late. Omen's sensors run continuous machine-learning inference on fluid composition, particulate load and thermal-pressure profiles to predict failure hours ahead. That is a niche product with an unusually clear cost-benefit case: a saved rack pays back the sensor deployment for the whole data centre.</p>
+
+  <p class="source-footer"><a href="https://techstartups.com/2026/07/01/venture-capital-startup-funding-roundup-july-1-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#115e59" stroke-width="1" fill="none">
+      <rect x="10" y="14" width="100" height="52" rx="2"/>
+    </g>
+    <text x="14" y="26" font-family="Courier,monospace" font-size="6" font-weight="700" fill="#115e59">ggml-org/llama.cpp</text>
+    <text x="14" y="38" font-family="Courier,monospace" font-size="7" font-weight="700" fill="#115e59">b9860 · llama_ftype_name()</text>
+    <text x="14" y="50" font-family="Courier,monospace" font-size="7" font-weight="600" fill="#115e59" opacity="0.75">b9857 · hexagon flash attn</text>
+    <text x="14" y="62" font-family="Courier,monospace" font-size="7" font-weight="600" fill="#115e59" opacity="0.75">b9852 · Q1_0 OpenCL Adreno</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">llama.cpp b9860 lands new llama_ftype_name() C API; b9857–b9859 pack Hexagon rework and Adreno Q1_0</h3>
+    <p class="kicker">GitHub ggml-org · 2026-07-02 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">b9860 exposes a llama_ftype_name() function returning strings like "Q8_0" or "Q4_K - Medium" for the model's lifetime. b9857 vectorises Hexagon flash-attention with FP16 HVX kernels. b9852 adds Q1_0 quantisation on OpenCL with Adreno GEMM/GEMV.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>ggml-org tagged llama.cpp b9860 on Thursday, one day after the b9857 through b9859 triple-tag Wednesday cycle. b9860 is a small but consequential addition: <code>llama_ftype_name()</code> is a new public C API that returns human-readable quantisation type strings ("Q8_0", "Q4_K - Medium", etc.) for the lifetime of the loaded model. Third-party wrappers had been reimplementing this mapping in their own code; b9860 puts the canonical source inside the runtime.</p>
+
+  <p>b9857 through b9859 stayed in this issue's news cycle. b9857 is the Hexagon flash-attention rework, with vectorised sinks and FP16 HVX kernels for improved accuracy and throughput on Qualcomm mobile silicon. b9858 fixed a HuggingFace primary-split model-path handling regression. b9859 added precompiled Adreno GEMM/GEMV kernel libraries covering q8_0, q4_0, q4_1 and q4_k MoE ops on OpenCL. b9852 further back landed Q1_0 quantisation support on OpenCL with Adreno GEMM/GEMV implementations, opening 1-bit deployment on mid-range Android silicon.</p>
+
+  <blockquote class="pull-quote">llama_ftype_name() returns a string for the file type of the model, valid for the lifetime of the model.<cite>— ggml-org, llama.cpp b9860 changelog, 2026-07-02</cite></blockquote>
+
+  <h4>Why the API matters</h4>
+  <p>Downstream projects (LM Studio, Ollama, KoboldCPP, mlx-lm, LangChain integrations) have been hand-rolling the quantisation-to-name mapping and drifting away from the ggml canonical set. Every new quantisation format added a fresh drift. b9860 collapses that surface: everyone downstream calls the same function. It is a small change that removes a category of long-tail bugs.</p>
+
+  <p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#115e59">
+      <text x="16" y="20" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1">HF PAPERS · 07-02</text>
+      <text x="16" y="34" font-family="Georgia,serif" font-size="10" font-weight="700">33 · PerceptionRubrics</text>
+      <text x="16" y="48" font-family="Georgia,serif" font-size="9" font-weight="700" opacity="0.8">19 · ELDR (MoE)</text>
+      <text x="16" y="60" font-family="Georgia,serif" font-size="9" font-weight="700" opacity="0.7">19 · TurboServe (Video)</text>
+      <text x="16" y="72" font-family="Georgia,serif" font-size="8" font-weight="700" opacity="0.55">12 · MemSyco</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">HF Daily Papers: PerceptionRubrics tops the day at 33, ELDR MoE routing and TurboServe video tie at 19</h3>
+    <p class="kicker">Hugging Face · 2026-07-02 · <a href="https://huggingface.co/papers?date=2026-07-02" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Johns Hopkins's PerceptionRubrics calibrates multimodal eval rubrics to human perception. Microsoft Research's ELDR routes decode across PD-disaggregated MoE serving by expert locality. Tsinghua's TurboServe economises streaming video generation.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Hugging Face Daily Papers put Johns Hopkins's PerceptionRubrics at the top on Thursday with 33 upvotes. The paper addresses one of the standing quality problems in multimodal evaluation: automated rubrics drift away from what human raters actually score. PerceptionRubrics calibrates rubric weights against human-perception scores so that evaluation numbers move together with human judgement, not orthogonally to it. The methodology is important for VLM benchmark reporting through the second half of 2026, as more model releases claim state-of-the-art on multimodal evals without paired human validation.</p>
+
+  <p>Two papers tied at 19 upvotes. Microsoft Research's ELDR (Expert-Locality-Aware Decode Routing) proposes an expert-routing mechanism tailored for prefill-decode-disaggregated MoE serving. The insight is that PD disaggregation moves prefill and decode to different node groups; routing decisions that are optimal for prefill are wasteful in decode because the KV cache locality differs. ELDR routes decode independently based on locality. Reported gains apply directly to production MoE serving stacks, which is Microsoft's Azure OpenAI Service and Copilot-facing workload.</p>
+
+  <p>Tsinghua's TurboServe tackles the video-generation serving problem. Streaming video generation (as opposed to batch generation) needs to keep the latent state warm across frames while managing memory across a growing context. TurboServe presents a scheduling architecture that keeps latency inside interactive thresholds while maintaining economic per-second cost. The paper's arrival lines up with Google's Gemini Omni Flash preview at $0.10 per output-second (Wednesday's news) and gives open-source projects a serving-stack reference for competing at similar prices.</p>
+
+  <blockquote class="pull-quote">PerceptionRubrics: calibrating multimodal evaluation to human perception.<cite>— Johns Hopkins University, HF Papers 2026-07-02</cite></blockquote>
+
+  <h4>The runners-up</h4>
+  <p>MemSyco-Bench at 12 upvotes formalised a benchmark for sycophancy in agent memory, evaluating how agents respond to user preferences versus factual accuracy across sessions with persistent memory. Seoul National University's Domain Arithmetic at 10 upvotes proposed one-shot VLA adaptation under environmental shifts, using domain-arithmetic operations for efficient single-shot adaptation of a vision-language-action model. These runner-up papers form the quieter half of the day's research signal but each touches a live serving-time or safety-time problem the frontier is running into.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers?date=2026-07-02" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1.2">
+      <path d="M60 12 L92 24 L92 46 Q92 62 60 72 Q28 62 28 46 L28 24 Z"/>
+    </g>
+    <text x="60" y="36" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="1">JAILBREAK</text>
+    <text x="60" y="48" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#115e59" text-anchor="middle">SEV SCORE</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.8">ANTH · AMZ · MSFT · GOOG</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Anthropic proposes industry-wide jailbreak-severity scoring framework with Amazon, Microsoft and Google</h3>
+    <p class="kicker">Anthropic · Neuron Digest · 2026-07-02 · <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The framework lets frontier labs assign consistent severity scores to reported jailbreaks so the industry can compare vulnerabilities across models and coordinate disclosure. Anthropic pushed the proposal jointly with Amazon, Microsoft and Google the same day Fable 5 came back online.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic proposed an industry-wide jailbreak-severity scoring framework on Thursday together with Amazon, Microsoft and Google. The framework's shape mirrors CVSS for software vulnerabilities: a numerical score for each reported jailbreak spanning access complexity, damage potential, mitigation availability and disclosure readiness. The point is to let a security team at one lab compare a reported jailbreak against a similar report at another lab without every lab reinventing the taxonomy.</p>
+
+  <p>The timing is deliberate. Fable 5 came back online the same day. Anthropic's June 12 export-control shutdown was triggered by an Amazon-reported classifier bypass. The joint framework proposal is Anthropic reframing that incident: rather than opaque vendor-to-vendor disclosure by direct message, the industry adopts a shared severity language that regulators can also read. Amazon, Microsoft and Google signed on because they need the same standard: a jailbreak found on Claude that is trivial to reproduce on Nova or Copilot needs a common severity score.</p>
+
+  <blockquote class="pull-quote">A shared severity language for jailbreaks lets the industry compare vulnerabilities across models and coordinate disclosure.<cite>— Anthropic, framework announcement, 2026-07-02</cite></blockquote>
+
+  <h4>What the framework does not do</h4>
+  <p>The proposal is voluntary and does not create a shared vulnerability database. Reporting stays lab-by-lab and adversary-to-lab, with the shared score attached at disclosure time. There is no public registry. That is the compromise Anthropic and the co-signers appear to have reached: a shared scoring vocabulary, not shared incident visibility. Critics inside the AI safety community are already pushing for a public registry as the next step, similar to CVE, though the frontier labs have not committed to that.</p>
+
+  <p class="source-footer"><a href="https://www.anthropic.com/news" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1.2">
+      <circle cx="60" cy="34" r="14"/>
+      <line x1="60" y1="48" x2="60" y2="68"/>
+      <line x1="60" y1="54" x2="48" y2="68"/>
+      <line x1="60" y1="54" x2="72" y2="68"/>
+    </g>
+    <text x="60" y="36" font-family="Georgia,serif" font-size="7" font-weight="700" fill="#115e59" text-anchor="middle">U1</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.6">13,361 UNITS · 88 DoF</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">UBTECH UWORLD U1 humanoid orders pass 13,361 units on Shenzhen launch day</h3>
+    <p class="kicker">PR Newswire · Gigazine · TheAIInsider · 2026-07-02 · <a href="https://www.prnewswire.com/news-releases/ubtech-launches-uworld-u1-the-worlds-first-full-size-mass-produced-ultra-bionic-humanoid-robot-302815285.html" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The U1 Lite, U1 Pro and U1 Ultra ship with 88 degrees of freedom and a proprietary dual-pivot biomimetic cervical spine that replicates up to 90 percent of fundamental human movements. Pricing starts at RMB 119,800. 100 units get donated for structured psychological support with 3D facial reconstruction and voiceprint identity replication.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>UBTECH's UWORLD U1 humanoid launched at the 2026 Global Launch Event in Shenzhen on June 30 with three configurations, and cumulative orders passed 13,361 units by the end of the launch day. The three configurations are the semi-torso U1 Lite, the full-body high-performance U1 Pro, and the high-dynamic full-body U1 Ultra. Pricing starts at RMB 119,800 (about USD 16,500). The line is being sold as the first mass-producible ultra-bionic humanoid.</p>
+
+  <p>Specs: 88 degrees of freedom, a proprietary dual-pivot biomimetic cervical spine, and coverage of up to 90 percent of fundamental human movements. UBTECH's end-to-end stack integrates biomimetic silicone skin, embodied intelligence hardware, its own operating system, emotion-driven large language models, and system-level manufacturing. That is a bigger footprint than most humanoid vendors: UBTECH is building both the mechanicals and the AI stack rather than picking a partner. NVIDIA's Generative Pretrained Controllers (see separate story) launched the same week as an argument for the opposite posture.</p>
+
+  <h4>The donation programme</h4>
+  <p>UBTECH plans to donate 100 customised U1 Series humanoid robots this year with 3D facial reconstruction and voiceprint-based identity replication built in. Purpose: recreate designated individuals for structured psychological support. Multimodal situational awareness combined with an emotion-driven long-term memory system is meant to enable persistent emotional continuity across sessions. That is a hard product claim and one the aged-care and grief-therapy research communities will scrutinise before broad deployment.</p>
+
+  <p class="source-footer"><a href="https://www.prnewswire.com/news-releases/ubtech-launches-uworld-u1-the-worlds-first-full-size-mass-produced-ultra-bionic-humanoid-robot-302815285.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <path d="M30 60 Q45 20 60 60 Q75 20 90 60"/>
+      <line x1="20" y1="66" x2="100" y2="66" stroke-dasharray="2 2"/>
+    </g>
+    <text x="14" y="22" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">MEMSYCO-BENCH</text>
+    <text x="14" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="0.8">SYCOPHANCY IN AGENT MEMORY</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">MemSyco-Bench formalises sycophancy in agent memory as a measurable behaviour</h3>
+    <p class="kicker">HF Papers · 2026-07-02 · <a href="https://huggingface.co/papers?date=2026-07-02" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The benchmark evaluates how agents balance stored user preferences against factual accuracy across long-lived memory contexts. Establishes the first cross-lab comparable measurement of sycophantic drift in persistent-memory agents.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>MemSyco-Bench arrived on Hugging Face Daily Papers at 12 upvotes on Thursday. The paper defines sycophancy in agent memory as the tendency for a persistent-memory agent to weight remembered user preferences over factual accuracy in subsequent sessions. The benchmark evaluates this behaviour by injecting sessions where a user's preference disagrees with a factual answer, then measuring how the agent handles the conflict across weeks of simulated memory life.</p>
+
+  <p>The result matters because commercial agents (Claude Memory, ChatGPT Memory, Gemini Memory) all now maintain persistent user preferences across sessions. Sycophancy in that context is not just an aesthetic problem, it is a factual-drift problem: an agent that told a user something plausible-sounding but wrong last week may repeat that same wrong answer confidently this week because the user was pleased. MemSyco-Bench formalises the measurement so that Claude, GPT and Gemini can be scored consistently on the behaviour. Sonnet 5's release materials (yesterday's edition) claimed lower sycophancy than 4.6 without a comparable public metric; MemSyco-Bench closes that measurement gap.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers?date=2026-07-02" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#115e59" stroke-width="1">
+      <rect x="14" y="18" width="40" height="44" rx="3"/>
+      <circle cx="34" cy="40" r="12"/>
+      <path d="M62 20 L100 20 M62 32 L100 32 M62 44 L100 44 M62 56 L100 56"/>
+    </g>
+    <text x="34" y="43" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle">VLA</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="0.6" text-anchor="middle">DOMAIN ARITHMETIC · 1-SHOT ADAPT</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">SNU's Domain Arithmetic proposes one-shot VLA adaptation under environmental shifts</h3>
+    <p class="kicker">HF Papers · 2026-07-02 · <a href="https://huggingface.co/papers?date=2026-07-02" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">Seoul National University proposes efficient single-shot adaptation for vision-language-action models by treating environmental shifts as arithmetic operations on domain vectors. Lands at 10 upvotes on Thursday's HF board.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Seoul National University published Domain Arithmetic on Hugging Face Daily Papers on Thursday with 10 upvotes. The paper's contribution is a method for adapting vision-language-action models to environmental shifts (lighting changes, camera angle drift, object-position perturbations) using domain-arithmetic operations. The idea is that domain shifts can be encoded as vectors in a learned domain-embedding space, and adaptation to a new environment reduces to arithmetic in that space: subtract the old-environment vector, add the new-environment vector, apply to the model.</p>
+
+  <p>Efficient one-shot adaptation matters for robotics deployment: a factory floor that gets a new lighting rig, or a warehouse whose camera positions moved after a maintenance cycle, cannot afford a full retraining run. Domain Arithmetic is the argument that a single demonstration in the new environment can be enough to recover VLA performance, versus tens or hundreds required by earlier fine-tuning approaches. The paper's results on the DROID and RoboVerse benchmarks show competitive one-shot adaptation performance versus stronger multi-shot baselines.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers?date=2026-07-02" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#115e59" stroke-width="1" fill="none">
+      <rect x="12" y="12" width="30" height="24" rx="2"/>
+      <rect x="46" y="12" width="30" height="24" rx="2"/>
+      <rect x="80" y="12" width="30" height="24" rx="2"/>
+      <line x1="42" y1="24" x2="46" y2="24"/>
+      <line x1="76" y1="24" x2="80" y2="24"/>
+    </g>
+    <text x="27" y="27" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle">PARAKEET</text>
+    <text x="61" y="27" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle">GEMMA 4</text>
+    <text x="95" y="27" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle">Qwen3TTS</text>
+    <text x="60" y="72" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" text-anchor="middle" letter-spacing="0.8">HF × CEREBRAS · OPEN S2S STACK</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Hugging Face and Cerebras ship modular open speech-to-speech stack using Parakeet, Gemma 4 31B and Qwen3TTS</h3>
+    <p class="kicker">Hugging Face blog · Cerebras · 2026-07-02 · <a href="https://huggingface.co/blog/open-speech-to-speech" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    <p class="teaser">The reference stack chains NVIDIA Parakeet for ASR, Google DeepMind's Gemma 4 31B on Cerebras for reasoning, and Alibaba's Qwen3TTS for speech synthesis. Latency targets sub-500 ms end to end.</p>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Hugging Face and Cerebras published a reference implementation of a fully open speech-to-speech stack on Thursday. The stack chains NVIDIA Parakeet for automatic speech recognition, Google DeepMind's Gemma 4 31B running on Cerebras inference for the reasoning layer, and Alibaba's Qwen3TTS for speech synthesis. Latency budget: sub-500 ms end to end on the Cerebras hardware, which is the threshold where a voice interaction feels conversational rather than turn-taking.</p>
+
+  <p>The point is not that any one of these components is new. The point is that the reference implementation removes the integration friction that has kept most open-source voice-agent deployments on proprietary hybrid stacks (Whisper plus a proprietary LLM plus ElevenLabs). Every layer is now open weights, and the reference implementation is one Hugging Face Space away from a fork. xAI's Grok Voice Agent Builder at $0.05 per minute (see separate story) has the same launch day; enterprises now have both a commercial hosted voice-agent option and a fully open stack to route against.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/blog/open-speech-to-speech" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg width="80" height="18" viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="40" cy="9" r="3" fill="#115e59"/>
+    <line x1="6" y1="9" x2="34" y2="9" stroke="#115e59" stroke-width="1"/>
+    <line x1="46" y1="9" x2="74" y2="9" stroke="#115e59" stroke-width="1"/>
+    <circle cx="6" cy="9" r="1.6" fill="none" stroke="#115e59" stroke-width="1"/>
+    <circle cx="74" cy="9" r="1.6" fill="none" stroke="#115e59" stroke-width="1"/>
+  </svg>
+</div>
+
+<footer class="colophon">
+  <div><strong>Apollo AI News</strong> · Daily · 2026-07-03 · Generated 2026-07-03 UTC</div>
+  <div><a href="../index.html">← All editions</a></div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const chips = document.querySelectorAll('.filter-chip');
+  const stories = document.querySelectorAll('.story');
+  const status = document.getElementById('filter-status');
+  const bigPicture = document.querySelector('.big-picture');
+  const countEl = document.querySelector('.section-head .count');
+  const countTextTemplate = countEl ? countEl.textContent : '';
+
+  function recount(){
+    const total = stories.length;
+    chips.forEach(c => {
+      const tag = c.dataset.filter;
+      const n = tag === 'all' ? total
+        : [...stories].filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const countSpan = c.querySelector('.count');
+      if (countSpan) countSpan.textContent = n;
+      if (tag !== 'all' && n === 0) c.setAttribute('disabled','');
+    });
+  }
+
+  function applyFilter(filter){
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const match = (filter === 'all') || tags.includes(filter);
+      if (match) {
+        s.removeAttribute('hidden');
+        if (s.id !== 'hero') visibleNonHero++;
+      } else {
+        s.setAttribute('hidden','');
+      }
+    });
+    if (countEl) {
+      const suffix = countTextTemplate.replace(/^\d+\s*stories?/,'').trim();
+      countEl.textContent = visibleNonHero + ' stories ' + suffix;
+    }
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    if (status) {
+      status.textContent = filter === 'all'
+        ? `Showing all ${stories.length} stories`
+        : `Showing ${[...stories].filter(s=>!s.hasAttribute('hidden')).length} of ${stories.length} stories — ${filter}`;
+    }
+    if (filter === 'all') {
+      if (location.hash.startsWith('#filter=')) history.replaceState(null,'',location.pathname);
+    } else {
+      history.replaceState(null,'','#filter='+filter);
+    }
+  }
+
+  chips.forEach(c => c.addEventListener('click', () => {
+    if (c.hasAttribute('disabled')) return;
+    applyFilter(c.dataset.filter);
+  }));
+
+  recount();
+  const initial = (location.hash.match(/#filter=([a-z]+)/)||[])[1];
+  applyFilter(initial && [...chips].some(c => c.dataset.filter === initial) ? initial : 'all');
+})();
+</script>
+</body>
+</html>
