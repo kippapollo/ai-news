@@ -1,374 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Apollo AI News — Archive</title>
-<meta name="description" content="Apollo AI News — daily, weekly, monthly, quarterly and annual AI briefings written to be read end-to-end on the page itself. Today's daily edition: SpaceXAI ships Grok 4.5 as the first joint model since the $60 billion Cursor acquisition closed on June 16, priced at $2 input and $6 output per million tokens; OpenAI opens GPT-5.6 Sol, Terra and Luna to the public after the White House lifts the two-week government-only window and rolls GPT-Live-1 and GPT-Live-1 mini globally with full-duplex voice that delegates deep reasoning to GPT-5.5 without pausing the conversation; Google delays Gemini 3.5 Pro to July 17 after scrapping the 2.5 Pro base architecture; Positron opens a $750M two-tranche round pricing the Reno inference-chip startup at up to $5B; Anthropic pushes Claude Cowork to web and mobile with Microsoft 365 write tools, opens Claude for Government Desktop under FedRAMP High and signs UST with a 20,000-engineer training plan; China's MIIT orders removal of Claude Code versions 2.1.91 through 2.1.196 over an alleged data-exfiltration backdoor; FTC settles the John Deere right-to-repair suit with a ten-year dealer-parity software mandate; Google publishes the Gemma 4 technical report open-sourcing dense and MoE checkpoints from 2.3B to 31B under Apache 2.0; Hugging Face daily papers push RynnWorld-4D, AlayaWorld and RynnWorld-Teleop to the top three on embodied world modeling." />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News</title>
+<meta name="description" content="Editorial AI news briefings across daily, weekly, monthly, quarterly and annual cadences. Written to be read end-to-end on the page.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
-  :root {
-    --bg: #f7f5ef;
-    --surface: #fffdf7;
-    --ink: #11151a;
-    --ink-soft: #2a2f37;
-    --ink-mute: #5a6068;
-    --rule: #e1ddd2;
-    --accent: #c2410c;
-    --accent-soft: #fde2cf;
-    --accent-deep: #9a330a;
-    --cad-daily: #115e59;
-    --cad-weekly: #166534;
-    --cad-monthly: #6b21a8;
-    --cad-quarterly: #c2410c;
-    --cad-yearly: #881337;
+:root{
+  --bg:#f7f5ef; --ink:#11151a; --muted:#5a6068; --line:#e5e0d3;
+  --accent:#115e59; --accent-soft:#dbeeeb;
+  --cad-daily:#115e59; --cad-daily-bg:#d9ece9;
+  --cad-weekly:#1e3a8a; --cad-weekly-bg:#e2e8f5;
+  --cad-monthly:#6b21a8; --cad-monthly-bg:#eaddf3;
+  --cad-quarterly:#166534; --cad-quarterly-bg:#dbeadd;
+  --cad-yearly:#881337; --cad-yearly-bg:#f3d7de;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c; --ink:#e6e3dc; --muted:#9a9690; --line:#2a2e34;
+    --accent:#2dd4bf; --accent-soft:#1a3634;
+    --cad-daily-bg:#173a37; --cad-daily:#8dd0c8;
+    --cad-weekly-bg:#1e2b4d; --cad-weekly:#a4b8e0;
+    --cad-monthly-bg:#2b1440; --cad-monthly:#c9a6e6;
+    --cad-quarterly-bg:#1a3021; --cad-quarterly:#9ac9a5;
+    --cad-yearly-bg:#3a1622; --cad-yearly:#e69ab0;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #15181c;
-      --surface: #1a1e23;
-      --ink: #e6e3dc;
-      --ink-soft: #c5c2bb;
-      --ink-mute: #9a9690;
-      --rule: #2b3038;
-      --accent: #fdba74;
-      --accent-soft: #3a1a09;
-      --accent-deep: #fed7aa;
-      --cad-daily: #5eead4;
-      --cad-weekly: #86efac;
-      --cad-monthly: #d8b4fe;
-      --cad-quarterly: #fdba74;
-      --cad-yearly: #f4a6a6;
-    }
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 120ms ease, color 120ms ease; }
-  a:hover { border-bottom-color: var(--accent); }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 0 28px 96px; }
-  .masthead { padding: 36px 0 18px; border-bottom: 2px solid var(--accent); }
-  .masthead-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
-  .pubname { display: flex; align-items: center; gap: 14px; }
-  .pubname a.brandlink { display: flex; align-items: center; color: var(--ink); border-bottom: 0; text-decoration: none; outline: none; }
-  .pubname a.brandlink:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
-  .pubname a.brandlink:hover { opacity: 0.85; }
-  .pubname svg.brandmark { height: 56px; width: auto; display: block; }
-  .edition { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mute); font-feature-settings: "tnum"; text-align: right; }
-  .edition .strong { color: var(--ink); }
-  .hero { margin: 56px 0 56px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
-  @media (max-width: 720px) { .hero { grid-template-columns: 1fr; gap: 28px; } }
-  .hero .kicker { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 14px; }
-  .hero h1 { font-family: Georgia, "Times New Roman", Charter, serif; font-size: clamp(2.0rem, 5vw, 3.2rem); line-height: 1.06; letter-spacing: -0.018em; margin: 0 0 18px; font-weight: 700; color: var(--ink); }
-  .hero p.lede { font-size: 1.06rem; line-height: 1.55; color: var(--ink-soft); margin: 0 0 22px; }
-  .hero .cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; background: var(--ink); color: var(--bg); border: 1px solid var(--ink); border-radius: 4px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; }
-  .hero .cta:hover { background: var(--accent); border-color: var(--accent); color: #fff; border-bottom-color: transparent; }
-  .hero .meta { font-size: 13px; color: var(--ink-mute); letter-spacing: 0.04em; font-feature-settings: "tnum"; margin-top: 14px; }
-  .hero-art { width: 100%; max-width: 360px; aspect-ratio: 1 / 1; justify-self: end; }
-  @media (max-width: 720px) { .hero-art { justify-self: start; max-width: 280px; } }
-  .about { margin: 24px 0 56px; padding: 32px 0 0; border-top: 1px solid var(--rule); }
-  .about h2 { font-family: Georgia, "Times New Roman", Charter, serif; font-size: 1.5rem; margin: 0 0 14px; letter-spacing: -0.01em; color: var(--ink); }
-  .about p { margin: 0 0 0.95em; max-width: 66ch; color: var(--ink-soft); line-height: 1.65; }
-  .about p:last-child { margin-bottom: 0; }
-  .about ul.tagrow { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; padding: 0; list-style: none; }
-  .about ul.tagrow li { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 9px; border-radius: 4px; font-weight: 700; line-height: 1; }
-  .about .t-tech { background: #e3edfb; color: #1d4ed8; }
-  .about .t-app { background: #d8efe9; color: #0f766e; }
-  .about .t-econ { background: #def0d8; color: #166534; }
-  .about .t-pol { background: #faecc8; color: #92400e; }
-  .about .t-saf { background: #fbdcd4; color: #9f1239; }
-  .about .t-trend { background: #ead7f4; color: #6b21a8; }
-  @media (prefers-color-scheme: dark) {
-    .about .t-tech { background: #1c2d4a; color: #9ab8ef; }
-    .about .t-app { background: #143434; color: #6dd2c2; }
-    .about .t-econ { background: #1a2e1d; color: #91d29a; }
-    .about .t-pol { background: #3a2a14; color: #e7b878; }
-    .about .t-saf { background: #3a1a1e; color: #f4a6a6; }
-    .about .t-trend { background: #2a1a3a; color: #c6a4ea; }
-  }
-  .ornament { display: flex; justify-content: center; margin: 24px 0 48px; color: var(--accent); opacity: 0.8; }
-  .groups { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-  @media (max-width: 720px) { .groups { grid-template-columns: 1fr; } }
-  section.group { padding: 26px 26px 18px; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
-  section.group header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
-  section.group h2 { font-family: Georgia, "Times New Roman", Charter, serif; font-size: 1.25rem; margin: 0; letter-spacing: -0.005em; color: var(--ink); }
-  .cadence-chip { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; font-weight: 700; color: #fff; line-height: 1; }
-  .cadence-chip.daily { background: var(--cad-daily); }
-  .cadence-chip.weekly { background: var(--cad-weekly); }
-  .cadence-chip.monthly { background: var(--cad-monthly); }
-  .cadence-chip.quarterly { background: var(--cad-quarterly); }
-  .cadence-chip.yearly { background: var(--cad-yearly); }
-  ul.editions { list-style: none; margin: 0; padding: 0; }
-  ul.editions li { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--rule); font-feature-settings: "tnum"; }
-  ul.editions li:last-child { border-bottom: 0; }
-  ul.editions li a { color: var(--ink); font-weight: 500; }
-  ul.editions li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-  ul.editions li .pub { font-size: 12.5px; color: var(--ink-mute); letter-spacing: 0.03em; }
-  .empty { color: var(--ink-mute); font-size: 14px; margin: 4px 0 0; font-style: italic; }
-  footer.colophon { margin-top: 72px; padding-top: 22px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--ink-mute); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-feature-settings: "tnum"; }
-  @media print {
-    body { background: #fff; color: #000; font-size: 11pt; }
-    a { color: #000; }
-    a[href]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
-    section.group { background: #fff; border: 1px solid #ccc; }
-    .hero-art { display: none; }
-  }
-  @media (max-width: 540px) {
-    body { font-size: 17px; }
-    .wrap { padding: 0 18px 64px; }
-    .masthead { padding-top: 24px; }
-    .pubname svg.brandmark { height: 44px; }
-    .hero h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); }
-    section.group { padding: 22px 20px; }
-  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:18px; line-height:1.65; font-feature-settings:"tnum"; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1140px; margin:0 auto; padding:0 24px}
+a{color:var(--ink); text-decoration-color:var(--line); text-underline-offset:3px}
+a:hover{color:var(--accent); text-decoration-color:var(--accent)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",Charter,serif; font-weight:700; letter-spacing:-0.015em; line-height:1.15; margin:0}
+h2{font-size:1.8rem; margin:0 0 1.4rem; letter-spacing:-0.02em}
+h3{font-size:1.15rem; margin:0 0 0.3rem}
+p{margin:0 0 0.9rem}
+
+.masthead{border-bottom:2px solid var(--accent); padding:1.4rem 0 1.1rem}
+.masthead-row{display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap}
+.brand{display:inline-flex; align-items:center; text-decoration:none; color:inherit}
+.brand svg{height:52px; width:auto}
+.edition-info{text-align:right; font-size:0.85rem; color:var(--muted); letter-spacing:0.02em}
+.edition-info .cadence{display:block; text-transform:uppercase; letter-spacing:0.16em; color:var(--accent); font-weight:700; font-size:0.7rem}
+.edition-info .date{font-family:Georgia,serif; font-size:1.15rem; color:var(--ink); font-weight:700}
+
+.hero{display:grid; grid-template-columns:1.3fr 1fr; gap:2.2rem; align-items:center; margin:3rem 0 3.5rem}
+@media (max-width:820px){ .hero{grid-template-columns:1fr} }
+.hero-kicker{text-transform:uppercase; letter-spacing:0.16em; font-size:0.72rem; color:var(--accent); font-weight:700; margin-bottom:0.9rem}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem); letter-spacing:-0.025em; line-height:1.05; margin:0 0 1.1rem}
+.hero .excerpt{font-size:1.1rem; color:var(--muted); margin:0 0 1.6rem; line-height:1.6}
+.cta{display:inline-block; background:var(--accent); color:#fff; padding:0.75rem 1.4rem; border-radius:3px; text-decoration:none; font-weight:600; letter-spacing:0.01em; font-size:0.95rem}
+.cta:hover{color:#fff; opacity:0.9}
+.hero-art{width:100%; height:auto; aspect-ratio:480/360}
+
+.divider{display:flex; justify-content:center; margin:2.5rem 0 2rem; color:var(--accent)}
+.divider svg{height:28px; width:auto}
+
+.archive{margin:2.5rem 0}
+.cadence-section{margin-bottom:3rem}
+.cadence-head{display:flex; align-items:baseline; justify-content:space-between; margin:0 0 1.4rem; gap:1rem; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:0.6rem}
+.cadence-head h2{margin:0; font-size:1.5rem}
+.cadence-head .count{font-family:Georgia,serif; font-style:italic; color:var(--muted); font-size:0.9rem}
+.edition-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:0.9rem}
+.edition-card{border:1px solid var(--line); padding:1rem 1.1rem; border-radius:3px; text-decoration:none; color:inherit; background:var(--bg); transition:border-color 120ms ease}
+.edition-card:hover{border-color:var(--accent); color:var(--ink)}
+.edition-card .cad-chip{display:inline-block; font-size:0.66rem; text-transform:uppercase; letter-spacing:0.14em; font-weight:700; padding:0.18rem 0.5rem; border-radius:2px; margin-bottom:0.5rem}
+.cad-chip.daily{background:var(--cad-daily-bg); color:var(--cad-daily)}
+.cad-chip.weekly{background:var(--cad-weekly-bg); color:var(--cad-weekly)}
+.cad-chip.monthly{background:var(--cad-monthly-bg); color:var(--cad-monthly)}
+.cad-chip.quarterly{background:var(--cad-quarterly-bg); color:var(--cad-quarterly)}
+.cad-chip.yearly{background:var(--cad-yearly-bg); color:var(--cad-yearly)}
+.edition-card .edition-title{font-family:Georgia,serif; font-size:1.1rem; font-weight:700; margin-bottom:0.15rem}
+.edition-card .edition-date{font-size:0.82rem; color:var(--muted); font-style:italic}
+
+.about{margin:4rem 0 2rem; padding:2rem 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.about h2{margin-bottom:1rem}
+.about p{font-size:1.05rem; line-height:1.7; max-width:70ch}
+
+.colophon{margin:3rem 0 2rem; padding:2rem 0 1rem; border-top:2px solid var(--accent); color:var(--muted); font-size:0.85rem; text-align:center; font-family:Georgia,serif; font-style:italic}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header class="masthead">
-    <div class="masthead-row">
-      <div class="pubname">
-        <a class="brandlink" href="index.html" aria-label="Apollo AI News — home">
-          <svg class="brandmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
-            <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
-              <g fill="none" stroke-width="2">
-                <line x1="28" y1="2" x2="28" y2="9"/>
-                <line x1="28" y1="47" x2="28" y2="54"/>
-                <line x1="2" y1="28" x2="9" y2="28"/>
-                <line x1="47" y1="28" x2="54" y2="28"/>
-                <line x1="9.5" y1="9.5" x2="14" y2="14"/>
-                <line x1="42" y1="42" x2="46.5" y2="46.5"/>
-                <line x1="46.5" y1="9.5" x2="42" y2="14"/>
-                <line x1="9.5" y1="46.5" x2="14" y2="42"/>
-              </g>
-              <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
-              <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
-            </g>
-            <g transform="translate(76, 0)" fill="currentColor">
-              <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
-              <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
-            </g>
-          </svg>
-        </a>
-      </div>
-      <div class="edition">
-        <div class="strong">Archive</div>
-        <div>Updated 2026-07-08</div>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div>
-      <p class="kicker">Today's briefing · Daily · 2026-07-08</p>
-      <h1>SpaceXAI ships Grok 4.5 at half the price of Opus 4.7; OpenAI opens GPT-5.6 to the public and launches full-duplex voice.</h1>
-      <p class="lede">Thursday was the tightest overlap of frontier releases since November 2024. SpaceXAI shipped Grok 4.5, the first model since the $60 billion Cursor acquisition closed on June 16, priced at $2 input and $6 output per million tokens on a 1.5-trillion-parameter MoE and available in Grok Build, the SpaceXAI console and every Cursor plan on day one. OpenAI cleared U.S. Commerce sign-off to publicly release GPT-5.6 Sol, Terra and Luna two weeks after the June 26 government-only window opened, and rolled GPT-Live-1 and GPT-Live-1 mini globally as full-duplex voice models that continue speaking while delegating heavy reasoning to GPT-5.5. Google delayed Gemini 3.5 Pro from mid-July to July 17 after scrapping the 2.5 Pro base architecture in favor of a ground-up rebuild. Positron opened a $750 million two-tranche round pricing the Reno inference-chip startup at $3.5 billion first and up to $5 billion second, with proceeds funding the Asimov chip tape-out. Anthropic pushed Claude Cowork to web and mobile with Microsoft 365 write tools for email, calendar, OneDrive and SharePoint, opened Claude for Government Desktop under FedRAMP High authorization and signed UST as an anchor systems integrator with a 20,000-engineer training plan. China's MIIT told domestic developers to remove Claude Code versions 2.1.91 through 2.1.196 over an alleged data-exfiltration backdoor that transmits location and identity without consent. The FTC settled the John Deere right-to-repair suit with a ten-year mandate for dealer-parity access to embedded software. Google published the Gemma 4 technical report open-sourcing dense and MoE checkpoints from 2.3B to 31B under Apache 2.0, with the 31B dense variant leading the open-weight Arena Text leaderboard at 1451 Elo. Hugging Face daily papers pushed RynnWorld-4D, AlayaWorld and RynnWorld-Teleop to the top three trending slots with 210 combined upvotes on embodied world modeling. Tencent Hunyuan's Hierarchical Sparse Attention paper hit 90 percent retrieval at 64x training context length. Cohere released Transcribe Arabic at 25.87 WER under Apache 2.0. Shanghai AI Lab open-sourced Agents-A1, a 35B MoE tuned for long-horizon agent workloads. Mistral open-sourced Robostral Navigate with state-of-the-art R2R-CE. Meta shipped Muse Image and Muse Video with agentic web-search integration. Google DeepMind pushed OmniFlash video generation to public preview at $0.10 per output second. Ollama shipped auto-install support for Claude Code and opencode. Floqer closed a $2 million pre-seed backed by Perplexity's F7 Fund. The NSA's classified benchmarking process for covered frontier models hit its 60-day statutory milestone from Trump's June 2 executive order.</p>
-      <a class="cta" href="daily/2026-07-08.html">Read today's briefing →</a>
-      <p class="meta">27 stories · 2026-07-08 window · 1 hero · 26 rundown · Navy accent</p>
-    </div>
-    <div class="hero-art">
-      <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:100%;aspect-ratio:1/1;">
-        <defs>
-          <linearGradient id="idx-grad" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.55"/>
-            <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.08"/>
-          </linearGradient>
-          <pattern id="idx-grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M20 0 L0 0 0 20" fill="none" stroke="#1e3a8a" stroke-opacity="0.12" stroke-width="0.5"/>
-          </pattern>
-        </defs>
-        <rect width="320" height="320" fill="#1e3a8a" fill-opacity="0.04"/>
-        <rect width="320" height="320" fill="url(#idx-grid)"/>
-
-        <g transform="translate(24,24)" font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
-          <text x="0" y="0" font-size="10" letter-spacing="2.4">2026·07·08 · DAILY · WEDNESDAY</text>
-          <text x="272" y="14" text-anchor="end" font-size="9" letter-spacing="2">27 STORIES · 1 HERO</text>
+<header class="masthead">
+  <div class="wrap masthead-row">
+    <a class="brand" href="./" aria-label="Apollo AI News home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+        <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+          <g fill="none" stroke-width="2">
+            <line x1="28" y1="2" x2="28" y2="9"/>
+            <line x1="28" y1="47" x2="28" y2="54"/>
+            <line x1="2" y1="28" x2="9" y2="28"/>
+            <line x1="47" y1="28" x2="54" y2="28"/>
+            <line x1="9.5" y1="9.5" x2="14" y2="14"/>
+            <line x1="42" y1="42" x2="46.5" y2="46.5"/>
+            <line x1="46.5" y1="9.5" x2="42" y2="14"/>
+            <line x1="9.5" y1="46.5" x2="14" y2="42"/>
+          </g>
+          <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+          <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
         </g>
-
-        <g transform="translate(24,58)" font-family="Georgia,serif" fill="#1e3a8a">
-          <text x="0" y="0" font-size="28" font-weight="700" letter-spacing="-0.02em">GROK 4.5 · $2/$6</text>
-          <text x="0" y="26" font-size="28" font-weight="700" letter-spacing="-0.02em">CURSOR × SPACEXAI</text>
-          <text x="0" y="42" font-size="7" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="1.6" opacity="0.7">1.5T MoE · $60B ACQUISITION · OPUS-CLASS</text>
-        </g>
-
-        <line x1="24" y1="126" x2="296" y2="126" stroke="#1e3a8a" stroke-width="0.6"/>
-
-        <g transform="translate(24,142)" font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
-          <text x="0" y="0" font-size="9" letter-spacing="2">OPENAI · GPT-5.6 PUBLIC · GPT-LIVE-1</text>
-        </g>
-        <g transform="translate(24,156)" font-family="Georgia,serif" fill="#1e3a8a">
-          <text x="0" y="0" font-size="20" font-weight="700" letter-spacing="-0.02em">SOL · TERRA · LUNA</text>
-          <text x="0" y="14" font-size="7" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="1.6" opacity="0.7">FULL-DUPLEX VOICE · DELEGATES TO GPT-5.5</text>
-        </g>
-
-        <g transform="translate(24,190)" font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
-          <text x="0" y="0" font-size="9" letter-spacing="2">GEMINI 3.5 PRO → JUL 17 · REBUILD</text>
-        </g>
-        <g transform="translate(24,204)" font-family="Georgia,serif" fill="#1e3a8a">
-          <text x="0" y="0" font-size="20" font-weight="700" letter-spacing="-0.02em">GEMMA 4 · 31B · 1451 Elo</text>
-          <text x="0" y="14" font-size="7" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="1.6" opacity="0.7">APACHE 2.0 · LEADS OPEN DENSE LEADERBOARD</text>
-        </g>
-
-        <g transform="translate(24,238)" font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
-          <text x="0" y="0" font-size="9" letter-spacing="2">POSITRON · $750M · $3.5B → $5B</text>
-        </g>
-        <g transform="translate(24,252)" font-family="Georgia,serif" fill="#1e3a8a">
-          <text x="0" y="0" font-size="20" font-weight="700" letter-spacing="-0.02em">ASIMOV · NVIDIA RIVAL</text>
-          <text x="0" y="14" font-size="7" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="1.6" opacity="0.7">TAPE-OUT LATE 2026 · PRODUCTION EARLY 2027</text>
-        </g>
-
-        <g transform="translate(24,282)" font-family="Georgia,serif" fill="#1e3a8a">
-          <text x="0" y="0" font-size="15" font-weight="700" letter-spacing="-0.01em">MIIT · CLAUDE CODE BAN</text>
-          <text x="0" y="14" font-size="7" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="1.6" opacity="0.7">v2.1.91–2.1.196 · ALLEGED BACKDOOR · FTC × DEERE · 10 YR</text>
-        </g>
-
-        <g transform="translate(24,306)" font-family="system-ui,sans-serif" font-weight="700" fill="#1e3a8a">
-          <text x="0" y="0" font-size="7" letter-spacing="1.6">UST × ANTHROPIC · 20K · COWORK M365 · FEDRAMP HIGH · UST · FLOQER $2M</text>
-        </g>
-
-        <g stroke="#1e3a8a" stroke-width="1.2" fill="none" opacity="0.55">
-          <line x1="14" y1="14" x2="32" y2="14"/>
-          <line x1="14" y1="14" x2="14" y2="32"/>
-          <line x1="306" y1="306" x2="288" y2="306"/>
-          <line x1="306" y1="306" x2="306" y2="288"/>
-          <line x1="306" y1="14" x2="288" y2="14"/>
-          <line x1="306" y1="14" x2="306" y2="32"/>
-          <line x1="14" y1="306" x2="32" y2="306"/>
-          <line x1="14" y1="306" x2="14" y2="288"/>
+        <g transform="translate(76, 0)" fill="currentColor">
+          <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+          <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
         </g>
       </svg>
+    </a>
+    <div class="edition-info">
+      <span class="cadence">Home</span>
+      <span class="date">2026-07-10</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="hero">
+  <div>
+    <p class="hero-kicker">Today's briefing · 2026-07-10</p>
+    <h1>OpenAI turns GPT-5.6 into a global product, Europe fills with new AI capacity</h1>
+    <p class="excerpt">Thursday closed the July 9 window with OpenAI turning GPT-5.6 Sol, Terra and Luna into a global consumer product, Meta pricing its first fee-based frontier API at $1.25 input, Anthropic patching a transcript-tampering path in Claude Code v2.1.206, and PitchBook logging $412.7B in H1 US venture with AI at 86 percent. Meta broke ground on a 1 GW Alberta build at $9.17B, Cerebras committed 200 MW across France and the Nordics, and the Aether consortium filed for two Strasbourg gigafactory slots.</p>
+    <a class="cta" href="daily/2026-07-10.html">Read today's briefing →</a>
+  </div>
+  <svg class="hero-art" viewBox="0 0 480 360" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="ig1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#115e59" stop-opacity="0.85"/>
+        <stop offset="1" stop-color="#115e59" stop-opacity="0.15"/>
+      </linearGradient>
+      <radialGradient id="ig2" cx="0.6" cy="0.4" r="0.7">
+        <stop offset="0" stop-color="#115e59" stop-opacity="0.4"/>
+        <stop offset="1" stop-color="#115e59" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect x="0" y="0" width="480" height="360" fill="url(#ig2)"/>
+    <g fill="none" stroke="#115e59" stroke-width="1.2" opacity="0.32">
+      <circle cx="240" cy="180" r="50"/>
+      <circle cx="240" cy="180" r="95"/>
+      <circle cx="240" cy="180" r="140"/>
+    </g>
+    <circle cx="240" cy="180" r="42" fill="url(#ig1)"/>
+    <g stroke="#115e59" stroke-width="2" stroke-linecap="round" opacity="0.55">
+      <line x1="240" y1="30" x2="240" y2="55"/>
+      <line x1="240" y1="305" x2="240" y2="330"/>
+      <line x1="90" y1="180" x2="115" y2="180"/>
+      <line x1="365" y1="180" x2="390" y2="180"/>
+      <line x1="130" y1="70" x2="150" y2="90"/>
+      <line x1="330" y1="270" x2="350" y2="290"/>
+      <line x1="350" y1="70" x2="330" y2="90"/>
+      <line x1="150" y1="270" x2="130" y2="290"/>
+    </g>
+    <g fill="#115e59" opacity="0.7">
+      <circle cx="80" cy="90" r="4"/>
+      <circle cx="400" cy="290" r="4"/>
+      <circle cx="410" cy="80" r="4"/>
+    </g>
+  </svg>
+</section>
+
+<div class="divider" aria-hidden="true">
+<svg viewBox="0 0 120 24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="12" r="3" fill="currentColor"/>
+<circle cx="60" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<circle cx="100" cy="12" r="3" fill="currentColor"/>
+</svg>
+</div>
+
+<section class="archive">
+  <section class="cadence-section">
+    <div class="cadence-head"><h2>Daily</h2><span class="count">37 editions</span></div>
+    <div class="edition-grid">
+      <a class="edition-card" href="daily/2026-07-10.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-07-10</div><div class="edition-date">Friday</div></a>
+      <a class="edition-card" href="daily/2026-07-08.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-07-08</div><div class="edition-date">Wednesday</div></a>
+      <a class="edition-card" href="daily/2026-07-04.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-07-04</div><div class="edition-date">Saturday</div></a>
+      <a class="edition-card" href="daily/2026-07-03.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-07-03</div><div class="edition-date">Friday</div></a>
+      <a class="edition-card" href="daily/2026-07-02.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-07-02</div><div class="edition-date">Thursday</div></a>
+      <a class="edition-card" href="daily/2026-07-01.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-07-01</div><div class="edition-date">Wednesday</div></a>
+      <a class="edition-card" href="daily/2026-06-30.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-30</div><div class="edition-date">Tuesday</div></a>
+      <a class="edition-card" href="daily/2026-06-29.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-29</div><div class="edition-date">Monday</div></a>
+      <a class="edition-card" href="daily/2026-06-28.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-28</div><div class="edition-date">Sunday</div></a>
+      <a class="edition-card" href="daily/2026-06-27.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-27</div><div class="edition-date">Saturday</div></a>
+      <a class="edition-card" href="daily/2026-06-26.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-26</div><div class="edition-date">Friday</div></a>
+      <a class="edition-card" href="daily/2026-06-25.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-25</div><div class="edition-date">Thursday</div></a>
+      <a class="edition-card" href="daily/2026-06-24.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-24</div><div class="edition-date">Wednesday</div></a>
+      <a class="edition-card" href="daily/2026-06-23.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-23</div><div class="edition-date">Tuesday</div></a>
+      <a class="edition-card" href="daily/2026-06-20.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-20</div><div class="edition-date">Saturday</div></a>
+      <a class="edition-card" href="daily/2026-06-19.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-19</div><div class="edition-date">Friday</div></a>
+      <a class="edition-card" href="daily/2026-06-18.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-18</div><div class="edition-date">Thursday</div></a>
+      <a class="edition-card" href="daily/2026-06-17.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-17</div><div class="edition-date">Wednesday</div></a>
+      <a class="edition-card" href="daily/2026-06-16.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-16</div><div class="edition-date">Tuesday</div></a>
+      <a class="edition-card" href="daily/2026-06-15.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-15</div><div class="edition-date">Monday</div></a>
+      <a class="edition-card" href="daily/2026-06-14.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-14</div><div class="edition-date">Sunday</div></a>
+      <a class="edition-card" href="daily/2026-06-13.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-13</div><div class="edition-date">Saturday</div></a>
+      <a class="edition-card" href="daily/2026-06-12.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-12</div><div class="edition-date">Friday</div></a>
+      <a class="edition-card" href="daily/2026-06-11.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-11</div><div class="edition-date">Thursday</div></a>
+      <a class="edition-card" href="daily/2026-06-10.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-10</div><div class="edition-date">Wednesday</div></a>
+      <a class="edition-card" href="daily/2026-06-09.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-09</div><div class="edition-date">Tuesday</div></a>
+      <a class="edition-card" href="daily/2026-06-08.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-08</div><div class="edition-date">Monday</div></a>
+      <a class="edition-card" href="daily/2026-06-07.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-07</div><div class="edition-date">Sunday</div></a>
+      <a class="edition-card" href="daily/2026-06-06.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-06</div><div class="edition-date">Saturday</div></a>
+      <a class="edition-card" href="daily/2026-06-05.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-05</div><div class="edition-date">Friday</div></a>
+      <a class="edition-card" href="daily/2026-06-04.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-04</div><div class="edition-date">Thursday</div></a>
+      <a class="edition-card" href="daily/2026-06-03.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-03</div><div class="edition-date">Wednesday</div></a>
+      <a class="edition-card" href="daily/2026-06-02.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-02</div><div class="edition-date">Tuesday</div></a>
+      <a class="edition-card" href="daily/2026-06-01.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-06-01</div><div class="edition-date">Monday</div></a>
+      <a class="edition-card" href="daily/2026-05-31.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-05-31</div><div class="edition-date">Sunday</div></a>
+      <a class="edition-card" href="daily/2026-05-30.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-05-30</div><div class="edition-date">Saturday</div></a>
+      <a class="edition-card" href="daily/2026-05-28.html"><span class="cad-chip daily">Daily</span><div class="edition-title">2026-05-28</div><div class="edition-date">Thursday</div></a>
     </div>
   </section>
-  <div class="ornament" aria-hidden="true">
-    <svg width="96" height="14" viewBox="0 0 96 14" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 7 L12 1 L18 7 L12 13 Z" fill="currentColor"/>
-      <line x1="22" y1="7" x2="42" y2="7" stroke="currentColor" stroke-width="1"/>
-      <circle cx="48" cy="7" r="2.4" fill="none" stroke="currentColor" stroke-width="1.2"/>
-      <line x1="54" y1="7" x2="74" y2="7" stroke="currentColor" stroke-width="1"/>
-      <path d="M78 7 L84 1 L90 7 L84 13 Z" fill="currentColor"/>
-    </svg>
-  </div>
 
-  <div class="groups">
-
-    <section class="group">
-      <header>
-        <h2>Daily</h2>
-        <span class="cadence-chip daily">Daily</span>
-      </header>
-      <ul class="editions">
-        <li><a href="daily/2026-07-08.html">2026-07-08</a><span class="pub">Wednesday · Today</span></li>
-        <li><a href="daily/2026-07-04.html">2026-07-04</a><span class="pub">Saturday</span></li>
-        <li><a href="daily/2026-07-03.html">2026-07-03</a><span class="pub">Friday</span></li>
-        <li><a href="daily/2026-07-02.html">2026-07-02</a><span class="pub">Thursday</span></li>
-        <li><a href="daily/2026-07-01.html">2026-07-01</a><span class="pub">Wednesday</span></li>
-        <li><a href="daily/2026-06-30.html">2026-06-30</a><span class="pub">Tuesday</span></li>
-        <li><a href="daily/2026-06-29.html">2026-06-29</a><span class="pub">Monday</span></li>
-        <li><a href="daily/2026-06-28.html">2026-06-28</a><span class="pub">Sunday</span></li>
-        <li><a href="daily/2026-06-27.html">2026-06-27</a><span class="pub">Saturday</span></li>
-        <li><a href="daily/2026-06-26.html">2026-06-26</a><span class="pub">Friday</span></li>
-        <li><a href="daily/2026-06-25.html">2026-06-25</a><span class="pub">Thursday</span></li>
-        <li><a href="daily/2026-06-24.html">2026-06-24</a><span class="pub">Wednesday</span></li>
-        <li><a href="daily/2026-06-23.html">2026-06-23</a><span class="pub">Tuesday</span></li>
-        <li><a href="daily/2026-06-20.html">2026-06-20</a><span class="pub">Saturday</span></li>
-        <li><a href="daily/2026-06-19.html">2026-06-19</a><span class="pub">Friday</span></li>
-        <li><a href="daily/2026-06-18.html">2026-06-18</a><span class="pub">Thursday</span></li>
-        <li><a href="daily/2026-06-17.html">2026-06-17</a><span class="pub">Wednesday</span></li>
-        <li><a href="daily/2026-06-16.html">2026-06-16</a><span class="pub">Tuesday</span></li>
-        <li><a href="daily/2026-06-15.html">2026-06-15</a><span class="pub">Monday</span></li>
-        <li><a href="daily/2026-06-14.html">2026-06-14</a><span class="pub">Sunday</span></li>
-        <li><a href="daily/2026-06-13.html">2026-06-13</a><span class="pub">Saturday</span></li>
-        <li><a href="daily/2026-06-12.html">2026-06-12</a><span class="pub">Friday</span></li>
-        <li><a href="daily/2026-06-11.html">2026-06-11</a><span class="pub">Thursday</span></li>
-        <li><a href="daily/2026-06-10.html">2026-06-10</a><span class="pub">Wednesday</span></li>
-        <li><a href="daily/2026-06-09.html">2026-06-09</a><span class="pub">Tuesday</span></li>
-        <li><a href="daily/2026-06-08.html">2026-06-08</a><span class="pub">Monday</span></li>
-        <li><a href="daily/2026-06-07.html">2026-06-07</a><span class="pub">Sunday</span></li>
-        <li><a href="daily/2026-06-06.html">2026-06-06</a><span class="pub">Saturday</span></li>
-        <li><a href="daily/2026-06-05.html">2026-06-05</a><span class="pub">Friday</span></li>
-        <li><a href="daily/2026-06-04.html">2026-06-04</a><span class="pub">Thursday</span></li>
-        <li><a href="daily/2026-06-03.html">2026-06-03</a><span class="pub">Wednesday</span></li>
-        <li><a href="daily/2026-06-02.html">2026-06-02</a><span class="pub">Tuesday</span></li>
-        <li><a href="daily/2026-06-01.html">2026-06-01</a><span class="pub">Monday</span></li>
-        <li><a href="daily/2026-05-31.html">2026-05-31</a><span class="pub">Sunday</span></li>
-        <li><a href="daily/2026-05-30.html">2026-05-30</a><span class="pub">Saturday</span></li>
-        <li><a href="daily/2026-05-28.html">2026-05-28</a><span class="pub">Thursday</span></li>
-      </ul>
-    </section>
-
-    <section class="group">
-      <header>
-        <h2>Weekly</h2>
-        <span class="cadence-chip weekly">Weekly</span>
-      </header>
-      <ul class="editions">
-        <li><a href="weekly/2026-W27.html">2026-W27</a><span class="pub">Jun 22 – Jun 28</span></li>
-        <li><a href="weekly/2026-W25.html">2026-W25</a><span class="pub">Jun 08 – Jun 14</span></li>
-        <li><a href="weekly/2026-W24.html">2026-W24</a><span class="pub">Jun 01 – Jun 07</span></li>
-        <li><a href="weekly/2026-W23.html">2026-W23</a><span class="pub">May 18 – May 31</span></li>
-      </ul>
-    </section>
-
-    <section class="group">
-      <header>
-        <h2>Monthly</h2>
-        <span class="cadence-chip monthly">Monthly</span>
-      </header>
-      <ul class="editions">
-        <li><a href="monthly/2026-06.html">2026-06</a><span class="pub">June 2026</span></li>
-        <li><a href="monthly/2026-05.html">2026-05</a><span class="pub">May 2026</span></li>
-      </ul>
-    </section>
-
-    <section class="group">
-      <header>
-        <h2>Quarterly</h2>
-        <span class="cadence-chip quarterly">Quarterly</span>
-      </header>
-      <ul class="editions">
-        <li><a href="quarterly/2026-Q2.html">2026-Q2</a><span class="pub">Apr — Jun 2026</span></li>
-      </ul>
-    </section>
-
-    <section class="group">
-      <header>
-        <h2>Annual</h2>
-        <span class="cadence-chip yearly">Annual</span>
-      </header>
-      <p class="empty">No editions yet.</p>
-    </section>
-
-  </div>
-
-  <section class="about">
-    <h2>What is Apollo AI News?</h2>
-    <p>Apollo AI News publishes daily, weekly, monthly, quarterly and annual editions on what shifted in AI. Each edition is written to be read end-to-end on the page itself, no clicking through to source articles required.</p>
-    <p>Every story carries one or two category tags drawn from a fixed taxonomy. The filter bar in each edition's masthead scopes the page to a single tag so a reader can read only the funding, only the policy, or only the tech.</p>
-    <p>The site is generated and published automatically by a Claude Opus 4.7 agent that searches the web, reads each source article, and writes the summaries in its own words. No prose comes from a template, and no story appears without a real fetched source.</p>
-    <ul class="tagrow" aria-label="Category tags used across editions">
-      <li class="t-tech">Tech</li>
-      <li class="t-app">Application</li>
-      <li class="t-econ">Economic</li>
-      <li class="t-pol">Policy</li>
-      <li class="t-saf">Safety</li>
-      <li class="t-trend">Trend</li>
-    </ul>
+  <section class="cadence-section">
+    <div class="cadence-head"><h2>Weekly</h2><span class="count">4 editions</span></div>
+    <div class="edition-grid">
+      <a class="edition-card" href="weekly/2026-W27.html"><span class="cad-chip weekly">Weekly</span><div class="edition-title">Week 27</div><div class="edition-date">2026 · Jun 29–Jul 5</div></a>
+      <a class="edition-card" href="weekly/2026-W25.html"><span class="cad-chip weekly">Weekly</span><div class="edition-title">Week 25</div><div class="edition-date">2026 · Jun 15–Jun 21</div></a>
+      <a class="edition-card" href="weekly/2026-W24.html"><span class="cad-chip weekly">Weekly</span><div class="edition-title">Week 24</div><div class="edition-date">2026 · Jun 8–Jun 14</div></a>
+      <a class="edition-card" href="weekly/2026-W23.html"><span class="cad-chip weekly">Weekly</span><div class="edition-title">Week 23</div><div class="edition-date">2026 · Jun 1–Jun 7</div></a>
+    </div>
   </section>
 
-  <footer class="colophon">
-    <div><span style="color: var(--ink);">Apollo AI News</span> · Archive · Updated 2026-07-08</div>
-    <div>Self-contained · No external assets · No tracking</div>
-  </footer>
+  <section class="cadence-section">
+    <div class="cadence-head"><h2>Monthly</h2><span class="count">2 editions</span></div>
+    <div class="edition-grid">
+      <a class="edition-card" href="monthly/2026-06.html"><span class="cad-chip monthly">Monthly</span><div class="edition-title">June 2026</div><div class="edition-date">Month in review</div></a>
+      <a class="edition-card" href="monthly/2026-05.html"><span class="cad-chip monthly">Monthly</span><div class="edition-title">May 2026</div><div class="edition-date">Month in review</div></a>
+    </div>
+  </section>
 
-</div>
+  <section class="cadence-section">
+    <div class="cadence-head"><h2>Quarterly</h2><span class="count">1 edition</span></div>
+    <div class="edition-grid">
+      <a class="edition-card" href="quarterly/2026-Q2.html"><span class="cad-chip quarterly">Quarterly</span><div class="edition-title">Q2 2026</div><div class="edition-date">Quarter in review</div></a>
+    </div>
+  </section>
+
+  <section class="cadence-section">
+    <div class="cadence-head"><h2>Annual</h2><span class="count">0 editions</span></div>
+    <div class="edition-grid">
+      <div class="edition-card" style="opacity:0.5"><span class="cad-chip yearly">Annual</span><div class="edition-title">No editions yet</div><div class="edition-date">First annual publishes at year-end</div></div>
+    </div>
+  </section>
+</section>
+
+<section class="about">
+  <h2>What is Apollo AI News?</h2>
+  <p>Apollo AI News publishes daily, weekly, monthly, quarterly and annual briefings on artificial intelligence. Each edition is written to be read end-to-end on the page itself, with 800 to 1500 words per story drawn from source reporting rather than a summary that sends the reader elsewhere. Coverage is tagged by category (Tech, Application, Economic, Policy, Safety, Trend) and the masthead filter scopes any edition to a single tag.</p>
+  <p>The site is generated and published automatically by a Claude Opus 4.7 agent that searches the web, reads source articles, and writes the summaries. No trackers, no external assets, no fabricated stories. Every cited URL is a real link and was fetched during composition.</p>
+</section>
+
+</main>
+
+<footer class="colophon wrap">
+<p>Apollo AI News · Editorial AI briefings · Generated 2026-07-10 by a Claude Opus 4.7 agent.</p>
+</footer>
+
 </body>
 </html>
