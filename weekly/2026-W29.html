@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Weekly · 2026-W29</title>
+<meta name="description" content="Moonshot's Kimi K3 landed Thursday at 2.8 trillion parameters, topped the Frontend Code Arena over Claude Fable 5 and GPT-5.6 Sol, and triggered the sharpest single-day AI-equity repricing since DeepSeek. TSMC dropped 7 percent Friday, SoftBank 9, Z.ai 27, MiniMax 16, and Anthropic reversed its Claude Fable 5 pricing within hours, bundling the model back into Max and Team Premium at half its previous usage limits. Google DeepMind finally shipped Gemini 3.5 Pro at $1.25 in and $10 out per million tokens after a full architectural rebuild. Xi Jinping opened the Shanghai WAIC in person, 29 states signed the founding WAICO charter, and Huawei unveiled the Atlas 950 SuperPoD at 8,192 Ascend NPUs delivering 1 exaflop at FP8 without a single US-origin die. Meta pushed Louisiana's Hyperion to 5 gigawatts and past $50 billion. TSMC lifted 2026 capex to $60-64 billion, added $100 billion to Arizona and posted a 77 percent Q2 profit surge. Microsoft shipped a record 570-CVE Patch Tuesday credited to an AI-powered vulnerability-discovery system, and a two-CVE WordPress pre-auth RCE chain went public with a working PoC inside 24 hours.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#881337;
+  --accent-soft:rgba(136,19,55,0.10);
+  --tag-tech:rgba(30,58,138,0.10);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.12);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#fda4af;
+    --accent-soft:rgba(253,164,175,0.14);
+    --tag-tech:rgba(147,197,253,0.16);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(45,212,191,0.16);
+    --tag-application-ink:#5eead4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  font-feature-settings:"kern","liga";
+}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.edition-meta .range{display:block;margin-top:2px;letter-spacing:0.08em;text-transform:none;font-size:0.75rem}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.16rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.16rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.themes{margin:24px 0 8px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media (max-width:780px){.themes{grid-template-columns:1fr}}
+.theme{padding:18px 18px 14px;border:1px solid var(--rule);border-radius:6px;background:var(--card)}
+.theme header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.theme header svg{width:28px;height:28px;flex-shrink:0}
+.theme h3{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.06rem;margin:0;letter-spacing:-0.005em}
+.theme p{margin:0;font-size:0.96rem;line-height:1.55;color:var(--ink)}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:96px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.subsection-head{margin:38px 0 18px;display:flex;align-items:baseline;gap:14px}
+.subsection-head h3{font-family:Georgia,serif;margin:0;font-size:1.12rem;letter-spacing:0.02em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.subsection-head .rule{flex:1;height:1px;background:var(--rule)}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:12px}.story-thumb{aspect-ratio:320/80;width:100%;height:auto}}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-size:0;letter-spacing:normal;color:var(--accent);font-weight:700;border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:" Collapse \25B4";font-size:0.76rem;letter-spacing:0.12em}
+.story:not([open]) .expand-control::after{content:" Read in full \25BE";font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1/-1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:0.84rem;color:var(--muted)}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2" y1="28" x2="9" y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5" y1="9.5" x2="14" y2="14"/>
+          <line x1="42" y1="42" x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5" x2="42" y2="14"/>
+          <line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Weekly · 2026-W29</strong>
+    <span class="range">Jul 13 – Jul 19, 2026</span>
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<details class="story hero" id="hero" data-tags="tech economic">
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-tech">Tech</span>
+        <span class="tag tag-economic">Economic</span>
+      </div>
+      <h1>Moonshot's Kimi K3 tops Frontend Code Arena, wipes trillion-plus off the AI complex in a single Friday session</h1>
+      <p class="dek">Beijing-based Moonshot flipped Kimi K3 on Thursday, July 16 at 2.8 trillion parameters with a one-million-token window, opened Elo 1,679 on Arena's Frontend Code leaderboard against Claude Fable 5 at 1,631 and GPT-5.6 Sol at 1,618, and priced the model at $3 input and $15 output per million tokens ahead of a full open-weights drop targeted for July 27. Friday's follow-through was violent. TSMC fell 7 percent despite reporting a 77 percent Q2 profit surge 24 hours earlier, SoftBank shed 9 percent, SK Hynix another 11.5 percent, Alphabet 4.4 percent, Meta 2.4 percent, and Hong Kong peers Z.ai and MiniMax crashed 27 and 16 percent. Anthropic capitulated within hours, permanently bundling Claude Fable 5 back into Max and Team Premium plans at 50 percent of the previous usage limits from Monday, July 20.</p>
+      <p class="kicker">Simon Willison · dnyuz / Bloomberg · 2026-07-16 (launch) & 2026-07-18 (repricing) · <a href="https://simonwillison.net/2026/Jul/16/kimi-k3/" target="_blank" rel="noopener">Source ↗</a> · <span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-color="#881337" stop-opacity="0.05"/>
+          <stop offset="1" stop-color="#881337" stop-opacity="0.55"/>
+        </linearGradient>
+      </defs>
+      <rect width="480" height="320" fill="none"/>
+      <g transform="translate(32,20)" font-family="system-ui,sans-serif" fill="#881337">
+        <text x="0" y="0" font-size="9" font-weight="700" letter-spacing="2.4">FRIDAY 2026-07-17 · CLOSING BELL</text>
+        <line x1="0" y1="8" x2="416" y2="8" stroke="#881337" stroke-width="0.7"/>
+      </g>
+      <g transform="translate(32,60)" font-family="Georgia,serif" fill="#881337">
+        <text x="0" y="0" font-size="34" font-weight="700">THE KIMI MOMENT</text>
+      </g>
+      <g transform="translate(32,110)" font-family="system-ui,sans-serif" fill="#881337">
+        <g font-size="10" font-weight="700" letter-spacing="1.2">
+          <text x="0" y="0">TSMC</text>
+          <text x="0" y="22">SOFTBANK</text>
+          <text x="0" y="44">SK HYNIX</text>
+          <text x="0" y="66">Z.AI</text>
+          <text x="0" y="88">MINIMAX</text>
+          <text x="0" y="110">ALPHABET</text>
+          <text x="0" y="132">META</text>
+          <text x="0" y="154">NVIDIA</text>
+        </g>
+        <g transform="translate(96,-8)">
+          <rect x="0" y="0" width="140" height="12" fill="url(#hg)"/>
+          <rect x="0" y="22" width="180" height="12" fill="url(#hg)"/>
+          <rect x="0" y="44" width="230" height="12" fill="url(#hg)"/>
+          <rect x="0" y="66" width="308" height="12" fill="url(#hg)"/>
+          <rect x="0" y="88" width="212" height="12" fill="url(#hg)"/>
+          <rect x="0" y="110" width="88" height="12" fill="url(#hg)"/>
+          <rect x="0" y="132" width="48" height="12" fill="url(#hg)"/>
+          <rect x="0" y="154" width="24" height="12" fill="url(#hg)"/>
+        </g>
+        <g transform="translate(244,-8)" font-size="10" font-weight="700" font-feature-settings="tnum" text-anchor="end">
+          <text x="70" y="10">−7.0%</text>
+          <text x="110" y="32">−9.0%</text>
+          <text x="160" y="54">−11.5%</text>
+          <text x="230" y="76">−27.0%</text>
+          <text x="140" y="98">−16.0%</text>
+          <text x="20" y="120">−4.4%</text>
+          <text x="0" y="142" fill="#881337">−2.4%</text>
+          <text x="-32" y="164" fill="#881337">−1.2%</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+
+<p>Moonshot AI released Kimi K3 on Thursday, July 16 at roughly 15:00 Beijing time. The model is a mixture-of-experts architecture at 2.8 trillion total parameters with a native one-million-token context window and native video and image inputs. Moonshot published the launch pricing at $3 per million input tokens and $15 per million output tokens through its own API and via partners including Together AI, Fireworks and OpenRouter, with the full open weights targeted for release on Hugging Face on July 27 and an intermediate developer preview drop on July 22. The API opened at scale immediately.</p>
+
+<p>The number that drove the week landed within eight hours. Arena.ai's Frontend Code leaderboard, the benchmark professional developers have converged on for code-agent evaluation, opened Kimi K3 at Elo 1,679. Claude Fable 5 sat at 1,631 and GPT-5.6 Sol at 1,618. Bank of America's coverage note pegged Kimi K3's effective per-task cost at roughly half of Sol's for equivalent output length once the shorter completion times were factored in. The Elo lead is narrow in absolute terms and Fable 5 remains ahead on longer-horizon reasoning suites, but Frontend Code is the leaderboard the industry uses to price coding-agent seats. The number moved the pricing conversation immediately.</p>
+
+<h4>The Friday repricing</h4>
+
+<p>The market reaction lagged by roughly 24 hours as Wednesday's Kimi headlines were absorbed. Friday, July 17 opened with the Asian sessions selling first. TSMC in Taipei closed down 7 percent despite having reported a 77 percent year-over-year profit surge to NT$706.56 billion on Thursday morning and lifting 2026 capex guidance to $60-64 billion. SoftBank in Tokyo shed 9 percent as investors reassessed the Stargate spend thesis in the shadow of a viable open-weight frontier. SK Hynix in Seoul lost another 11.5 percent in what became the fourth consecutive down session for the memory sector, dragging Samsung more than 8 percent lower. The Kospi closed the session down 4.4 percent, its worst single day of 2026.</p>
+
+<p>New York followed. Alphabet closed down 4.4 percent to $353.81 on renewed questions about the delayed Gemini 3.5 Pro cycle. Meta gave up 2.4 percent. Nvidia lost 1.2 percent and briefly ceded the world's-most-valuable-company slot to Apple at $4.88 trillion intraday before recapturing the top spot by the close at $4.92 trillion. The Hong Kong-listed Chinese AI peers took the hardest damage on the theory that Kimi K3 makes their own model layers less differentiated: Z.ai crashed 27 percent, MiniMax 16 percent, and Baichuan 11 percent. Bitcoin and the major cryptocurrencies followed the AI complex lower as crypto traded as an AI-capex proxy through the day.</p>
+
+<blockquote class="pull-quote">"This is the second DeepSeek moment in 18 months. The first one was a shock. The second one erases the assumption that the frontier is a US-only construction, which is a different kind of pricing event."<cite>— Dylan Patel, SemiAnalysis, quoted in Bloomberg (2026-07-18)</cite></blockquote>
+
+<h4>Anthropic capitulates inside 48 hours</h4>
+
+<p>The clearest downstream signal came from Anthropic. Claude Fable 5 had launched in June at a metered-only $10 input and $50 output per million tokens with a rolling 5-hour bundle inside Max and Team Premium seat plans. On Sunday, July 19 at 20:04 UTC, Anthropic announced that Fable 5 would be permanently bundled into Max and Team Premium plans starting Monday, July 20, at 50 percent of the previous usage limits with no metered surcharge for in-bundle consumption. Pro and Team Standard reverted to API-only access with a one-time $100 credit. The-Decoder's coverage read the move as an acknowledgement that a mid-tier professional developer buying a subscription now had a plausible non-Anthropic path to a comparably-priced frontier coding model.</p>
+
+<p>The Anthropic reversal has a specific inside-baseball read. Since Claude Fable 5 shipped in June, Anthropic had held the position that metered pricing was the future because the model was expensive to serve at any bundle price the market would accept. Kimi K3 broke that argument by proving that a comparable coding-agent capability could be served at a $3/$15 price point without a metered wrapper. The reversal is a real-time repricing of what a Fable-class token is worth on the enterprise seat side.</p>
+
+<h4>What Kimi K3 actually is</h4>
+
+<p>Simon Willison's post, which was the first English-language technical write-up to fetch numbers directly from Moonshot's model card, described the architecture in detail. Kimi K3 uses 896 experts with 16 active per token, a Kimi Delta Attention hybrid layer, and MXFP4 quantization-aware training with 32-bit master weights. The Frontend Code Arena result comes with the caveats that Arena is a preference benchmark with known selection effects and that the training data cutoff is not fully disclosed. Willison called the compact-context inference numbers "extraordinary for a Chinese open-weight release" and flagged the July 27 weights drop as the event to watch, since API-only frontier models cannot be independently evaluated the way open-weights ones can.</p>
+
+<blockquote class="pull-quote">"The K3 model card claims a 40 percent reduction in cost per correct answer against Sol on their internal FrontierBench. The number I want to see is the same figure on the SWE-Bench Pro suite after the July 27 weights drop, when we can run it locally."<cite>— Simon Willison, 2026-07-16</cite></blockquote>
+
+<p>The DIGITIMES Friday analysis, syndicated by Japan Times, framed Kimi K3 as the second DeepSeek moment in 18 months, this time confirming rather than surprising. The National ran a Fortune-sourced profile of Yang Zhilin, Moonshot's 32-year-old founder, whose Carnegie Mellon PhD advisor Russ Salakhutdinov confirmed that Yang had multiple US tech job offers including Apple as he finished his 2019 doctorate but chose to return to China. American Bazaar's essay ran under the headline "AI's Linux moment" and argued that the trillion-dollar closed-model stack now has to price against something.</p>
+
+<p class="source-footer"><a href="https://simonwillison.net/2026/Jul/16/kimi-k3/" target="_blank" rel="noopener">Read source →</a> · <a href="https://dnyuz.com/2026/07/18/markets-may-have-just-experienced-their-second-deepseek-shock-this-time-thanks-to-a-chinese-ai-lab-named-after-a-pink-floyd-album/" target="_blank" rel="noopener">Bloomberg market reaction ↗</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-labelledby="bp-label">
+  <span class="label" id="bp-label">The Week in AI</span>
+  <div>
+    <p>Kimi K3 rewrote the pricing curve for frontier coding-agent capacity, and by Friday's close a trillion-plus dollars of AI-adjacent equity had repriced against the possibility that the frontier is not a US-only construct. Google DeepMind shipped Gemini 3.5 Pro at $1.25 in and $10 out after a full architectural rebuild, undercutting Claude Fable 5 on output by roughly four times. Xi Jinping opened the Shanghai WAIC in person for the first time since 2018, 29 countries signed the founding WAICO charter with headquarters in Shanghai, and Huawei walked the Atlas 950 SuperPoD onto the exhibition floor at 8,192 Ascend NPUs and 1 exaflop of FP8, built without a single US-origin die.</p>
+    <p>Compute buildout crossed new physical thresholds. Meta pushed Louisiana's Hyperion to 5 gigawatts and past $50 billion, the largest single AI campus disclosed to date. TSMC lifted 2026 capex to $60-64 billion, added $100 billion to Arizona for a $265 billion cumulative US commitment and reported a 77 percent Q2 profit surge. Nvidia and Japan's METI stood up a 140-megawatt Vera Rubin national AI factory with 13,750 CPUs and 27,500 GPUs. Anthropic capitulated on Claude Fable 5 pricing within 48 hours of the Kimi drop, bundling the model back into Max and Team Premium at half its previous limits. DeepSeek priced a $7 billion pre-IPO round at approximately $74 billion post-money for a Shanghai STAR filing before year-end. Cadence turned agentic AI on for chip and packaging design. Microsoft shipped a record 570-CVE Patch Tuesday credited to an AI-powered vulnerability-discovery pipeline, and a two-CVE WordPress pre-auth RCE chain went public with a working PoC inside 24 hours of disclosure.</p>
+  </div>
+</section>
+
+<section class="themes" aria-label="Themes this week">
+
+  <article class="theme">
+    <header>
+      <svg viewBox="0 0 28 28" aria-hidden="true" role="presentation">
+        <path d="M4 22 L14 6 L24 22 Z" fill="none" stroke="#881337" stroke-width="1.2"/>
+        <circle cx="10" cy="16" r="1.5" fill="#881337"/>
+        <circle cx="14" cy="12" r="1.5" fill="#881337"/>
+        <circle cx="18" cy="16" r="1.5" fill="#881337"/>
+      </svg>
+      <h3>Chinese open-weight surge collapses Western closed-model pricing</h3>
+    </header>
+    <p>Kimi K3's Elo 1,679 opening on Arena's Frontend Code leaderboard against Fable 5 at 1,631 forced Anthropic to reverse its Fable 5 metering inside 48 hours. DeepSeek priced a $7 billion pre-IPO round at approximately $74 billion post-money less than six weeks after its June close and targeted a Shanghai STAR filing before year-end. Xi Jinping opened WAIC in person, 29 states signed the founding WAICO charter, and Global Times pegged Chinese AI models at 41 percent of daily Hugging Face downloads. Huawei's Atlas 950 SuperPoD hit the exhibition floor without a single US-origin die.</p>
+  </article>
+
+  <article class="theme">
+    <header>
+      <svg viewBox="0 0 28 28" aria-hidden="true" role="presentation">
+        <rect x="4" y="18" width="4" height="6" fill="#881337"/>
+        <rect x="10" y="12" width="4" height="12" fill="#881337" fill-opacity="0.75"/>
+        <rect x="16" y="6" width="4" height="18" fill="#881337" fill-opacity="0.55"/>
+        <rect x="22" y="2" width="4" height="22" fill="#881337" fill-opacity="0.35"/>
+      </svg>
+      <h3>AI compute crosses new physical thresholds</h3>
+    </header>
+    <p>Meta pushed Louisiana Hyperion to 5 gigawatts and past $50 billion, the single largest AI campus disclosed to date, with Zuckerberg confirming to Bloomberg that Meta may rent excess capacity to third parties. TSMC added $100 billion to its Arizona commitment for $265 billion cumulative across four more 2-nanometer fabs and lifted 2026 capex to $60-64 billion. Nvidia and Japan's METI stood up a 140-megawatt Vera Rubin national AI factory. Fireworks AI closed a $1.5 billion Series D at $17.5 billion on 40 trillion daily tokens served, 95 percent from specialized models.</p>
+  </article>
+
+  <article class="theme">
+    <header>
+      <svg viewBox="0 0 28 28" aria-hidden="true" role="presentation">
+        <rect x="4" y="6" width="8" height="8" fill="none" stroke="#881337" stroke-width="1"/>
+        <rect x="16" y="6" width="8" height="8" fill="none" stroke="#881337" stroke-width="1"/>
+        <rect x="4" y="16" width="8" height="8" fill="none" stroke="#881337" stroke-width="1"/>
+        <rect x="16" y="16" width="8" height="8" fill="none" stroke="#881337" stroke-width="1"/>
+        <line x1="12" y1="10" x2="16" y2="10" stroke="#881337" stroke-width="0.8"/>
+        <line x1="12" y1="20" x2="16" y2="20" stroke="#881337" stroke-width="0.8"/>
+        <line x1="8" y1="14" x2="8" y2="16" stroke="#881337" stroke-width="0.8"/>
+        <line x1="20" y1="14" x2="20" y2="16" stroke="#881337" stroke-width="0.8"/>
+      </svg>
+      <h3>Agents move up the value chain into professional workflows</h3>
+    </header>
+    <p>Cadence opened orders on AuraStack as the first agentic AI platform for PCB and advanced chip packaging, with Nvidia, TSMC and Schneider Electric as launch customers and a claimed 50 percent time-to-market cut. OpenAI shipped ChatGPT Work on GPT-5.6 and folded the standalone Atlas browser into the new agent surface with tabs, autofill and a cloud browser inside. Meta launched Meta Business Agent for enterprise agent deployment across WhatsApp, Messenger and Instagram. The framing shift from chatbot to agent that started in Q1 now has domain-specialized products at the top of the stack.</p>
+  </article>
+
+  <article class="theme">
+    <header>
+      <svg viewBox="0 0 28 28" aria-hidden="true" role="presentation">
+        <circle cx="14" cy="14" r="10" fill="none" stroke="#881337" stroke-width="1"/>
+        <path d="M14 4 L14 24" stroke="#881337" stroke-width="0.7"/>
+        <path d="M4 14 L24 14" stroke="#881337" stroke-width="0.7"/>
+        <circle cx="14" cy="14" r="3" fill="#881337"/>
+      </svg>
+      <h3>Security debt outpaces AI-enabled defense</h3>
+    </header>
+    <p>Microsoft shipped 570 CVEs in a single Patch Tuesday, its largest single-month release on record, and credited an internal AI-powered vulnerability-discovery pipeline for the surge. Three of those CVEs were zero-days already under active exploitation, including a SharePoint Server unauthenticated deserialization RCE that CISA added to the KEV catalog with a two-day federal patch deadline. A two-CVE WordPress core chain (CVE-2026-63030 with CVE-2026-60137) enabled pre-auth RCE on default installs, and a working PoC went public inside 24 hours of the emergency 6.9.5, 7.0.2 and 6.8.6 releases. OpenAI disclosed GPT-Red, an internal-only self-play adversarial model that cut GPT-5.6 Sol prompt-injection failures to 0.05 percent from 0.31 percent, a six-fold reduction over the best production model from March.</p>
+  </article>
+
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 96 18" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="9" r="2.4" fill="#881337"/>
+    <line x1="20" y1="9" x2="40" y2="9" stroke="#881337" stroke-width="0.7"/>
+    <path d="M46 3 L50 9 L46 15 L42 9 Z" fill="none" stroke="#881337" stroke-width="1.2"/>
+    <line x1="54" y1="9" x2="74" y2="9" stroke="#881337" stroke-width="0.7"/>
+    <circle cx="84" cy="9" r="2.4" fill="none" stroke="#881337" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<div class="section-head">
+  <h2>The week in full</h2>
+  <span class="count"><span class="count-num">14</span> stories · Jul 13 – Jul 19, 2026</span>
+</div>
+
+<div class="cards">
+
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="120" height="80" fill="none"/>
+    <text x="8" y="26" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#881337">3.5 PRO</text>
+    <line x1="8" y1="34" x2="112" y2="34" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="48">2M CONTEXT</text>
+      <text x="8" y="60">$1.25 IN · $10 OUT</text>
+      <text x="8" y="72">DEEP THINK · ULTRA</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Google DeepMind ships Gemini 3.5 Pro after a full rebuild, at $1.25 input and $10 output</h3>
+    <p class="kicker">Central Jersey / Google · 2026-07-17 (rolling GA July 18) · <a href="https://centraljersey.com/2026/07/17/google-gemini-3-5-pro-launch-what-to-expect/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Gemini 3.5 Pro landed Friday after multiple slips, a 2-million-token window, a Deep Think reasoning tier gated behind the $250-per-month Ultra plan, and API pricing at $1.25 input and $10 output. Deep Think undercuts Claude Fable 5 on output by roughly four times. Bloomberg had reported Thursday the launch was late because a late-June coding-data retrain fell flat.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Google DeepMind shipped Gemini 3.5 Pro on Friday, July 18 after two prior slips and a full architectural rebuild that Bloomberg's Thursday preview reported as a response to a late-June coding-data retrain that returned worse than Gemini 3.0 on the internal SWE-Bench Pro evaluations. The Gemini API surfaced the new model as `gemini-3.5-pro` at 09:12 PT with a 2-million-token native context window, up from the 1-million on Gemini 3.0, and rolled the model into the Gemini app, Vertex AI, and Google Cloud AI Studio through the day. Pricing landed at $1.25 per million input tokens and $10 per million output tokens on the standard tier.</p>
+
+<p>The pricing is the number the market read first. At $10 output per million tokens, Gemini 3.5 Pro undercuts Anthropic's Claude Fable 5 output pricing by roughly a factor of four and OpenAI's GPT-5.6 Sol by more than a factor of three. The undercut is deliberate and matches the pattern DeepMind has run on every Gemini generation since 3.0 in December: launch at the price the customer wants, not at the price the model costs, and use TPU cost advantage to hold margin. The 2-million-token window is the operational feature that matters for coding-agent workflows on large monorepos; the Deep Think reasoning tier is the capability play.</p>
+
+<h4>Deep Think and the Ultra tier</h4>
+
+<p>Deep Think is a separate reasoning-time compute layer that runs on top of the base model. It is gated behind the $250-per-month Gemini Ultra consumer subscription and behind a separate Vertex API endpoint on the enterprise side. DeepMind published SWE-Bench Verified numbers of 78.9 percent for base Gemini 3.5 Pro and 84.4 percent with Deep Think enabled, both trailing Kimi K3's Elo lead on Arena's Frontend Code by a narrow margin but pricing at less than half. The Deep Think latency floor is 40 seconds for a typical request, which reads as a positioning against Anthropic's Extended Thinking rather than as a real-time interactive feature.</p>
+
+<blockquote class="pull-quote">"Gemini 3.5 Pro is a rebuild, not a refresh. The June retrain came in worse than 3.0 on coding, and rather than ship it we tore the pretraining data mix apart and started over. The model we shipped today is the model we should have shipped in May."<cite>— Sundar Pichai, Alphabet CEO, in an X post July 18</cite></blockquote>
+
+<h4>Delayed and shipped into a Kimi week</h4>
+
+<p>The launch timing was the awkward part. Bloomberg had reported Thursday, the same day Kimi K3 shipped, that Gemini 3.5 Pro was months late and that Alphabet had lost 4.4 percent in the session on the confluence of the Kimi launch and the Gemini delay. DeepMind shipped inside 24 hours of that report. Alphabet closed Friday down another 4.4 percent as the market read Deep Think's SWE-Bench numbers against Kimi K3's Frontend Code lead. The Deep Think Ultra tier launched with over-capacity limits inside the first six hours; DeepMind's status page acknowledged the demand cap and raised the queue slot allocation by 3x overnight.</p>
+
+<p class="source-footer"><a href="https://centraljersey.com/2026/07/17/google-gemini-3-5-pro-launch-what-to-expect/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g font-family="Georgia,serif" fill="#881337">
+      <text x="6" y="30" font-size="30" font-weight="700">29</text>
+      <text x="42" y="30" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.4">FOUNDING</text>
+      <text x="42" y="42" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.4">STATES</text>
+    </g>
+    <line x1="6" y1="50" x2="114" y2="50" stroke="#881337" stroke-width="0.6"/>
+    <text x="6" y="64" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">WAICO · SHANGHAI</text>
+    <text x="6" y="76" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">5,000 TRAINING SEATS</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">Xi opens WAIC in person, 29 states sign the founding WAICO charter with headquarters in Shanghai</h3>
+    <p class="kicker">Al Jazeera · TechTimes · 2026-07-17 · <a href="https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Xi Jinping opened the Shanghai WAIC in person for the first time since 2018 and framed it around open-source and international cooperation. Twenty-nine states signed on to found the World AI Cooperation Organization headquartered in Shanghai. Beijing pledged 5,000 developing-country training placements over five years, six regional cooperation centres, and free access to the MAZU meteorological warning system for 30 partner countries.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Xi Jinping delivered the opening address at the 2026 World Artificial Intelligence Conference in Shanghai on Thursday, July 17, his first in-person WAIC appearance since 2018. The centrepiece announcement was the founding of the World AI Cooperation Organization, WAICO, with 29 signatory states and its headquarters designated for Shanghai. The signatory list includes members of ASEAN, the Arab League, the African Union, CARICOM, the Shanghai Cooperation Organisation and the BRICS bloc, plus a handful of European and Latin American states that came in as observers pending domestic ratification. Xi framed the organisation as a peer institution to United Nations agencies rather than an alternative, but the deliberate exclusion of the US, UK and EU-27 from the founding list marks the organisation as a China-led governance vehicle in practice.</p>
+
+<p>The commitments Xi paired with the WAICO founding are concrete. Beijing committed 5,000 developing-country training placements over five years, funded by the Chinese Ministry of Science and Technology, with the first tranche of 1,000 seats opening in September at Chinese universities under a curriculum coordinated by the Chinese Academy of Sciences. Six regional cooperation centres are being stood up: one each with ASEAN in Kuala Lumpur, the Arab League in Riyadh, the African Union in Addis Ababa, CARICOM in Kingston, the SCO in Tashkent, and BRICS in Rio de Janeiro. Xi also pledged free access to the MAZU AI meteorological warning system for 30 partner countries in the developing world.</p>
+
+<blockquote class="pull-quote">"Artificial intelligence should not become the exclusive game of a few countries and a few companies. Open source and open cooperation are the direction."<cite>— Xi Jinping, WAIC 2026 opening address, 2026-07-17</cite></blockquote>
+
+<h4>The download numbers and the pricing case</h4>
+
+<p>Global Times, syndicating figures from Beijing's Cyberspace Administration, reported that Chinese AI models accounted for 41 percent of daily Hugging Face downloads in the week leading up to WAIC, up from 27 percent in April. A MiniMax executive on the WAIC panel with Andrew Yao claimed that Chinese open-source models had passed 10 billion cumulative downloads across the Qwen, DeepSeek, MiniMax, Kimi, Yi and Baichuan families. The framing across the WAIC keynotes was that Chinese open-weight distribution has closed the frontier gap on the model layer and that the remaining US advantage sits in chip supply, not model capability.</p>
+
+<p>WAICA opened on the second day as WAIC's first peer-reviewed academic track under Turing laureate Andrew Yao's chairmanship, with 57 accepted papers spanning LLM reasoning, multimodal, robotics, systems and safety. The exhibition floor drew 1,100 exhibitors, 300-plus product debuts and 140 forum sessions over four days. AGIBOT deployed more than 30 humanoids across the venues and named its A3 Ultra "Gem of the Exhibition." Nubia formalized the NaviX Ultra as the world's first agent-native smartphone with OS-level Doubao permissions and a dedicated orange AI button.</p>
+
+<p class="source-footer"><a href="https://www.aljazeera.com/news/2026/7/17/chinas-xi-jinping-launches-new-ai-alliance-what-is-it" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g font-family="Georgia,serif" fill="#881337">
+      <text x="6" y="28" font-size="22" font-weight="700">8,192</text>
+    </g>
+    <text x="6" y="42" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">ASCEND NPUs · 16 CABS</text>
+    <line x1="6" y1="48" x2="114" y2="48" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="6" y="62">1 EF FP8 · 2 EF FP4</text>
+      <text x="6" y="74">NO US-ORIGIN SILICON</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Huawei walks the Atlas 950 SuperPoD onto the WAIC floor, 8,192 Ascend NPUs built without US silicon</h3>
+    <p class="kicker">Seoul Economic Daily · 2026-07-17 · <a href="https://en.sedaily.com/international/2026/07/17/huawei-unveils-atlas-950-superpod-linking-thousands-of-ai" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Huawei debuted the Atlas 950 SuperPoD as WAIC's marquee hardware unveil. The system links 1,024 Ascend 950DT NPUs across 16 cabinets over the proprietary UnifiedBus 2.0 fabric for 1 exaflop at FP8, 2 exaflops at FP4, and 256TB of globally addressable memory, and scales to 8,192 chips without any US-origin silicon.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Huawei's WAIC hardware keynote on Thursday, July 17 was structured around a single unveil: the Atlas 950 SuperPoD, a rack-scale AI training system that Huawei positioned as its first credible answer to Nvidia's GB200 NVL72. The base configuration links 1,024 Ascend 950DT NPUs across 16 cabinets over Huawei's proprietary UnifiedBus 2.0 fabric. Sustained aggregate performance is 1 exaflop at FP8 and 2 exaflops at FP4 with 256 terabytes of globally addressable memory. The system scales in configuration to 8,192 Ascend chips inside a single fabric domain, and Huawei confirmed on the keynote that the full stack from chip through fabric through system integration is built without any US-origin silicon.</p>
+
+<p>The Ascend 950DT specification underneath is the more consequential detail. The chip is Huawei's first native FP4 tensor core, uses a 5-nanometer SMIC N+2 process, and lands 32 teraflops of FP8 per die at 400 watts. The FP4 mode is the target for inference and the FP8 mode for training; UnifiedBus 2.0 gives Huawei the equivalent of Nvidia's NVLink 5 with a sub-microsecond one-hop latency inside the rack and a sub-3-microsecond hop across the 16-cabinet fabric. The 256TB globally addressable memory is what makes the training story credible: DeepSeek and Moonshot have both said publicly that memory bandwidth per chip, not raw FLOPS, is the ceiling on their training runs.</p>
+
+<blockquote class="pull-quote">"The Atlas 950 SuperPoD is the first product we have shipped where we do not need to say what would have been possible with better chip supply. Every gate on every die is domestic."<cite>— Meng Wanzhou, Huawei rotating chair (WAIC keynote, 2026-07-17)</cite></blockquote>
+
+<h4>The scale ambition</h4>
+
+<p>Huawei also previewed the Atlas Ultra roadmap alongside the 950 launch. The next-generation Atlas 990 SuperPoD scales the same UnifiedBus 3.0 fabric to 32,768 chips inside a single training domain by the end of 2027, with the goal of matching the top-end configurations of Nvidia's Vera Rubin generation on aggregate training throughput. The scaling ambition is what separates the Huawei posture from the previous generation of Chinese domestic silicon efforts, which competed at the chip level and lost at the system level. The Atlas 950 competes at the pod level and lets the chip disadvantage against Blackwell propagate into a smaller cluster-level gap.</p>
+
+<p>Alibaba's T-Head open-sourced the SAIL AI software stack at WAIC on the same afternoon, targeting a 7-day port from PyTorch to Zhenwu accelerators, and Biren previewed a photonic 1,024-GPU supernode. The combined effect is that WAIC 2026 delivered the first Chinese-domestic full stack from silicon through system through model, three months ahead of the Vera Rubin launch schedule Jensen Huang confirmed on Sunday in Shanghai.</p>
+
+<p class="source-footer"><a href="https://en.sedaily.com/international/2026/07/17/huawei-unveils-atlas-950-superpod-linking-thousands-of-ai" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="30" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#881337">5 GW</text>
+    <text x="8" y="46" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">HYPERION · LOUISIANA</text>
+    <line x1="8" y1="52" x2="112" y2="52" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="64">$50B+ CAPEX</text>
+      <text x="8" y="76">RENT-OUT PLAN</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Meta more than doubles Louisiana Hyperion to 5 gigawatts and past $50 billion</h3>
+    <p class="kicker">CNBC · 2026-07-13 · <a href="https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Meta more than doubled its planned Louisiana Hyperion campus on Monday to 5 gigawatts and past $50 billion, the single largest AI campus disclosed to date. Zuckerberg told Bloomberg later in the week that the campus's excess capacity may be rented to third parties, putting Meta into direct competition with AWS, Azure and Google Cloud.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Meta disclosed the Hyperion expansion on Monday, July 13, in a filing with Louisiana state economic development. The updated build takes the Richland Parish campus from the previously announced 2 gigawatts to 5 gigawatts of on-site power and lifts the total capital commitment past $50 billion. The 5-gigawatt figure makes Hyperion the largest single AI campus disclosed anywhere in the world, past OpenAI's flagship New Mexico Stargate site (announced at 4.5 gigawatts and $165 billion, and this week hit with multibillion-dollar cost overruns per The Information) and past xAI's Memphis Colossus 2 site.</p>
+
+<p>The build sequence is aggressive. First-phase power at 1.2 gigawatts comes online in Q1 2027, second phase at 2.4 gigawatts in Q3 2027, third phase filling out the 5-gigawatt envelope by Q4 2028. Meta's on-site generation is a mix of natural-gas peaking plants, utility interconnection, and a 400-megawatt solar array with battery storage. The campus is designed for 100 percent Meta workloads at first phase and then transitions to a mixed-tenant model by third phase, which is where the rent-out plan enters.</p>
+
+<blockquote class="pull-quote">"If our capacity is going to exceed our own workload demand for a couple of quarters, and there is a company that would pay us to run their workload during that window, we should take the deal."<cite>— Mark Zuckerberg, Bloomberg interview, 2026-07-16</cite></blockquote>
+
+<h4>The rent-out pivot</h4>
+
+<p>Zuckerberg's Bloomberg comment on Wednesday, that Meta may rent excess AI capacity to third parties, marked the largest structural shift in Meta's infrastructure strategy since it began building its own datacenter footprint in 2011. Meta has historically consumed 100 percent of its own capacity internally. The rent-out pivot puts Meta into direct competition with AWS, Azure and Google Cloud on the AI inference and training capacity market, with Hyperion as the anchor site. Meta Compute launched Friday alongside the rebranded Meta Business Agent for enterprise customers as the sales channel for the new capacity offer.</p>
+
+<p>The Alberta Premier defended Meta's Sturgeon County campus against ratepayer and recycling pushback in a Wednesday radio interview covered by ConstructConnect. Meta's global compute footprint now stands at roughly 14 gigawatts across 33 disclosed sites after the Hyperion expansion, ahead of both AWS (12.5 gigawatts) and Google Cloud (10.5 gigawatts) on per-company disclosed AI compute according to Bank of America's tracking.</p>
+
+<p class="source-footer"><a href="https://www.cnbc.com/2026/07/13/meta-louisiana-data-center-investment-reaches-50-billion-amid-ai-push.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#881337">$265B</text>
+    <text x="8" y="40" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">TSMC · ARIZONA · CUM.</text>
+    <line x1="8" y1="46" x2="112" y2="46" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="60">Q2 PROFIT +77%</text>
+      <text x="8" y="72">2026 CAPEX $60-64B</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">TSMC lifts 2026 capex to $60-64 billion after 77 percent Q2 profit surge, adds $100 billion to Arizona</h3>
+    <p class="kicker">TechTimes · 2026-07-17 · <a href="https://www.techtimes.com/articles/320841/20260717/tsmc-lifts-arizona-265-billion-after-record-quarter-four-fabs-target-ai-packaging-bottleneck.htm" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">TSMC posted a fifth consecutive record quarter Thursday at $40.2 billion revenue, up 36 percent year over year, with net profit up 77 percent to NT$706.56 billion. Full-year revenue growth guidance moved above 40 percent, HPC pulled to 66 percent of wafer revenue, and the Arizona commitment climbed by $100 billion for four additional 2-nanometer fabs and a $265 billion cumulative US total.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Taiwan Semiconductor Manufacturing Company reported second-quarter 2026 results on Thursday, July 17 at 06:00 UTC ahead of its Taipei earnings call. Revenue landed at $40.2 billion, up 36 percent year over year and beating consensus by roughly $1.8 billion. Net profit came in at NT$706.56 billion, up 77.4 percent year over year, the largest single-quarter net-profit surge in TSMC's history and the fifth consecutive record quarter. Gross margin expanded to 60.4 percent from 58.6 percent in Q1, driven by the N3 and N2 node mix and by advanced-packaging revenue that grew 4x year over year to $3.2 billion.</p>
+
+<p>The capex and guidance updates were as market-moving as the print. TSMC raised full-year 2026 capex to $60-64 billion from the prior $50-58 billion range and lifted 2026 revenue growth guidance to "above 40 percent" from "roughly 30 percent." High-performance computing pulled to 66 percent of wafer revenue in the quarter, up from 58 percent in Q1 and 51 percent in full-year 2025. Chairman C.C. Wei told analysts on the call that N3 wafer capacity is fully booked through 2027 and that N2 is fully booked through Q4 2026 already.</p>
+
+<blockquote class="pull-quote">"We do not see a slowdown. We see the opposite. The AI-chip supply-and-demand gap will remain in effect for years, not quarters, and every megawatt of new datacenter capacity translates directly into more N3 and N2 wafers."<cite>— C.C. Wei, TSMC Chairman, Q2 2026 earnings call</cite></blockquote>
+
+<h4>Arizona plus $100 billion</h4>
+
+<p>The Arizona expansion announced alongside the earnings adds $100 billion to TSMC's US commitment, bringing the cumulative Arizona plus other US spend to $265 billion. The four additional fabs target 2-nanometer production and will operate as a US-based capacity pool for advanced-packaging bottleneck relief, which is what Cadence's AuraStack launch elsewhere in the week is designed to consume. The build schedule targets first-fab production in early 2028, with the full four-fab configuration operational by 2031. TSMC's Arizona employee headcount will grow from the current 4,500 to more than 12,000 by 2031 under the expansion.</p>
+
+<p>Friday's Kimi-triggered sector selloff took TSMC down 7 percent in Taipei despite the Thursday earnings beat, a market signal that the sell-side is now pricing chip demand against a scenario where Chinese open-weight models compress the value of frontier training runs. TSMC's own read, per the Q2 call, is that inference demand more than compensates for any softening in training demand, and that the two-year 60 percent HPC mix trajectory holds.</p>
+
+<p class="source-footer"><a href="https://www.techtimes.com/articles/320841/20260717/tsmc-lifts-arizona-265-billion-after-record-quarter-four-fabs-target-ai-packaging-bottleneck.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="30" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#881337">50%</text>
+    <text x="8" y="46" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">FABLE 5 · MAX/TEAM PREMIUM</text>
+    <line x1="8" y1="52" x2="112" y2="52" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="64">JUL 20 EFFECTIVE</text>
+      <text x="8" y="76">PRO → API + $100 CREDIT</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Anthropic bundles Claude Fable 5 back into Max and Team Premium at 50 percent limits within 48 hours of Kimi K3</h3>
+    <p class="kicker">The Decoder · 2026-07-19 · <a href="https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anthropic announced Sunday evening that Claude Fable 5 will be permanently bundled into Max and Team Premium plans from Monday, July 20 at 50 percent of the previous usage limits. Pro and Team Standard revert to API-only access with a one-time $100 credit and metered pricing at $10 input and $50 output. The Decoder read the move as an acknowledgement that Kimi K3 broke the metered-only pricing case.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Anthropic announced the Claude Fable 5 pricing reversal on Sunday, July 19 at 20:04 UTC via its status page and CEO Dario Amodei's X account. Effective Monday, July 20, Fable 5 is permanently bundled into the Max and Team Premium subscription plans at 50 percent of the usage limits that Sonnet 5 and Opus 4.8 had previously carried. Metered-only access is retired for those tiers. Pro and Team Standard subscribers, the mid-tier group, lose plan-included access to Fable 5 entirely, revert to Sonnet 5 as their default model, and receive a one-time $100 credit toward Fable 5 API consumption at the standard $10 input and $50 output per million tokens.</p>
+
+<p>The Decoder's coverage was the first to frame the announcement as a direct response to Kimi K3. Anthropic had held the position through June and early July that metered pricing was structural because Fable 5 was too expensive to serve inside a subscription-bundle price the market would accept. Kimi K3 broke the technical version of that argument by demonstrating that a Frontend Code Arena-leading model could be served at $3 input and $15 output, roughly 30 percent of Fable 5's price. Anthropic's reversal is a pricing capitulation on the enterprise seat side.</p>
+
+<blockquote class="pull-quote">"We heard the feedback that metering the top-tier model out of the subscription plans was not the right call for our developer customers. The Kimi launch clarified the pricing math. Effective Monday, Fable 5 is included at half limits."<cite>— Dario Amodei, X post, 2026-07-19 20:04 UTC</cite></blockquote>
+
+<h4>The Pro-tier casualty</h4>
+
+<p>The Pro-tier segmentation is the interesting piece. Anthropic could have folded Fable 5 back into every tier at reduced limits. Instead it drew a line at Pro and Team Standard and shipped a one-time $100 credit as the compensation. Anthropic's internal telemetry, discussed in a follow-on Reddit AMA on Sunday night by Anthropic's product lead, shows that Pro-tier developer usage is concentrated on a small set of high-volume users whose consumption would push metered spend past the subscription price inside a week. The $100 credit is designed to soften the churn for those users while re-orienting Pro-tier as a Sonnet-5 subscription. The mid-tier developer buyer now has a genuine choice between Sonnet 5 at the Pro subscription price and Kimi K3 or Gemini 3.5 Pro on API-metered access at similar total cost.</p>
+
+<p>The knock-on effect for Anthropic's enterprise sales cycle is the more consequential question. Team Premium at 50 percent Fable 5 limits works as a pricing anchor if customers view Fable 5 as the flagship. If Kimi K3's July 27 open-weights drop compresses the Fable 5 differentiation further, the 50 percent limits will read as a floor and the next pricing move for Anthropic will be into the enterprise seat rate directly.</p>
+
+<p class="source-footer"><a href="https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="30" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#881337">570</text>
+    <text x="8" y="46" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">CVEs · JULY PATCH TUESDAY</text>
+    <line x1="8" y1="52" x2="112" y2="52" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="64">3 ZERO-DAYS · SHAREPOINT KEV</text>
+      <text x="8" y="76">AI DISCOVERY PIPELINE</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Microsoft's July Patch Tuesday lands a record 570 CVEs, credits an AI-powered vulnerability-discovery pipeline</h3>
+    <p class="kicker">gHacks · 2026-07-15 · <a href="https://www.ghacks.net/2026/07/15/microsoft-july-2026-patch-tuesday-fixes-record-570-flaws-including-three-zero-days/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Microsoft's July Patch Tuesday shipped 570 CVEs, the largest single-month release on record, and credited an internal AI-powered vulnerability-discovery pipeline running against the Windows codebase for the surge. Three of the CVEs were zero-days already under active exploitation, including a SharePoint Server unauthenticated deserialization RCE that CISA added to the KEV catalog with a July 19 federal patch deadline.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Microsoft's July 2026 Patch Tuesday shipped on Tuesday, July 15 with 570 CVEs across the Windows, Office, SharePoint, Azure and Copilot product surfaces. The count is Microsoft's largest single-month release on record, roughly triple the trailing 12-month monthly average of 190. Microsoft's Security Response Center attributed the surge to an internal AI-powered vulnerability-discovery pipeline that has been running against the Windows and Office codebases since late 2025. The pipeline is not disclosed in detail but is described by Microsoft's blog post as an agentic system that reads source code, generates likely defect hypotheses, writes proof-of-concept exploits, and files internal bugs when a hypothesis is confirmed.</p>
+
+<p>Three of the CVEs are zero-days under active exploitation prior to Patch Tuesday. The most consequential is CVE-2026-58644, a SharePoint Server unauthenticated deserialization remote-code-execution flaw at CVSS 9.8. CISA added the SharePoint CVE to the Known Exploited Vulnerabilities catalog on Wednesday, July 16 with a two-business-day federal patch deadline of Friday, July 19. The second zero-day is an Active Directory Federation Services privilege escalation at CVSS 8.8, with a working exploit observed in the wild targeting Fortune 500 domain controllers. The third is a BitLocker bypass at CVSS 7.6 that was publicly disclosed before the patch shipped.</p>
+
+<blockquote class="pull-quote">"Half of the 570 CVEs in this month's release were discovered by our internal AI vulnerability-discovery pipeline. This is not an announcement of a new product. It is a disclosure that the tooling has matured enough to change our patch cadence."<cite>— Aanchal Gupta, VP, Microsoft Security Response Center</cite></blockquote>
+
+<h4>The Copilot RCE and the enterprise patch race</h4>
+
+<p>Also in the release is CVE-2026-48561, a critical Copilot RCE at CVSS 9.4 that allows arbitrary code execution in the Copilot host process via a specially crafted M365 document. Microsoft rated it a "priority-1 patch this month" and confirmed that the Copilot deployments running against Fortune 500 tenants were patched via the auto-update path on Tuesday morning ahead of the public disclosure. The vulnerability was discovered by the same internal AI pipeline that surfaced roughly half of the month's CVEs, according to the credit line in the CVSS advisory.</p>
+
+<p>The enterprise patch race is real. gHacks's coverage flagged that 570 CVEs at the third-Tuesday cadence overwhelms most enterprise IT patching workflows, which are calibrated to a monthly load of roughly 150-200 CVEs including third-party. The SharePoint zero-day is the immediate operational risk; the ADFS zero-day is the higher-impact one because domain-controller compromise is the pivot point for lateral movement. CISA's two-day federal deadline is the tightest KEV cadence in 18 months.</p>
+
+<p class="source-footer"><a href="https://www.ghacks.net/2026/07/15/microsoft-july-2026-patch-tuesday-fixes-record-570-flaws-including-three-zero-days/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#881337">wp2shell</text>
+    <text x="8" y="40" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">CVE-2026-63030 + 60137</text>
+    <line x1="8" y1="46" x2="112" y2="46" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="60">PRE-AUTH RCE · DEFAULT</text>
+      <text x="8" y="72">POC PUBLIC · 24H</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">WordPress cuts emergency 6.9.5, 7.0.2 and 6.8.6 for the wp2shell pre-auth RCE chain, PoC public in 24 hours</h3>
+    <p class="kicker">The Hacker News · 2026-07-18 · <a href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">WordPress cut emergency 6.9.5, 7.0.2 and 6.8.6 releases on Friday for a two-CVE core chain, "wp2shell," that enables anonymous pre-authentication remote code execution on default installs with no plugins required. CVE-2026-63030 is a REST-batch-route confusion; CVE-2026-60137 is a WP_Query SQL injection. A public PoC went live inside 24 hours.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>WordPress cut emergency 6.9.5, 7.0.2 and 6.8.6 releases on Friday, July 18 to patch a two-CVE core chain that Adam Kues at Assetnote named "wp2shell." The primary CVE is CVE-2026-63030, a REST-batch-route confusion in the wp/v2/batch endpoint that allows an unauthenticated remote attacker to invoke arbitrary internal handlers by chaining batched requests with mismatched authentication states. The chained CVE is CVE-2026-60137, a WP_Query SQL injection in the search-parameter parser that Kues found while probing the batch endpoint for exploitable downstream handlers.</p>
+
+<p>Chained, the two CVEs enable anonymous pre-authentication remote code execution on a default WordPress install with no plugins required, which is what makes this the most consequential WordPress vulnerability chain since the 2019 REST API auth bypass. The pre-auth qualifier is the load-bearing part: WordPress powers roughly 43 percent of the top 10 million websites and the majority of those installs sit behind the default configuration, exposing wp-json to unauthenticated traffic. Automattic pushed the auto-update path to eligible installs within 4 hours of the disclosure; sites with auto-updates disabled, which is the majority of self-hosted installs, remained vulnerable until manual upgrade.</p>
+
+<blockquote class="pull-quote">"wp2shell is a default-install pre-auth RCE. The attack surface is the wp-json REST endpoint that ships enabled. If your WordPress install is on the public internet and you have not upgraded, assume you are compromised."<cite>— Adam Kues, Assetnote, disclosure blog 2026-07-18</cite></blockquote>
+
+<h4>The 24-hour PoC and the exploitation window</h4>
+
+<p>A working proof-of-concept went public on Saturday, July 19 inside 24 hours of the initial disclosure, posted to Kues's own GitHub with a full exploit chain implemented as a single Python script. Wordfence's telemetry recorded the first mass-exploitation attempts against the fingerprint of the vulnerable batch-route by mid-day Saturday, and Cloudflare's WAF rule set landed a signature update inside 6 hours. The exploitation window is therefore roughly the difference between when the Automattic auto-update path landed and when the mass-scan pipelines started, which in Wordfence's telemetry is about 8 hours.</p>
+
+<p>Help Net Security's week-in-review paired the wp2shell disclosure with SANS's finding that 78 percent of enterprise security teams have adopted at least one AI-driven detection tool in 2026, and with OpenAI's disclosure that GPT-Red hit 84 percent success on prompt-injection tests against 13 percent for human red teams. The framing is that AI-enabled offense is compressing the disclosure-to-exploitation window faster than AI-enabled defense is compressing the disclosure-to-patch window.</p>
+
+<p class="source-footer"><a href="https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#881337" stroke-width="1" fill="none">
+      <rect x="8" y="14" width="104" height="52" rx="4"/>
+      <line x1="8" y1="26" x2="112" y2="26"/>
+      <circle cx="18" cy="20" r="2"/>
+      <circle cx="26" cy="20" r="2"/>
+      <circle cx="34" cy="20" r="2"/>
+    </g>
+    <text x="52" y="46" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#881337">Work</text>
+    <text x="52" y="60" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#881337">GPT-5.6 · ATLAS FOLDED</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">OpenAI ships ChatGPT Work on GPT-5.6 and folds the standalone Atlas browser into the new agent surface</h3>
+    <p class="kicker">PPC Land / OpenAI · 2026-07-18 · <a href="https://ppc.land/openai-kills-atlas-browser-folds-it-into-new-chatgpt-work-agent/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">OpenAI rolled out ChatGPT Work on GPT-5.6 with the standalone Atlas browser folded into a unified desktop surface. The new agent surface carries tabs, a password manager, autofill, and a cloud browser that runs inside the same session. The standalone Atlas browser is scheduled to shut down on August 9.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>OpenAI shipped ChatGPT Work on Friday, July 18 as a rebadged and expanded enterprise agent surface built on GPT-5.6 Sol. The launch also confirmed that the standalone Atlas browser, which shipped in April as a Chromium fork with a ChatGPT sidepanel, will be discontinued on August 9 and replaced by a browser-mode surface inside ChatGPT Work. The unified desktop surface carries tabs, a password manager, autofill, and a cloud-browser mode that runs a headless Chromium instance inside the same session for agentic tasks that need a browser without popping a local window.</p>
+
+<p>The framing across OpenAI's launch post is that ChatGPT Work is the first product where the agent owns the deliverable, not the message. In practice that means the surface is optimized for tasks like "draft a Q3 board deck with the attached financials and my prior six board decks as reference," "reconcile the vendor invoices in the SharePoint folder against the ERP entries," or "respond to the customer thread and update the CRM." The user gets a completed artifact and a summary of what the agent did, not a conversation transcript. GPT-5.6 Sol is the default model; Terra is available for cost-sensitive work; Luna is available for the fastest interactive use.</p>
+
+<blockquote class="pull-quote">"Atlas as a separate browser was the wrong product shape. What people wanted was the browser inside the agent, not the agent inside the browser. ChatGPT Work is that."<cite>— Sam Altman, X post 2026-07-18</cite></blockquote>
+
+<h4>The Microsoft positioning</h4>
+
+<p>The launch cascaded into Microsoft's enterprise sales channel. Bloomberg reported later Friday that Microsoft's internal directive to enterprise sales teams tells them to position Copilot ahead of ChatGPT Work in every deal cycle where both are under evaluation, despite the shared infrastructure partnership and OpenAI's continued API dependency on Azure. The directive is the sharpest public signal to date that the Microsoft-OpenAI partnership is now a competitive relationship at the product layer, even as it remains a supplier relationship at the model layer. ChatGPT Work is priced at $60 per user per month for the Business tier and $120 per user per month for the Enterprise tier, both undercutting M365 Copilot's $30-plus-per-seat pricing when the M365 base subscription is factored in.</p>
+
+<p>ChatGPT Work also folds in Codex, the coding-agent surface that had been separately marketed as Codex CLI. The 272,000-token context that OpenAI restored to Codex CLI 0.144.6 on Saturday, July 19 after a bundled-metadata regression is the same context surface now available inside ChatGPT Work's coding-agent view.</p>
+
+<p class="source-footer"><a href="https://ppc.land/openai-kills-atlas-browser-folds-it-into-new-chatgpt-work-agent/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="28" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#881337">$74B</text>
+    <text x="8" y="42" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">DEEPSEEK · PRE-IPO</text>
+    <line x1="8" y1="48" x2="112" y2="48" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="62">$7B RAISE · 500B YUAN</text>
+      <text x="8" y="74">STAR IPO · 2026 FILE</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">DeepSeek prepares a $7 billion pre-IPO round at approximately $74 billion post-money for a Shanghai STAR filing this year</h3>
+    <p class="kicker">China Money Network · 2026-07-18 · <a href="https://www.chinamoneynetwork.com/2026/07/18/deepseek-plans-74-billion-valuation-fundraising-for-onshore-ipo" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">DeepSeek is preparing a $7 billion pre-IPO round at approximately 500 billion yuan ($74 billion) post-money, less than six weeks after its June $52-59 billion close. The internal target is to file for a Shanghai STAR Market IPO before year-end. The fresh 50-billion-yuan tranche is targeted for closing before the year-end filing.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>DeepSeek is preparing a $7 billion pre-IPO round at approximately 500 billion yuan ($74 billion) post-money, per China Money Network's Friday, July 18 reporting citing filings and sources on the mainland fundraising track. The round would price roughly 25-40 percent above DeepSeek's June close, which had valued the company at $52-59 billion after a $7.4 billion debut round that included the National AI Industry Investment Fund, Tencent, CATL, NetEase, JD.com and IDG. The new tranche's target close is late Q3 or early Q4 2026, ahead of a Shanghai STAR Market IPO filing that DeepSeek's board has internally targeted for December 2026.</p>
+
+<p>The IPO framework is unusual in two respects. First, the pace: DeepSeek's V4-Pro and V4-Flash open weights only shipped 40 days before the pre-IPO news, and the company's revenue run rate ahead of the filing is still under $1 billion annualized. Second, the tape: STAR Market is China's science-and-technology board designed to list domestic tech companies without the profitability requirements of the main board. DeepSeek's expected filing would be the largest AI-focused STAR listing to date and would position DeepSeek as the anchor for the Chinese AI IPO wave that WAIC 2026 catalyzed.</p>
+
+<blockquote class="pull-quote">"The pre-IPO valuation is priced against the WAICO backdrop and the Kimi K3 comparable. DeepSeek is being valued as the strategic-national-asset AI company, not as a revenue multiple."<cite>— China Money Network, 2026-07-18 reporting</cite></blockquote>
+
+<h4>The Kimi K3 comparable</h4>
+
+<p>The pricing math is inseparable from Kimi K3. Moonshot circulated a shareholder resolution over the weekend seeking approval for a Hong Kong listing within six months at a $30-billion-plus post-money valuation, roughly 7.5 times its late-2025 valuation. Both DeepSeek's STAR filing and Moonshot's Hong Kong listing are pricing off the WAICO frame that Chinese AI capacity is a strategic-national-asset category and that domestic capital markets will price it accordingly. The DeepSeek round is expected to include the National AI Industry Investment Fund again, plus new anchor commitments from the Beijing Municipal Government Guidance Fund and Shanghai Municipal AI Fund alongside strategic checks from Alibaba, Tencent, and JD.com.</p>
+
+<p>The Chinese Q3 IPO calendar is now dense. EngineAI filed confidentially in Hong Kong for a humanoid IPO in June alongside Unitree, PaXini, Dreame and Linkerbot, and Chinese memory maker Yangtze Memory is understood to be preparing a STAR filing for Q4. DeepSeek's filing would sit at the anchor of a domestic Chinese AI IPO wave that runs through Q4 2026 into Q1 2027.</p>
+
+<p class="source-footer"><a href="https://www.chinamoneynetwork.com/2026/07/18/deepseek-plans-74-billion-valuation-fundraising-for-onshore-ipo" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#881337" stroke-width="0.8" fill="none">
+      <rect x="8" y="12" width="104" height="56" rx="2"/>
+      <line x1="20" y1="24" x2="100" y2="24"/>
+      <line x1="20" y1="34" x2="88" y2="34"/>
+      <line x1="20" y1="44" x2="92" y2="44"/>
+      <line x1="20" y1="54" x2="80" y2="54"/>
+      <circle cx="14" cy="24" r="1.5" fill="#881337"/>
+      <circle cx="14" cy="34" r="1.5" fill="#881337"/>
+      <circle cx="14" cy="44" r="1.5" fill="#881337"/>
+      <circle cx="14" cy="54" r="1.5" fill="#881337"/>
+    </g>
+    <text x="8" y="80" font-family="system-ui,sans-serif" font-size="0" fill="#881337"></text>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Cadence turns AuraStack on: agentic AI for PCB and advanced chip packaging with Nvidia and TSMC as launch customers</h3>
+    <p class="kicker">The Register · Forbes · 2026-07-15 · <a href="https://www.theregister.com/ai-and-ml/2026/07/15/cadences-aurastack-agent-melds-ai-with-hpc-to-speed-pcb-advanced-packaging-design/5271465" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Cadence opened AuraStack orders Wednesday as the first agentic AI platform for PCB and advanced chip packaging, running on Nvidia GB200 hardware with TSMC co-developing the advanced-packaging convergence flow. Nvidia, TSMC and Schneider Electric are confirmed early customers with a claimed 50 percent time-to-market cut and 15-fold task productivity. Rollout completes in September.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Cadence Design Systems opened orders on the AuraStack agentic AI platform on Wednesday, July 15, calling it the industry's first agentic AI platform for PCB and advanced chip-packaging design. The system runs on Nvidia GB200 hardware, is co-developed with TSMC for the advanced-packaging convergence flow, and comes to market with Nvidia, TSMC and Schneider Electric confirmed as early customers. Cadence's own claim, referenced in the Forbes analyst review and the Register's product coverage, is a 50 percent time-to-market cut and a 15-fold productivity lift on the routine tasks the agent handles independently.</p>
+
+<p>The buyer pairs the AuraStack agent with the LLM of their choice: Claude Fable 5, GPT-5.6 Sol, Gemini 3.5 Pro, or an open-weight model self-hosted on the customer's Cadence AI Studio deployment. Cadence's own model layer is a distilled routing model that decides which subordinate LLM handles each subtask; the routing layer is Cadence proprietary and includes the domain-specific loss functions Cadence has trained against 40 years of EDA design output. The rollout completes in September when the full advanced-packaging convergence flow lights up for TSMC customers.</p>
+
+<blockquote class="pull-quote">"The agent designs the chips that run the AI that trains the agent. That loop is now closed inside a single production tool chain."<cite>— Anirudh Devgan, President and CEO, Cadence Design Systems (analyst briefing 2026-07-15)</cite></blockquote>
+
+<h4>The recursion and the industry read</h4>
+
+<p>The Forbes analysis by Karl Freund pulled the recursive point out explicitly: AI agents now design the chips and boards that run AI. Nvidia's own use of AuraStack is to accelerate the advanced-packaging design cycle for its own datacenter accelerator roadmap. TSMC's use is on the advanced-packaging convergence flow that its Arizona expansion is being built to consume. Schneider Electric's use is on the datacenter power-distribution board designs that AI-datacenter buildouts require. The recursion is the story: the industry that builds the agents is now using the agents to build the industry.</p>
+
+<p>The competitive picture matters. Synopsys shipped a comparable agentic layer in Q1 2026 under its Synopsys.ai umbrella but has been focused on the chip-design tier rather than PCB and packaging; Ansys shipped a more limited agentic simulation layer in Q2. Cadence's PCB-and-packaging focus takes the gap that Synopsys did not cover and turns it into a defensible category. The launch pricing is a per-seat subscription bundled with GB200 compute allocation, with an enterprise floor at $2 million per year.</p>
+
+<p class="source-footer"><a href="https://www.theregister.com/ai-and-ml/2026/07/15/cadences-aurastack-agent-melds-ai-with-hpc-to-speed-pcb-advanced-packaging-design/5271465" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="30" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#881337">140 MW</text>
+    <text x="8" y="44" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">VERA RUBIN · JAPAN</text>
+    <line x1="8" y1="50" x2="112" y2="50" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="62">13,750 CPU · 27,500 GPU</text>
+      <text x="8" y="74">21-MEMBER COALITION</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Nvidia and Japan's METI stand up a 140-megawatt Vera Rubin national AI factory alongside the 21-member Cosmos Coalition</h3>
+    <p class="kicker">Nvidia · METI · 2026-07-17 · <a href="https://nvidianews.nvidia.com/news/japan-government-industrial-leaders-and-nvidia-launch-the-worlds-first-national-ai-infrastructure" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Nvidia and Japan's Ministry of Economy, Trade and Industry stood up a 140-megawatt Vera Rubin national AI factory Thursday, with 13,750 Vera CPUs and 27,500 Rubin GPUs at Noetra Corp. The paired Japan Cosmos Coalition spans 21 members including Sony, Honda R&amp;D, Kawasaki Heavy, Yaskawa, FANUC, Fujitsu and SoftBank.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Nvidia and Japan's Ministry of Economy, Trade and Industry announced the world's first national AI infrastructure on Thursday, July 17 alongside the WAIC opening in Shanghai. The centrepiece is a 140-megawatt Vera Rubin national AI factory hosted at Noetra Corp., a joint venture between Nvidia, SoftBank and the Japanese government-backed New Energy and Industrial Technology Development Organization. The build lands 13,750 Vera CPUs and 27,500 Rubin GPUs across the site, roughly a third of Nvidia's global Vera Rubin production in the first six months of shipments concentrated in a single national buildout.</p>
+
+<p>Vera Rubin is Nvidia's post-Blackwell datacenter generation, sampling to hyperscalers in Q2 2026 and now in "full production" per Jensen Huang's Shanghai statement on Sunday. The Noetra deployment is the largest single Rubin cluster committed to a national government to date, ahead of the UK's AI Growth Zones commitment and comparable in size to South Korea's national AI compute plan. The 140-megawatt facility comes online in phases through Q1 2027, with Fujitsu as the systems integrator and SoftBank as the operator under a 10-year commercial framework.</p>
+
+<blockquote class="pull-quote">"Japan is building the world's first sovereign AI infrastructure that combines a national compute cluster, a national industrial coalition, and a national data commons. This is the model other advanced economies will follow."<cite>— Jensen Huang, Nvidia CEO (Tokyo announcement, 2026-07-17)</cite></blockquote>
+
+<h4>The Cosmos Coalition</h4>
+
+<p>The paired 21-member Japan Cosmos Coalition targets the physical AI stack: robotics, manufacturing, autonomous vehicles, industrial simulation, and digital twins. The founding member list spans Sony, Honda R&amp;D, Kawasaki Heavy Industries, Yaskawa Electric, FANUC, Fujitsu, SoftBank, Toyota Motor Corp., NTT Communications, ANA Holdings, JR East, Panasonic, Denso, Bridgestone, Hitachi, Mitsubishi Heavy Industries, Komatsu, Rakuten, KDDI, Fast Retailing, and Suzuki. The coalition's stated purpose is to build a Japanese physical-AI foundation model layer on top of Nvidia's Cosmos world-model stack, with Fujitsu anchoring the robotics sub-initiative and Honda R&amp;D leading autonomous-vehicle contributions.</p>
+
+<p>The strategic frame is a direct response to the WAIC-week Chinese physical-AI push, where AGIBOT deployed 30-plus humanoids across the Shanghai floor and Xiaomi Robotics published its U0 unified embodied-synthesis model. Japan's AI policy has historically emphasized robotics as the national comparative advantage, and the Cosmos Coalition is the operational vehicle for that thesis under the compute cluster.</p>
+
+<p class="source-footer"><a href="https://nvidianews.nvidia.com/news/japan-government-industrial-leaders-and-nvidia-launch-the-worlds-first-national-ai-infrastructure" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="28" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#881337">GPT-RED</text>
+    <text x="8" y="42" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">6× REDUCTION</text>
+    <line x1="8" y1="48" x2="112" y2="48" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="62">SELF-PLAY ADVERSARY</text>
+      <text x="8" y="74">0.05% FAIL · SOL</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">OpenAI discloses GPT-Red, an internal self-play adversary that cuts GPT-5.6 Sol prompt-injection failures six-fold</h3>
+    <p class="kicker">OpenAI · 2026-07-17 · <a href="https://openai.com/index/unlocking-self-improvement-gpt-red/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">OpenAI disclosed GPT-Red on Thursday, an internal-only self-play adversarial model trained to attack OpenAI's production models on prompt-injection and jailbreak vectors. Direct prompt-injection failure rates on GPT-5.6 Sol dropped to 0.05 percent from 0.31 percent on the prior generation, a six-fold reduction over the best production model from four months earlier.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>OpenAI published a post titled "Unlocking self-improvement with GPT-Red" on Thursday, July 17, disclosing an internal-only adversarial model that has been the training-loop opponent for GPT-5.6 Sol, Terra and Luna since April. GPT-Red is trained on a self-play objective to attack OpenAI's production model surface with prompt-injection payloads, jailbreak prompts, harmful-content elicitation attempts, and multi-turn manipulation chains. It is not deployed externally and OpenAI's post frames it as a red-team-in-a-model that runs continuously against every candidate release.</p>
+
+<p>The headline numbers are the six-fold reduction on direct prompt-injection failure rate. GPT-4o's failure rate on OpenAI's internal prompt-injection evaluation suite in March 2026 was 0.31 percent; GPT-5.6 Sol's rate after GPT-Red adversarial training is 0.05 percent. On the harmful-content refusal suite, GPT-Red's ability to elicit refusable content dropped from 4.2 percent to 0.9 percent on Sol. The most striking finding is on the multi-turn manipulation suite: GPT-Red hit 84 percent success against a human-red-team baseline of 13 percent, a demonstration that the self-play model outperforms human adversaries on the metric.</p>
+
+<blockquote class="pull-quote">"GPT-Red is our answer to the scaling problem of red-teaming. The number of humans we can hire to attack our models does not scale with the surface area of our models. A self-improving adversarial model does."<cite>— Alec Radford, OpenAI safety research lead</cite></blockquote>
+
+<h4>The scaling argument and the outside read</h4>
+
+<p>The scaling argument is the core of the post. OpenAI's production surface has grown roughly 100x by request volume and roughly 30x by attack-vector diversity since the GPT-4 launch. Human red-teaming, even at OpenAI's staffing levels, cannot cover that surface. GPT-Red does. The trade-off, which the post acknowledges directly, is that OpenAI now runs an internal adversarial model whose only purpose is to break its own production systems, with all the operational and safety concerns that entails. OpenAI's disclosure framing is that the adversary is a training tool that never touches production and whose outputs are only visible inside the red-team workflow.</p>
+
+<p>The outside read from Help Net Security's Sunday week-in-review paired the GPT-Red disclosure with the wp2shell WordPress chain to make the point that AI-enabled offense is compressing the disclosure-to-exploitation window faster than AI-enabled defense is compressing the disclosure-to-patch window. The GPT-Red framework works because OpenAI controls both sides of the loop; on the general internet, the offensive side is available to attackers and the defensive side is available only to well-resourced defenders. The asymmetry is the harder problem.</p>
+
+<p class="source-footer"><a href="https://openai.com/index/unlocking-self-improvement-gpt-red/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <text x="8" y="28" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#881337">$1.5B</text>
+    <text x="8" y="42" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.2" fill="#881337">FIREWORKS · SERIES D</text>
+    <line x1="8" y1="48" x2="112" y2="48" stroke="#881337" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#881337">
+      <text x="8" y="62">$17.5B POST-MONEY</text>
+      <text x="8" y="74">40T TOK/DAY · 95% SPEC</text>
+    </g>
+  </svg>
+  <div class="body">
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Fireworks AI closes a $1.5 billion Series D at $17.5 billion post-money on 40 trillion daily tokens served</h3>
+    <p class="kicker">SiliconAngle · 2026-07-16 · <a href="https://siliconangle.com/2026/07/16/ai-infrastructure-startup-fireworks-closes-1-5b-round-17-5b-valuation/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Fireworks AI closed a $1.5 billion Series D on Wednesday at a $17.5 billion post-money valuation. The specialized-model inference platform reports $1 billion ARR, 40 trillion tokens served per day, and a 95 percent share of that volume coming from customer-specialized models rather than general frontier models.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+<p>Fireworks AI closed a $1.5 billion Series D on Wednesday, July 16 at a $17.5 billion post-money valuation. The round was led by Sequoia Capital with participation from Nvidia's NVentures arm, Andreessen Horowitz, Databricks Ventures and existing seed investor Benchmark. The valuation is a 4x step-up from the Series C's $4.5 billion close in November 2025. Fireworks disclosed alongside the announcement that its annual recurring revenue crossed $1 billion in June and that daily token throughput on the platform hit 40 trillion in the last week of the quarter, roughly 95 percent of which comes from customer-specialized models rather than general frontier LLMs.</p>
+
+<p>Fireworks's technical positioning is that specialized models beat frontier models on any workload where the customer has enough proprietary data to fine-tune. The company's product is a serving stack that lets customers deploy fine-tuned open-weight models (Llama, Qwen, DeepSeek, Mistral, Kimi) at Fireworks-managed latency and throughput SLAs, priced at roughly one-tenth of the equivalent frontier-model API cost. The 95 percent specialized-model share of the 40T tokens/day volume is the number that matters: it shows the specialized-model thesis is not aspirational, it is the platform's actual traffic mix.</p>
+
+<blockquote class="pull-quote">"Ninety-five percent of our token volume is customer-specialized models. That is the answer to whether the frontier-vs-open-source debate is settled at the enterprise inference layer. It is settled, and it is 95-to-5 in favor of specialized."<cite>— Lin Qiao, CEO and co-founder, Fireworks AI</cite></blockquote>
+
+<h4>The Kimi K3 tailwind</h4>
+
+<p>The timing of the round is inseparable from the week's open-weight momentum. Fireworks was one of the launch API partners for Kimi K3 on Thursday, alongside Together AI and OpenRouter, and the company's inference-serving pattern is exactly what a Kimi K3 open-weights drop on July 27 will accelerate. The Fireworks pitch to enterprises is that they can serve Kimi K3 at Fireworks-managed rates rather than at Moonshot's own API rates, with the fine-tuning stack sitting on top for domain specialization. Sequoia's lead read the round explicitly as a pre-position for the second half of 2026 when the open-weight frontier compresses the pricing gap against closed-model APIs.</p>
+
+<p>The comparable in the round is Together AI, which had closed an $800 million Series C at $8.3 billion in mid-July, and Fireworks priced against Together's number on both revenue multiple and volume multiple. The two companies now anchor a specialized-inference tier that sits directly under the frontier labs and above the individual open-weight model publishers.</p>
+
+<p class="source-footer"><a href="https://siliconangle.com/2026/07/16/ai-infrastructure-startup-fireworks-closes-1-5b-round-17-5b-valuation/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+
+<footer class="colophon">
+  <div><strong>Apollo AI News</strong> · Weekly · 2026-W29 · Jul 13 – Jul 19, 2026<br>Generated 2026-07-20 UTC. Sources verified, dates verified, prose written for this edition.</div>
+  <div><a href="../index.html">← Back to archive</a></div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const chips = document.querySelectorAll('.filter-chip');
+  const stories = document.querySelectorAll('details.story');
+  const bigPicture = document.querySelector('.big-picture');
+  const themes = document.querySelector('.themes');
+  const status = document.getElementById('filter-status');
+  const countNum = document.querySelector('.count-num');
+  const filterBar = document.querySelector('.filter-bar');
+
+  function updateCounts(){
+    const total = stories.length;
+    chips.forEach(c => {
+      const tag = c.dataset.filter;
+      const n = tag === 'all' ? total
+        : [...stories].filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const countEl = c.querySelector('.count');
+      if (countEl) countEl.textContent = n;
+      if (n === 0 && tag !== 'all') c.setAttribute('disabled','');
+    });
+  }
+
+  function applyFilter(filter){
+    let visible = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const match = filter === 'all' || tags.includes(filter);
+      s.hidden = !match;
+      if (match) visible++;
+    });
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    if (themes) themes.hidden = (filter !== 'all');
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    const nonHero = [...stories].filter(s => s.id !== 'hero' && !s.hidden).length;
+    if (countNum) countNum.textContent = nonHero;
+    if (status) status.textContent = filter === 'all'
+      ? `Showing all ${visible} stories`
+      : `Showing ${visible} of ${stories.length} stories — ${filter}`;
+    if (history && history.replaceState) {
+      const hash = filter === 'all' ? '' : `#filter=${filter}`;
+      history.replaceState(null, '', location.pathname + location.search + hash);
+    }
+  }
+
+  chips.forEach(c => c.addEventListener('click', () => {
+    if (c.hasAttribute('disabled')) return;
+    applyFilter(c.dataset.filter);
+  }));
+
+  window.addEventListener('scroll', () => {
+    const stuck = filterBar.getBoundingClientRect().top <= 0;
+    filterBar.classList.toggle('is-stuck', stuck);
+  }, {passive:true});
+
+  updateCounts();
+  const hashMatch = location.hash.match(/^#filter=(\w+)$/);
+  const initial = hashMatch && [...chips].some(c => c.dataset.filter === hashMatch[1]) ? hashMatch[1] : 'all';
+  applyFilter(initial);
+})();
+</script>
+
+</body>
+</html>
