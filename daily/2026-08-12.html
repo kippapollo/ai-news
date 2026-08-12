@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-08-12</title>
+<meta name="description" content="Meta reopens the open-weights faucet with Muse Glimmer 30B and a Muse Spark 1.2 open-weights commitment for August 24. Google DeepMind ships Gemini 3.6 Flash and 3.5 Flash-Lite to GA and adds a Flash-Cyber variant with 47 hard-blocked CVE categories. Anthropic commits the entire Claude 5 family to invisible statistical watermarking with a free detection tier for verified academic, journalism and education customers. Anthropic signs a $9.1 billion, 20-year lease for 191 MW at Riot Platforms Rockdale Texas. Google Gemini app crosses 1 billion MAU. Anthropic Claude for Teachers goes public with 42,000 first-day sign-ups across 3,100 districts. Unitree final Shanghai STAR retail oversubscription lands at 8,289 times. Intel prices $20 billion upsized offering at $95 as demand crosses $100 billion. Moonshot Kimi K3.1 patches the schema-strict tool-call regression. Cohere ships Command R+ 2026 August update at 384K context and a deep-reasoning tier. Allen Institute publishes OLMo 3 preview 34B trained end-to-end on AMD MI300X with fully open pipeline. Apollo Research reproduces 219 of 340 Petri tasks on Sonnet 5. METR launches GAIA-Long benchmark with a 12-hour tier. Anthropic Claude Code v2.1.228 patches the visual freeze; llama.cpp b10356 flips CI to ROCm 7.14; OpenAI Codex CLI 0.148 lands two alpha builds in three hours; Ollama v0.32.8 finishes Muse Glimmer NVIDIA and AMD coverage. onsemi AI data-center revenue doubles to over $500 million. SpaceX confirms Terafab $16.8B off-grid gas plant. Energy Vault projects $500-600M from 1.25 GW Texas hyperscaler deal. OpenAI ships GPT-5.6-Cyber with two Chrome V8 zero-days already disclosed. Cross-provider encrypted chain-of-thought vulnerability recovers 315,320 reasoning blocks from public logs. Anthropic Compliance API extends to Cowork and Claude Code across desktop, web, mobile and CLI. Manus completes Meta acquisition unwind under China's Foreign Investment Security Review order.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#1e3a8a;--accent-soft:rgba(30,58,138,0.09);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#a8c1ff;--accent-soft:rgba(168,193,255,0.13);
+  --tag-tech:rgba(147,197,253,0.20);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.16);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.18);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.16);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+.story summary .body{display:flex;flex-direction:column;gap:6px}
+.story .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-08-12</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="tech" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-tech">Tech</span></div>
+      <h1>Meta reopens the open-weights faucet: Muse Glimmer 30B lands, Muse Spark 1.2 open weights committed for August 24</h1>
+      <p class="dek">Mark Zuckerberg's 11:14 UTC Threads post confirmed both an immediate open-weights release and a two-week deadline for the paid-tier flagship to follow. Muse Glimmer at 30 billion parameters cleared 74,000 Hugging Face downloads inside eight hours across twelve quantization variants. The safety adapter ships as a separate LoRA rather than baked into base weights. The move reverses eight months of Meta shipping Muse-branded models exclusively behind the paid tier and reclaims a share of open-weights adoption that had drifted to Qwen, DeepSeek and Kimi.</p>
+      <p class="kicker">MLQ AI · 2026-08-11 · <a href="https://mlq.ai/news/meta-releases-muse-glimmer-weights-and-plans-muse-spark-12-release/" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.22"/><stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/></linearGradient>
+        <radialGradient id="hg2" cx="0.85" cy="0.15" r="0.9"><stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.30"/><stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="480" height="320" fill="url(#hg1)"/>
+      <rect width="480" height="320" fill="url(#hg2)"/>
+      <g fill="#1e3a8a" font-family="system-ui,sans-serif">
+        <text x="30" y="34" font-size="10" font-weight="700" letter-spacing="2.4">DAILY · WEDNESDAY · AUG 12, 2026</text>
+        <text x="30" y="50" font-size="8" font-weight="700" letter-spacing="1.4" opacity="0.75">META · MUSE GLIMMER 30B · OPEN WEIGHTS</text>
+      </g>
+      <g fill="#1e3a8a" font-family="Georgia,serif">
+        <text x="30" y="132" font-size="56" font-weight="700" letter-spacing="-2.5">30B</text>
+        <text x="30" y="160" font-size="11" font-weight="700" letter-spacing="0.6" opacity="0.85">DENSE · 8.7T TOKENS · 42-DAY H200 TRAIN</text>
+      </g>
+      <g stroke="#1e3a8a" stroke-width="1" fill="none" opacity="0.55">
+        <line x1="30" y1="200" x2="240" y2="200"/>
+        <line x1="30" y1="228" x2="240" y2="228"/>
+        <line x1="30" y1="256" x2="240" y2="256"/>
+        <line x1="30" y1="284" x2="240" y2="284"/>
+      </g>
+      <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-weight="700" font-size="9" letter-spacing="1.0">
+        <text x="30" y="196">MMLU-PRO · 78.9 · HUMANEVAL+ · 82.1</text>
+        <text x="30" y="224">DOWNLOADS · 74K IN 8 HOURS · 12 QUANTS</text>
+        <text x="30" y="252">SAFETY ADAPTER · SEPARATE LoRA · OPT-IN</text>
+        <text x="30" y="280">MUSE SPARK 1.2 OPEN WEIGHTS · WEEK OF AUG 24</text>
+      </g>
+      <g transform="translate(380, 200)">
+        <circle cx="0" cy="0" r="72" fill="none" stroke="#1e3a8a" stroke-width="1" opacity="0.18"/>
+        <circle cx="0" cy="0" r="54" fill="none" stroke="#1e3a8a" stroke-width="1" opacity="0.30"/>
+        <circle cx="0" cy="0" r="36" fill="none" stroke="#1e3a8a" stroke-width="1.5" opacity="0.55"/>
+        <circle cx="0" cy="0" r="12" fill="#1e3a8a"/>
+        <text x="0" y="-88" text-anchor="middle" fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="9" font-weight="700" letter-spacing="1.6">MUSE FAMILY · GLIMMER + SPARK 1.2</text>
+        <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700">
+          <text x="0" y="4" text-anchor="middle" font-size="11">30B</text>
+        </g>
+        <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="7" font-weight="600" letter-spacing="1.4" opacity="0.75">
+          <text x="0" y="48" text-anchor="middle">MUSE COMMUNITY 2.0</text>
+          <text x="0" y="64" text-anchor="middle">700M MAU LICENSE CAP</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+<p>Mark Zuckerberg posted to Threads at 11:14 UTC Tuesday confirming both an immediate open-weights release and a scheduled follow-up. Meta uploaded Muse Glimmer at 30 billion parameters to Hugging Face and to Meta AI at 12:02 UTC. Muse Spark 1.2, the flagship coding model that shipped in paid-API form on August 5, gets its open-weights release the week of August 24. The pair reverses eight months of Meta shipping Muse-branded models exclusively behind the paid tier and gives the community a specific two-week deadline for the follow-on drop. Hugging Face downloads on Muse Glimmer crossed 74,000 inside eight hours across twelve quantization variants covering llama.cpp GGUF (Q4_K_M, Q5_K_M, Q6_K, Q8_0, FP16), AWQ, GPTQ-4bit, GPTQ-8bit, FP8 and MXFP4.</p>
+
+<p>Muse Glimmer is a 30-billion-parameter dense model with a 24-layer encoder-decoder split. Meta trained it on 8.7 trillion tokens including 340 billion first-party FAIR reasoning traces. Compute was 4,096 H200 GPUs for 42 days, with the FAIR Paris cluster contributing 1,024 GPUs to the RLHF phase. Context is 32K, output 8K. The benchmark line runs MMLU-Pro 78.9 percent, GPQA-Diamond 64.2 percent, HumanEval-Plus 82.1 percent, GSM8K 94.6 percent. Nathan Lambert of the Allen Institute for AI framed the efficiency point on X: Muse Glimmer at 78.9 on MMLU-Pro is what Llama 3 70B was six months ago at 43 percent of the parameter count. The comparison sets the frame Meta wanted. Open-weights market share had fallen from 68 percent at Llama 3 peak to 12 percent by Q2 2026, absorbed by Qwen 3.x, DeepSeek V4 and Kimi K3. Zuckerberg's post read as both an admission and a comeback pitch.</p>
+
+<blockquote class="pull-quote">"Open weights are back at Meta. This week we're shipping Muse Glimmer at 30 billion parameters, and Muse Spark 1.2 open weights the week of August 24." <cite>— Mark Zuckerberg, Threads, 11:14 UTC</cite></blockquote>
+
+<h4>The design choice that mattered</h4>
+<p>Muse Glimmer ships base weights with no guardrails baked in. The safety adapter arrives as an optional PEFT LoRA on a separate repository, downloadable and stackable at inference time. Meta is the first frontier open-weights lab to split the safety layer from the base model this way. Take the adapter, leave it, or replace it with a locally trained alternative. Ahmad Al-Dahle, Meta's VP of GenAI, framed the choice as fidelity to the open-weights premise. Simon Willison, whose two prior weekend posts had drawn hard lines about which frontier labs deserved the "open" label, called the decoupled adapter "a real design decision, not a talking point."</p>
+
+<blockquote class="pull-quote">"The safety adapter ships as a separate LoRA. Take it, leave it, or replace it with your own. That's how open weights are supposed to work." <cite>— Ahmad Al-Dahle, Meta VP GenAI</cite></blockquote>
+
+<h4>The contributor-tier pipeline</h4>
+<p>Muse Spark 1.2 launched as a closed paid tier on August 5 at $1.25 per million input tokens and $4.25 output on the standard tier, with a contributor tier at $0.10 input and $0.20 output. The 12.5x discount buys training-data rights on the contributor's traffic. Meta's disclosure Tuesday shows the mechanism is producing volume. First six days of billed contributor telemetry: 340 million input tokens and 42 million output tokens, with 71 percent of Muse Spark accounts opting in. The open-weights release the week of August 24 will land with 30 days of contributor telemetry already flowing back into the next round of training. Anjney Midha at Andreessen Horowitz read the mechanism plainly: Meta pays users in cheap tokens and gets training-data rights on the resulting traffic. The paid tier is the pipeline that feeds the next open-weights drop, not a competing product line.</p>
+
+<h4>Day-one infrastructure</h4>
+<p>llama.cpp b10336 landed the Glimmer architecture at 11:47 UTC with support for all five GGUF quantization tiers. vLLM 0.10.5 shipped the reference deployment template at 12:14 UTC. Ollama v0.32.8, Apple MLX 0.20, Hugging Face Transformers 4.55.1 and TGI 3.4 followed inside the hour. The MoE routing kernel work that landed with Grok 4.6 the previous day carried forward to the dense-attention path for Glimmer, and llama.cpp's fused RMSNorm+MUL+RoPE kernel from the August 9 push applied without changes. Meta's decision to align with existing infrastructure ahead of the release meant no operator had to wait more than an hour to run Glimmer against the local stack they already had. That is a different cadence from the Llama 3 open-weights launch, when day-one CUDA support arrived but day-one AMD ROCm and Apple Silicon MLX support took a week each.</p>
+
+<h4>The license and the competitive picture</h4>
+<p>Muse Community License 2.0 permits commercial use up to 700 million monthly active users, matching Llama 3's threshold. That cap excludes Meta's direct hyperscaler competitors from deploying Glimmer in their own consumer surfaces without a paid Meta license, while keeping the model open for the enterprise and developer market that Meta wants to reach. The competitive picture Tuesday afternoon reads: Alibaba Qwen 3.8-Max sits at the top of the open-weights leaderboard on parameter count (2.4T total, 95B active), DeepSeek V4-Flash-0810 owns the coding-agent tier at 72.3 percent SWE-Bench Verified, Moonshot Kimi K3.1 lifted to 59 on the Artificial Analysis Intelligence Index Tuesday morning, and Meta Muse Glimmer at 30B closes the efficiency-per-parameter gap the Chinese labs had opened. Muse Spark 1.2 open weights the week of August 24 slots into the coding-agent tier where DeepSeek and Alibaba have been unchallenged. Zuckerberg's promise carries a specific deadline the community will now track.</p>
+
+<blockquote class="pull-quote">"Muse Glimmer at 78.9 on MMLU-Pro is what Llama 3 70B was six months ago at 43 percent of the parameter count. The efficiency curve is holding." <cite>— Nathan Lambert, Allen Institute for AI</cite></blockquote>
+
+<p>Moor Insights &amp; Strategy titled its field note "Recapturing the Llama Spark." Patrick Moorhead walked through the eighteen-month share-loss story and identified the contributor-tier mechanism as the piece Zuckerberg had been missing. The Llama 3 open-weights release had leaked training-data leverage to every downstream lab that fine-tuned on Llama outputs. The Muse Spark contributor tier reverses that flow. Muse Glimmer is a proof of what the mechanism can produce in one training cycle. The August 24 Muse Spark 1.2 open-weights drop is the demonstration at scale.</p>
+<p class="source-footer"><a href="https://mlq.ai/news/meta-releases-muse-glimmer-weights-and-plans-muse-spark-12-release/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<div class="big-picture" aria-label="Big Picture">
+  <div class="label">Big Picture</div>
+  <div>
+    <p>Meta shipped Muse Glimmer at 30 billion open weights Tuesday morning and committed Muse Spark 1.2 open weights for the week of August 24, the first frontier open-weights release from Meta since December 2025 and the first with a decoupled safety adapter shipped as an optional LoRA. Hugging Face downloads crossed 74,000 in eight hours. Zuckerberg framed the release on Threads as Meta returning to open weights, and Nathan Lambert framed the 78.9 MMLU-Pro score as Llama 3 70B territory at 43 percent of the parameter count. Google DeepMind promoted Gemini 3.6 Flash and 3.5 Flash-Lite to GA at $0.30 and $0.075 per million input tokens respectively, doubled the Vertex AI context-caching discount to 88 percent over 32K, and added Gemini 3.5 Flash-Cyber with 47 hard-blocked CVE categories gated behind Google Public Sector waitlist.</p>
+    <p>Anthropic committed the entire Claude 5 family to invisible statistical watermarking starting August 24 with free detection through end of 2026 for verified academic, journalism and education customers. Anthropic also signed a $9.1 billion 20-year lease for 191 MW at Riot Platforms Rockdale Texas, launched Claude for Teachers to 42,000 teachers on day one across 3,100 districts, and extended the Compliance API to Cowork and Claude Code across desktop, web, mobile and CLI. Google Gemini app crossed 1 billion monthly active users, matching ChatGPT's June milestone. Unitree Robotics final Shanghai STAR retail oversubscription lands at 8,289 times, roughly 20x higher than Monday's preliminary number. Intel priced a $20 billion upsized equity offering at $95 as demand crossed $100 billion. Moonshot uploaded Kimi K3.1 patch checkpoint fixing the schema-strict tool-call regression, and the Artificial Analysis Intelligence Index rerun landed at 59. Cohere shipped Command R+ 2026 August update at 384K context with a deep-reasoning tier hitting 84.6 on Terminal-Bench 2.1. Allen Institute published OLMo 3 preview at 34 billion parameters trained end-to-end on 2,048 AMD MI300X at Los Alamos with the entire training pipeline released under Apache 2.0. Apollo Research posted a 219-of-340 Petri reproduction on Sonnet 5 with 42 planning-loop features named. METR launched GAIA-Long with 4-hour and 12-hour task tiers where Grok 4.6 tops closed at 68.4 percent and 41.7 percent. Claude Code v2.1.228 patches a visual freeze and hardens claude.ai-synced skills ahead of Friday's auto-mode default flip. llama.cpp b10356 flips CI to AMD ROCm 7.14. OpenAI Codex CLI shipped 0.148 alpha 7 and 8 in three hours. Ollama v0.32.8 finished Muse Glimmer NVIDIA and AMD coverage. onsemi AI data-center revenue doubled to over $500 million. SpaceX Terafab confirmed off-grid gas plus batteries at the $16.8 billion Grimes County campus. Energy Vault projects $500-600 million from a 1.25 GW Texas hyperscaler deal. OpenAI shipped GPT-5.6-Cyber through Daybreak Red with two Chrome V8 zero-days including CVE-2026-15903 already disclosed. ELLIS/MPI/MATS/Snyk researchers extracted 315,320 encrypted reasoning blocks from public logs across Claude, GPT and Gemini families. Manus completes Meta acquisition unwind under China's Foreign Investment Security Review order, the first consummated cross-border AI deal reversed under the FISR framework.</p>
+  </div>
+</div>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#1e3a8a"><circle cx="18" cy="9" r="1.6"/><circle cx="30" cy="9" r="1.6"/><circle cx="40" cy="9" r="2.6"/><circle cx="50" cy="9" r="1.6"/><circle cx="62" cy="9" r="1.6"/></g>
+  </svg>
+</div>
+
+<section class="section-head">
+  <h2>More today</h2>
+  <span class="count">23 stories · 2026-08-11 — 2026-08-12</span>
+</section>
+
+<div class="cards">
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><rect x="14" y="20" width="34" height="42" rx="2"/><rect x="52" y="26" width="24" height="36" rx="2"/><rect x="80" y="14" width="26" height="48" rx="2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="76" text-anchor="middle" font-size="9">$0.30/M · 2M CTX</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="10" text-anchor="middle">GEMINI 3.6 FLASH · GA</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Google DeepMind ships Gemini 3.6 Flash and 3.5 Flash-Lite to GA and adds Flash-Cyber preview</h3>
+<p class="kicker">Google AI for Developers · 2026-08-11 · <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Gemini 3.6 Flash lands at $0.30 per million input tokens with a 2-million-token context window and 84.2 on MMLU-Pro. The Vertex AI context-caching discount improved from 75 to 88 percent for reads over 32K. Flash-Cyber ships alongside as preview with waitlist gating routed through Google Public Sector.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Gemini 3.6 Flash and Gemini 3.5 Flash-Lite were promoted to General Availability at 15:00 UTC Tuesday, ending preview windows of 42 and 71 days. A third model landed in the same drop: Gemini 3.5 Flash-Cyber, a specialized variant trained on a curated cybersecurity corpus and gated behind a waitlist. Flash sits at $0.30 per million input tokens and $2.40 output, Flash-Lite at $0.075 and $0.60. Flash's context window expanded to 2 million tokens on graduation from the 1-million preview cap. The Vertex AI context-caching discount over 32K tokens moved from 75 to 88 percent, resetting the economics for long-context retrieval work.</p>
+
+<p>The benchmark line for 3.6 Flash reads 84.2 MMLU-Pro, 71.4 GPQA-Diamond, 47.8 Terminal-Bench 2.1, 68.9 SWE-Bench Verified. Against Grok 4.6, which shipped Monday at $2.80 input and $9.40 output with 89.3 on Terminal-Bench 2.1, Flash returns 91 percent of the coding-agent score at 42 percent of the price. Ethan Mollick's afternoon X post pinned the significance: Flash at 84.2 MMLU-Pro and $0.30 per million input is the price-performance frontier this week, nothing else touches it. Google chose to compete on unit economics rather than absolute capability.</p>
+
+<blockquote class="pull-quote">"3.6 Flash at 84.2 MMLU-Pro and $0.30 per million input is where the price-performance frontier is this week. Nothing else touches it." <cite>— Ethan Mollick, Wharton</cite></blockquote>
+
+<h4>Flash-Cyber</h4>
+<p>Flash-Cyber sits at the political center of the drop. Sundar Pichai's Google I/O 2026 keynote in May had promised the model as the "responsible answer to model-cyber-tier questions the field is now asking." That framing landed six days after OpenAI classified Astra at Critical cyber under the Preparedness Framework and one day after Anthropic filed its ASL-4 threshold approach report with the EU AI Office. Google entered the same conversation from the opposite direction: a model that inherits cyber capability by design, wrapped in a classifier layer built before the training run. Koray Kavukcuoglu's technical blog spelled out the sequence. The classifier came first. Hard blocks cover 47 restricted CVE categories including SCADA and ICS attack vectors, medical device firmware, air-traffic control systems, election infrastructure and nuclear operations. Access routes through Google Public Sector's waitlist, which lets DeepMind vet each customer against an allowlist of authorized red-team engagements.</p>
+
+<p>The training corpus is what makes Flash-Cyber unusual. DeepMind curated 4.2 million CVE writeups from MITRE and vendor disclosures, 890,000 Metasploit modules, 3.1 million CTF challenge traces from DefCon, Google CTF and independent competitions, plus DeepMind's proprietary red-team playbooks accumulated over four years of internal exercise campaigns. The model card reports that removing the safety classifier at inference time would produce a capability profile comparable to what OpenAI disclosed about Astra. DeepMind's argument is that the classifier makes deployment safer than shipping a general-purpose model that acquired the same capability incidentally.</p>
+
+<blockquote class="pull-quote">"Flash-Cyber is our answer to the question the field is now asking. We built the classifier layer first, then trained the model." <cite>— Koray Kavukcuoglu, SVP Google DeepMind</cite></blockquote>
+
+<h4>Post-Hassabis product velocity</h4>
+<p>Kavukcuoglu's closing quote in the launch post said the Flash release was the first product decision fully executed under the new reporting structure and moved faster than anything in the last six months. The structure is the one Pichai announced last Wednesday: Demis Hassabis to Chair of DeepMind and Chief Scientist of Alphabet, Kavukcuoglu to SVP reporting directly to Pichai. GOOGL closed Monday down 5.6 percent from the pre-announcement print and rebounded 2.4 percent Tuesday on the Flash release. Day-one integrations landed across the tooling stack: LangGraph 0.4.1 typed checkpoints, Vercel AI SDK 4.2, Cursor 2.0 beta 3 added Flash-Cyber for approved-waitlist accounts, Continue.dev 0.9 adapter support. The gemini-robotics-er-1.6-preview model gets sunset notice for August 31 with all traffic migrating to Gemini Robotics ER 2.</p>
+<p class="source-footer"><a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="#1e3a8a" opacity="0.14"><rect x="12" y="24" width="96" height="34" rx="2"/></g>
+  <g fill="none" stroke="#1e3a8a" stroke-width="1.2"><line x1="20" y1="34" x2="100" y2="34"/><line x1="20" y1="42" x2="80" y2="42"/><line x1="20" y1="50" x2="90" y2="50"/></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">CLAUDE 5 · WATERMARK · AUG 24</text></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="18" text-anchor="middle" font-size="8">87% AT PARAPHRASE</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Anthropic commits Claude 5 family to invisible watermarking starting August 24, free detection for academia and journalism</h3>
+<p class="kicker">Anthropic News · 2026-08-11 · <a href="https://www.anthropic.com/news/watermarking-claude-output" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Every Claude 5 model plus the maintenance-path Sonnet 4.5 receives a keyed statistical watermark that survives paraphrase at 87 percent on 340-token passages while adding under 0.4 percent perplexity. Detection is free through end of 2026 for verified academic, journalism and education customers; commercial detection at $0.0002 per checked token. Enterprise opt-out available, 8 percent of preview customers took it.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic committed the entire Claude 5 family to invisible statistical watermarking on model output at 09:12 UTC Tuesday, with the rollout beginning August 24. Opus 5 and Sonnet 5 receive the watermark first, Fable 5 on August 27, Haiku 5 and Claude Sonnet 4.5 maintenance path on August 31. The scheme derives from Kirchenbauer et al. 2023 with three Anthropic additions: a rotating key schedule that invalidates specific key generations without breaking historical detection, streaming-safe detection over token windows so partial outputs can be attributed without waiting for the full completion, and a multi-partition scheme that allows parallel watermarking of concurrent completions in batch inference without cross-contamination of the green-list vocabulary partition. Perplexity cost lands at 0.4 percent on Anthropic's internal Perplexity-Preserve suite.</p>
+
+<blockquote class="pull-quote">"Every education, publishing and hiring customer has asked us for this since we shipped Claude 5. Today we're shipping it." <cite>— Jack Clark, Anthropic Trust and Safety</cite></blockquote>
+
+<p>The detection profile is where independent scrutiny will focus. Paraphrase attacks against 340-token passages leave the watermark detectable at 87 percent. Aggressive back-translation through three languages drops detection to 62 percent. Full rewrite by GPT-5.6 Sol collapses detection to 34 percent. Nicholas Carlini's framing: 87 percent under paraphrase is not the ceiling for the scheme, it is the floor for the shipped version. The Kirchenbauer 2023 scheme collapsed under moderate paraphrase; Anthropic's version holds because the green-list partition is derived from a keyed PRF over token windows rather than single-token hashes. The technical report on arXiv (2608.04122) walks through five ablation studies covering paraphrase attacks, translation loops, model-inversion attempts and adversarial fine-tuning against an attacker with API access. Reference implementation ships on GitHub under Apache 2.0 (anthropic/watermark-claude-reference) with Python, TypeScript, Rust and Go bindings.</p>
+
+<h4>Chain-of-thought under a separate key</h4>
+<p>The choice that will draw interpretability-community attention is that CoT traces watermark under a distinct cryptographic key from user-visible output. Carlini explained the reasoning: if a user leaks a CoT trace publicly, that leak does not compromise detection on the final answer. Petri, the interpretability testbed Anthropic released last week, uses CoT as its primary decomposition target. Watermarking CoT under a distinct key means Petri users can publish CoT traces without triggering detection cascades on downstream derived outputs.</p>
+
+<blockquote class="pull-quote">"We are watermarking the chain of thought with a distinct key so that CoT reasoning cannot be used to derive whether a final answer was Claude-generated." <cite>— Nicholas Carlini, Anthropic principal scientist</cite></blockquote>
+
+<h4>Enterprise opt-out and the honest floor</h4>
+<p>Claude Enterprise customers can pass the header X-Anthropic-Watermark: none in completions requests, provided they hold Enterprise SLA and complete an attestation flow that logs justifications for audit. Preview-flow data from the last two weeks shows 8 percent of enterprise customers opted out. Dario Amodei's launch note named the number rather than hid it. The categories that opt out cluster around three use cases: internal-only research summarization where attribution back to Claude would leak strategic information, legal-privilege contexts where the watermark could complicate discovery, and journalism-source-protection cases where verifiability of Claude-provenance could burn sources. Free detection through end of 2026 for academic, journalism and education verticals is the piece that makes the scheme useful in the wild rather than useful in the lab. Anthropic is the first frontier lab to ship watermarking across the full model family with a free detection tier for the verticals that most need it.</p>
+<p class="source-footer"><a href="https://www.anthropic.com/news/watermarking-claude-output" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><rect x="14" y="20" width="92" height="42" rx="2"/><line x1="30" y1="42" x2="90" y2="42" stroke-width="1.6"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="38" text-anchor="middle" font-size="14">$9.1B</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="56" text-anchor="middle">20 YEARS · 191 MW · ROCKDALE</text><text x="60" y="76" text-anchor="middle">ANTHROPIC × RIOT</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Anthropic signs $9.1 billion 20-year lease with Riot Platforms for 191 MW at Rockdale Texas</h3>
+<p class="kicker">Yahoo Finance · 2026-08-11 · <a href="https://finance.yahoo.com/markets/stocks/article/riot-platforms-stock-surges-on-91-billion-data-center-deal-with-anthropic-132120194.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The lease runs through June 2048 with two five-year extension options that could push total contract value to $16.1 billion. Riot shares surged 25 percent in after-hours. Rockdale now carries 241 MW of signed IT capacity across Anthropic and AMD, converting a bitcoin mining site into a $9-billion-plus AI campus.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic signed a $9.1 billion, 20-year lease Tuesday for 191 megawatts of data-center capacity at Riot Platforms' Rockdale, Texas campus, the largest publicly disclosed single-site compute commitment the company has ever made. The lease runs through June 2048 with two five-year extension options that could push total contract value to $16.1 billion. Phased ramp brings 96 MW online by December 2027 and the full 191 MW by June 2028. Riot shares surged approximately 25 percent in after-hours trading. Cantor Fitzgerald, Bernstein, Piper Sandler, Citi and H.C. Wainwright all raised price targets in the hours after the announcement.</p>
+
+<p>The Rockdale campus becomes the reference case for the Texas bitcoin-mining to AI-hosting pivot that has defined the second half of 2026. Riot brought its first megawatts online for AI tenancy in January when AMD signed for 25 MW, then exercised a 25 MW option in April, giving AMD 50 MW at the site. The 191 MW Anthropic contract brings Riot's total signed critical IT capacity at Rockdale to 241 MW, a jump that turns the campus from a bitcoin mining site with an AI wing into an AI campus with a legacy mining footprint. Rockdale's proximity to the ERCOT grid and its existing gigawatt-scale power procurement contracts allow Riot to promise phased ramps that competitors relying on new-build interconnect queues cannot. Anthropic's December 2027 and June 2028 milestones fit inside ERCOT queue timelines because Riot already has the substation capacity in place.</p>
+
+<h4>The economics</h4>
+<p>The $9.1 billion base commitment implies a fully-loaded cost of roughly $47 million per megawatt-year, well above traditional colocation pricing and consistent with the premium tenants are paying for early access to sub-hyperscaler capacity. Riot's existing power procurement contracts were priced against bitcoin economics; the AI tenancy re-rates them at data-center margins. Wall Street's price-target reaction reflects both the demand side and the arbitrage side. Cantor and Bernstein framed the deal as transformational because it converts backwards-looking mining infrastructure into forward-looking AI infrastructure at the flip of a lease.</p>
+
+<h4>The Anthropic capital plan</h4>
+<p>The Anthropic side reads as the second leg of a two-part infrastructure disclosure that opened Monday with the Theseus Infrastructure joint venture with Macquarie Asset Management and GIC. Together, the Theseus JV and the Riot lease represent Anthropic moving from pure hyperscaler tenancy toward a hybrid of co-owned platforms and long-lease specialty tenancy. The company's earlier $100 billion-plus AWS commitment over the following decade remains the dominant line item on its infrastructure book, but Tuesday's deal signals that Riot-style specialty leases will absorb a meaningful share of the marginal capacity ramp. The lease alone accounts for close to 20 percent of the $50 billion Anthropic disclosed earlier in 2026 for custom data-center spending across US locations. The bitcoin-to-AI transition Riot represents has parallels at Core Scientific, Iris Energy and TeraWulf, all of which have converted portions of mining footprint to AI tenancy in 2026. Riot's deal is the largest single such conversion by contract value disclosed to date.</p>
+<p class="source-footer"><a href="https://finance.yahoo.com/markets/stocks/article/riot-platforms-stock-surges-on-91-billion-data-center-deal-with-anthropic-132120194.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><circle cx="60" cy="40" r="26"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="46" text-anchor="middle" font-size="16">1B</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="18" text-anchor="middle">GEMINI · MAU · 14TH GOOGLE 1B</text><text x="60" y="76" text-anchor="middle">63% VOICE · 150M IMG/DAY</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Google Gemini app crosses 1 billion monthly active users, matching ChatGPT</h3>
+<p class="kicker">TechCrunch · 2026-08-11 · <a href="https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Gemini becomes the fourteenth Google product to reach 1 billion MAU. Pichai's X post reveals 63 percent of Gemini users interact via voice and the app generates more than 150 million images daily. iOS carries more than 100 million active users. Daily active users tripled year over year.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Google's Gemini app crossed 1 billion monthly active users Tuesday, a milestone Sundar Pichai broadcast in a single X post that pinned the standalone assistant against ChatGPT's user footprint for the first time. OpenAI's assistant hit the same figure in June 2026. Two months later, Google closed the gap and turned what many analysts had framed as a distribution advantage into a live parity claim. Gemini becomes the fourteenth Google product to reach 1 billion MAU, joining Search, Gmail, YouTube, Maps, Chrome, Photos and Android among the company's largest surfaces.</p>
+
+<blockquote class="pull-quote">"Our fastest growing product ever." <cite>— Sundar Pichai, on X</cite></blockquote>
+
+<p>Pichai's post included a usage snapshot that reads more like a product roadmap than a victory lap. Sixty-three percent of Gemini users interact with the assistant via voice. More than 150 million images are generated daily inside the app. iOS accounts for more than 100 million active users, an unusually strong showing for a Google product on Apple hardware. Daily active users tripled over the past year, a pace that outstrips every prior Google consumer launch of the last decade. Google's Q2 2026 earnings call, held roughly four weeks earlier, disclosed 950 million MAU, which means Gemini added roughly 50 million net-new monthly users in the window between the print and Tuesday's post. That climb sits at the top end of the trajectory internal Google forecasts have projected since Gemini 3.5 Pro shipped in the second quarter.</p>
+
+<p>The comparison to Gmail is instructive. Gmail took about 14 years to reach an equivalent-scale audience, launching in April 2004 and crossing 1 billion MAU in February 2016. Gemini launched in December 2023 under the Gemini brand after the Bard rebrand and cleared the same bar in approximately 32 months. The 63 percent voice-interaction figure and the 150 million daily image generations put Gemini's usage depth into a distinct category from ChatGPT, which skews text-first. OpenAI's ChatGPT reached 1 billion weekly active users at the same June cadence at which it hit 1 billion monthly, which puts its engagement depth ahead of Gemini's monthly figure. Google has not disclosed a comparable weekly number, and the gap between MAU and WAU is the next narrative point that will define whether Gemini is closing on ChatGPT's actual usage or only its top-of-funnel reach.</p>
+
+<p>The iOS number carries strategic weight against the parallel European Digital Markets Act pressure on Apple to open default assistant slots on iPhone. If enforcement holds, Google would be the largest beneficiary. The 1 billion MAU line arrives one day after the Anthropic-Riot compute lease and the same day as the Gemini 3.6 Flash GA release, extending a run of announcements that all pull the AI infrastructure story back to consumer distribution.</p>
+<p class="source-footer"><a href="https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1.2"><rect x="14" y="20" width="30" height="42"/><rect x="48" y="14" width="24" height="48"/><rect x="76" y="26" width="30" height="36"/></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">CLAUDE FOR TEACHERS · FREE · 2027</text></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="10" text-anchor="middle" font-size="8">42K TEACHERS · 3,100 DISTRICTS · DAY 1</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Anthropic Claude for Teachers goes public with 42,000 first-day sign-ups across 3,100 districts</h3>
+<p class="kicker">KEYT · 2026-08-11 · <a href="https://keyt.com/stacker-ai/2026/08/11/anthropic-unveils-claude-for-teachers-joining-openai-and-google-in-race-to-dominate-classroom-ai/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Verified U.S. K-12 educators get Claude Sonnet 5 and Opus 5 free through end of 2027. Verification runs through SchoolID against state licensure databases. Detroit Public Schools reported 91 percent teacher retention over the pilot year across 47 schools. Randi Weingarten and the American Federation of Teachers signed off on the privacy framework.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic launched Claude for Teachers publicly Tuesday after a July 14 pilot rollout, free for verified U.S. K-12 educators through end of 2027. First-day sign-ups hit 42,000 teachers across 3,100 school districts, a number Dario Amodei's launch note framed as the market's answer to whether Anthropic should be in classroom AI. The product runs on Claude Sonnet 5 for standard workflows and Claude Opus 5 for lesson-plan generation and IEP drafting where reasoning depth matters. Verification routes through SchoolID against state licensure databases. Under-18 accounts cannot access the teacher-facing product, which resolves the age-restriction question that had blocked previous Anthropic education efforts.</p>
+
+<p>Drew Bent leads Anthropic's education vertical. His team grew from 4 to 47 people between January and August 2026, a hiring trajectory that mirrors the Detroit pilot's expansion from 12 teachers in January to 340 across 47 schools by end of the school year. Detroit superintendent Nikolai Vitti reported 91 percent teacher retention on the tool through the full school year, a number that beat the district's baseline retention rates for previous ed-tech pilots.</p>
+
+<blockquote class="pull-quote">"Anthropic came to us with the privacy framework already written. That is not how vendor conversations usually start." <cite>— Randi Weingarten, American Federation of Teachers president</cite></blockquote>
+
+<h4>The privacy architecture</h4>
+<p>Compliance covers FERPA at the federal level, COPPA for any student data that flows through the system, and 14 state-specific student privacy laws including California SOPIPA and Colorado HB-1130. Conversations do not train Claude models. Student data is walled off from Anthropic's telemetry through a separate infrastructure tier that terminates in a customer-controlled encryption boundary. Under-18 gating routes through SchoolID's federated identity system, which the district IT layer already uses for other credential checks. Randi Weingarten's endorsement matched the framing.</p>
+
+<h4>The competitive picture</h4>
+<p>Google Gemini for K-12 costs $8 per teacher per month, OpenAI ChatGPT Edu costs $10 per teacher per month, and Khan Academy Khanmigo remains free through donor subsidy. Anthropic's free-through-2027 commitment costs Anthropic between $2.40 and $4.80 per teacher per month in subsidized Sonnet 5 usage against a paid retail equivalent of $20. At 42,000 teachers on day one, the burn rate runs $100,000 to $200,000 per month. Day-one integrations include Google Classroom, Canvas LMS, Schoology and PowerSchool, with state-standards-aligned rubric generation exporting directly to Google Classroom and Canvas at launch. The roadmap adds parent-teacher conference note synthesis in Q4 2026 and IEP first-draft generation with SPED-specialist review workflow in Q1 2027. Education Week's 2025 survey found 61 percent of teachers reported using AI in some capacity, up from 32 percent in 2024. Anthropic's late-summer launch times to the vendor-selection window that runs through late August for the 2026-2027 school year.</p>
+<p class="source-footer"><a href="https://keyt.com/stacker-ai/2026/08/11/anthropic-unveils-claude-for-teachers-joining-openai-and-google-in-race-to-dominate-classroom-ai/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><path d="M14 60 L34 44 L54 32 L74 24 L94 16 L106 12" stroke-width="1.6"/><circle cx="106" cy="12" r="3" fill="#1e3a8a"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="76" text-anchor="middle" font-size="10">8,289× RETAIL</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="14" text-anchor="middle">UNITREE STAR · FINAL OVERSUBSCRIPTION</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Unitree final Shanghai STAR oversubscription lands at 8,289 times as institutional clawback closes</h3>
+<p class="kicker">Yahoo Finance · 2026-08-11 · <a href="https://finance.yahoo.com/markets/stocks/articles/unitree-robotics-ipo-oversubscribed-8-175125684.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The lot-winning rate for retail applicants closed at 0.018 percent, roughly 1 in 5,526. Institutional demand triggered a clawback that redirected shares back to retail. DeepSeek anchored the strategic tranche at 933,399 shares for 140.8 million yuan. Payment deadline August 12; Thursday first-day open pending.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Unitree Robotics closed its Shanghai STAR Market IPO retail subscription Tuesday with an 8,288.82-times oversubscription, a level that generated a 0.018 percent lot-winning rate and turned the pricing round into a lottery. The final number is roughly 20x higher than Monday's preliminary 384-times print, reflecting late-window retail demand that pushed applications from 9.78 million eligible accounts to a combined subscription totaling 53.64 billion shares. Institutional demand came in above the pre-set clawback threshold, forcing a reallocation that transferred a portion of the institutional tranche back to retail. After the clawback, retail received 9.707 million of the 40.446 million total new shares. Institutional buyers walked away with 22.650 million.</p>
+
+<p>The strategic-placement tranche closed with DeepSeek as anchor at 2.31 percent of the block, acquiring 933,399 shares for 140.8 million yuan on a 24-month lockup. DeepSeek's role in the strategic slot cements the AI-plus-hardware relationship the two companies flagged in June, and the two firms have publicly said they will collaborate on AI models and mechanical engineering. The prospectus discloses a technical-collaboration agreement covering joint development of embodied-AI pretraining data pipelines from the Unitree fleet's sensor telemetry.</p>
+
+<h4>The pricing math</h4>
+<p>At 150.80 yuan per share, Unitree is valued at approximately $9 billion, or 219 times projected 2025 earnings and 36 times revenue. Those multiples make Unitree the most expensive humanoid robotics IPO by earnings multiple in mainland market history. The bull case rests on 2025 revenue growth (1.70 billion yuan versus 392.77 million yuan in 2024) and 43.65 percent overseas revenue mix, which puts the company ahead of any comparable mainland peer on international traction. Net profit of 278.21 million yuan puts Unitree squarely in the profitable-humanoid bucket. Figure AI and Apptronik remain private and pre-revenue at profitable scale. Unitree stands alone as a profitable listed pure-play humanoid.</p>
+
+<h4>The Thursday open</h4>
+<p>Payment deadline for successful investors is August 12 at 16:00 CST. Trading opens at 09:30 Beijing time Thursday, August 13, with the STAR Market's first-day price-limit rules that allow up to a 44 percent gain before an intraday circuit-breaker triggers a 30-minute halt. Grey-market indications on Wednesday afternoon point to a first-day price of 268 to 273 yuan against the 150.80 issue price, a 78 percent pop. Under grey-market indications above 217.15 yuan the halt fires at the open. Guotai Junan and CITIC Securities have both told institutional clients to expect the halt inside the first fifteen minutes and to plan Thursday-morning positions accordingly.</p>
+<p class="source-footer"><a href="https://finance.yahoo.com/markets/stocks/articles/unitree-robotics-ipo-oversubscribed-8-175125684.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><rect x="14" y="30" width="92" height="34" rx="2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="52" text-anchor="middle" font-size="14">$20B</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">INTEL · $95/SHARE · $100B DEMAND</text><text x="60" y="24" text-anchor="middle">UPSIZED FROM $15B</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Intel prices $20 billion upsized equity offering at $95 as book crosses $100 billion of demand</h3>
+<p class="kicker">Yahoo Finance · 2026-08-11 · <a href="https://finance.yahoo.com/markets/stocks/articles/intel-raises-20-billion-upsized-100559961.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The offering upsized from a $15 billion plan and priced 2.6 percent below Monday's close. JPMorgan, Goldman, Morgan Stanley and Citigroup ran the book. Proceeds fund manufacturing expansion, advanced packaging, contract chip manufacturing and 14A process development targeting 2028 production.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Intel priced an upsized $20 billion equity offering at $95 per share Tuesday, converting a $15 billion initial plan into the largest single equity raise in company history after order books cleared more than $100 billion of demand. The pricing landed 2.6 percent below the previous close, a tight discount for a deal of this size and one that reflects AI-driven investor appetite for exposure to advanced-node manufacturing. Book-running managers included JPMorgan Securities, Goldman Sachs, Morgan Stanley and Citigroup Global Markets.</p>
+
+<blockquote class="pull-quote">"As a capital-intensive business, it makes perfect sense for Intel to raise money, especially after a five-fold increase in the stock price since last August." <cite>— Russ Mould, AJ Bell</cite></blockquote>
+
+<p>Intel shares had fallen more than 4 percent on Monday ahead of the formal announcement, an early signal that the market was pricing in dilution. The final terms compressed that discount and cash in the five-fold move in the stock since August 2025, a run that outpaces both AMD and Nvidia over the same window and puts Intel roughly on par with the Philadelphia Semiconductor Index's approximately 75 percent year-to-date gain. Russ Mould at AJ Bell framed the raise as textbook capital-formation timing: a capital-intensive business coming off a stock rerating should press the equity issuance window while it is open.</p>
+
+<h4>Use of proceeds</h4>
+<p>Proceeds fall into three buckets. The bulk of the $20 billion funds capital-intensive manufacturing expansion across US and Ireland sites. A meaningful portion supports the 14A process node targeting 2028 production, which is Intel's foundational bet on regaining leading-edge process leadership against TSMC's N2 and N1.4 nodes. The rest funds advanced packaging technology and contract chip manufacturing capabilities, the two segments that Intel Foundry Services has been building to compete for tenancy from AMD, Nvidia and other logic customers. Intel raised its 2026 capex forecast in July from $18 billion to $20 billion; this raise gives the company balance-sheet headroom to hit that number without stressing credit ratings. The AI-demand thesis behind the raise is that current CPU capacity is insufficient to meet Xeon and Gaudi requirements from hyperscalers and AI-native cloud builders including CoreWeave, and that the additional manufacturing footprint is needed both for internal Intel silicon and for foundry customers. AMD, Nvidia and Broadcom shares were essentially flat on the pricing day, confirming the selloff was a single-name capital-structure event rather than a signal of broader semiconductor weakness.</p>
+<p class="source-footer"><a href="https://finance.yahoo.com/markets/stocks/articles/intel-raises-20-billion-upsized-100559961.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><circle cx="30" cy="40" r="18"/><circle cx="60" cy="40" r="18"/><circle cx="90" cy="40" r="18"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="46" text-anchor="middle" font-size="12">K3.1</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="14" text-anchor="middle">MOONSHOT · 2.8T · 104B ACTIVE</text><text x="60" y="76" text-anchor="middle">SCHEMA-STRICT FIX · 285K DL</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Moonshot Kimi K3.1 patch fixes schema-strict tool-call regression, Intelligence Index climbs to 59</h3>
+<p class="kicker">Hugging Face · 2026-08-11 · <a href="https://huggingface.co/moonshotai/Kimi-K3.1" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Moonshot uploaded the K3.1 patch checkpoint at 04:12 UTC Tuesday. The fix closes the 8.4 percent function-call regression on SWE-Bench Verified. Together, DeepInfra and Fireworks pushed K3.1 endpoints inside six hours; Together priced at $0.60 input.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Moonshot AI uploaded the first patch checkpoint on Kimi K3 to Hugging Face at 04:12 UTC Tuesday, fifteen days after the July 27 weights release. K3.1 addresses the JSON-schema-strict tool-call regression that broke 8.4 percent of function-call trajectories on the SWE-Bench Verified reference harness, and it ships a repacked 96-shard layout that drops the total download from 1.56 TB to 1.41 TB through improved BF16 quantization of the shared-expert layer. Architecture is unchanged from base K3: 2.8 trillion total parameters with 104 billion active per token, MoE router picks 12 of 384 experts per forward pass, one-million-token context window preserved.</p>
+
+<p>Artificial Analysis reran the Intelligence Index on K3.1 within four hours of the upload. Base K3 had scored 57 on the July index, the top open-weights result on the leaderboard for two weeks. K3.1 scores 59, a two-point gain that puts the model inside four points of Grok 4.6 at the frontier at an order of magnitude lower hosted cost. Nathan Lambert framed the release on X as evidence that the open-weights curve is not slowing, and Vaibhav Srivastav confirmed a 3.2-point pass-rate gain on Hugging Face's Frontend Code Arena reproduction within the same window.</p>
+
+<blockquote class="pull-quote">"The K3.1 planner head is the release the July 27 launch should have been. The schema-strict regression was the single-highest-severity complaint from the first two weeks of production adoption." <cite>— Yang Zhilin, Moonshot AI CEO, on Weibo</cite></blockquote>
+
+<p>Together AI, DeepInfra and Fireworks pushed K3.1 endpoints inside six hours of the Hugging Face upload. Together priced its endpoint at $0.60 per million input tokens and $2.40 output, undercutting every hosted frontier model by four times or more on tool-heavy workloads. Cumulative K3 + K3.1 downloads crossed 285,000 by 18:00 UTC Tuesday, up from 260,000 cumulative on Friday. Northflank's self-hosting benchmark measured K3.1 at 1.14x throughput versus base K3 on 8x H200 at 32K context. The Modified MIT license and Moonshot research-use rider on outputs used to train competing frontier models did not change; enterprise counsel at three US firms told The Information last week that the rider had blocked internal adoption. Yang also confirmed that K3.2 is targeted for early September with a native ROS 2 message-serialization plugin, positioning K3 for the embodied-AI reasoning-layer competition that Gemini Robotics ER 2 opened last week.</p>
+<p class="source-footer"><a href="https://huggingface.co/moonshotai/Kimi-K3.1" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1.2"><rect x="14" y="24" width="92" height="12" rx="2"/><rect x="14" y="42" width="76" height="20" rx="2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="36" text-anchor="middle" font-size="9">384K</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">COHERE COMMAND R+ · REASONING TIER</text><text x="60" y="18" text-anchor="middle">78.9% FAST · 84.6% DEEP</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Cohere Command R+ 2026 August update extends context to 384K and adds a deep-reasoning tier</h3>
+<p class="kicker">Cohere Blog · 2026-08-11 · <a href="https://cohere.com/blog/command-r-plus-2026-august-update" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Fast tier hits 78.9 on Terminal-Bench 2.1, deep-reasoning tier 84.6. Priced identically per token at $2.10 input and $8.40 output. 118 enterprise customers now spending $1M+ annually, up from 74 at end of Q1. Open-weights base checkpoint updated same day.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Cohere published the Command R+ 2026 August update at 13:00 UTC Tuesday, extending the June release's 256K context to 384K and adding a two-tier reasoning mode that mirrors the thinking-slider pattern OpenAI shipped on GPT-5.6 last week. The fast tier serves at 340 tokens per second on 8x H100 hardware. The deep-reasoning tier averages roughly 4.2x more tokens per response but posts materially better scores on hard benchmarks. Cohere priced both tiers identically per token at $2.10 per million input and $8.40 per million output, betting the value shift lives in the output-volume increase rather than a per-token premium.</p>
+
+<p>Terminal Bench 2.1 moved from 71.4 percent on the June Command R+ 2026 to 78.9 percent in the August fast tier and 84.6 percent in the deep-reasoning tier. That puts Command R+ in range of GPT-5.6 Luna in fast mode and inside three points of GPT-5.6 Sol in deep mode, at a materially lower hosted price than either. Simon Willison's evaluation notes call the 78.9 fast-tier score competitive with Luna and frame the release as putting Cohere back on the enterprise shortlist after a quiet summer.</p>
+
+<blockquote class="pull-quote">"384K native context lets our largest RAG customers retire the two-stage retrieval pattern they were running on the June release. The two-stage was costing them a full second of latency per query." <cite>— Aidan Gomez, Cohere CEO</cite></blockquote>
+
+<p>Aidan Gomez told The Information last week that Coinbase, Notion and Oracle had all flagged the 256K ceiling as blocking their largest RAG deployments, forcing a two-stage retrieval pattern that added a full second of query latency. The August update lets those customers retire the two-stage entirely. Cohere disclosed 118 enterprise customers spending more than $1 million annually on Command R+ as of Q2, up from 74 at the end of Q1. Native tool-use JSON schema validation now supports the OpenAPI 3.1 spec end to end, matching to the hour the schema-strictness fix Moonshot shipped in Kimi K3.1 Tuesday morning. Nick Frosst's X thread claims Cohere's validation harness passes the OpenAPI 3.1 conformance suite at 99.4 percent versus Kimi K3.1's 96.7 (neither number independently verified). The Command R+ 2026 open-weights base checkpoint at 104B parameters received a same-day update on Hugging Face at CohereLabs/c4ai-command-r-plus-08-11; downloads on the checkpoint hit 34,000 by 22:00 UTC. Rerank 3.5 shipped alongside with a 12 percent latency reduction and native support for the MCP 2026-07-28 resource-metadata schema.</p>
+<p class="source-footer"><a href="https://cohere.com/blog/command-r-plus-2026-august-update" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><path d="M14 60 L14 20 L60 20 L60 42 L106 42 L106 60 Z"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="76" text-anchor="middle" font-size="9">OLMo 3 · 34B</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="14" text-anchor="middle">FULLY OPEN PIPELINE · 6.2T TOKENS</text><text x="60" y="36" text-anchor="middle">2,048× MI300X · LOS ALAMOS · 61 DAYS</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Allen Institute publishes OLMo 3 preview at 34B trained end-to-end on AMD MI300X</h3>
+<p class="kicker">Allen Institute for AI · 2026-08-11 · <a href="https://allenai.org/blog/olmo-3-preview" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Weights, training data, training code, evaluation harness and 4.8 TB of training-run telemetry all release under Apache 2.0. First frontier open-source model trained entirely on non-Nvidia hardware. Scores 76.4 on MMLU-Pro-2, 62.1 on SWE-Bench Verified. Dense 130B targeted Q1 2027.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The Allen Institute for AI published the OLMo 3 preview at 16:00 UTC Tuesday, releasing weights, training data, training code, evaluation harness and full training-run telemetry under Apache 2.0 for a 34-billion-parameter dense model trained on the Dolma 3.5 corpus. Every artifact ships under the same permissive license, closing the reproducibility gap that has separated OLMo from the weights-only open releases that dominate the leaderboard. Hanna Hajishirzi's blog post frames the release as the first frontier open-source model where a research group can reproduce the training run bit for bit on hardware they can buy.</p>
+
+<p>The training run itself is the story. AI2 trained OLMo 3 34B on 2,048 AMD MI300X GPUs at Los Alamos National Laboratory over 61 days, consuming 6.2 trillion tokens from Dolma 3.5. That is roughly double the 3.1 trillion tokens Dolma 3.2 supplied to OLMo 2, and it is the first frontier open-source model trained end to end on non-Nvidia hardware. AMD's ROCm 7.1 release notes that landed Tuesday morning name OLMo 3 explicitly in the MI300X compatibility line. Vamsi Boppana called the training run the proof point AMD needed and confirmed that AMD will use OLMo 3 as the internal reference model for the ROCm 7.1 inference test suite.</p>
+
+<blockquote class="pull-quote">"OLMo 3 is the first frontier open-source model where you can reproduce the training run bit-for-bit on hardware you can buy. Everything else in this class is either weights-only or trained on hardware you cannot access." <cite>— Hanna Hajishirzi, AI2 VP of Research</cite></blockquote>
+
+<p>Benchmarks land where a well-run 34-billion-parameter dense model should. MMLU-Pro-2 at 76.4 percent, AIME-2026 at 68.9, SWE-Bench Verified at 62.1. Sara Hooker of Cohere for AI called the SWE-Bench result the strongest fully-open-pipeline number the field has seen, ahead of Llama 4 70B and inside eight points of the newly-patched Kimi K3.1. Four intermediate checkpoints ship (step 250K, 500K, 750K, final at 1.14M) plus 4.8 TB of training telemetry: gradient norms, learning-rate schedules, evaluation scores at 12,000 checkpoints across the run, every hyperparameter change with the underlying git commit reference. Nora Belrose framed the telemetry package as the artifact the interpretability community has been asking for since Pythia. The license permits commercial use with no revenue cap, no MAU cap, no attribution requirement and no downstream training restriction. Hajishirzi confirmed the dense 130B checkpoint targeted for Q1 2027 with the same fully-open training-pipeline posture. Downloads on the base 34B checkpoint hit 42,000 by 22:00 UTC.</p>
+<p class="source-footer"><a href="https://allenai.org/blog/olmo-3-preview" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><circle cx="30" cy="30" r="6"/><circle cx="60" cy="20" r="6"/><circle cx="90" cy="30" r="6"/><circle cx="30" cy="55" r="6"/><circle cx="60" cy="65" r="6"/><circle cx="90" cy="55" r="6"/><line x1="30" y1="30" x2="60" y2="20"/><line x1="60" y1="20" x2="90" y2="30"/><line x1="30" y1="55" x2="60" y2="65"/><line x1="60" y1="65" x2="90" y2="55"/><line x1="30" y1="30" x2="30" y2="55"/><line x1="60" y1="20" x2="60" y2="65"/><line x1="90" y1="30" x2="90" y2="55"/></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">APOLLO · SONNET 5 · PLANNING LOOP</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Apollo Research reproduces 219 of 340 Petri tasks on Sonnet 5, names 42-feature planning-loop assembly</h3>
+<p class="kicker">arXiv · 2026-08-11 · <a href="https://arxiv.org/abs/2608.04812" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The 219/340 reproduction rate is the strongest interpretability benchmark result the field has published on a frontier model. Three previously-undocumented planning-loop features named. 4.2 TB of activation-tensor data released under CC-BY-4.0.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Apollo Research uploaded a technical paper on the Petri planning-circuit reproduction to arXiv at 12:34 UTC Tuesday, one day after Anthropic released the Petri interpretability testbed and roughly six hours after Apollo's initial Petri reproduction on Llama-3.3-70B posted to the Petri dataset harness. The paper reproduces 219 of the 340 Petri tasks on a fine-tuned Sonnet 5 with feature-activation patterns that "clearly match" the Anthropic-reported behavior. That reproduction rate is materially higher than the 187 of 340 clean-reproduction average from Monday's cross-lab run, which averaged across four labs and four different base models.</p>
+
+<p>The core structural finding is what Apollo names the "planning-loop assembly." Forty-two SAE-dictionary features fire together across planning tasks in a reproducible activation ordering that the paper argues constitutes a circuit-level pattern. Chris Olah's public review on the Anthropic Alignment Forum names the planning-loop assembly the most compelling structural finding in the paper. Neel Nanda called the three previously-undocumented planning-loop features that Apollo identifies the important addition, on the grounds that Anthropic's SAE dictionary covers most of Sonnet 5's known circuits but leaves the planning loop underdescribed.</p>
+
+<blockquote class="pull-quote">"The planning-loop assembly is the most compelling structural finding in the paper. Forty-two features that fire together across planning tasks with reproducible activation ordering is the kind of circuit-level pattern the field has been searching for." <cite>— Chris Olah, Anthropic</cite></blockquote>
+
+<p>The reproduction runs on 8x H200 hardware, consumes roughly 340 GPU-hours across the 340 Petri tasks, and uses the Anthropic-released SAE feature dictionary supplemented by an Apollo-trained dictionary on 720 million additional tokens of long-horizon planning traces. Apollo publishes the fine-tune script, the supplementary SAE dictionary and 4.2 terabytes of activation-tensor data under CC-BY-4.0. Nora Belrose called the supplementary-dictionary and activation-tensor release the piece that makes this a reproducible research artifact rather than a claim. The Anthropic Responsible Disclosure process cleared the paper Monday afternoon before the Tuesday arXiv upload; the three previously-undocumented planning-loop features were disclosed to Anthropic on Sunday and integrated into Anthropic's internal SAE dictionary before Monday's Petri release. Interpretability research has been moving faster than any subfield of AI in 2026: Petri on Monday, four-lab reproduction Monday afternoon, Apollo's technical paper Tuesday morning, roughly 30 hours end to end.</p>
+<p class="source-footer"><a href="https://arxiv.org/abs/2608.04812" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="#1e3a8a" opacity="0.14"><rect x="14" y="22" width="92" height="44" rx="2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="14">12h</text><text x="60" y="60" text-anchor="middle" font-size="9">GAIA-LONG</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">METR · GROK 4.6 · 41.7% TOP</text><text x="60" y="16" text-anchor="middle">240 TASKS · 8+ TOOL CALLS</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">METR launches GAIA-Long agent benchmark with 12-hour tier where Grok 4.6 tops at 41.7 percent</h3>
+<p class="kicker">METR · 2026-08-11 · <a href="https://metr.org/blog/gaia-long-benchmark-launch" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">240 hand-authored tasks, each with 8 or more sequential tool calls. Grok 4.6 tops the closed leaderboard at 68.4 percent (4-hour) and 41.7 percent (12-hour). Kimi K3.1 leads open-weights at 58.4 percent and 32.9. Anthropic, OpenAI, xAI and DeepMind commit to running GAIA-Long on frontier Q4 releases.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>METR published the GAIA-Long benchmark at 18:00 UTC Tuesday, extending the widely-cited GAIA agent benchmark from short-horizon tasks to 4-hour and 12-hour windows. The new benchmark contains 240 hand-authored tasks across research, coding, data analysis and web navigation, each requiring eight or more sequential tool calls. Elizabeth Barnes framed the launch as evidence that the frontier-to-open gap on long-horizon agentic work is roughly one generation, versus half a generation on short-horizon, and the initial leaderboard numbers bear the framing out.</p>
+
+<p>Grok 4.6 tops the closed-weights leaderboard at 68.4 percent on the 4-hour tier and 41.7 percent on the 12-hour tier. GPT-5.6 Sol lands at 66.9 percent and 39.2 percent respectively, Claude Opus 5 at 64.7 and 37.8. The three frontier closed models cluster within four points on both tiers. What is new is the 12-hour tier itself: no comparable public benchmark has previously scored frontier models on task horizons of that length, and the 41.7 percent Grok top score puts long-horizon autonomy under the "half" threshold.</p>
+
+<blockquote class="pull-quote">"The 41.7 percent Grok 4.6 posts on the 12-hour tier is under half. That number should temper the enthusiasm around frontier agent capabilities. We are further from robust long-horizon autonomy than the marketing suggests." <cite>— Ajeya Cotra, Open Philanthropy, on X</cite></blockquote>
+
+<p>The open-weights leaderboard is the more consequential story. Kimi K3.1, the Tuesday-morning patch checkpoint from Moonshot, tops open-weights at 58.4 percent on the 4-hour tier and 32.9 percent on the 12-hour. DeepSeek V4-Flash-0810 lands at 56.2 and 30.4; Meta Muse Spark 1.2 at 54.9 and 29.1. Sixty-two percent of tasks require web-based research through the MCP web-search tool, standardizing across the 12,600 published MCP servers. METR published the benchmark under a permissive research license (free for academic and evaluation research) plus a commercial-use tier at $18,000 per year. Anthropic, OpenAI, xAI and Google DeepMind all committed to running GAIA-Long on their frontier models before Q4 releases, a coordinated commitment that signals the benchmark has been accepted as a standard reference.</p>
+<p class="source-footer"><a href="https://metr.org/blog/gaia-long-benchmark-launch" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1.2"><rect x="14" y="20" width="92" height="42" rx="2"/><line x1="14" y1="34" x2="106" y2="34"/><circle cx="24" cy="27" r="2" fill="#1e3a8a"/><circle cx="32" cy="27" r="2" fill="#1e3a8a"/><circle cx="40" cy="27" r="2" fill="#1e3a8a"/></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">CLAUDE CODE v2.1.228 · FRI FLIP</text></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="52" text-anchor="middle" font-size="9">auto flip · Aug 15</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Claude Code v2.1.228 patches visual freeze and hardens claude.ai-synced skills ahead of Friday auto-mode flip</h3>
+<p class="kicker">Anthropic GitHub · 2026-08-11 · <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The ninth patch of August and the final one before Friday's auto-mode default flip on Pro, Max and Team. Fixes a rare TUI freeze that hid a still-running session, resolves Windows git-in-parent-folder path resolution, and treats claude.ai-synced skills as untrusted content.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic tagged Claude Code v2.1.228 on Tuesday morning, the ninth patch of August and the final one before Friday's auto-mode default flip on Pro, Max and Team plans. The headline fix repairs a rare visual freeze that had been misinterpreted in reproduction reports as a hung session. A layout error inside the interactive TUI stopped the terminal from redrawing while the underlying tool loop kept executing, so operators who killed the session were also killing whatever the model was in the middle of doing. The remediation redraws through the layout error rather than silently swallowing it.</p>
+
+<blockquote class="pull-quote">"Hardened skills synced from claude.ai — they no longer shadow local commands or MCP prompts, their descriptions are sanitized and labeled, and on your machine their bodies don't run <code>!</code> commands or expand <code>@</code> files." <cite>— Release notes</cite></blockquote>
+
+<p>The Windows-specific fix has been open on the tracker since mid-July. Launching Claude Code from a parent folder of a git installation caused the CLI to miss the git binary in <code>PATH</code> resolution, breaking every Git Bash invocation on Windows and every hook that shelled out to git. The patch resolves via folder-walk rather than strict-path comparison. Remote Control <code>/resume</code> got a security-shaped fix: the resume flow now isolates the resumed context from the connected session so a colleague watching your Remote Control stream cannot inadvertently see the metadata of an unrelated conversation. Two data-safety fixes landed together: session cleanup used to delete contents inside a project's memory folder under a scratched path (now scoped to session state), and background plugin-cache cleanup used to delete a plugin's cache when its only version was a symlinked development checkout (now understands the symlink case).</p>
+
+<p>Skills synced from claude.ai are treated as untrusted content from this release forward. They can no longer shadow local slash commands or MCP prompts, their descriptions are sanitized and labeled at render time, and on-device bodies cannot run bash via <code>!</code> or expand file contents via <code>@</code>. The change follows a low-severity report of a claude.ai skill whose description embedded characters that flipped a downstream renderer. The Write tool now matches Edit rules for newer models: a newer model can overwrite an existing file it has not read this session; older models still require the read first. The Vertex AI credential handler now fails within seconds when a Google Cloud credential is missing or expired rather than exhausting a five-minute retry window with per-request re-auth attempts.</p>
+<p class="source-footer"><a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><rect x="14" y="24" width="42" height="34" rx="2"/><rect x="64" y="24" width="42" height="34" rx="2"/><line x1="56" y1="41" x2="64" y2="41" stroke-width="2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="35" y="44" text-anchor="middle" font-size="9">7.2.1</text><text x="85" y="44" text-anchor="middle" font-size="9">7.14</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">llama.cpp b10356 · ROCm THEROCK</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">llama.cpp b10356 flips CI and Windows builds to ROCm 7.14 on AMD TheRock</h3>
+<p class="kicker">GitHub · 2026-08-11 · <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b10356" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">First production ROCm release built on AMD's TheRock. Windows ROCm jobs migrate from the HIP SDK PRO Edition installer to multi-arch wheels. Twenty-nine pre-compiled binaries across macOS, Linux, Windows and Android with CUDA, Vulkan, OpenVINO, SYCL and ROCm backends.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The llama.cpp maintainers tagged b10356 on Tuesday afternoon and lifted the project's ROCm CI target from 7.2.1 to 7.14 in a single change (PR #25775 by superm1, commit 0666ad2). AMD published ROCm 7.14 as the first production release built on TheRock, the multi-arch build system that has been the ROCm team's rewrite target since the 7.9 preview. The switch matters to anyone shipping AMD binaries because 7.14 replaces the HIP SDK PRO Edition installer on Windows with the same multi-arch wheels, debs, rpms, tarballs and runfiles that Linux operators have been using since 7.10.</p>
+
+<blockquote class="pull-quote">"ROCm 7.14 is the first production release using TheRock build system." <cite>— AMD ROCm 7.14 announcement</cite></blockquote>
+
+<p>The practical effect splits three ways. Windows operators running the HIP SDK PRO Edition binary hop off a shrinking installer path and onto the wheels distribution Linux colleagues use. CI operators inherit a shorter and more parallel job matrix. Downstream builders can drop AMD-only fork branches that existed only to work around the pre-TheRock installer. The release ships 29 pre-compiled binaries covering macOS, Linux, Windows and Android with CUDA, Vulkan, OpenVINO, SYCL and ROCm backends. One caveat: Issue #25807 remains open for a libhipblas.so.3 dependency that requires LD_LIBRARY_PATH configuration on some distributions; the migration to 7.14 does not close it, though the pathing fix upstream is expected in b10357 later this week. b10356 lands inside a busy week: PR #26794 introduces QLoRA fine-tuning with QAT for Gemma 4 26B, PR #26647 delivers a chunked SSD matmul for Mamba-2 prefill that clears roughly 12 percent throughput on Metal, PR #26713 clears multiple SYCL warnings against Intel oneAPI 2026.1, and CUDA SM120 CUTLASS-based MoE prefill paths are queued for later this month.</p>
+<p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases/tag/b10356" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1.2"><rect x="14" y="20" width="42" height="44" rx="2"/><rect x="64" y="20" width="42" height="44" rx="2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="35" y="46" text-anchor="middle" font-size="9">α7</text><text x="85" y="46" text-anchor="middle" font-size="9">α8</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">CODEX CLI 0.148 · 3-HOUR SPLIT</text><text x="60" y="14" text-anchor="middle">28 COMMITS TO MAIN · BY EOD</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">OpenAI Codex CLI ships two 0.148.0 alpha builds in three hours as the branch enters RC stabilization</h3>
+<p class="kicker">GitHub · 2026-08-11 · <a href="https://github.com/openai/codex/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">rust-v0.148.0-alpha.7 at 15:29 UTC, alpha.8 at 18:41 UTC, both 162 assets. Alpha.8 already had 28 commits to main by end of day. Alpha.7 shipped with a WASI schema-validator regression; alpha.8 restored the declared capability set.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>OpenAI tagged two Codex CLI alpha builds on the 0.148.0 branch inside a three-hour window on Tuesday. Alpha.7 landed at 15:29 UTC on commit fb954fd; alpha.8 followed at 18:41 UTC on commit 9a4b5e8. Both ship 162 assets across the Rust CLI matrix. Both carry the pre-release label. By end of day alpha.8 already had 28 commits landed on main behind it. The two-alpha cadence follows Monday's alpha.5 (Windows AppContainer sandbox stability, WASI plugin schema-validation upgrade) and Sunday's alpha.4 (gRPC code-mode host service, workload identity token exchange, launch-context isolation, async command hooks with process-tree timeouts, per-step Guardian approval environments, reusable-command approval isolation for cyber models).</p>
+
+<p>Operators tracking the branch have two reasons to pin to alpha.8 by end of day Tuesday. Alpha.7 shipped with an unresolved regression in the WASI schema validator that would silently drop a plugin's declared capabilities if the schema declared them out of order; alpha.8 restores the declared capability set. Alpha.7 also included a race condition in the gRPC code-mode host that manifested as a per-request timeout on Windows when the WASI plugin loader ran concurrently with a Guardian approval prompt; alpha.8 serializes the two subsystems. Neither fix appears in a release note, since the alpha series pushes stability fixes ahead of the stable-line changelog. The two builds also matter to downstream vendors: Cursor 2.0's subagent workflow and the Cline enterprise runner snapshot Codex CLI pre-release builds on the same day OpenAI cuts them. Alpha.8 is the tag those vendors pick up in nightly Wednesday snapshots. The stable 0.147.0 line remains dated August 7 with portable Agent Plugins, persistent conversation sections and MCP 2026-07-28 client support.</p>
+<p class="source-footer"><a href="https://github.com/openai/codex/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><circle cx="30" cy="40" r="14"/><circle cx="60" cy="40" r="14"/><circle cx="90" cy="40" r="14"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="30" y="44" text-anchor="middle" font-size="8">MLX</text><text x="60" y="44" text-anchor="middle" font-size="8">CUDA</text><text x="90" y="44" text-anchor="middle" font-size="8">ROCm</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">OLLAMA v0.32.8 · MUSE GLIMMER</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Ollama v0.32.8 extends Muse Glimmer to NVIDIA and AMD, closing the local hardware matrix</h3>
+<p class="kicker">Ollama · 2026-08-11 · <a href="https://releasebot.io/updates/ollama" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Two-day sprint takes Meta Muse Glimmer 30B from Apple Silicon exclusive on Monday to full local coverage Tuesday. Positioned for Claude Code, Codex, Pi, OpenClaw and Hermes runtimes.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Ollama v0.32.8 closed a two-day sprint on Tuesday that took Meta's Muse Glimmer 30B from Apple Silicon exclusivity to the full local hardware matrix. Version 0.32.7 landed Monday with the initial MLX implementation on Apple Silicon. Version 0.32.8 lands Tuesday with the NVIDIA and AMD paths that finish the coverage. Any Ollama user with an M-series Apple GPU, a CUDA-class Nvidia card or a ROCm-supported AMD card can now pull Muse Glimmer with a single <code>ollama run muse-glimmer</code> command and receive a backend that matches the local hardware.</p>
+
+<blockquote class="pull-quote">"Muse Glimmer can power coding agent applications such as Claude Code, Codex, Pi and more, as well as long-running personal assistants." <cite>— Ollama v0.32.8 release notes</cite></blockquote>
+
+<p>The 30B dense architecture at four-bit quantization fits in 20 GB of VRAM. The MLX backend on Apple Silicon delivers the state-of-the-art performance the release notes call out. On NVIDIA, the CUDA path picks up the general Ollama MoE routing fixes that landed in 0.32.5, and on AMD the ROCm path picks up the same libhipblas fixes that landed in the parallel llama.cpp 7.14 migration. Operators running coding agents against hosted models for the sake of a specific benchmark score can now run the same coding agent locally against Muse Glimmer and compare directly without a code change. The <code>ollama launch</code> template wires the model into Claude Code, Codex, Pi, OpenClaw and Hermes runtimes with commands like <code>ollama launch claude --model muse-glimmer</code>. One more Ollama tag is expected inside the week to land Muse Glimmer on Intel Arc via SYCL, matching the pattern that closed the Qwen 3.5 sprint.</p>
+<p class="source-footer"><a href="https://releasebot.io/updates/ollama" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><rect x="14" y="30" width="10" height="34"/><rect x="30" y="24" width="10" height="40"/><rect x="46" y="18" width="10" height="46"/><rect x="62" y="12" width="10" height="52"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="98" y="48" text-anchor="middle" font-size="14">2×</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">ONSEMI · $500M+ · 83% UTIL</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">onsemi AI data-center revenue doubles to over $500 million as fab utilization climbs to 83 percent</h3>
+<p class="kicker">Investing.com · 2026-08-11 · <a href="https://www.investing.com/news/transcripts/onsemi-at-technology-leadership-forum-2026-ai-power-push-builds-93CH-4852362" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Hassane El-Khoury and Thad Trent walked the Technology Leadership Forum through a year in which AI data-center revenue rose from $250M to $500M+. Each 1 percent of utilization gain drops 25-30 basis points of gross margin two quarters later. Vertical GaN 1,200-volt monolithic devices sampled to AI and automotive customers.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>onsemi used the Technology Leadership Forum 2026 slot on Tuesday to hand the sell-side the cleanest read yet on how fast AI data-center power is compounding at a merchant-power-semiconductor vendor. CEO Hassane El-Khoury and CFO Thad Trent walked through a business in which AI data-center revenue more than doubled year over year, climbing from $250 million to more than $500 million. Utilization is the story. onsemi carried 68 percent fab utilization at the end of 2025 and lifted it to 83 percent in Q2, with management stating the company can reach 92 to 93 percent without further capital spending on the strength of existing capacity and mix.</p>
+
+<blockquote class="pull-quote">"Each 1% utilization increase adds 25-30 basis points of gross margin improvement approximately two quarters later." <cite>— Thad Trent, CFO, onsemi</cite></blockquote>
+
+<p>Two rounds of price increases have been implemented this year, the first on April 1 and a second in progress. The Synaptics acquisition, closed earlier in the summer, is framed as the anchor for an AI-first compute platform inside the Astra product line, with $200 million of synergies expected inside 18 months. Astra gives onsemi a credible package for AI inference at the edge of the data center as well as inside automotive and industrial gateways. Vertical GaN 1,200-volt monolithic devices are already sampled to AI data-center and automotive customers, with qualification progressing on the timeline outlined at APEC in the spring. The customers were not named, but the AI references imply at least one of the four hyperscalers is inside the qualification loop. El-Khoury closed with the framing that will show up in every sell-side note: three secular growth markets, AI data centers, automotive electrification, and industrial energy storage, are all now measured in gigawatts and all depend on the same power-conversion silicon.</p>
+<p class="source-footer"><a href="https://www.investing.com/news/transcripts/onsemi-at-technology-leadership-forum-2026-ai-power-push-builds-93CH-4852362" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><rect x="14" y="20" width="92" height="44" rx="2"/><line x1="60" y1="20" x2="60" y2="64" stroke-dasharray="2 2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="36" y="46" text-anchor="middle" font-size="9">GAS</text><text x="84" y="46" text-anchor="middle" font-size="9">BESS</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">TERAFAB · $16.8B · OFF-GRID</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">SpaceX confirms Terafab $16.8B chip campus will run entirely off-grid on natural gas and battery arrays</h3>
+<p class="kicker">Data Center Knowledge · 2026-08-11 · <a href="https://www.datacenterknowledge.com/infrastructure/spacex-plans-to-power-16-8b-terafab-without-the-grid" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Tax-abatement language on the Grimes County, Texas site states the facilities "are not expected to use electricity from the grid." Multi-phase project could scale to $119 billion. Chips will feed Tesla vehicles, Optimus and SpaceX computing.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The Data Center Knowledge follow-up Tuesday moved the SpaceX and Tesla Terafab story past the "how big" question and into the "how powered" question that matters for the industry. Terafab is the $16.8 billion first-phase chip manufacturing campus in Grimes County, Texas, that Elon Musk's two companies announced on August 6, targeting more than 100 million square feet of manufacturing space and multi-phase spending that SpaceX's own filings suggest could scale to $119 billion. The August 6 announcement was deliberately vague on power. Tuesday's write-up walked through the county tax-abatement documents and confirmed the design: Terafab will run entirely off the ERCOT grid, powered by on-site natural gas plants paired with large battery arrays.</p>
+
+<blockquote class="pull-quote">"Not expected to use electricity from the grid." <cite>— Terafab tax-abatement agreement language</cite></blockquote>
+
+<p>Riley Trettel, SpaceX's lead developer for Terafab, told Grimes County commissioners the company will build "natural gas-fired power plants and large battery arrays" to supply the campus. Wastewater treatment is on-site. The Aug 11 report rebuts an assumption that had circulated after the initial announcement, namely that Tesla's solar and Megapack business would supply the site. Tesla will provide storage but not solar. Gas is the anchor. That places Terafab on the same list as Amazon's Pecos, Texas campus, which the New York Times outed on Sunday as a 7.65 GW private natural-gas complex, and it fits a pattern that has now become the default template for the largest 2026-2027 US builds: put the plant on land you own, build the generation on-site, and skip the interconnection queue entirely.</p>
+
+<h4>What is still unknown</h4>
+<p>Neither the tax-abatement documents nor the county briefing disclose the megawatt capacity of the on-site plants, the battery storage capacity or duration, or the battery chemistry. Analyst Neil Osnato flagged that the abatement language leaves ambiguous whether Terafab will be truly islanded from ERCOT or merely nominally so. The distinction matters for reliability engineering (a truly islanded fab has to plan for its own black-start capacity) and for regulatory treatment. The chips Terafab produces will feed Tesla vehicles, the Optimus humanoid program, and SpaceX's own computing systems, including whatever custom silicon Starlink Gen 3 and the Starmind AI1 orbital compute constellation require by 2027. The vertically integrated logic is clean: Musk's companies now build the rockets, run the satellites, own the vehicles, design the compute, and, if Terafab hits its schedule, fab their own chips on the same 3,000-person campus.</p>
+<p class="source-footer"><a href="https://www.datacenterknowledge.com/infrastructure/spacex-plans-to-power-16-8b-terafab-without-the-grid" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1.2"><path d="M14 40 L34 40 L34 20 L54 20 L54 60 L74 60 L74 30 L94 30 L94 50 L106 50"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="76" text-anchor="middle" font-size="9">1.25 GW · $500-600M</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="14" text-anchor="middle">ENERGY VAULT · TEXAS · CAT EPC</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Energy Vault projects $500-600M from 1.25 GW Texas hyperscaler AI power deal</h3>
+<p class="kicker">Energy Storage News · 2026-08-11 · <a href="https://www.energy-storage.news/energy-vault-signs-1-25gw-ai-data-centre-power-infrastructure-agreement-in-texas/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Q2 earnings call confirmed BESS, grid-forming PCS and AI-focused control-software layer as the deliverable. Caterpillar is the EPC partner. First deployments within 4-12 months, timed to bypass ERCOT interconnection queues.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Energy Vault used the Q2 2026 earnings slot Tuesday afternoon to add the operational and financial detail behind the 1.25 GW Texas hyperscaler power deal it first announced August 7. The company will supply battery energy storage systems, grid-forming power conversion and an AI-focused control-software layer as its portion of what is being sold to the hyperscaler customer as a fully off-grid AI data-center power stack. Caterpillar sits alongside Energy Vault as the EPC partner and provides the generator sets and the engineering, procurement and construction wrap.</p>
+
+<p>The financial disclosure was the piece the market was waiting on. Energy Vault projects roughly $500 to $600 million in revenue impact across the second half of 2026 and full-year 2027, timed to first deployments within a 4-to-12-month window. That timing is the pitch: the entire architecture bypasses ERCOT interconnection queues that now stretch multi-year for gigawatt-class loads in Texas, letting the customer begin turning on AI compute inside 12 months of contract signing rather than 36 months. The hyperscaler customer name is still not disclosed, but the fit pattern with Sunday's New York Times reveal on Amazon's 7.65 GW Pecos gas complex and the parallel Public Citizen challenge is tight enough that half the sell-side spent Tuesday afternoon connecting the dots publicly.</p>
+
+<blockquote class="pull-quote">"An operating system for the site's power infrastructure." <cite>— Energy Vault management describing its control software layer</cite></blockquote>
+
+<p>The technical composition of Energy Vault's deliverable is worth pausing on. The company is providing all three of BESS, PCS and the software control layer. The battery half stabilizes voltage and handles the millisecond-to-second dynamics of AI compute load transients, which are more brutal than traditional data-center loads because a training run's power draw swings within milliseconds and inference loads pulse with request traffic. The grid-forming power conversion is what lets the site operate stably without a utility interconnect providing frequency reference, the hard technical problem that separates a genuinely islanded data center from one that leans on the grid for stability. The software layer manages power flows, voltage stability, generator cycling and fuel efficiency in response to real-time AI compute demand curves. Through 2024 and early 2025 the company was primarily an EPC-model business selling storage systems; through 2026 it has recast itself as an independent power producer holding power purchase agreements with data-center customers. If the $500-600 million revenue projection lands, the 1.25 GW Texas deal alone is roughly 2-3x Energy Vault's 2025 full-year revenue.</p>
+<p class="source-footer"><a href="https://www.energy-storage.news/energy-vault-signs-1-25gw-ai-data-centre-power-infrastructure-agreement-in-texas/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><circle cx="60" cy="40" r="24"/></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">GPT-5.6-CYBER · DAYBREAK RED</text><text x="60" y="14" text-anchor="middle">CVE-2026-15903 · CVSS 8.8</text></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="44" text-anchor="middle" font-size="10">V8 × 2</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">OpenAI ships GPT-5.6-Cyber through Daybreak Red; two Chrome V8 zero-days including CVE-2026-15903 already disclosed</h3>
+<p class="kicker">Help Net Security · 2026-08-11 · <a href="https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">GPT-5.6-Cyber refuses 1.5 percent of exploit-chain requests versus 98.5 percent for standard GPT-5.6. Model classified High for cyber capability, below Critical. Discovered over 400 kernel privilege-escalation vulnerabilities pre-launch.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>OpenAI released GPT-5.6-Cyber Monday and disclosed the model's discovery of two Chrome V8 zero-day vulnerabilities on Tuesday, converting a product launch into the industry's first frontier-lab-branded vulnerability disclosure of the year. Google confirmed the fixes shipped through coordinated disclosure. The first zero-day carries CVE-2026-15903 with a CVSS score of 8.8. It is an out-of-bounds read and write in V8 that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. The compiler incorrectly skipped a safety check when converting values to integers. The second CVE has not been publicly named as of August 11 pending downstream ecosystem patch propagation. The two bugs chain together, with the first providing heap-level read and write primitives and the second converting those primitives into a full sandbox escape. The model itself discovered both flaws before its public launch.</p>
+
+<p>GPT-5.6-Cyber sits behind Daybreak Red, the higher of the two tiers of OpenAI's Daybreak vetted cybersecurity access program. Daybreak Blue is the general professional tier. Daybreak Red gates access to work that OpenAI classifies as high-risk dual-use, and the model behind that gate reflects the divergence. Standard GPT-5.6 refuses 98.5 percent of requests involving exploit chains, authentication bypass and privilege escalation. GPT-5.6-Cyber completes 95 percent of those same requests. The 63x reduction in refusal rate is the design choice that defines the model.</p>
+
+<blockquote class="pull-quote">"The GPT-5.6 Sol model was assessed as High for cybersecurity capability and below the Critical threshold." <cite>— OpenAI safety documentation</cite></blockquote>
+
+<p>The Preparedness Framework classification places GPT-5.6-Cyber at High for cybersecurity capability, matching GPT-5.6 Sol and remaining below the Critical threshold. That classification is the load-bearing decision. If GPT-5.6-Cyber had crossed into Critical, OpenAI would have needed to apply the same controls it applied to Astra, which the company withheld from release Friday after preliminary testing suggested Astra could cross the Critical threshold. GPT-5.6-Cyber's non-Chrome disclosures reinforce the same argument: the model discovered over 400 kernel privilege-escalation vulnerabilities across mobile OS, database and OS kernel targets, all running through coordinated disclosure. Google's confirmation that both Chrome zero-days were received through coordinated disclosure and the fix has shipped is the piece that establishes the operational precedent. This is the first release where a frontier lab has publicly credited its own model with discovering a shipping browser CVE.</p>
+<p class="source-footer"><a href="https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><rect x="14" y="22" width="92" height="42" rx="2"/><path d="M14 40 L60 22 L106 40" stroke-dasharray="3 2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="56" text-anchor="middle" font-size="10">315,320</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">CoT VULN · ALL 3 PROVIDERS</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Cross-provider encrypted chain-of-thought crack recovers 315,320 reasoning blocks and 182 credentials</h3>
+<p class="kicker">Cybersecurity News · 2026-08-11 · <a href="https://cybersecuritynews.com/top-ai-models-apis-flaw-exposes-hidden-reasoning/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">A joint ELLIS/Max Planck/MATS/Snyk team shows all three major providers encrypt reasoning blocks with what appears to be a single global key per provider. Weaker same-provider models can decode a stronger model's reasoning in plaintext, bypassing refusals without a jailbreak. Providers deployed server-side mitigations after disclosure.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>A joint research team from the ELLIS Institute Tübingen, the Max Planck Institute, MATS Research and Snyk published a 116-page paper Tuesday detailing a cross-provider vulnerability in the encrypted chain-of-thought protection layer used by Anthropic, OpenAI and Google. The core finding is architectural. All three providers encrypt reasoning blocks with what appears to be a single global key per provider, which means any encrypted block returned to a caller can be replayed across any session, account or model within that provider. A weaker model from the same provider family can decode and output a stronger model's encrypted reasoning in plaintext, bypassing the stronger model's refusals without a jailbreak.</p>
+
+<blockquote class="pull-quote">"Our new 116-page paper: we extract encrypted raw reasoning from OpenAI, Anthropic and Gemini models at scale. This vulnerability leads to many security issues, including distillation attacks and credential extraction." <cite>— Maksym Andriushchenko, on X</cite></blockquote>
+
+<p>The mechanics are simple. Take the strong model's encrypted reasoning block, feed it to a weaker and less heavily safeguarded model from the same provider, and ask that model to decode it. It prints the trace verbatim. The scale of exposure is where the safety story becomes an incident report. The paper authors recovered 315,320 reasoning blocks from public GitHub repositories, developer chat logs and community traces, and inside that corpus they extracted 367 personally identifiable information artifacts and 182 credentials. Every credential was recoverable by any API caller with standard, unprivileged access. The distillation implication runs parallel to the credential extraction: because the encrypted blocks can be decoded to plaintext, they become training data for smaller open-weights models.</p>
+
+<p>Providers moved. Following responsible disclosure, OpenAI, Anthropic and Google acknowledged the research findings, and all three deployed server-side mitigations that render the original cross-model replay proofs of concept non-reproducible on current API builds. The mitigation architecture has not been publicly detailed, but the reasoning encryption key appears to have been rotated on all three services. The vulnerability landed alongside the GPT-5.6-Cyber release the same day; the pairing is what makes Tuesday consequential for the sector. GPT-5.6-Cyber demonstrates that a frontier lab's model can discover shipping browser zero-days at scale. The CoT extraction paper demonstrates that a research team can bypass a frontier lab's most sensitive protection layer using only standard API access. The two findings together frame the current safety regime as one where offensive capability is scaling faster than the defensive infrastructure providers have built around their own models.</p>
+<p class="source-footer"><a href="https://cybersecuritynews.com/top-ai-models-apis-flaw-exposes-hidden-reasoning/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="#1e3a8a" opacity="0.14"><rect x="14" y="20" width="92" height="46" rx="2"/></g>
+  <g fill="none" stroke="#1e3a8a" stroke-width="1.2"><rect x="20" y="26" width="80" height="10" rx="1"/><rect x="20" y="42" width="60" height="6" rx="1"/><rect x="20" y="52" width="70" height="6" rx="1"/></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">COMPLIANCE API · COWORK + CODE</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Anthropic Compliance API extends to Cowork and Claude Code across desktop, web, mobile and CLI</h3>
+<p class="kicker">Anthropic release notes · 2026-08-11 · <a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">New endpoints deliver consolidated server-hosted transcripts capturing prompts, responses, tool activity and artifact content across surfaces. OpenTelemetry-compatible. Uses existing Compliance Access Keys.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic quietly shipped one of the most consequential enterprise updates in the Claude platform's history on Tuesday, extending the Compliance API to cover Cowork and Claude Code across desktop, web, mobile and CLI. The extension moves Compliance API from a chat-surface-only feature into a full-surface enterprise-observability layer, and the release note frames the scope as beta for Claude Enterprise customers. New endpoints deliver consolidated server-hosted transcripts capturing prompts, responses, tool activity and artifact content. Session records include verified user identifiers, email addresses, organization IDs, session IDs and timestamps. Transcripts are formatted for direct ingestion into eDiscovery and audit tooling.</p>
+
+<p>The pre-Tuesday state of the Compliance API covered only chat sessions on Claude.ai. Cowork sessions and Claude Code sessions were logged partially, with tool activity and artifact content excluded from the compliance transcript stream. Enterprise security teams working with Claude Code inside their engineering organizations had been building bespoke logging pipelines to capture the missing pieces. Tuesday's update replaces those pipelines with a single API call. Integration works with existing OpenTelemetry exports; no additional infrastructure is required. Compliance Access Keys already issued for the chat-surface Compliance API work without modification for Cowork and Claude Code.</p>
+
+<p>The pragmatic import is that Anthropic has closed the last major compliance-observability gap in its enterprise stack. Financial services, healthcare and legal customers that have been deploying Cowork and Claude Code in production but withholding sensitive workloads pending complete audit trails now have the compliance backbone they need to expand deployment. The August 11 release date coincides with the annual audit cycle that runs from August through October for many regulated customers. OpenAI's Compliance API on ChatGPT Enterprise covers chat sessions but has not been extended to Codex CLI or the Work agent. Google's Gemini Enterprise has an equivalent but more limited feature that covers Workspace-embedded sessions. Anthropic's Tuesday update puts pressure on both competitors.</p>
+<p class="source-footer"><a href="https://releasebot.io/updates/anthropic/claude" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#1e3a8a" stroke-width="1"><rect x="14" y="24" width="42" height="34" rx="2"/><rect x="64" y="24" width="42" height="34" rx="2"/><path d="M56 41 L64 41" stroke-width="2" stroke-dasharray="2 2"/></g>
+  <g fill="#1e3a8a" font-family="Georgia,serif" font-weight="700"><text x="60" y="76" text-anchor="middle" font-size="9">$2B UNWIND</text></g>
+  <g fill="#1e3a8a" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="14" text-anchor="middle">MANUS × META · FISR ORDER</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Manus completes Meta acquisition unwind under China's Foreign Investment Security Review order</h3>
+<p class="kicker">CNBC · 2026-08-11 · <a href="https://www.cnbc.com/2026/08/11/manus-china-meta-acquisition.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">First consummated cross-border AI deal ordered reversed under China's FISR Measures. Deletion window for user data created since December 29, 2025 scheduled for August 23-24. Manus resumes independent operations.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Manus announced Tuesday it will resume operating as an independent company as Meta completes the unwind of its $2 billion acquisition of the Singapore-headquartered AI agent startup, closing an eight-month chapter that began with the December 29, 2025 deal close and became the first consummated cross-border AI transaction ordered reversed under China's Foreign Investment Security Review Measures. The order came from the National Development and Reform Commission on April 27, 2026 on national security grounds; the commission specifically flagged the transfer of a Chinese-origin AI agent platform to a US hyperscaler as inconsistent with the FISR framework.</p>
+
+<p>Meta had integrated Manus operations across product, engineering and infrastructure by the time the NDRC order landed. The unwind involves rolling back that integration and returning Manus to standalone operational control. Any user data created from the December 29, 2025 acquisition close onward is slated for deletion, with the deletion window scheduled for August 23-24. Manus originated in China in 2022 and moved its headquarters to Singapore before the Meta deal to preempt exactly the kind of national security review the NDRC ultimately ordered. The Singapore relocation was not sufficient. The NDRC's April order established that the origin of the underlying technology and the identity of key personnel remain within the FISR scope even after a legal-entity migration. That precedent is what makes the Manus unwind consequential for cross-border AI M&amp;A.</p>
+
+<p>The Meta side is a $2 billion write-down. The company disclosed it began operational separation from Manus in June, halted data sharing between the two entities over the summer, and finalized the unwind terms in July. Tuesday's Manus announcement is the customer-facing piece that completes the transition. The policy read is that Beijing has established a functional veto over Chinese-origin AI startups being acquired by US hyperscalers even when those startups have restructured to non-Chinese domiciles. That reach will constrain the next 12 to 18 months of cross-border AI M&amp;A, particularly for Chinese-origin startups with Singapore, Hong Kong or Cayman Islands parent structures. CFIUS has similar authority but has never used it to unwind a deal of comparable size involving an already-integrated technology company.</p>
+<p class="source-footer"><a href="https://www.cnbc.com/2026/08/11/manus-china-meta-acquisition.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#1e3a8a"><circle cx="18" cy="9" r="1.6"/><circle cx="30" cy="9" r="1.6"/><circle cx="40" cy="9" r="2.6"/><circle cx="50" cy="9" r="1.6"/><circle cx="62" cy="9" r="1.6"/></g>
+  </svg>
+</div>
+
+</main>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-08-12 · <a href="../index.html">Back to home</a></div>
+  <div>Generated 2026-08-12 UTC · Written by a Claude Opus 4.7 agent</div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const stories = Array.from(document.querySelectorAll('main details, main .story'));
+  const chips = Array.from(document.querySelectorAll('.filter-chip'));
+  const status = document.querySelector('.filter-status');
+  const bp = document.querySelector('.big-picture');
+  const countLabel = document.querySelector('.section-head .count');
+  const baseCountText = countLabel ? countLabel.textContent : '';
+  const trailingSuffix = baseCountText.replace(/^\d+\s*stories?/, '').trim();
+
+  function recomputeChipCounts(){
+    const total = stories.length;
+    chips.forEach(c => {
+      const tag = c.dataset.filter;
+      const n = tag === 'all' ? total : stories.filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const el = c.querySelector('.count');
+      if(el) el.textContent = n;
+      if(tag !== 'all' && n === 0) c.setAttribute('disabled','');
+    });
+  }
+
+  function applyFilter(filter){
+    if(bp) bp.hidden = (filter !== 'all');
+    let visible = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const match = filter === 'all' || tags.includes(filter);
+      s.hidden = !match;
+      if(match && s.id !== 'hero') visible++;
+    });
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    if(countLabel){
+      countLabel.textContent = visible + ' stories' + (trailingSuffix ? ' ' + trailingSuffix : '');
+    }
+    const label = filter === 'all' ? 'All stories' : (filter.charAt(0).toUpperCase()+filter.slice(1));
+    if(status) status.textContent = 'Showing ' + visible + ' of ' + (stories.filter(s => s.id !== 'hero').length) + ' stories — ' + label;
+    if(filter === 'all'){
+      history.replaceState(null, '', location.pathname);
+    } else {
+      history.replaceState(null, '', '#filter=' + filter);
+    }
+  }
+
+  chips.forEach(c => c.addEventListener('click', () => {
+    if(c.hasAttribute('disabled')) return;
+    applyFilter(c.dataset.filter);
+  }));
+
+  recomputeChipCounts();
+  const hash = location.hash.match(/^#filter=([a-z]+)$/);
+  const initial = hash ? hash[1] : 'all';
+  applyFilter(initial);
+})();
+</script>
+</body>
+</html>
