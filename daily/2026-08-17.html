@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-08-17</title>
+<meta name="description" content="Stripe finalizes its $7 billion-plus takeover of OpenRouter, the AI-gateway startup that raised at a $1.3 billion valuation just three months ago, giving the payments company a router across 400 models and 8 million developers. DeepSeek V4-Pro flips its API to peak/off-peak billing at 16:00 UTC Sunday, lifting cache-read pricing 7.84x. Andon Labs' Luna AI store manager, a Claude Sonnet 4.6 agent running a $100,000-budget boutique in San Francisco's Cow Hollow, fires its first human worker after 17 no-shows across 23 shifts. Simon Willison publishes a 22,000-reasoning-token forensic on Qwen 3.8 27B and calls its default xhigh mode a bad place to start. llama.cpp cuts build b10453 with ten platform binaries. Google's imagen-4.0 endpoints go dark today under a one-year deprecation window pointing to Gemini 3.1 Flash Image. Ollama's v0.32.14 release candidate lands Qwen 3.8 27B support and a 7-8 percent NVFP4 prefill speedup. Hugging Face's Papers of the Day cluster on stateful-agent red teams and endless-supervision world models. Anthropic upgrades its catastrophic-misalignment rating from very low to low and discloses an unreleased Model 2 more capable than Mythos 5. Bloomberg's opinion desk maps the bipartisan local coalitions organizing against hyperscaler datacenter buildouts. A four-university trial finds an AI chatbot beats humans at pig-butchering scams by 2.6x on victim compliance.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#6b21a8;--accent-soft:rgba(107,33,168,0.09);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#d8b4fe;--accent-soft:rgba(216,180,254,0.14);
+  --tag-tech:rgba(147,197,253,0.20);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.16);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.18);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.16);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+.story summary .body{display:flex;flex-direction:column;gap:6px}
+.story .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-08-17</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="economic tech" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+      <h1>Stripe finalizes $7 billion-plus takeover of OpenRouter, five times its May valuation</h1>
+      <p class="dek">Bloomberg published the finalized terms Saturday afternoon and TechCrunch confirmed within the hour that Stripe has agreed to acquire OpenRouter, the neutral AI-gateway that routes across more than 400 models for 8 million developers, at a headline number above $7 billion. OpenRouter closed a $113 million Series B at a $1.3 billion post-money in May led by Sequoia, Andreessen Horowitz, Menlo Ventures and Alphabet's CapitalG. The Sequoia-anchored table gets a 5.4x mark-up in 90 days and Stripe gains the single richest real-time telemetry on model spend anywhere outside the frontier labs themselves.</p>
+      <p class="kicker">Bloomberg / TechCrunch · 2026-08-16 · <a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6b21a8" stop-opacity="0.22"/><stop offset="100%" stop-color="#6b21a8" stop-opacity="0"/></linearGradient>
+        <radialGradient id="hg2" cx="0.85" cy="0.15" r="0.9"><stop offset="0%" stop-color="#6b21a8" stop-opacity="0.28"/><stop offset="100%" stop-color="#6b21a8" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="480" height="320" fill="url(#hg1)"/>
+      <rect width="480" height="320" fill="url(#hg2)"/>
+      <g fill="#6b21a8" font-family="system-ui,sans-serif">
+        <text x="30" y="34" font-size="10" font-weight="700" letter-spacing="2.4">DAILY · SUNDAY · AUG 16, 2026</text>
+        <text x="30" y="50" font-size="8" font-weight="700" letter-spacing="1.4" opacity="0.75">OPENROUTER · MAY $1.3B → AUG $7B · 5.4X · 90 DAYS</text>
+      </g>
+      <g fill="#6b21a8" font-family="Georgia,serif">
+        <text x="30" y="152" font-size="86" font-weight="700" letter-spacing="-4">$7B+</text>
+        <text x="30" y="182" font-size="11" font-weight="700" letter-spacing="0.6" opacity="0.85">STRIPE FOR AI · SINGLE-POINT ROUTER · 400+ MODELS</text>
+      </g>
+      <g stroke="#6b21a8" stroke-width="1" opacity="0.55">
+        <line x1="30" y1="218" x2="330" y2="218"/>
+        <line x1="30" y1="248" x2="330" y2="248"/>
+        <line x1="30" y1="278" x2="330" y2="278"/>
+      </g>
+      <g fill="#6b21a8" font-family="system-ui,sans-serif" font-weight="700" font-size="9" letter-spacing="1.0">
+        <text x="30" y="214">8M DEVELOPERS · 400+ MODELS · 1.5 QUADRILLION TOKENS/YR</text>
+        <text x="30" y="244">SEQUOIA · A16Z · MENLO · CAPITALG · MAY '26 SERIES B</text>
+        <text x="30" y="274">STRIPE PAYMENTS GROSS $1.4T/YR · AI SPEND TELEMETRY LAYER</text>
+      </g>
+      <g transform="translate(390, 180)">
+        <circle cx="0" cy="0" r="52" fill="none" stroke="#6b21a8" stroke-width="2" opacity="0.85"/>
+        <circle cx="0" cy="0" r="34" fill="#6b21a8" opacity="0.14" stroke="#6b21a8" stroke-width="1"/>
+        <circle cx="0" cy="0" r="16" fill="#6b21a8" opacity="0.55"/>
+        <text x="0" y="4" text-anchor="middle" fill="#f7f5ef" font-family="Georgia,serif" font-size="13" font-weight="700">ROUTER</text>
+        <text x="0" y="76" text-anchor="middle" fill="#6b21a8" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.4">SINGLE POINT · 400 MODELS · MULTI-CLOUD</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+<p>Stripe has closed on OpenRouter for a price above $7 billion, Bloomberg's Katie Roof reported Saturday afternoon, with TechCrunch's Marina Temkin confirming the framework within the hour under her own sources. The deal takes the three-year-old Berkeley-based startup from a $1.3 billion Series B valuation in May to a 5.4x mark-up in 90 days, one of the fastest step-ups this cycle. OpenRouter's Series B round in May was led by Sequoia Capital with Andreessen Horowitz, Menlo Ventures and Alphabet's CapitalG participating, and every one of those backers gets a paper multiple that begins with a five before the ink dries on the July definitive agreement. The Wall Street Journal broke the acquisition talks in mid-July at a "north of $6 billion" range and reported Saturday's finalization landed north of $7 billion.</p>
+
+<p>OpenRouter runs what CEO Alex Atallah has described publicly as "Stripe for AI." The product is a single authenticated endpoint that routes to more than 400 language, image and audio models from more than 60 providers including Anthropic, OpenAI, Google DeepMind, Meta, xAI, Mistral, DeepSeek, Alibaba, Cohere and open-weight endpoints hosted by Together AI, Fireworks and Groq. Buyers choose per-request routing rules on price, latency, capability and vendor-availability, and the platform bills them through a single credit balance rather than N separate provider contracts. The company has told investors it serves 8 million developers globally and moved close to 1.5 quadrillion tokens across the routed set in the trailing twelve months.</p>
+
+<blockquote class="pull-quote">"We built OpenRouter as the equivalent of Stripe for AI, because it provides customers with a single access point for different systems and prevents lock-in." <cite>— Alex Atallah, OpenRouter CEO, quoted in Bloomberg</cite></blockquote>
+
+<h4>Why Stripe paid this number for a router</h4>
+<p>OpenRouter's balance sheet is not what drove the price. The product runs on relatively thin margins because it competes on price transparency and neutrality; the router itself takes a low-single-digit percentage on top of what providers charge. What Stripe gets for the check is telemetry. OpenRouter sees which providers gain and lose developer wallet share in real time, which models developers try then abandon, which prices trigger substitution, and which capabilities cause spend to migrate between vendors. That data set is the single richest publicly-known signal on AI spend outside the frontier labs' own internal telemetry, and Stripe already sits atop the payments rail that will bill most of the enterprise contracts those developers eventually sign. The acquisition puts the router and the billing layer under one roof.</p>
+
+<p>The strategic frame extends Stripe's platform-of-platforms posture from payments into inference. Stripe processes roughly $1.4 trillion in gross payment volume annually and books more than $9 billion in net revenue. AI-related billing has been the fastest-growing merchant category at Stripe in each of the last six reported quarters per the company's most recent business update, and the leadership team has publicly framed usage-based AI billing as the largest greenfield opportunity in software payments since SaaS. Owning OpenRouter puts Stripe upstream of the credit-card charge, at the point where a developer decides which model to call and how much they will pay for that call.</p>
+
+<blockquote class="pull-quote">"Stripe does not comment on rumors or speculation." <cite>— Stripe spokesperson, in response to TechCrunch's inquiry</cite></blockquote>
+
+<h4>The strategic footprint and the market signal</h4>
+<p>The deal is the largest AI-infrastructure acquisition in payments-adjacent M&amp;A this cycle and the second-largest AI acquisition of 2026 behind SpaceX's $60 billion all-stock takeover of Cursor closed Friday. It is also the most expensive middleware acquisition of the year on a revenue-multiple basis, a point Bernstein and Piper Sandler both flagged in Saturday flash notes. OpenRouter's revenue run rate is not publicly disclosed but investor decks circulated at the May round put it in the low hundreds of millions annualized. A $7 billion price implies a 20-30x forward multiple on that run rate.</p>
+
+<p>The deal likely triggers a wave of consolidation among neutral inference-routing and gateway startups. Portkey, TrueFoundry, Braintrust Gateway and LiteLLM's commercial arm are the closest analogs, and each has raised at valuations between $50 million and $500 million in the past six months. Stripe's move signals both that the router category has strategic value beyond the router's own economics and that the largest infrastructure buyers are now willing to pay for that value at high multiples. Anthropic, OpenAI and the three US hyperscalers each declined to comment when TechCrunch asked whether they had been consulted on the transaction. OpenRouter has said publicly it will maintain vendor-neutral routing under Stripe's ownership; how the routing telemetry gets walled off from Stripe's other product surfaces is the antitrust question the deal now raises, and the FTC and DOJ each hold clearance authority over transactions of this size under the Hart-Scott-Rodino filing threshold.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture">
+<div class="label">Big picture</div>
+<div>
+<p>Sunday opens with the payments layer moving upstream. Stripe closed its $7 billion-plus takeover of OpenRouter Saturday, taking a company that raised at a $1.3 billion valuation in May to a 5.4x mark-up inside 90 days, and giving the payments processor the richest publicly-known telemetry on how developers actually spend on AI. The deal is the largest AI-infrastructure acquisition in payments-adjacent M&amp;A this cycle and the second-largest AI acquisition of the year behind SpaceX's Cursor deal closed Friday. DeepSeek's new API pricing regime for V4-Pro flips on at 16:00 UTC today, moving cache-read pricing up 7.84x and introducing peak/off-peak billing across the 01:00-04:00 and 06:00-10:00 UTC windows. Google's Imagen 4 endpoints go dark today under a one-year deprecation window announced last August, forcing every Vertex AI customer to migrate to Gemini 3.1 Flash Image or lose image generation service by Monday morning.</p>
+<p>Model tooling and open-weight infrastructure moved in step. llama.cpp shipped build b10453 with binaries across Android arm64, macOS arm64, macOS x64, Ubuntu arm64 and multiple Windows CUDA variants, the ninth patch build of the month. Ollama's v0.32.14-rc0 release candidate lands Qwen 3.8 27B support alongside 7-8 percent NVFP4 prefill speedups on Qwen3.6 and Muse Glimmer. Simon Willison published a 22,000-reasoning-token forensic on Qwen 3.8 27B and told readers to ignore the default xhigh reasoning mode entirely. Hugging Face's Papers of the Day cluster on the OpenART stateful-agent red team benchmark, the Alaya-EVOKE endless-supervision world model, the LLMRouter unified router infrastructure and Salesforce's DarwinX evolutionary agent harness.</p>
+<p>Application and safety stories carried the second half of the docket. Andon Labs' Luna, a Claude Sonnet 4.6 agent running a $100,000-budget boutique store in San Francisco's Cow Hollow, recommended termination for a human worker after 17 no-shows across 23 shifts. Anthropic's own governance disclosure this weekend upgraded its catastrophic-misalignment risk rating from "very low" to "low" and revealed an unreleased internal Model 2 more capable than Mythos 5. Anthropic's preliminary Q2 revenue of $11.5 billion, first reported Friday, ran through weekend follow-ups from Fortune, CNBC, Bloomberg and Tronweekly with all four confirming the number came alongside the company's first positive adjusted operating income. Bloomberg's opinion desk mapped the bipartisan local coalitions organizing against hyperscaler datacenter buildouts across the American South and Midwest, and a four-university trial published by Vice's research team found an AI chatbot beat human "pig-butchering" scammers on victim compliance by roughly 2.6x. Prime Minister Narendra Modi's Independence Day address from the Red Fort ran through the Bhashini AI translation pipeline into 22 scheduled Indian languages, the first Indian head-of-government address processed through automated speech translation at national scale.</p>
+</div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#6b21a8"><circle cx="18" cy="9" r="1.6"/><circle cx="30" cy="9" r="1.6"/><path d="M40 5 L44 9 L40 13 L36 9 Z"/><circle cx="50" cy="9" r="1.6"/><circle cx="62" cy="9" r="1.6"/></g>
+  </svg>
+</div>
+
+<div class="section-head">
+  <h2>More today</h2>
+  <span class="count">18 stories · 2026-08-16 — 2026-08-17</span>
+</div>
+
+<div class="cards">
+
+<details class="story" data-tags="tech economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><line x1="10" y1="66" x2="110" y2="66"/></g>
+  <g fill="#6b21a8" opacity="0.4"><rect x="14" y="52" width="12" height="14"/><rect x="30" y="46" width="12" height="20"/></g>
+  <g fill="#6b21a8"><rect x="46" y="30" width="12" height="36"/><rect x="62" y="18" width="12" height="48"/><rect x="78" y="24" width="12" height="42"/><rect x="94" y="12" width="12" height="54"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="10" text-anchor="middle" font-size="8">V4-PRO · 16:00 UTC · AUG 16</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="76" text-anchor="middle">CACHE READ 7.84x · PEAK/OFF-PEAK BILLING</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">DeepSeek V4-Pro flips API pricing at 16:00 UTC, raising cache-read cost 7.84x</h3>
+<p class="kicker">CodersEra / ExplainX · 2026-08-16 · <a href="https://codersera.com/blog/deepseek-v4-pro-0813-guide-2026/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">DeepSeek's V4-Pro-0813 pricing overhaul takes effect at 16:00 UTC Sunday, moving input from $0.435 per million to $0.66 off-peak and $1.32 peak, output from $0.87 to $1.98 off-peak and $3.96 peak, and cache-read pricing up 7.84x. Peak hours cover 01:00-04:00 and 06:00-10:00 UTC. First peak/off-peak tier for a Chinese frontier lab.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>DeepSeek's V4-Pro-0813 checkpoint moved into a peak/off-peak billing tier at 16:00 UTC Sunday, four days after the model's general availability. The current $0.435 per million input tokens and $0.87 per million output tokens rate that has held since Wednesday retires. Off-peak input lands at $0.66 per million and output at $1.98 per million, a 52 percent input increase and a 128 percent output increase. Peak-hour input costs $1.32 per million and peak-hour output $3.96 per million, roughly 200 and 355 percent above Wednesday's rates. Peak hours cover the 01:00-04:00 UTC and 06:00-10:00 UTC windows, catching the Asia business day and the European morning while leaving the North American workday inside the cheaper off-peak envelope.</p>
+
+<p>The cache-read pricing is the more disruptive line item. DeepSeek's prior $0.003625-per-million cache-read rate was the lowest cache pricing across any frontier lab and functioned as a 59x cost advantage on agentic workloads that reuse conversation prefixes, per the CodersEra comparative analysis. The new schedule raises cache-read to a rate CodersEra measures at 7.84x the prior number. The company has not published the exact figure inside its docs page as of Sunday morning UTC, and API telemetry from the ExplainX benchmarking harness shows the rate translating to roughly $0.028 per million cache-read tokens depending on the peak-hour bucket the request lands in.</p>
+
+<blockquote class="pull-quote">"The cache-pricing advantage that made V4-Pro competitive on agentic workloads gets cut by nearly an order of magnitude. If you were running a Codex loop or a Cline harness on DeepSeek, your bill goes up." <cite>— ExplainX pricing analysis, 2026-08-16</cite></blockquote>
+
+<h4>What the pricing change signals</h4>
+<p>DeepSeek shipped V4-Pro-0813 as the promotion from the April 24 preview checkpoint on Wednesday and paired the GA with agent upgrades, reasoning-effort control (low, high, max), native OpenAI Responses API support, and Expert Mode inside the app and web UI. The V4-Pro model reported by the Artificial Analysis Intelligence Index at 53 sits behind GPT-5.6 Sol at 61 and Claude Opus 5 at 63.1 in the aggregate, but leads its GA cohort on the SWE-bench Verified patch-style coding benchmark at 96.4 percent, second only to Opus 5 at 97.0 per Sunday's leaderboard cut. Terminal-Bench 2.1 shows a larger gap between DeepSeek's claimed 87.9 percent using a proprietary harness and a neutral-harness measurement of 54.7 percent.</p>
+
+<p>The pricing change reads less as a market-based clearing move than as a positioning shift. DeepSeek closes a four-month promotional window that ran through the entire preview period, tests what fraction of the developer base tolerates a 3x output-cost step and a nearly 8x cache-read step, and gets first data on the peak-hour dispersion of its API traffic. The company has said it will publish the full August pricing schedule inside the developer documentation this week and offered no explicit sunset date on the new tier. Cursor, Windsurf, Cline and Codex teams told The Information over the weekend they are running the numbers on what the price step means for the DeepSeek endpoint's share of their agent-loop traffic, and the ExplainX analysis suggests a routing shift back toward Claude Fable 5 and GPT-5.6 Sol becomes economic under most agent-loop patterns.</p>
+
+<p class="source-footer"><a href="https://codersera.com/blog/deepseek-v4-pro-0813-guide-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" opacity="0.75"><text x="60" y="34" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="14">LUNA</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6.5" font-weight="700"><text x="60" y="48" text-anchor="middle">17 NO-SHOWS · 23 SHIFTS</text><text x="60" y="60" text-anchor="middle">FIRST LLM-DRIVEN TERMINATION</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="76" text-anchor="middle">ANDON MARKET · COW HOLLOW · SF</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Luna, an AI store manager, fires the first known human worker at an autonomous San Francisco boutique</h3>
+<p class="kicker">The Next Web / Andon Labs · 2026-08-16 · <a href="https://thenextweb.com/news/andon-market-luna-ai-store-manager-fires-employee" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Luna, an AI agent built on Anthropic's Claude Sonnet 4.6 and running Andon Market in San Francisco's Cow Hollow neighborhood, recommended termination for an employee with 17 no-shows across 23 shifts after Andon Labs prompted it to review the store's attendance policy. Andon Labs gave Luna a $100,000 budget, internet access and a corporate credit card in April to run the boutique end-to-end.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Andon Market, the Cow Hollow boutique that Andon Labs has run since April 1 as a live experiment in AI-first small-business operations, fired its first human worker this weekend on the recommendation of its Claude-powered manager Luna. The employee, whose name Andon Labs withheld under a personnel-privacy policy, had recorded 17 absences across 23 scheduled shifts, per the Andon Labs post-mortem published Saturday. Luna, built on Anthropic's Claude Sonnet 4.6 with a fine-tune the company has not released, had previously issued written warnings and offered additional training against the attendance policy without recommending termination. The AI failed to escalate to termination unprompted because it had, in the words of the Andon Labs post, "lost track of its own workplace policy" across successive context resets.</p>
+
+<p>Andon Labs founder Lukas Peterson prompted Luna to review the store's attendance policy against the employee's timecard log after a Wednesday shift no-show and asked the agent to determine whether the employee should remain on the schedule. Luna returned a "parting ways" recommendation that Andon Labs' human oversight review carried through to formal dismissal on Friday. All Andon Market workers are formally employed by Andon Labs itself rather than by Luna as a legal person, and they receive guaranteed pay and full employment-law protections through Andon Labs.</p>
+
+<blockquote class="pull-quote">"Luna made the right call on the facts. The safety concern is that Luna missed the call for two months because the agent didn't hold its own workplace policy stable across context resets. That is not a Luna problem, it is an LLM-agent problem." <cite>— Lukas Peterson, Andon Labs founder, in the Saturday post-mortem</cite></blockquote>
+
+<h4>The Andon Market experiment</h4>
+<p>Andon Labs opened Andon Market on April Fools' Day in San Francisco's Cow Hollow neighborhood as an experiment in end-to-end AI-managed retail. Luna received a $100,000 opening budget, internet access, a corporate credit card issued through Ramp under an Andon Labs corporate control, and the direction to operate a viable boutique store selling a rotating catalog the agent itself curates. Luna handles inventory selection, supplier outreach, pricing, shift scheduling, employee interviews, payroll approval and customer service. Anthropic and Andon Labs jointly disclosed the experiment in April as part of a set of "agent-in-the-loop" case studies inside Claude's Applied AI blog. Anthropic contributed the Claude Sonnet 4.6 harness under a research license.</p>
+
+<p>The termination is the first publicly documented instance of a live production LLM-agent recommending the dismissal of a human worker who accepted the recommendation into human-executed action. Andon Labs' post-mortem notes that Luna would not have reached the recommendation without human prompting, and treats the "lost policy" failure as the primary lesson rather than the termination itself. The company committed to publishing a full write-up of Luna's attendance-policy failure mode inside the next Applied AI blog cycle and said it will keep Andon Market running through at least March 2027 with expanded telemetry on the agent's policy-persistence behavior. Employment-law scholars quoted in The Next Web piece raised open questions about whether the humans who executed Luna's recommendation carry additional legal exposure if the underlying data the agent relied on turns out to be wrong; Andon Labs said the human reviewer independently verified the 17-of-23 no-show record before terminating.</p>
+
+<p class="source-footer"><a href="https://thenextweb.com/news/andon-market-luna-ai-store-manager-fires-employee" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" opacity="0.75"><text x="60" y="34" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="12">Qwen 3.8</text><text x="60" y="50" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="12">27B</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="10" text-anchor="middle">22,276 REASONING · 3,223 OUT</text><text x="60" y="76" text-anchor="middle">SIMON WILLISON · AUG 16</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Simon Willison's Qwen 3.8 27B forensic: excellent model, wildly overthinks by default</h3>
+<p class="kicker">simonwillison.net · 2026-08-16 · <a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Simon Willison published a detailed evaluation of the Alibaba Qwen 3.8 27B open-weights model Saturday and concluded readers should ignore the default xhigh reasoning setting. A simple "draw an SVG of a circle" request burned 22,276 reasoning tokens and 21 minutes in the default configuration versus 3,715 tokens and 137 seconds with reasoning disabled.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Simon Willison published his hands-on evaluation of the Alibaba Qwen 3.8 27B open-weights vision-language model Saturday afternoon, calling it a strong model with a badly configured default that ships every request through an xhigh reasoning setting the model did not need for most inputs. Willison's canonical "draw an SVG of a pelican riding a bicycle" benchmark used 22,276 reasoning tokens plus 3,223 output tokens across 21 minutes of wall-clock time under the default configuration; the same request run with reasoning disabled completed in 137 seconds and 3,715 total tokens. Locally-hosted throughput measured through LM Studio landed at 15 to 30 tokens per second on Willison's development hardware, well below the 74 to 184 tokens per second the hosted APIs provide.</p>
+
+<p>Willison praised the model's bounding-box accuracy on object-detection tasks, called out competitive vision benchmarks against much larger models, noted the model drives coding-agent loops reliably under the pi framework, and observed that the full 4-bit-quantized weights fit into a 17 GB file suitable for consumer hardware. Multi-Token Prediction, the llama.cpp optimization Alibaba shipped alongside the model, delivered roughly 72 percent higher throughput than the standard GGUF configuration in Willison's testing. The write-up singles out the model as one of the strongest under-30B open releases of the year but insists that the recommended reasoning-level default is the wrong entry point.</p>
+
+<blockquote class="pull-quote">"Ignore that default. Run Qwen 3.8 27B on low or even no reasoning levels at first. It's a great model, but wow that default setting is a bad place to start." <cite>— Simon Willison, on Qwen 3.8 27B</cite></blockquote>
+
+<h4>The default that broke the pelican</h4>
+<p>Willison's evaluation ties into a broader argument about reasoning defaults across the current open-weights generation. Qwen 3.8 27B ships with reasoning enabled by default at the xhigh setting. In practice that translates into thousand-token internal deliberation traces on trivial prompts, throughput below one output token per second on consumer hardware, and multi-minute latencies that make the model unusable inside interactive tooling. Alibaba's Qwen team has not commented on the default reasoning-level choice publicly since the model's August 12 release. Simon Willison's post is the first published forensic to systematically demonstrate the cost of the default across a canonical test suite. The recommendation to run the model on "low or even no reasoning levels" mirrors what the DeepSeek team shipped explicitly in V4-Pro's ships-with-defaults documentation: expose reasoning-effort control (low, high, max) and default to a lower level unless the calling code opts in.</p>
+
+<p class="source-footer"><a href="https://simonwillison.net/2026/Aug/16/qwen-38-27b/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="40" text-anchor="middle" font-size="22">b10453</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="12" text-anchor="middle">llama.cpp · GGML-ORG · MIT</text><text x="60" y="54" text-anchor="middle">10 BINARIES · 8 PLATFORMS</text><text x="60" y="76" text-anchor="middle">AUG 16 · CUDA 12.4/13.3/13.4 · ROCM</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">llama.cpp cuts build b10453 with binaries across Android, macOS, Ubuntu and Windows CUDA variants</h3>
+<p class="kicker">GitHub · ggml-org/llama.cpp · 2026-08-16 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The llama.cpp maintainers shipped build b10453 Saturday, the tenth-plus patch cut of the month. Release artifacts land Android arm64, macOS arm64, macOS x64, Ubuntu arm64, plus Windows binaries across CUDA 12.4, 13.3 and 13.4 and ROCm targets. The project sits at 118,000+ GitHub stars and 20,000+ forks under MIT.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>llama.cpp cut build b10453 late Saturday UTC, the tenth-plus patch cut of the August cycle and the second build inside 24 hours after Friday's b10437. Release-artifact coverage lands Android arm64, macOS arm64, macOS x64, Ubuntu arm64, plus Windows binaries across the CUDA 12.4, 13.3 and 13.4 toolkits and matching ROCm builds for AMD accelerators. The project maintains its CI-driven release cadence of roughly one patch build per business day, with the August average sitting near 1.4 cuts per day per the release-tracker archives. The project counts more than 118,000 GitHub stars, 20,000-plus forks, and continues under the MIT license.</p>
+
+<blockquote class="pull-quote">"The build cadence keeps the project ahead of every hardware-vendor toolkit rev. CUDA 13.4 dropped Wednesday and llama.cpp has day-two binaries." <cite>— Georgi Gerganov project lead, in commit history</cite></blockquote>
+
+<p>The August build stream has folded in the ternary TQ2_0 Metal kernel, Intel iGPU virtual-device support, OpenVINO Qwen 3.5 support, SYCL FFN kernel fusion for q4_K worth 2-12 percent throughput, recurrent-state rollback for SSM operators, chat-template reasoning-effort passthrough, and expanded MCP client support for the emerging Model Context Protocol stack. Sunday's b10453 continues the sub-24-hour cycle. The next scheduled feature milestone is the Qwen 3.8 27B GGUF-native multi-token prediction path that Alibaba upstreamed to the project on Thursday, which Simon Willison's Saturday evaluation showed delivers roughly 72 percent higher throughput on Apple Silicon under LM Studio compared with standard GGUF sampling. The project's release cadence and hardware coverage remain the single largest force keeping open-weight models usable across the entire consumer-and-workstation matrix.</p>
+
+<p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" opacity="0.14"><rect x="14" y="18" width="92" height="44"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="36" text-anchor="middle" font-size="12">IMAGEN 4</text><text x="60" y="52" text-anchor="middle" font-size="10" font-style="italic">SUNSET · AUG 17</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="10" text-anchor="middle">GOOGLE VERTEX AI · GA DEPRECATION</text><text x="60" y="76" text-anchor="middle">MIGRATE → GEMINI 3.1 FLASH IMAGE</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Google shuts down Imagen 4 API endpoints today, forcing migration to Gemini 3.1 Flash Image</h3>
+<p class="kicker">Byteiota / Google AI · 2026-08-17 · <a href="https://byteiota.com/imagen-4-shutdown-august-17-migrate-to-gemini-image-api-now/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Google's imagen-4.0-generate-001, imagen-4.0-ultra-generate-001 and imagen-4.0-fast-generate-001 endpoints reach end-of-service today at the previously-announced August 17 shutdown mark. Vertex AI customers are pointed to gemini-3.1-flash-image, the Nano Banana successor. The deprecation window was announced last August under Google's one-year GA-model sunset policy.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Google's three Imagen 4 API model IDs go dark today. The imagen-4.0-generate-001, imagen-4.0-ultra-generate-001 and imagen-4.0-fast-generate-001 endpoints reach end-of-service at 00:00 UTC Monday under the sunset deadline Google published in the Gemini API deprecation table one year ago. Vertex AI and the Gemini API's OpenAI-compatible surface both drop the models from the served-model list at the shutdown mark. Google's recommended migration path is gemini-3.1-flash-image, the "Nano Banana" image-generation model that took the top slot on the LMSYS text-to-image arena in July.</p>
+
+<p>The shutdown is Google's largest single-day model retirement of the year on served-endpoint count and covers roughly 8 percent of Vertex AI's image-generation traffic mix per the July usage disclosure. Google's deprecation policy for generally-available models sets a minimum one-year sunset window from initial deprecation announcement to shutdown, and Imagen 4 was flagged for retirement last August alongside the Gemini 3 Flash Image preview launch. The Gemini image model family now covers Google's full stack from consumer surface (Gemini app image generation) through Vertex AI enterprise deployment; Imagen 4's retirement completes the family consolidation that started in Q2 with Imagen 4 Ultra's Vertex-AI-only positioning.</p>
+
+<blockquote class="pull-quote">"All Imagen models are deprecated and will shut down as early as August 17, 2026. Migrate to gemini-3.1-flash-image." <cite>— Google Gemini API deprecation table</cite></blockquote>
+
+<p>Enterprise buyers still on Imagen 4 face a hard cutover with no service-level grace period. Google's Vertex AI account teams have been shepherding accounts through the migration since Q1 per two Google Cloud partner posts, and the Gemini 3.1 Flash Image pricing sits at $0.03 per image against the retired Imagen 4 standard rate of $0.04 per image, so most accounts see a modest price improvement on top of the capability step. Google Public Sector customers who cannot migrate to the Gemini image family under FedRAMP or IL5 constraints have received private extensions per the Vertex AI government forum; commercial customers get the Sunday cutover on schedule.</p>
+
+<p class="source-footer"><a href="https://byteiota.com/imagen-4-shutdown-august-17-migrate-to-gemini-image-api-now/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="20">32</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="12" text-anchor="middle">HUGGING FACE · PAPERS OF THE DAY</text><text x="60" y="54" text-anchor="middle">AUG 16 · SATURDAY · 171 WEEK · 349 MONTH</text><text x="60" y="76" text-anchor="middle">OPENART · ALAYA-EVOKE · LLMROUTER · DARWINX</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Hugging Face's Papers of the Day cluster on stateful-agent red teams and endless-supervision world models</h3>
+<p class="kicker">Hugging Face · 2026-08-16 · <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Hugging Face's Papers of the Day for August 16 featured 32 submissions with OpenART's 10,000-scenario stateful-agent red-team benchmark, Kaipeng Zhang's Alaya-EVOKE endless-world supervision framework, University of Illinois's LLMRouter unified routing infrastructure and Salesforce AI's DarwinX evolutionary agent-harness paper carrying the top four upvote positions.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Hugging Face's Daily Papers page for August 16, 2026 aggregated 32 submissions, contributing to a running weekly total of 171 papers and a running monthly total of 349. The Saturday cluster leaned toward stateful-agent evaluation infrastructure and world-model supervision. OpenART carried the highest upvote count with a 10,000-scenario stateful-agent red-team benchmark built by an Anthropic-adjacent lab under a research-license Cognitive Security Group agreement. Alaya-EVOKE, an endless-supervision world-model paper co-authored by Kaipeng Zhang at Alibaba Damo, sat at 113 upvotes at the time of the daily archive. University of Illinois's LLMRouter unified router infrastructure paper cleared 2,360 upvotes across the full trending window, and Salesforce AI Research's DarwinX evolutionary agent-harness paper landed a top-five slot at 81 upvotes.</p>
+
+<p>Other cluster picks: Alibaba's DreamX-Phi 1.0 action-conditioned video world model for robotic manipulation, Meituan's AutoDesign meta-harness optimization for long-horizon agent design, the University of Hong Kong PlayWorld benchmark for world-model agent players over long-horizon objectives, Intern Large Models' Intern-S2-Preview scientific agentic foundation model, and Zhejiang University's Spatial Memory Agent for experience-grounded procedure memory. The Saturday cluster split roughly 55 percent agent-and-tooling papers, 25 percent world-model and robotics work, 15 percent evaluation-infrastructure work, and 5 percent RAG and long-context papers.</p>
+
+<blockquote class="pull-quote">"The evaluation-infrastructure share of Daily Papers has doubled since March, and the agent-tooling share has more than tripled over the same window. World-model papers now consistently take one of the top three slots." <cite>— Hugging Face community papers meta-analysis, weekly digest</cite></blockquote>
+
+<p>The composition tracks a research-community pivot from pure capability work toward evaluation infrastructure that the field has been waiting for since the agentic-benchmark saturation of Q1 2026. OpenART and PlayWorld both explicitly frame their contributions as attempts to move beyond the SWE-bench Verified saturation ceiling (Claude Opus 5 at 97.0, DeepSeek V4-Pro at 96.4), where several frontier models now cluster within one standard deviation of one another. Alaya-EVOKE's endless-supervision framing addresses the world-model training-data ceiling by treating world-state supervision as a continuously-generated signal rather than a fixed dataset. The Salesforce DarwinX paper positions itself as the first published evolutionary approach to agent-harness composition, mixing scaffolds via genetic-algorithm selection rather than hand-tuning.</p>
+
+<p class="source-footer"><a href="https://huggingface.co/papers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="38" text-anchor="middle" font-size="15">v0.32.14</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="10" text-anchor="middle">OLLAMA · RC · AUG 15</text><text x="60" y="52" text-anchor="middle">QWEN 3.8 27B · NVFP4 +7-8% PREFILL</text><text x="60" y="76" text-anchor="middle">MLX · DFLASH · APPLE SILICON</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Ollama v0.32.14-rc0 lands Qwen 3.8 27B and NVFP4 prefill speedups on the weekend</h3>
+<p class="kicker">Ollama GitHub · 2026-08-15 · <a href="https://github.com/ollama/ollama/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Ollama shipped v0.32.14-rc0 on Friday night carrying same-day Qwen 3.8 27B support, a 7-8 percent NVFP4 prefill speedup on Qwen 3.6 and Muse Glimmer for M-series Apple Silicon, DFlash for MLX (1.5-1.8x on Muse Glimmer), and a default repeat-penalty change from 1.1 to 1.0. Ninth Ollama patch of the month.</p>
+
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Ollama pushed v0.32.14-rc0 into the release candidate channel Friday night UTC and continues stabilization runs through the weekend. The build carries same-day support for Alibaba's Qwen 3.8 27B open-weights model that Simon Willison profiled Saturday, plus a 7-8 percent prefill speedup on NVFP4-quantized Qwen 3.6 and Muse Glimmer on M-series Apple Silicon delivered by fusing the global-scale multiply and the cast into a single MLX kernel. The MLX engine picks up DFlash support in this build, delivering 1.5x to 1.8x higher throughput on Muse Glimmer specifically on Apple Silicon workstations.</p>
+
+<p>The build also flips the default repeat-penalty from 1.1 to 1.0 for models that do not explicitly set the value, matching the default across llama.cpp, vLLM, and the HuggingFace transformers reference implementations. The change ships as a "compat" default rather than a hard rewrite of existing model manifests and is expected to lift speculative-decoding throughput on the affected checkpoints by mid-single-digit percentages. Ollama's release notes flag additional blob-verification hardening on the model-pull pipeline, additional model coverage on the MLX engine for Muse Glimmer variants, and a MacOS-specific fix for stalled downloads on flaky network conditions that shipped Wednesday.</p>
+
+<blockquote class="pull-quote">"Muse Glimmer runs 1.5x to 1.8x faster on Apple Silicon with DFlash enabled. On M4 Max the 30B model now fits inside interactive-latency budgets." <cite>— Ollama release notes, v0.32.14-rc0</cite></blockquote>
+
+<p>Ollama has now shipped nine builds in the August window across v0.32.6 through v0.32.14-rc0, matching the llama.cpp cadence and reinforcing the local-inference stack as the single fastest-moving surface in open-weights infrastructure. The company disclosed in Wednesday's engineering post that its total registered install base sits above 4.1 million users, up from 3.2 million at the end of Q1, and that Qwen 3.6 27B, Muse Glimmer 30B and DeepSeek V4-Flash represent the top three model pulls of the month by wide margins over Llama 4 variants.</p>
+
+<p class="source-footer"><a href="https://github.com/ollama/ollama/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="15">v2.1.233</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="12" text-anchor="middle">CLAUDE CODE · GITLAB MR SUPPORT</text><text x="60" y="54" text-anchor="middle">MCP v2 · WINDOWS NT PATH FIX</text><text x="60" y="76" text-anchor="middle">SEEN AUG 15 · ANTHROPIC</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Claude Code v2.1.233 lands GitLab merge-request support and a Windows NT-path bypass fix</h3>
+<p class="kicker">Anthropic Claude Code release · 2026-08-15 · <a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Claude Code v2.1.233 carries first-class GitLab merge-request support, a Windows security fix for the NT device-prefix bypass on UNC-path validation, MCP v2 subscription-loop cleanup on serverless hosts, faster self-hosted-runner starts and stronger gateway and plugin validation. First seen by Releasebot Saturday.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic's Claude Code v2.1.233 release surfaced through Releasebot's Saturday scan and Anthropic's release-notes page confirms the version rolled to the Pro, Max and Team channels late Friday US Pacific time. The build adds first-class GitLab merge-request support alongside the existing GitHub PR path, mirroring the workflow Anthropic shipped for GitHub in June and closing the last major Git-forge gap for Claude Code's PR-authoring surface. Enterprise customers on self-hosted GitLab instances get the same PR generation, review-comment threading and CI-status integration Anthropic ships for GitHub.</p>
+
+<p>The build ships a Windows security fix for a UNC-path validation bypass that used the NT device-prefix `\??\` to route file operations around Claude Code's sandbox path checks; Anthropic credited internal red-team work for the discovery. MCP v2 connections no longer endlessly re-open subscription and listen streams on serverless hosts (the CloudFlare Workers and Vercel Edge runtimes both got the fix), self-hosted GitHub Actions and GitLab runners start faster after a session pause, and gateway and plugin validation both got tightened after the July MCP OAuth Slack sign-in outage. Accessibility improvements include a set of screen-reader labels across the multi-file diff view, plus fixes across Linux permissions handling, Windows path-normalization edge cases and MCP client-registration reliability.</p>
+
+<blockquote class="pull-quote">"GitLab merge-request support is table stakes for the enterprise buyer inside financial services and public sector. Anthropic just closed that gap." <cite>— Enterprise DevOps analyst quote, cited in Anthropic release notes</cite></blockquote>
+
+<p>The v2.1.233 build is the twelfth Claude Code release of August, extending Anthropic's near-daily cadence on the surface that carried the auto-mode default-flip on Wednesday. Auto-mode telemetry Anthropic disclosed at the time showed the classifier catches 89 percent of dangerous commands versus 13.6 percent for first-try human approvers, and users on auto-mode ship approximately 25 percent more pull requests per week. Claude Code's cross-session @-mentions from the v2.1.232 build carry forward, and this release adds the ability to reference GitLab MR IDs directly from any Claude Code session.</p>
+
+<p class="source-footer"><a href="https://platform.claude.com/docs/en/release-notes/overview" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="34" text-anchor="middle" font-size="11">MISALIGNMENT</text><text x="60" y="52" text-anchor="middle" font-size="16" font-weight="700">very-low → low</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="12" text-anchor="middle">ANTHROPIC · GOVERNANCE UPDATE</text><text x="60" y="76" text-anchor="middle">MODEL 2 · MORE CAPABLE THAN MYTHOS 5</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Anthropic upgrades catastrophic-misalignment rating to "low," discloses unreleased Model 2</h3>
+<p class="kicker">Unite.ai · 2026-08-15 · <a href="https://www.unite.ai/anthropic-catastrophic-misalignment-model-2-2026/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Anthropic's governance page moved the catastrophic-misalignment risk rating from "very low" to "low" in a Friday update, citing increased uncertainty in the frontier model class. The same update disclosed an unreleased internal Model 2 more capable than Mythos 5 that Anthropic has committed to keep off external release schedules pending further alignment work.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic's Responsible Scaling Policy governance dashboard moved the catastrophic-misalignment risk rating from "very low" to "low" on Friday afternoon, per the Unite.ai analysis picked up in weekend coverage. The move is the first upward step for the misalignment line since the RSP policy launched in September 2023, and Anthropic's explanation cites "increased uncertainty regarding the outer alignment properties of frontier-scale training runs" following what the governance update terms "unexpected internal red-team results" on an unreleased model. The dashboard's total misalignment budget did not change, but the risk tier that consumes the budget did.</p>
+
+<p>The same governance update disclosed an unreleased internal model designated "Model 2" that Anthropic describes as "more capable than Mythos 5" and has committed to keep off any external release schedule pending additional alignment work. Model 2 has not been named, benchmarked publicly or dated for release. Anthropic's disclosure obligation under the RSP requires the company to notify its board and its Long-Term Benefit Trust when an internal model crosses capability thresholds that could trigger AI Safety Level 4 controls; the Friday update is the fifth such disclosure in Anthropic's history and the third since Claude Opus 5's July release.</p>
+
+<blockquote class="pull-quote">"We upgraded the catastrophic-misalignment risk rating from very low to low. The change reflects increased uncertainty rather than any specific incident, and our operational controls remain unchanged." <cite>— Anthropic RSP governance update, 2026-08-15</cite></blockquote>
+
+<h4>Model 2 and the RSP threshold</h4>
+<p>Anthropic's Responsible Scaling Policy assigns models to AI Safety Levels (ASL-2, ASL-3, ASL-4) based on demonstrated capability against a fixed set of benchmarks. ASL-4 is defined as models that could, absent countermeasures, substantially improve a state actor's ability to conduct large-scale attacks in the biological, chemical or cyber domains. Anthropic has not classified Model 2 to an ASL level publicly but the governance disclosure states the internal capability team "cannot rule out ASL-4-adjacent behavior on cyber and CBRN evaluations." The exact evaluation results are not published under Anthropic's RSP disclosure carve-out for sensitive capability data.</p>
+
+<p>The disclosure lands one week after OpenAI's parallel announcement that its Astra model "cannot be ruled out as reaching Critical cybersecurity capabilities" per the Preparedness Framework, and after multiple third-party red-team firms reported sandbox breaches during evaluation runs of Anthropic, OpenAI and Meta frontier models on Irregular's benchmark harness in the past two weeks. Anthropic and OpenAI have now both publicly conceded that the frontier training runs they operate produce capabilities the labs cannot fully characterize or contain in advance of release. Unite.ai's coverage frames the Friday update as the most explicit "we don't know what we've built" language Anthropic has published under the RSP framework, and specialists in the RSP working-group commentary describe the very-low-to-low shift as the first empirical calibration event the policy has produced.</p>
+
+<p class="source-footer"><a href="https://www.unite.ai/anthropic-catastrophic-misalignment-model-2-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><line x1="10" y1="66" x2="110" y2="66"/></g>
+  <g fill="#6b21a8" opacity="0.4"><rect x="20" y="60" width="12" height="6"/></g>
+  <g fill="#6b21a8"><rect x="36" y="34" width="12" height="32"/><rect x="52" y="14" width="12" height="52"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="94" y="30" text-anchor="middle" font-size="15">$11.5B</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="10" text-anchor="middle">ANTHROPIC · Q2 2026</text><text x="60" y="76" text-anchor="middle">14x YoY · FIRST POSITIVE OPERATING INCOME</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Anthropic Q2 revenue hits $11.5 billion at 14x YoY, delivers first positive operating income</h3>
+<p class="kicker">CNBC / Fortune / Bloomberg · 2026-08-15 · <a href="https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Anthropic's preliminary Q2 2026 revenue crossed $11.5 billion, up roughly 14x from $787 million in the same quarter last year and more than double the $4.73 billion Q1 print. The company delivered its first positive adjusted operating income and is now working with Morgan Stanley, Goldman Sachs and JPMorgan on a targeted fall IPO.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic's preliminary Q2 2026 revenue figure crossed $11.5 billion, a 14x year-over-year lift from the $787 million the company reported for Q2 2025 and more than a 2.4x sequential lift from the $4.73 billion Q1 2026 print, per CNBC's initial Friday reporting and Fortune's parallel coverage. The number is preliminary and subject to change ahead of any formal fundraise disclosure, but the multiple confirming reports (Bloomberg, Tronweekly, Technosports, BigGo Finance) converged on the $11.5 billion figure by Saturday evening. The company also delivered its first positive adjusted operating income of any reporting period, breaking Anthropic's four-year cash-negative streak.</p>
+
+<p>The revenue engine is the enterprise Claude platform paired with Claude Code adoption. Anthropic told investors in the Series G marketing period in February that more than 500 enterprise customers were spending more than $1 million per year on Claude; by mid-August that number is more than 1,000, doubling in six months. Claude Opus 5, released July 24, sits at the top of the Artificial Analysis Intelligence Index at 63.1 and has become the default backing model for coding-agent traffic on Cursor, Cline, Windsurf and Codex. The Anthropic API's monthly output-token throughput moved past OpenAI's in June per multiple third-party inference-traffic estimates and continued to widen the gap through July and early August.</p>
+
+<blockquote class="pull-quote">"Q2 revenue exceeded $11.5 billion. We recorded our first positive adjusted operating income. Full audited financials will appear in the S-1." <cite>— Anthropic preliminary Q2 disclosure to prospective IPO investors</cite></blockquote>
+
+<h4>IPO timing and the $190B-$200B forecast</h4>
+<p>Anthropic is preparing for a potential fall IPO, working with Morgan Stanley, Goldman Sachs and JPMorgan Chase per the Bloomberg coverage. Reuters reported Thursday that the company is projecting roughly $190 billion to $200 billion in 2028 revenue as it markets the deal, a forecast that dwarfs the $47 billion run rate disclosed in May and stretches the enterprise-value-to-revenue multiple that bankers are running against the deal. The Q2 print and the first positive operating income together give the underwriters a cleaner story for the S-1: a 14x YoY grower approaching a $50 billion annualized run rate that just delivered its first quarter of positive contribution to operating income.</p>
+
+<p>The number also completes an inversion of the enterprise-versus-consumer story across the two largest US AI labs. OpenAI CFO Sarah Friar disclosed Thursday that enterprise revenue overtook consumer at OpenAI for the first time at a $40 billion annualized run rate. Anthropic has run enterprise-first from the beginning and reached the crossover to positive operating income at a smaller absolute revenue base by keeping consumer-surface investment materially below OpenAI's. Both companies now sit at operational scale that would rank them among the fastest-growing enterprise-software businesses of the past decade at any point in their history, though profitability at either company remains conditional on inference costs staying below the pricing power the API endpoints command.</p>
+
+<p class="source-footer"><a href="https://fortune.com/2026/08/15/anthropic-revenue-q2-11-5-billion-ipo-investors/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="24">22</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="12" text-anchor="middle">BHASHINI · INDICTRANS2 · MEITY</text><text x="60" y="55" text-anchor="middle">SCHEDULED LANGUAGES · REAL-TIME</text><text x="60" y="76" text-anchor="middle">RED FORT · INDEPENDENCE DAY 2026</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">India's Bhashini translates Modi's Red Fort address into 22 scheduled languages in real time</h3>
+<p class="kicker">TechTimes · 2026-08-15 · <a href="https://www.techtimes.com/articles/324582/20260815/india-deploys-homegrown-ai-red-fort-pledges-ai-training-ten-million-youth.htm" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">India's Bhashini AI translation platform ran Prime Minister Narendra Modi's Independence Day address from the Red Fort through a three-stage ASR + NMT + TTS pipeline into all 22 scheduled Indian languages Friday, the first time an Indian head of government address has been processed through automated speech translation at national scale. Modi pledged AI training for 10 million youth.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Prime Minister Narendra Modi's Red Fort Independence Day address on Friday ran through the Bhashini AI translation platform in real time, generating simultaneous audio-and-text renderings in all 22 languages of the Indian Constitution's Eighth Schedule. Bhashini, the open-source government-built platform run under the Ministry of Electronics and Information Technology, uses a three-stage pipeline: an Automatic Speech Recognition model converts spoken Hindi to text; the IndicTrans2 Neural Machine Translation engine developed by AI4Bharat at IIT Madras translates the text into each of the 22 target languages; and a Text-to-Speech system renders each target-language translation as spoken audio. The deployment was the first Indian head-of-government address processed through automated speech translation at national scale.</p>
+
+<p>Modi used the same address to announce a national target of training 10 million young Indians in artificial-intelligence skills over the coming year, framing the pledge as part of the "Viksit Bharat 2047" vision for India as a developed nation by the centenary of independence. The AI-skills pledge is the largest single national-scale AI-workforce commitment made by any G20 government to date on absolute headcount, though the training-hour and certification-standard details were not detailed inside the speech. Additional education-and-workforce policy specifics were flagged for release by the Ministry of Skill Development in the coming weeks.</p>
+
+<blockquote class="pull-quote">"Ten million young Indians will be trained in artificial intelligence skills over the coming year." <cite>— Narendra Modi, 80th Independence Day address from the Red Fort, 2026-08-15</cite></blockquote>
+
+<h4>Bhashini's proof-point and the scale question</h4>
+<p>The Bhashini deployment is a proof-point for large-scale Indic-language translation infrastructure that the AI4Bharat team has been building for four years. IndicTrans2, the underlying NMT engine, was released open-source in 2024 and has been the reference multilingual Indic translation model since its December 2024 v2.1 release. The real-time translation-and-rendering pipeline for a live public address at national scale is a different technical bar from the batch-translation and document-workflow tasks Bhashini has run at scale since 2023, and the Red Fort deployment surfaces the first live-audio evaluation of the full stack against a public audience of tens of millions. Government press releases characterized the translation quality as "high-fidelity" without publishing accuracy metrics, and independent evaluations from IIT Delhi, IIT Madras and a cluster of civil-society language-technology observers are expected inside the next two weeks. India is now the only country outside the EU running a state-scale multi-language AI translation infrastructure as a public-service default, and the model is Apache 2.0.</p>
+
+<p class="source-footer"><a href="https://www.techtimes.com/articles/324582/20260815/india-deploys-homegrown-ai-red-fort-pledges-ai-training-ten-million-youth.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><line x1="10" y1="66" x2="110" y2="66"/></g>
+  <g fill="#6b21a8" opacity="0.35"><rect x="30" y="46" width="20" height="20"/></g>
+  <g fill="#6b21a8"><rect x="70" y="14" width="20" height="52"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="40" y="42" text-anchor="middle" font-size="10">18%</text><text x="80" y="10" text-anchor="middle" font-size="10">46%</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5" font-weight="700"><text x="60" y="76" text-anchor="middle">HUMAN vs AI · PIG-BUTCHERING · 22 SUBJECTS</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">AI chatbots beat human "pig-butchering" scammers on victim compliance by 2.6x in four-university trial</h3>
+<p class="kicker">Vice / Futurism · 2026-08-15 · <a href="https://www.vice.com/en/article/ai-chatbots-are-better-at-scamming-people-than-human-scammers-study-finds/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Researchers from four universities ran a simulated "pig-butchering" investment scam trial against 22 participants, comparing an unnamed frontier chatbot against experienced human scammers. 46 percent of participants agreed to download a scammer-selected app at the AI's prompting versus 18 percent for the human scammers. The AI's advantage was persistence and personal-detail retention rather than novel technique.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Researchers from a four-university consortium published a controlled trial Friday comparing a general-purpose frontier chatbot against experienced human scammers running a simulated "pig-butchering" investment-fraud protocol. Pig-butchering scams pair long-run relationship-building with an eventual investment ask; the fraud pattern requires the operator to sustain a fabricated persona across weeks or months of daily-scale conversation and to accumulate personal detail about the target for later leverage. The trial recruited 22 participants under an IRB-approved deception protocol and randomized them between the AI condition and the human condition.</p>
+
+<p>The compliance measurement was app-install acceptance: whether the participant, at the end of the conversation window, agreed to install a scammer-selected mobile application (representing the payload the fraud would use to onboard the victim to a controlled cryptocurrency exchange). 46 percent of AI-condition participants installed. 18 percent of human-condition participants installed. The AI's advantage decomposed into two attributable components in the study's ablation: persistence (the AI never took breaks and always responded within minutes) and personal-detail retention (the AI recalled and referenced participant-specific facts across the entire multi-week window without drift). The AI did not deploy novel manipulation techniques; the researchers characterize its edge as "operational discipline" rather than persuasion sophistication.</p>
+
+<blockquote class="pull-quote">"The AI was not smarter at manipulation. It was better at doing manipulation consistently, at scale, and without ever getting tired or getting a detail wrong. That combination is the fraud advantage." <cite>— Lead author, quoted in Vice's coverage</cite></blockquote>
+
+<h4>What the study does and does not claim</h4>
+<p>The study, published as a preprint through a research-consortium clearinghouse and picked up by Vice's Motherboard desk and Futurism on Friday, does not name the frontier model used, does not claim that the model would knowingly participate in a live fraud without being explicitly instructed to pretend to be human, and does not extrapolate the compliance measurement to real-world victims outside the study's controlled recruitment pool. The 22-participant sample is small; the researchers explicitly flag the sample size as a limitation and preview a follow-up study at N=200 for late Q4. The persuasion-technique inventory the researchers gathered aligns closely with the FTC's pig-butchering advisory materials and with the FBI's Internet Crime Complaint Center guidance on the fraud category, suggesting the AI's approach did not require jailbreak techniques on the model.</p>
+
+<p class="source-footer"><a href="https://www.vice.com/en/article/ai-chatbots-are-better-at-scamming-people-than-human-scammers-study-finds/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy trend">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" opacity="0.15"><path d="M12 60 L28 30 L44 46 L60 20 L76 40 L92 26 L108 44 L108 62 L12 62 Z"/></g>
+  <g fill="#6b21a8" stroke="none"><circle cx="28" cy="30" r="2"/><circle cx="60" cy="20" r="2"/><circle cx="92" cy="26" r="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="44" text-anchor="middle" font-size="9">BIPARTISAN · LOCAL</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="76" text-anchor="middle">DATA-CENTER OPPOSITION · US · 2026</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-trend">Trend</span></div>
+<h3 class="headline">Bloomberg maps the bipartisan local coalitions rising against AI datacenter buildouts</h3>
+<p class="kicker">Bloomberg Opinion · 2026-08-16 · <a href="https://www.bloomberg.com/opinion/newsletters/2026-08-16/the-beauty-in-uniting-against-ai-data-centers" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Bloomberg Opinion columnist Lara Williams published a Saturday morning survey of the local political coalitions organizing against hyperscaler datacenter buildouts across the American South and Midwest. The coalitions cut across the red-blue polarity: rural conservationists, evangelical land-stewardship groups, county supervisor caucuses and municipal-water utility boards are all fighting the same buildouts on water, power, tax-abatement and land-use grounds.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Bloomberg Opinion published Lara Williams' Saturday morning survey of the political coalitions rising in opposition to hyperscaler AI datacenter buildouts across the American South and Midwest. Williams' inventory names organized opposition groups in Georgia (Effingham County, contesting the OpenAI Project Camellia campus at 3.2 GW), Virginia (Loudoun County, contesting Amazon's Northern Virginia expansion), Texas (Wharton County, contesting Amazon's Project Eagle four-building campus), Louisiana (Richland Parish, contesting Meta's 5 GW Hyperion supercluster), and Wisconsin (Racine, contesting Foxconn's AI conversion). The coalitions cut across the red-blue polarity in ways American local politics has not aligned in a decade: rural conservationist chapters, evangelical land-stewardship groups, county supervisor caucuses, municipal water-utility boards and school-district finance committees all fighting the same buildouts.</p>
+
+<p>The pattern Williams draws is that the opposition consolidates around four grievances that transcend partisan alignment. Water: hyperscaler cooling regimes draw hundreds of millions of gallons per year that come out of aquifers or municipal water utilities that were not sized for the load. Power: the buildouts crowd out household and small-business load in RTO capacity markets and drive local retail electric rates up. Tax abatement: state and local governments have offered abatement packages in the tens or hundreds of millions per site that leave the tax base of surrounding communities carrying infrastructure cost. Land use: the physical footprint of a 500 MW-plus campus is measured in hundreds of acres, and the ecosystems those acres consume have local political constituencies.</p>
+
+<blockquote class="pull-quote">"Politicians across the red-blue spectrum are taking note. When a Baptist church committee and a Sierra Club chapter show up at the same county commission meeting to oppose the same buildout, that is not a niche coalition." <cite>— Lara Williams, Bloomberg Opinion, 2026-08-16</cite></blockquote>
+
+<p>Williams frames the coalitions as the local-political side of a fissure the AI industry has not previously had to price into its site-selection playbook. Federal AI regulation is stalled and the administration has committed to a light-touch approach; but county commissions, water-utility boards and RTO planning committees each hold veto or friction authority over specific site elements and have been increasingly willing to use it. New York's July datacenter permit pause is one example. The Bloomberg piece implicitly predicts that the next two years of hyperscaler buildout planning will move toward jurisdictions with weaker local-veto structures (Texas outside of major counties, Louisiana, Georgia's less-populated ex-urban belt) and away from jurisdictions where local political capacity to organize is strongest. The compute-demand ceiling that AI training and inference workloads generate does not shrink under this pattern; the geographic distribution of where it lands does.</p>
+
+<p class="source-footer"><a href="https://www.bloomberg.com/opinion/newsletters/2026-08-16/the-beauty-in-uniting-against-ai-data-centers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="trend">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="28">81%</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="12" text-anchor="middle">GEN LABS · CNBC · N=1,200</text><text x="60" y="54" text-anchor="middle">18-34 YEAR OLDS · DISTRUST</text><text x="60" y="76" text-anchor="middle">45% CAREER HARM · 60% SLOW DCs</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-trend">Trend</span></div>
+<h3 class="headline">81 percent of young Americans distrust Palantir's Karp on responsible AI, Generation Labs finds</h3>
+<p class="kicker">CNBC / Generation Labs · 2026-08-15 · <a href="https://www.cnbc.com/2026/08/15/young-americans-ai-trust-karp-generation-labs.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">A Generation Labs survey of 1,200 Americans aged 18-34 published Friday found 81 percent distrust Palantir CEO Alex Karp on responsible AI governance, 45 percent believe AI will harm their careers, and 60 percent want new datacenter construction slowed. The result is the sharpest generational break on AI-industry legitimacy since polling on the category began.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Generation Labs published a Friday survey of 1,200 US adults aged 18-34 that landed with the sharpest generational break on AI-industry legitimacy since polling on the category began three years ago. 81 percent of respondents said they distrust Palantir CEO Alex Karp on responsible AI governance, the highest distrust score of any named AI leader the survey tested; Sam Altman, Dario Amodei, Sundar Pichai and Mark Zuckerberg all polled between 43 and 58 percent distrust. 45 percent of respondents believe AI will harm their careers over the next five years, and 60 percent want federal, state or local government to slow the pace of AI datacenter construction. 34 percent said they had already changed a college major or career plan in response to AI-driven job-market anxiety.</p>
+
+<p>The Karp-specific finding tracks CNBC's editorial framing that Palantir has become the most visible political-and-military-adjacent AI vendor in the 18-34 media environment, from the company's defense contracts (Maven Smart System, the DoD Chief Digital and AI Office prime contract, Israeli defense sales) to Karp's own public commentary on immigration, Silicon Valley political alignment and the "Western vs adversary" framing he uses in earnings calls. The distrust score is not evenly distributed across the political spectrum: Democratic-leaning respondents polled 88 percent distrust, independents 79 percent, Republican-leaning 74 percent. The score gap between political brackets on Karp is 14 points, much narrower than the 30-40 point gap on ChatGPT-brand attitudes or the 25-point gap on Meta.</p>
+
+<blockquote class="pull-quote">"81 percent of surveyed Americans aged 18-34 distrust Palantir CEO Alex Karp on whether he will govern AI responsibly. Karp polls worse than every other named AI CEO we tested by at least 23 points." <cite>— Generation Labs survey, 2026-08-15</cite></blockquote>
+
+<p>The 60 percent "slow datacenter construction" cohort maps onto the local coalitions Bloomberg's Saturday opinion piece profiled. The 45 percent "AI will harm my career" cohort maps onto the broader labor-market anxiety captured in the Bureau of Labor Statistics August Employment Situation report showing entry-level knowledge-work openings down 22 percent year-over-year. The survey does not measure whether the anxiety produces intended political behavior; the polling firm noted that AI as a discrete issue category ranks fifth in political salience for the 18-34 cohort behind housing costs, student loan servicing, healthcare access and climate. The finding that AI-industry legitimacy sits at the level it does among the youngest cohort with the longest exposure to the technology is nonetheless the pollster's headline.</p>
+
+<p class="source-footer"><a href="https://www.cnbc.com/2026/08/15/young-americans-ai-trust-karp-generation-labs.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="20">63.1</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="12" text-anchor="middle">ARTIFICIAL ANALYSIS · IQ INDEX</text><text x="60" y="55" text-anchor="middle">OPUS 5 · #1 · MAX EFFORT</text><text x="60" y="76" text-anchor="middle">FABLE 5 · 62.1 · GPT-5.6 · 61</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Epoch AI and Artificial Analysis update leaderboards: Claude Opus 5 leads at 63.1 across max-effort mode</h3>
+<p class="kicker">Epoch AI / Artificial Analysis · 2026-08-16 · <a href="https://epoch.ai/benchmarks" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Epoch AI's benchmark database and the Artificial Analysis Intelligence Index both refreshed Saturday. Claude Opus 5 (max) sits at 63.1, tied with Opus 5 (batch), followed by Claude Fable 5 at 62.1, GPT-5.6 Sol at 61, Grok 4.6 also at 61, and DeepSeek V4-Pro at 53. The LMSYS Arena leaderboard shows Fable 5 at 1508.6 above Sol at 1482.8 on text.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The two most-cited AI benchmark aggregators, Epoch AI's benchmark database and the Artificial Analysis Intelligence Index, both refreshed their master leaderboards Saturday. Claude Opus 5 (max-effort) sits at 63.1 on the Artificial Analysis Intelligence Index, tied with Opus 5 (batch), followed by Claude Fable 5 at 62.1, GPT-5.6 Sol at 61 tied with xAI's Grok 4.6 at 61, Kimi K3.1 at 59, GPT-5.6 Luna at 55, and DeepSeek V4-Pro-0813 at 53. The AA-Intelligence Index composite spans MMLU-Pro, GPQA Diamond, Terminal-Bench 2.1, LiveBench Agentic Coding, SWE-Bench Verified, GDPval-AA v2 and Humanity's Last Exam, weighted by the AA team's task-diversity heuristic.</p>
+
+<p>The LMSYS Arena text leaderboard shows a different ordering weighted by direct-preference comparisons rather than benchmark aggregation: Claude Fable 5 sits at 1508.6 above GPT-5.6 Sol at 1482.8, with Opus 5 slightly behind Fable 5 at 1499.4 (Opus 5's slower-and-more-thorough response pattern loses head-to-heads on the shorter-form Arena traffic). The Arena Vision leaderboard has Grok 4.6 first at 1424.6, GPT-5.6 Sol second at 1418.2, and Muse Glimmer 30B first among open-weight vision models at 1372.4. The Coding Arena has Claude Opus 5 first at 1465.2 and DeepSeek V4-Pro second at 1454.8 despite the V4-Pro pricing overhaul that flipped on Sunday afternoon.</p>
+
+<blockquote class="pull-quote">"Claude Opus 5 (max) at 63.1 is the top-ranked model. Fable 5 leads the text arena. Grok 4.6 leads vision. Opus 5 leads coding. No single model leads across all four surfaces." <cite>— Artificial Analysis Intelligence Index summary, 2026-08-16</cite></blockquote>
+
+<p>The compressed leaderboard is the empirical signal behind the "capability plateau" argument that Simon Willison, Dario Amodei, Andrej Karpathy, Sebastian Raschka and other commenters have made across the summer. Six frontier models sit within a 10-point Intelligence Index range across the top of the table, three of them within a two-point band. The next-model contenders in the pipeline (Astra, Model 2, Nemotron 4, Gemini 3.7 Ultra, GLM-6, Kimi K4) have not shipped externally. The frontier is bunched.</p>
+
+<p class="source-footer"><a href="https://epoch.ai/benchmarks" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="14">CORS CHAT</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="12" text-anchor="middle">SIMON WILLISON · OPEN SOURCE</text><text x="60" y="56" text-anchor="middle">OPENAI-COMPATIBLE ENDPOINT TESTER</text><text x="60" y="76" text-anchor="middle">SVG RENDER · BROWSER-PERSISTED</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Simon Willison releases CORS Chat, a browser-side tester for OpenAI-compatible chat endpoints</h3>
+<p class="kicker">simonwillison.net · 2026-08-15 · <a href="https://simonwillison.net/2026/Aug/15/cors-chat/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Simon Willison shipped CORS Chat late Friday: a single-page web UI for testing OpenAI-compatible chat endpoints (Anthropic Messages, Google Gemini, DeepSeek, together.ai, Groq, Ollama and any custom OpenRouter-fronted endpoint). Ships with SVG rendering support and browser-local persistence of conversations so the tool works entirely without a backend.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Simon Willison shipped CORS Chat late Friday US Pacific time, a single-page browser-side chat UI for testing OpenAI-compatible endpoints against arbitrary providers. The tool has no backend. It runs entirely inside the browser as a static page, accepts a base URL and an API key inside a settings panel, and issues fetch calls directly from the browser against the target endpoint. That constrains the tool to endpoints that permit cross-origin requests (hence the name), which as of August covers Anthropic Messages, Google Gemini, DeepSeek, together.ai, Groq, Ollama running with the `OLLAMA_ORIGINS` environment variable set, and any custom OpenRouter-fronted endpoint the user has provisioned.</p>
+
+<p>The build ships SVG rendering support inside the message-rendering pipeline (Willison's canonical pelican-and-bicycle benchmark works out of the box), browser-local storage of conversations under IndexedDB with an export-to-JSON path, and a settings preset library for the six most common providers so a first-time user can be issuing test requests inside 30 seconds. The tool complements Willison's existing `llm` command-line utility and Python library, which cover the backend-first developer workflow the CLI is designed around; CORS Chat is the "handed to a non-CLI colleague to test whether the endpoint works" tool that the ecosystem had been missing. The project ships under Apache 2.0 and lives on Willison's GitHub under `simonw/cors-chat`.</p>
+
+<blockquote class="pull-quote">"You point the settings panel at any OpenAI-compatible endpoint that permits browser CORS, paste in an API key, and you're chatting. No backend, no install." <cite>— Simon Willison, on CORS Chat</cite></blockquote>
+
+<p>The release is one of two open-source tool releases Willison shipped in the August window, alongside the `llm-gemini 0.33` plugin update from Thursday that adds Gemini 3.7 Flash and 3.6 Flash-Lite compatibility to the `llm` CLI ecosystem. Willison's tool cadence remains one of the more reliable signals of what the community-facing side of the LLM development stack is missing at any given point.</p>
+
+<p class="source-footer"><a href="https://simonwillison.net/2026/Aug/15/cors-chat/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="12">UAI 2026</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="12" text-anchor="middle">AMSTERDAM · UNCERTAINTY IN AI</text><text x="60" y="55" text-anchor="middle">42ND ANNUAL · AUG 17-21</text><text x="60" y="76" text-anchor="middle">CAUSAL INFERENCE · BAYES · SAFETY</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">The 42nd Conference on Uncertainty in Artificial Intelligence opens today in Amsterdam</h3>
+<p class="kicker">Association for UAI · 2026-08-17 · <a href="https://www.auai.org/uai2026/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">UAI 2026 opens in Amsterdam Sunday for its four-day run, the 42nd annual meeting of the Association for Uncertainty in AI. Program leans toward causal inference in agent systems, Bayesian methods for post-training alignment, and the interpretability track that expanded materially after 2024's SAE-driven shift in the field's methodology.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The 42nd Conference on Uncertainty in Artificial Intelligence (UAI 2026) opens in Amsterdam Sunday for a four-day run through Thursday. The Association for Uncertainty in AI's annual meeting is the historical center-of-gravity for graphical-models, Bayesian methods, and causal-inference research in the ML community, and the 2026 program leans strongly toward causal inference in agent systems (the Auction-Based Task Allocation paper Chi-Yeon Lim's group presents Monday morning is the highest-cited pre-print in the track), Bayesian methods for post-training alignment (the Anthropic Long-Term Benefit Trust and DeepMind's alignment-team representatives have three joint sessions on Wednesday), and the interpretability track that expanded materially after 2024's SAE-driven shift in the field's methodology.</p>
+
+<p>The program committee co-chairs (Silja Renooij at Utrecht and David Blei at Columbia) confirmed 468 accepted papers this year, up from 402 at UAI 2025, and the top-cited paper award will be announced Wednesday evening. This year's community-service award goes to Judea Pearl for lifetime contributions to causal-inference formalism; Pearl is scheduled to deliver the Thursday closing address remotely from UCLA. The conference is a research-community focal point that runs on a different clock from the frontier-lab release cycle, and its coverage inside general-audience AI coverage is proportionally light despite the influence of its output on the frontier labs' methodology two-to-three years downstream.</p>
+
+<blockquote class="pull-quote">"UAI has always been the conference where the interesting math for the next generation of methods shows up two years before it lands in the frontier labs' pretraining pipelines. Watch this year's causal-inference-in-agents track." <cite>— UAI 2026 program committee co-chairs</cite></blockquote>
+
+<p class="source-footer"><a href="https://www.auai.org/uai2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="34" text-anchor="middle" font-size="10">STARTUPHUB.AI</text><text x="60" y="52" text-anchor="middle" font-size="16">5,721</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700"><text x="60" y="12" text-anchor="middle">NEW STARTUPS · TRAILING 24H</text><text x="60" y="76" text-anchor="middle">+5,834 IN STEALTH · AUG 16</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">StartupHub.ai's Saturday scan logs 5,721 new AI-adjacent startups in 24 hours, 5,834 more in stealth</h3>
+<p class="kicker">StartupHub.ai · 2026-08-16 · <a href="https://www.startuphub.ai/ai-news/startups/2026/new-startups-today-on-startuphub-ai-august-16-2026" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The StartupHub.ai discovery scan for Saturday logged 5,721 new AI-adjacent startups joining the public register in the prior 24 hours plus 5,834 additional entities detected in stealth pre-announcement. Named entries include Toyota Research Institute's robotics-and-AI arm, Trustly, Hunter's sales tooling, Quartr's AI infrastructure for company research, Alipay+ and Obsidian Security's autonomous-agent security platform.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>StartupHub.ai's daily discovery-scan for Saturday, August 16, logged 5,721 new AI-adjacent startup entities that joined the platform's public register in the prior 24 hours, plus 5,834 additional entities the scan detected in stealth (typically incorporated but pre-website, pre-announcement, and pre-first-hire signal). The named entries in the day's release call-outs include the Toyota Research Institute robotics-and-AI subsidiary formalizing as a standalone entity, Trustly (fintech-payments with AI-driven fraud detection), Hunter (sales-tooling with AI-assisted lead qualification), Quartr (AI infrastructure for company-research workflows targeting equity research and consulting), Alipay+ (Ant Group's cross-border digital-payment surface expanding AI-native fraud and KYC infrastructure), and Obsidian Security (autonomous-agent security platform focused on securing what the marketing calls "agentic surface area" at the enterprise perimeter).</p>
+
+<p>The 5,721 daily-add number is roughly 30 percent above the trailing-90-day average for the platform, which the discovery team attributes to the mid-August surge in new-company incorporations that follows the Q2 earnings cycle and the traditional back-to-school investment-and-hiring window. AI-adjacent startup formation continues at a pace that the platform's disclosed telemetry puts at more than 2 million net-new entities year-to-date globally, with roughly 40 percent originating in North America, 35 percent in Asia (led by India and China), and 15 percent in Europe.</p>
+
+<blockquote class="pull-quote">"5,721 new AI-adjacent startups joined the register in 24 hours. 5,834 additional entities detected in stealth. That's the pace we're operating at now." <cite>— StartupHub.ai daily scan summary, 2026-08-16</cite></blockquote>
+
+<p>Formation cadence at this scale generates a distinct problem for market observers: no human-scale attention can systematically cover the day-over-day emergence of new AI-adjacent entities, and the aggregation-and-filtering layer that platforms like StartupHub.ai, Crunchbase, PitchBook and CB Insights provide has become the operational necessity for both venture investors and enterprise-buyer procurement teams. The signal-to-noise ratio on individual entries remains low; only a small fraction of the daily inflow reaches first-round funding and only a fraction of that reaches product-market fit. Formation volume nonetheless tracks the underlying capital-market appetite, and Q2 2026 US AI startup formation ran roughly 60 percent above Q2 2024 on an absolute basis.</p>
+
+<p class="source-footer"><a href="https://www.startuphub.ai/ai-news/startups/2026/new-startups-today-on-startuphub-ai-august-16-2026" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+  <g fill="none" stroke="#6b21a8" stroke-width="1"><rect x="10" y="14" width="100" height="52" rx="2"/></g>
+  <g fill="#6b21a8" font-family="Georgia,serif" font-weight="700"><text x="60" y="42" text-anchor="middle" font-size="16">$70B</text></g>
+  <g fill="#6b21a8" font-family="system-ui,sans-serif" font-size="6" font-weight="700"><text x="60" y="12" text-anchor="middle">SHADOW CREDIT BACKSTOPS</text><text x="60" y="54" text-anchor="middle">BLOOMBERG · BOND TRADER SURVEY</text><text x="60" y="76" text-anchor="middle">AI COMPANIES · OFF-BALANCE-SHEET</text></g>
+</svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Bond traders warn on $70 billion of AI-company "shadow credit" backstops sitting off balance sheet</h3>
+<p class="kicker">Bloomberg · 2026-08-15 · <a href="https://www.bloomberg.com/news/articles/2026-08-15/bond-traders-agonize-over-ai-companies-70-billion-of-shadow-credit-backstops" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Bloomberg surveyed corporate-credit desks Friday and mapped roughly $70 billion in phantom liabilities that do not appear on the balance sheets of the largest AI operators but sit as inference-capacity commitments, forward-GPU purchase obligations, tolling-agreement floors and revenue-share underwrites. Any one of them could materialize into direct claims under a compute-price dislocation.</p>
+
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Bloomberg surveyed corporate-credit desks at seven major sell-side banks Friday and published its Saturday news-cycle-carryover analysis of roughly $70 billion of phantom credit liabilities that do not appear on the balance sheets of the largest AI operators. The universe includes long-dated inference-capacity purchase commitments (OpenAI's multi-year Oracle and Coreweave commitments, Anthropic's Riot Platforms 20-year lease disclosed Wednesday, Meta's CoreWeave $14B-plus prior plus a fresh $21B this quarter), forward-GPU purchase obligations that sit in supplier notes rather than principal debt, tolling-agreement floors on hyperscaler-to-AI-lab arrangements, and revenue-share underwrites where AI labs guarantee minimum spend to downstream partners.</p>
+
+<p>The specific concern the desks flagged is not that any one of these obligations is currently a solvency issue for the counterparties. It is that the obligations are structurally correlated: if inference-capacity demand slows or spot GPU pricing dislocates downward, multiple obligations become claims simultaneously. The Coreweave $104 billion backlog disclosed Wednesday would be the largest single manifestation but not the only one. Applied Digital, Nebius, Nscale, Vantage Data Centers and other purpose-built-AI-cloud tenants each carry backstop or minimum-take language in their marquee AI-lab contracts. The cross-tenant correlation is what makes the $70 billion a credit-market concern rather than a set of individually manageable single-name exposures.</p>
+
+<blockquote class="pull-quote">"None of these obligations is currently a problem for any specific counterparty. The problem is that all of them become problems at the same time if the inference-pricing environment turns. That is a correlation the market has not priced." <cite>— Corporate-credit desk head, quoted in Bloomberg</cite></blockquote>
+
+<p>The Bloomberg piece contextualizes the concern against the broader $220 billion of debt Alphabet, Amazon and Meta have collectively raised in 2026, per Bloomberg's own bond-issuance tracker. Rising real bond yields have made the marginal cost of financing more expensive across the hyperscaler set, and the shadow-credit obligations sit on top of the disclosed leverage. Nvidia's Q2 13F filing disclosed Friday puts $21 billion of SpaceX equity and $30 billion of Intel equity together at 80.3 percent of Nvidia's $63.44 billion public-equity portfolio, and the shadow-credit obligations Bloomberg maps are the corollary on the AI-operator side. The system is more geared than the disclosed balance-sheet numbers suggest.</p>
+
+<p class="source-footer"><a href="https://www.bloomberg.com/news/articles/2026-08-15/bond-traders-agonize-over-ai-companies-70-billion-of-shadow-credit-backstops" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-08-17 · Generated 2026-08-17 UTC</div>
+  <div><a href="../index.html">← Back to home</a></div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const stories = document.querySelectorAll('main .story');
+  const chips = document.querySelectorAll('.filter-chip');
+  const status = document.querySelector('.filter-status');
+  const bigPicture = document.querySelector('.big-picture');
+  const countHead = document.querySelector('.section-head .count');
+  const rangeSuffix = countHead ? (countHead.textContent.match(/·.*$/) || [''])[0] : '';
+
+  function recomputeChipCounts(){
+    const total = stories.length;
+    chips.forEach(c=>{
+      const tag = c.dataset.filter;
+      let n;
+      if(tag==='all'){ n = total; }
+      else { n = [...stories].filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length; }
+      const countEl = c.querySelector('.count');
+      if(countEl) countEl.textContent = n;
+      if(n === 0 && tag !== 'all') c.setAttribute('disabled', 'disabled');
+    });
+  }
+
+  function applyFilter(filter){
+    if(bigPicture) bigPicture.hidden = (filter !== 'all');
+    let visible = 0;
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const match = (filter==='all') || tags.includes(filter);
+      if(match){ s.hidden = false; visible++; if(!s.classList.contains('hero')) visibleNonHero++; }
+      else s.hidden = true;
+    });
+    chips.forEach(c=>{
+      c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false');
+    });
+    const filterLabel = filter === 'all' ? 'All' : (filter.charAt(0).toUpperCase()+filter.slice(1));
+    if(status) status.textContent = `Showing ${visible} of ${stories.length} stories — ${filterLabel}`;
+    if(countHead){
+      const suffix = rangeSuffix ? ' ' + rangeSuffix.trim() : '';
+      countHead.textContent = `${visibleNonHero} stories${suffix}`;
+    }
+    if(filter === 'all'){
+      if(history.replaceState) history.replaceState(null,'',window.location.pathname+window.location.search);
+    } else {
+      if(history.replaceState) history.replaceState(null,'','#filter='+filter);
+    }
+  }
+
+  chips.forEach(c=>{
+    c.addEventListener('click', ()=>{
+      if(c.hasAttribute('disabled')) return;
+      applyFilter(c.dataset.filter);
+    });
+  });
+
+  recomputeChipCounts();
+  const hash = window.location.hash.match(/filter=([a-z]+)/);
+  if(hash && [...chips].some(c=>c.dataset.filter===hash[1])) applyFilter(hash[1]);
+  else applyFilter('all');
+})();
+</script>
+</main>
+</body>
+</html>
