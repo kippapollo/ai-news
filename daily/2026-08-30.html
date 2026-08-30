@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-08-30</title>
+<meta name="description" content="DeepSeek is closing roughly $7.4 billion at a $74 billion pre-money valuation ahead of a 2027 Shanghai Star Market IPO, with proceeds targeted at approximately one gigawatt of new compute. OpenAI notified Cursor Saturday that it will terminate the coding-agent's API contract on November 12 in response to SpaceX's acquisition, citing Elon Musk's history of breaking supplier terms. Sony Music Publishing and Warner Chappell filed suit against Anthropic and co-founders Dario Amodei and Benjamin Mann in the Northern District of California alleging a brazen campaign of torrenting, scraping and downloading copyrighted lyrics and sheet music to train Claude. Google Research published WikiSkill, which lifted Gemini-3.5-Flash agent accuracy 18.6 points to 68.1 percent across five benchmarks by giving the agent a persistent wiki of distilled task lessons. Tencent quietly released Hy4 Preview at 770 billion total parameters and 49 billion active with a one-million-token context, more than doubling July's Hy3 configuration and joining GLM-5.3-Flash, Qwen3.8-Flash-Next and DeepSeek V4 on the Chinese open-weights frontier. Google shipped Gemini Omni 1.1 Flash to general availability with a ten-second scene-extension context, first-and-last-frame interpolation and effective floor pricing near ten cents per second of 720p video. LAION released the Big Video Dataset with ten million hours of footage across 55 million clips and 300 million still frames, beating InternVid-trained models by up to 2.1 points on video-to-text benchmarks. Fortune framed hyperscaler debt as a $1.65 trillion reverse-crowding of Treasury issuance, with year-to-date investment-grade issuance at $1.7 trillion up 27 percent. TechCrunch's Russell Brandom argued Nvidia's advantage has shifted from raw GPU throughput to Vera-Rubin whole-rack orchestration, citing a claimed three-times speedup on data-movement-limited operations. llama.cpp cut seven back-to-back release tags between 14:34 and 18:23 UTC on Saturday, landing Adreno X2, M1 Max and M4 Pro flash-attention tunings, a Vulkan mul_mat_id K-padding fix, and a SYCL --fit heuristic refinement that hit 262K context on Intel Arc B70. Data Center Dynamics named fiber connectivity as the next constraint after power and cooling as AI campuses cross the gigawatt line. The Washington Post's production network of ChatGPT-orchestrated internal analytics agents surfaced as the weekend's flagship newsroom deployment.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#166534;--accent-soft:rgba(22,101,52,0.10);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#86efac;--accent-soft:rgba(134,239,172,0.14);
+  --tag-tech:rgba(147,197,253,0.20);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.16);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.18);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.16);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+.story summary .body{display:flex;flex-direction:column;gap:6px}
+.story .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-08-30</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="economic tech" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+      <h1>DeepSeek closes on $7.4 billion at a $74 billion pre-money mark, sets 2027 Shanghai IPO</h1>
+      <p class="dek">The Hangzhou lab that briefly wiped out roughly $600 billion of Nvidia market cap with its January 2026 R1 release is finalising a private round of about 50 billion yuan at a pre-money valuation of $74 billion, with a post-money mark near $81 billion. Existing shareholders Monolith Management, Shixiang Capital and battery giant CATL are re-upping, joined by Chinese private-equity firm CPE, Legend Capital, semiconductor-focused Stony Creek, GigaDevice-backed funds and Hefei state investment vehicles. Proceeds are earmarked for roughly one gigawatt of new compute plus talent hires against Zhipu, Moonshot and Alibaba's Qwen team. Founder Liang Wenfeng's hedge fund High-Flyer is participating alongside the outside investors. DeepSeek plans to file its IPO prospectus with the China Securities Regulatory Commission by the end of 2026 and target a first-half 2027 debut on Shanghai's Star Market, which would make it the largest domestic Chinese AI listing to date and a symbolic marker of Beijing's push to build an AI-financing rail that does not route through Nasdaq or the NYSE.</p>
+      <p class="kicker">China Money Network · WSJ · 2026-08-29 · <a href="https://www.chinamoneynetwork.com/2026/08/29/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#166534" stop-opacity="0.34"/><stop offset="100%" stop-color="#166534" stop-opacity="0"/></linearGradient>
+        <radialGradient id="hg2" cx="0.85" cy="0.20" r="0.85"><stop offset="0%" stop-color="#166534" stop-opacity="0.22"/><stop offset="100%" stop-color="#166534" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="480" height="320" fill="url(#hg1)"/>
+      <rect width="480" height="320" fill="url(#hg2)"/>
+      <g fill="#166534" font-family="system-ui,sans-serif">
+        <text x="30" y="30" font-size="10" font-weight="700" letter-spacing="2.4">SAT · AUG 29, 2026 · HANGZHOU</text>
+        <text x="30" y="46" font-size="8" font-weight="700" letter-spacing="1.4" opacity="0.72">DEEPSEEK · CHINA'S LARGEST PRIVATE AI ROUND</text>
+      </g>
+      <g transform="translate(30, 78)" font-family="system-ui,sans-serif">
+        <text x="0" y="0" font-size="9" font-weight="700" letter-spacing="1.4" fill="#166534">ROUND SIZE · ~50 BILLION YUAN</text>
+        <rect x="0" y="8" width="360" height="24" fill="#166534" opacity="0.28"/>
+        <rect x="0" y="8" width="220" height="24" fill="#166534"/>
+        <text x="228" y="26" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#166534">$7.4B</text>
+      </g>
+      <g transform="translate(30, 128)" font-family="system-ui,sans-serif">
+        <text x="0" y="0" font-size="9" font-weight="700" letter-spacing="1.4" fill="#166534">PRE-MONEY VALUATION</text>
+        <rect x="0" y="8" width="360" height="24" fill="#166534" opacity="0.28"/>
+        <rect x="0" y="8" width="340" height="24" fill="#166534"/>
+        <text x="278" y="26" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#f7f5ef">$74B</text>
+      </g>
+      <g transform="translate(30, 178)" font-family="system-ui,sans-serif">
+        <text x="0" y="0" font-size="9" font-weight="700" letter-spacing="1.4" fill="#166534">IMPLIED POST-MONEY</text>
+        <rect x="0" y="8" width="360" height="24" fill="#166534" opacity="0.28"/>
+        <rect x="0" y="8" width="358" height="24" fill="#166534"/>
+        <text x="290" y="26" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#f7f5ef">$81B</text>
+      </g>
+      <g stroke="#166534" stroke-width="1" opacity="0.55">
+        <line x1="30" y1="240" x2="450" y2="240"/>
+      </g>
+      <g fill="#166534" font-family="system-ui,sans-serif" font-weight="700" letter-spacing="1.0">
+        <text x="30" y="260" font-size="9">USE OF PROCEEDS · ~1 GW OF NEW COMPUTE + TALENT</text>
+        <text x="30" y="278" font-size="9" opacity="0.72">IPO · SHANGHAI STAR MARKET · TARGET H1 2027</text>
+      </g>
+      <g transform="translate(30, 302)">
+        <circle cx="0" cy="0" r="4" fill="#166534"/>
+        <text x="12" y="4" font-family="Georgia,serif" font-size="11" font-style="italic" fill="#166534">CATL · CPE · Legend · GigaDevice · Hefei state funds · High-Flyer</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+<p>The DeepSeek round pulls the Hangzhou lab into the top tier of privately valued AI companies alongside Anthropic and OpenAI, and marks a shift in how Chinese frontier labs are being financed. Until this year DeepSeek had run largely on internal capital from founder Liang Wenfeng's hedge fund High-Flyer. The Wall Street Journal broke the round Friday; China Money Network confirmed the terms and additional participants in a Saturday follow-up. Sources close to the deal told reporters financing is expected to close by the end of August.</p>
+
+<blockquote class="pull-quote">"DeepSeek is set to soon secure new funding that would value the Chinese artificial-intelligence startup at $74 billion, building its war chest." <cite>— Wall Street Journal, cited in China Money Network</cite></blockquote>
+
+<h4>The cap table</h4>
+<p>Existing shareholders Monolith Management, Shixiang Capital and battery giant Contemporary Amperex Technology Limited (CATL) are re-upping their positions. New investors in advanced discussions include Chinese private-equity firm CPE, Legend Capital, semiconductor-focused Stony Creek Capital, funds backed by NAND flash controller specialist GigaDevice, and state investment vehicles from Hefei. Multiple funds tied to Chinese local government financing platforms are participating alongside High-Flyer. The composition tilts hard toward domestic and quasi-sovereign capital, with almost no offshore dollar-denominated venture participation of the kind that dominated the 2020-2023 cycle.</p>
+
+<h4>Where the money goes</h4>
+<p>Proceeds are targeted at model R&amp;D and compute infrastructure. Sources told reporters roughly one gigawatt of additional capacity is on the roadmap, meant to support larger successors to the R2 and V4 lines and to fund aggressive recruiting against Zhipu, Moonshot and Alibaba's Qwen team, all of which have shipped frontier-scale open-weight models in August. The gigawatt figure lands the same week Anthropic added 460 megawatts at Nscale's Monarch campus in West Virginia and lines DeepSeek up as one of the largest single-lab compute buyers in China.</p>
+
+<h4>The re-rating</h4>
+<p>DeepSeek's January 2026 R1 release briefly wiped out roughly $600 billion of Nvidia market capitalization and drew White House scrutiny of Chinese frontier-lab access to advanced chips. The company had held off outside financing through that episode. A $7.4 billion raise at $74 billion pre-money represents an implicit revenue multiple of roughly eight times reported annualised revenue in the mid-single-digit billions, and puts DeepSeek at approximately 4 percent of Anthropic's May 2026 Series H post-money mark of $965 billion and roughly one-quarter of the $300 billion valuation OpenAI is reportedly seeking in tender-offer talks.</p>
+
+<h4>The IPO track</h4>
+<p>DeepSeek intends to file its IPO prospectus with the China Securities Regulatory Commission by the end of 2026, targeting a first-half 2027 debut on the Shanghai Stock Exchange's Science and Technology Innovation Board (Star Market). The listing would be the largest domestic Chinese AI IPO to date and functions as a policy signal: Beijing has pushed since 2023 to build an AI-financing rail that does not depend on Nasdaq or the New York Stock Exchange, and the DeepSeek listing would be the flagship test of that pipeline. Bloomberg on Saturday framed Chinese sovereign and quasi-sovereign capital as now the single largest funding pool for domestic AI compute buildouts.</p>
+
+<p class="source-footer"><a href="https://www.chinamoneynetwork.com/2026/08/29/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-labelledby="bp-heading">
+  <div class="label" id="bp-heading">The Big Picture · 2026-08-29</div>
+  <div>
+    <p>DeepSeek is closing on approximately $7.4 billion at a $74 billion pre-money valuation with CATL, CPE, Legend Capital and Hefei state funds, targeting a 2027 Shanghai Star Market IPO and roughly one gigawatt of new compute. OpenAI notified Cursor on Saturday that it will terminate the coding-agent's API contract on November 12, 2026 in the first material supplier fallout from SpaceX's early-August acquisition of the Anysphere team, with OpenAI Head of Developer Experience Thibault Sottiaux telling The Decoder the call "boils down to trust" and Anthropic's Tom Brown publicly pledging to expand compute for Cursor.</p>
+    <p>Sony Music Publishing and Warner Chappell sued Anthropic and co-founders Dario Amodei and Benjamin Mann in the Northern District of California, alleging a "brazen campaign of illegally torrenting, scraping, and downloading" copyrighted lyrics and sheet music to train Claude — the third major music-industry action against the lab following the $1.5 billion Bartz settlement and Concord/Universal's January complaint, and one that lands weeks before Anthropic's rumored fall IPO. Google Research shipped WikiSkill, an agent framework that lifts Gemini-3.5-Flash from 49.5 to 68.1 percent and Qwen-3.6-27B from 39.4 to 63.3 percent across five benchmarks by giving the agent a persistent, editable wiki of distilled task lessons. Tencent quietly released Hy4 Preview at 770 billion total and 49 billion active with a one-million-token context, more than doubling July's Hy3 configuration and taking the highest total-parameter slot in the Chinese open-weights cohort alongside GLM-5.3-Flash, Qwen3.8-Flash-Next and DeepSeek V4.</p>
+    <p>Google shipped Gemini Omni 1.1 Flash to general availability across AI Plus, Pro and Ultra with a ten-second scene-extension context (up from one frame), stackable extensions to 40 seconds, and pricing of $17.50 per million output video tokens — an effective floor near ten cents per second of 720p video. LAION released the Big Video Dataset with 10 million hours of footage across 55 million clips and 300 million still frames, beating InternVid-trained baselines by up to 2.1 points on video-to-text benchmarks. TechCrunch's Russell Brandom framed Nvidia's competitive moat as having moved beyond raw GPU throughput into Vera-Rubin whole-rack orchestration, citing Nvidia storage VP Jason Hardy on a claimed three-times speedup for data-movement-limited operations. Fortune's Jason Ma argued hyperscaler bond issuance has crossed the "reverse crowding" threshold at $1.65 trillion of hidden borrowing on top of $1.7 trillion of YTD investment-grade issuance, with Treasury Secretary Scott Bessent quoted acknowledging AI-issuer demand for capital is now setting the marginal price of money. llama.cpp landed seven back-to-back release tags between 14:34 and 18:23 UTC covering Adreno X2 (25 percent gpt-oss-20b prefill uplift), M1 Max and M4 Pro flash-attention tunings, a Vulkan mul_mat_id K-padding fix and a SYCL --fit refinement hitting 262K context on Intel Arc B70. Data Center Dynamics named fiber connectivity as the next constraint after power and cooling for gigawatt-scale AI campuses, and the AI Agent Store's weekend brief surfaced a Washington Post production network of ChatGPT-orchestrated internal analytics agents as the flagship newsroom-side deployment of the week.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="14" cy="9" r="2" fill="#166534"/>
+    <circle cx="30" cy="9" r="2" fill="#166534"/>
+    <path d="M40 3 L44 9 L40 15 L36 9 Z" fill="#166534"/>
+    <circle cx="50" cy="9" r="2" fill="#166534"/>
+    <circle cx="66" cy="9" r="2" fill="#166534"/>
+  </svg>
+</div>
+
+<section aria-label="More today">
+<div class="section-head">
+  <h2>More today</h2>
+  <span class="count">11 stories · 2026-08-29</span>
+</div>
+
+<div class="cards">
+
+<details class="story" data-tags="tech economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="none" stroke="#166534" stroke-width="1.4"><line x1="20" y1="40" x2="52" y2="40"/><line x1="68" y1="40" x2="100" y2="40"/><circle cx="60" cy="40" r="6"/><line x1="56" y1="36" x2="64" y2="44"/><line x1="64" y1="36" x2="56" y2="44"/></g><g fill="#166534"><text x="60" y="16" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">OPENAI ✕ CURSOR</text><text x="60" y="60" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">CUTOFF · NOV 12, 2026</text><text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" letter-spacing="0.6">SPACEX ACQ · MUSK TRUST</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">OpenAI cuts off Cursor after SpaceX acquisition, sets November 12 termination date</h3>
+<p class="kicker">The Decoder · 2026-08-29 · <a href="https://the-decoder.com/openai-cuts-off-cursor-after-spacex-acquisition-citing-musks-history-of-breaking-contracts/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">OpenAI notified Cursor on Saturday that it will terminate the coding-agent's API contract on November 12, 2026, the first material supplier fallout from SpaceX's early-August acquisition of Anysphere. OpenAI Head of Developer Experience Thibault Sottiaux told The Decoder the decision "boils down to trust" and cited Elon Musk's history of breaking Twitter/X data terms and unauthorised use of competitor model outputs to train Grok; Cursor CEO Michael Truell said OpenAI accounts for only about five percent of Cursor's AI traffic and Anthropic Post-Training Lead Tom Brown publicly committed to expand compute for Cursor.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The Cursor cutoff is the first concrete downstream effect of SpaceX's early-August acquisition of Anysphere, the company behind the Cursor coding agent. OpenAI's rationale, delivered by Head of Developer Experience Thibault Sottiaux to The Decoder, foregrounds precedent rather than any specific incident on the Cursor side: OpenAI "can't be confident that SpaceX will follow the terms of service," Sottiaux said, pointing to Elon Musk's history of breaking Twitter/X data-access contracts and to the unauthorised use of competitor model outputs to train xAI's own Grok family.</p>
+
+<blockquote class="pull-quote">"It boils down to trust." <cite>— Thibault Sottiaux, OpenAI Head of Developer Experience</cite></blockquote>
+
+<h4>Cursor's response</h4>
+<p>Cursor CEO Michael Truell downplayed the operational impact, telling The Decoder OpenAI models make up "only about five percent of Cursor's AI traffic" and noting that "Cursor was one of the very first users of OpenAI." The five-percent figure aligns with public benchmarks that show Cursor users default overwhelmingly to Anthropic's Claude Sonnet and Opus for coding work, with GPT models used only in specific niches. Anthropic Post-Training Lead Tom Brown responded publicly that Cursor has been "a trusted partner since Sonnet 3.5" and that Anthropic will "continue to expand compute capacity" for the coding agent, positioning the lab as the primary beneficiary of the cutoff.</p>
+
+<h4>The escalating pattern</h4>
+<p>Saturday's cutoff continues a chain of frontier labs refusing to serve competitors that has run through August. OpenAI cut Anthropic's Claude Code from the OpenAI API earlier in the month. Anthropic revoked OpenAI's Claude API access to prevent evaluation runs. Cursor's SpaceX ownership now places it in the same "adversarial customer" category, alongside xAI itself. The pattern makes multi-provider coding agents structurally harder to build: an agent that depended on being able to swap between GPT and Claude for load balancing or capability specialisation now needs a fallback plan that assumes one or both APIs may be revoked on short notice for competitive reasons.</p>
+
+<h4>What Musk gets</h4>
+<p>SpaceX's Cursor acquisition, disclosed earlier in August, gives Elon Musk a coding-agent front end to distribute Grok and any future xAI reasoning models against the frontier labs' offerings. The November 12 cutoff date pushes OpenAI's exit past Grok 5's expected fall launch window, meaning Cursor customers will have roughly ten weeks to migrate any GPT-dependent workflows before the API stops responding. No statements were sourced from SpaceX or Musk directly in the article.</p>
+
+<p class="source-footer"><a href="https://the-decoder.com/openai-cuts-off-cursor-after-spacex-acquisition-citing-musks-history-of-breaking-contracts/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="none" stroke="#166534" stroke-width="1.4"><rect x="26" y="20" width="68" height="42" rx="2"/><line x1="34" y1="30" x2="86" y2="30"/><line x1="34" y1="40" x2="86" y2="40"/><line x1="34" y1="50" x2="70" y2="50"/></g><g fill="#166534"><text x="60" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">SONY + WARNER v. ANTHROPIC</text><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">N.D. CAL · $150K/WORK STATUTE</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Sony Music and Warner Chappell sue Anthropic over pirated lyric and sheet-music training data</h3>
+<p class="kicker">TechCrunch · 2026-08-29 · <a href="https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Sony Music Publishing, Warner Chappell and additional publishers filed suit against Anthropic and co-founders Dario Amodei and Benjamin Mann in the Northern District of California, alleging a "brazen campaign of illegally torrenting, scraping, and downloading" thousands of copyrighted musical works to train Claude. The case is the third major music-industry action against the lab after August 2025's $1.5 billion Bartz settlement and Concord/Universal's January 2026 complaint, and lands weeks before Anthropic's rumored fall IPO at a valuation reported as high as $2 trillion.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>TechCrunch's Kirsten Korosec reported Saturday that Sony Music Publishing, Warner Chappell Music, and a coalition of additional music publishers filed a fresh copyright infringement suit against Anthropic and co-founders Dario Amodei and Benjamin Mann in the US District Court for the Northern District of California late Friday. The complaint characterises Claude's music-related training-data acquisition as "blatant theft" and "flagrant piracy," alleging Anthropic used torrenting, unauthorised scraping and pirate downloads to obtain thousands of copyrighted musical compositions and lyric transcriptions.</p>
+
+<blockquote class="pull-quote">"Brazen campaign of illegally torrenting, scraping, and downloading copyrighted works." <cite>— Complaint, Sony Music Publishing et al.</cite></blockquote>
+
+<h4>The Bartz template</h4>
+<p>The publishers explicitly track the theory of liability that produced Anthropic's $1.5 billion settlement in the Bartz v. Anthropic authors' class action in August 2025. Judge William Alsup's Bartz ruling held that training on copyrighted material can qualify as fair use, but that acquiring the underlying works through piracy does not. The music-publisher plaintiffs pick up that second half of the ruling, removing the fair-use defense that would otherwise have been Anthropic's strongest counter and giving the case a well-tested procedural path to summary judgment.</p>
+
+<h4>Named co-founders</h4>
+<p>The complaint names Dario Amodei and Benjamin Mann as personal defendants, a departure from earlier AI IP litigation that typically named only the corporate entity. The individual naming signals the publishers intend to pierce the corporate veil and pursue personal liability for the decisions to acquire training data through unauthorised channels.</p>
+
+<blockquote class="pull-quote">"We disagree with the publishers' claims and we intend to defend ourselves robustly in court." <cite>— Anthropic spokesperson</cite></blockquote>
+
+<h4>The IPO overhang</h4>
+<p>The suit's timing matters because Anthropic's annualised revenue crossed $65 billion in July per Bloomberg, and the company is preparing for a fall or year-end IPO at a valuation reported by Bloomberg as high as $2 trillion. Underwriters will need any material litigation reserve requirement or contingent-liability disclosure resolved before an S-1 filing. The complaint does not disclose a total damages number but relies on the federal statutory damages framework of up to $150,000 per willfully infringed work; industry lawyers cited by TechCrunch said the plaintiff coalition could plausibly claim damages in the low-single-digit billions on the underlying catalogue. That range would be a material S-1 risk-factor disclosure and could compress IPO price talk. The filing is Anthropic's second major legal event in the same week, following US District Judge Rita Lin's ruling that the Pentagon acted unlawfully in blacklisting the company.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><text x="60" y="24" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="-0.4">+18.6</text><text x="60" y="12" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" letter-spacing="1.4">GEMINI-3.5-FLASH · 5-BENCH AVG</text><text x="60" y="40" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.0">49.5% → 68.1%</text></g><g fill="none" stroke="#166534" stroke-width="1.4"><path d="M20 68 L40 58 L60 54 L80 48 L100 42"/><circle cx="20" cy="68" r="2" fill="#166534"/><circle cx="40" cy="58" r="2" fill="#166534"/><circle cx="60" cy="54" r="2" fill="#166534"/><circle cx="80" cy="48" r="2" fill="#166534"/><circle cx="100" cy="42" r="2" fill="#166534"/></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Google WikiSkill lifts Gemini-3.5-Flash agent accuracy 18.6 points via a self-edited wiki</h3>
+<p class="kicker">The Decoder · arXiv 2608.27454 · 2026-08-29 · <a href="https://the-decoder.com/google-gives-ai-agents-their-own-wiki-so-they-can-learn-from-mistakes-and-successes/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Google Research's WikiSkill sits on three layers — an immutable Raw layer of execution traces, an editable Wiki layer of distilled lessons and a Skill layer of active procedural instructions — with a Wiki Maintainer, Skill Proposer and gating validator moving data between them. Across five benchmarks the framework lifted Gemini-3.5-Flash from 49.5 to 68.1 percent (+18.6) and Qwen-3.6-27B from 39.4 to 63.3 percent (+23.9), with LiveMath on Gemini jumping from 33.0 to 72.6 percent.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>WikiSkill (arXiv 2608.27454, authors Liyan Tang, Cyrus Rashtchian, Chun-Sung Ferng, Andrew Tomkins, Da-Cheng Juan and Tu Vu at Google Research) targets what the authors call the "amnesia problem" in prior agent skill-evolution approaches: earlier systems generated useful insights during each task and then discarded them at the end of the cycle. WikiSkill instead makes agent experience persistent and editable, allowing the same skill library to grow across thousands of task runs.</p>
+
+<h4>The three layers</h4>
+<p>The framework organises agent memory into three layers. A Raw Layer stores complete, immutable execution traces of every task attempt. A Wiki Layer holds distilled structured insights about failures and successes, updated continuously as new traces arrive. A Skill Layer contains the active procedural instructions the agent consults at inference time, with rollback if performance regresses.</p>
+
+<h4>The four components</h4>
+<p>Four components move data through the layers. The inference agent consults the current skill library on each task. A Wiki Maintainer consolidates new traces into structured lessons in the wiki layer. A Skill Proposer drafts candidate procedural updates from wiki entries. A gating validator checks proposals against held-out tasks before promoting them into the active skill layer.</p>
+
+<blockquote class="pull-quote">"The agent, aka the model, doesn't truly learn in a continuous sense. But it writes better instructions for itself after each run." <cite>— Matthias Bastian, The Decoder</cite></blockquote>
+
+<h4>The results</h4>
+<p>Across five benchmarks spanning LiveMath, SpreadSheet, web search, document QA and interactive virtual-environment tasks, Gemini-3.5-Flash rose from 49.5 to 68.1 percent average performance and Qwen-3.6-27B from 39.4 to 63.3 percent. The biggest single-benchmark deltas were LiveMath on Gemini (33.0 to 72.6 percent) and SpreadSheet on Gemini (50.5 to 76.6 percent). Ablations confirmed the accumulated wiki entries are the load-bearing component. The authors argue skill evolution "complements model scaling," with smaller models occasionally outperforming substantially larger ones once the wiki has matured. The underlying model weights are unchanged; only the instructions the agent writes for itself get better.</p>
+
+<p class="source-footer"><a href="https://the-decoder.com/google-gives-ai-agents-their-own-wiki-so-they-can-learn-from-mistakes-and-successes/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><text x="60" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="19" font-weight="700" letter-spacing="-0.4">770B</text><text x="60" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">TENCENT HY4 PREVIEW</text><text x="60" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.0">49B ACTIVE · MoE</text><text x="60" y="62" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">CONTEXT · 1,000,000 TOKENS</text><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" letter-spacing="0.6">HIGH / NO_THINK ONLY</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Tencent releases open-weight Hy4 Preview at 770B total and 49B active with a 1M-token context</h3>
+<p class="kicker">Simon Willison's Weblog · 2026-08-29 · <a href="https://simonwillison.net/2026/Aug/29/hy4/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Tencent shipped Hy4 Preview weights on Hugging Face and OpenRouter Saturday as a text-only successor to July's Hy3, jumping from 295B/21B/256K to 770B total parameters, 49B active per token and a 1,000,000-token context window. The Jinja chat template exposes only two reasoning modes — "high" (default) and "no_think" — and Simon Willison observed the hidden reasoning traces use "slightly truncated English" that omits articles and full grammatical structure to conserve internal tokens.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Tencent's research group published Hy4 Preview on Saturday, August 29, as a substantial scale-up over the Hy3 release from July. Total parameters more than doubled to 770 billion with 49 billion active per token in a mixture-of-experts routing arrangement; the context window quadrupled from 256,000 to 1,000,000 tokens. Simon Willison surfaced the release on his weblog and was the first English-language outlet to cover it, running his signature "SVG of a pelican riding a bicycle" prompt against the model via OpenRouter.</p>
+
+<h4>The reasoning interface</h4>
+<p>The Jinja chat template exposes only two reasoning-effort levels: "high" (on by default) and "no_think" (disables the hidden reasoning trace entirely). The template raises an exception if any other value is passed. That is a more austere design choice than the low/medium/high dial GitHub Copilot for Visual Studio shipped the day before, or the four-tier low/medium/high/xhigh scheme xAI's Grok 4.6 ships on Microsoft Foundry Models, and it more closely resembles Anthropic's own on/off reasoning switch on Claude Sonnet 5 and Opus 5.</p>
+
+<blockquote class="pull-quote">"The reasoning trace uses slightly truncated English, presumably because perfect grammar isn't useful or token efficient for hidden reasoning text." <cite>— Simon Willison</cite></blockquote>
+
+<h4>The Chinese open-weights cohort</h4>
+<p>The release positions Tencent alongside Alibaba's Qwen 3.8-Flash-Next (125B/6B, 262K context), Zhipu's GLM-5.3-Flash (320B/18B, 1M context) and DeepSeek V4-Pro on the Chinese frontier open-weights leaderboard. Hy4 Preview takes the highest total-parameter slot of any recent Chinese open-weight release. The Preview naming and the 1M-token context both signal Tencent is targeting long-context enterprise workloads rather than raw reasoning benchmarks, matching the "safe" corporate-embedded assistant positioning Hy3 had adopted. No benchmark numbers or license terms accompanied the drop, so community assessments will depend on OpenRouter runs and early Hugging Face inference-endpoint results over the next few days.</p>
+
+<p class="source-footer"><a href="https://simonwillison.net/2026/Aug/29/hy4/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="none" stroke="#166534" stroke-width="1.4"><rect x="16" y="30" width="20" height="24"/><rect x="40" y="30" width="20" height="24"/><rect x="64" y="30" width="20" height="24"/><rect x="88" y="30" width="16" height="24"/></g><g fill="#166534"><text x="60" y="18" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">GEMINI OMNI 1.1 FLASH</text><text x="60" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">10s CONTEXT · 40s STACK</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Google ships Gemini Omni 1.1 Flash video model with 10-second scene-extension context</h3>
+<p class="kicker">MarkTechPost · 2026-08-29 · <a href="https://www.marktechpost.com/2026/08/29/google-ai-releases-gemini-omni-1-1-flash/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Google released gemini-omni-1.1-flash to general availability across AI Plus, Pro and Ultra through Google AI Studio, the Gemini Enterprise Agent Platform and Google Flow. Scene extension now analyses ten seconds of prior context rather than one frame, extensions stack in 3-10 second increments up to 40 seconds, and pricing lands at $17.50 per million output video tokens — an effective floor near ten cents per second of 720p video, matching Alibaba's Wan 3.0 tier from earlier in the week.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Google made Gemini Omni 1.1 Flash generally available on August 29 through Google AI Studio, the Gemini Enterprise Agent Platform and Google Flow, across AI Plus, Pro and Ultra subscribers. The model preserves the native multimodality (text, image, audio, video processed together), conversational editing via the Interactions API, and world knowledge inherited from the base Gemini family, but the headline upgrade sits in scene extension.</p>
+
+<h4>The scene-extension improvement</h4>
+<p>v1.1 analyses up to ten seconds of prior context when extending a clip rather than the single-frame lookback of v1.0, producing visually more consistent continuations. Extensions stack in three- to ten-second increments up to a cumulative forty seconds. Camera and character control expanded in parallel: first-and-last-frame interpolation supports orbits, dolly zooms and seamless loops; video references accept up to three clips of three seconds each for character-consistency conditioning.</p>
+
+<h4>Cost engineering</h4>
+<p>Google added 360p draft renders that run up to 60 percent faster at one-third the cost of 720p output, with the platform upscaling to 1080p or 4K only on final delivery. Pricing is $1.50 per million input tokens, $9.00 per million output text tokens and $17.50 per million output video tokens — an effective floor of roughly ten cents per second of 720p video. That matches Alibaba's Wan 3.0 at $0.20 per 1080p-second (roughly $0.10 for 720p equivalent) shipped earlier in the week and ByteDance's Seedance 2.0 in the same tier.</p>
+
+<h4>What's not in the release</h4>
+<p>MarkTechPost noted several omissions from the 1.1 shipment: no system-instruction support, no temperature or negative-prompt controls, no voice editing, no YouTube URL ingest. English is characterised as full support while other languages remain unevaluated. Named production customers at launch include Adobe Firefly, Figma Weave, GMI Cloud and Runway. The Gemini Enterprise Agent Platform release means video-generation is now a first-class primitive alongside text and structured-output agents inside the same enterprise deployment.</p>
+
+<p class="source-footer"><a href="https://www.marktechpost.com/2026/08/29/google-ai-releases-gemini-omni-1-1-flash/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><text x="60" y="24" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="-0.4">10M hr</text><text x="60" y="12" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">LAION BIG VIDEO DATASET</text><text x="60" y="40" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.0">55M CLIPS · 80M VIDEOS</text><text x="60" y="56" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.0">300M STILL IMAGES</text><text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" letter-spacing="0.6">+2.1 PT vs INTERNVID</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">LAION releases 10 million hours of open video data as the Big Video Dataset</h3>
+<p class="kicker">The Decoder · 2026-08-29 · <a href="https://the-decoder.com/laion-drops-massive-open-video-dataset-with-10-million-hours-of-footage-for-ai-research/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The LAION collective published the Big Video Dataset (BVD), covering 55 million clips derived from 80 million videos and 1.3 billion source URLs, with auto-generated video and audio descriptions plus 300 million still frames extracted from the same source. Models trained on BVD beat comparable InternVid-trained models by up to 2.1 percentage points on video-to-text benchmarks, positioning the release as the open counterpart to Google's WebVid and VideoCC.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The LAION collective published the Big Video Dataset (BVD) on August 29, releasing what is now the largest open-license video corpus targeted at video-language pretraining. The pipeline started from 1.3 billion CommonCrawl video URLs, downloaded 80 million videos (predominantly English, primarily YouTube-sourced), and extracted 55 million shorter clips totaling ten million hours of footage. Each clip ships with auto-generated video descriptions and audio descriptions to support text-video contrastive training and video captioning objectives, and the release adds 300 million still images pulled from the same source frames.</p>
+
+<blockquote class="pull-quote">"Models trained on BVD outperform comparable models trained on InternVid by up to 2.1 percentage points on common video-to-text benchmarks." <cite>— LAION release notes</cite></blockquote>
+
+<h4>The scale gap it closes</h4>
+<p>Academic and open-source video foundation model efforts have until now had to reach for InternVid, WebVid-10M or scraped-YouTube subsets that were one order of magnitude smaller than what Google's WebVid/VideoCC pipelines and Meta's internal HowTo100M-scale corpora provided. BVD raises the open-source ceiling to roughly the same scale as the closed-shop text-video pretraining runs at frontier labs. LAION released the dataset and companion code under a research-only license and asked users to respect original creators' rights.</p>
+
+<h4>The commercial context</h4>
+<p>The release lands as demand for open video data intensifies alongside launches like Google's Gemini Omni 1.1 Flash the same day, and as commercial video models — ByteDance Seedance, Alibaba Wan 3.0, Google Veo 3.1 — push toward per-second-of-1080p pricing floors near ten cents. Open weights trained on BVD would offer a research-priced alternative to the API-metered commercial offerings and give academic labs the ability to reproduce the training-data conditions inside a public corpus.</p>
+
+<p class="source-footer"><a href="https://the-decoder.com/laion-drops-massive-open-video-dataset-with-10-million-hours-of-footage-for-ai-research/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><text x="60" y="24" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" letter-spacing="-0.4">~3×</text><text x="60" y="12" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">NVIDIA · VERA RUBIN</text><text x="60" y="42" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" font-weight="700" letter-spacing="1.0">DATA-MOVEMENT OPS</text></g><g fill="none" stroke="#166534" stroke-width="1.4"><line x1="24" y1="60" x2="96" y2="60"/><circle cx="24" cy="60" r="3"/><circle cx="60" cy="60" r="3" fill="#166534"/><circle cx="96" cy="60" r="3"/></g><g fill="#166534"><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" letter-spacing="0.6">GPU · CPU · STORAGE FABRIC</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">TechCrunch reads Nvidia's post-Blackwell moat as rack-scale orchestration, not raw GPU throughput</h3>
+<p class="kicker">TechCrunch · 2026-08-29 · <a href="https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">TechCrunch AI editor Russell Brandom argued Saturday that Nvidia's competitive advantage has migrated from GPU FLOPs to whole-rack orchestration as inference deployments cross the gigawatt line and data movement becomes the binding constraint. Nvidia VP of Storage Technology Jason Hardy told Brandom the Vera Arm CPU delivers "upwards of 3x improvement" on data-orchestration-limited operations by letting a Rubin rack lean on flash-storage tiers without stalling GPUs on I/O.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>TechCrunch's AI editor Russell Brandom published a strategic analysis on Saturday, threading Nvidia's Q2 FY27 print of $96.2 billion, the AWS 2-million-GPU expansion and the OpenAI Jalapeño inference-chip paper into a single argument: raw GPU throughput no longer settles the buying decision at gigawatt scale. As inference scales across hundreds of racks, the bottleneck migrates from FLOPs to data movement, and Nvidia has moved earliest into that layer with Vera Rubin.</p>
+
+<h4>The Vera Rubin design</h4>
+<p>The Vera Rubin architecture pairs an Arm-based Vera CPU with Rubin GPUs via NVLink Fusion, adds a Groq 3 LPX inference accelerator alongside storage and networking silicon, and ships as a full-stack rack rather than a GPU-plus-NVLink bundle. Nvidia storage VP Jason Hardy provided the load-bearing quotes: "Vera is important because there's only so much memory that you can put in a single server or any sort of compute platform," Hardy said, describing how the Vera CPU lets a Rubin rack lean on flash-storage tiers without stalling GPUs waiting on I/O.</p>
+
+<blockquote class="pull-quote">"We saw upwards of 3x improvement in these operations, where the Vera CPU is allowing for acceleration." <cite>— Jason Hardy, Nvidia VP of Storage Technology</cite></blockquote>
+
+<h4>The competitive read</h4>
+<p>The competitive implication drawn by Brandom is that AMD's Instinct MI400 series, Meta's MTIA 400 disclosed at Hot Chips 2026, and OpenAI-Broadcom's Jalapeño may match or exceed Nvidia on peak FLOPs per watt while still losing at rack- or campus-level total cost of ownership, because Nvidia now owns the orchestration primitives. Brandom cites OpenAI's own framing that Jalapeño was engineered "to minimize data movement and communication delays" — a tacit acknowledgment that even OpenAI's custom silicon prioritises orchestration over raw density.</p>
+
+<h4>What sits underneath</h4>
+<p>Vera Rubin systems are ramping into full production at CoreWeave, Google Cloud, Azure, Oracle and Nebius per Jensen Huang's Q2 remarks. The BlueField-4 DPU unveiled on Tuesday functions as the invisible plumbing that lets Vera Rubin scale to 72-node NVL domains at 1,200 W per socket. Brandom's essay does not include new revenue guidance or unit-shipment claims; it stands as an analytical piece rather than a reportorial one, and drew immediate uptake in investor Twitter given the same-day discussion of Nvidia's compressed 5.4 percent implied post-earnings move.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><text x="60" y="18" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">LLAMA.CPP · 7 TAGS · SAT</text><text x="16" y="34" font-family="Georgia,serif" font-size="9" font-weight="700">b10681</text><text x="16" y="46" font-family="Georgia,serif" font-size="9" font-weight="700">b10682</text><text x="16" y="58" font-family="Georgia,serif" font-size="9" font-weight="700">b10683</text><text x="16" y="70" font-family="Georgia,serif" font-size="9" font-weight="700">b10684</text><text x="68" y="34" font-family="Georgia,serif" font-size="9" font-weight="700">b10685</text><text x="68" y="46" font-family="Georgia,serif" font-size="9" font-weight="700">b10686</text><text x="68" y="58" font-family="Georgia,serif" font-size="9" font-weight="700">b10687</text><text x="68" y="70" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" letter-spacing="0.6">+25% ADRENO X2</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">llama.cpp cuts seven Saturday releases tuning Metal, Vulkan, SYCL and Adreno kernels</h3>
+<p class="kicker">GitHub · ggml-org/llama.cpp · 2026-08-29 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The ggml-org team shipped seven tagged builds between 14:34 and 18:23 UTC on Saturday, spanning kernel tuning and correctness work across every GPU backend the runtime supports. b10687 landed a Qualcomm OpenCL matmul path measuring roughly 25 percent prefill uplift on gpt-oss-20b on Adreno X2-90; b10682 and b10685 completed the Apple M-series flash-attention vector tuning tables; b10684 refined the SYCL --fit heuristic to hit 262K context on Intel Arc B70; b10681 patched a Vulkan mul_mat_id K-dimension padding bug.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>llama.cpp landed b10681 through b10687 between 14:34 and 18:23 UTC on August 29, one of the busiest Saturday runs in project history. The pattern of the day is a shift from feature adds toward numerical safety and per-device tuning, mostly on GPUs shipping in current mobile SoCs and Apple silicon rather than data-center hardware. There was no new architecture support in the Saturday batch, in contrast to Friday's Nemotron 3.5 and OpenVINO 2026.3.1 patches; the maintainers appeared to be shaking out fallout from earlier-week Vulkan view-alias fixes and improving on-device numbers ahead of the next feature drop.</p>
+
+<h4>Per-backend detail</h4>
+<p>b10681 at 14:34 UTC from jeffbolznv changed Vulkan mul_mat_id to pad the K dimension rather than N so bounds checking on K is respected under fused matrix-of-experts dispatch. b10682 at 15:01 UTC added a batch of flash-attention vector kernel tunings for the Apple M1 Max, extending the automatic tuning tables introduced earlier in the week for M3 Max and M5. b10683 at 15:25 UTC consolidated duplicated fastdiv helpers into a single implementation. b10684 at 15:57 UTC from nicois refined the SYCL --fit heuristic so peak VRAM requirements match --fit-target more accurately, avoiding OOMs on Intel Arc discrete GPUs and enabling a successful 262K-token context run on Intel Arc B70. b10685 at 16:23 UTC filled in the remaining fa-vec tunings for the Apple M4 Pro. b10686 at 16:46 UTC from Georgi Gerganov added shared-memory padding assertions to the Metal backend to catch buggy dispatch parameters before they silently corrupt attention outputs on newer Apple GPUs.</p>
+
+<blockquote class="pull-quote">"opencl: use a better matmul path on two Adreno GPU generations" <cite>— b10687 title (Li He, Qualcomm)</cite></blockquote>
+
+<h4>The Adreno win</h4>
+<p>The day closed with b10687 at 18:23 UTC from Qualcomm's Li He and wanghqc, an OpenCL patch that turns on the xmem F16xF32 GEMM kernel by default on Adreno X2E and routes batched f32xf32 operations around the tiled path on the older A7X to sidestep a compiler code-gen bug that had been spilling registers. The commit notes cite roughly 25 percent prefill gain on gpt-oss-20b on an Adreno X2-90 and about 9 percent prefill gain on gemma-3n-E4B on an Adreno 740, without regressing decode throughput on either device. The project cadence — multiple releases per day — is now the production infrastructure for the local-inference ecosystem including Ollama, LM Studio, LiteLLM and llamafile.</p>
+
+<p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic trend">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><text x="60" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">IG BOND ISSUANCE YTD</text><text x="60" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="700">$1.7T</text><text x="60" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">HIDDEN AI BORROWING</text><text x="60" y="62" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="700">$1.65T</text><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" letter-spacing="0.6">"REVERSE CROWDING"</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-trend">Trend</span></div>
+<h3 class="headline">Fortune frames AI hyperscaler debt as $1.65 trillion "reverse crowding" of Treasury</h3>
+<p class="kicker">Fortune via Yahoo Finance · 2026-08-29 · <a href="https://finance.yahoo.com/economy/policy/articles/wall-street-used-worry-too-185900607.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Fortune's Jason Ma argued Saturday that AI hyperscaler bond issuance has grown large enough to reverse the traditional causal arrow between Washington's fiscal footprint and corporate bond markets. Year-to-date investment-grade issuance through July hit $1.7 trillion (27 percent above the year-earlier pace), PIMCO and JPMorgan credit analysts identified roughly $1.65 trillion of hidden hyperscaler borrowing via SPVs, and Treasury Secretary Scott Bessent used a Bloomberg interview to acknowledge AI-issuer demand for capital is now large enough to affect Treasury auctions.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Fortune published a Saturday analysis reframing the traditional "crowding out" debate for the AI era, arguing that hyperscaler capex-linked borrowing has grown large enough to reverse the usual causal arrow between Washington's fiscal footprint and corporate bond markets. Three data points anchor the piece: $1.7 trillion of investment-grade corporate issuance through July of 2026 (27 percent above the year-earlier pace, on pace to top $2 trillion for the first time in history); roughly $1.65 trillion of hidden hyperscaler borrowing identified by PIMCO and JPMorgan credit analysts through wholly owned SPVs, joint-venture leases with private-credit funders like Blue Owl and Apollo, and equipment-financing conduits that do not roll up to parent balance sheets; and Treasury Secretary Scott Bessent's Bloomberg-interview acknowledgment that AI-issuer demand for capital is now large enough to affect Treasury auctions.</p>
+
+<blockquote class="pull-quote">"We are also seeing big corporate issuance. The companies believe they're going to be so high. They don't really care what they're paying." <cite>— Scott Bessent, Treasury Secretary</cite></blockquote>
+
+<h4>The reverse-crowding thesis</h4>
+<p>The piece anchors to a $40 trillion total US federal debt stock, a projected fiscal 2026 deficit of roughly $2 trillion, and annual debt-servicing costs already at $1 trillion, arguing that AI capex is competing with the federal government for the same marginal dollar of long-duration credit. Ed Yardeni, quoted in the piece, calls it a mechanical funding-market phenomenon rather than a monetary-policy story: "Capital flowing into corporate bonds is capital not flowing into Treasuries, and Treasury yields have had to rise to clear the market." Federal Reserve Chairman Kevin Warsh's Jackson Hole remarks are cited to note that "ever-expanding pools of capital are pouring into AI-related infrastructure."</p>
+
+<h4>The near-term forecast</h4>
+<p>Meta, Microsoft, Oracle, Amazon and Alphabet have all issued or announced multi-tranche debt deals of $10 billion or more in the past six weeks; Meta's late-July $30 billion offering stands as the largest single-issuer investment-grade deal of the cycle. Off-balance-sheet examples include the Anthropic-Nscale $45 billion West Virginia lease and the Anthropic-Volta $10 billion lease. If Treasury issuance stays on its projected FY 2027 pace of roughly $2.4 trillion in net supply while AI capex debt issuance grows another 20 percent, ten-year Treasury yields could face 30-50 basis points of additional pressure independent of Federal Reserve policy — a scenario JPMorgan's rates desk has begun modeling as its base case. The Saturday timing puts the piece into the calendar as a pre-Labor-Day framing document ahead of the September auction schedule and the September Federal Reserve meeting.</p>
+
+<p class="source-footer"><a href="https://finance.yahoo.com/economy/policy/articles/wall-street-used-worry-too-185900607.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="none" stroke="#166534" stroke-width="1.4"><path d="M18 60 Q30 40 42 42 T66 34 T90 22 T104 20"/><path d="M18 62 Q30 46 42 48 T66 40 T90 32 T104 28"/><path d="M18 64 Q30 52 42 54 T66 48 T90 42 T104 38"/></g><g fill="#166534"><text x="60" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">DCD · FIBER CONNECTIVITY</text><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">POWER · COOL · FIBER · GW</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Data Center Dynamics names fiber as the next scaling constraint after power and cooling</h3>
+<p class="kicker">Data Center Dynamics · 2026-08-29 · <a href="https://www.datacenterdynamics.com/en/marketwatch/the-fiber-connectivity-challenge-behind-ai-at-scale/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">A DCD Marketwatch piece Saturday argued that fiber-optic connectivity between and within AI data centers is becoming the underappreciated bottleneck as clusters scale past the gigawatt line. Intra-campus and inter-metro fiber capacity now sits alongside electricity and transformer availability on the industry's shortlist of infrastructure constraints, aligned with Hot Chips 2026 disclosures that pushed per-socket network egress into the same order of magnitude as HBM bandwidth.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Data Center Dynamics published "The fiber connectivity challenge behind AI at scale" on Saturday as a sponsored Marketwatch piece examining how the shift toward multi-gigawatt AI campuses is reshaping fiber-optic infrastructure requirements between racks, halls and metro regions. The article's timing anchors the week's data-center thread: Nvidia's Q2 FY27 print of $96.2 billion, the AWS 2-million-GPU expansion, the Anthropic-Nscale $45 billion six-year lease for 460 megawatts at the Monarch Compute Campus in Mason County, West Virginia, and the Lancium-Nvidia disclosure of 4 gigawatts under lease with 15+ gigawatts of powered land in development across Texas.</p>
+
+<h4>The scaling argument</h4>
+<p>DCD's central argument is that once training workloads are distributed across NVLink-Fusion racks, InfiniBand pods and geographically distributed inference pools, the intra-campus and inter-metro fiber layer becomes as much a scaling constraint as electricity or transformer availability. This aligns with the earlier Hot Chips 2026 disclosures from Nvidia (BlueField-4 at 800 Gb/s ConnectX-9, 7 Tb/s aggregate) and Meta (MTIA 400 with 1.2 TB/s Ethernet scale-up fabric), both of which pushed per-socket network egress into the same order of magnitude as HBM bandwidth. When every accelerator wants to talk to every other accelerator at HBM-adjacent speeds, the passive fiber plant between them has to scale in lockstep.</p>
+
+<h4>The sponsored-content caveat</h4>
+<p>As a Marketwatch banner piece the item is thinner on hard numbers than DCD's editorial output and does not disclose specific fiber vendors, cable manufacturers or capacity figures. But its Aug 29 publication marks the day the fiber-supply thread joined power, cooling and interconnect on the industry's shortlist of infrastructure constraints. Together with the same-day TechCrunch analysis of Nvidia's system-level moat, the piece rounds out a Saturday news cycle in which orchestration, memory bandwidth and connectivity displaced raw GPU throughput as the story.</p>
+
+<p class="source-footer"><a href="https://www.datacenterdynamics.com/en/marketwatch/the-fiber-connectivity-challenge-behind-ai-at-scale/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#fbf9f3"/><g fill="none" stroke="#166534" stroke-width="1.4"><rect x="18" y="22" width="24" height="16"/><rect x="48" y="22" width="24" height="16"/><rect x="78" y="22" width="24" height="16"/><line x1="30" y1="38" x2="60" y2="52"/><line x1="60" y1="38" x2="60" y2="52"/><line x1="90" y1="38" x2="60" y2="52"/><circle cx="60" cy="58" r="6"/></g><g fill="#166534"><text x="60" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">WASHINGTON POST · AGENTS</text><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">CONTENT · SUBS · ADS</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Washington Post runs production ChatGPT-orchestrated analytics agent network on internal data</h3>
+<p class="kicker">AI Agent Store weekly brief · 2026-08-29 · <a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The AI Agent Store's Saturday brief flags a Washington Post deployment: a live network of ChatGPT- and OpenAI-API-powered analytics agents that query multiple internal datasets under existing permission logic and return short-timeframe answers to content, subscription and advertising questions. The recommendation to other newsrooms is to start with a single trusted-table daily-KPI agent and require human sign-off for any write.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The AI Agent Store's Saturday newsletter surfaces a Washington Post case study describing a live production deployment of ChatGPT- and OpenAI-API-powered analytics agents inside the newspaper's internal data stack. The Post has stitched together a network of agents that reach across multiple internal datasets — spanning content performance, subscriber behaviour and advertising — and return short-timeframe answers to recurring analytics questions that would otherwise be routed to a human analyst. Crucially, the agents follow the Post's existing permission logic, so whichever employee queries the system only sees the data slices they were already entitled to see in the underlying tables.</p>
+
+<blockquote class="pull-quote">"Agents can compress recurring, cross-dataset queries into an on-demand assistant, reducing response time and freeing analysts to focus on judgment rather than data-gathering." <cite>— AI Agent Store weekly brief</cite></blockquote>
+
+<h4>Why the deployment matters</h4>
+<p>The Post's deployment moves beyond the summarise-a-dashboard demos that have dominated newsroom AI coverage in 2026 and treats the agent layer as a query-orchestration substrate. Analysts are no longer the pipeline for cross-cutting questions ("how did the paywall convert this week, split by acquisition channel and story vertical?") because the agents can walk the tables themselves and hand back an answer in seconds. The compression is the value, not the answer.</p>
+
+<h4>The practitioner recommendation</h4>
+<p>The item closes with the newsletter's standard practitioner-facing recommendation: other organisations should start with a single "daily KPI" agent that reads one canonical, trusted table set, logs every query, and requires human sign-off for any action that would change data. The framing is a tacit acknowledgment that the risk vectors on this pattern are permission leaks, audit-trail gaps and unauthorised writes rather than model hallucination in the classic sense. The Post's deployment is offered as evidence that the pattern is buildable today with off-the-shelf ChatGPT and API components rather than a bespoke agent framework. It is the only Aug 29 item in the AI Agent Store's weekly rollup, in a week otherwise dominated by earlier-week enterprise-agent launches from AccuKnox, Cashfree, Aziro, Ambient.ai, Salesforce/Anthropic Claudeforce, and Google Cloud's financial-services agents. <em>(source: weekly brief — no direct primary-source URL surfaced for the Washington Post writeup itself)</em></p>
+
+<p class="source-footer"><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+</section>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-08-29 window · Generated 2026-08-30 UTC</div>
+  <div><a href="../index.html">← Back to home</a></div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const stories = Array.from(document.querySelectorAll('details.story'));
+  const chips = Array.from(document.querySelectorAll('.filter-chip'));
+  const bigPicture = document.querySelector('.big-picture');
+  const rundownCount = document.querySelector('.section-head .count');
+  const dateSuffix = rundownCount ? (rundownCount.textContent.match(/·\s*.*$/)?.[0] || '') : '';
+  const status = document.querySelector('.filter-status');
+
+  function tagsOf(el){ return (el.dataset.tags || '').split(/\s+/).filter(Boolean); }
+  function counts(){
+    const total = stories.length;
+    chips.forEach(c => {
+      const t = c.dataset.filter;
+      const n = t === 'all' ? total : stories.filter(s => tagsOf(s).includes(t)).length;
+      const cnt = c.querySelector('.count');
+      if (cnt) cnt.textContent = n;
+      c.disabled = (t !== 'all' && n === 0);
+    });
+  }
+  function applyFilter(filter){
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const match = filter === 'all' || tagsOf(s).includes(filter);
+      s.hidden = !match;
+      if (match && !s.classList.contains('hero') && s.id !== 'hero') visibleNonHero++;
+    });
+    if (rundownCount) rundownCount.textContent = visibleNonHero + ' stories ' + dateSuffix;
+    chips.forEach(c => c.setAttribute('aria-pressed', String(c.dataset.filter === filter)));
+    if (status) status.textContent = 'Showing ' + (filter === 'all' ? stories.length : stories.filter(s => tagsOf(s).includes(filter)).length) + ' of ' + stories.length + ' stories — ' + filter;
+    try { history.replaceState(null, '', '#filter=' + filter); } catch(e){}
+  }
+  chips.forEach(c => c.addEventListener('click', () => applyFilter(c.dataset.filter)));
+  counts();
+  const hash = (location.hash.match(/filter=([a-z]+)/) || [])[1];
+  applyFilter(hash && chips.some(c => c.dataset.filter === hash) ? hash : 'all');
+})();
+</script>
+
+</body>
+</html>
