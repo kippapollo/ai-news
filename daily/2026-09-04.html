@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-09-04</title>
+<meta name="description" content="OpenAI shipped GPT-6 Astra on Thursday at $10/$50 per million tokens (2.5x GPT-5.6 Sol, exactly matching Claude Fable 5.1) with Greg Brockman telling Fortune 'welcome to the AGI era.' Aidan Clark called it the company's largest training run 'by far' on more than 100,000 GPUs at the Texas Stargate site, scoring 97.6 percent on FrontierMath Tier 4 v2, 99.9 percent on ARC-AGI-3 with a custom Provider Adapter harness, 72.6 percent on OSWorld 2.0 computer use, and 100 percent on ExploitBench. Astra is the first frontier model OpenAI has classified at the Preparedness Framework's Critical cybersecurity tier, autonomously discovered and exploited two previously unknown zero-days during evaluation, and its advanced cyber capabilities ship only to enterprise Daybreak customers with the standard tier refusing 'advanced cybersecurity tasks.' Artificial Analysis benchmarked it within hours: Intelligence Index 61 (tied GPT-5.6 Sol, five points below Fable 5.1), hallucination rate 51 percent at max effort versus Sol's 92 percent, and 70 percent more token-efficient than Sol on coding but 75 percent more expensive per task. Same day MBZUAI released the six-model K2 Horizon open family from 0.9B to a 375B/23B-active MoE flagship with 512K context and Apache 2.0 licensing across weights, training data, code and checkpoints. ChatGPT, Claude and Grok all logged outages within the same hour Thursday morning US, each traced to a different infrastructure fault. Bernie Sanders and Greg Casar introduced the Ban Artificial Superintelligence Act with corporate dissolution and up to 20 years in prison for violators. Tesla unveiled the two-seat gold Cybercab in Austin. IFA Berlin opened with Xiaomi's debut booth featuring the CyberOne humanoid and in-house XRing O3 3nm AI chip, TCL's 20,736-zone X11L QD-Mini LED plus P80 Ultra phone, and Anker's Matter 1.5 MindBase hub with a 26-TOPS on-device agent. Broadcom fell 6 percent digesting the Q3 print and $350 billion two-year hyperscaler pipeline. Ciena posted record $1.7B Q3 revenue up 37 percent on hyperscaler AI-optics demand with backlog jumping $800M in a quarter to $8.5B. Meta stripped AI-usage metrics from performance reviews. NVIDIA's Nano-CC/Ultra-CC paper scored gold at IOI 2026 live under human-contestant rules. llama.cpp cut ten signed release tags with Metal sparse flash-attention and multi-GPU CUDA concurrent streams; Claude Code v2.1.260 added a fullscreen diff panel and prompt-cache miss diagnostics; OpenAI Codex CLI wired in GPT-6 Astra across three back-to-back Rust releases.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#166534;--accent-soft:rgba(22,101,52,0.10);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#86efac;--accent-soft:rgba(134,239,172,0.14);
+  --tag-tech:rgba(147,197,253,0.20);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.16);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.18);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.16);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+.story summary .body{display:flex;flex-direction:column;gap:6px}
+.story .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-09-04</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="tech safety" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+      <h1>OpenAI ships GPT-6 Astra, prices it at Claude Fable, and calls it the start of the AGI era</h1>
+      <p class="dek">Rollout began Thursday to enterprise Daybreak customers at $10 per million input tokens and $50 per million output, 2.5x GPT-5.6 Sol and exactly on Claude Fable 5.1. Aidan Clark called it OpenAI's largest training run "by far," on more than 100,000 GPUs at the Texas Stargate site. Astra posted 97.6 percent on FrontierMath Tier 4 v2, 99.9 percent on ARC-AGI-3 with the custom Provider Adapter harness, and 72.6 percent on OSWorld 2.0 computer use in 40 minutes per task versus GPT-5.6 Sol at 65.7 in 75 minutes. It is the first frontier model OpenAI has classified at the Preparedness Framework's Critical cybersecurity tier: 100 percent on ExploitBench, 99.2 percent on SRE-Bench binary reverse engineering, and two previously unknown vulnerabilities autonomously discovered during evaluation and reported to vendors.</p>
+      <p class="kicker">Tech · Safety · Fortune / Simon Willison / The Decoder · 2026-09-03 · <a href="https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#166534" stop-opacity="0.30"/><stop offset="100%" stop-color="#166534" stop-opacity="0"/></linearGradient>
+        <radialGradient id="hg2" cx="0.85" cy="0.15" r="0.85"><stop offset="0%" stop-color="#166534" stop-opacity="0.22"/><stop offset="100%" stop-color="#166534" stop-opacity="0"/></radialGradient>
+        <pattern id="hgrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0 L0 0 0 20" fill="none" stroke="#166534" stroke-opacity="0.08" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgrid)"/>
+      <rect width="480" height="320" fill="url(#hg1)"/>
+      <rect width="480" height="320" fill="url(#hg2)"/>
+      <g fill="#166534" font-family="system-ui,sans-serif">
+        <text x="30" y="28" font-size="10" font-weight="700" letter-spacing="2.4">THU · SEP 03, 2026 · OPENAI GPT-6 ASTRA</text>
+        <text x="30" y="44" font-size="8" font-weight="700" letter-spacing="1.4" opacity="0.72">PREPAREDNESS FRAMEWORK · CYBERSECURITY CAPABILITY TIER LADDER</text>
+      </g>
+      <g transform="translate(30, 78)">
+        <line x1="0" y1="130" x2="420" y2="130" stroke="#166534" stroke-width="1" opacity="0.6"/>
+        <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" letter-spacing="1.2" opacity="0.72">
+          <text x="0" y="8">LOW</text>
+          <text x="0" y="42">MEDIUM</text>
+          <text x="0" y="76">HIGH</text>
+          <text x="0" y="110">CRITICAL</text>
+        </g>
+        <g stroke="#166534" stroke-width="0.6" opacity="0.35">
+          <line x1="60" y1="6" x2="420" y2="6"/>
+          <line x1="60" y1="40" x2="420" y2="40"/>
+          <line x1="60" y1="74" x2="420" y2="74"/>
+          <line x1="60" y1="108" x2="420" y2="108"/>
+        </g>
+        <g fill="#166534">
+          <circle cx="120" cy="86" r="5" opacity="0.35"/>
+          <text x="120" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" opacity="0.72">GPT-4</text>
+          <text x="120" y="102" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="0.8" opacity="0.6">2023</text>
+
+          <circle cx="200" cy="60" r="6" opacity="0.55"/>
+          <text x="200" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" opacity="0.85">GPT-5</text>
+          <text x="200" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="0.8" opacity="0.6">2025</text>
+
+          <circle cx="280" cy="42" r="7" opacity="0.75"/>
+          <text x="280" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700">GPT-5.6 SOL</text>
+          <text x="280" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="0.8" opacity="0.6">2026</text>
+
+          <circle cx="380" cy="10" r="9"/>
+          <text x="380" y="-4" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="700">GPT-6 ASTRA</text>
+          <text x="380" y="26" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="0.8">FIRST FRONTIER · CRITICAL</text>
+        </g>
+        <g stroke="#166534" stroke-width="1.2" fill="none" opacity="0.5">
+          <path d="M120 86 L 200 60 L 280 42 L 380 10"/>
+        </g>
+      </g>
+      <g transform="translate(30, 246)">
+        <text x="0" y="0" font-family="system-ui,sans-serif" font-size="9" font-weight="700" letter-spacing="1.4" fill="#166534">HEAD-TO-HEAD · GPT-6 ASTRA vs GPT-5.6 SOL · PERCENT</text>
+        <line x1="0" y1="8" x2="420" y2="8" stroke="#166534" stroke-width="0.8"/>
+        <g font-family="system-ui,sans-serif" font-size="7.5" font-weight="700" fill="#166534" letter-spacing="1.0">
+          <text x="0" y="26">EXPLOITBENCH · 78.5 → 100</text>
+          <text x="0" y="42">SRE-BENCH REVERSE ENG · 68.7 → 99.2</text>
+          <text x="0" y="58">FRONTIERMATH T4 v2 · 84.6 → 97.6</text>
+          <text x="220" y="26">OSWORLD 2.0 CU · 65.7 → 72.6</text>
+          <text x="220" y="42">EXPLOITGYM · 30.3 → 42.4</text>
+          <text x="220" y="58">HALLUCINATION @MAX · 92 → 51</text>
+        </g>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+<p>OpenAI shipped GPT-6 Astra on Thursday, September 3, opening a rollout that began with limited-access Daybreak enterprise customers before extending to ChatGPT Plus, Pro, Business and Enterprise, the OpenAI API, AWS Bedrock and Azure over the following days. The API model identifier is <code>gpt-6-astra</code>. Standard pricing is $10 per million input tokens and $50 per million output tokens, exactly matching Anthropic's Claude Fable 5 and Fable 5.1 rates and running 2.5x GPT-5.6 Sol's existing $4-in / $20-out. A Fast tier at $20-in / $100-out delivers roughly 2x throughput. Prompt-cache reads discount 90 percent; cache writes carry a 25 percent premium.</p>
+
+<p>Aidan Clark, OpenAI VP of Research, told Fortune that Astra came out of the company's largest training run "by far," pre-trained on more than 100,000 GPUs at OpenAI's Stargate facility in Texas. Company president and co-founder Greg Brockman used the release to make what OpenAI has previously avoided saying out loud.</p>
+
+<blockquote class="pull-quote">"It's not unreasonable to feel that we are now in the AGI era, and I think that if you want to say this is the first one, I think it's reasonable."
+<cite>— Greg Brockman, OpenAI president and co-founder, to Fortune, 2026-09-03</cite></blockquote>
+
+<h4>The benchmark sweep</h4>
+
+<p>OpenAI reported 97.6 percent on FrontierMath Tier 4 v2, 96 percent on GPQA Diamond, 95.9 percent on BenchCAD, and 74.1 percent on DeepSWE v1.1. On ARC-AGI-3, the headline number is 99.9 percent using OpenAI's custom Provider Adapter harness that preserves opaque reasoning state between requests and compacts long conversations to reuse prior work; with the default harness the same model scores 98.6 percent, and 62.7 percent in the more restrictive default form Simon Willison flagged as a rare public demonstration of harness sensitivity to headline numbers.</p>
+
+<p>OSWorld 2.0 computer-use benchmarking put Astra at 72.6 percent in an average 40 minutes per task, against GPT-5.6 Sol at 65.7 percent in 75 minutes. Terminal-Bench Science 0.1 came in at 64.6 versus Fable 5.1's 52.6. HealthBench Professional posted 63.4 to Fable 5.1's 56.6. Automation-Bench moved from GPT-5.6 Sol's 31.4 to Astra's 41.4. Long-context recall was 100 percent from 256K to 512K tokens and 96.3 percent from 512K to 1M on the eight-needle benchmark.</p>
+
+<blockquote class="pull-quote">"GPT-6 Astra can zip through spreadsheets, fill out forms, and navigate across web pages often at superhuman speed."
+<cite>— Greg Brockman, on the computer-use capability, to Fortune</cite></blockquote>
+
+<h4>The Critical cybersecurity tier</h4>
+
+<p>Astra is the first frontier model OpenAI has classified at the Preparedness Framework's Critical cybersecurity capability tier. ExploitBench pass rate hit 100 percent, up from GPT-5.6 Sol's 78.5 percent. ExploitGym reached 42.4 percent, up from Sol's 30.3 percent. SRE-Bench binary reverse engineering scored 99.2 percent within four attempts, against Sol's 68.7 percent. During evaluation Astra autonomously identified and exploited two previously unknown vulnerabilities in software the lab does not name in the release. Both were reported to vendors and patched before publication.</p>
+
+<p>The consequence is a two-tier ship. Advanced cybersecurity capability is gated behind OpenAI's enterprise Daybreak program for vetted government and cybersecurity partners. The general-availability Astra refuses "advanced cybersecurity tasks." OpenAI briefed the incoming Center for AI Standards and Innovation and the UK AI Security Institute ahead of launch and characterized the process as "a very good partnership." Brockman declined to detail the review structure "because there's nuances on exactly how the process works."</p>
+
+<h4>The independent read</h4>
+
+<p>Artificial Analysis published its Astra deep-dive within hours. Its Intelligence Index puts Astra at 61 at max effort, tied with GPT-5.6 Sol and five points below Claude Fable 5.1 at 66. AA-Omniscience shows Astra hallucinating 51 percent at max effort against Sol's 92 percent, a rare structural improvement rather than a headline delta. AA-Briefcase, the knowledge-work benchmark, moves roughly 80 points over Sol. On coding, the Coding Agent Index scores Astra 67 in the Codex harness against Fable 5.1 in Claude Code at 70. Astra runs 70 percent more token-efficient than Sol on coding but end-to-end cost per task at max effort is 75 percent higher than Sol because output pricing more than triples.</p>
+
+<blockquote class="pull-quote">"GPT-6 Astra makes significant gains in the Artificial Analysis Coding Agent Index, scoring equal to Fable 5 at lower cost. Pricing is 2.5x GPT-5.6 Sol's current prices across the board, up from $4/$20 to $10/$50 per million input/output tokens."
+<cite>— Artificial Analysis, benchmarking changelog, 2026-09-03</cite></blockquote>
+
+<h4>The framing</h4>
+
+<p>Brockman used the Fortune interview to lean on the operational side rather than the capability numbers, pointing to Astra's ability to keep multi-hour agentic tasks on the rails without human hand-holding. Mia Glaese, OpenAI VP of Research, put the computer-use gain in evolutionary terms, saying it "shows how far we've come from sort of aspirationally training for computer use to bringing real value to people every day." Sam Altman framed the release as an enabler rather than a terminal: "we hope it will begin to enable a new generation of entrepreneurship, scientific discovery, and building." The AGI framing is the marketing peg; the substantive shifts are the doubled input price, the shipped-to-Daybreak cybersecurity gate, the long-context recall improvement, and the fact that on the standardized third-party intelligence index Astra ties Sol and trails Fable 5.1.</p>
+
+<p class="source-footer"><a href="https://fortune.com/2026/09/03/openai-debuts-gpt-6-astra-computer-use-greg-brockman-says-start-of-agi/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-label="Big picture">
+  <div class="label">Big<br>Picture</div>
+  <div>
+    <p>Thursday delivered the largest single frontier-model release of 2026 and a same-hour reminder that the entire consumer AI stack still lives on three or four cloud regions. OpenAI's GPT-6 Astra shipped at Fable-parity pricing with the first Critical cybersecurity classification under the Preparedness Framework, and three hours later ChatGPT, Claude and Grok all went down at once inside a 60-minute window on independent infrastructure faults while Google Gemini stayed up. Artificial Analysis pegged Astra at Intelligence Index 61, five points below Fable 5.1 but with hallucination cut from 92 to 51 percent at max effort and a coding score matching Fable 5 at half the cost per task.</p>
+    <p>Open weights kept pace. MBZUAI's Institute of Foundation Models opened the day with the K2 Horizon family: six Apache-2.0 releases from 0.9B up to a 375B/23B-active MoE flagship, all shipped with weights, training data, source code, methodology, intermediate checkpoints and evaluation results published together. K2-Horizon-375B-A23B scored 47 on the Artificial Analysis Intelligence Index, a 30-point leap over the prior K2, and pushed four of the top five slots on the AA Openness Index to IFM models at 89. Hugging Face Daily Papers on the same day were led by BAAI's Repo-To-Skill work distilling 1,000 ML repositories into a 5,000+ skill library that lifts research agents 134 percent on MLE-bench, and NVIDIA's Nano-CC/Ultra-CC paper reporting a 550B/55B-active MoE that cleared IOI 2026 gold live under human-contestant rules at 535.4 out of 600 versus the 361.12 threshold and the top human's 498.27.</p>
+    <p>Policy shifted register. Bernie Sanders and Greg Casar introduced the Ban Artificial Superintelligence Act with corporate dissolution for violators and up to 20 years in prison for individuals, plus a new cabinet-level agency and international export controls to prevent ASI development anywhere in the world. Tesla unveiled the two-seat gold Cybercab at a 4:45 PM CT event in downtown Austin. IFA Berlin opened with Xiaomi's first-ever booth featuring the CyberOne humanoid and in-house 3nm XRing O3 AI processor across a 3,300 m² Hall 6.2 floor, TCL's 20,736-zone X11L QD-Mini LED plus P80 Ultra phone, and Anker's Matter 1.5 MindBase hub with a 26-TOPS on-device agent. Broadcom fell 6 percent to $346.49 as investors read the $34.8B Q4 revenue guide against $35.05B consensus, with Hock Tan sizing the next two years at $350B of hyperscaler AI-semi shipments split $115B in FY27 and $230B in FY28. Ciena printed record $1.7B Q3 revenue up 37 percent on AI-optics demand with backlog jumping $800M in a single quarter to $8.5B. Meta stripped AI-usage metrics from performance reviews seven weeks after 26 employees sued in Oakland alleging AI dashboards fed layoff decisions. Uber lobbied New Jersey and Washington, D.C. to cap robotaxi deployments at 15 percent of rides during a three-year pilot the same day it launched 15 human-supervised autonomous taxis in London.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true"><svg viewBox="0 0 80 18"><circle cx="10" cy="9" r="2" fill="#166534"/><circle cx="30" cy="9" r="2" fill="#166534"/><path d="M40 3 L 45 9 L 40 15 L 35 9 Z" fill="#166534"/><circle cx="55" cy="9" r="2" fill="#166534"/><circle cx="70" cy="9" r="2" fill="#166534"/></svg></div>
+
+<div class="section-head">
+  <h2>More today</h2>
+  <span class="count">25 stories · 2026-09-03</span>
+</div>
+
+<div class="cards">
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><line x1="16" y1="64" x2="104" y2="64"/><line x1="16" y1="16" x2="16" y2="64"/></g><g fill="#166534"><rect x="24" y="46" width="10" height="18" opacity="0.4"/><rect x="42" y="30" width="10" height="34" opacity="0.55"/><rect x="60" y="22" width="10" height="42" opacity="0.7"/><rect x="78" y="12" width="10" height="52"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#166534" letter-spacing="1.2">II 55 · 57 · 59 · 61</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Artificial Analysis benchmarks GPT-6 Astra: coding win, hallucination win, intelligence tie</h3>
+<p class="kicker">Artificial Analysis · 2026-09-03 · <a href="https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Independent measurement puts Astra at Intelligence Index 61 tied with GPT-5.6 Sol and five points below Fable 5.1, hallucination rate 51 percent at max versus Sol's 92, and 70 percent more token-efficient than Sol on coding but end-to-end 75 percent more expensive per task.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Artificial Analysis published its GPT-6 Astra measurement suite within hours of OpenAI's Thursday launch. The Intelligence Index by effort level ran 55 non-reasoning, 57 low, 59 medium, 60 high, 61 extra-high, and 61 max. That leaves Astra tied with GPT-5.6 Sol at 61 and five points behind Claude Fable 5.1 max-with-fallback at 66. Muse Spark 1.3 max still leads the index outright.</p>
+
+<p>The single most structurally interesting result was on AA-Omniscience, the shop's hallucination benchmark. GPT-6 Astra at max effort hallucinated 51 percent of the time, against GPT-5.6 Sol at 92 percent. AA-Briefcase, which tests knowledge work, showed roughly an 80-point improvement over Sol. Both suggest the Astra post-training worked harder on grounding and calibration than on pushing the raw intelligence-index ceiling.</p>
+
+<blockquote class="pull-quote">"GPT-6 Astra makes significant gains in the Artificial Analysis Coding Agent Index, scoring equal to Fable 5 at lower cost."
+<cite>— Artificial Analysis changelog, 2026-09-03</cite></blockquote>
+
+<h4>Coding costs and the Fable comparison</h4>
+
+<p>On the Coding Agent Index, Astra in the Codex harness scored 67, alongside Claude Opus 5, Fable 5 and Muse Spark 1.3 at the same 67, and behind Fable 5.1 in Claude Code at 70. On the token-efficiency measurement Astra used 70 percent fewer tokens than GPT-5.6 Sol for the same coding work, and DeepSWE v1.1 API cost dropped roughly 57 percent versus Sol. Because output pricing tripled from $20/M to $50/M and input pricing more than doubled from $4/M to $10/M, the end-to-end cost per task at max effort still runs about 75 percent higher than Sol on the same benchmark set.</p>
+
+<p>The same Sept 3 changelog entry adds MBZUAI's K2 Horizon 375B/23B-active MoE to the leaderboard at Intelligence Index 47, a 30-point jump over the prior K2 release and now the top open-weight entry. Trending Topics captured the shorter form of the read: "Despite OpenAI's AGI marketing claims, independent benchmarking reveals Astra trails Anthropic's leading model in raw intelligence metrics while offering stronger value in coding applications."</p>
+
+<p class="source-footer"><a href="https://artificialanalysis.ai/articles/benchmarking-gpt-6-astra" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g font-family="Georgia,serif" fill="#166534"><text x="60" y="34" text-anchor="middle" font-size="18" font-weight="700">375B</text><text x="60" y="50" text-anchor="middle" font-size="8" font-weight="700" letter-spacing="1.6">A23B · MoE · 512K</text><text x="60" y="66" text-anchor="middle" font-size="7" font-weight="700" opacity="0.7" letter-spacing="1.4">MBZUAI · APACHE 2.0</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">MBZUAI releases K2 Horizon: six open models from 0.9B to a 375B MoE, training data included</h3>
+<p class="kicker">The National / Moor Insights / Middle East AI News · 2026-09-03 · <a href="https://moorinsightsstrategy.com/mbzuai-ifm-launches-6-k2-horizon-frontier-models-doubles-down-on-openness-analyst-insight/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Apache-2.0 family scales 0.9B, 3.7B, 7B, 32B dense and 36B-A4B up to a 375B/23B-active MoE with 512K context, published alongside training data, source code, methodology, intermediate checkpoints, training logs and evaluation results. Flagship scored 47 on Artificial Analysis Intelligence Index, a 30-point jump over the prior K2.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>MBZUAI's Institute of Foundation Models released K2 Horizon Thursday, September 3, a six-model family aiming squarely at the "full openness" position. The sizes are 0.9B, 3.7B, 7B, 32B dense, 36B/4B-active Mixture-of-Value-Attention MoE, and the flagship K2-Horizon-375B-A23B. The 375B is a sparse MoE with 23B active parameters, a 524,288-token (512K) context window, and BF16 serving on SGLang and vLLM. All six carry Apache 2.0 licenses and distribute through Hugging Face, Ollama, Unsloth and IFM's own repository.</p>
+
+<p>Pretraining ran on roughly 20 trillion tokens with about 17 percent of the corpus explicit reasoning trajectories and about 10 trillion synthetic tokens generated in-loop. What IFM ships alongside the weights is where the release breaks from the Meta or Alibaba model of "open weights, closed data." Weights, source code, training data, methodology, intermediate checkpoints, training logs and evaluation results all publish together.</p>
+
+<blockquote class="pull-quote">"Open source is much more than open weights. Science works when others can see the data, follow the method, reproduce the result, and improve on it."
+<cite>— Dr Eric Xing, MBZUAI President, on the K2 Horizon release</cite></blockquote>
+
+<h4>The benchmark stack</h4>
+
+<p>Flagship K2-Horizon-375B-A23B scored 47 on the Artificial Analysis Intelligence Index, a 30-point improvement over the prior K2 and a top-open-weights placement. Toolathlon Verified came in at 65.3, MCPMark at 67.7, GDPVal-AA at 1,441, tau3-Banking at 34.0, AA-LCR long-context at 76.0, SciCode at 42.7, and Humanity's Last Exam at 32.0 with no tools. TerminalBench posted 66.9 percent corrected accuracy after removing 24 reward-hacking instances from the initial 70.2, with a reward-hacking-flag rate of 3.37 percent that IFM benchmarked as comparable to Claude and GPT.</p>
+
+<p>Sub-flagship results held up. The 0.9B scored above 48 on AIME 2026. The 7B is claimed as the industry's best model under 10B. The 32B dense ranks among the strongest under 40B. The knock-on for the leaderboards was that four of the top five slots on the Artificial Analysis Openness Index are now MBZUAI IFM models, all at a score of 89.</p>
+
+<blockquote class="pull-quote">"The most important technology of our time should be built with the world, not kept from it. Openness isn't a slogan we ask you to accept. It's a list we ask you to check."
+<cite>— Dr Hector Liu, IFM Director, to Moor Insights &amp; Strategy</cite></blockquote>
+
+<p>The release lands as Meta continues to publish Muse Glimmer under a decoupled safety LoRA and Alibaba pushes Qwen3.8-Flash-Next and Qwen3.8-Max snapshots without a training-data drop. K2 Horizon is the largest fully-open MoE released to date and the first to publish 20T-token training corpora alongside a 375B weights checkpoint under a permissive license.</p>
+
+<p class="source-footer"><a href="https://moorinsightsstrategy.com/mbzuai-ifm-launches-6-k2-horizon-frontier-models-doubles-down-on-openness-analyst-insight/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.2" fill="none" opacity="0.7"><path d="M20 40 L 40 26 L 60 32 L 80 18 L 100 24"/></g><g fill="#166534"><circle cx="20" cy="40" r="2.5"/><circle cx="40" cy="26" r="2.5"/><circle cx="60" cy="32" r="2.5"/><circle cx="80" cy="18" r="2.5"/><circle cx="100" cy="24" r="2.5"/></g><text x="60" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#166534">535.4/600</text><text x="60" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4" opacity="0.7">IOI 2026 · GOLD</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">NVIDIA Nemotron Nano-CC and Ultra-CC clear IOI 2026 gold live under human-contestant rules</h3>
+<p class="kicker">arXiv 2609.02849 / Hugging Face Papers · 2026-09-03 · <a href="https://arxiv.org/html/2609.02849" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Nvidia's Ultra-CC (550B total / 55B active MoE from Nemotron-3-Ultra) posted 535.4 out of 600 at the live IOI 2026 competition under the same time, internet and submission rules as human contestants, exceeding both the 361.12 gold threshold and the top human's 498.27.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The Nvidia Nemotron team of Aleksander Ficek, Sean Narenthiran, Mehrzad Samadi, Somshubra Majumdar and Boris Ginsburg published "Post-Training Language Models for Gold-Medal Performance in Coding Competitions" as arXiv 2609.02849, featured on the Sept 3 Hugging Face Daily Papers list. The paper documents two systems: Nano-CC at 30B total / 3B active MoE and Ultra-CC at 550B total / 55B active MoE built from Nemotron-3-Ultra-550B-A55B. Both use a hybrid mamba-transformer backbone with 262K context.</p>
+
+<p>On the IOI 2025 static evaluation Nano-CC scored 291 out of 600 at Score@1 (48.5 percent) and 461 at Score@200 (76.8 percent). Ultra-CC scored 304 (50.7 percent) and 502 (83.5 percent). The gold-medal threshold is 438.3. The more consequential number came from IOI 2026 live: under the same time limits, internet access rules and submission constraints as human contestants, Ultra-CC scored 535.4 out of 600, exceeding both the 361.12 gold threshold and the top human's 498.27.</p>
+
+<h4>Comparative baselines</h4>
+
+<p>On IOI 2025 the baselines Nano-CC and Ultra-CC clear include DeepSeek-V4-Flash at 55.3 percent, DeepSeek-V4-Pro at 56.8 percent, GLM-5.2 as the strongest open baseline at 66.0 percent, and gpt-oss-120b at 40.7 percent. ICPC 2025 pass@1 came in at 51.0 percent for Nano-CC and 57.4 percent for Ultra-CC. LiveCodeBench Pro pass@1 hit 71.6 percent for Nano-CC and 74.5 percent for Ultra-CC.</p>
+
+<p>The training recipe combined large-scale problem curation, synthetic data generation, supervised fine-tuning, reinforcement learning, and iterative test-time refinement the authors call GenCorrect. Nano-CC ran from 130 to 291 after post-training and from 291 to 468 with GenCorrect layered on. The paper is the highest-scoring live-competition result any AI lab has publicly posted at an IOI competition and lands alongside the DeepMind AlphaCode 2 track that has held closed since 2024.</p>
+
+<p class="source-footer"><a href="https://arxiv.org/html/2609.02849" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.2" fill="none"><rect x="18" y="18" width="30" height="20" rx="2"/><rect x="52" y="18" width="30" height="20" rx="2"/><rect x="86" y="18" width="18" height="20" rx="2"/><rect x="18" y="44" width="30" height="20" rx="2"/><rect x="52" y="44" width="30" height="20" rx="2"/></g><g fill="#166534"><circle cx="33" cy="28" r="2"/><circle cx="67" cy="28" r="2"/><circle cx="95" cy="28" r="2"/><circle cx="33" cy="54" r="2"/><circle cx="67" cy="54" r="2"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#166534" letter-spacing="1.4">REPO-TO-SKILL · 5,000+ SKILLS</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">BAAI's Repo-To-Skill tops Hugging Face Daily Papers with a 5,000-skill research-agent library</h3>
+<p class="kicker">Hugging Face Papers / arXiv 2609.02749 · 2026-09-03 · <a href="https://huggingface.co/papers/date/2026-09-03" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Beijing Academy of AI paper distilled 1,000 ML repositories into AREX-Skill, an Apache-2.0 library of 5,000+ executable skills across 20 areas and 178 capability families, lifting a GPT-5.5-backed research agent 134 percent on MLE-bench and 34 percent on PaperBench at constant execution budget.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Repo-To-Skill topped the Hugging Face Daily Papers list on September 3 with 494 upvotes. The paper, authored by BAAI's VectorSpaceLab team, documents a pipeline the authors call DisCo that distills GitHub repositories into what they term "operational knowledge — the know-how that separates knowing a method from making it work." The output is AREX-Skill, a library of 5,000+ verified skills mined from 1,000+ ML repositories, spanning 20 areas and 178 package families, all Apache 2.0.</p>
+
+<p>The DisCo pipeline runs in four stages. Scoping identifies executable capabilities within a repository. Evidence grounding attaches code paths and test coverage to each skill. Graph construction organizes skills into a directed capability graph. Verification runs each skill through an executor to confirm it produces the expected artifact. The output is not documentation about the repo but callable skills a downstream agent can invoke.</p>
+
+<blockquote class="pull-quote">"Operational knowledge — the know-how that separates knowing a method from making it work."
+<cite>— Repo-To-Skill paper, BAAI VectorSpaceLab, arXiv 2609.02749</cite></blockquote>
+
+<h4>Benchmark deltas</h4>
+
+<p>Plugged into a GPT-5.5-backed research agent at constant execution budget, AREX-Skill lifted MLE-bench performance 134.3 percent, PaperBench 34.4 percent, FrontierCS 9.2 percent, and PassNet 14.0 percent. The library ships through arXiv, GitHub (VectorSpaceLab/AREX-Skill) and an npm distribution installable as <code>@arex-skill/disco</code>.</p>
+
+<p>The rest of the Sept 3 Papers of the Day list rounded out with CUHK Shenzhen's SolarWM (273 upvotes) on open data and scalable training for long-horizon video world models; ByteDance Seed's HarnessDev (224) benchmarking LLMs on their ability to build and evolve their own agent harness across 2,207 instances, where generated harnesses match or exceed human-engineered references on writing and ML experimentation but lag on code and search; ByteDance Seed's Aspire (173) on model self-evolution from vague goals; and SJTU's EarlyEval (110) on cheaper agent evaluation via early outcome prediction. The through-line is that skill libraries, harness generation and self-evolution are converging as the three dominant post-training research directions for late 2026.</p>
+
+<p class="source-footer"><a href="https://huggingface.co/papers/date/2026-09-03" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g fill="none" stroke="#166534" stroke-width="1.4"><circle cx="30" cy="40" r="10"/><circle cx="60" cy="40" r="10"/><circle cx="90" cy="40" r="10"/></g><g fill="#166534"><circle cx="30" cy="40" r="3"/><circle cx="60" cy="40" r="3"/><circle cx="90" cy="40" r="3"/></g><text x="60" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">CHATGPT · CLAUDE · GROK</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">ChatGPT, Claude and Grok all go down inside a 60-minute window Thursday morning</h3>
+<p class="kicker">The Register / 9to5Mac / MacRumors · 2026-09-03 · <a href="https://www.theregister.com/ai-and-ml/2026/09/03/chatgpt-claude-and-grok-all-had-outages-at-the-same-time/5294322" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">ChatGPT and Codex went down roughly 34 minutes starting 7:43 AM PT on a routing error; Claude logged a 3-hour 6-minute infrastructure fault across Claude.ai, API, Code, Cowork and Sonnet 5, Opus 4.8, Opus 5; xAI traced Grok to its Memphis compute center. Google Gemini stayed up and Cloudflare denied network involvement.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Three of the four major consumer AI services in the United States all logged elevated error rates within the same hour Thursday morning US time. OpenAI's status page opened first at approximately 7:43 AM PT, tracing the problem to a routing error that made ChatGPT and Codex unavailable to a portion of users across platforms. The incident resolved at approximately 8:17 AM PT, about 34 minutes later.</p>
+
+<p>Anthropic's outage ran longer. Claude, the Claude API, Claude Code, Claude Cowork and all three of Sonnet 5, Opus 4.8 and Opus 5 were affected by what the lab described as an infrastructure issue. Duration was 3 hours and 6 minutes, with full restoration at 16:16 UTC. xAI opened its Grok investigation at 6:30 AM PT and traced the problem to its Memphis compute center rather than to any shared cloud dependency.</p>
+
+<blockquote class="pull-quote">"We are sorry for the issues you may have experienced with Grok following an outage at our Memphis compute center this morning."
+<cite>— SpaceX/xAI status update, 2026-09-03</cite></blockquote>
+
+<blockquote class="pull-quote">"A routing error made ChatGPT and Codex unavailable for some users across platforms."
+<cite>— OpenAI status page post-mortem</cite></blockquote>
+
+<h4>Independent failures</h4>
+
+<p>Downdetector logged tens of thousands of reports across OpenAI, Anthropic and xAI in the same window. Google Gemini remained online throughout. Cloudflare, which regularly turns up in these post-mortems, explicitly denied service disruption at the time. Three separate infrastructure faults on three separate providers coinciding within an hour is the read the labs settled on: OpenAI's routing bug, Anthropic's infrastructure incident, and xAI's Memphis facility outage as three independent events.</p>
+
+<p>The concentration risk is the story. A retailer, coding shop or enterprise using multiple AI providers for redundancy still saw all three of its ChatGPT, Claude and Grok integrations go dark in the same morning window. Gemini's clean run was the only diversification benefit any customer got.</p>
+
+<p class="source-footer"><a href="https://www.theregister.com/ai-and-ml/2026/09/03/chatgpt-claude-and-grok-all-had-outages-at-the-same-time/5294322" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="18" y="20" width="84" height="40" rx="4"/><line x1="18" y1="32" x2="102" y2="32"/><rect x="24" y="38" width="20" height="4"/><rect x="24" y="46" width="30" height="4"/></g><g fill="#166534"><circle cx="26" cy="26" r="1.5"/><circle cx="32" cy="26" r="1.5"/><circle cx="38" cy="26" r="1.5"/><rect x="76" y="40" width="18" height="12" opacity="0.35"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">CLAUDE CODE v2.1.260</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Claude Code v2.1.260 lands fullscreen diff panel, prompt-cache miss diagnostics, Fable 5.1 caching fix</h3>
+<p class="kicker">GitHub — anthropics/claude-code · 2026-09-03 · <a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Late-night release at 23:48 UTC ships a fullscreen /diff panel, prompt-cache miss diagnostics inside /cost, /reload-plugins in headless sessions, and fixes a Fable 5.1 prompt-cache invalidation bug, permission rules with parentheses being dropped, and zsh command-substitution auto-approval.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic cut Claude Code v2.1.260 as commit b3f0e50 at 23:48 UTC on Wednesday, September 3. The additions cluster around visibility. A new fullscreen mode for the /diff panel replaces the inline diff for large changes and can be toggled with /diff. Prompt-cache miss diagnostics were added to /cost so a developer can see when a session's cache invalidation is silently costing tokens. Headless sessions gained /reload-plugins to update plugin state without restarting the session. Desktop and SDK sessions gained a text form of /advisor.</p>
+
+<p>The fix log is longer than the feature log. A file-permission rules parser was dropping rules that contained parentheses. Permission checks were auto-approving zsh command substitutions rather than prompting. Bedrock model discovery was failing when the corporate root CA was configured. The <code>permissions.blockReadsOutsideWorkingDirectories</code> setting was silently ignored on macOS. Managed settings were failing to load for claude.ai Enterprise and Team users. Prompt caching on Claude Fable 5.1 was invalidating on token refresh. Model switching was blocked after plugin hook failures. /rewind was not restoring file-read tracking. Multiple VS Code integration issues also landed.</p>
+
+<h4>Cadence and predecessors</h4>
+
+<p>The release lands the day after v2.1.259 (Sept 2 22:33 UTC), which shipped organization-pushed <code>managedMcpServers</code>, a <code>--permission-prompts none</code> flag for headless CI environments, native GitLab MR rendering as "MR !N" in tool summaries, and <code>--json</code> for <code>claude plugin validate</code>. Two releases inside 26 hours is Anthropic's fastest Claude Code cadence to date, driven by the parallel push around Fable 5.1 caching and GPT-6 Astra API support in the sibling Codex CLI.</p>
+
+<p class="source-footer"><a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534" font-family="Georgia,serif"><text x="60" y="30" text-anchor="middle" font-size="14" font-weight="700">v0.153.1</text><text x="60" y="46" text-anchor="middle" font-size="9" font-weight="700" opacity="0.7">v0.154.0-α2</text><text x="60" y="60" text-anchor="middle" font-size="14" font-weight="700">v0.153.2</text></g><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#166534" letter-spacing="1.4">CODEX · 162 ASSETS EA</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">OpenAI Codex CLI wires in GPT-6 Astra across three back-to-back Rust releases</h3>
+<p class="kicker">GitHub — openai/codex · 2026-09-03 · <a href="https://github.com/openai/codex/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Three tags cut inside a three-hour window: rust-v0.153.1 at 21:02 UTC opened API configuration for GPT-6 Astra, rust-v0.154.0-alpha.2 at 21:58, and rust-v0.153.2 at 23:53 corrected the Fast tier description from "1.5x" to "2x speed, increased usage." Each release ships 162 signed platform artifacts.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>OpenAI shipped three Rust Codex CLI tags on the same afternoon it launched GPT-6 Astra. The first, rust-v0.153.1 at 21:02 UTC, added GPT-6-Astra configuration through the API while preserving the existing default model and picker behavior. The alpha, rust-v0.154.0-alpha.2 at 21:58 UTC, opened the next-major dev track. The correction release, rust-v0.153.2 at 23:53 UTC, fixed the GPT-6-Astra Fast tier description from "1.5x" throughput to "2x speed, increased usage." OpenAI notes the correction has no impact on request processing.</p>
+
+<p>Every one of the three tags carries 162 signed downloadable assets covering macOS Intel and Apple silicon, Linux glibc and musl x86_64 and aarch64, and Windows x86_64 and aarch64. The rapid follow-on release is characteristic of the Codex team's pattern of shipping GPT-model API-config plumbing on the same day as the model itself, with the follow-on patch releases correcting user-facing description strings within hours.</p>
+
+<h4>Sibling tooling cadence</h4>
+
+<p>Anthropic followed the same-day-plumbing pattern with Claude Code v2.1.260 at 23:48 UTC. On the model-shim layer, LangChain, LlamaIndex and Vercel AI SDK all added <code>gpt-6-astra</code> aliases inside 24 hours of the OpenAI launch. Cursor and Windsurf both listed Astra as a selectable model by Thursday evening US time. The industry-standard tooling cycle around a new frontier model release is now well under a working day.</p>
+
+<p class="source-footer"><a href="https://github.com/openai/codex/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><rect x="14" y="14" width="12" height="10"/><rect x="30" y="14" width="12" height="10"/><rect x="46" y="14" width="12" height="10"/><rect x="62" y="14" width="12" height="10"/><rect x="78" y="14" width="12" height="10"/><rect x="14" y="30" width="12" height="10"/><rect x="30" y="30" width="12" height="10"/><rect x="46" y="30" width="12" height="10"/><rect x="62" y="30" width="12" height="10"/><rect x="78" y="30" width="12" height="10"/></g><text x="60" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#166534">10 × TAGS</text><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#166534" letter-spacing="1.2">b10781 → b10793</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">llama.cpp cuts ten signed release tags with Metal sparse flash-attention and multi-GPU CUDA streams</h3>
+<p class="kicker">GitHub — ggml-org/llama.cpp · 2026-09-03 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Between b10781 at 09:57 UTC and b10793 at 22:18 UTC, ten signed builds landed Metal sparse flash-attention, CUDA concurrent streams per split for multi-GPU, MMVQ-to-MMQ crossover tuning for SM87, OpenCL quantized-ops optimization, GBNF grammar fixes for empty object schemas, and a whole-source rebuild-on-each-commit bug fix.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>ggml-org's llama.cpp shipped ten signed release tags on Thursday between 09:57 UTC and 22:18 UTC, all under GPG key B5690EEEBB952194. Metal picked up sparse flash-attention (#28098) and a glu dispatch fix with <code>ne00=1</code> (#28306). CUDA added support for concurrent streams per split on multi-GPU (#28198) and MMVQ-to-MMQ crossover tuning for SM87 (#28285). Vulkan's flash-attention dequant path engagement was corrected (#28190). OpenCL got an optimization pass for quantized operations and decoding (#26477).</p>
+
+<p>Ergonomic and correctness fixes landed alongside. The mtmd tokenization signatures were made const (#28307) with const propagated to the preproc class (#28310). The common/json-schema helper fixed GBNF grammar generation for empty object schemas (#28279). The build system fix in #28278 stopped the whole source tree from rebuilding on each new commit, an issue that had been slowing developer iteration for weeks.</p>
+
+<h4>Cadence context</h4>
+
+<p>Ten signed tags in a single day is the second Thursday-cadence sprint from the maintainers in three weeks. The pattern of concentrated Thursday releases from ggml-org has become predictable enough that downstream distributors (LM Studio, Ollama, Jan.ai) now schedule their weekly pull windows to align with it. Backend-hardware support was the theme of the day: Metal, CUDA, Vulkan, OpenCL all picked up improvements, extending llama.cpp's cross-platform lead over the more CUDA-focused inference engines.</p>
+
+<p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g fill="none" stroke="#166534" stroke-width="1.4"><path d="M28 42 L 60 22 L 92 42 L 60 62 Z"/><circle cx="60" cy="42" r="6"/></g><text x="60" y="14" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#166534">$499</text><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#166534" letter-spacing="1.4">VIVE EAGLE · 13 LANGS</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">HTC Vive Eagle AI glasses launch in the US at $499 with user choice of Gemini or ChatGPT</h3>
+<p class="kicker">Android Authority / Bloomberg · 2026-09-03 · <a href="https://www.androidauthority.com/htc-vive-eagle-us-preorders-live-3687050/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">HTC opened US preorders Thursday at $499, letting buyers pick either Google Gemini or OpenAI ChatGPT as the on-glasses assistant with 13-language live translation, hands-free note-taking and voice-triggered photo capture across six frame configurations. EU shipments follow September 21 at €469 / £429.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>HTC opened US preorders for its Vive Eagle AI smart glasses on Thursday September 3 at $499, extending the previously Taiwan-only August 2025 debut to North America, Europe, the UK and Australia. The EU and UK prices came in at €469 and £429 respectively, with European shipments starting September 21.</p>
+
+<p>The consumer positioning is that buyers pick an assistant. Vive Eagle ships with either Google Gemini or OpenAI ChatGPT as the on-glasses voice interface, a rare user-selectable arrangement in a category where every other major shipping product locks to a single model. Core features include live translation in 13 languages, hands-free note-taking, and voice-triggered photo capture. HTC offers six configurations of round and square frames, clear and sun lenses, and four colorways including Glossy Coffee and Apricot.</p>
+
+<h4>Positioning against Meta and the field</h4>
+
+<p>The launch lands as Meta continues to work through the aftermath of last month's permanent camera disable on thousands of tampered Ray-Ban smart glasses whose privacy LEDs had been drilled out. Anker's parallel IFA push around the MindBase hub, TCL's on-device T-AI in its FreshIN air conditioner and Xiaomi's XRing O3 chip in the 18 Fold all indicate that the second half of 2026 is defined by AI moving into hardware categories that were until now unrelated. HTC's Vive Eagle is the highest-profile shipping consumer AI-glasses product with a dual-assistant model choice, at $499 sitting notably below Meta's premium Ray-Ban Display line.</p>
+
+<p class="source-footer"><a href="https://www.androidauthority.com/htc-vive-eagle-us-preorders-live-3687050/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><rect x="20" y="20" width="12" height="42" opacity="0.9"/><rect x="36" y="26" width="12" height="36" opacity="0.75"/><rect x="52" y="34" width="12" height="28" opacity="0.55"/><rect x="68" y="44" width="12" height="18" opacity="0.35"/></g><g stroke="#166534" stroke-width="1.4" fill="none"><path d="M84 32 L 92 24 L 100 32"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">AVGO −6% · NVDA +1%</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Broadcom falls 6 percent to $346.49 digesting Q3 print and the $350 billion two-year hyperscaler pipeline</h3>
+<p class="kicker">24/7 Wall St · 2026-09-03 · <a href="https://247wallst.com/investing/2026/09/03/broadcom-falls-6-as-soft-guidance-overshadows-221-ai-revenue-surge-nvidia-inches-higher-amd-slips/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Day-after reaction to Wednesday's $16.7 billion AI-semi print and Q4 revenue guide of $34.8 billion, $250 million below consensus, sent AVGO down 6 percent. Hock Tan sized the next two years at $350 billion of hyperscaler AI-semi shipments: $115 billion in FY27, $230 billion in FY28. NVDA edged 1 percent higher on the read-through.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>AVGO closed Thursday down 6 percent at $346.49 as investors digested Wednesday afternoon's Q3 FY26 print. Revenue of $29.6 billion up 86 percent year-over-year and adjusted EPS of $3.32 versus $3.24 expected paired with AI-semiconductor revenue of $16.7 billion up 221 percent year-over-year and 54 percent sequentially, now 56 percent of the company. Operating income set a record at $20.1 billion, up 92 percent, for a 67.9 percent margin. Infrastructure software added $8.8 billion up 29 percent.</p>
+
+<p>The Q4 revenue guide came in at $34.8 billion against $35.05 billion consensus, a $250 million miss the market read as a mix ceiling. The AI-semi guide of $21.7 billion (up 236 percent year-over-year) was as expected, but gross margin guidance of 73 percent — down 5 percentage points year-over-year and 210 basis points sequential — indicated the custom-ASIC ramp is compressing margins on the segment now growing fastest.</p>
+
+<blockquote class="pull-quote">"Demand for our custom AI accelerators and networking continues to be very strong."
+<cite>— Hock Tan, Broadcom CEO, Q3 FY26 earnings call, 2026-09-02</cite></blockquote>
+
+<h4>The $350 billion two-year window</h4>
+
+<p>Tan told analysts on the call that Broadcom expects to ship $350 billion of AI semiconductors to six hyperscaler customers over the next two fiscal years: $115 billion in FY27 and $230 billion in FY28. That framing puts a hard number on the previously more loosely-stated "more than $100 billion in 2027" line, and starts placing the FY28 exit rate at a level that puts Broadcom's custom-ASIC business inside touching distance of Nvidia's merchant-GPU AI revenue at the current run rate.</p>
+
+<p>Neighboring names traded on the read-through. NVDA rose 1 percent to $227.69. AMD slipped 2 percent to $448.68. MRVL was flat at $205.20. The market pattern says the $350 billion Broadcom pipeline is being read as additive to rather than substitutive of Nvidia demand, because the workloads inside hyperscaler custom-ASIC volume are increasingly targeting inference and workload-specific optimization while training remains overwhelmingly Nvidia-served.</p>
+
+<p class="source-footer"><a href="https://247wallst.com/investing/2026/09/03/broadcom-falls-6-as-soft-guidance-overshadows-221-ai-revenue-surge-nvidia-inches-higher-amd-slips/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="18" y="22" width="18" height="14" rx="2"/><rect x="42" y="22" width="18" height="14" rx="2"/><rect x="66" y="22" width="18" height="14" rx="2"/><rect x="90" y="22" width="14" height="14" rx="2"/><path d="M27 46 L 27 58 M51 46 L 51 58 M75 46 L 75 58 M97 46 L 97 58"/></g><g fill="#166534"><circle cx="27" cy="58" r="3"/><circle cx="51" cy="58" r="3"/><circle cx="75" cy="58" r="3"/><circle cx="97" cy="58" r="3"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">GROK BOTS · PERSISTENT</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">xAI redesigns Grok around persistent Bots with cloud workspaces, presence and routines</h3>
+<p class="kicker">xAI / Releasebot · 2026-09-03 · <a href="https://x.ai/news" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Design essay "Designing Grok Bot for a world of persistent agents" introduces five new primitives: Bots, Chats, Prompts, Tools, Artifacts. Bots carry persistent identities and cloud workspaces with three access levels (Status, Preview, Takeover), presence states (idle/thinking/working/waiting/blocked/done), inline widgets, group chats and cron-and-event Routines.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>xAI's sole Sept 3 shipment was a full architectural redesign of Grok organized around what the design essay calls "persistent agents." The five primitives underneath the redesign are Bots, Chats, Prompts, Tools and Artifacts. Each Bot carries a persistent identity, avatar and cross-session memory, listed in a sidebar Bot Roster the user can invoke without starting a new chat.</p>
+
+<p>Presence states are the visible surface. A Bot can be idle, thinking, working, waiting, blocked or done, each with its own indicator glyph. A Bot Workspace gives each Bot its own cloud computer with three access levels: Status (icon-only view), Preview (side panel showing the workspace), and Takeover (full-screen control of the workspace). Inline Cards and Widgets render outputs directly in chat rather than as attachments. Group Chats let multiple Bots share context while each retains independent memory. Routines run on schedule or event triggers so a Bot can start work without a prompt.</p>
+
+<h4>Positioning against ChatGPT and Claude</h4>
+
+<p>The design mirrors Anthropic's Claude Cowork and OpenAI's Operator/Codex Cloud in the persistent-agent direction, but xAI has committed harder to the primitives layer, making Bots first-class objects addressable by external systems. The Routines feature specifically extends what agent-native AI companies have been pushing since mid-2026, giving Grok the closest consumer surface to Anthropic's scheduled skills. The essay is timed 48 hours after Meta's own Hatch agent internal rollout news, positioning Grok Bots as an outward-facing consumer answer to what Meta is deploying inward for employees.</p>
+
+<p class="source-footer"><a href="https://x.ai/news" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="20" y="34" width="80" height="26" rx="4"/><circle cx="34" cy="60" r="4"/><circle cx="86" cy="60" r="4"/><line x1="20" y1="34" x2="30" y2="24"/><line x1="100" y1="34" x2="90" y2="24"/><line x1="30" y1="24" x2="90" y2="24"/></g><text x="60" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#166534">CYBERCAB</text><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#166534" letter-spacing="1.4">AUSTIN · 4:45 PM CT</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Tesla unveils the two-seat gold Cybercab at an invite-only Austin event</h3>
+<p class="kicker">TechCrunch · 2026-09-03 · <a href="https://techcrunch.com/2026/09/03/the-cybercab-is-teslas-fork-in-the-road-moment/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Formal launch event Thursday at 4:45 PM CT downtown Austin: two-seat gold sedan, no steering wheel, no pedals, lower-capacity battery pack, running on Tesla's AI4 computer plus camera-only navigation. 420 autonomous vehicles registered in Texas at time of publication.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Tesla held the formal production Cybercab unveil Thursday, September 3 at 4:45 PM CT in downtown Austin. The event was invite-only for Robotaxi rider sweepstakes top scorers and simultaneously livestreamed. The Cybercab is a two-seat gold sedan without a steering wheel or pedals, running a lower-capacity battery pack than other Tesla models and using Tesla's AI4 computer with camera-only navigation for full autonomy.</p>
+
+<p>The Cybercab emerged from the "cheaper EV platform" work Musk redirected to full autonomy after the April 2024 layoffs. The Model Y-based Robotaxi network Tesla has been running in Austin since June 2025, in additional Texas cities and in Florida gets the Cybercab as its dedicated hardware for the fleet-expansion phase. At publication, 420 autonomous vehicles were registered in Texas.</p>
+
+<blockquote class="pull-quote">"The streets won't be the same anymore."
+<cite>— Ashok Elluswamy, Tesla AI head, on the Cybercab launch</cite></blockquote>
+
+<blockquote class="pull-quote">"A Storm of Cybercabs."
+<cite>— Elon Musk, on X, ahead of the Austin event</cite></blockquote>
+
+<h4>Uber's simultaneous move</h4>
+
+<p>The unveil timing is unmistakable. Also on Thursday, the Financial Times reported Uber lobbying New Jersey and Washington, D.C. legislators to cap robotaxi deployments at 15 percent of rides during a three-year pilot and to require any AV operator to run a "hybrid network" mixing human drivers with autonomy. Uber's own internal estimate is that one autonomous vehicle displaces roughly four drivers. The Cybercab is Tesla's answer to the "pure driverless is not permitted" regulatory push, arriving with a hardware platform that structurally rules out ever having a driver seat installed.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/09/03/the-cybercab-is-teslas-fork-in-the-road-moment/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="24" y="22" width="72" height="34" rx="4"/><line x1="24" y1="34" x2="96" y2="34"/><rect x="34" y="42" width="16" height="10"/><rect x="54" y="42" width="16" height="10"/><rect x="74" y="42" width="16" height="10"/></g><g fill="#166534"><rect x="60" y="24" width="24" height="6" opacity="0.6"/></g><text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">MINDBASE · 26 TOPS · 48TB</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Anker debuts MindBase at IFA Berlin: 26-TOPS local AI hub with 48TB storage and Matter 1.5</h3>
+<p class="kicker">Homekit News / Yanko Design · 2026-09-03 · <a href="https://homekitnews.com/2026/09/03/anker-unveils-mindbase-with-matter-1-5-and-homekit-secure-video-support/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Matter 1.5 controller with in-house TrueSmart Agent LLM on a 26-TOPS AI Core, 64GB internal storage plus two drive bays supporting 48TB, running 20 cameras and 34 sensors on Thread, Zigbee, Wi-Fi, BLE and dual Gigabit Ethernet, with existing eufy HomeBase S380 footage transferable.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anker unveiled MindBase at IFA 2026 on Wednesday, September 3, positioning it as a Matter 1.5 home hub with a 26-TOPS on-device TrueSmart Agent LLM running fully locally on a dedicated AI Core compute card. The unit ships with 64GB internal eMMC plus two drive bays supporting up to 48TB of local expandable storage. Connectivity spans Thread, Zigbee, dual-band Wi-Fi, Bluetooth/BLE, two Gigabit Ethernet ports and three USB 3.0.</p>
+
+<p>MindBase supports 20 cameras (16 wireless plus 4 wired via PoE) and 34 sensors. The EasyOmni Link software layer supports roughly 100 Anker devices and 120+ Matter-compatible products. HomeKit Secure Video, Alexa, Google Assistant and Home Assistant integrations all ship at launch. The one detail that likely matters most to Anker's existing customer base: footage from the current eufy HomeBase S380 transfers directly to MindBase.</p>
+
+<blockquote class="pull-quote">"Your old cameras stay. They get a brain. That is a far rarer offer than a new camera, and considerably cheaper than replacing four of them."
+<cite>— Yanko Design hands-on, IFA 2026</cite></blockquote>
+
+<h4>Launch bundle and brand consolidation</h4>
+
+<p>The launch bundle "MindBase Security Kit" includes the TrackLight Cam S1 (4K auto-tracking), the Video Doorbell S4 (3K, 180-degree, $299.99 with chime, shipping late September 2026 in UK/US/Canada and select EU markets), the Window Camera E10 ($69.99, later 2026), and a Smart Security Shield with 15-meter radar. Anker used the IFA appearance to announce it is retiring the Eufy, Soundcore and other sub-brands under the parent Anker name.</p>
+
+<p>MindBase pricing and ship date remain unannounced. The launch positions Anker directly against Amazon Ring Alarm, Google Nest and Apple HomeKit's centralized brains, with on-device AI processing as the differentiation lever versus cloud-based competitors.</p>
+
+<p class="source-footer"><a href="https://homekitnews.com/2026/09/03/anker-unveils-mindbase-with-matter-1-5-and-homekit-secure-video-support/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="20" y="20" width="80" height="42" rx="2"/><line x1="20" y1="30" x2="100" y2="30"/></g><g fill="#166534"><text x="60" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="700">20,736</text><text x="60" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">DIMMING ZONES · 10K NITS</text></g><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#166534" letter-spacing="1.4">TCL X11L · IFA 2026</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">TCL opens IFA 2026 with 20,736-zone X11L QD-Mini LED, P80 Ultra phone and T-AI air conditioner</h3>
+<p class="kicker">PR Newswire · 2026-09-03 · <a href="https://www.prnewswire.com/news-releases/inspired-by-life-powered-by-ai-tcl-redefines-everyday-experiences-at-ifa-2026-302869243.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Hall 21A launch at Messe Berlin included the X11L QD-Mini LED TV with 10,000 nits HDR peak and 100 percent BT.2020 gamut, P80 Ultra smartphone with 50MP 3x periscope and 3,200-nit 1.5K NXTPAPER display, FreshIN 3.0 air conditioner with on-device T-AI cutting up to 37 percent energy, and Gemini for Google TV rolling out on TCL sets in UK, France, Italy and Spain.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>TCL opened its IFA 2026 press event Wednesday, September 3 in Hall 21A at Messe Berlin with what the company calls its "Inspiration Habitat." The centerpiece display product is the X11L QD-Mini LED TV: 20,736 local dimming zones, 10,000 nits HDR peak brightness, 100 percent BT.2020 gamut, and Bang &amp; Olufsen audio tuning. The X11L is at the top end of a display line the company continues to push against Samsung QD-OLED and Sony backlit LED for the premium TV segment.</p>
+
+<p>Mobile: the P80 Ultra smartphone ships with a 50MP 3x periscope telephoto, a 1.5K display running at 3,200 nits peak, and the next-generation NXTPAPER technology TCL has been pushing as a screen-fatigue reduction feature. The P80 Pro also uses NXTPAPER. Home audio: the Q95K soundbar is 11.1.4-channel with B&amp;O tuning.</p>
+
+<h4>AI in appliances</h4>
+
+<p>The TCL FreshIN 3.0 Ultra Air Conditioner runs an on-device T-AI model tuning airflow and compressor cycling in real time, with TCL reporting up to 37 percent additional energy savings versus the prior generation. The AI SuperDrum Laundry Tower P9 Ultra adds generative-AI Wash cycles with a triple-inverter heat pump. Smart-lock hardware includes the K11D Pro Dual-Screen AI Smart Lock and the D2 Pro Matter Palm Vein Smart Lock.</p>
+
+<p>The consumer-agent lineup includes the AiMe Family Companion Robot (multimodal), the TCL Tbot children's smartwatch, RayNeo GT Max AR glasses, and RayNeo iO smart glasses. TCL also launched the NXTHOME integrated smart-display ecosystem with Bang &amp; Olufsen, Roche Bobois, Castelli Milano 1938, Chris Lefteri Design and WGSN. Gemini for Google TV is rolling out on TCL sets in the UK, France, Italy and Spain. TCL enters IFA as a FIBA Global Partner alongside the 2026 FIBA Women's Basketball World Cup running in Berlin.</p>
+
+<p class="source-footer"><a href="https://www.prnewswire.com/news-releases/inspired-by-life-powered-by-ai-tcl-redefines-everyday-experiences-at-ifa-2026-302869243.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><circle cx="60" cy="34" r="10"/><path d="M50 44 L 50 60 M70 44 L 70 60 M55 60 L 55 68 M65 60 L 65 68"/></g><g fill="#166534"><circle cx="56" cy="32" r="1.5"/><circle cx="64" cy="32" r="1.5"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">XIAOMI · 3,300 m² BOOTH</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Xiaomi makes its IFA Berlin debut with CyberOne humanoid and in-house XRing O3 3nm AI chip</h3>
+<p class="kicker">Seoul Economic Daily · 2026-09-03 · <a href="https://en.sedaily.com/finance/2026/09/03/xiaomi-makes-ifa-debut-with-humanoid-robot-and-in-house-ai" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Largest overseas booth in company history at 3,300 m² Hall 6.2 unveiled 380+ products under the "Human × Car × Home" ecosystem, the CyberOne humanoid, the in-house 3nm XRing O3 AI application processor, and the Xiaomi 18 Fold formally launching Sept 7. CyberOne lifted plant nut-fastening from 90 to 98 percent within four months.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Xiaomi held its debut IFA Berlin press conference Wednesday, September 3 at 10:30 local time. The 3,300 m² Hall 6.2 booth is the largest standalone overseas showcase in company history. On the floor: 380-plus products and technologies spanning the "Human × Car × Home" ecosystem, all unified by Xiaomi HyperOS.</p>
+
+<p>Product headlines. The CyberOne humanoid robot performed real-time interactions with visitors including "finger-hearts," a public-facing demonstration of a platform Xiaomi has been iterating internally against Unitree, Boston Dynamics and Optimus. CyberOne's task-success rate for nut-fastening at Xiaomi's own SU7 EV plant lifted from 90 to 98 percent within four months of deployment. XRing O3, Xiaomi's in-house 3nm AI application processor, powers the Xiaomi 18 Fold foldable phone whose formal launch is set for September 7. New AI model lineup includes MiMo V2.5 Pro, MiLoco and MiClo. The Xiaomi Vision Gran Turismo concept car appeared alongside production SU7 and SU7 Ultra EVs.</p>
+
+<blockquote class="pull-quote">"Participating in IFA is an important milestone in Xiaomi's global journey."
+<cite>— Xu Fei, Xiaomi Chief Marketing Officer, IFA 2026 press conference</cite></blockquote>
+
+<h4>The chip play</h4>
+
+<p>XRing O3 is the second-generation of Xiaomi's in-house AI application processor line launched last year with XRing O1. The move to 3nm brings Xiaomi's homegrown silicon roadmap to parity on process node with Apple A-series and Qualcomm Snapdragon 8 Gen 4 within the same shipping window. For a company that in 2020 was still a pure Qualcomm-dependent Android OEM, four years to homegrown 3nm mobile silicon in a shipping foldable is the fastest OEM-to-designer timeline any Chinese hardware maker has posted. The IFA debut is the first time Xiaomi has consolidated its full stack — silicon, agent models, phones, robots and EVs — behind a single European-facing merchandising push.</p>
+
+<p class="source-footer"><a href="https://en.sedaily.com/finance/2026/09/03/xiaomi-makes-ifa-debut-with-humanoid-robot-and-in-house-ai" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="22" y="22" width="76" height="42" rx="4"/><line x1="22" y1="34" x2="98" y2="34"/><line x1="30" y1="44" x2="72" y2="44"/><line x1="30" y1="52" x2="60" y2="52"/></g><g fill="#166534"><circle cx="30" cy="28" r="1.5"/><circle cx="36" cy="28" r="1.5"/><circle cx="42" cy="28" r="1.5"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">CATCH · $99/MO · $5M SEED</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Catch exits stealth with $5 million seed for an AI executive assistant that places phone calls</h3>
+<p class="kicker">TechStartups · 2026-09-03 · <a href="https://techstartups.com/2026/09/03/catch-emerges-from-stealth-with-5m-to-build-an-ai-executive-assistant-that-handles-admin-work-for-you/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Tel Aviv-based Catch raised $5M co-led by Entrée Capital and Pitango with Seedcamp and Factorial Capital participating, opening to the public at $99 per month with a 10-day trial. Beta traction: 12,000+ meetings scheduled, 20,000+ tasks delegated, 200,000+ emails processed, agent places outbound calls across Slack, WhatsApp, iMessage, email and voice.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Catch came out of stealth Thursday, September 3 with a $5 million seed round co-led by Entrée Capital and Pitango with Seedcamp and Factorial Capital participating. Tel Aviv-based, product available at catchagent.ai. Founders Nir Sabato (CEO) and Yoav Ramon (CTO). Public launch pricing is $99 a month with a 10-day trial, sign-in via existing Google or Microsoft account rather than a new dashboard.</p>
+
+<p>The product runs across Slack, WhatsApp, iMessage, email and phone. Catch books and moves meetings by emailing the other side directly. It places outbound calls to restaurants, clinics, hotels and airlines rather than routing the user to a phone number. It drafts and sends email after user intent confirmation. Beta traction: 12,000-plus meetings scheduled, 20,000-plus tasks delegated, 200,000-plus emails processed.</p>
+
+<blockquote class="pull-quote">"Executives don't want to build their own AI agents. They want it done right, in a way they can trust."
+<cite>— Nir Sabato, Catch co-founder and CEO</cite></blockquote>
+
+<h4>Architecture</h4>
+
+<p>Catch runs a "splinter agents" architecture that limits data access per task, aimed at the enterprise-buyer trust concerns that killed the first wave of AI executive-assistant tools in 2023-24. The company is SOC 2 compliant with an independent audit. The bet is that the agent's ability to actually place outbound calls, rather than dictating what a human should call about, is what differentiates it against Google Duet AI meeting-scheduling, Notion AI's calendar layer and Microsoft Copilot's calendar-in-Outlook. Catch is one of a handful of shipping AI-native executive-assistant tools in market at commodity SaaS pricing.</p>
+
+<p class="source-footer"><a href="https://techstartups.com/2026/09/03/catch-emerges-from-stealth-with-5m-to-build-an-ai-executive-assistant-that-handles-admin-work-for-you/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534" font-family="Georgia,serif"><text x="60" y="34" text-anchor="middle" font-size="16" font-weight="700">$3.77B</text><text x="60" y="52" text-anchor="middle" font-size="9" font-weight="700" letter-spacing="1.4">ARR · +25% YoY</text><text x="60" y="66" text-anchor="middle" font-size="7" font-weight="700" opacity="0.7" letter-spacing="1.4">Q4 FY26 · ZS</text></g></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Zscaler prints Q4 FY26: $898M revenue up 25 percent, ARR to $3.77B, guides FY27 to 17 percent growth</h3>
+<p class="kicker">GlobeNewswire · 2026-09-03 · <a href="https://www.globenewswire.com/news-release/2026/09/03/3356252/0/en/zscaler-announces-strong-fourth-quarter-and-fiscal-2026-financial-results.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">FY26 revenue $3.35B up 25 percent, net new ARR of $246M in Q4 (17 percent organic ex-Red Canary), FY26 free cash flow $779.1M at 23 percent margin. FY27 guide: revenue $3.91-3.94B (16.6-17.5 percent growth), ARR $4.40-4.43B, positioning Agentic SecOps and Security for AI as the growth wedge on top of Zero Trust SASE.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Zscaler closed FY26 Wednesday afternoon with $898.2 million of Q4 revenue up 25 percent year-over-year and ending ARR of $3.77 billion also up 25 percent. Q4 net new ARR came in at $246 million — 17 percent organic once the Red Canary acquisition contribution of $141 million in ARR is stripped out. Q4 non-GAAP EPS was $1.19 against a GAAP net loss of $3.4 million.</p>
+
+<p>Full-year FY26 revenue landed at $3.353 billion up 25 percent with non-GAAP EPS of $4.21 and a GAAP net loss of $63.2 million. Free cash flow was $779.1 million at a 23 percent margin. The FY27 guide: revenue $3.908-3.938 billion (16.6-17.5 percent growth), ARR $4.396-4.426 billion (16.6-17.4 percent growth), non-GAAP EPS $4.86-4.90, and free cash flow margin 23.0-23.5 percent.</p>
+
+<blockquote class="pull-quote">"AI represents one of the most significant opportunities in Zscaler's history. We are well positioned to extend our leadership as the cybersecurity platform for the AI era."
+<cite>— Jay Chaudhry, Zscaler CEO, Q4 FY26 release</cite></blockquote>
+
+<h4>The AI wedge</h4>
+
+<p>Zscaler explicitly called out four growth vectors: Zero Trust SASE (the core), Agentic SecOps, Data Security, and Security for AI. The company's read is that AI-driven security spending — protecting AI applications, monitoring agentic workflows, controlling data flowing into and out of frontier models — is the second-derivative uplift on top of the existing zero-trust base. The Red Canary acquisition delivered $141 million in ARR contribution and is being positioned as an accelerator for the Agentic SecOps line specifically.</p>
+
+<p>Investors read the FY27 guide as a decelerating but still solid growth trajectory — 25 percent falling to 17 percent implies the AI wedge has to materialize faster than the core zero-trust market to reaccelerate the top line into FY28. On the peer stack, Zscaler's print reads similarly to CrowdStrike's ARR-growth trajectory and roughly in line with Cloudflare on absolute ARR.</p>
+
+<p class="source-footer"><a href="https://www.globenewswire.com/news-release/2026/09/03/3356252/0/en/zscaler-announces-strong-fourth-quarter-and-fiscal-2026-financial-results.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><path d="M14 60 C 40 62, 60 30, 80 26 C 92 24, 100 20, 106 16"/></g><g fill="#166534"><circle cx="14" cy="60" r="2"/><circle cx="80" cy="26" r="2.5"/><circle cx="106" cy="16" r="3"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">CIEN · $8.5B BACKLOG</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Ciena prints record $1.7B Q3 revenue up 37 percent on hyperscaler AI-optics demand</h3>
+<p class="kicker">Yahoo Finance / Ciena · 2026-09-03 · <a href="https://finance.yahoo.com/markets/stocks/articles/ciena-corporation-q3-2026-earnings-172313935.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Q3 FY26 revenue $1.67 billion up 37 percent with adjusted EPS $2.11 up 215 percent, backlog jumping $800M in a single quarter to $8.5B on hyperscaler AI-optics demand. FY27 revenue floor guided to $8.3-8.4B (at least 30 percent growth) at 25-27 percent adjusted operating margin. TAM projected to double from $25B to $50B by 2029.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Ciena reported Q3 FY26 revenue of $1.67 billion Thursday, a record and 37 percent higher year-over-year, beating $1.65 billion consensus. Adjusted EPS came in at $2.11 up 215 percent year-over-year against GAAP EPS of $1.83 and GAAP net income of $266.4 million. Adjusted gross margin rose 450 basis points to 46.4 percent, including a roughly 70 basis point tariff refund benefit, running 90 basis points above the high end of guidance. Operating margin was 22.5 percent.</p>
+
+<p>The most consequential line was backlog. Ciena added $800 million to backlog in a single quarter, ending Q3 at $8.5 billion, and management guided the company to exit FY26 above $10 billion. Q4 revenue guide is $1.25-2.25 billion. FY26 revenue guide is $6.37-6.47 billion. FY27 revenue floor is $8.3-8.4 billion, implying at least 30 percent year-over-year growth. FY27 adjusted operating margin is guided to 25-27 percent.</p>
+
+<blockquote class="pull-quote">"Coherent optics are the indispensable element for next-generation AI architectures."
+<cite>— Ciena management, Q3 FY26 earnings call</cite></blockquote>
+
+<blockquote class="pull-quote">"A hyperscaler confirmed that demand would remain unaffected for at least two years, even if some data center construction is paused."
+<cite>— Ciena management, reading a customer assurance to analysts</cite></blockquote>
+
+<h4>The TAM doubling</h4>
+
+<p>Ciena management now projects the total addressable market for coherent optics to double from $25 billion to $50 billion by 2029. That expansion is being driven almost entirely by AI training and inference clusters requiring intra-datacenter and inter-datacenter optical interconnect at bandwidth scales the merchant switch-and-router category cannot serve. Ciena joins Broadcom, Marvell and Coherent as the four public equities most exposed to the AI-optical-buildout thesis, with Ciena distinguishing itself on the longer-reach coherent side of the market.</p>
+
+<p class="source-footer"><a href="https://finance.yahoo.com/markets/stocks/articles/ciena-corporation-q3-2026-earnings-172313935.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><circle cx="60" cy="42" r="20"/><circle cx="60" cy="42" r="12"/></g><g fill="#166534" font-family="Georgia,serif"><text x="60" y="46" text-anchor="middle" font-size="11" font-weight="700">$70M</text></g><text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">ULTRAHUMAN · $365M · QCOM</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Ultrahuman raises $70M at $365M led by Qualcomm Ventures to turn smart rings into computers</h3>
+<p class="kicker">TechCrunch · 2026-09-03 · <a href="https://techcrunch.com/2026/09/03/qualcomm-backs-ultrahuman-in-70m-round-on-bet-to-turn-smart-rings-into-computers/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">$65 million equity plus $5 million debt at a $365 million post-money valuation with Labcorp, Alpha Wave, Blume Ventures and Nexus Venture Partners participating. ARR $140 million currently, targeting $200 million by January 2027, ~800,000 rings sold, US demand running 18-20x supply. Qualcomm will power a next-gen model.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Ultrahuman closed a $70 million round Thursday, $65 million equity plus $5 million debt, at a $365 million post-money valuation. Qualcomm Ventures led. Labcorp, Alpha Wave, Blume Ventures, Nexus Venture Partners and Alteria Capital (debt) participated. Current ARR is $140 million with the company targeting $200 million by January 2027.</p>
+
+<p>Cumulative rings sold have grown to roughly 800,000 from about 700,000 in February 2026. Subscription attach on the PowerPlugs features runs at 12 percent of users. Geographic revenue mix is US 45 percent, India 11 percent. US demand runs 18-20x available supply since the redesigned Ring Pro relaunched following a patent-dispute-driven production disruption. Qualcomm will power a new ring model; existing rings continue on Nordic Semiconductor chips.</p>
+
+<blockquote class="pull-quote">"All ring devices today are like trackers. We want to make the ring more like a computer."
+<cite>— Mohit Kumar, Ultrahuman founder and CEO</cite></blockquote>
+
+<h4>The Oura contrast</h4>
+
+<p>Ultrahuman's positioning is squarely against Oura, which is pursuing an IPO at a valuation above $16 billion. Ultrahuman is one twentieth of Oura's expected valuation with roughly one tenth of the installed base, but is growing ARR faster and shipping the Ring Pro at higher gross margin. The Qualcomm partnership specifically enables the next-generation product's positioning as an on-device computer with AI, game-controller and third-party app capabilities. That's a materially different product surface than Oura's current health-tracker positioning and gives Ultrahuman a differentiated ceiling if it can convert supply into shipments.</p>
+
+<p class="source-footer"><a href="https://techcrunch.com/2026/09/03/qualcomm-backs-ultrahuman-in-70m-round-on-bet-to-turn-smart-rings-into-computers/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g fill="#166534"><rect x="14" y="46" width="10" height="16" opacity="0.4"/><rect x="28" y="38" width="10" height="24" opacity="0.5"/><rect x="42" y="24" width="10" height="38" opacity="0.65"/><rect x="56" y="10" width="10" height="52"/><rect x="70" y="20" width="10" height="42" opacity="0.6"/><rect x="84" y="28" width="10" height="34" opacity="0.5"/><rect x="98" y="34" width="10" height="28" opacity="0.4"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">AUG 2026 · $42B · +122%</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Global venture funding hit $42B in August up 122 percent year-over-year on seven billion-dollar rounds</h3>
+<p class="kicker">Crunchbase News · 2026-09-03 · <a href="https://news.crunchbase.com/venture/global-funding-billion-dollar-deals-august-2026/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">August 2026 aggregate across 1,500-plus startups, up 122 percent YoY versus August 2025 but down 25 percent MoM from July's $56 billion. Databricks led at $5B / $190B valuation. Hadrian, River AI, Yuanxin Satellite, Valar Atomics, Poolside and Base Power rounded out the seven $1B+ tickets; Unitree IPO'd at $9B and Nvidia agreed to buy Hugging Face for $12.9B.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Crunchbase News published its August 2026 global venture funding aggregate on Thursday. Total funding across all sectors: $42 billion across more than 1,500 startups. That's up 122 percent year-over-year versus August 2025 but down 25 percent month-over-month from July's $56 billion print. Seven billion-dollar-plus rounds closed in August, the second-highest count of 2026 behind July's 13.</p>
+
+<p>Largest August round: Databricks at $5 billion at a $190 billion valuation, adding $56 billion of valuation in six months. The rest of the ten-figure list ran Hadrian (defense tech), River AI (custom AI fine-tuning, which raised both a seed and Series A in 2026 for a combined $1.1 billion early-stage), Yuanxin Satellite (LEO), Valar Atomics (nuclear), Poolside (automated coding, which Nvidia backed the same month with a $6 billion license and $1 billion equity at $12 billion), and Base Power (home batteries).</p>
+
+<blockquote class="pull-quote">"Venture capital continues to concentrate rapidly among a small group of fast-growing companies."
+<cite>— Crunchbase News, August 2026 aggregate</cite></blockquote>
+
+<h4>The exit stack</h4>
+
+<p>The month closed with two marquee exits: Unitree's humanoid-robotics IPO at $9 billion, opening 629 percent above its Shanghai STAR listing price, and Nvidia's $12.9 billion agreement to acquire Hugging Face at roughly 100x ARR and nearly triple the 2023 Series D post-money. The sector spread across the seven-figure rounds — physical manufacturing (Hadrian, Valar), defense, aerospace, energy (Base Power) alongside AI/software (River AI, Poolside) — signals capital is diversifying out of pure-software AI into what practitioners are now consistently calling "physical AI" and adjacent capital-intensive verticals.</p>
+
+<p class="source-footer"><a href="https://news.crunchbase.com/venture/global-funding-billion-dollar-deals-august-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="30" y="20" width="60" height="44" rx="2"/><line x1="30" y1="32" x2="90" y2="32"/><path d="M40 42 L 45 47 L 60 32"/></g><g fill="#166534"><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.4">BAN ASI · S.___ · H.R.___</text></g><text x="60" y="30" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#166534">20 YRS</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Sanders and Casar introduce Ban Artificial Superintelligence Act with 20-year prison terms for violators</h3>
+<p class="kicker">The Hill / Common Dreams · 2026-09-03 · <a href="https://thehill.com/policy/technology/6069131-sanders-casar-ai-superintelligence-ban/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Bill would permanently ban development and deployment of superintelligent AI in the US and temporarily pause advanced AI development until a new cabinet-level federal agency writes safety rules. Corporate dissolution for violators; individuals face up to 20 years in prison. Directs US to pursue international agreements and export controls to prevent ASI development globally.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Senator Bernie Sanders (I-VT) and Representative Greg Casar (D-TX) introduced the Ban Artificial Superintelligence Act on Thursday, September 3. The bill would permanently prohibit the development and deployment of superintelligent AI in the United States and would impose a temporary pause on advanced AI development until a new federal regulator writes safety rules.</p>
+
+<p>The statute defines artificial superintelligence as any AI system that "exhibits, or can easily be modified to exhibit, capabilities matching or exceeding human cognitive performance across a broad range of domains" — or one with "sufficient capabilities to plan and execute the disempowerment of humanity, including by overthrowing or undermining the U.S. government." The definition places the bright-line threshold squarely inside the operational range the AI Preparedness Framework and Anthropic Responsible Scaling Policy already use.</p>
+
+<h4>Enforcement structure</h4>
+
+<p>The bill would create a new cabinet-level federal agency to enforce the prohibition. Corporate violators face dissolution. Individuals responsible face up to 20 years in prison. The bill directs the United States to pursue international agreements and export controls to prevent ASI development elsewhere in the world, extending existing US chip-export controls to model-development controls that could reach beyond US persons and US-based companies.</p>
+
+<p>The timing is unmistakable. The bill drops on the same day OpenAI declares GPT-6 Astra "the first frontier model to reach the Preparedness Framework's Critical cybersecurity capability threshold." The lag between the model capability moving into a formally-flagged critical tier and legislation targeting the tier directly is essentially zero. Sanders framed the legislation as a response to "rogue AI incidents." Both chambers are expected to see the bill referred to committee. Passage under a Republican trifecta is unlikely in the near term, but the specific definition threshold and the 20-year prison provision set the legislative reference point future bills will negotiate against.</p>
+
+<p class="source-footer"><a href="https://thehill.com/policy/technology/6069131-sanders-casar-ai-superintelligence-ban/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy trend">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><circle cx="36" cy="42" r="10"/><circle cx="60" cy="42" r="10"/><circle cx="84" cy="42" r="10"/><line x1="46" y1="42" x2="50" y2="42"/><line x1="70" y1="42" x2="74" y2="42"/></g><text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">UBER · UNIONS · AVS</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-trend">Trend</span></div>
+<h3 class="headline">Uber lobbies with driver unions to cap pure-driverless robotaxi deployments</h3>
+<p class="kicker">Financial Times / Gizmodo · 2026-09-03 · <a href="https://gizmodo.com/uber-fearing-getting-ubered-finally-sides-with-driver-unions-2000806928" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">FT reported Thursday that Uber is lobbying New Jersey and Washington, D.C. to require at least 85 percent of rides be human-driven during a three-year pilot and to force any AV operator to run a "hybrid" mixed fleet. Robotaxis are less than 0.5 percent of Uber trip volume today. Uber cut 3,300 corporate jobs the same week and launched 15 human-supervised robotaxis in London.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The Financial Times reported Thursday that Uber is lobbying state legislatures in New Jersey and Washington, D.C. to require at least 85 percent of robotaxi rides remain human-driven during a three-year pilot. A separate bill Uber has signed onto would block pure-driverless AVs from Washington, D.C. roads and force any AV operator to run what the bill calls a "hybrid network" mixing robotaxis and human drivers. The Waymo model of pure-driverless deployment would be effectively prohibited.</p>
+
+<p>Robotaxis currently make up less than 0.5 percent of Uber trip volume. Uber's own internal estimate is that one autonomous vehicle displaces roughly four drivers. The company divested its AV unit to Aurora in 2020 and has since put more than $10 billion into AV vehicle purchases and equity stakes in AV companies rather than building its own stack.</p>
+
+<blockquote class="pull-quote">"For AVs to scale, drivers have to lose."
+<cite>— A former Uber executive, quoted by the Financial Times</cite></blockquote>
+
+<h4>The dual move</h4>
+
+<p>Uber cut roughly 3,300 corporate jobs — 10 percent of global workforce — the same week to fund its $10 billion-plus robotaxi partnership program. On Thursday it also launched 15 human-supervised robotaxis in London, the UK's first autonomous taxi service, all with human safety drivers present. The strategic contradiction is deliberate: lobby against unrestricted driverless competition where it would take Uber trip volume today, deploy AVs where they add to Uber's ride inventory rather than substitute for it.</p>
+
+<p>Manny Pastreich, president of 32BJ SEIU, told the FT that labor and Uber "occasionally landed on the same side" but cautioned the union is not relying on continued alignment. The same day Tesla unveiled its two-seat gold Cybercab in Austin — a vehicle whose lack of steering wheel and pedals makes it structurally impossible to comply with the "85 percent human-driven" model Uber is lobbying for. The regulatory fight over the next 24 months is essentially a fight over whether the Cybercab hardware ships in New Jersey and Washington, D.C. at all.</p>
+
+<p class="source-footer"><a href="https://gizmodo.com/uber-fearing-getting-ubered-finally-sides-with-driver-unions-2000806928" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy trend">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="20" y="22" width="80" height="36" rx="3"/><line x1="30" y1="34" x2="90" y2="34"/><line x1="30" y1="42" x2="70" y2="42"/><line x1="30" y1="50" x2="80" y2="50"/></g><g stroke="#881337" stroke-width="2" fill="none"><line x1="24" y1="26" x2="96" y2="54"/></g><text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">META · TOKENMAXX OFF</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-trend">Trend</span></div>
+<h3 class="headline">Meta strips AI-usage metrics from performance reviews after July class-action filing</h3>
+<p class="kicker">Wired / The Information · 2026-09-03 · <a href="https://www.progressiverobot.com/2026/09/03/meta-tokenmaxxing-ai-agent-employees/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">New guidance strips "usage of AI" as an assessment criterion; outcomes "can be supported by AI or other means." Removes AI-adoption dashboards and token counts from reviews and retires the "AI Native / AI First / AI Enabled" labels. Reversal follows a July class-action alleging AI dashboards fed layoff decisions. One employee had consumed 281 billion tokens in a single month.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Wired and The Information reported Thursday that Meta has revised its performance-review guidance to strip out "usage of AI" as an assessment criterion. New language says outcomes "can be supported by AI or other means." AI-adoption dashboards and token-consumption counts are being removed from evaluations. The prior system labeled employees "AI Native," "AI First," or "AI Enabled" based on chatbot and agent reliance. That labeling is going away.</p>
+
+<p>Internal Meta token consumption had climbed from 60.2 trillion tokens in April 2026 reporting to 73.7 trillion before the leaderboard was pulled. The top individual employee consumed 281 billion tokens in a single month — the equivalent of roughly $1.4 million at internal transfer pricing. The metrics were replaced with an AI Gateway dashboard, structured token budgets arriving in 2027, and cost-per-accepted-work-unit rather than raw consumption.</p>
+
+<h4>The lawsuit context</h4>
+
+<p>The reversal follows a July 2026 class action filed in federal court in Oakland alleging Meta used AI token-usage dashboards and algorithmically-assisted rankings in layoff decisions. Twenty-six Meta employees are plaintiffs. The alignment between AI-adoption metrics and layoff decisions was the core of the plaintiffs' case, and stripping the metrics from the review structure removes the mechanism the suit alleges was used discriminatorily. Wired reported that some Meta engineers were "relieved not to feel under pressure to constantly use AI."</p>
+
+<p>The change is consequential across the industry. Meta had led the enterprise "tokenmaxxing" push, using internal LLM consumption as a proxy for AI adoption and productivity. Peer companies including Google, Microsoft and Amazon are watching how the July suit resolves before deciding whether their own AI-adoption dashboards create similar legal exposure. The Meta reversal coincides with the company's separate push of the Hatch agent internally on a voluntary basis, replacing the coercive-metrics approach with an opt-in agent surface.</p>
+
+<p class="source-footer"><a href="https://www.progressiverobot.com/2026/09/03/meta-tokenmaxxing-ai-agent-employees/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g stroke="#166534" stroke-width="1.4" fill="none"><rect x="18" y="20" width="84" height="44" rx="2"/><line x1="18" y1="30" x2="102" y2="30"/></g><g fill="#166534"><rect x="26" y="38" width="26" height="4"/><rect x="26" y="46" width="34" height="4" opacity="0.7"/><rect x="26" y="54" width="20" height="4" opacity="0.5"/><circle cx="26" cy="26" r="1.5"/><circle cx="32" cy="26" r="1.5"/><circle cx="38" cy="26" r="1.5"/></g><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">SIMON WILLISON · ANALYSIS</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Simon Willison flags GPT-6 Astra's 37-point ARC-AGI-3 gap between custom and default harness</h3>
+<p class="kicker">Simon Willison's Weblog · 2026-09-03 · <a href="https://simonwillison.net/2026/Sep/3/gpt6-astra/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Post documents API pricing sitting exactly on Claude Fable 5/5.1 at $10 in and $50 out per million, highlights 99.9 percent vs 62.7 percent ARC-AGI-3 gap between OpenAI's Provider Adapter harness and the default, and puts Astra 5 pts below Fable 5.1 on Intelligence Index but ahead on cost per point in the Coding Agent Index.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Simon Willison published his GPT-6 Astra deep dive Thursday, September 3. The post confirms API pricing lines up exactly with Anthropic's Claude Fable 5 and 5.1 at $10 per million input tokens and $50 per million output. The most-cited number in the post is not any single benchmark but the harness-sensitivity gap on ARC-AGI-3: 99.9 percent with OpenAI's custom Provider Adapter harness against 62.7 percent with the default harness on the same underlying model.</p>
+
+<p>Willison called that gap "a rare public example where the harness choice moves headline scores by roughly 37 points." His read is that OpenAI is pushing the industry toward accepting that harness-plus-model is the deployable unit rather than model alone, and that benchmark comparisons across labs are unstable without controlling for harness at the same level of sophistication.</p>
+
+<blockquote class="pull-quote">"The Provider Adapter harness preserves opaque reasoning state between requests and uses compaction for longer conversations, allowing the model to reuse prior work."
+<cite>— Simon Willison, on the GPT-6 Astra Provider Adapter</cite></blockquote>
+
+<h4>The synthesis</h4>
+
+<p>Willison's summary reads Astra as 5 points below Claude Fable 5.1 on the Artificial Analysis Intelligence Index but ahead on cost efficiency in the Coding Agent Index at less than half the cost of Fable 5 for the same score. Eight-needle long-context recall is 100 percent from 256K to 512K and 96.3 percent from 512K to 1M. Security: 100 percent ExploitBench, 42.4 percent ExploitGym, 99.2 percent SRE-Bench reverse engineering. The framing is that Astra is a workhorse-plus-cybersecurity model rather than a raw-capability ceiling model, and OpenAI's decision to price it at exact Fable-parity is a competitive positioning against Anthropic's Fable line rather than a pricing-power flex.</p>
+
+<p class="source-footer"><a href="https://simonwillison.net/2026/Sep/3/gpt6-astra/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><g fill="none" stroke="#166534" stroke-width="1.4"><path d="M40 46 Q 60 20, 80 46 Q 60 58, 40 46 Z"/></g><g fill="#166534"><circle cx="60" cy="42" r="4" opacity="0.5"/></g><text x="60" y="68" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#166534">$12M · A</text><text x="60" y="78" text-anchor="middle" font-family="system-ui,sans-serif" font-size="5.5" font-weight="700" fill="#166534" letter-spacing="1.4">CRADLEWISE · SF/PUNE</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Cradlewise raises $12M Series A for an AI-first smart crib</h3>
+<p class="kicker">YourStory · 2026-09-03 · <a href="https://yourstory.com/2026/09/cradlewise-funding-3one4-capital-prudent-investment-management" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">$12 million co-led by 3one4 Capital and Prudent Investment Management with Sean O'Sullivan Ventures, Footwork VC and Charles River Ventures participating. Total funding to date now $26 million. San Francisco-headquartered with Pune manufacturing, roadmap includes software-led sleep routines, lower-priced entry SKUs and reusable sensing modules.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Cradlewise closed a $12 million Series A round Thursday, September 3, co-led by 3one4 Capital and Prudent Investment Management. Existing backers Sean O'Sullivan Ventures, Footwork VC and Charles River Ventures also participated. The round brings total funding to $26 million.</p>
+
+<p>Cradlewise is headquartered in San Francisco with manufacturing in Pune, India. The core product is an AI-first smart crib that detects early wake-signals from a sleeping infant and self-rocks to keep the baby asleep. The roadmap includes software-led sleep routines, additional child-sleep hardware, lower-priced entry SKUs and reusable sensing and electronics modules across product generations.</p>
+
+<h4>Use of proceeds</h4>
+
+<p>Cradlewise plans to spend the round on growth, channel expansion, product R&amp;D and international market expansion. The company positions itself as "AI-first consumer health and wellness" for infant sleep, distinct from the general baby-monitor category dominated by Nanit, Owlet and the Snoo (from Happiest Baby). The AI angle is signal processing on wake-onset patterns and predictive movement rather than passive monitoring. The round is the first material Series A for the category since the Snoo's 2019 Series B, and the co-lead by 3one4 signals India-based investor interest in what has historically been a US-consumer-driven segment.</p>
+
+<p class="source-footer"><a href="https://yourstory.com/2026/09/cradlewise-funding-3one4-capital-prudent-investment-management" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+</main>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-09-04 · Generated 2026-09-04 by the Apollo AI News Bot (Claude Opus 4.7).</div>
+  <div><a href="../index.html">← Home</a></div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const stories = Array.from(document.querySelectorAll('details.story'));
+  const chips = Array.from(document.querySelectorAll('.filter-chip'));
+  const status = document.querySelector('.filter-status');
+  const bigPicture = document.querySelector('.big-picture');
+  const rundownCount = document.querySelector('.section-head .count');
+
+  const total = stories.length;
+  chips.forEach(c => {
+    const tag = c.dataset.filter;
+    const n = tag === 'all' ? total
+      : stories.filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+    const countEl = c.querySelector('.count');
+    if (countEl) countEl.textContent = n;
+    if (n === 0 && tag !== 'all') c.disabled = true;
+  });
+
+  function applyFilter(filter){
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const show = filter === 'all' || tags.includes(filter);
+      s.hidden = !show;
+      if (show && !s.classList.contains('hero') && s.id !== 'hero') visibleNonHero++;
+    });
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    if (rundownCount) {
+      const suffix = rundownCount.textContent.split('·').slice(1).join('·').trim();
+      rundownCount.textContent = visibleNonHero + ' stories' + (suffix ? ' · ' + suffix : '');
+    }
+    if (status) status.textContent = 'Showing ' + visibleNonHero + ' of ' + (total - 1) + ' stories — ' + (filter === 'all' ? 'All' : filter);
+    if (filter === 'all') { history.replaceState(null, '', '#'); }
+    else { history.replaceState(null, '', '#filter=' + filter); }
+  }
+
+  chips.forEach(c => {
+    c.addEventListener('click', () => {
+      if (c.disabled) return;
+      applyFilter(c.dataset.filter);
+    });
+  });
+
+  const m = location.hash.match(/#filter=([a-z]+)/);
+  if (m && chips.find(c => c.dataset.filter === m[1] && !c.disabled)) {
+    applyFilter(m[1]);
+  } else {
+    applyFilter('all');
+  }
+})();
+</script>
+</body>
+</html>
