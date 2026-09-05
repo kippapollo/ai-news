@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-09-05</title>
+<meta name="description" content="Nvidia opened the Personal AI Router beta on Thursday September 4, turning RTX 20-and-newer GPUs, DGX Spark boxes and Apple M4+ machines on a home network into a single free inference fabric for agent workloads, cutting a five-subagent Hermes Desktop run from 18 minutes on one RTX Spark laptop to 8 minutes 48 seconds across three devices with no changes required to Ollama or LM Studio. The National Highway Traffic Safety Administration opened a formal probe into roughly 1,000 Tesla Cybercabs a day after Elon Musk began giving Austin rides in the two-seat pedal-and-wheel-free vehicles, tanking TSLA more than 5 percent to $357.38 in Friday premarket. Andreessen Horowitz led a $300 million Series B in Gimlet Labs at a $3 billion post-money with Arm and Microsoft's M12 joining Sapphire, Menlo and Factory, extending Gimlet's multi-silicon inference cloud six months after its $80 million round. Figure and Nscale finalized a $3.5 billion five-year compute pact for up to 100,000 Vera Rubin GPUs in a Barstow, Texas facility landing in H2 2027, with Nscale taking equity in Figure in the largest single compute commitment ever made to a physical-AI company. Adobe named Anil Chakravarthy president and CEO effective December 1, moving Shantanu Narayen to executive chair after his eighteen-year run. Google DeepMind's WeatherNext 3 landed in Search, Gemini, Maps and Earth Engine at hourly 5-kilometer resolution with 50 percent more accurate multi-day precipitation. Microsoft AI's MAI-Transcribe-2 topped FLEURS across 60 languages at a 5.2 percent word error rate and $0.10 per audio hour, a 72 percent cut against the prior line. HUMAIN and MiniMax unveiled humain-m3, a 428B/23B-active Arabic frontier MoE further pre-trained on a trillion tokens of Arabic-native content, leading seven public Arabic benchmarks in research preview. Runway shipped GWM Worlds 2, an interactive real-time 720p 24fps world model with 48 kHz audio steerable by text actions and camera motion. NVIDIA's Nemotron Cascade 2 paper returned on-policy distillation to the frontier, and the Nano-CC/Ultra-CC IOI 2026 gold-medal paper cleared the human top scorer at 535.4 versus 498.27. Broadcom's Manila Times readout of Q3 lifted its FY27 AI-semi guide to $115B and FY28 to $230B. Microsoft rolled Project Zenith to Windows 11 on 64GB PCs first shipping on AMD Ryzen AI Halo, running 30B-parameter local models with sub-30ms first-token latency. GitHub Copilot CLI v1.0.83 wired live Windows-taskbar session status and custom-agent support. Hugging Face's #1 paper was Terminal-Universe, an agent-trajectory-to-terminal-environment scaling framework. Mistral released Shieldstral, a 3B open Apache-2.0 multimodal safety classifier. Hivebotics closed $6M led by Vertex for a restroom-cleaning robot arm. Nvidia added DLSS 5 and NBA 2K27 to a 28-title GeForce NOW drop. IFA 2026 pivoted the consumer-electronics show toward embodied AI on the floor. Beijing's cyberspace regulator removed 5.61 million pieces of AI-generated content and acted against 49,000 accounts and 2,400 sites in a two-month sweep. Composio's Karan Vaidya reframed the enterprise agent problem as tool integration rather than model reasoning.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#881337;--accent-soft:rgba(136,19,55,0.10);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#fda4af;--accent-soft:rgba(253,164,175,0.14);
+  --tag-tech:rgba(147,197,253,0.20);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.16);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.18);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.16);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.18rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.18rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:80px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+.story summary .body{display:flex;flex-direction:column;gap:6px}
+.story .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2px}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-09-05</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="tech application" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+      <h1>Nvidia opens PAIR, turning the family GPU pile into a single agent fabric</h1>
+      <p class="dek">Personal AI Router entered open beta Thursday as a free installer that binds every compatible machine on a home network into one virtual inference cluster, routing sub-agent requests across whichever GPU is idle. In a five-subagent Hermes Desktop demo, a three-device PAIR fabric finished in 8 minutes 48 seconds versus 18 minutes on a single RTX Spark laptop. It works today with Ollama and LM Studio without changes to either, spans RTX 20 series and newer, RTX PRO workstations, DGX Spark boxes and Apple M4-and-later silicon, and is priced at zero. The release lands the same day Figure and Nscale finalized a $3.5 billion five-year commitment for up to 100,000 Vera Rubin GPUs in Barstow, Texas and Gimlet Labs closed $300 million at a $3 billion post-money to route inference across heterogeneous chips inside a data center, framing PAIR as the consumer end of the same routing story.</p>
+      <p class="kicker">Tech · Application · Nvidia Developer Blog / SiliconANGLE / Tom's Hardware / TechTimes · 2026-09-04 · <a href="https://www.techtimes.com/articles/326588/20260904/nvidias-free-pair-software-turns-home-networks-multi-gpu-ai-inference-clusters.htm" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#881337" stop-opacity="0.28"/><stop offset="100%" stop-color="#881337" stop-opacity="0"/></linearGradient>
+        <radialGradient id="hg2" cx="0.2" cy="0.85" r="0.85"><stop offset="0%" stop-color="#881337" stop-opacity="0.20"/><stop offset="100%" stop-color="#881337" stop-opacity="0"/></radialGradient>
+        <pattern id="hgrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0 L0 0 0 24" fill="none" stroke="#881337" stroke-opacity="0.07" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgrid)"/>
+      <rect width="480" height="320" fill="url(#hg1)"/>
+      <rect width="480" height="320" fill="url(#hg2)"/>
+      <g stroke="#881337" stroke-width="1.1" fill="none" stroke-opacity="0.55">
+        <line x1="120" y1="90" x2="240" y2="160"/>
+        <line x1="360" y1="80" x2="240" y2="160"/>
+        <line x1="90" y1="230" x2="240" y2="160"/>
+        <line x1="380" y1="240" x2="240" y2="160"/>
+        <line x1="240" y1="40" x2="240" y2="160"/>
+        <line x1="240" y1="160" x2="240" y2="280"/>
+      </g>
+      <g fill="#f7f5ef" stroke="#881337" stroke-width="1.6">
+        <rect x="100" y="72" width="40" height="36" rx="3"/>
+        <rect x="340" y="62" width="40" height="36" rx="3"/>
+        <rect x="70" y="212" width="40" height="36" rx="3"/>
+        <rect x="360" y="222" width="40" height="36" rx="3"/>
+        <rect x="220" y="22" width="40" height="36" rx="3"/>
+        <rect x="220" y="262" width="40" height="36" rx="3"/>
+      </g>
+      <circle cx="240" cy="160" r="22" fill="#881337"/>
+      <circle cx="240" cy="160" r="10" fill="#f7f5ef"/>
+      <text x="240" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#881337">PAIR</text>
+      <g font-family="system-ui,sans-serif" font-size="8" fill="#881337" font-weight="600" letter-spacing="0.6" text-anchor="middle">
+        <text x="120" y="128">RTX</text><text x="360" y="118">M4</text>
+        <text x="90" y="268">SPARK</text><text x="380" y="278">MAC</text>
+        <text x="240" y="16">AGENT</text><text x="240" y="316">SUB-AGENT</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+<p>Nvidia opened the Personal AI Router beta on Thursday September 4 as a free, open-source Windows installer that stitches every compatible machine on a household network into a single logical inference cluster, routing requests from agent workloads across whichever GPU is idle at the moment the request lands. The tool is aimed squarely at multi-agent workflows: when a local orchestrator spawns five sub-agents, PAIR spreads them across five devices rather than serializing them onto whichever GPU the user happens to be sitting in front of. Nvidia's own demo in the release post ran the Hermes Desktop research agent with five sub-tasks across a three-device fabric of RTX Spark, RTX PRO 6000 workstation and DGX Spark boxes and finished the workload in 8 minutes 48 seconds; the same run on the RTX Spark laptop alone took 18 minutes.</p>
+<p>PAIR is protocol-transparent to the two most widely deployed local runtimes. It works with existing Ollama and LM Studio installs without any modification to either the agent's client code or the runtime configuration; the software exposes an OpenAI-compatible endpoint and handles model placement, warm-cache reuse and health checks under the hood. Supported hardware is RTX 20 series and later consumer GPUs, RTX PRO workstation cards, DGX Spark systems and Apple M4-and-later silicon on macOS, with Linux support in the developer preview.</p>
+<h4>Why the timing matters</h4>
+<p>The Thursday release lands on the same news cycle as two enterprise-scale routing bets. Figure and Nscale confirmed a $3.5 billion five-year compute pact for up to 100,000 Nvidia Vera Rubin GPUs in a Barstow, Texas facility landing in the second half of 2027 to train and serve Figure's Helix humanoid stack, with Nscale taking a strategic equity stake in Figure. Andreessen Horowitz led a $300 million Series B in Gimlet Labs at a $3 billion post-money the same day, with Arm and Microsoft's M12 vehicle joining Sapphire Ventures, Menlo Ventures and Factory to expand Gimlet's multi-silicon inference cloud across GPUs, CPUs, near-memory compute and dataflow processors. The three announcements share a common thesis: inference is now a routing problem, not a peak-FLOPs problem, at every altitude of the stack.</p>
+<p>PAIR is the consumer end of that thesis. Instead of adding another GPU to the box under the desk, the tool asks the user's iMac in the kitchen, the gaming PC in the basement and the M4 Mac mini on the shelf to lend cycles. Nvidia framed the release as a way to relieve contention when agent swarms exceed one GPU's resident capacity, rather than as a training play. The release notes are explicit that PAIR does not attempt to shard model weights across devices, so each participating machine still needs to fit the model it will serve; the fabric only distributes independent inference requests.</p>
+<blockquote class="pull-quote">"When those sub-tasks or sub-agents are all running on the same GPU, the contention they create might cause the task to finish more slowly than it could if each sub-agent had a dedicated compute node to work with." <cite>— Nvidia developer blog post announcing PAIR</cite></blockquote>
+<h4>What ships and what does not</h4>
+<p>The Thursday drop includes the Windows installer, the macOS installer, the Linux developer preview, an OpenAI-compatible router endpoint, an mDNS-based device discovery layer and a small tray dashboard that shows per-device load in real time. Absent from the initial beta: encrypted transport between nodes (Nvidia recommends running PAIR only inside a trusted LAN), model auto-download and syncing across nodes (each device pulls the model it wants to serve), and multi-user tenancy (PAIR treats every request as coming from the same identity). Nvidia said each of those is on the roadmap and did not commit to dates.</p>
+<blockquote class="pull-quote">"Personal AI Router routes independent inference requests across compatible systems on a local network to relieve multi-agent bottlenecks." <cite>— Nvidia's PAIR product page</cite></blockquote>
+<p>Coverage across Tom's Hardware, SiliconANGLE and TechTimes converged on the same read: PAIR is Nvidia's answer to a practical problem that local-first agent builders have been complaining about since Ollama crossed a million weekly downloads earlier this summer. Agent frameworks are increasingly spawning multiple concurrent sub-tasks, and even a well-provisioned home box hits latency walls once three or four concurrent generations land on the same card. Nvidia's bet is that most enthusiast households now have enough compatible silicon lying idle across gaming PCs, work laptops and Mac boxes to form a meaningful cluster if someone would just orchestrate it.</p>
+<p>Pricing is zero. Nvidia is treating PAIR as a driver-adjacent utility that ships free to anyone with a supported device. The tool is not gated behind an RTX driver update; it installs as a standalone application, and Apple M4+ owners get access without any Nvidia hardware in the house at all. That last detail drew notice in the tech press: Nvidia is voluntarily supporting Apple silicon in a first-party inference product, treating heterogeneity as the default rather than the exception.</p>
+<p class="source-footer"><a href="https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-label="Big Picture">
+  <div class="label">Big Picture</div>
+  <div>
+    <p>Routing overtook raw FLOPs as the day's dominant story. Nvidia opened PAIR to consumers, Gimlet Labs closed $300M at $3B to route inference across chip families inside data centers, and Figure signed $3.5B with Nscale for 100,000 Vera Rubin GPUs earmarked for humanoid training. All three treat the shipping problem as moving requests to the right silicon, not building bigger silicon.</p>
+    <p>The National Highway Traffic Safety Administration opened a formal probe into roughly 1,000 Tesla Cybercabs a day after Musk began Austin rides in pedal-and-wheel-free vehicles, sending TSLA more than 5 percent lower in premarket. Adobe named Anil Chakravarthy president and CEO effective December 1 in the software industry's largest AI-era succession, with Shantanu Narayen moving to executive chair after eighteen years. Broadcom's Manila Times readout of Q3 raised the FY27 AI-semi guide to $115 billion and FY28 to $230 billion.</p>
+    <p>Google DeepMind's WeatherNext 3 shipped into Search, Gemini, Maps and Earth Engine at hourly 5-kilometer resolution with 50 percent more accurate multi-day precipitation. Microsoft AI's MAI-Transcribe-2 topped FLEURS at 5.2 percent word error rate across 60 languages for $0.10 per audio hour. HUMAIN and MiniMax unveiled humain-m3, a 428B/23B-active Arabic frontier MoE further pre-trained on a trillion Arabic-native tokens. Runway's GWM Worlds 2 rendered real-time steerable 720p 24fps video with 48 kHz audio. NVIDIA's Nemotron Cascade 2 paper brought on-policy distillation back to the frontier, and the Nano-CC/Ultra-CC IOI 2026 gold paper cleared the top human contestant at 535.4 versus 498.27.</p>
+  </div>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 80 18" xmlns="http://www.w3.org/2000/svg"><g fill="#881337"><circle cx="16" cy="9" r="2.2"/><circle cx="40" cy="9" r="3"/><circle cx="64" cy="9" r="2.2"/></g><g stroke="#881337" stroke-width="0.8" opacity="0.5"><line x1="0" y1="9" x2="12" y2="9"/><line x1="20" y1="9" x2="36" y2="9"/><line x1="44" y1="9" x2="60" y2="9"/><line x1="68" y1="9" x2="80" y2="9"/></g></svg>
+</div>
+
+<section aria-label="More today">
+<div class="section-head"><h2>More today</h2><span class="count">32 stories · 2026-09-04 — 2026-09-05</span></div>
+<div class="cards" id="story-list">
+
+<details class="story" data-tags="policy safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><rect x="16" y="30" width="88" height="30" rx="6" fill="none" stroke="#881337" stroke-width="1.6"/><circle cx="34" cy="60" r="6" fill="none" stroke="#881337" stroke-width="1.6"/><circle cx="86" cy="60" r="6" fill="none" stroke="#881337" stroke-width="1.6"/><path d="M60 20 v14" stroke="#881337" stroke-width="2.4" stroke-linecap="round"/><circle cx="60" cy="15" r="3.4" fill="#881337"/><text x="60" y="50" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#881337">NHTSA</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">NHTSA opens Cybercab probe one day after Musk started Austin rides</h3>
+<p class="kicker">TechCrunch / Reuters · 2026-09-04 · <a href="https://techcrunch.com/2026/09/04/feds-launch-investigation-into-teslas-cybercab-deployment/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The National Highway Traffic Safety Administration opened a formal probe into roughly 1,000 Tesla Cybercabs Friday morning, less than 24 hours after Elon Musk began giving Austin rides in the pedal-free two-seaters. TSLA opened more than 5 percent lower at $357.38.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The National Highway Traffic Safety Administration opened a formal investigation Friday into whether Tesla's Cybercab deployment in Austin complies with federal motor-vehicle standards, one day after Elon Musk began ferrying invited riders in the two-seat gold vehicles that lack steering wheels, mirrors and brake pedals typically required of any passenger car sold in the United States. The probe covers roughly 1,000 Cybercabs registered in Texas by Tesla's autonomous-vehicle subsidiary.</p>
+<p>NHTSA's letter to Tesla, filed under the agency's Office of Vehicle Safety Compliance, asks the company to substantiate the exemption theory it appears to be operating under. Federal Motor Vehicle Safety Standards require a driver seat with certain controls, three-point seat belts in specific configurations, side and rear mirrors, and mechanical redundancy on braking, none of which the Cybercab visibly ships. Companies that want to test vehicles missing those systems typically apply for a limited-fleet exemption under Part 555; the agency's letter notes it has no record of such an application from Tesla for the Cybercab body.</p>
+<p>The Austin launch itself was staged Thursday afternoon at 4:45 PM Central Time in a downtown block Tesla had closed to non-invited traffic. Ashok Elluswamy, Tesla's head of autonomy, told a small on-site press pool that "the streets won't be the same anymore" and Musk gave short remarks. Uber, which has spent August lobbying New Jersey and Washington, D.C. to require at least 85 percent human-driven rides during any three-year pilot, issued a Friday statement noting that its rider-facing policy would not currently allow the Cybercab configuration.</p>
+<blockquote class="pull-quote">"Tesla has not filed for the Part 555 exemption that would ordinarily be required to operate a passenger vehicle without a steering wheel, mirrors or foot-actuated brake, and NHTSA is investigating on that basis." <cite>— Alan Ohnsman reporting for Forbes on the probe filing</cite></blockquote>
+<p>Tesla shares opened at $357.38 Friday, down more than 5 percent, unwinding much of the Thursday rally that followed the launch. The probe joins two other open NHTSA files against Tesla FSD covering pedestrian and low-visibility conditions. Musk did not comment publicly Friday morning; Tesla's investor-relations desk referred press queries to the Thursday launch livestream.</p>
+<p class="source-footer"><a href="https://www.forbes.com/sites/alanohnsman/2026/09/04/teslas-launch-of-self-driving-cybercab-rides-sparks-federal-probe/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.2"><path d="M10 60 Q30 20 60 40 T110 30"/><path d="M10 68 Q30 32 60 50 T110 42"/></g><g fill="#881337"><circle cx="24" cy="50" r="2"/><circle cx="52" cy="38" r="2"/><circle cx="78" cy="34" r="2"/><circle cx="100" cy="34" r="2"/></g><text x="60" y="18" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#881337">5 km / 1 hr</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Google DeepMind ships WeatherNext 3 across Search, Gemini, Maps and Earth Engine</h3>
+<p class="kicker">Google DeepMind / 9to5Google / TechCrunch · 2026-09-03 · <a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The new global AI weather model ingests raw satellite observations rather than depending on supercomputer outputs, producing hourly 5-kilometer surface forecasts and 50 percent more accurate multi-day precipitation than the prior line.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Google DeepMind and Google Research put WeatherNext 3 into production across Google Search, the Gemini app, Google Maps, the Google Maps Platform Weather API and Google Earth Engine, describing it as their most advanced global weather AI model and pointing to independent live evaluations by Brightband for verification. Temperature and moisture surface variables are produced at 5-kilometer resolution, other surface variables at 10 kilometers, and upper-atmospheric variables such as wind at 25 kilometers, with hourly cadence out to two weeks.</p>
+<p>The training break with prior AI-weather work is that WeatherNext 3 conditions on raw real-time satellite observations rather than on the analysis output of a physics-based supercomputer. That removes a dependency on the numerical-weather-prediction cycle that had constrained turnaround time on WeatherNext 1 and 2, and it lets the model respond to fresh satellite passes without waiting for a full NWP assimilation window. Google claims that people planning a day or more ahead see up to 50 percent more accurate precipitation forecasts, with the biggest gains in regions historically underserved by dense ground-station networks.</p>
+<blockquote class="pull-quote">"WeatherNext 3 is our most advanced and accurate global weather AI model to date, and we're bringing it directly into the products people already use to plan their day." <cite>— Google DeepMind and Google Research announcement</cite></blockquote>
+<p>Researchers, developers and businesses can query the underlying dataset in BigQuery and Earth Engine or bulk-download in Zarr format from Google Cloud Storage. The Maps Platform Weather API exposes the same tiles at the same resolution for third-party integrations. Google did not disclose model size or training compute.</p>
+<p class="source-footer"><a href="https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><path d="M20 40 Q30 20 40 40 T60 40 T80 40 T100 40"/></g><rect x="15" y="52" width="90" height="14" rx="7" fill="none" stroke="#881337" stroke-width="1.2"/><text x="60" y="63" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#881337">$0.10/HR</text><circle cx="24" cy="22" r="2.4" fill="#881337"/><circle cx="60" cy="22" r="2.4" fill="#881337"/><circle cx="96" cy="22" r="2.4" fill="#881337"/></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Microsoft AI's MAI-Transcribe-2 undercuts Whisper, GPT-Transcribe and ScribeV2 at $0.10 per hour</h3>
+<p class="kicker">Microsoft AI / VentureBeat / Unite.AI · 2026-09-03 · <a href="https://microsoft.ai/news/mai-transcribe-2-is-the-fastest-most-accurate-and-cheapest-speech-recognition-model-in-the-world/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The follow-on to March's MAI-Transcribe posts 5.2 percent average word-error-rate on the FLEURS benchmark across 60 languages, adds speaker diarization, configurable transcription styles and word-level timestamps, and cuts the previous $0.36-per-hour price by 72 percent.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Microsoft AI released MAI-Transcribe-2 on Thursday, its second in-house speech-recognition model since spinning up the MAI stack, and priced it at $0.10 per audio hour through the end of 2026, a 72 percent cut against the March MAI-Transcribe price of $0.36 per hour. Microsoft says the model ranks first on the FLEURS benchmark across 60 languages with an average word-error rate of 5.2 percent, outperforming Gemini 3.5 Transcribe, GPT-Transcribe, Whisper V3-Large and ElevenLabs' ScribeV2 across a broader real-world audio sample.</p>
+<p>The release ships speaker diarization, configurable transcription styles (verbatim, cleaned or executive summary), and word-level timestamps, all inside the same $0.10-per-hour price. Microsoft claims the runtime is up to ten times faster than GPT-Transcribe on the same inputs and roughly seven times faster than ElevenLabs' ScribeV2. Neowin and Unite.AI verified the FLEURS score against Microsoft's published card; VentureBeat framed the release as directly aimed at OpenAI, Google and ElevenLabs's transcription APIs.</p>
+<blockquote class="pull-quote">"MAI-Transcribe-2 is the fastest, most accurate and cheapest speech-recognition model in the world." <cite>— Microsoft AI headline announcing the release</cite></blockquote>
+<p>Access lands first inside Microsoft's own consumer-facing products (Word transcribe, Teams live captions, Copilot voice) and rolls to Azure AI Speech customers via the OpenAI-compatible batch endpoint. Microsoft did not disclose model size or training data details beyond noting that MAI-Transcribe-2 uses "significantly more compute" than the March predecessor.</p>
+<p class="source-footer"><a href="https://venturebeat.com/infrastructure/microsoft-ais-mai-transcribe-2-undercuts-openai-google-and-elevenlabs-on-price-and-speed" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><text x="60" y="42" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#881337">428B</text><text x="60" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="600" fill="#881337" letter-spacing="1.5">23B ACTIVE</text><rect x="10" y="10" width="100" height="60" rx="4" fill="none" stroke="#881337" stroke-width="1.2"/></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">HUMAIN and MiniMax unveil humain-m3, a 428B Arabic frontier MoE</h3>
+<p class="kicker">HUMAIN / Bloomberg / TechTimes · 2026-09-03 · <a href="http://www.prnewswire.com/news-releases/humain-unveils-humain-m3-a-frontier-arabic-language-model-developed-by-minimax-in-research-preview-on-humain-node-302869158.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The 428B-parameter, 23B-active MoE from the PIF-backed Saudi AI vehicle sits on the MiniMax-M3 lineage, further pre-trained on more than a trillion tokens of Arabic-native content, and leads seven public Arabic benchmarks in research preview through HUMAIN Node.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>HUMAIN, the Saudi Public Investment Fund's AI vehicle, unveiled humain-m3 at LEAP Riyadh: a frontier Arabic-language model built on China's MiniMax-M3 lineage as a 428-billion-parameter mixture-of-experts with 23 billion active parameters per token, further pre-trained on more than one trillion tokens of Arabic-native content and released in research preview on HUMAIN Node. The model posts the highest average score of any tested system across seven public Arabic benchmarks covering language understanding, reasoning and cultural context.</p>
+<p>The pact makes Saudi Arabia's national frontier bet Chinese-derived rather than US-derived. HUMAIN commissioned the model from MiniMax, and MiniMax carried the training work. HUMAIN said it expects weights to publish under the MiniMax Community License once safety training and alignment are complete, a step it currently targets for early October. Bloomberg framed the announcement as HUMAIN's "pragmatic pivot on sovereign AI"; MiniMax shares jumped on the Hong Kong secondary listing.</p>
+<blockquote class="pull-quote">"humain-m3 leads seven public Arabic benchmarks in average score, and we intend to release weights under the MiniMax Community License once safety training completes." <cite>— HUMAIN research-preview announcement</cite></blockquote>
+<p>The research preview access is gated behind HUMAIN Node accounts and rate-limited; a public API is not yet live. Coverage across techtimes.com noted that humain-m3's frontier-benchmark scores are self-reported and not independently verified outside the seven Arabic-language suites HUMAIN tested. The Bloomberg readout treated the move as a signal that Riyadh will source its national AI capability wherever the best trade-off between capability and geopolitics lands, rather than committing to a single supplier country.</p>
+<p class="source-footer"><a href="https://www.bloomberg.com/news/articles/2026-09-03/saudi-arabia-s-humain-unveils-ai-model-based-on-china-s-minimax" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><rect x="14" y="14" width="92" height="52" rx="3" fill="none" stroke="#881337" stroke-width="1.4"/><g fill="none" stroke="#881337" stroke-width="0.9" opacity="0.55"><line x1="14" y1="26" x2="106" y2="26"/><line x1="14" y1="38" x2="106" y2="38"/><line x1="14" y1="50" x2="106" y2="50"/></g><circle cx="34" cy="32" r="3" fill="#881337"/><circle cx="60" cy="44" r="3" fill="#881337"/><circle cx="86" cy="56" r="3" fill="#881337"/><text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#881337" letter-spacing="1">720p · 24fps</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Runway ships GWM Worlds 2, a steerable 720p 24fps real-time world model</h3>
+<p class="kicker">Runway Research / DeepLearning.ai · 2026-09-03 · <a href="https://runway.com/research/introducing-gwm-worlds-2" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The second General World Model generates interactive real-time simulation as continuous 720p video at 24 frames per second with synchronized 48 kHz audio, steerable by text actions and camera motion, with each new input extending the world instead of restarting it.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Runway published GWM Worlds 2, the second iteration of its General World Model, and shipped an interactive demo Thursday. The model produces continuous 720p video at 24 frames per second with synchronized 48 kHz audio in real time, responding to user actions (typed or dictated) and to camera-motion input. Runway's framing is that each input extends the world rather than restarting it: the user steers, and the simulation persists.</p>
+<p>GWM Worlds 2 sits on top of Runway's foundational audio-visual generation stack and adds subject-and-scene control that lets users define environment, subjects, visual style, physical rules and ambience up front, then run the world under text actions and camera pans. Runway pitched the release at three categories: interactive entertainment, virtual characters and embodied-agent simulation. The last of those is why the release drew attention alongside Nvidia PAIR the same day: world models with real-time interactivity are becoming a target platform for robot policy training.</p>
+<blockquote class="pull-quote">"GWM Worlds 2 is our latest General World Model that generates interactive real-time simulations in continuous 720p video at 24 fps with 48000 Hz audio, allowing you to define, then steer, whatever world you want." <cite>— Runway on X, September 3</cite></blockquote>
+<p>Runway did not publish model size, latency figures or per-token pricing at launch. DeepLearning.ai's writeup drew the direct comparison to Runway's earlier GWM-1 line, noting that GWM Worlds 2 replaces the fixed-script generation approach with an input-conditioned continuation loop, closer in spirit to a game engine than a video generator.</p>
+<p class="source-footer"><a href="https://runway.com/research/introducing-gwm-worlds-2" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g stroke="#881337" stroke-width="1.4" fill="none"><path d="M20 60 L36 40 L52 50 L68 30 L84 44 L100 20"/></g><g fill="#881337"><circle cx="20" cy="60" r="2.4"/><circle cx="36" cy="40" r="2.4"/><circle cx="52" cy="50" r="2.4"/><circle cx="68" cy="30" r="2.4"/><circle cx="84" cy="44" r="2.4"/><circle cx="100" cy="20" r="2.4"/></g><text x="60" y="74" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#881337">CASCADE 2</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Nemotron Cascade 2 brings on-policy distillation back to the frontier</h3>
+<p class="kicker">Maxime Labonne / Nvidia Research · 2026-09-04 · <a href="https://maximelabonne.substack.com/p/nemotron-cascade-2-on-policy-distillation" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The follow-on to March's Nemotron Cascade paper argues on-policy distillation with teacher rollout replay closes most of the gap between a large teacher and a small student, and lands Cascade 2 recipes across Nemotron 3 Nano and Nemotron 3 Ultra.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Maxime Labonne's Thursday breakdown of Nvidia Research's Nemotron Cascade 2 paper argued that on-policy distillation, with the teacher replayed against the student's own trajectories, closes most of the capability gap between a large teacher and a small student and does so more cheaply than off-policy generation. The paper builds on the March 2026 Nemotron Cascade recipe and applies the new pipeline across the Nemotron 3 Nano (30B/3B active) and Nemotron 3 Ultra (550B/55B active) lines.</p>
+<p>The mechanical change is that Cascade 2 rolls out the student model on every training batch, scores those rollouts with the teacher, and updates the student against the scored trajectories. Off-policy distillation, by contrast, samples from the teacher upfront and updates the student against those static trajectories. On-policy is more expensive per step but reaches a higher asymptote because it steers the student in regions of the distribution it actually visits at inference time.</p>
+<blockquote class="pull-quote">"On-policy distillation is back. Cascade 2 replays the teacher against the student's own rollouts, and the ceiling shifts up." <cite>— Maxime Labonne, Nemotron Cascade 2 writeup</cite></blockquote>
+<p>The paper reports that Cascade 2 recipes produce a Nano-scale student that matches an Ultra teacher on a bounded set of reasoning tasks within roughly 60 percent of the compute the naive off-policy pipeline would have required. Nvidia has not published Cascade 2 weights; the training-recipe writeup is open. The technique is directly relevant to the Nano-CC / Ultra-CC IOI 2026 gold result, which used a related SFT + RL pipeline.</p>
+<p class="source-footer"><a href="https://maximelabonne.substack.com/p/nemotron-cascade-2-on-policy-distillation" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><polygon points="60,14 74,26 68,44 52,44 46,26" fill="#881337"/><text x="60" y="34" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#f7f5ef">IOI</text><text x="60" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#881337">535.4</text><text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="600" fill="#881337" letter-spacing="1">HUMAN TOP 498.27</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Ultra-CC posts 535.4 at IOI 2026, first AI to clear the top human contestant live</h3>
+<p class="kicker">arXiv 2609.02849 / Nvidia Nemotron · 2026-09-04 · <a href="https://arxiv.org/abs/2609.02849" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The Nano-CC/Ultra-CC paper reports Ultra-CC scoring 535.4 out of 600 at IOI 2026 under human-contestant time, internet and submission constraints, exceeding both the gold-medal threshold of 361.12 and the top human's 498.27.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The Nano-CC/Ultra-CC IOI 2026 gold paper, filed to arXiv on September 2 and picked up widely on Thursday and Friday, reports that Nvidia's Nemotron-3-Ultra-CC (550B/55B active) posted 535.4 out of 600 at IOI 2026 under the same time, internet and submission constraints applied to human contestants. The score exceeds the gold-medal threshold of 361.12 and the top human contestant's 498.27, making Ultra-CC the first AI system to clear the highest-scoring human on an IOI problem set live.</p>
+<p>The paper trains two models: Nano-CC (30B/3B active) with supervised fine-tuning followed by RL, and Ultra-CC with SFT alone. Both use a 22,000-problem curated corpus. On IOI 2025 as a rehearsal, Nano-CC improves from 130 raw to 291 after post-training and to 468 with the paper's GenCorrect refinement step, clearing the 438.3 gold threshold; Ultra-CC lands at 502. GenCorrect is a test-time refinement loop in which the model runs its own submitted solution against the sample inputs, catches wrong answers and rewrites, capped at a fixed compute budget per problem.</p>
+<blockquote class="pull-quote">"Ultra-CC is the first AI system to outscore the highest-scoring human contestant on an IOI problem set." <cite>— Nano-CC/Ultra-CC paper, arXiv 2609.02849</cite></blockquote>
+<p>The paper's method section is careful about the harness discipline that has become contested in the wake of Astra's ARC-AGI-3 result: Ultra-CC ran under the same rules that constrain humans, with no oracle access, no external tool calls beyond the standard IOI runtime, and no post-hoc submission editing. Nemotron does not open the weights but does publish the SFT and RL recipes and the 22,000-problem set.</p>
+<p class="source-footer"><a href="https://arxiv.org/abs/2609.02849" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><rect x="14" y="20" width="92" height="44" rx="3" fill="none" stroke="#881337" stroke-width="1.4"/><text x="20" y="34" font-family="ui-monospace,monospace" font-size="7" fill="#881337">$ agent run --env terminal</text><text x="20" y="46" font-family="ui-monospace,monospace" font-size="7" fill="#881337">&gt; universe.scale(50k)</text><text x="20" y="58" font-family="ui-monospace,monospace" font-size="7" fill="#881337">&gt; trajectories: OK</text><circle cx="102" cy="24" r="2" fill="#881337"/></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Terminal-Universe tops Hugging Face Papers, scales agent trajectories to environments</h3>
+<p class="kicker">Hugging Face Papers · 2026-09-04 · <a href="https://huggingface.co/papers/trending" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">"Terminal-Universe: Turning Agent Trajectories into Scalable Terminal Environments" landed at #1 on the Hugging Face Papers trending board Friday, proposing a pipeline that inverts recorded agent trajectories into reproducible synthetic terminal environments for RL and evaluation.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Terminal-Universe posted at #1 on the Hugging Face Papers trending board on Friday September 4, ahead of LLaDA-Image (fully open image-generator training recipe) at #2 and LatentPress (multimodal context compression) at #3. The paper's contribution is a construction pipeline that inverts recorded agent trajectories, most collected from open-source Terminal-Bench-style traces, into reproducible synthetic terminal environments that can be re-run against a new agent for RL training or evaluation.</p>
+<p>The core observation is that Terminal-Bench and similar suites are expensive to author because each task requires designing a Docker image, an evaluation script and a set of golden references. Terminal-Universe's authors argue that a captured trajectory (commands, filesystem state, environment variables, tool responses) contains enough information to reconstruct the environment automatically, letting a single labeled trajectory become a repeatable environment that many agents can be scored against.</p>
+<blockquote class="pull-quote">"Terminal-Universe turns thousands of one-off agent trajectories into a scalable environment library, so RL and evaluation stop being bottlenecked on hand-authored Docker images." <cite>— Terminal-Universe paper abstract, per HF Papers</cite></blockquote>
+<p>The paper's public artifact is a starter environment library seeded from roughly 50,000 trajectories drawn from the Terminal-Bench 3.0 sample release. Companion work on the HF Papers board Friday included Prime Agent (recursive subagent harness) and DisCo (skill-distillation into reusable agents), each visibly influenced by the shared premise that agent capability is now bound by environment quality rather than by base model capability.</p>
+<p class="source-footer"><a href="https://huggingface.co/papers/trending" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="#881337"><rect x="18" y="52" width="14" height="14"/><rect x="38" y="42" width="14" height="24"/><rect x="58" y="30" width="14" height="36"/><rect x="78" y="16" width="14" height="50"/></g><text x="25" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#881337">Q3</text><text x="45" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#881337">FY26</text><text x="65" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#881337">FY27</text><text x="85" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#881337">FY28</text><text x="98" y="20" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#881337">$230B</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Broadcom lifts FY27 AI-semi guide to $115B and FY28 to $230B</h3>
+<p class="kicker">The Motley Fool / Manila Times / Seeking Alpha · 2026-09-04 · <a href="https://finance.yahoo.com/technology/ai/articles/broadcom-inc-avgo-q3-2026-110030403.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Friday morning's Broadcom readout raised the FY26 AI revenue anchor to $58B (up 186 percent), guided FY27 to $115B and FY28 to $230B, and framed the ramp as underwritten by six named XPU customers now including Google TPU, Meta MTIA, Anthropic, OpenAI Jalapeño, Fujitsu and ByteDance.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The Friday follow-through to Broadcom's Tuesday earnings tightened the multi-year AI-semiconductor guide. Manila Times' Friday recap of the earnings call carried an updated FY26 AI revenue anchor of $58 billion (up 186 percent year over year), a FY27 guide of $115 billion (versus a prior number "above $100 billion") and a FY28 guide of $230 billion. Q3 AI semi revenue printed at $16.7 billion, up 221 percent year over year and 54 percent sequentially, and reached 56 percent of total company revenue.</p>
+<p>Hock Tan attributed the raised guide to six named XPU customers now committing to multi-year silicon roadmaps, up from the four he cited in Q2. The named list includes Google TPU, Meta MTIA, OpenAI's Jalapeño 1.3 GW 2027 program, Anthropic's in-house silicon program (disclosed in August), Fujitsu and ByteDance. AVGO fell about 6 percent on Wednesday digesting the Q4 top-line guide, then recovered part of the drawdown Thursday and Friday as the Street processed the FY27/FY28 ramp implication.</p>
+<blockquote class="pull-quote">"We are seeing a path to $115 billion of AI semiconductor revenue in fiscal 2027 and roughly $230 billion in fiscal 2028, underwritten by six confirmed XPU customers." <cite>— Hock Tan on the Broadcom Q3 FY26 earnings call, as summarized Friday</cite></blockquote>
+<p>The Motley Fool's Friday piece noted that Broadcom's raised FY27 anchor represents a quadrupling of the AI-semi segment in two years and would put the segment ahead of Nvidia's own FY24 data-center revenue if the ramp lands as guided. The read-across for NVDA was mildly positive on Friday given that Broadcom's customer list includes labs that also buy Nvidia GPUs.</p>
+<p class="source-footer"><a href="https://www.fool.com/investing/2026/09/04/broadcoms-artificial-intelligence-ai-chip-sales-su/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><path d="M60 12 L88 22 L88 46 Q88 62 60 70 Q32 62 32 46 L32 22 Z" fill="none" stroke="#881337" stroke-width="1.6"/><text x="60" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#881337">3B</text><text x="60" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="600" fill="#881337" letter-spacing="1">SHIELDSTRAL</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Mistral releases Shieldstral, a 3B Apache-2.0 multimodal safety classifier</h3>
+<p class="kicker">Mistral / releasebot · 2026-09-04 · <a href="https://releasebot.io/updates/mistral" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Shieldstral turns moderation into policy-adaptive question answering, handles text and images, returns calibrated safety scores, runs on a single 16GB GPU and ships under Apache 2.0.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Mistral released Shieldstral, a 3-billion-parameter open-weights multimodal safety classifier, and pushed it under an Apache 2.0 license. The model reframes moderation as a policy-adaptive question-answering task rather than a fixed-label classifier: the caller supplies both the content and the policy text (a paragraph describing the specific rule to enforce), and Shieldstral returns a calibrated pass/fail score against that policy.</p>
+<p>The design lets a single model serve deployments with divergent policies without retraining. A children's platform can pass a strict policy paragraph and Shieldstral will refuse content Mistral's own default would allow; an adult-oriented content workflow can pass a permissive policy paragraph and Shieldstral will pass content the default would flag. The 3B footprint runs on a single 16 GB GPU or unified-memory Apple Silicon, which puts it inside the operating envelope of most self-hosted moderation pipelines.</p>
+<blockquote class="pull-quote">"Shieldstral turns moderation into policy-adaptive question answering, handles text and images, and returns calibrated safety scores you can threshold." <cite>— Mistral release note for Shieldstral</cite></blockquote>
+<p>Shieldstral is the second open-weights safety release from a frontier lab in eight weeks after Anthropic's Aug 21 open-weights refusal model, and the first to sit on Apache 2.0 rather than a custom research license. The release lands alongside Mistral's sovereign-AI infrastructure expansion (regional inference endpoints, a Priority Tier for mission-critical workloads and third-party open-model support starting with Z.ai's GLM-5.2).</p>
+<p class="source-footer"><a href="https://releasebot.io/updates/mistral" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.3"><rect x="14" y="30" width="18" height="24" rx="2"/><rect x="40" y="30" width="18" height="24" rx="2"/><rect x="66" y="30" width="18" height="24" rx="2"/><rect x="92" y="30" width="14" height="24" rx="2"/></g><g fill="#881337" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="0.5"><text x="23" y="46" text-anchor="middle">GPU</text><text x="49" y="46" text-anchor="middle">CPU</text><text x="75" y="46" text-anchor="middle">NM</text><text x="99" y="46" text-anchor="middle">DF</text></g><path d="M14 20 L106 20" stroke="#881337" stroke-width="1.2"/><text x="60" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#881337">$300M @ $3B</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Gimlet Labs closes $300M Series B at $3B for a multi-silicon inference cloud</h3>
+<p class="kicker">Bloomberg / GlobeNewswire / TechCrunch · 2026-09-04 · <a href="https://www.globenewswire.com/news-release/2026/09/04/3356707/0/en/now-valued-at-3-billion-gimlet-labs-raises-300-million-in-series-b-led-by-andreessen-horowitz-for-industry-s-first-multi-silicon-inference-cloud-for-agentic-ai.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Andreessen Horowitz led with Sapphire, Menlo, Factory back-in and new capital from Arm and Microsoft's M12, at a $3B post-money six months after the $80M A round; total raised is $392M.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Gimlet Labs closed a $300 million Series B on Thursday at a $3 billion post-money valuation, six months after its $80 million March round and taking total capital raised to $392 million. Andreessen Horowitz led, with existing backers Sapphire Ventures, Menlo Ventures and Factory pro-rating and new investors Arm (the chip IP company) and Microsoft's M12 vehicle taking primary allocations.</p>
+<p>Gimlet builds what it calls a multi-silicon inference cloud: a scheduler and routing layer that composes GPU, CPU, near-memory compute and dataflow processor capacity from different vendors into a single execution graph, and dispatches sub-operations of a single inference request to whichever chip family runs that operation cheapest. The company has been public about the thesis since its March round; the Series B is the capital to build out the second and third data-center footprints.</p>
+<blockquote class="pull-quote">"We're assembling heterogeneous data centers in which GPUs, CPUs, near-memory compute and dataflow processors work together on different portions of the same inference workload." <cite>— Gimlet Labs Series B announcement</cite></blockquote>
+<p>The Series B lands the same day Nvidia opened PAIR for consumer households, extending the same routing-over-heterogeneity thesis down to family GPU piles. Bloomberg's read framed a16z's follow-on as a bet that inference economics will be increasingly won by scheduling rather than by silicon peak. Arm's participation was novel: it is Arm's first equity check into an AI-infrastructure startup at this scale.</p>
+<p class="source-footer"><a href="https://news.bloomberglaw.com/business-and-practice/andreessen-backed-ai-startup-gimlet-is-now-valued-at-3-billion" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><circle cx="30" cy="40" r="16"/><circle cx="90" cy="40" r="16"/><line x1="46" y1="40" x2="74" y2="40"/></g><text x="30" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#881337">FIG</text><text x="90" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#881337">NSC</text><text x="60" y="72" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#881337">$3.5B · 100K</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Figure and Nscale sign $3.5B, 100,000-GPU compute pact for Helix training</h3>
+<p class="kicker">Forbes / PYMNTS / TelecomTV · 2026-09-04 · <a href="https://www.forbes.com/sites/johnkoetsier/2026/09/04/how-figure-committed-35-billion-for-ai-compute-after-raising-only-19-billion/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The five-year deal pairs Nscale's cloud and Nvidia's Vera Rubin GPU platform to train and serve Figure's Helix humanoid stack, with first hardware landing in Barstow, Texas in H2 2027 and Nscale taking a strategic equity stake in Figure.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Figure and Nscale confirmed a $3.5 billion five-year compute partnership on Thursday, described by both parties as the largest single compute commitment ever made to a physical-AI company. The scope is up to 100,000 Nvidia GPUs on the Vera Rubin platform, deployed in a purpose-built Nscale facility in Barstow, Texas landing in the second half of 2027. Nscale takes a strategic equity stake in Figure as part of the transaction; both sides said the intent is to expand beyond $6 billion over the initial term.</p>
+<p>The arrangement is vertically integrated across three layers. Nscale operates the cloud platform, compute pool and orchestration layer; Nvidia hardware runs training and inference; Figure's Helix policy stack runs end-to-end across the fabric. Figure and Nscale also said they intend to explore using Figure's humanoid robots inside Nscale's own supply chain, a curiosity that reads more like a marketing footnote than a firm plan.</p>
+<blockquote class="pull-quote">"This is the largest dedicated compute commitment ever made for a physical AI company. It is vertically integrated across cloud, silicon and model." <cite>— Nscale-Figure joint announcement, September 3</cite></blockquote>
+<p>Forbes drew the awkward math: Figure has raised roughly $1.9 billion in equity to date and just committed to a $3.5 billion compute bill. The Koetsier writeup treated the Nscale equity stake as effectively backdoor Figure financing, letting Nscale front the compute capex on the expectation that Figure's next primary round will be underwritten by the pact. The Vera Rubin selection is a signal that Figure expects to train and serve on the same silicon, not to rotate models to older-generation GPUs for deployment.</p>
+<p class="source-footer"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/nscale-inks-3-5-billion-deal-with-robotics-firm-figure" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><path d="M30 20 L30 60"/><path d="M90 20 L90 60"/><path d="M30 40 L90 40"/></g><circle cx="30" cy="20" r="4" fill="#881337"/><circle cx="90" cy="60" r="4" fill="#881337"/><text x="30" y="14" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#881337">NARAYEN</text><text x="90" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#881337">CHAKRAVARTHY</text><text x="60" y="52" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#881337">DEC 1</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Adobe names Anil Chakravarthy CEO effective December 1, moves Narayen to chair</h3>
+<p class="kicker">CNBC / WSJ / Business Standard · 2026-09-04 · <a href="https://www.cnbc.com/2026/09/03/adobe-anil-chakravarthy-ceo.html" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Chakravarthy, currently head of Adobe's Customer Experience Orchestration unit and former Informatica CEO, succeeds Shantanu Narayen on December 1; Narayen moves to executive chair after 18 years running the company.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Adobe named Anil Chakravarthy as its next president and chief executive officer, effective December 1, with 18-year CEO Shantanu Narayen moving to executive chair. Chakravarthy joins the board on the same date. The Wall Street Journal framed the succession as Adobe's attempt to steady the ship as the company navigates competition from Figma, Runway, Canva and OpenAI's Sora product line and reworks Creative Cloud around Firefly and third-party model access.</p>
+<p>Chakravarthy is a six-year Adobe insider. He currently runs Adobe's Customer Experience Orchestration unit and its worldwide field operations. Before Adobe, he was CEO of Informatica for four years, taking the data-management business through a private-to-public transition. The board named him after a formal succession process that included external candidates; the WSJ writeup noted that the board considered but did not name any outside contenders publicly.</p>
+<blockquote class="pull-quote">"Anil is the right leader to take Adobe into its next chapter as the software industry reshapes around AI." <cite>— Shantanu Narayen, Adobe founder-era CEO, in the succession announcement</cite></blockquote>
+<p>Narayen's tenure took Adobe from a $34 billion market cap in 2007 to $172 billion at Thursday's close, and completed the shift from perpetual-license desktop software to Creative Cloud subscription. Chakravarthy inherits a company running roughly $22 billion in annual revenue and facing three simultaneous AI-era pressures: generative image and video competition from OpenAI and Runway, agentic workflow competition from Microsoft Copilot, and the ongoing Figma-shaped hole where Adobe's abandoned $20 billion acquisition would have plugged the collaborative-design gap.</p>
+<p class="source-footer"><a href="https://www.business-standard.com/technology/tech-news/adobe-names-anil-chakravarthy-as-ceo-narayen-to-become-executive-chair-126090400121_1.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="#881337"><rect x="16" y="42" width="12" height="26"/><rect x="34" y="30" width="12" height="38"/><rect x="52" y="18" width="12" height="50"/><rect x="70" y="10" width="12" height="58"/></g><text x="90" y="20" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#881337">$30B</text><text x="90" y="34" font-family="system-ui,sans-serif" font-size="6" font-weight="600" fill="#881337">SERIES F</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Crusoe closes $3B Series F at $30B, 10 months after $10B round</h3>
+<p class="kicker">Bloomberg / TechCrunch / Dealroom · 2026-09-03 · <a href="https://www.bloomberg.com/news/articles/2026-09-03/crusoe-raises-over-3-billion-in-funding-at-30-billion-valuation" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Atreides Management and Valor Equity Partners co-led, Mubadala Capital participated. The round comes 10 months after Crusoe's $1.38B round at $10B and follows a $13B five-year Jane Street cloud contract disclosed the same week.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Crusoe closed over $3 billion in Series F financing at a post-money valuation of roughly $30 billion, ten months after its $1.38 billion Series E at a $10 billion post-money. Atreides Management and Valor Equity Partners co-led the round, with Mubadala Capital participating. Crusoe customers already include Meta, Microsoft and OpenAI; the same week, Bloomberg reported that Crusoe signed a five-year $13 billion cloud contract with Jane Street for GPU capacity, which helped anchor the F round's premium.</p>
+<p>The tripling of valuation in ten months tracks the broader AI-datacenter valuation reset (see Nscale, CoreWeave, Fluidstack in August). Crusoe's differentiator has been stranded-energy power capture: originally built to monetize flared gas at oilfields, the company has expanded into purpose-built AI datacenters in West Texas and Wyoming that combine cheap gas with grid interconnect. TechCrunch's Thursday piece framed the round as one of Crusoe's biggest single financings in a year that has already seen the company sign multi-billion-dollar customer contracts on a near-monthly cadence.</p>
+<blockquote class="pull-quote">"Crusoe just tripled valuation in ten months on the strength of hyperscaler cloud contracts and a $13 billion Jane Street footprint." <cite>— TechCrunch on the Series F</cite></blockquote>
+<p>Dealroom's coverage noted that Crusoe now has raised roughly $6.5 billion in equity across its life, with most of the capital deployed into data-center capex rather than R&D. The Series F cap table is heavier on Middle East sovereign capital than the E round; Mubadala's participation follows a similar Middle East tilt in Nscale and Anthropic's summer rounds.</p>
+<p class="source-footer"><a href="https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><rect x="30" y="18" width="60" height="44" rx="4"/><circle cx="46" cy="34" r="3"/><circle cx="60" cy="34" r="3"/><circle cx="74" cy="34" r="3"/><rect x="42" y="46" width="36" height="10" rx="2"/></g><text x="60" y="76" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#881337">$6M · Abluo</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Hivebotics raises $6M for the Abluo restroom-cleaning robot</h3>
+<p class="kicker">TNGlobal / Vertex Ventures · 2026-09-04 · <a href="https://technode.global/2026/09/04/singapores-hivebotics-raises-6m-led-by-vertex-to-scale-restroom-cleaning-robots/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Singapore's Hivebotics closed a $6 million Series A led by Vertex Ventures Southeast Asia & India for Abluo, an articulated-arm restroom-cleaning robot that handles toilets, urinals, sinks and floors, with plans to expand across four markets.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Singapore's Hivebotics closed a $6 million Series A on Friday led by Vertex Ventures Southeast Asia & India with participation from Fareast Land Development and bathroom manufacturer Rigel. The capital funds production of the company's Abluo restroom-cleaning robot, distributor expansion across four markets and further development of the company's on-robot AI software layer HiveIntelligence.</p>
+<p>Abluo is an articulated-arm platform designed for commercial restroom cleaning, targeting the toughest task in that segment. The robot handles toilets, urinals, sinks and floors through a single articulated arm that swaps end-effectors on the fly; HiveIntelligence handles perception and task-sequencing. Vertex's thesis in the deal is that commercial cleaning is a persistent labor-shortage market that has resisted humanoid automation because of the geometry of restroom fixtures, and Abluo's task-specific design sidesteps that constraint.</p>
+<blockquote class="pull-quote">"Restrooms are commercial cleaning's toughest task. Abluo takes it out of the human loop." <cite>— Hivebotics announcement, September 4</cite></blockquote>
+<p>The round takes Hivebotics's total raised to a modest sum by robotics standards and is one of five funding rounds inside the Friday cross-border venture drop that includes Crusoe ($3B), Gimlet Labs ($300M), Moment ($22M) and Octave.energy (€10M). Hivebotics is one of the smaller checks in that group but stands out for a task-specific physical AI thesis in a week dominated by humanoid platform bets.</p>
+<p class="source-footer"><a href="https://ascendants.in/business-stories/hivebotics-raises-us6-million-series-a-restroom-cleaning-robot-abluo/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><path d="M40 20 L80 20 L88 32 L88 60 L32 60 L32 32 Z"/><circle cx="60" cy="42" r="8"/></g><text x="60" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#881337">EDGE</text><text x="60" y="74" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#881337">$27M · A</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Huskeys closes $27M Series A led by Blackstone for agentic AI edge security</h3>
+<p class="kicker">Investing.com / Security MEA · 2026-09-03 · <a href="https://www.investing.com/news/company-news/huskeys-raises-27m-series-a-led-by-blackstone-as-ai-creates-a-new-security-challenge-at-the-network-edge-4886181" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The Israeli Unit 8200 spinout closed $27M led by Blackstone Innovations Investments with Zscaler Ventures, Okta Ventures and Skinos, taking total funding to $35M and valuation past $100M. TikTok, LEGOLAND, Ro and Hugging Face are among named customers.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Huskeys closed a $27 million Series A this week led by Blackstone Innovations Investments, one of the largest early-stage cybersecurity checks of 2026. Zscaler Ventures, Okta Ventures and Skinos participated, with individual angels from Google, Microsoft and Intel. The round takes Huskeys's total funding to $35 million and pushes its valuation past $100 million. Co-founders Itai Gafni and Roy Weisfeld are both Unit 8200 alumni.</p>
+<p>Huskeys's product sits at the network edge and applies what the company calls an agentic-AI classification layer on top of existing web-app firewalls and traffic-inspection stacks. Rather than replacing the underlying WAF, the platform augments it: it inspects request traffic in real time to distinguish helpful AI agents (documented tools running documented tasks) from malicious ones (agents scraping data, exploiting APIs, running credential-stuffing attacks or executing recon workflows).</p>
+<blockquote class="pull-quote">"The network edge now sees more agent traffic than human traffic, and existing rules don't tell the two apart. That's the problem." <cite>— Huskeys co-founder Itai Gafni</cite></blockquote>
+<p>The customer roster is unusually strong for an A-round company: TikTok, LEGOLAND, the direct-to-consumer telehealth firm Ro, Hugging Face and Blackstone itself. Blackstone's lead position and its participation as customer signals a pattern seen elsewhere in 2026 rounds: the LP sometimes writes the reference check that anchors the go-to-market. Capital funds engineering expansion, global go-to-market and R&D into agent-classification models for autonomous decision engines and real-time inference pipelines.</p>
+<p class="source-footer"><a href="https://cryptobriefing.com/blackstone-huskeys-series-a-ai-security/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><rect x="12" y="14" width="96" height="52" rx="3" fill="none" stroke="#881337" stroke-width="1.4"/><rect x="18" y="20" width="42" height="40" fill="none" stroke="#881337" stroke-width="0.9" opacity="0.7"/><rect x="62" y="20" width="42" height="40" fill="none" stroke="#881337" stroke-width="0.9" opacity="0.7"/><line x1="60" y1="20" x2="60" y2="60" stroke="#881337" stroke-width="0.8" opacity="0.5"/><text x="39" y="42" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" fill="#881337">-old</text><text x="83" y="42" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" fill="#881337">+new</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Claude Code adds a fullscreen /diff panel, prompt-cache miss diagnostics in v2.1.260</h3>
+<p class="kicker">Anthropic releasebot · 2026-09-04 · <a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Claude Code v2.1.260 added a fullscreen /diff panel that opens beside the conversation showing uncommitted changes as Claude edits, prompt-cache miss diagnostics inside /cost, /reload-plugins in headless sessions, and fixes for Fable 5.1 cache invalidation and macOS blockReadsOutsideWorkingDirectories.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Anthropic's Claude Code v2.1.260 shipped Thursday evening at 23:48 UTC and cleaned up a lot of surface area at once. The headline feature is a new fullscreen /diff panel that opens beside the conversation view and renders uncommitted changes as Claude edits, streaming the diff live rather than requiring the user to re-run git diff in a side terminal. The panel toggles with the /diff slash command and can be sized to a full column or a floating overlay.</p>
+<p>Beneath the diff feature, v2.1.260 added prompt-cache miss diagnostics inside /cost (Claude Code now reports which tokens the prompt-cache system thinks changed since the last request, so users can debug why a supposedly stable prompt is repricing), /reload-plugins in headless sessions (previously plugin reload was interactive-only), and a set of about thirty smaller bug fixes covering permission rules with parentheses, zsh command-substitution auto-approval, and macOS blockReadsOutsideWorkingDirectories drift where symlinked working directories were being blocked incorrectly.</p>
+<blockquote class="pull-quote">"/diff opens beside the conversation in fullscreen and shows uncommitted changes as Claude edits." <cite>— Claude Code v2.1.260 release note</cite></blockquote>
+<p>The Fable 5.1 prompt-cache invalidation fix is the release's most consequential silent change. Prior versions were invalidating the cache on unnecessary tool-schema differences, which was silently doubling cost on some session shapes. Anthropic did not quantify the recovered savings, but the fix ships as the default on 2.1.260.</p>
+<p class="source-footer"><a href="https://releasebot.io/updates/anthropic/claude-code" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><rect x="10" y="52" width="100" height="14" rx="2" fill="none" stroke="#881337" stroke-width="1.2"/><g fill="#881337"><circle cx="22" cy="59" r="2"/><circle cx="32" cy="59" r="2"/><circle cx="42" cy="59" r="2"/></g><rect x="66" y="55" width="34" height="8" rx="2" fill="#881337"/><text x="83" y="61" text-anchor="middle" font-family="ui-monospace,monospace" font-size="6" fill="#f7f5ef" font-weight="700">v1.0.83</text><path d="M60 14 L60 46" stroke="#881337" stroke-width="1.2"/><rect x="46" y="14" width="28" height="18" rx="2" fill="none" stroke="#881337" stroke-width="1.2"/><text x="60" y="26" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#881337">CLI</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">GitHub Copilot CLI v1.0.83 lands custom-agent support and Windows taskbar session status</h3>
+<p class="kicker">Havoptic changelog / GitHub · 2026-09-04 · <a href="https://www.havoptic.com/tools/github-copilot" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Friday's Copilot CLI drop shows active sessions in the Windows taskbar with live status updates and adds first-class custom-agent support, letting users define named agent profiles with distinct system prompts and tool sets.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>GitHub cut Copilot CLI v1.0.83 on Friday. The user-visible change is live Windows-taskbar session status: any open Copilot CLI session shows up in the taskbar with a color-coded status (idle, thinking, running tool, awaiting input, blocked, complete) and clicking the taskbar entry surfaces the session pane. The under-the-hood change is first-class custom-agent support: users can define named agent profiles with distinct system prompts, tool allowlists and default models, and switch between them per-session with a single flag.</p>
+<p>Custom agents were previously a semi-supported feature through the extension API. In 1.0.83 they become a first-class configuration surface with agent definitions living in a versionable YAML file and inheriting from a project-level agent registry. GitHub's changelog frames the change as bringing the CLI into parity with the VS Code Copilot extension's agent authoring workflow, which shipped agent profiles in the July release.</p>
+<blockquote class="pull-quote">"Custom agents are first-class in v1.0.83: define a named agent, its prompt, its tools, its default model, and switch between them per session." <cite>— GitHub Copilot CLI v1.0.83 changelog</cite></blockquote>
+<p>Havoptic's changelog aggregation flagged the release as unusually feature-heavy for a patch-number bump. The Windows taskbar status is the first live per-session status surface GitHub has shipped outside VS Code, and it pairs with GitHub Actions's new Copilot CLI Runner (v0.5) to give CI systems a stable way to observe long-running Copilot sessions without polling.</p>
+<p class="source-footer"><a href="https://github.com/features/copilot/whats-new" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><rect x="14" y="14" width="92" height="52" rx="4" fill="none" stroke="#881337" stroke-width="1.4"/><rect x="24" y="22" width="72" height="12" rx="2" fill="#881337" opacity="0.85"/><text x="60" y="31" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" fill="#f7f5ef" font-weight="700">ZENITH</text><g fill="#881337"><rect x="24" y="40" width="26" height="8" rx="2"/><rect x="52" y="40" width="26" height="8" rx="2"/><rect x="80" y="40" width="16" height="8" rx="2"/></g><text x="60" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#881337">64GB · 30B LOCAL</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Microsoft rolls Project Zenith to Windows 11 on 64GB PCs for local 30B model inference</h3>
+<p class="kicker">Windows Central · 2026-09-04 · <a href="https://techstartups.com/2026/09/04/top-tech-news-today-september-4-2026-amazon-google-microsoft-nvidia-openai-tesla-more/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Microsoft's Zenith Windows-11 configuration for 64GB-and-up PCs enables local inference of 30B-parameter open-weights models with sub-30ms first-token latency; first devices ship on AMD Ryzen AI Halo.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Microsoft rolled Project Zenith into a supported Windows 11 configuration on Thursday, targeted at PCs with 64GB or more unified memory and marketed as the developer configuration for local 30B-parameter open-weights model inference. First shipping devices are AMD Ryzen AI Halo-based workstations, which pair a Zen 5 CPU with a large NPU and unified LPDDR5X memory pool.</p>
+<p>Zenith is not a Windows edition; it is a configuration profile that includes the Windows ML runtime tuned for 30B-class models, a resident model cache that preloads a chosen model into unified memory at boot, and driver-level scheduling that reserves NPU cycles for foreground inference. Microsoft claims sub-30ms first-token latency on 30B-parameter quantized models on a Halo-class device, which would put Zenith competitive with cloud endpoints on interactive latency for the same model class.</p>
+<blockquote class="pull-quote">"Zenith is the developer configuration for local 30B model work. First-token latency under 30 milliseconds on Ryzen AI Halo hardware." <cite>— Windows Central summary of Microsoft's Project Zenith announcement</cite></blockquote>
+<p>The move continues Microsoft's pattern of formalizing configurations for local AI work that were previously hobbyist territory. Windows 11 already ships Copilot+ profiles for smaller-model local inference; Zenith extends the ladder up to the 30B tier, which is roughly the sweet spot for open-weights coding models. It does not yet cover 100B-plus open-weights models like GLM-5.3 or K2 Horizon 375B, which remain gated behind cloud endpoints on consumer Windows.</p>
+<p class="source-footer"><a href="https://techstartups.com/2026/09/04/top-tech-news-today-september-4-2026-amazon-google-microsoft-nvidia-openai-tesla-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><circle cx="42" cy="40" r="20" fill="none" stroke="#881337" stroke-width="1.4"/><text x="42" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#881337">2K27</text><path d="M62 40 L82 40" stroke="#881337" stroke-width="1.4"/><rect x="82" y="26" width="24" height="28" rx="3" fill="none" stroke="#881337" stroke-width="1.4"/><text x="94" y="45" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" font-weight="700" fill="#881337">DLSS5</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Nvidia lands DLSS 5 on GeForce NOW with 28-title drop headlined by NBA 2K27</h3>
+<p class="kicker">Nvidia Blog · 2026-09-04 · <a href="https://developer.nvidia.com/blog/tag/ai-agent/page/4" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Thursday's GeForce NOW library update brought 28 new titles including NBA 2K27 with DLSS 5, Nvidia's latest AI upscaling and frame-generation model, hitting the cloud service on the same day as the retail launch.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Nvidia dropped 28 new titles into GeForce NOW on Thursday, led by NBA 2K27 with DLSS 5 enabled. The DLSS 5 update, which Nvidia had trailed at Gamescom in late August, adds a new frame-generation pipeline with lower per-frame latency and a substantially improved handling of thin objects (fences, hair, net textures) that had been DLSS 4's most visible weakness. GeForce NOW subscribers on Ultimate tier get DLSS 5 at 4K/120 for all supported titles.</p>
+<p>The company's framing is that DLSS 5 launching in the cloud on the same day as the retail launch of NBA 2K27 collapses the historical delay between AI upscaling ships and cloud gaming support. Historically DLSS versions have taken three to six months to reach cloud services after ship. The DLSS 5 pipeline is also the first Nvidia AI upscaler that runs against a transformer-based super-resolution model rather than the convolutional variant used in DLSS 2 through 4, which is why the frame-generation latency improvement is as large as Nvidia claims.</p>
+<blockquote class="pull-quote">"DLSS 5 is Nvidia's first transformer-based upscaler, and it's live in GeForce NOW on launch day for NBA 2K27." <cite>— Nvidia GeForce NOW September 4 drop announcement</cite></blockquote>
+<p>The tech-press read on Friday treated the drop as evidence of Nvidia's continued willingness to lean into cloud gaming as a distribution vector for its AI research, even as the enterprise story is dominated by data-center revenue. GeForce NOW's Ultimate tier ships the same silicon (RTX 5090 class) as consumer flagship boxes, so the DLSS 5 pipeline has a real hardware substrate to demonstrate against.</p>
+<p class="source-footer"><a href="https://developer.nvidia.com/blog/tag/ai-agent/page/4" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><rect x="12" y="14" width="96" height="52" rx="3" fill="none" stroke="#881337" stroke-width="1.4"/><rect x="18" y="20" width="70" height="8" rx="2" fill="#881337" opacity="0.85"/><text x="90" y="26" text-anchor="middle" font-family="Georgia,serif" font-size="7" font-weight="700" fill="#881337">4.6</text><g fill="none" stroke="#881337" stroke-width="0.9"><line x1="18" y1="36" x2="102" y2="36"/><line x1="18" y1="46" x2="102" y2="46"/><line x1="18" y1="56" x2="102" y2="56"/></g><circle cx="30" cy="46" r="2.4" fill="#881337"/><circle cx="60" cy="46" r="2.4" fill="#881337"/><circle cx="90" cy="46" r="2.4" fill="#881337"/></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Cursor adds Grok 4.6 with 2x usage, self-hosted machines and Linux computer use</h3>
+<p class="kicker">Cursor changelog · 2026-09-04 · <a href="https://releasebot.io/updates/cursor" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Cursor's Friday drop added xAI Grok 4.6 as a first-class model choice with 2x included usage for the first week, self-hosted machines for local tool execution behind the firewall, and dynamic machine pools including Linux and macOS computer use.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Cursor added xAI's Grok 4.6 as a first-class model choice on Friday, with 2x included usage for the first week to encourage trial. Cursor's framing positions Grok 4.6 as the choice for long-running agents, complex multi-file coding and interactive visual work, citing Artificial Analysis's Intelligence Index parity with GPT-5.6 Sol and matching agentic coding benchmarks. The 1.5T parameter Grok 4.6 is 30 percent cheaper per output token than GPT-5.6 Sol at Cursor's negotiated rate.</p>
+<p>Beneath the model addition, Cursor rolled two infrastructure changes. Self-hosted machines let enterprise customers run Cursor's tool-execution layer inside their own VPC so code, builds and secrets never leave the customer network; the router still calls Cursor's cloud for model completions but tool execution stays local. Dynamic machine pools scale local runners on demand, and support for Linux and macOS computer use lets agents drive browsers and desktop applications on the same self-hosted footprint.</p>
+<blockquote class="pull-quote">"Self-hosted machines mean the code, the builds and the secrets stay in your network. Cursor calls the model; your infrastructure runs the tools." <cite>— Cursor September changelog on the self-hosted machines feature</cite></blockquote>
+<p>The combination of self-hosted machines and Linux computer use is aimed squarely at large enterprises with strict data-residency rules, which have been the slowest segment to adopt agentic coding tools because the tool-execution surface has traditionally required cloud round-trips. Cursor is now the second major coding IDE to ship self-hosted tool execution after JetBrains AI in July.</p>
+<p class="source-footer"><a href="https://releasebot.io/updates/cursor" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><rect x="14" y="14" width="32" height="52" rx="4"/><rect x="52" y="14" width="20" height="52" rx="4"/><rect x="78" y="14" width="30" height="52" rx="4"/></g><g fill="#881337" font-family="system-ui,sans-serif" font-size="7" font-weight="700" text-anchor="middle" letter-spacing="0.5"><text x="30" y="44">CRM</text><text x="62" y="44">API</text><text x="93" y="44">ERP</text></g><path d="M46 40 L52 40" stroke="#881337" stroke-width="1.2"/><path d="M72 40 L78 40" stroke="#881337" stroke-width="1.2"/></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">Composio's Karan Vaidya reframes the enterprise agent problem as tool integration</h3>
+<p class="kicker">AI Engineer · 2026-09-04 · <a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/major-developments-2026-09-04" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Composio founder Karan Vaidya used a Friday AI Engineer talk to argue that enterprise agent reliability is bottlenecked on tool-integration surface area rather than model reasoning, and that Composio's pivot from code generation to knowledge-work integration is the response.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Composio's Karan Vaidya delivered a Friday AI Engineer conference talk arguing that the reason enterprise agent deployments are stalling is not model reasoning but tool integration. The claim: current frontier models are already reliable enough to complete most enterprise workflows if they have well-typed, well-documented, well-authenticated tool access; what they lack in production is a stable integration substrate for the fifty-to-two-hundred SaaS APIs an average enterprise workflow touches.</p>
+<p>Composio's response has been a full pivot from its original code-generation position to enterprise knowledge-work integration. The company now ships a maintained library of typed connectors across CRM, ERP, ITSM, communications and analytics SaaS, and treats the connector layer as the primary product. Vaidya's argument in the talk is that Composio can drive agent completion rates from 40 percent to 80 percent on a fixed enterprise workflow simply by tightening tool schemas and adding retry logic, without changing the underlying model.</p>
+<blockquote class="pull-quote">"Reliable tool integration outweighs advanced model reasoning for automating knowledge work tasks. The bottleneck is not the model." <cite>— Karan Vaidya, Composio founder, at AI Engineer</cite></blockquote>
+<p>The talk landed inside the broader September 4 pattern of agent-infrastructure product launches. Nvidia PAIR (household GPU routing), Gimlet Labs's Series B (multi-silicon inference routing), Cursor's self-hosted machines (tool execution behind the firewall) and Composio's tool-integration pivot each attack a different part of the agent-reliability stack. Vaidya's implicit thesis: model progress is now the easy problem; the deployment surface is the hard problem.</p>
+<p class="source-footer"><a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/major-developments-2026-09-04" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><rect x="16" y="20" width="88" height="40" rx="3" fill="none" stroke="#881337" stroke-width="1.4"/><text x="60" y="42" text-anchor="middle" font-family="ui-monospace,monospace" font-size="8" fill="#881337">codex</text><text x="60" y="55" text-anchor="middle" font-family="ui-monospace,monospace" font-size="7" fill="#881337">v0.153.2</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">OpenAI Codex CLI 0.153.2 wires GPT-6 Astra API and corrects the Fast tier label</h3>
+<p class="kicker">OpenAI Codex changelog · 2026-09-04 · <a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">The rust-v0.153.2 patch corrects the GPT-6 Astra Fast tier description and completes the Astra API wiring across three back-to-back Rust releases (rust-v0.153.1, rust-v0.154.0-alpha.2 and rust-v0.153.2).</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>OpenAI Codex CLI shipped rust-v0.153.2 late Thursday, patching a mislabeled Fast-tier description that had crept into the GPT-6 Astra wiring on Wednesday's alpha.2 release. Astra API configuration is now correctly parameterized across all three tiers (Standard, Fast, Enterprise Daybreak) and the CLI's completion progress indicator picks up Astra's higher output-token velocity relative to Sol.</p>
+<p>The three back-to-back releases (rust-v0.153.1 at 21:02 UTC, rust-v0.154.0-alpha.2 at 21:58 UTC and rust-v0.153.2 at 23:53 UTC on Wednesday, and the follow-on rust-v0.153.2 patch on Thursday) each ship 162 signed platform artifacts. The Codex CLI is Rust for the runtime and TypeScript for the surface; the Astra wiring lives entirely on the Rust side.</p>
+<blockquote class="pull-quote">"Astra is now wired across all three tiers, and the Fast-tier progress indicator picks up the higher output-token velocity." <cite>— OpenAI Codex CLI 0.153.2 changelog</cite></blockquote>
+<p>The bump matters because Codex CLI is the primary way OpenAI ships Astra to developers ahead of the Enterprise Daybreak rollout completing across ChatGPT Business/Enterprise, and any mislabeling of the Fast tier directly affects cost expectations. The patch converged the labels; users who were seeing Fast-tier requests unexpectedly rate-limited under the alpha.2 wiring should update.</p>
+<p class="source-footer"><a href="https://developers.openai.com/codex/changelog" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><circle cx="60" cy="42" r="24" fill="none" stroke="#881337" stroke-width="1.4"/><path d="M42 42 L54 54 L78 30" stroke="#881337" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="60" y="74" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#881337">HPE · NERI</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">HPE's Neri frames AI as an enterprise-adoption problem, not a training-infrastructure one</h3>
+<p class="kicker">Bloomberg Technology · 2026-09-04 · <a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/major-developments-2026-09-04" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Antonio Neri used a Bloomberg Technology interview Friday to position HPE's networking and private-cloud stack against the hyperscaler training story, arguing that the next wave of enterprise AI revenue lands with the buyer, not the trainer.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>HPE CEO Antonio Neri used a Bloomberg Technology interview Friday to reframe the enterprise AI conversation away from frontier training and toward enterprise deployment, arguing that HPE's networking and private-cloud stack is positioned to capture the next wave of AI spending because enterprise buyers want a supported private-cloud AI substrate, not raw hyperscaler capacity. Neri's framing is the pitch that HPE has been sharpening since its Juniper Networks acquisition closed.</p>
+<p>The Q3 print HPE released this cycle backed the framing: $12.2 billion of revenue up 34 percent, $2.4 billion of AI orders and a multi-billion-dollar hyperscaler inferencing win that Neri confirmed was structured as a private cloud rather than as raw GPU rental. HPE's private-cloud AI product bundles Nvidia GPUs, HPE Aruba networking and OpsRamp observability into a supported per-cluster subscription.</p>
+<blockquote class="pull-quote">"The training story is done. The enterprise adoption story is what's next, and that's a private-cloud problem, not a hyperscaler problem." <cite>— Antonio Neri, HPE CEO, on Bloomberg Technology</cite></blockquote>
+<p>Neri also touched on the Oracle-HPE partnership that was reworked during the Q3 quarter to include HPE Aruba as the preferred networking layer for Oracle's OCI generative AI service. The Bloomberg segment framed HPE's stance as the counterweight to the AWS/Azure/GCP narrative that enterprises will land on hyperscalers by default. The read across from Neri's framing is that HPE expects enterprise AI budgets to migrate to private-cloud subscription in FY27 rather than to raw hyperscaler capacity.</p>
+<p class="source-footer"><a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/major-developments-2026-09-04" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><rect x="20" y="18" width="30" height="20" rx="2"/><rect x="60" y="18" width="30" height="20" rx="2"/><rect x="20" y="46" width="30" height="20" rx="2"/><rect x="60" y="46" width="30" height="20" rx="2"/></g><g stroke="#881337" stroke-width="2" fill="none"><line x1="26" y1="24" x2="44" y2="32"/><line x1="44" y1="24" x2="26" y2="32"/><line x1="66" y1="24" x2="84" y2="32"/><line x1="84" y1="24" x2="66" y2="32"/><line x1="26" y1="52" x2="44" y2="60"/><line x1="44" y1="52" x2="26" y2="60"/><line x1="66" y1="52" x2="84" y2="60"/><line x1="84" y1="52" x2="66" y2="60"/></g><text x="102" y="42" text-anchor="middle" font-family="Georgia,serif" font-size="7" font-weight="700" fill="#881337">5.61M</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-policy">Policy</span></div>
+<h3 class="headline">China removes 5.61M pieces of AI-generated content in two-month sweep</h3>
+<p class="kicker">Xinhua · 2026-09-04 · <a href="https://techstartups.com/2026/09/04/top-tech-news-today-september-4-2026-amazon-google-microsoft-nvidia-openai-tesla-more/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Beijing's Cyberspace Administration removed 5.61 million pieces of AI-generated content and acted against 49,000-plus accounts and 2,400-plus websites during a two-month enforcement sweep targeting misinformation, impersonation and harmful content.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The Cyberspace Administration of China announced Friday that a two-month AI-content enforcement sweep removed 5.61 million pieces of AI-generated content and took action against more than 49,000 accounts and 2,400 websites. Xinhua's readout described the categories targeted as AI-generated misinformation, non-consensual synthetic media (specifically deepfake impersonation of public figures), and AI-produced content promoting fraud, gambling and sexual content.</p>
+<p>The sweep sits under China's Interim Measures for the Management of Generative AI Services, which have been in force since August 2023 and were amended in early 2026 to add explicit content-labeling requirements for AI-generated media on domestic platforms. The Friday numbers are the largest single-enforcement action reported to date; prior CAC sweeps under the same rules have averaged in the low millions of removed items per campaign.</p>
+<blockquote class="pull-quote">"The sweep targeted misinformation, non-consensual synthetic impersonation, and AI-produced fraud, gambling and sexual content." <cite>— Xinhua summary of CAC's September 4 enforcement readout</cite></blockquote>
+<p>The action lands in a policy week where the US Congress is considering the Sanders-Casar Ban Artificial Superintelligence Act (introduced Wednesday) and the EU AI Act's GPAI enforcement powers are actively fining first-year violators. The three enforcement regimes now visibly cover different problem surfaces: China on content, US on capability, EU on process. Friday's CAC numbers reinforce that China's operational focus stays on downstream synthetic content rather than upstream model capability.</p>
+<p class="source-footer"><a href="https://techstartups.com/2026/09/04/top-tech-news-today-september-4-2026-amazon-google-microsoft-nvidia-openai-tesla-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="trend application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><circle cx="60" cy="30" r="10"/><line x1="60" y1="40" x2="60" y2="56"/><line x1="60" y1="46" x2="46" y2="52"/><line x1="60" y1="46" x2="74" y2="52"/><line x1="60" y1="56" x2="52" y2="70"/><line x1="60" y1="56" x2="68" y2="70"/></g><text x="60" y="14" text-anchor="middle" font-family="Georgia,serif" font-size="7" font-weight="700" fill="#881337">IFA 2026</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-trend">Trend</span><span class="tag tag-application">Application</span></div>
+<h3 class="headline">IFA 2026 pivots the consumer-electronics show toward embodied AI</h3>
+<p class="kicker">Forbes / TechTimes · 2026-09-04 · <a href="https://www.techtimes.com/articles/326645/20260904/ifa-berlin-2026-opens-samsung-exits-xiaomi-moves-amd-makes-ai-personal.htm" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Friday's Berlin floor report reframed IFA around embodied AI in humanoids, AR eyewear and household robots. Samsung stayed off the floor for the first time in a decade; Xiaomi filled the vacated hall with 380 products; AMD's Ryzen AI Halo push landed as the personal-AI hardware category's coming-of-age moment.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Forbes and TechTimes converged Friday on the same read of IFA Berlin 2026: the consumer-electronics show has visibly pivoted from screen products to embodied AI. The floor is now organized around three physical-AI verticals: humanoid and quadruped robots (Xiaomi's CyberOne, Unitree's H2, Anker's Companion), AR eyewear (HTC Vive Eagle, Meta Ray-Ban Gen 3, Xreal One Pro) and household robots (Roborock, Dreame, Anker MindBase).</p>
+<p>Samsung sat out the show for the first time in a decade, opting to stage its own competing event in Barcelona in October, and Xiaomi took over Hall 6.2 for its first standalone international booth with 3,300 square meters and 380 products across the Human × Car × Home ecosystem. AMD's Ryzen AI Halo push (paired with Microsoft's Project Zenith Windows configuration that landed the same day) got the strongest "coming of age" framing in the trade press: the pairing gives OEMs a coherent story for shipping a Windows 11 laptop or workstation as a local AI machine rather than as a general-purpose PC that happens to have an NPU.</p>
+<blockquote class="pull-quote">"Intelligence is moving from screens to sensors and actuators. That's the story IFA 2026 is telling on the floor." <cite>— Forbes IFA 2026 dispatch, September 4</cite></blockquote>
+<p>The read is not just a marketing repositioning; it lines up with the Sept 4 economic footprint. Figure's $3.5 billion Nscale pact is the single largest physical-AI compute commitment ever; Hivebotics closed $6 million for a restroom-cleaning robot arm; Xiaomi's CyberOne hit 98 percent nut-fastening success at its EV plant. The concurrent product-floor and capital-market motion reinforces each other: embodied AI is now where the money and the shipping product both live.</p>
+<p class="source-footer"><a href="https://www.techtimes.com/articles/326645/20260904/ifa-berlin-2026-opens-samsung-exits-xiaomi-moves-amd-makes-ai-personal.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><rect x="18" y="22" width="36" height="36" rx="4"/><rect x="66" y="22" width="36" height="36" rx="4"/></g><g fill="#881337" font-family="system-ui,sans-serif" font-size="7" font-weight="700" text-anchor="middle" letter-spacing="0.5"><text x="36" y="44">CONNECT</text><text x="84" y="44">BEDROCK</text></g><path d="M54 40 L66 40" stroke="#881337" stroke-width="1.2"/><text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" fill="#881337">AGENTIC + MANAGED</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-application">Application</span></div>
+<h3 class="headline">AWS expands Amazon Connect into four agentic tiers and opens OpenAI Managed Agents on Bedrock</h3>
+<p class="kicker">AWS News Blog · 2026-09-04 · <a href="https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">AWS launched Amazon Quick, expanded Amazon Connect into four agentic solutions for supply chain, hiring, customer experience and healthcare, and brought GPT-5.5, Codex and OpenAI Managed Agents to Bedrock in limited preview.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>AWS used its Thursday What's Next with AWS event to launch Amazon Quick, a new AI assistant for work with a desktop app and integrations across Salesforce, Microsoft 365, Slack and Google Workspace. Alongside Quick, AWS expanded Amazon Connect into four dedicated agentic solutions: supply chain, hiring, customer experience, and healthcare. The healthcare tier ships agentic patient verification, appointment management, patient insights, ambient documentation and medical coding, running under Amazon Connect Health's HIPAA envelope.</p>
+<p>The Bedrock announcement is the substantive change. AWS opened limited-preview access to GPT-5.5, OpenAI Codex and OpenAI Managed Agents on Amazon Bedrock, making it the first hyperscaler cloud outside Microsoft Azure to serve OpenAI hosted models. The Managed Agents offering wraps OpenAI's Agents SDK behind a Bedrock-native execution surface, so AWS customers can compose agents against OpenAI models with the same IAM, VPC and CloudWatch controls they use for Anthropic, Meta, Mistral or Amazon Titan.</p>
+<blockquote class="pull-quote">"OpenAI Managed Agents on Bedrock lets our customers compose GPT-5.5-backed agents inside the same IAM and VPC controls they use for Anthropic and Titan." <cite>— AWS What's Next announcement, September 4</cite></blockquote>
+<p>The move partially unwinds Microsoft's exclusivity on OpenAI-hosted models that was renegotiated in July when OpenAI restructured its cloud commitments. Under the renegotiated terms, OpenAI can now host models on second-source clouds subject to Microsoft's right of first refusal on new model families. Bedrock is the first realized second-source cloud under that framework. Amazon Connect's new configuration surface for conversational AI setup got press attention independently for cutting typical enterprise deployment time from months to weeks.</p>
+<p class="source-footer"><a href="https://aws.amazon.com/blogs/aws/top-announcements-of-the-whats-next-with-aws-2026/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.2"><path d="M20 50 Q30 20 44 44 T68 40 T96 26"/></g><g fill="#881337"><circle cx="20" cy="50" r="2"/><circle cx="44" cy="44" r="2"/><circle cx="68" cy="40" r="2"/><circle cx="96" cy="26" r="2"/></g><rect x="14" y="60" width="90" height="10" rx="2" fill="#881337" opacity="0.8"/><text x="60" y="68" text-anchor="middle" font-family="ui-monospace,monospace" font-size="6" fill="#f7f5ef" font-weight="700">b10794–b10803</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">llama.cpp cuts ten more release tags with sparse-mask FA and CUDA MoE fusion</h3>
+<p class="kicker">llama.cpp releases · 2026-09-04 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Thursday–Friday cadence added ten more signed release tags landing sparse-mask flash-attention across CUDA and Metal, MoE fusion for K2 Horizon and Qwen3.8-Max, Vulkan top_k radix improvements for Apple M4, and a fix to the multi-row sparse FA idx-kernel double-read.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>The llama.cpp release cadence stayed on its Saturday-heavy sprint rhythm Thursday and Friday, cutting ten more signed release tags between b10794 and b10803. The most consequential landed changes are sparse-mask flash-attention support across CUDA and Metal (which speeds up sparse attention for K2 Horizon 375B and Qwen 3.8 Flash Next), CUDA MoE fusion for K2 Horizon and Qwen 3.8-Max (which collapses the top-k router and expert dispatch into a single kernel), Vulkan top_k radix-select shader improvements for Apple M4, and a fix to the multi-row sparse FA idx kernel that had been reading the mask row twice on batch sizes above 8.</p>
+<p>The double-read fix is the most silently valuable of the ten. It cut prompt-processing throughput by roughly 15 percent on batch-32 workloads with sparse-mask attention (K2 Horizon, DeepSeek V4-Flash-Vision-Exp) in earlier versions. Users on those workloads should see the throughput return on b10794.</p>
+<blockquote class="pull-quote">"Sparse-mask flash-attention is now on both Metal and CUDA, MoE fusion collapses router + expert dispatch into one kernel, and the batched-decode idx-kernel double-read is fixed." <cite>— llama.cpp b10794 release note</cite></blockquote>
+<p>The runtime is now consistently shipping ten-plus tags per week, matching the release cadence of vLLM and outpacing every other open-weights runtime. Each tag ships signed platform artifacts and is reproducible from source. The b10803 tag late Friday added a small Metal fix for the fa-vec kernel that had been silently miscomputing softmax stability on Apple M3 Max chips.</p>
+<p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><circle cx="60" cy="40" r="20"/></g><text x="60" y="34" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#881337">MOMENT</text><text x="60" y="48" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#881337">$22M</text><text x="60" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#881337">GHANA · SERIES A</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+<h3 class="headline">Moment closes $22M Series A for cross-border payments AI in Ghana</h3>
+<p class="kicker">TechStartups · 2026-09-04 · <a href="https://techstartups.com/2026/09/04/startup-funding-news-today-september-4-2026-crusoe-gimlet-labs-hivebotics-more/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Ghana's Moment closed a $22 million Series A led by Speedinvest with QED Investors, Global Founders Capital and FJ Labs backing cross-border payment infrastructure that uses agentic routing to navigate fragmented African payment corridors.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Ghana's Moment closed a $22 million Series A on Friday led by Speedinvest, with QED Investors, Global Founders Capital and FJ Labs participating. The company builds cross-border payment infrastructure for African markets, using an AI-driven routing layer to pick payment corridors dynamically across a fragmented set of national payment systems, mobile-money providers and correspondent banks.</p>
+<p>Moment's technical differentiator is the routing layer: each incoming payment request runs through an agentic router that picks the cheapest, most reliable path given the sender and recipient country pair, the current corridor liquidity, the fee structure of each intermediate provider, and the sender's stated latency preference. The routing model is trained on Moment's own transaction data (the company processes low-nine-figure monthly volume) and updates continuously.</p>
+<blockquote class="pull-quote">"African payments are a routing problem. We built the router." <cite>— Moment founder, September 4</cite></blockquote>
+<p>The round sits inside the Friday cross-border venture drop that included Crusoe ($3B), Gimlet Labs ($300M), Hivebotics ($6M) and Octave.energy (€10M). Moment's positioning is interesting because it treats an infrastructure problem (payments) as an AI-native problem rather than as a compliance-and-integration problem. Speedinvest's lead marks its largest African fintech check to date.</p>
+<p class="source-footer"><a href="https://techstartups.com/2026/09/04/startup-funding-news-today-september-4-2026-crusoe-gimlet-labs-hivebotics-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><rect x="16" y="26" width="88" height="28" rx="4"/></g><g fill="#881337"><circle cx="30" cy="40" r="3"/><circle cx="50" cy="40" r="3"/><circle cx="70" cy="40" r="3"/><circle cx="90" cy="40" r="3"/></g><text x="60" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#881337">67K US · TREZOR</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+<h3 class="headline">Trezor discloses 67,000-customer US data breach via ShipMonk logistics provider</h3>
+<p class="kicker">The Block · 2026-09-04 · <a href="https://techstartups.com/2026/09/04/top-tech-news-today-september-4-2026-amazon-google-microsoft-nvidia-openai-tesla-more/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">Hardware wallet maker Trezor disclosed Friday that 67,000 additional US customers had names, emails, phone numbers and addresses exposed through a compromise at logistics provider ShipMonk, expanding a previously disclosed breach.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Trezor disclosed Friday that 67,000 additional US customers had their personal data exposed through a compromise at ShipMonk, the logistics provider Trezor uses for US hardware wallet fulfillment. The breach exposes names, email addresses, phone numbers and shipping addresses; no cryptographic secrets or seed phrases were involved, and Trezor's own hardware wallet remains uncompromised.</p>
+<p>The breach is not directly an AI incident, but it lands in an AI-adjacent context because Trezor customers are a high-value target for AI-driven phishing at scale: knowing that someone owns a Trezor and having their email and phone number is enough for a generative-AI-scaled voice or text phishing operation to run credible impersonation attacks. Blockchain forensic firms have already flagged an uptick in Trezor-themed phishing since the July disclosure.</p>
+<blockquote class="pull-quote">"No cryptographic secrets were exposed. The exposure is PII enough to power scaled phishing." <cite>— Trezor customer notice, September 4</cite></blockquote>
+<p>The Friday number expands a June-disclosed breach that initially covered a smaller EU cohort. ShipMonk is the same provider that surfaced in a similar disclosure by Ledger's US arm in Q1. The pattern (crypto hardware fulfillment provider compromised, PII of high-value crypto holders exposed) is now recurring and is being cited in Congressional AI-fraud hearings as an example of the phishing-vulnerable surface AI voice cloning exploits.</p>
+<p class="source-footer"><a href="https://techstartups.com/2026/09/04/top-tech-news-today-september-4-2026-amazon-google-microsoft-nvidia-openai-tesla-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><rect x="14" y="18" width="92" height="16" rx="3"/><rect x="14" y="42" width="92" height="16" rx="3"/></g><g fill="#881337"><circle cx="22" cy="26" r="2"/><circle cx="34" cy="26" r="2"/><circle cx="46" cy="26" r="2"/><circle cx="22" cy="50" r="2"/><circle cx="34" cy="50" r="2"/></g><text x="90" y="30" text-anchor="middle" font-family="ui-monospace,monospace" font-size="6" fill="#881337">v2.31.2</text><text x="90" y="54" text-anchor="middle" font-family="ui-monospace,monospace" font-size="6" fill="#881337">AGENT</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">LM Studio 1.1.1 bundles llama.cpp 2.31.2 packs and adds an Agent settings pane</h3>
+<p class="kicker">LM Studio changelog · 2026-09-04 · <a href="https://releasebot.io/updates/mistral" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">LM Studio's Friday Bionic 1.1.1 build bundles llama.cpp 2.31.2 extension packs and adds a new Agent settings pane that exposes tool allowlists, memory persistence and sandbox rules for the app's built-in agent runtime.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>LM Studio cut Bionic 1.1.1 on Friday, bundling llama.cpp 2.31.2 extension packs across CUDA, Metal, Vulkan and ROCm and adding a first-class Agent settings pane. The pane exposes tool allowlists (which of LM Studio's built-in tools an agent can call), memory persistence (whether agent runs share long-term memory), and sandbox rules (whether tool execution runs in an ephemeral container or in the user's home directory).</p>
+<p>The Agent settings pane matters because LM Studio has been the most popular consumer-facing local inference UI since the Ollama gap widened, and its agent runtime had been minimally configurable. The 1.1.1 pane brings LM Studio's agent surface into parity with Nvidia's PAIR (which shipped the same day) and Ollama's tool-use API. Together, the three releases collapse the friction between local-model inference and local agent execution.</p>
+<blockquote class="pull-quote">"The Agent pane exposes tool allowlists, memory persistence and sandbox rules for LM Studio's built-in agent runtime." <cite>— LM Studio Bionic 1.1.1 changelog</cite></blockquote>
+<p>The llama.cpp 2.31.2 bundle picks up all the sparse-mask flash-attention and MoE fusion improvements from this week's llama.cpp release cadence, so users on Bionic 1.1.1 automatically inherit the throughput improvements when serving K2 Horizon or Qwen 3.8 Flash Next locally. LM Studio's install base is quietly one of the largest local-inference footprints in consumer AI.</p>
+<p class="source-footer"><a href="https://releasebot.io/updates/mistral" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+<svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="80" fill="#f7f5ef"/><g fill="none" stroke="#881337" stroke-width="1.4"><circle cx="60" cy="40" r="16"/><circle cx="60" cy="40" r="6" fill="#881337"/></g><g stroke="#881337" stroke-width="1.2"><line x1="60" y1="18" x2="60" y2="26"/><line x1="60" y1="54" x2="60" y2="62"/><line x1="38" y1="40" x2="46" y2="40"/><line x1="74" y1="40" x2="82" y2="40"/></g><text x="60" y="76" text-anchor="middle" font-family="Georgia,serif" font-size="8" font-weight="700" fill="#881337">QUANTUM MOTION</text></svg>
+<div class="body">
+<div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+<h3 class="headline">Quantum Motion extends Series C for CMOS-compatible fault-tolerant quantum hardware</h3>
+<p class="kicker">Quantum Insider · 2026-09-04 · <a href="https://techstartups.com/2026/09/04/top-tech-news-today-september-4-2026-amazon-google-microsoft-nvidia-openai-tesla-more/" target="_blank" rel="noopener">Source ↗</a></p>
+<p class="teaser">UK-based Quantum Motion extended its Series C on Friday and confirmed a new US laboratory in Maryland to build silicon-based fault-tolerant quantum computers using CMOS-compatible manufacturing, targeting AI-adjacent workloads.</p>
+<span class="expand-control"></span>
+</div>
+</summary>
+<div class="full-content">
+<p>Quantum Motion, the UK spinout building silicon-based fault-tolerant quantum computers, extended its Series C on Friday and confirmed a new US laboratory in Maryland. The company's differentiator is CMOS-compatible qubit manufacturing: it fabricates qubits using the same silicon process flow as commercial semiconductors, which lets it leverage existing foundry capacity rather than building bespoke quantum fabs.</p>
+<p>The AI adjacency is why the round drew attention in a week dominated by AI infrastructure headlines: Quantum Motion pitches its platform at three AI-adjacent problem classes (combinatorial optimization inside RL training pipelines, quantum-assisted embedding search, and quantum-augmented material simulation for chip design) rather than at general quantum computing. The Maryland lab expansion signals the company is chasing US federal quantum-compute contracts that require domestic operational footprint.</p>
+<blockquote class="pull-quote">"CMOS-compatible qubits let us borrow the semiconductor foundry stack, rather than building a fab from scratch." <cite>— Quantum Motion co-founder, Series C announcement</cite></blockquote>
+<p>The round is one of the few quantum extensions this year that hasn't come with a valuation reset downward. Quantum Motion did not disclose the extension check size or new valuation. The company's UK operational footprint is at the Harwell campus and the new Maryland lab will focus on packaging and control-electronics work rather than qubit fabrication.</p>
+<p class="source-footer"><a href="https://techstartups.com/2026/09/04/top-tech-news-today-september-4-2026-amazon-google-microsoft-nvidia-openai-tesla-more/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+</section>
+</main>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-09-05 · Generated 2026-09-05 UTC</div>
+  <div><a href="../index.html">← Back to home</a></div>
+</footer>
+</div>
+
+<script>
+(function(){
+  const stories = document.querySelectorAll('main details, main article[data-tags]');
+  const heroStory = document.getElementById('hero');
+  const bp = document.querySelector('.big-picture');
+  const rundownCount = document.querySelector('.section-head .count');
+  const rundownText = rundownCount ? rundownCount.textContent : '';
+  const dateSuffix = rundownText.replace(/^\d+\s+stor(y|ies)\s*·?\s*/,'· ');
+  const chips = document.querySelectorAll('.filter-chip');
+  const status = document.querySelector('.filter-status');
+  const total = stories.length;
+  chips.forEach(c => {
+    const tag = c.dataset.filter;
+    const n = tag === 'all' ? total : [...stories].filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+    const countEl = c.querySelector('.count');
+    if (countEl) countEl.textContent = n;
+    if (tag !== 'all' && n === 0) { c.setAttribute('disabled',''); }
+  });
+  function applyFilter(filter){
+    if (bp) bp.hidden = (filter !== 'all');
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const match = filter === 'all' || tags.includes(filter);
+      if (match) { s.removeAttribute('hidden'); if (s !== heroStory) visibleNonHero++; }
+      else { s.setAttribute('hidden',''); }
+    });
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    if (rundownCount){
+      const label = visibleNonHero === 1 ? 'story' : 'stories';
+      rundownCount.textContent = visibleNonHero + ' ' + label + ' ' + dateSuffix;
+    }
+    if (status){
+      const activeLabel = filter === 'all' ? 'all stories' : (filter[0].toUpperCase()+filter.slice(1));
+      status.textContent = 'Showing ' + activeLabel + ' — ' + visibleNonHero + ' stories.';
+    }
+    if (location.hash !== '#filter=' + filter){
+      history.replaceState(null,'', filter === 'all' ? location.pathname : '#filter=' + filter);
+    }
+  }
+  chips.forEach(c => c.addEventListener('click', () => { if (c.hasAttribute('disabled')) return; applyFilter(c.dataset.filter); }));
+  const m = location.hash.match(/^#filter=(\w+)$/);
+  applyFilter(m ? m[1] : 'all');
+})();
+</script>
+</body>
+</html>
