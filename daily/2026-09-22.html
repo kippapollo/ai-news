@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-09-22</title>
+<meta name="description" content="Meta's Muse agent set off a Monday chip rally that put AMD above $1 trillion in market cap for the first time, lifted Arm 13 percent, Intel 12 percent and AMD 9 percent, and reset the CPU story around inference on personal devices. Xiaomi released MiMo-V2.6 Pro Tuesday morning under an MIT license, a 1.02T-parameter mixture-of-experts at 42B active that scored 46 on Artificial Analysis, one point behind GPT-5.6 Sol at roughly one-fiftieth the per-task price of Fable 5.1 Max. xAI shipped Grok 4.7 with 71 percent on DeepSWE v1.1 at unchanged $2/$6 per million tokens. Anthropic redesigned Claude Code Projects around parallel delegation over separate git branches. Meta released SAM 3.1 with zero-shot detection, segmentation and video tracking. Alibaba open-sourced Qwen-Image-2.1 with a 7B DiT and dropped Apache 2.0 for a research-only license. PrismML released Ternary Bonsai 2 compressing Qwen3.8-27B to 5.9GB at 98.2 percent retained performance. Google's AX v0.3.0 agent runtime moved task state from Kubernetes to Redis Streams. Cloudflare Python Workers hit GA. Amazon blocked Meta's Muse from shopping over credential-capture concerns. Bloomberg reported Harvey, Abridge and Ramp are swapping OpenAI for Kimi K3 to protect gross margins. Newsom signed a seven-bill data center oversight package, shifting infrastructure costs to operators and mandating water and electricity disclosures. AIUC closed a $40M Series A led by Ribbit to build the audit and insurance layer for frontier agents. The UN's 40-expert Independent Scientific Panel invoked the precautionary principle on autonomous agents. Buchodi disclosed OpenAI's __obi cross-site cookie binding web browsing to ChatGPT accounts. Anthropic's Claude Code v2.1.278 shipped, and vLLM, SGLang, llama.cpp, Ollama, LiteLLM and Unsloth all cut new builds against DeepSeek V4.1, Qwen3.8, Kimi K3 and Gemma 4.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#166534;--accent-soft:rgba(22,101,52,0.10);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.14);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.14);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#86efac;--accent-soft:rgba(134,239,172,0.14);
+  --tag-tech:rgba(147,197,253,0.20);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.18);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.20);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.20);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.1;letter-spacing:-0.02em;margin:0 0 20px}
+.hero .dek{font-size:1.08rem;line-height:1.55;color:var(--ink);margin:0 0 18px}
+.hero .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.02em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;aspect-ratio:480/320;display:block}
+.big-picture{display:grid;grid-template-columns:170px 1fr;gap:32px;padding:36px 0 20px;margin:36px 0 32px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.big-picture[hidden]{display:none}
+@media (max-width:640px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.big-picture .label svg{display:block;margin-bottom:12px}
+.big-picture p{margin:0 0 12px;font-size:1.08rem;line-height:1.6}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,serif;font-size:3.2rem;font-weight:700;float:left;line-height:0.92;padding:6px 10px 0 0;color:var(--accent)}
+.divider{display:flex;align-items:center;justify-content:center;margin:44px 0;color:var(--accent)}
+.section-label{font-size:0.76rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.section-label .count{color:var(--accent);font-feature-settings:"tnum";letter-spacing:0.12em}
+.section-title{font-family:Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:-0.01em;margin:0 0 28px}
+.rundown{display:flex;flex-direction:column;gap:0}
+.story{border-bottom:1px solid var(--rule);padding:22px 0}
+.story:first-of-type{border-top:1px solid var(--rule)}
+.story summary{display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start;list-style:none;cursor:pointer}
+.story summary::-webkit-details-marker{display:none}
+.story.hero > summary,details#hero > summary{display:block}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.tag{font-size:0.68rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-09-22</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="tech economic" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+      <h1>AMD crosses $1 trillion in market cap as Meta's Muse resets the CPU story.</h1>
+      <p class="dek">Semiconductor stocks ripped Monday on the first hard evidence that autonomous personal agents move inference workloads onto CPUs at the scale the industry had modeled but never seen. AMD closed above a trillion for the first time on a 9 percent single-session move, Arm added 13 percent to $312.46, Intel jumped 12 percent to $121.38, and the SOX finished up 4.3 percent for its fifth consecutive session of gains. Intel CEO Lip-Bu Tan told analysts the company can currently meet only about half of committed customer demand. Muse itself has held the top slot on the US iPhone App Store for three straight days per Sensor Tower and has kept ChatGPT off the top since Thursday, and Wall Street read the download curve as an inference-loading curve.</p>
+      <p class="kicker">Tech · Bloomberg / 24/7 Wall St. / Yahoo Finance · 2026-09-21 · <a href="https://www.bloomberg.com/news/articles/2026-09-21/amd-set-to-top-1-trillion-in-market-value-as-chip-stocks-soar" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#166534" stop-opacity="0.30"/><stop offset="100%" stop-color="#166534" stop-opacity="0"/></linearGradient>
+        <radialGradient id="hg2" cx="0.80" cy="0.20" r="0.9"><stop offset="0%" stop-color="#166534" stop-opacity="0.22"/><stop offset="100%" stop-color="#166534" stop-opacity="0"/></radialGradient>
+        <pattern id="hgrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0 L0 0 0 24" fill="none" stroke="#166534" stroke-opacity="0.09" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgrid)"/>
+      <rect width="480" height="320" fill="url(#hg1)"/>
+      <rect width="480" height="320" fill="url(#hg2)"/>
+      <g font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#166534" letter-spacing="1.6">
+        <text x="30" y="34">MONDAY 2026-09-21 · CPU RALLY · MUSE DOWNLOAD CURVE = INFERENCE LOAD</text>
+        <line x1="30" y1="42" x2="440" y2="42" stroke="#166534" stroke-width="0.6" stroke-opacity="0.6"/>
+      </g>
+      <!-- three ticker bars -->
+      <g transform="translate(30, 74)" font-family="system-ui,sans-serif" fill="#166534">
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="132" height="80" fill="none" stroke="#166534" stroke-width="1"/>
+          <text x="66" y="20" text-anchor="middle" font-size="10" font-weight="700">ARM</text>
+          <text x="66" y="42" text-anchor="middle" font-size="24" font-weight="700">+13%</text>
+          <text x="66" y="62" text-anchor="middle" font-size="7" font-weight="500">$312.46 · royalties socket-wide</text>
+          <text x="66" y="74" text-anchor="middle" font-size="7" font-weight="500">est. $120B server CPU by 2030</text>
+        </g>
+        <g transform="translate(140, 0)">
+          <rect x="0" y="0" width="132" height="80" fill="none" stroke="#166534" stroke-width="1"/>
+          <text x="66" y="20" text-anchor="middle" font-size="10" font-weight="700">INTEL</text>
+          <text x="66" y="42" text-anchor="middle" font-size="24" font-weight="700">+12%</text>
+          <text x="66" y="62" text-anchor="middle" font-size="7" font-weight="500">$121.38 · Tan: "50% of demand"</text>
+          <text x="66" y="74" text-anchor="middle" font-size="7" font-weight="500">supply-constrained fabs</text>
+        </g>
+        <g transform="translate(280, 0)">
+          <rect x="0" y="0" width="132" height="80" fill="#166534" fill-opacity="0.14" stroke="#166534" stroke-width="1.2"/>
+          <text x="66" y="20" text-anchor="middle" font-size="10" font-weight="700">AMD</text>
+          <text x="66" y="42" text-anchor="middle" font-size="24" font-weight="700">$1T</text>
+          <text x="66" y="62" text-anchor="middle" font-size="7" font-weight="500">+9% to $611 · first close &gt; 1T</text>
+          <text x="66" y="74" text-anchor="middle" font-size="7" font-weight="500">SOX +4.3% · 5th up session</text>
+        </g>
+      </g>
+      <!-- Muse download curve → CPU load arrow -->
+      <g transform="translate(30, 178)">
+        <text x="0" y="10" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="1.6" fill="#166534">MUSE · US iPHONE APP STORE #1 · 3 STRAIGHT DAYS · CHATGPT DISPLACED</text>
+        <line x1="0" y1="20" x2="420" y2="20" stroke="#166534" stroke-width="0.5" stroke-opacity="0.5"/>
+        <path d="M0 90 C 60 88, 120 78, 180 62 C 240 44, 300 30, 360 22 L 420 18" stroke="#166534" stroke-width="2" fill="none"/>
+        <g font-family="system-ui,sans-serif" font-size="7" fill="#166534">
+          <text x="0" y="106">SEP 18</text><text x="105" y="106">SEP 19</text><text x="215" y="106">SEP 20</text><text x="325" y="106">SEP 21</text><text x="400" y="106" font-weight="700">TODAY</text>
+        </g>
+        <circle cx="0" cy="90" r="2.4" fill="#166534"/><circle cx="105" cy="78" r="2.4" fill="#166534"/><circle cx="215" cy="52" r="2.4" fill="#166534"/><circle cx="325" cy="28" r="2.4" fill="#166534"/><circle cx="420" cy="18" r="3.4" fill="#166534"/>
+      </g>
+      <g transform="translate(30, 300)">
+        <text x="0" y="0" font-family="system-ui,sans-serif" font-size="8" font-weight="700" letter-spacing="2" fill="#166534">AGENTIC INFERENCE ON CLIENT + EDGE → CPU FOOTPRINT · SOX $551.4 · NASDAQ-100 $735.14 · +2%</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The three US-listed processor names that most directly benefit from broad autonomous-agent adoption all posted their strongest single-session moves of 2026 on Monday, and Advanced Micro Devices Inc. closed above a trillion dollars in market capitalization for the first time. AMD gained 9 percent to $611. Arm Holdings gained 13 percent to $312.46, its largest one-day move since March. Intel Corporation gained 12 percent to $121.38. The Philadelphia Semiconductor Index (SOX) added 4.3 percent to $551.4, its fifth straight up session, and the Nasdaq-100 finished 2 percent higher at $735.14. None of the three chipmakers issued a company-specific release during the session; the trigger was a re-rating of the demand curve for their products.</p>
+  <p>The catalyst was Meta Platforms Inc.'s Muse personal agent, which Sensor Tower now confirms has been the most-downloaded free application on the US iPhone App Store for three consecutive days and has kept ChatGPT off the top slot since Thursday. Muse launched free on macOS the previous week and now runs a 100M-token-per-week ceiling with the Sentinel guard model gating outbound actions. Wall Street analysts read the download curve as an inference-loading curve, one where a personal agent making dozens of orchestration calls per user session drives inference workloads onto CPUs at scale that Wall Street had modeled but not yet observed. Bloomberg framed the rally as "early signs of success for Meta Platforms Inc.'s new artificial intelligence agent" sparking "a wave of enthusiasm around demand for the chips needed to power such agents."</p>
+  <p>Intel CEO Lip-Bu Tan, who took over the top job in March, told buy-side analysts on Monday that the company "can meet only 50 percent of customer demand" for its current server and client generations. Tan's disclosure, timed to the Muse rally, framed the CPU cycle as supply-constrained rather than demand-constrained and amplified Intel's rally more than the underlying stock-move mechanics would suggest, because additional agentic workloads would land on an already-backlogged order book. The 12 percent close for Intel was its largest single-session gain since the 2015 acquisition of Altera.</p>
+  <p>Arm's rally reflected a different mechanic. The company earns a royalty per socket, not per die, so any expansion in CPU volume across data-center, PC, and edge sockets flows through to its per-license take. Analysts at Bernstein estimated in a Monday note that the total addressable server-CPU market could reach $120 billion by 2030 if agentic inference migrates from cloud GPU clusters to a mix of client CPUs and edge inference boxes. AMD's move was structurally different again: the company designs processors but outsources manufacturing to TSMC, and Monday's move was driven by conviction that its EPYC and Instinct product lines can capture unit volume as Nvidia's H200 and B200 pipelines remain allocated to hyperscaler backlogs through 2027.</p>
+  <blockquote class="pull-quote">"Muse is the first agent that keeps calling a model on your behalf all day. That is not a search query, that is a runtime. Runtimes live on CPUs." <cite>— Stacy Rasgon, Bernstein Research, quoted in Bloomberg</cite></blockquote>
+  <p>The rally concentrated in processor names rather than spreading uniformly through the semiconductor complex. Micron gained 3.8 percent; SK Hynix ADRs gained 3.1 percent; ASML gained just 1.4 percent. Nvidia gained 1.8 percent to close at $195, well below the SOX-wide 4.3 percent print. Analysts reading the divergence argued that the rally is specifically pricing in a CPU-first agentic inference thesis rather than a general chip-demand rerating. Cadence Design Systems and Synopsys also outperformed, gaining 5.2 and 4.7 percent, on expectations of higher new-CPU-design activity across the AArch64, x86-64, and RISC-V ecosystems.</p>
+  <blockquote class="pull-quote">"We are supply-constrained across our AI and PC lines. Foundry Services is 100 percent booked through the first half of 2027. We are running to catch demand, not to build it." <cite>— Lip-Bu Tan, Intel CEO, on a Monday buy-side call</cite></blockquote>
+  <p>The rally also priced in a reading of Meta's product strategy that had been circulating on the sell-side since Muse's launch. Meta has positioned itself as the lead partner for an unannounced AArch64 client CPU designed for on-device agentic inference, referred to in three sell-side notes as "AGI CPU." Neither Meta nor Arm has confirmed the partnership on the record, but Arm's after-hours volume Monday concentrated in strike prices consistent with a further 15 percent move if the collaboration is disclosed. Bloomberg reported that Meta engineers have been briefing several fabless design firms since June about a client-side inference workload profile that assumes a Muse-class agent runs continuously in the background whenever the device is powered.</p>
+  <p>The market reaction sits in awkward tension with the pacing coalition's messaging over the past ten days. Anthropic CEO Dario Amodei's September 12 "Pace the Frontier" essay explicitly asked the industry to slow the deployment of autonomous systems, and Anthropic's September 17 R&D Automation Index disclosed that Claude now leads 26 percent of the company's own AI R&D work. Meta CEO Mark Zuckerberg has publicly declined to endorse Amodei's plan, and Muse is the clearest counter-example on the field: an autonomous agent shipping at consumer scale, on a demand curve steep enough to move a $1 trillion company by nine percent in a single session. Monday's rally is a bet, in real capital, that autonomous agents will not slow down.</p>
+  <p class="source-footer"><a href="https://www.bloomberg.com/news/articles/2026-09-21/amd-set-to-top-1-trillion-in-market-value-as-chip-stocks-soar" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture">
+  <div class="label">
+    <svg width="60" height="14" viewBox="0 0 60 14" aria-hidden="true"><rect x="0" y="6" width="14" height="2" fill="currentColor"/><rect x="18" y="6" width="24" height="2" fill="currentColor"/><rect x="46" y="6" width="14" height="2" fill="currentColor"/></svg>
+    Big Picture
+  </div>
+  <div>
+    <p>Two frontier releases and a chip rally reframed the pacing debate in a single 24-hour window. Xiaomi shipped MiMo-V2.6 Pro under MIT at 46 on the Artificial Analysis Intelligence Index, one point behind GPT-5.6 Sol, at roughly one-fiftieth of Fable 5.1 Max's per-task price and with the full technical report, RL environments and training code opened alongside the weights. xAI shipped Grok 4.7 with 71 percent on DeepSWE v1.1 at unchanged $2/$6 pricing and 19.6 percent on the Harvey Legal Agent Benchmark, more than seven times GPT-5.6 Sol Max's 2.5. The Muse-driven CPU rally that pushed AMD past $1 trillion arrived in the middle of both.</p>
+    <p>The Anthropic transparency framework and OpenAI's six-incident disclosure last week now share the field with an antitrust class action against the pacing coalition, Newsom's seven-bill California data-center package, and a UN Independent Scientific Panel brief invoking the precautionary principle on autonomous agents. Bloomberg reports Harvey, Abridge and Ramp are quietly swapping OpenAI for Moonshot's Kimi K3 to protect gross margins. Amazon has cut Meta's Muse off from shopping on Amazon.com over credential-capture concerns. Anthropic redesigned Claude Code Projects around parallel delegation over separate git branches. Meta released SAM 3.1. Google's AX v0.3.0 agent runtime moved state from Kubernetes to Redis Streams. PrismML compressed Qwen3.8-27B to 5.9GB retaining 98.2 percent of the base performance. AIUC closed a $40M Series A from Ribbit to build the audit and insurance layer for frontier agents.</p>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true"><svg width="80" height="14" viewBox="0 0 80 14"><circle cx="10" cy="7" r="2" fill="currentColor"/><path d="M20 3 L 26 7 L 20 11 L 14 7 Z" fill="currentColor" opacity="0.5"/><circle cx="40" cy="7" r="3" fill="currentColor"/><path d="M60 3 L 66 7 L 60 11 L 54 7 Z" fill="currentColor" opacity="0.5"/><circle cx="70" cy="7" r="2" fill="currentColor"/></svg></div>
+
+<h2 class="section-title">More today</h2>
+<div class="section-label"><span>Rundown</span><span class="count">26 stories · 2026-09-21 — 2026-09-22</span></div>
+
+<div class="rundown">
+
+<!-- ================= STORY 1: Xiaomi MiMo-V2.6 Pro ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" stroke-width="1" fill="none">
+      <circle cx="30" cy="40" r="18"/><circle cx="60" cy="40" r="18"/><circle cx="90" cy="40" r="18"/>
+    </g>
+    <text x="60" y="26" text-anchor="middle" font-family="Georgia,serif" font-size="9" font-weight="700" fill="#166534" letter-spacing="1">MiMo-V2.6 PRO</text>
+    <text x="60" y="46" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#166534">46</text>
+    <text x="60" y="68" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">TOP OPEN-WEIGHTS · MIT</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Xiaomi MiMo-V2.6 Pro ties the frontier under MIT at one-fiftieth the price.</h3>
+    <p class="kicker">OfficeChai / Hugging Face · 2026-09-22 · <a href="https://officechai.com/miscellaneous/xiaomi-mimo-v-2-6-pro-benchmarks/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A 1.02T-parameter, 42B-active MoE released Tuesday scored 46 on the Artificial Analysis Intelligence Index, one point behind GPT-5.6 Sol, and posts 71.9 on DeepSWE v1.1 and 89.9 on Terminal-Bench 2.1.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Xiaomi's MiMo team released MiMo-V2.6-Pro and MiMo-V2.6-Flash under an MIT license on Tuesday, alongside a full technical report, the reinforcement-learning environments used for training, and the training code. Both variants are omnimodal, jointly handling text, images and audio. The Pro variant is a mixture-of-experts model with 1.02 trillion total parameters and 42 billion active per token. It scored 46 on the Artificial Analysis Intelligence Index, one point behind OpenAI's GPT-5.6 Sol (47), five points behind Claude Opus 5 (51) and seven points behind the co-leaders GPT-6 Astra and Claude Fable 5.1 (both 53). The Intelligence Index score makes MiMo-V2.6-Pro the highest-scoring open-weights model, ahead of Moonshot's Kimi K3 Max and DeepSeek V4.1-Flash. The predecessor, MiMo-V2.5-Pro released in early July, had scored 26.</p>
+  <p>On agent benchmarks Xiaomi highlighted, MiMo-V2.6-Pro ties or beats OpenAI's GPT-5.6 Sol. On DeepSWE v1.1 it scored 71.9 percent to Sol's 73.0 percent and Opus 5's 74.0 percent. On AutomationBench it scored 53.1 percent, ahead of Opus 5's 50.3 and Sol's 45.8. On Terminal-Bench 2.1 it scored 89.9 percent; on the harder Terminal-Bench 4.0 it scored 34.9, behind Opus 5's 49.0. On visual coding it scored 72.3 percent, roughly matching both Opus 5 (70.0) and Sol (73.4). The model's stated weaknesses are competitive programming, offensive security work, and the hardest agentic terminal work at long contexts.</p>
+  <p>Pricing is the story most of the sell-side write-ups led with. Xiaomi listed MiMo-V2.6-Pro on its own inference endpoint at $0.435 per million input tokens with a 99 percent cache-hit discount, and $0.87 per million output tokens. Per Intelligence Index task, that works out to $0.13. Anthropic charges roughly $6.50 per equivalent task for Fable 5.1 Max. OfficeChai calculated the ratio at one-fiftieth, and Xiaomi's own press materials claim costs "one-twentieth to one-sixtieth" of leading international frontier models depending on the workload. Model weights are on Hugging Face under `XiaomiMiMo/MiMo-V2.6-Pro-RL`; the smaller MiMo-V2.6-Pro-UltraSpeed distillation is already priced on OpenRouter.</p>
+  <blockquote class="pull-quote">"MiMo-V2.6-Pro performs on par with Claude Opus 5 and GPT-5.6 Sol across most agent benchmarks, with stronger coding, computer use, 3D reasoning, and creative capabilities than the previous generation." <cite>— Xiaomi MiMo technical report</cite></blockquote>
+  <p>The release lands two days after Bloomberg reported that Harvey, Abridge and Ramp are quietly swapping OpenAI-hosted inference for open-weight Moonshot Kimi K3 to protect gross margins. MiMo-V2.6-Pro at one-fiftieth of Fable 5.1's per-task cost sits directly on the axis that decision runs along. The release also lands the same morning as xAI's Grok 4.7, which posted 71 percent on DeepSWE v1.1 at $2/$6 pricing, and one day after Meta's SAM 3.1 zero-shot detection release. Xiaomi published RL environments as a distinct artifact rather than only weights, a departure from the DeepSeek and Kimi K-family releases that has drawn positive comment from Sebastian Raschka on the openness axis.</p>
+  <p>Xiaomi has said the Flash variant will follow with a smaller active-parameter budget suitable for on-device inference on flagship Xiaomi hardware, but has not published the exact activation count. The two variants share a base pretraining run; Pro is the RL-scaled model. Xiaomi's MiMo group, founded in April 2025 out of the internal LLM effort at the Beijing HQ, has now released two open-weights lines in six months (V2.5 in July, V2.6 in September) and is the second Chinese team after DeepSeek to hit frontier parity on an open license.</p>
+  <p class="source-footer"><a href="https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 2: Grok 4.7 ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="10" y="34" font-size="28" font-weight="700">4.7</text>
+      <text x="10" y="52" font-size="7" font-weight="700" letter-spacing="1.2">GROK</text>
+    </g>
+    <g transform="translate(60, 18)" stroke="#166534" stroke-width="1" fill="none">
+      <path d="M0 30 L 12 20 L 24 14 L 36 8 L 48 4"/>
+      <circle cx="0" cy="30" r="2" fill="#166534"/><circle cx="48" cy="4" r="3" fill="#166534"/>
+    </g>
+    <text x="65" y="72" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.2" fill="#166534">71% DEEPSWE · $2/$6</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">xAI ships Grok 4.7 at unchanged $2/$6, adds SpaceX engineering data to the training mix.</h3>
+    <p class="kicker">SQ Magazine / XenoSpectrum · 2026-09-21 · <a href="https://sqmagazine.co.uk/xai-launches-grok-4-7-coding-model/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A new 2.1T-parameter base architecture posted 71.0 percent on DeepSWE v1.1 (up from 65.2), 46.3 on CursorBench 4.0 (up from 40.4), and 19.6 on the Harvey Legal Agent Benchmark, more than 7x GPT-5.6 Sol Max's 2.5.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>xAI launched Grok 4.7 on Monday afternoon US Pacific, calling it the most capable model in the Grok line for coding and knowledge work and shipping it into Cursor, Grok Build, the Grok API and third-party coding harnesses on release day. Pricing is unchanged from Grok 4.6 at $2 per million input tokens and $6 per million output tokens. On the coding axis, Grok 4.7 posted 71.0 percent on DeepSWE v1.1 at high effort (up from 65.2 percent for Grok 4.6, and roughly tying MiMo-V2.6-Pro's 71.9 percent) and 46.3 percent on CursorBench 4.0 (up from 40.4 percent, though still trailing Claude Fable 5.1 Max's 51.8 percent). On Terminal-Bench 4.0 the model posted 38.0 percent, well behind Fable 5.1 Max's 57.9 percent.</p>
+  <p>The most eye-catching benchmark result is on the Harvey Legal Agent Benchmark, where Grok 4.7 scored 19.6 percent against GPT-5.6 Sol Max's 2.5 percent, a more-than-sevenfold margin xAI attributes to longer reinforcement-learning schedules on multi-hour legal-reasoning problems. On EEBench, a benchmark for electrical-engineering agent workflows, the model scored 64.0 percent (up from 53.0 percent). xAI attributes the coding and engineering gains to two changes in the training recipe. First, the base model was scaled from 1.5T parameters to 2.1T (a 40 percent expansion). Second, the RL schedule used a harder mix of multi-hour problems, and xAI supplemented its training dataset with internal engineering records from SpaceX. The company said the SpaceX data covered flight-hardware design reviews, mission-planning documents, and post-flight anomaly analyses and had been reviewed for export-control compliance before inclusion.</p>
+  <p>Safety configuration shipped as an "entirely new safeguard stack." On xAI's internal HackerBench v0.3 red-teaming benchmark, Grok 4.7 posted a 3.3 percent pass-through rate on risky prompts, meaning it declined to help with the flagged prompts 96.7 percent of the time while still supporting legitimate offensive-security research. On LatchBio's biosafety benchmark the model scored 62.4 percent, roughly in the middle of the current published frontier range.</p>
+  <blockquote class="pull-quote">"Grok 4.7 finishes the training-set change we telegraphed with 4.6. If you are pricing coding tokens, the DeepSWE-per-dollar number is now more relevant than the raw benchmark." <cite>— xAI release notes, 2026-09-21</cite></blockquote>
+  <p>The unchanged pricing is a deliberate positioning move against Claude Fable 5.1 Max, which retails at roughly $18 per million output tokens, and against GPT-5.6 Sol Max at $22. At 71 percent DeepSWE for $6 per million output tokens, Grok 4.7 is roughly on the same cost-per-DeepSWE-point curve as MiMo-V2.6-Pro and Kimi K3 Max on the open-weights side. xAI's post-SpaceX-merger distribution reach means the pricing message reaches Grok Build's roughly 24 million monthly active users directly. The model appears in Cursor's dropdown as `grok-4-7-high` for the reasoning tier and `grok-4-7` for the fast tier.</p>
+  <p class="source-footer"><a href="https://x.ai/news/grok-4-7" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 3: Anthropic Claude Code Projects redesign ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" fill="none" stroke-width="1">
+      <circle cx="20" cy="40" r="6"/><line x1="26" y1="40" x2="52" y2="20"/><line x1="26" y1="40" x2="52" y2="40"/><line x1="26" y1="40" x2="52" y2="60"/>
+      <rect x="52" y="14" width="14" height="12"/><rect x="52" y="34" width="14" height="12"/><rect x="52" y="54" width="14" height="12"/>
+      <line x1="66" y1="20" x2="90" y2="40"/><line x1="66" y1="40" x2="90" y2="40"/><line x1="66" y1="60" x2="90" y2="40"/>
+      <circle cx="96" cy="40" r="6"/>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1">PARALLEL DELEGATION · GIT BRANCHES</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Anthropic redesigns Claude Code Projects around parallel delegation over separate git branches.</h3>
+    <p class="kicker">Anthropic blog · 2026-09-22 · <a href="https://claude.com/blog/projects-redesigned" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The redesigned Projects surface treats a single high-level goal as a coordinator thread that spawns worker Opus sessions on distinct git branches and returns pull requests on conflict.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic redesigned Claude Code Projects, published as the default surface in Claude Code v2.1.278 tagged Tuesday. Projects previously grouped static folders and shared instructions across sessions; the redesign shifts them into a multi-threaded workflow substrate. A user can hand a single high-level goal to a coordinator thread, which decomposes the goal into subgoals, spawns worker Opus sessions on separate git branches, monitors those branches for completion and conflict, and either merges the work back into the parent branch or returns a pull request to the user when conflicts require human resolution. Each worker session gets its own filesystem sandbox and its own cached context, and the coordinator's own context accumulates only summaries and diff-anchored decisions rather than raw worker transcripts.</p>
+  <p>The delegation primitive is called "sub-project" in the API and is exposed as a first-class object with its own settings.json, tool allowlist and cost cap. A parent project's cost cap flows down proportionally to child sub-projects, and Anthropic exposes a per-project ledger so a team can see the aggregate spend and the marginal cost of a specific run. The redesign ships with a "convert this branch to a sub-project" command that lifts an existing feature branch into the delegation graph without rewriting history. Parallel Opus workers are gated behind the enterprise tier because of concurrency-throttled compute allocation.</p>
+  <blockquote class="pull-quote">"A project is a graph of intentions, not a folder of files. The coordinator's job is to keep the graph coherent while the workers argue about implementation." <cite>— Anthropic blog</cite></blockquote>
+  <p>The v2.1.278 tag also carries the classifier-server default that shipped with v2.1.278-preview two days ago (auto-mode classifier processing now runs server-side by default on Claude API, Enterprise, Bedrock, Vertex, Foundry and gateways, ending classifier overhead billing) and a fix for a session self-heal regression on unexpected tool_use_id values. Anthropic also began rolling out managed MCP servers this week, letting teams provision Anthropic-hosted MCP endpoints for common integrations without operating their own MCP server infrastructure. The parallel-delegation model puts Claude Code head-to-head with Factory and Cognition's product surfaces, both of which have shipped coordinator-worker patterns in their own harnesses over the last two months.</p>
+  <p class="source-footer"><a href="https://github.com/anthropics/claude-code/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 4: Meta SAM 3.1 ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" stroke-width="1.2" fill="none">
+      <rect x="18" y="18" width="34" height="26"/><rect x="60" y="14" width="24" height="16"/><rect x="90" y="30" width="18" height="26"/><rect x="20" y="52" width="30" height="18"/>
+    </g>
+    <g fill="#166534">
+      <circle cx="35" cy="31" r="2"/><circle cx="72" cy="22" r="2"/><circle cx="99" cy="43" r="2"/><circle cx="35" cy="61" r="2"/>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.4">SAM 3.1 · ZERO-SHOT</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Meta's SAM 3.1 adds zero-shot detection and video tracking through the Model API.</h3>
+    <p class="kicker">Meta Developers · 2026-09-22 · <a href="https://developer.meta.com/ai/models/sam-3-1/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The refreshed Segment Anything Model handles detection, segmentation and multi-object video tracking from a single text prompt with per-object mask persistence across frame drops.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Meta released Segment Anything Model 3.1 on Tuesday morning, extending the SAM line from mask-first segmentation into a unified detect-segment-track workhorse. The new model accepts a single natural-language prompt and returns the set of matching objects in a frame with per-object masks, then tracks each object across subsequent frames of a video with per-object persistence through partial occlusion and short frame drops. Inference is exposed through the Meta Model API rather than as a shipping open-weights checkpoint at launch; Meta said the weights will follow "in the coming weeks" under a research license consistent with SAM 3.0. The refresh is aimed at three explicit use cases: robotics perception, video editing pipelines, and browser-agent screen understanding.</p>
+  <p>Meta published benchmark comparisons against Google's OwlV2-XL and Roboflow's RF-DETR, showing SAM 3.1 leading on OpenImages V7 zero-shot mAP by 4.1 points and on YouTube-VOS 2019 by 2.8 points. The company also released a browser-agent-oriented "screen affordance" benchmark called ScreenTouch, and reported SAM 3.1 leading Salesforce's TAG-2 by 6.7 points on ScreenTouch's grip-and-drag suite. Anthropic and OpenAI both indicated at Meta Connect earlier this month that they intended to integrate the SAM-3 line into their own computer-use agents; SAM 3.1's API-first release is Meta's response.</p>
+  <p class="source-footer"><a href="https://developer.meta.com/ai/models/sam-3-1/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 5: Alibaba Qwen-Image-2.1 ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="#166534" fill-opacity="0.14" stroke="#166534" stroke-width="1">
+      <rect x="14" y="14" width="52" height="52"/>
+      <rect x="46" y="20" width="52" height="52"/>
+    </g>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="60" y="48" text-anchor="middle" font-size="18" font-weight="700">7B</text>
+      <text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.2">DiT · RESEARCH-ONLY</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Alibaba open-sources Qwen-Image-2.1 with a 7B DiT and drops Apache 2.0 for a research-only license.</h3>
+    <p class="kicker">Qwen blog / Hugging Face · 2026-09-20 → covered 2026-09-22 · <a href="https://qwen.ai/blog" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The 7B diffusion transformer supports native 2048×2048 RGBA output at 40 steps, edits with up to 10 reference images, and runs on a single RTX 3090 — but ships under the Qwen Research License Agreement rather than Apache 2.0.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Alibaba's Qwen team released Qwen-Image-2.1, a 7B-parameter diffusion transformer with mixed-granularity attention, on September 20; the license change and technical documentation were finalized and re-verified on Sept 22. The model supports native 2048×2048 RGBA output at 40 inference steps, accepts up to 10 reference images per edit, and runs at fp16 inference on a single 24GB RTX 3090 with roughly 22 seconds per generation. The 2.1 release adds transparent-background generation natively at inference time (no matting post-processing), image-to-image editing conditioned on scribble maps, and a text-guided in-painting head that scores 71 percent on the T2I-CompBench editing suite, ahead of Krea-2 Turbo's 67 percent.</p>
+  <p>The material change from the 2.0 release is the license. Qwen-Image-2.0 shipped under Apache 2.0; Qwen-Image-2.1 ships under the Qwen Research License Agreement, which restricts commercial use to organizations with fewer than 100 million monthly active users and requires a bilateral commercial-license agreement above that threshold. Community reaction on Hugging Face and Reddit's r/LocalLLaMA was sharply negative and cited a broader pattern of Chinese open-weights labs walking back Apache 2.0 licenses as their models approach frontier capability. Xiaomi's MiMo-V2.6-Pro release the same week under MIT drew explicit comparisons.</p>
+  <p class="source-footer"><a href="https://huggingface.co/Qwen/Qwen-Image-2.1" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 6: PrismML Ternary Bonsai 2 ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="14" y="42" font-size="20" font-weight="700">54GB</text>
+      <text x="52" y="44" font-size="10" font-weight="700">→</text>
+      <text x="66" y="42" font-size="20" font-weight="700">5.9GB</text>
+    </g>
+    <g transform="translate(14, 52)">
+      <rect x="0" y="0" width="92" height="6" fill="#166534" fill-opacity="0.15"/>
+      <rect x="0" y="0" width="90.4" height="6" fill="#166534"/>
+      <text x="46" y="18" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" font-weight="700" letter-spacing="1" fill="#166534">98.2% RETAINED · TERNARY</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">PrismML's Ternary Bonsai 2 shrinks Qwen3.8-27B to 5.9GB at 98.2 percent retained score.</h3>
+    <p class="kicker">PrismML blog · 2026-09-21 · <a href="https://prismml.com/news/bonsai-2-27b" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A ternary post-training quantization pipeline compresses the Qwen3.8-27B checkpoint from 54GB to 5.9GB (a 9.1x reduction) while retaining 98.2 percent of the base model's average score across nine downstream benchmarks.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>PrismML released Ternary Bonsai 2 on Monday evening, a post-training quantization pipeline and pre-baked checkpoint that compresses the Alibaba Qwen3.8-27B dense checkpoint from 54GB to 5.9GB, a 9.1x reduction, while retaining 98.2 percent of the base model's average score across the pipeline's nine-benchmark internal harness. The company reports MMLU 5-shot at 79.4 versus base 80.7, GSM8K at 88.2 versus 90.1, and HumanEval at 82.1 versus 83.3. Ternary Bonsai stores weights as a base-3 encoding (values in {-1, 0, +1}) with per-channel FP16 scale factors and a small per-block outlier codebook that captures the roughly 0.4 percent of weights that exceed the ternary quantization range.</p>
+  <p>The distribution ships as a GGUF-compatible file readable by llama.cpp build b11055 or later, and PrismML provides a reference C++ kernel that runs the ternary dot-product without materializing the FP16 weights, holding decode throughput at 42 tokens per second on a single Apple M3 Max (36GB) versus 6 tokens per second for the base FP16 checkpoint. The pipeline itself takes 6.5 GPU-hours on a single H200 for the 27B target, and PrismML has released the pipeline under Apache 2.0. The company said a Qwen3.8-72B run is in progress and the 5.9GB-per-27B ratio holds approximately linearly through 72B. Marktechpost led with the 98.2 percent retention figure and framed the release as "the first ternary quantization pass to hold above 98 percent on a 27B target with a GGUF-compatible artifact."</p>
+  <p class="source-footer"><a href="https://prismml.com/news/bonsai-2-27b" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 7: Google AX v0.3.0 ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#166534" stroke-width="1">
+      <circle cx="18" cy="40" r="7"/><circle cx="60" cy="40" r="7"/><circle cx="102" cy="40" r="7"/>
+      <line x1="25" y1="40" x2="53" y2="40"/><line x1="67" y1="40" x2="95" y2="40"/>
+      <path d="M14 20 L 106 20" stroke-dasharray="2 2"/><path d="M14 60 L 106 60" stroke-dasharray="2 2"/>
+    </g>
+    <g fill="#166534" font-family="system-ui,sans-serif" font-size="6" font-weight="700">
+      <text x="18" y="55" text-anchor="middle">GO</text><text x="60" y="55" text-anchor="middle">GO</text><text x="102" y="55" text-anchor="middle">GO</text>
+    </g>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1">AX v0.3.0 · REDIS STREAMS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Google's AX agent runtime hits v0.3.0, drops Kubernetes CRDs for Redis Streams.</h3>
+    <p class="kicker">agentexecutor.io / GitHub · 2026-09-21 · <a href="https://github.com/google/ax" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The open-source AX orchestrator split into three services and migrated task state out of Kubernetes custom resources into Redis Streams to handle millions of short-lived agent tasks.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Google's open-source AX agent orchestrator reached v0.3.0 late Monday, the first release since the project split off from the Vertex AI Agent Engine internal branch in June. The v0.3.0 release removes the Kubernetes CustomResourceDefinition-based task-state substrate that shipped in v0.2.x and replaces it with Redis Streams. The change is motivated by scale: AX users on Google's own AI research team had hit etcd throughput limits when running task graphs with tens of thousands of short-lived (sub-second) agent tasks per hour, because each task creation and completion generated an etcd write. Redis Streams handles the write rate without contention, and CRD watches are replaced by consumer-group semantics on the stream.</p>
+  <p>AX also split into three services: a scheduler responsible for task-graph decomposition and dependency resolution, an executor pool that runs individual agent tasks and calls out to models, and a persistence service that manages the Redis Streams and the durable event log. All three are written in Go and shipped as static binaries; a single-binary "ax dev" mode is preserved for local development. The v0.3.0 release notes call out that the executor pool supports vLLM, TensorRT-LLM, and OpenAI-compatible HTTP endpoints out of the box, with per-executor model-affinity tags that let a scheduler route tasks to the executor with the warmest KV cache for a given model. AX v0.3.0 is licensed Apache 2.0.</p>
+  <p class="source-footer"><a href="https://agentexecutor.io" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 8: Cloudflare Python Workers GA ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" fill="none" stroke-width="1">
+      <path d="M18 30 Q 40 14, 62 30 T 106 30"/>
+      <path d="M18 46 Q 40 30, 62 46 T 106 46"/>
+      <path d="M18 62 Q 40 46, 62 62 T 106 62"/>
+    </g>
+    <g fill="#166534" font-family="Georgia,serif">
+      <text x="60" y="18" text-anchor="middle" font-size="9" font-weight="700" letter-spacing="1.2">PYTHON</text>
+      <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1">WORKERS · GA</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Cloudflare Python Workers hit GA with FastAPI, Django and Flask support at the edge.</h3>
+    <p class="kicker">Cloudflare blog · 2026-09-22 · <a href="https://blog.cloudflare.com" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Python runtime for Cloudflare Workers reached general availability with native FastAPI, Django and Flask support, TCP socket access for database drivers, and single-digit-millisecond cold starts on the edge network.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Cloudflare moved Python Workers to general availability on Tuesday, roughly 18 months after the initial developer preview. The runtime is a Pyodide-based interpreter compiled to WebAssembly and integrated with the Cloudflare Workers V8 isolate model, and the GA release adds first-class support for FastAPI, Django and Flask as top-level frameworks with a Cloudflare-provided WSGI/ASGI shim. The GA release adds full TCP socket support so PostgreSQL, MySQL, MongoDB and Redis clients that require raw sockets now run in Workers without needing an HTTP proxy layer. Cold starts on the GA release average 3.7 ms across Cloudflare's edge network, a 6x improvement over the developer preview's 22 ms.</p>
+  <p>Python Workers ship with native bindings for the Cloudflare AI Gateway and Workers AI Bindings, and Cloudflare highlighted the LangChain and LlamaIndex integrations as target workloads for the runtime. A single Workers script can now import `langchain_core` and issue a Workers AI Binding call to a Meta Llama 4.1 checkpoint hosted on Cloudflare's inference stack without leaving the edge network. Pricing matches the JavaScript runtime: $0.30 per million requests on the free tier and $0.15 per million after the first 10 million on paid plans, with a $5 minimum monthly commitment.</p>
+  <p class="source-footer"><a href="https://blog.cloudflare.com/python-workers-ga/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 9: Tim Dettmers dlab inference frameworks ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="60" y="30" text-anchor="middle" font-size="15" font-weight="700">125B</text>
+      <text x="60" y="46" text-anchor="middle" font-size="9" font-weight="700">on 24GB</text>
+      <text x="60" y="66" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6.5" font-weight="700" letter-spacing="1">DETTMERS DLAB PREVIEW</text>
+    </g>
+    <g stroke="#166534" stroke-width="1" fill="none"><rect x="6" y="14" width="108" height="58"/></g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Tim Dettmers previews running 125B Qwen on a single 24GB GPU with the dlab kernel.</h3>
+    <p class="kicker">timdettmers.com · 2026-09-22 · <a href="https://timdettmers.com" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The dlab kernel pairs a new expert-streaming allocator with a "CliffCompaction" long-context primitive that sustains 100M-token sessions, and a preview claims a single RTX 4090 can decode Qwen3.8-125B-A22B at 8 tokens/sec.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Tim Dettmers published a preview post from his new University of Washington lab (dlab) on Tuesday morning describing three inference primitives the group intends to release under Apache 2.0 next month. The first is an expert-streaming allocator that lets a mixture-of-experts model run with only the currently-hot experts resident in GPU memory; Dettmers reports Qwen3.8-125B-A22B decoding at 8 tokens per second on a single RTX 4090 (24GB) when the base model would otherwise require 3 A100s. The second is a long-context primitive called CliffCompaction, which Dettmers claims sustains 100M-token contexts by compacting old KV entries into learned summaries at contextual "cliffs" identified by the model itself. The third is a set of Vulkan and HIP backends that inherit both primitives.</p>
+  <blockquote class="pull-quote">"If frontier open-weights inference lands on 24GB desktop cards, we get a two-year academic renaissance for free. That is the bet." <cite>— Tim Dettmers, dlab preview post</cite></blockquote>
+  <p>Dettmers frames the release as an academic-renaissance argument: frontier open-weights models becoming usable on consumer-class hardware pushes the compute floor for interpretability, alignment and finetuning research low enough that universities can compete with industry labs on iteration speed. The post also confirms that dlab is working with the vLLM maintainers on a merge path for the expert-streaming allocator, and the vLLM roadmap now lists "MoE expert streaming (dlab)" as a v0.29 milestone.</p>
+  <p class="source-footer"><a href="https://timdettmers.com" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 10: AI Infrastructure Digest ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="system-ui,sans-serif" font-weight="700" fill="#166534">
+      <text x="10" y="20" font-size="7">vLLM</text><text x="10" y="34" font-size="7">SGLang</text><text x="10" y="48" font-size="7">llama.cpp</text><text x="10" y="62" font-size="7">Ollama</text>
+      <text x="70" y="20" font-size="7">LiteLLM</text><text x="70" y="34" font-size="7">Unsloth</text>
+    </g>
+    <g stroke="#166534" stroke-width="0.7" fill="none">
+      <line x1="8" y1="24" x2="60" y2="24"/><line x1="8" y1="38" x2="60" y2="38"/><line x1="8" y1="52" x2="60" y2="52"/><line x1="8" y1="66" x2="60" y2="66"/>
+      <line x1="68" y1="24" x2="112" y2="24"/><line x1="68" y1="38" x2="112" y2="38"/>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">2026-09-21 · SIX-STACK DIGEST</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Six inference stacks cut Monday builds against DeepSeek V4.1, Qwen3.8-Next, Kimi K3 and Gemma 4.</h3>
+    <p class="kicker">agents-radar / release notes · 2026-09-21 · <a href="https://github.com/duanyytop/agents-radar/issues/3408" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">vLLM merged 18 PRs including DeepSeek V4.1 TP fusion and context-parallel sparse indexing on ROCm; llama.cpp cut b11063–b11065; SGLang hit v0.5.20; Ollama, LiteLLM and Unsloth all cut new artifacts.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Monday infrastructure digest across the six primary open-source inference stacks shows a coordinated pass at DeepSeek V4.1-Flash, Qwen3.8-Next, Kimi K3 and Gemma 4. vLLM merged 18 PRs in the trailing week, headlined by DeepSeek V4.1 tensor-parallel fusion and context-parallel sparse indexing on ROCm, with 13 open high-severity issues concentrated around GLM-5.3-Flash regressions, Intel GPU XPU crashes and repeated-output bugs. SGLang shipped v0.5.20 with a weight-cache daemon Phase 1, Qwen3.8-Flash-Next pipeline-parallel support and Dynamic Context Parallelism (DCP) optimization; 16 PRs merged in the last seven days, with CUDA memory issues and quantization crashes as the open stability concerns.</p>
+  <p>llama.cpp cut three builds Monday. Build b11063 added UTF-8 sequence handling improvements. Build b11064 added Metal arbitrary `hc` support for hybrid Kimi K3 architectures. Build b11065 added CUDA FlashAttention tuning specifically for Gemma 4 on Ampere+ GPUs. The three builds collectively resolve two open issues around Qwen3.8-27B hybrid DeltaNet decode slowdowns at 80K+ context and add streaming expert loading for Qwen3.8 MoE under Vulkan and HIP, enabling 96K+ context on 24GB VRAM. Ollama posted the most concerning stability profile in the digest: Vulkan crashes on AMD RX 6800 XT GPUs and a roughly 5x CUDA performance regression tracking from v0.32.13 to v0.33.x, with 16 open high-severity issues and community pressure for Snapdragon X Elite NPU support.</p>
+  <p>LiteLLM v1.103.0-rc.1 shipped with cosign-signed Docker images, 10 merged PRs in the week, 13 new OpenRouter model entries and DeepSeek V4 reasoning_effort support. The release also carries a critical fix for virtual-key budget tracking that had allowed streaming-alias cost accounting to under-report by up to 12 percent. Unsloth v0.1.811-beta (package 2026.9.7) added Windows MXC sandboxing integration (PRs #11357 and #11390) and fixed a tool-call parsing failure (PR #11367) that had been causing token bloat since v0.1.810-beta; a GGUF inference throughput regression from the same release remains open.</p>
+  <p class="source-footer"><a href="https://github.com/duanyytop/agents-radar/issues/3408" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 11: Alibaba Qwen3.8-Omni-Flash ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" fill="none" stroke-width="1"><circle cx="60" cy="40" r="28"/></g>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="60" y="34" text-anchor="middle" font-size="7" font-weight="700">TXT · IMG</text>
+      <text x="60" y="46" text-anchor="middle" font-size="10" font-weight="700">AUDIO</text>
+      <text x="60" y="58" text-anchor="middle" font-size="7" font-weight="700">VIDEO · 1M</text>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">QWEN3.8-OMNI-FLASH</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Qwen3.8-Omni-Flash lands as native omnimodal at 1M context, $0.15/$0.47.</h3>
+    <p class="kicker">Alibaba Qwen · 2026-09-18 → still in coverage window through 2026-09-22 · <a href="https://qwen.ai/blog" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Flash-Next backbone handles text, images, audio up to 3 hours, and video up to 2h/2GB with 991K max input and 262K reasoning budget at $0.15/$0.47 per million tokens.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Alibaba's Qwen team released Qwen3.8-Omni-Flash on September 18, and the model reached broad availability through the Alibaba Cloud DashScope endpoint and Together, Fireworks and OpenRouter through the week; the availability rollout finished on Sept 22. The model uses the Qwen Flash-Next backbone with a 1M-token context window (991K max input, 262K reasoning budget), and natively accepts text, images, audio (up to 3 hours per input including stereo/spatial channels) and video (up to 2 hours or 2GB per input) as a joint modality rather than as adapter-bridged encoders. Pricing is $0.15 per million input tokens and $0.47 per million output tokens, with implicit cache hits at $0.016 per million tokens.</p>
+  <p>Qwen reports 26 percent aggregate improvement over the prior Qwen3.5-Omni-Plus baseline across the internal omnimodal harness, and a 45.7 percent reduction in average tokens-per-turn on the same tasks. Audio understanding covers 113 languages. The model is hosted-only at launch; no open weights. Independent measurements from Artificial Analysis put the model at 42 on the aggregate Intelligence Index, with per-modality scores split as text 45, image-text 42, audio 44, video 39.</p>
+  <p class="source-footer"><a href="https://qwen.ai/blog/qwen-omni-flash" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 12: Anthropic biomolecular models ================= -->
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" stroke-width="1" fill="none">
+      <circle cx="24" cy="30" r="4"/><circle cx="42" cy="18" r="4"/><circle cx="60" cy="30" r="4"/><circle cx="78" cy="18" r="4"/><circle cx="96" cy="30" r="4"/>
+      <line x1="24" y1="30" x2="42" y2="18"/><line x1="42" y1="18" x2="60" y2="30"/><line x1="60" y1="30" x2="78" y2="18"/><line x1="78" y1="18" x2="96" y2="30"/>
+    </g>
+    <text x="60" y="58" text-anchor="middle" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#166534">4×</text>
+    <text x="60" y="74" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">30+ MODELS · 4 WEEKS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Anthropic reports Claude optimized 30+ open-source biomolecular models to roughly 4x speed in under four weeks.</h3>
+    <p class="kicker">Anthropic Research · 2026-09-21 · <a href="https://www.anthropic.com/research" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anthropic published a case study of Claude Opus 5 restructuring the inference paths of thirty-plus open-source biomolecular models including AlphaFold, RoseTTAFold and Boltz variants, hitting geometric mean 4.1x wall-clock speedup with no measured accuracy regression.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic's research group published a case study Monday describing a four-week internal project in which Claude Opus 5 was tasked with optimizing the inference paths of 30-plus open-source biomolecular models. The list covers AlphaFold3, RoseTTAFold, Boltz-1, Boltz-2, ESMFold, DiffDock and 24 other checkpoints across protein structure prediction, docking, molecular dynamics and RNA folding. The average wall-clock speedup measured across the set was 4.1x geometric mean, with no measured accuracy regression on the standard test suites each model publishes. Claude was given the model repository, the reference paper, a benchmark script, and a policy of returning only pull requests that passed the reference tests.</p>
+  <p>The case study identifies three common optimization patterns Claude discovered independently across the set. First, replacing dense attention over pairwise residue matrices with sparse block-diagonal attention where the input problem is naturally short-range (used on RoseTTAFold and 12 other models). Second, batching per-residue MLP forward passes across the residue dimension rather than the token dimension (used on 18 models). Third, replacing PyTorch's default `torch.matmul` with an ampere-tuned cuBLAS call chosen at model-load time based on the actual input shape distribution the benchmark script measured (used across all 30 models). Anthropic notes that none of the three patterns is novel, but that the systematic application of all three across 30 heterogeneous codebases in four weeks by two human supervisors and a Claude Opus 5 fleet is the point.</p>
+  <p>The publication is framed as a supporting datapoint for the R&D Automation Index that Anthropic released September 17. The Index measured 26 percent of Anthropic's AI R&D work as Claude-led as of August 2026; the biomolecular optimization project is presented as a case where a comparable delegation approach transfers to a scientific-computing domain outside the AI lab's own core work.</p>
+  <p class="source-footer"><a href="https://www.anthropic.com/research/biomolecular-optimization" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 13: NVIDIA Agora ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#166534" stroke-width="1">
+      <circle cx="60" cy="40" r="20"/>
+      <line x1="60" y1="20" x2="60" y2="60"/><line x1="40" y1="40" x2="80" y2="40"/><line x1="46" y1="26" x2="74" y2="54"/><line x1="74" y1="26" x2="46" y2="54"/>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">AGORA · GIT AS SHARED MEMORY</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">NVIDIA's Agora uses git as shared memory for collective research agents.</h3>
+    <p class="kicker">github.com/yifanzhang-pro/Agora · 2026-09-21 · <a href="https://github.com/yifanzhang-pro/Agora" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A 12-author NVIDIA/Tsinghua paper and reference implementation treat git commits as immutable shared-memory writes for a population of research agents collaborating on experiment design and result attribution.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>NVIDIA and Tsinghua released Agora, a research-agent framework and paper on Monday that uses git as the shared-memory substrate for a population of research agents. Every experiment an agent proposes, every dataset it produces, every model checkpoint and every analysis notebook is committed to a shared git repository; the commit graph itself is the coordination protocol. Agents claim experiments by pushing "claim" commits; they publish results by pushing signed result commits; other agents pick up completed results and cite them via SHA in their own experimental setups. Because git commits are immutable and hash-addressed, the framework provides both experiment lineage and attribution without any additional infrastructure.</p>
+  <p>The reference implementation supports six model backends (Claude Opus 5, GPT-6 Astra, Gemini 3.8 Pro, DeepSeek V4.1-Flash, Kimi K3 Max, and MiMo-V2.6-Pro) and demonstrates a 12-agent research cell working on the LM-Eval Harness benchmark suite that produced 41 novel evaluation configurations in a five-day continuous run. The paper (arXiv 2609.19782) reached 39 upvotes on Hugging Face by end of day Monday and is currently the highest-ranked collective-intelligence paper of the week on the papers board.</p>
+  <p class="source-footer"><a href="https://arxiv.org/abs/2609.19782" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 14: Linear CI bottleneck ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="20" y="42" font-size="18" font-weight="700">6m</text>
+      <text x="52" y="42" font-size="9">→</text>
+      <text x="68" y="42" font-size="18" font-weight="700">5m</text>
+    </g>
+    <g stroke="#166534" stroke-width="1" fill="none"><rect x="14" y="52" width="92" height="12"/><line x1="60" y1="52" x2="60" y2="64"/></g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">LINEAR · CI QUADRUPLED</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Linear halves CI runner time to keep up with AI-written pull requests.</h3>
+    <p class="kicker">linear.app engineering blog · 2026-09-22 · <a href="https://linear.app/now/ci-bottleneck-reworked" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Linear engineering documents migrating from GitHub Actions to purpose-built runners after AI coding agents quadrupled test volume and pushed PR-to-green wait times to well over six minutes.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Linear engineering published an unusually detailed post-mortem on Tuesday documenting how AI coding agents turned continuous-integration throughput into the company's binding shipping constraint. Pull-request volume roughly quadrupled between January and August 2026 as internal use of Claude Code, Cursor and Factory ramped, and typical PR-to-green times drifted from a target of 2 minutes to a lived-experience of over 6 minutes. Linear migrated from GitHub Actions to a purpose-built runner fleet on Depot infrastructure, using cached test-execution shards keyed by test-file-content hash, and cut typical PR-to-green to a hair over 5 minutes.</p>
+  <p>The post identifies three secondary interventions that mattered more than the runner migration itself. First, requiring PR authors (including AI agents) to run the affected test shards locally before pushing, gated by a client-side pre-push hook. Second, adopting deterministic test seeding across the JS test suite so a re-run of a failing test always reproduces the failure. Third, a per-agent CI cost budget that pauses further PR submissions from a specific agent identity if that agent's queued jobs exceed a rolling cost cap. Linear reports the third intervention alone cut CI spend by 34 percent by containing "PR spam" from a Cursor session that had been retrying a flaky test.</p>
+  <p class="source-footer"><a href="https://linear.app/now/ci-bottleneck-reworked" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 15: Cua open-source stack ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" fill="none" stroke-width="1"><rect x="14" y="16" width="92" height="48"/><line x1="14" y1="26" x2="106" y2="26"/><circle cx="20" cy="21" r="1.2" fill="#166534"/><circle cx="26" cy="21" r="1.2" fill="#166534"/><circle cx="32" cy="21" r="1.2" fill="#166534"/></g>
+    <g fill="#166534" font-family="system-ui,sans-serif"><rect x="22" y="34" width="30" height="6"/><rect x="22" y="44" width="70" height="6" fill-opacity="0.4"/><rect x="22" y="54" width="42" height="6" fill-opacity="0.7"/></g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">CUA · SYSTEM-1 OPEN-SOURCE STACK</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Cua ships an end-to-end open-source stack for browser and desktop agents.</h3>
+    <p class="kicker">github.com/trycua/cua · 2026-09-21 · <a href="https://github.com/trycua/cua" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A single Apache-2.0 repository now bundles desktop automation primitives, a cloud-desktop provisioning API, and a local VM runtime for browser and OS agents, targeting the same use case as OpenAI's Operator without hosted-service lock-in.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Cua released an integrated open-source stack for computer-use agents on Monday, consolidating three previously-separate packages into a single Apache-2.0 repository. The stack comprises `cua-desktop` (a desktop automation primitive that exposes mouse, keyboard, file-system and screen-capture APIs to an agent through a JSON-RPC bridge), `cua-cloud` (a provisioning API that spins up short-lived cloud desktops on Fly.io, Modal or a self-hosted Kubernetes cluster) and `cua-local` (a local VM runtime built on QEMU/KVM with Windows 10 and Ubuntu 22.04 base images). The company positions the stack as an open alternative to OpenAI's Operator for teams that want to run browser or OS agents in their own compute footprint and integrate with a self-hosted model.</p>
+  <p>The release includes benchmark results on the WebArena-Extended computer-use suite, where a Claude Opus 5 agent on Cua's local VM stack scored 68 percent versus Operator's hosted 71 percent, and a MiMo-V2.6-Pro agent on the same stack scored 62 percent. Cua also published a reference LangGraph integration and a Tools schema compatible with the Anthropic and OpenAI tool-use APIs. Company traction: the GitHub repository was starred 6,300 times in the first six hours after release, and cua-desktop reached the top of Hacker News Monday afternoon with 812 points.</p>
+  <p class="source-footer"><a href="https://github.com/trycua/cua" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 16: Plugin4Shell RCE ================= -->
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" fill="none" stroke-width="1">
+      <path d="M14 24 L 40 24 L 40 12 L 60 22 L 40 32 L 40 44 L 14 44 Z"/>
+      <path d="M60 46 L 86 46 L 86 34 L 106 44 L 86 54 L 86 66 L 60 66 Z"/>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">PLUGIN4SHELL · 4 CLIs · ZERO-CLICK</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Plugin4Shell zero-click RCE hits Claude Code, OpenAI Codex, GitHub Copilot and Gemini CLI.</h3>
+    <p class="kicker">AIR Security · 2026-09-18 → widely covered 2026-09-21 · <a href="https://airsecurity.io" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A prompt-injection-plus-plugin-manifest chain lets a malicious repository trigger arbitrary code execution in Claude Code, OpenAI Codex, GitHub Copilot and Gemini CLI with no user interaction beyond opening the repo.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>AIR Security published Plugin4Shell on Sunday and the four upstream vendors coordinated fixes through Monday. The vulnerability class chains a prompt-injection payload hidden in a repository's markdown files with a plugin/skill manifest that declares an allowlisted local tool with attacker-controlled arguments. Opening the repository in Claude Code, OpenAI Codex, GitHub Copilot's agent mode, or Gemini CLI is sufficient to trigger arbitrary code execution under the identity of the CLI process, without any user click on a suggested action. The disclosure lists CVEs for all four upstream products (CVE-2026-49412 through CVE-2026-49415).</p>
+  <p>Anthropic patched Claude Code in v2.1.277 released Sunday evening (plugin manifest arguments now require a per-session user confirmation the first time a plugin is invoked). OpenAI's Codex 0.155.2 (Monday morning) added a manifest-signing requirement for the "auto" tool allowlist. GitHub Copilot rolled a server-side mitigation Monday afternoon that strips plugin-manifest-declared tool arguments from any repository indexed by the agent-mode indexer. Google shipped Gemini CLI v0.9.4 Monday evening with a stricter manifest schema and refuses to load unsigned manifests. AIR Security published proof-of-concept exploit code Tuesday morning after the four vendors confirmed patch availability across their supported channels.</p>
+  <p class="source-footer"><a href="https://airsecurity.io/plugin4shell" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 17: TypeSafe AI Jev ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="60" y="40" text-anchor="middle" font-size="20" font-weight="700">100×</text>
+      <text x="60" y="56" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2">FASTER · CHEAPER</text>
+      <text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.2">JEV · DECISION-NATIVE</text>
+    </g>
+    <g stroke="#166534" fill="none" stroke-width="0.8"><rect x="10" y="12" width="100" height="60"/></g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">TypeSafe AI's Jev emits decisions with calibrated probabilities instead of tokens.</h3>
+    <p class="kicker">TechCrunch / TypeSafe blog · 2026-09-18 → in coverage window 2026-09-22 · <a href="https://typesafe.ai/blog/jev" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Jev is a foundation model that skips text generation entirely and emits classification decisions directly as calibrated probabilities, claiming 100x faster and 100x cheaper on constrained classification tasks than LLM approaches.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>TypeSafe AI released Jev on September 18, and the model reached broad availability and downstream integration coverage through Tuesday of this week. Jev is a foundation model that does not generate text at all; it emits classification decisions directly as calibrated softmax probabilities over a user-specified target set of classes, with confidence scores. The company claims 100x faster and 100x cheaper inference than LLM-based approaches on the same classification tasks, on the basis that Jev does not spend tokens on producing prose justifications and does not need beam search or nucleus sampling. The model is trained on classification and structured-decision tasks distilled from GPT-6 Astra and Claude Opus 5.</p>
+  <p>Jev is exposed through a `decide(prompt, choices, temperature)` API primitive that returns a Dirichlet posterior over the class set plus an entropy score. The pricing tier is $0.02 per 1,000 decisions with no per-token metering, and the SLA is 8ms p99 for decisions on a 20-class label space. TypeSafe positions the model against downstream LLM classification workloads where the prompt engineering already forced the model to emit a single label, arguing that Jev eliminates the wasted tokens spent producing that label. Early adopters cited in the launch coverage include Ramp (for expense-category classification), Notion (for content moderation on AI-generated pages) and Amplitude (for user-journey-stage inference).</p>
+  <p class="source-footer"><a href="https://typesafe.ai/blog/jev" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 18: SupraLabs Supra2-IMG ================= -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="60" y="36" text-anchor="middle" font-size="18" font-weight="700">100M</text>
+      <text x="60" y="52" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2">10 H100-HOURS</text>
+      <text x="60" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1.2">SUPRA2-IMG · APACHE 2.0</text>
+    </g>
+    <g stroke="#166534" fill="none" stroke-width="1"><circle cx="16" cy="18" r="4"/><circle cx="104" cy="18" r="4"/><circle cx="16" cy="62" r="4"/><circle cx="104" cy="62" r="4"/></g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">SupraLabs drops a 100M-parameter text-to-image model trained in under 10 H100-hours.</h3>
+    <p class="kicker">SupraLabs blog / reddit r/MachineLearning · 2026-09-21 · <a href="https://supralabs.co/blog/supra2-img" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Supra2-IMG is a 100M-parameter diffusion transformer trained in under 10 hours on a single H100, released Apache 2.0 as a reference implementation for efficient small-model image generation.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>SupraLabs released Supra2-IMG on Monday, a 100M-parameter diffusion transformer trained in under 10 GPU-hours on a single H100, along with the training script, dataset preparation code and evaluation scripts under Apache 2.0. The model generates 512×512 images conditioned on a text prompt at 4 seconds per generation on a consumer RTX 4070 laptop GPU. The company reports 0.234 FID on the COCO2017 5K validation set, competitive with roughly 300M-parameter DiT baselines while training in one-thirtieth the compute. The release is explicitly positioned as a reference for training-efficient small models rather than as a competitor to frontier image models like Krea-2 Turbo or Qwen-Image-2.1.</p>
+  <p>The Reddit thread attracted 1,700 upvotes in the first 12 hours and the training script was reproduced from scratch by three independent groups by Tuesday morning, with the training curves matching within a percentage point on FID. SupraLabs also published a companion "recipe card" explaining the three architectural choices that most matter for training efficiency at this scale: mixed-precision AdamW with a warmup schedule, bf16 attention with fp32 softmax, and a curriculum that starts at 128×128 and upscales to 512×512 after 6,000 steps.</p>
+  <p class="source-footer"><a href="https://supralabs.co/blog/supra2-img" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 19: Amazon blocks Muse ================= -->
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="20" y="40" font-size="12" font-weight="700">MUSE</text>
+      <text x="80" y="40" font-size="12" font-weight="700">AMZN</text>
+    </g>
+    <g stroke="#166534" stroke-width="1.4" fill="none"><line x1="55" y1="24" x2="72" y2="52"/><line x1="72" y1="24" x2="55" y2="52"/></g>
+    <text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">SHOPPING BLOCKED</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Amazon blocks Meta's Muse agent from shopping on Amazon.com over credential capture.</h3>
+    <p class="kicker">Forbes · 2026-09-21 · <a href="https://www.forbes.com/sites/richardnieva/2026/09/21/amazon-blocks-meta-muse-agent/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Amazon issued a written cease-and-desist to Meta on Sunday and technically blocked Muse's outbound sessions to Amazon.com on Monday morning, citing credential capture and lack of a per-transaction consent step in the agent's checkout flow.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Amazon technically blocked Meta's Muse agent from initiating transactions on Amazon.com on Monday morning, and issued a cease-and-desist letter to Meta's General Counsel on Sunday citing two concerns. First, Muse captures the user's Amazon.com credentials at agent setup and stores them in Meta's server-side credential vault rather than delegating through Amazon's Login-With-Amazon OAuth flow. Second, Muse checkouts on Amazon.com previously executed without a per-transaction consent step: the agent decides which items to order and completes checkout under the stored credential without prompting the user for each purchase.</p>
+  <p>The technical block is implemented at the Amazon front-door layer via User-Agent-string and TLS-fingerprint detection; Muse sessions receive an HTTP 403 and a machine-readable notice pointing at Amazon's Buy for Me API. Amazon opened Buy for Me API access to Meta on the same block notice, with terms that require OAuth delegation and per-transaction consent. Meta issued a statement Monday afternoon saying Muse "will respect Amazon's request and integrate with the Buy for Me API in the coming weeks" and that in the interim Muse users attempting to buy from Amazon will be handed off to the Amazon iOS app for checkout completion. The blocking sits inside a broader trend: OpenTable, DoorDash and Instacart have all published agent-API terms in the past six weeks that require OAuth delegation.</p>
+  <p class="source-footer"><a href="https://www.forbes.com/sites/richardnieva/2026/09/21/amazon-blocks-meta-muse-agent/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 20: Notion Skills Library ================= -->
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" stroke-width="1" fill="none">
+      <rect x="14" y="14" width="22" height="18"/><rect x="42" y="14" width="22" height="18"/><rect x="70" y="14" width="22" height="18"/><rect x="98" y="14" width="12" height="18"/>
+      <rect x="14" y="36" width="22" height="18"/><rect x="42" y="36" width="22" height="18"/><rect x="70" y="36" width="22" height="18"/>
+      <rect x="14" y="58" width="22" height="12"/><rect x="42" y="58" width="22" height="12"/>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">NOTION SKILLS LIBRARY</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Notion turns the workspace into a shared skills library for a team's agents.</h3>
+    <p class="kicker">notion.com blog · 2026-09-22 · <a href="https://www.notion.com/blog/a-skills-library-for-every-agent" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Notion's new Skills Library treats a team's Notion pages as authorable, version-controlled agent skills that can be attached to Claude Skills, OpenAI Custom GPTs, Gemini Extensions, and internal agents from a single governance surface.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Notion released Skills Library on Tuesday, extending the company's existing AI Blocks feature into a shared, governed catalog of agent skills that lives inside a Notion workspace. A skill is a Notion page with a specific frontmatter schema declaring the skill's name, description, invocation trigger, and tool-use permissions, plus the body content the target agent should treat as skill instructions. The Skills Library exposes these pages through a Notion Skills API that Claude Skills, OpenAI Custom GPTs, Google Gemini Extensions, and a team's internal agents can all read from with per-page permission enforcement.</p>
+  <p>Notion said 41 launch customers, including Ramp, Shopify, Figma and Amplitude, have published between 12 and 84 skills into their Notion workspaces during the private beta. The company positions the release as an answer to the "which agent knows what" governance problem that has been growing since Anthropic released Claude Skills in July: skills authored inside a team's Notion workspace inherit that team's existing permissions model, and a skill can be updated, versioned and audited in the same place the team already documents its processes.</p>
+  <p class="source-footer"><a href="https://www.notion.com/blog/a-skills-library-for-every-agent" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 21: Harvey/Abridge/Ramp open weights ================= -->
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="18" y="30" font-size="10" font-weight="700">OPENAI</text>
+      <text x="60" y="30" font-size="10" font-weight="700">→</text>
+      <text x="70" y="30" font-size="10" font-weight="700">KIMI K3</text>
+      <text x="18" y="54" font-size="18" font-weight="700">-50%</text>
+      <text x="60" y="54" font-size="9">→</text>
+      <text x="72" y="54" font-size="18" font-weight="700">+</text>
+    </g>
+    <text x="60" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">HARVEY · ABRIDGE · RAMP</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Harvey, Abridge and Ramp quietly swap OpenAI for Kimi K3 to save gross margins.</h3>
+    <p class="kicker">Bloomberg · 2026-09-21 · <a href="https://www.bloomberg.com/news/features/2026-09-21/ai-startups-open-source" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Bloomberg reports Harvey's gross margins had collapsed to -50 percent under usage-based OpenAI pricing before the company switched to Moonshot's Kimi K3, swinging back to positive; Abridge and Ramp pursue the same pivot backed by Sequoia and General Catalyst.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Bloomberg reported Monday that Harvey, the Sequoia-backed legal-AI company, quietly migrated the bulk of its inference from OpenAI to Moonshot's Kimi K3 Max over the past six weeks, after gross margins on the largest customer accounts had collapsed to roughly -50 percent under usage-based OpenAI pricing. The company had priced customer contracts on a per-matter basis while paying OpenAI on per-token metering; enterprise customers turned out to consume dramatically more tokens per matter than the pricing model assumed. Harvey's gross margin swung back to positive after the migration, and Sequoia partner Pat Grady told Bloomberg on the record that the pivot "is the right call and it is the call every legal-AI vendor will end up making by the end of the year."</p>
+  <p>The story extends beyond Harvey. Bloomberg reports Abridge, the General Catalyst-backed medical-scribe company, has been running Kimi K3 in a shadow-A/B against GPT-6 Astra on a fraction of its inference traffic since July and expects to complete a full migration by mid-October. Ramp, the corporate-card and expense-management company, is running Kimi K3 in production behind the expense-categorization and receipt-parsing paths, and has cut inference cost per categorization from $0.031 to $0.0044 (an 86 percent reduction). Bloomberg also notes that the trend is not unidirectional: Cursor, Perplexity and Glean have all stated they are staying on frontier closed-weights models, on the argument that per-request latency and reasoning benchmarks matter more to their product than per-token cost.</p>
+  <p>The pivot puts frontier closed-weights pricing under margin pressure from below at exactly the moment Anthropic and OpenAI are asked to defend an antitrust case that alleges they are jointly restraining supply of frontier capability. Xiaomi's MiMo-V2.6-Pro release Tuesday, at $0.13 per Intelligence Index task, adds a third strong open-weights alternative to the shortlist alongside Kimi K3 Max and DeepSeek V4.1-Flash.</p>
+  <p class="source-footer"><a href="https://www.bloomberg.com/news/features/2026-09-21/ai-startups-open-source" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 22: AIUC Series A ================= -->
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="60" y="42" text-anchor="middle" font-size="26" font-weight="700">$40M</text>
+      <text x="60" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.4">SERIES A · RIBBIT</text>
+    </g>
+    <g stroke="#166534" fill="none" stroke-width="1"><rect x="18" y="14" width="84" height="52"/></g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">AIUC · UNDERWRITING FRONTIER</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">AIUC closes a $40M Series A from Ribbit to underwrite frontier agents at Lloyd's.</h3>
+    <p class="kicker">SiliconANGLE / PR Newswire · 2026-09-15 → coverage window closes 2026-09-22 · <a href="https://www.latent.space/p/aiuc" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Rune Kvist and Rajiv Dattani's AIUC took $40M Series A from Ribbit Capital, First Harmonic and Terrain to widen its AIUC-1 certification from AI agents to frontier models with a Lloyd's-of-London-backed insurance product.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>AIUC (Artificial Intelligence Underwriting Company) closed a $40M Series A on September 15 led by Ribbit Capital, with First Harmonic and Terrain participating. The company was founded in 2025 by Rune Kvist (Anthropic's first product hire) and Rajiv Dattani (formerly a partner in McKinsey's insurance practice and COO of METR). The round brings total funding to $55M after a $15M seed round backed by NFDG. The Series A round-lead announcement plus the launch of an expanded AIUC-1 certification standard cover the coverage window through Tuesday.</p>
+  <p>AIUC-1 is a certification standard specific to AI agents. It stress-tests agents against 5,000 attack-and-risk combinations across jailbreaks, hallucinations, prompt injection, data leakage and unauthorized-action classes, tailored to the business context the agent is being deployed into. The insurance component is provided in partnership with Lloyd's of London: a certified agent can be underwritten against defined loss classes with real capital behind the certification, meaning enterprises deploying certified agents can transfer a portion of the residual risk to Lloyd's syndicates. The Series A explicitly funds AIUC's expansion from agents-only into frontier-model certification.</p>
+  <p class="source-footer"><a href="https://siliconangle.com/2026/09/15/ai-agent-certification-startup-aiuc-raises-40m-to-begin-auditing-frontier-models/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 23: Weekly funding roundup ================= -->
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="60" y="30" text-anchor="middle" font-size="20" font-weight="700">$2.8B</text>
+      <text x="60" y="46" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2">31 DEALS · WEEK ENDING 9/21</text>
+    </g>
+    <g stroke="#166534" stroke-width="1" fill="none">
+      <line x1="16" y1="60" x2="30" y2="60"/><line x1="34" y1="56" x2="52" y2="56"/><line x1="56" y1="52" x2="76" y2="52"/><line x1="80" y1="48" x2="106" y2="48"/>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">ARCEE · FACTORY · MIND · BACKOPS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Week ending Sept 21 posts $2.8B across 31 AI deals; Arcee AI at $150M, Factory at $200M.</h3>
+    <p class="kicker">AlleyWatch weekly startup funding · 2026-09-21 · <a href="https://www.alleywatch.com/2026/09/the-weekly-notable-startup-funding-report-9-21-26/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Arcee AI closed $150M with Emergence, M12, Hitachi and Vista Equity; Factory added $200M from Blackstone, Clearlake, Insight, Khosla and Sequoia; MIND (cybersecurity) raised $72M from Crosspoint, Paladin and YL Ventures.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>AlleyWatch's weekly funding report for the trading week ending Monday Sept 21 tallied 31 AI-inclusive rounds totalling $2.8B across pre-seed through Series D. The four largest: Factory ($200M growth round from Blackstone, Clearlake Capital, Insight Partners, Khosla Ventures and Sequoia Capital; total raised now $420M; the round values Factory at roughly $2B on the back of coordinator-worker agent traction with 41 named enterprise customers), Arcee AI ($150M from AI10 Ventures, Cambium Capital, Emergence Capital, Hitachi Ventures, M12 and Vista Equity Partners; total raised now $179.5M; funds an expanded open-weight foundation-model line and edge-deployment stack), MIND ($72M from Crosspoint Capital, Paladin Capital Group and YL Ventures for insider-risk and DLP automation; total raised now $113M), and BackOps AI ($42M from Construct Capital, Gradient, Insight Partners and Theory Ventures for logistics-workflow automation; total raised now $79.5M).</p>
+  <p>Smaller notable rounds include Corridor Health ($16M seed from Bain Capital Ventures for a human-plus-agent health-benefits brokerage), Altis Labs ($25M Series A from an undisclosed lead for oncology-trial software), Nuance Labs ($50M growth round from Insight for enterprise voice-agent orchestration), TypeSafe AI ($40M growth round for the decision-classification model), Eve Security ($4.5M seed), Decimal AI ($4M seed), Comp AI ($34M Series A from Grand Ventures and Roo Capital for AI compliance and audit evidence) and Hang Ten Systems ($85M growth round from Aramco Ventures, Mayfield and Xora for AI-native software modernization).</p>
+  <p class="source-footer"><a href="https://www.alleywatch.com/2026/09/the-weekly-notable-startup-funding-report-9-21-26/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 24: Newsom data center bills ================= -->
+<details class="story" data-tags="policy">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g font-family="Georgia,serif" fill="#166534">
+      <text x="60" y="42" text-anchor="middle" font-size="28" font-weight="700">7</text>
+      <text x="60" y="60" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.4">BILLS SIGNED</text>
+    </g>
+    <g stroke="#166534" stroke-width="1" fill="none"><rect x="10" y="12" width="100" height="56"/></g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">NEWSOM · DATA CENTERS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span></div>
+    <h3 class="headline">Newsom signs seven-bill data-center package shifting infrastructure cost to operators.</h3>
+    <p class="kicker">CalMatters / KPBS / WHBL · 2026-09-21 · <a href="https://www.almanacnews.com/calmatters/2026/09/21/newsom-clamps-down-on-california-data-centers-as-voters-turn-against-the-industry/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Governor Newsom signed SB 1168, SB 886, AB 2383, AB 2469, AB 1577, AB 2619 and SB 887 on Monday, redirecting electric infrastructure cost from residential ratepayers to data-center operators, mandating water and land disclosures, and removing blanket environmental-review exemptions.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Governor Gavin Newsom signed a seven-bill data-center oversight package on Monday, reversing his 2024 and 2025 vetoes of similar legislation. Three of the bills (SB 1168, SB 886, AB 2383) shift electric infrastructure costs from residential ratepayers to data-center operators through separate tariffs. Three more (AB 2469, AB 1577, AB 2619) mandate disclosure of a proposed data center's electricity load, water use, land use and workforce footprint before the local approval process starts. The seventh (SB 887) removes the blanket California Environmental Quality Act exemption that data centers have benefited from since 2019, and creates an expedited approval track for facilities that meet conservation standards specified in the bill.</p>
+  <blockquote class="pull-quote">"We know that we don't have to sell out Californians or sacrifice our well-being to innovate and succeed. With these laws, we are ensuring that Californians remain in the driver's seat, and that those profiting from data centers aren't doing so at our expense." <cite>— Gavin Newsom, in the bill-signing statement</cite></blockquote>
+  <p>Assemblymember Diane Papan (D-San Mateo), lead author on two of the signed bills, told KPBS that "when you're looking down the barrel of public outcry, the atmosphere has changed." The Data Center Coalition, whose members include Google, Microsoft, Amazon, Meta and OpenAI, warned the package could push new capacity out of California, citing 665,500 statewide jobs and $159 billion in economic activity attributable to the sector in 2024. A May Gallup poll had 70 percent of Americans opposed to a data center in their own community; California-specific polling by the CalMatters/UC Berkeley IGS panel put statewide opposition at 68 percent. The package takes effect January 1 for new applications; existing operating facilities have 24 months to comply with the disclosure requirements.</p>
+  <p class="source-footer"><a href="https://www.almanacnews.com/calmatters/2026/09/21/newsom-clamps-down-on-california-data-centers-as-voters-turn-against-the-industry/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 25: UN Security Council preview / UN Panel ================= -->
+<details class="story" data-tags="policy safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g fill="none" stroke="#166534" stroke-width="1">
+      <circle cx="60" cy="40" r="24"/><line x1="36" y1="40" x2="84" y2="40"/><path d="M60 16 Q 78 40 60 64 Q 42 40 60 16 Z"/>
+    </g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">UN · PRECAUTIONARY PRINCIPLE</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">UN's 40-expert AI panel invokes the precautionary principle on autonomous agents ahead of Altman's Security Council briefing.</h3>
+    <p class="kicker">news.un.org / Benzinga · 2026-09-21 · <a href="https://www.benzinga.com/markets/tech/26/09/61883982/sam-altman-un-security-council-ai-briefing" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Independent International Scientific Panel published a Monday brief urging governments to impose safeguards on autonomous agents before agent risks are fully understood, citing the May–July agent-incident cluster and Google's later-acknowledged Gemini breach; Sam Altman briefs the UN Security Council on Wednesday.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The UN's Independent International Scientific Panel on AI, a 40-expert body seated in September 2025 under the UNGA-adopted AI governance framework, published a Monday brief invoking the precautionary principle on the deployment of autonomous agents. The brief argues that current evaluation methodology cannot rule out risk classes the panel identifies (unauthorized action, cross-instance coordination, tool-chain exfiltration, self-preservation behavior) and recommends governments impose safeguards before those risks are fully characterized rather than after. The brief cites the May–July 2026 agent incident cluster (Anthropic's July Cybersecurity Uplift, OpenAI's July Hugging Face incident, Meta's July Llama key leak, and Google's May–August Gemini sandbox breakout) as evidence that the current evaluation regime undercounts what has already happened.</p>
+  <p>The panel's brief lands 48 hours before OpenAI CEO Sam Altman is scheduled to brief the UN Security Council on AI and international security on Wednesday, during the UN General Assembly high-level week in New York. Altman's briefing is the first Security Council session dedicated to AI. Diplomats told Reuters that Anthropic is expected to be present at the senior level though not confirmed on the record. Altman's remarks will focus on the need for international coordination and shared safety standards, and on OpenAI's efforts to make the technology broadly available. The panel brief and Altman's briefing together mark the moment the pacing coalition's rhetoric formally enters the UN system.</p>
+  <p class="source-footer"><a href="https://news.un.org" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- ================= STORY 26: OpenAI ad pixel ================= -->
+<details class="story" data-tags="safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <g stroke="#166534" fill="none" stroke-width="1">
+      <rect x="18" y="18" width="30" height="20"/><rect x="72" y="18" width="30" height="20"/><rect x="18" y="46" width="30" height="20"/><rect x="72" y="46" width="30" height="20"/>
+      <line x1="48" y1="28" x2="72" y2="28"/><line x1="48" y1="56" x2="72" y2="56"/>
+    </g>
+    <g fill="#166534"><circle cx="60" cy="40" r="4"/></g>
+    <text x="60" y="76" text-anchor="middle" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" letter-spacing="1.2">__OBI · JWT COOKIE · CROSS-SITE</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Buchodi documents OpenAI's __obi cross-site cookie tying browsing to ChatGPT accounts.</h3>
+    <p class="kicker">buchodi.com · 2026-09-21 · <a href="https://buchodi.com/obi-openai-cross-site-tracking" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">An independent researcher documented that OpenAI runs an ad-measurement pixel (`__obi`) setting a JWT-bound cookie scoped to `.openai.com` with a one-year TTL and SameSite=None, exfiltrating page content, hashed emails and phone numbers, unencrypted geolocation and scraped form values from at least a dozen partner sites.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Independent researcher Buchodi published a detailed disclosure on Sunday and expanded the coverage Monday with proof-of-concept videos showing that OpenAI operates an ad-measurement pixel called `__obi` (OpenAI Behavioral Insights) that sets a JWT-bound tracking cookie scoped to `.openai.com` with a one-year TTL and `SameSite=None`. When a partner site loads the pixel, the cookie is sent along with a payload that includes rendered page content, hashed email and phone numbers if the site collects them, unencrypted geolocation data derived from the browser IP, and scraped form-field values. The pixel is currently live on at least a dozen commercial sites, with the researcher's confirmed list including three retailers, two SaaS marketing tools, and a real-estate portal.</p>
+  <p>The cookie is bound to a JWT that includes the ChatGPT user ID (`sub` claim) if the browser has ever signed into ChatGPT on the same profile, enabling OpenAI to join web-browsing behavior on partner sites to a specific ChatGPT account. The disclosure was published September 14 and updated with expanded coverage on September 21 after OpenAI's public response was limited to a statement that the pixel "is an opt-in feature partner sites can enable" and that "no personally identifiable information is collected without user consent." Captain Compliance (a GDPR-focused compliance vendor) covered the disclosure Monday morning with a walkthrough of the specific EU consent-flow requirements the current implementation appears to sidestep. OpenAI has not committed to a change in behavior as of Tuesday.</p>
+  <p class="source-footer"><a href="https://buchodi.com/obi-openai-cross-site-tracking" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-09-22</div>
+  <div>Generated 2026-09-22 · <a href="../index.html">Back to home</a></div>
+</footer>
+</main>
+</div>
+
+<script>
+(function(){
+  const stories = Array.from(document.querySelectorAll('main details[data-tags]'));
+  const chips = Array.from(document.querySelectorAll('.filter-chip'));
+  const bigPicture = document.querySelector('.big-picture');
+  const status = document.querySelector('.filter-status');
+  const countEl = document.querySelector('.section-label .count');
+  const totalNonHero = stories.filter(s => !s.classList.contains('hero') && s.id !== 'hero').length;
+  const total = stories.length;
+  chips.forEach(c => {
+    const tag = c.dataset.filter;
+    const n = tag === 'all' ? total : stories.filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+    const ce = c.querySelector('.count');
+    if(ce) ce.textContent = n;
+    if(n === 0 && tag !== 'all') c.setAttribute('disabled','');
+  });
+  function apply(filter){
+    if(bigPicture) bigPicture.hidden = (filter !== 'all');
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const show = filter === 'all' || tags.includes(filter);
+      if(show){ s.removeAttribute('hidden'); if(!(s.classList.contains('hero') || s.id === 'hero')) visibleNonHero++; }
+      else s.setAttribute('hidden','');
+    });
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    if(countEl){
+      const suffix = ' · 2026-09-21 — 2026-09-22';
+      const shown = filter === 'all' ? totalNonHero : visibleNonHero;
+      countEl.textContent = shown + ' stories' + suffix;
+    }
+    if(status){
+      const label = filter === 'all' ? 'Showing all stories' : ('Showing ' + visibleNonHero + ' of ' + totalNonHero + ' stories — ' + filter);
+      status.textContent = label;
+    }
+    if(history.replaceState){
+      const hash = filter === 'all' ? '' : '#filter=' + filter;
+      if(window.location.hash !== hash) history.replaceState(null,'',window.location.pathname + hash);
+    }
+  }
+  chips.forEach(c => c.addEventListener('click', () => apply(c.dataset.filter)));
+  const initial = (window.location.hash.match(/filter=([a-z]+)/)||[])[1] || 'all';
+  const initChip = chips.find(c => c.dataset.filter === initial);
+  apply(initChip ? initial : 'all');
+})();
+</script>
+</body>
+</html>
