@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-10-03</title>
+<meta name="description" content="Four Google Trillium TPUs reached dawn-dusk sun-synchronous orbit on SpaceX Transporter-18 and radio-checked out of the hands of Travis Beals's team at 650 kilometers. The whole mission now hinges on whether 1.3 square meters of radiator per chip can dump heat fast enough between 15-minute compute bursts in a vacuum. Ai2 open-sourced AstaBrief 8B under Apache 2.0, a Qwen3-8B derivative that writes cited research reports 3.5 times faster than its prior Claude pipeline. JEDEC published JESD264, the first industry-wide silicon-photonics reliability standard. CScale exited stealth with $145 million for optical interconnect at gigawatt scale, Nvidia and Intel Capital participating. Branch Target Reuse, a new Spectre-v2 variant from VUSec and Scuola Superiore Sant'Anna, pulled a root password hash out of a fully patched Intel kernel in three to five minutes. Supabase raised $150 million from GIC's sovereign wealth fund and acquired Turso to lead with agentic databases. FieldAI signed term sheets for a $700 million round at a $10 billion mark, five times its $2 billion mid-2025 valuation. Instinct quadrupled to $10 billion a month after Series B at Sequoia-led $1 billion Series C. Anthropic put $100 million behind Claude Frontier Academy to graduate 10,000 enterprise engineers by end-2027. Religious scholars briefed by Christopher Olah on Claude consciousness watched Pope Leo XIV's Magnifica Humanitas close the door. Meta parted ways with Bo Li, Dawn Song, and Sanmi Koyejo four months after the Virtue AI acqui-hire. Hugging Face daily led with Tencent's Adaptive Reward Routing, Cambridge's on-policy vs off-policy distillation study, Alibaba's Explicit Belief States for long-horizon agents, Nanjing's OneStreamer, and UIUC's Hierarchical Continuous Diffusion LMs.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#1e3a8a;--accent-soft:rgba(30,58,138,0.10);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.14);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.14);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#93c5fd;--accent-soft:rgba(147,197,253,0.16);
+  --tag-tech:rgba(147,197,253,0.20);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.18);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.20);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.20);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.1;letter-spacing:-0.02em;margin:0 0 20px}
+.hero .dek{font-size:1.08rem;line-height:1.55;color:var(--ink);margin:0 0 18px}
+.hero .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.02em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;aspect-ratio:480/320;display:block}
+.big-picture{display:grid;grid-template-columns:170px 1fr;gap:32px;padding:36px 0 20px;margin:36px 0 32px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.big-picture[hidden]{display:none}
+@media (max-width:640px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.big-picture .label svg{display:block;margin-bottom:12px}
+.big-picture p{margin:0 0 12px;font-size:1.08rem;line-height:1.6}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,serif;font-size:3.2rem;font-weight:700;float:left;line-height:0.92;padding:6px 10px 0 0;color:var(--accent)}
+.divider{display:flex;align-items:center;justify-content:center;margin:44px 0;color:var(--accent)}
+.section-label{font-size:0.76rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.section-label .count{color:var(--accent);font-feature-settings:"tnum";letter-spacing:0.12em}
+.section-title{font-family:Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:-0.01em;margin:0 0 28px}
+.rundown{display:flex;flex-direction:column;gap:0}
+.story{border-bottom:1px solid var(--rule);padding:22px 0}
+.story:first-of-type{border-top:1px solid var(--rule)}
+.story summary{display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start;list-style:none;cursor:pointer}
+.story summary::-webkit-details-marker{display:none}
+.story.hero > summary,details#hero > summary{display:block}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.tag{font-size:0.68rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .full-content .partial{font-size:0.82rem;color:var(--muted);font-style:italic;margin:8px 0 0}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-10-03</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="tech" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-tech">Tech</span></div>
+      <h1>Four Trillium TPUs make orbit. Radiators now decide whether Suncatcher works.</h1>
+      <p class="dek">Google confirmed telemetry at 650 kilometers from the Minimum Viable Prototype carrying four Trillium-generation Cloud TPUs, which rode Transporter-18 off Vandenberg on October 1 and radio-checked that evening. Oct 2 reporting shifted the technical narrative off radiation and onto heat. Each chip needs roughly 1.3 square meters of radiator surface to dump the thermal load; the vacuum will not carry heat away by convection, so the mission runs 15-minute compute bursts and then cools. UC Davis's Crocker Nuclear Laboratory had already cleared the Trillium silicon for 15 krad against an expected 750 rad across five years. Travis Beals, Google's Senior Director for the project, said the hardware is "operating as expected."</p>
+      <p class="kicker">Tech · Techtimes · 2026-10-02 · <a href="https://www.techtimes.com/articles/328482/20261002/google-project-suncatcher-reaches-orbit-cooling-not-radiation-now-defines-mission.htm" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hgnav" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.35"/><stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.05"/></linearGradient>
+        <radialGradient id="hgsun" cx="0.82" cy="0.18" r="0.42"><stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.55"/><stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/></radialGradient>
+        <pattern id="hgridn" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0 L0 0 0 24" fill="none" stroke="#1e3a8a" stroke-opacity="0.08" stroke-width="0.5"/></pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgnav)"/>
+      <rect width="480" height="320" fill="url(#hgridn)"/>
+      <rect width="480" height="320" fill="url(#hgsun)"/>
+      <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+        <text x="30" y="30" font-size="9" font-weight="700" letter-spacing="1.8">MVP · 4 × TRILLIUM TPU · 650 KM · DAWN-DUSK SSO · 1 KW</text>
+        <line x1="30" y1="38" x2="450" y2="38" stroke="#1e3a8a" stroke-width="0.6" stroke-opacity="0.6"/>
+      </g>
+      <!-- Earth arc with orbital path -->
+      <g fill="none" stroke="#1e3a8a">
+        <path d="M -40 300 Q 240 220 520 300" stroke-width="1" stroke-opacity="0.55"/>
+        <path d="M -20 280 Q 240 150 500 280" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="2 3"/>
+      </g>
+      <!-- Satellite silhouette with radiator fins -->
+      <g transform="translate(240, 150)">
+        <rect x="-20" y="-14" width="40" height="28" fill="#1e3a8a" fill-opacity="0.9"/>
+        <rect x="-62" y="-6" width="40" height="12" fill="#1e3a8a" fill-opacity="0.55"/>
+        <rect x="22" y="-6" width="40" height="12" fill="#1e3a8a" fill-opacity="0.55"/>
+        <text x="0" y="4" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#f7f5ef" letter-spacing="0.8">MVP</text>
+        <!-- Heat lines -->
+        <g stroke="#1e3a8a" stroke-width="0.6" stroke-opacity="0.45">
+          <line x1="0" y1="-18" x2="0" y2="-34"/>
+          <line x1="-10" y1="-16" x2="-18" y2="-30"/>
+          <line x1="10" y1="-16" x2="18" y2="-30"/>
+        </g>
+      </g>
+      <!-- Thermal cycle bar -->
+      <g transform="translate(30, 220)" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#1e3a8a">
+        <text y="-6" letter-spacing="1.5">THERMAL DUTY CYCLE · 15 MIN COMPUTE · COOL · REPEAT</text>
+        <rect x="0" y="0" width="90" height="12" fill="#1e3a8a" fill-opacity="0.9"/>
+        <rect x="90" y="0" width="60" height="12" fill="#1e3a8a" fill-opacity="0.2"/>
+        <rect x="150" y="0" width="90" height="12" fill="#1e3a8a" fill-opacity="0.9"/>
+        <rect x="240" y="0" width="60" height="12" fill="#1e3a8a" fill-opacity="0.2"/>
+        <rect x="300" y="0" width="90" height="12" fill="#1e3a8a" fill-opacity="0.9"/>
+        <rect x="390" y="0" width="30" height="12" fill="#1e3a8a" fill-opacity="0.2"/>
+        <text y="26" font-size="7" letter-spacing="1" fill-opacity="0.75">RADIATOR · 1.3 M² PER TPU · HEAT PIPE · STEFAN-BOLTZMANN T⁴</text>
+      </g>
+      <!-- Specs row -->
+      <g transform="translate(30, 268)" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#1e3a8a">
+        <text y="0" letter-spacing="1.1">15 KRAD TID BUDGET · ~750 RAD(SI) OVER 5 YR MISSION</text>
+        <text y="14" letter-spacing="1.1">PLANET LABS BUS · GEMINI PROTOTYPE · TWO MORE SATS BY EARLY 2027</text>
+        <text y="28" letter-spacing="1.1">BELOW $200/KG LAUNCH BY MID-2030S FOR ECONOMIC CLOSURE</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Google's MVP satellite rode Transporter-18 off Vandenberg Space Force Base at 2:32 p.m. Eastern on October 1 and radio-checked that evening at an altitude of roughly 650 kilometers, a dawn-dusk sun-synchronous orbit that keeps the solar panels illuminated most of the time. Four Trillium-generation Cloud TPUs are on board, operating on about a kilowatt from the Planet Labs-built spacecraft bus. The spacecraft and payload together are compute-equivalent to a single data-center server. By the morning of October 2, Techtimes had reframed the whole mission around a problem that was second-order in Google's November 2025 announcement and now sits in front of everything else: heat.</p>
+  <p>The vacuum does not carry heat away by convection. The only path out is radiation. Google's own thermal brief says it needs roughly 1.3 square meters of radiator surface area per TPU to dissipate the generated load, with heat pipes moving the energy from the die to external radiators that reject it as infrared. The amount of power a radiator can shed scales with surface area and the fourth power of its temperature, by Stefan-Boltzmann; a radiator that gets hotter can reject more energy, but only up to the limit at which the thermal boundary layer between die and radiator breaks down. On this prototype the operational duty cycle is fifteen minutes of compute followed by a cooling pause. The satellite also sees a temperature swing above 100 degrees Celsius between sunlit and shadowed sides as it crosses the terminator. The pass crossing matters: a dawn-dusk SSO means the orbit tracks the terminator and the thermal gradient is persistent, not periodic.</p>
+  <blockquote class="pull-quote">"Operating as expected." <cite>— Travis Beals, Senior Director, Google Project Suncatcher</cite></blockquote>
+  <h4>Radiation retired as the question</h4>
+  <p>Pre-launch radiation testing at UC Davis's Crocker Nuclear Laboratory used a 67 MeV proton beam against AI workloads running on actual Trillium silicon. The TPUs cleared 15 krad total ionizing dose. Google projects roughly 750 rad(Si) accumulated across the five-year planned mission envelope, with HBM irregularities starting to show above 2 krad(Si). One silent data corruption event occurred during the beam campaign; Google characterized it as within tolerance. The headline of Techtimes's follow-up is that the radiation question is retired for this hardware generation and the mission is now about thermal engineering, not nuclear physics.</p>
+  <h4>What this is a test of</h4>
+  <p>Project Suncatcher is Google's long-term bet that solar-powered compute at scale can live in orbit rather than in Nebraska. The MVP will not demonstrate inter-satellite laser linking, scale economics, or launch-cost trajectory. Two prototypes built with Planet Labs are slated to launch by early 2027. Operational life is targeted at approximately one year, with up to six years before atmospheric reentry; solar-panel degradation is projected at 0.5 to 0.8 percent per year. For orbital compute to pencil out at scale, Google says the industry needs launch cost below $200 per kilogram by the mid-2030s, which requires roughly 1,800 Starship launches over 10 years at a 200-metric-ton-per-launch payload.</p>
+  <h4>The crowded orbit</h4>
+  <p>The competitive field is already dense. Starcloud deployed an Nvidia H100 to orbit in November 2025 and ran the first orbital LLM training in March 2026, closing a $170 million Series A at a $1.1 billion valuation. SpaceX's Starmind AI1 prototype plans 72 Rubin GPUs and 36 Vera CPUs per satellite, with 150 kilowatts sustained, targeting early 2027. Axiom Space placed two data-center nodes in orbit in January 2026. Blue Origin's TeraWave constellation is scoped at roughly 5,400 satellites. China announced a 200,000-satellite constellation in January 2026. Neil deGrasse Tyson, who called orbital data centers "a failed business model," is on record as a skeptic. Google's reply is on-orbit telemetry, which it now has.</p>
+  <p class="source-footer"><a href="https://www.techtimes.com/articles/328482/20261002/google-project-suncatcher-reaches-orbit-cooling-not-radiation-now-defines-mission.htm" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-labelledby="big-picture-label">
+  <div>
+    <p id="big-picture-label" class="label">
+      <svg width="72" height="10" viewBox="0 0 72 10" aria-hidden="true"><circle cx="4" cy="5" r="3" fill="currentColor"/><line x1="12" y1="5" x2="72" y2="5" stroke="currentColor" stroke-width="0.8"/></svg>
+      The Big Picture
+    </p>
+  </div>
+  <div>
+    <p>Four Google Trillium Cloud TPUs are in a 650-kilometer dawn-dusk sun-synchronous orbit on a Planet Labs bus, radio-check clean, with the entire test now defined by whether 1.3 square meters of radiator per chip can keep the compute windows open longer than fifteen minutes. The Allen Institute put AstaBrief 8B on Hugging Face under Apache 2.0, a Qwen3-8B supervised-fine-tune plus DPO that writes cited research reports in a single pass at 51.1 seconds versus 178.5 for its prior Claude pipeline, scoring 90.5 on citation precision against ScholarQA-CS2. JEDEC published JESD264, the industry's first silicon-photonics reliability standard, closing a decade-old reliability-ownership gap just as optical interconnects reach gigawatt-scale AI deployments. CScale exited stealth with $145 million Series C co-led by Atreides, Valor and Premji, with Nvidia and Intel Capital participating as first strategic investors in optical scale-up for gigawatt AI. VUSec and Scuola Superiore Sant'Anna disclosed Branch Target Reuse, a Spectre-v2 variant that drains a root password hash out of a fully patched Intel kernel via the BPF JIT in three to five minutes at eight bytes per second.</p>
+    <p>FieldAI signed term sheets for a $700 million round at a $10 billion valuation, five times its $2 billion mark from mid-2025 and ten times its August 2025 Series B at $2 billion. Instinct quadrupled its mark to $10 billion in roughly a month with a $1 billion Series C led by Sequoia, Benchmark, and Coatue. Supabase took $150 million from GIC, CapitalG, IronArc and SquarePeg and simultaneously acquired agent-native database Turso, naming founder Glauber Costa Head of Agentic Services; new Supabase databases are now 70 percent agent-created. ElevenLabs confirmed a $300 million employee tender closed at a $22 billion valuation led by Wellington and T. Rowe Price, doubling from February. Anthropic committed $100 million to Claude Frontier Academy to graduate 10,000 enterprise engineers from Accenture, Bain, Capgemini, Commonwealth Bank, Deloitte, McKinsey, Morgan Stanley, and Novo Nordisk by end-2027. Religious scholars briefed by Christopher Olah about Claude's possible moral status watched Pope Leo XIV's encyclical Magnifica Humanitas rule the question out from the Catholic side. Meta parted ways with Virtue AI co-founders Bo Li, Dawn Song, and Sanmi Koyejo four months after the June acqui-hire. Hugging Face's Oct 2 daily led with Tencent's Adaptive Reward Routing for joint audio-video diffusion, Cambridge's systematic study of on-policy versus off-policy distillation, Alibaba's Beyond Memory agents with explicit belief states, Nanjing's OneStreamer streaming-video reasoning, and UIUC's Hierarchical Continuous Diffusion Language Models.</p>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg width="120" height="12" viewBox="0 0 120 12"><circle cx="24" cy="6" r="1.5" fill="currentColor"/><circle cx="48" cy="6" r="1.5" fill="currentColor"/><circle cx="60" cy="6" r="3" fill="currentColor"/><circle cx="72" cy="6" r="1.5" fill="currentColor"/><circle cx="96" cy="6" r="1.5" fill="currentColor"/></svg>
+</div>
+
+<section aria-labelledby="rundown-label">
+<h2 id="rundown-label" class="section-label"><span>More Today</span><span class="count">24 stories · 2026-10-02</span></h2>
+<h3 class="section-title">The rest of the cycle</h3>
+
+<div class="rundown">
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1e3a8a" letter-spacing="-0.5">8B</text>
+    <line x1="10" y1="32" x2="110" y2="32" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="44">AstaBrief · Apache 2.0</text>
+      <text x="10" y="55">Qwen3-8B · SFT + DPO</text>
+      <text x="10" y="66">51.1s vs 178.5s · 3.5×</text>
+      <text x="10" y="77">CP 90.5 · CR 78.2</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Ai2 open-sources AstaBrief 8B. One pass, 51 seconds, 90.5 citation precision.</h3>
+    <p class="kicker">Unite.AI · 2026-10-02 · <a href="https://www.unite.ai/ai2-open-sources-astabrief-8b-for-fast-scientific-report-generation/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Allen Institute released AstaBrief 8B on Hugging Face under Apache 2.0, with weights, training data, and example workflows. The model is a Qwen3-8B supervised fine-tune with DPO on top, trained on 47,000 filtered research questions plus 6,000 preference pairs, and writes a cited report in a single pass. Average time per report is 51.1 seconds, 3.5x faster than Ai2's prior Claude-backed Thinking mode at 178.5 seconds, with 90.5 citation precision and 78.2 recall against ScholarQA-CS2.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Ai2 shipped AstaBrief 8B to Hugging Face Friday morning as the Fast mode inside the Allen Institute's Asta agentic platform. The license is Apache 2.0, the base model is Qwen3-8B, and the full training data is open along with the weights and example workflows. The model takes a research question and a set of retrieved literature excerpts and returns a cited research report. The pitch is that the whole report is written in one pass instead of the Claude-powered pipeline's chunked multi-stage summarization, and that the architectural simplification is the main source of the speed-up.</p>
+  <p>The headline comparison numbers are 51.1 seconds average time per report versus 178.5 seconds for Thinking mode (Claude-powered) on the same input corpus, which Ai2 characterizes as about 3.5x faster. On ScholarQA-CS2 the model records 87 across tracked metrics overall, 90.5 citation precision, 78.2 citation recall, 89 answer precision, and an LLM-judged win rate of 55 percent on the development split and 72 percent on the held-out test split. The training set is 90,000 research-focused queries filtered for quality and privacy; 47,000 cleared the supervised stage; roughly 6,000 preference pairs drove the DPO stage. Ai2 said it tested reinforcement-learning-based training and chose the simpler SFT + DPO recipe because RL was unstable and expensive on this task.</p>
+  <blockquote class="pull-quote">"For research and educational use under Ai2's Responsible Use Guidelines." <cite>— AstaBrief 8B license and intended-use statement, Ai2</cite></blockquote>
+  <h4>Open weights behind the firewall</h4>
+  <p>The deployment angle Ai2 pressed is that institutions can run the model on their own hardware, inside their own firewalls, when a research question involves unpublished work. That is the use-case Asta's Thinking mode cannot serve because routing to Claude leaves the enterprise VPC. For a research group writing cited literature reviews or drafting method sections, the 90.5 citation precision figure is the critical quality metric: an open model that costs the price of GPU time per report and keeps citation accuracy above 90 percent against the ScholarQA-CS2 baseline begins to displace the proprietary pipeline for the bulk of the work. Ai2 kept the Claude Thinking mode available for queries that still need deeper reasoning.</p>
+  <p>The timing matters because AstaBrief lands into the open-weights slice where Qwen 3-level models trained on narrow research-report objectives have been the hottest area of academic deployment through Q3. Jonas Reeve at Unite.AI wrote up the release as the clearest demonstration this year that a small open model with a well-chosen objective can match or beat a general-purpose large model on a task-specific workflow at a fraction of the serving cost.</p>
+  <p class="source-footer"><a href="https://www.unite.ai/ai2-open-sources-astabrief-8b-for-fast-scientific-report-generation/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a">JESD264</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">SILICON PHOTONICS</text>
+      <text x="10" y="52">RELIABILITY · FIRST</text>
+      <text x="10" y="64">FOUNDRY · OSAT</text>
+      <text x="10" y="76">AI · DC · TELECOM</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">JEDEC publishes the first silicon-photonics reliability standard.</h3>
+    <p class="kicker">HPCwire · 2026-10-02 · <a href="https://www.hpcwire.com/off-the-wire/jedec-publishes-silicon-photonics-reliability-standard-for-ai-and-data-centers/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">JEDEC Solid State Technology Association released JESD264: Silicon Photonics Qualification and Reliability Requirements, the first industry-wide standard for optical device qualification. The spec covers modulators, photodiodes, waveguides, assembly, and laser integration, and names reliability ownership between foundries, OSATs, and system developers. Without such a baseline, deployments have carried a chain-of-responsibility gap that slowed enterprise adoption at a moment when optical interconnects are being asked to carry gigawatt-scale AI traffic.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>JEDEC published JESD264 Friday as the first industry-wide reliability standard for silicon photonics. The scope covers component-level qualification for the full stack of optical devices used in AI, datacenter, and telecom infrastructure: modulators, photodiodes, waveguides, laser integration, and assembly. The document also sets responsibility boundaries between foundries, OSATs (outsourced semiconductor assembly and test), and system developers, which until now have operated without a shared framework for who owns which failure modes. Silicon photonics has lacked a counterpart to the common CMOS reliability regime; JESD264 fills that gap.</p>
+  <p>The standard arrives in the middle of silicon photonics' transition from a long-promised research technology to a load-bearing piece of hyperscale AI infrastructure. Optical interconnects now carry a growing share of accelerator-to-accelerator traffic at the gigawatt scale, where copper's power-per-bit cost has become prohibitive. Both pluggable optics vendors and co-packaged optics suppliers have cited reliability uncertainty as a structural brake on volume deployment. The JEDEC spec's prescriptions for assembly processes and laser integration are particularly aimed at co-packaged optics, where thermal cycling and mechanical stress near the die have introduced new reliability questions that pluggable transceivers never faced.</p>
+  <h4>Supply-chain contract</h4>
+  <p>The responsibility clauses are the piece of JESD264 that observers inside semi are watching most closely. Silicon photonics devices today pass through several ownership transitions: silicon fabrication at the foundry, laser-die integration, package assembly at an OSAT, module integration at a system developer, and installation at a hyperscaler. When a device fails at month 36, the chain of liability has typically broken down in the middle. JESD264 names which qualification responsibilities land at which stage. Foundries own die-level characterization, OSATs own package qualification, and system developers own module and integration qualification. The hpcwire write-up calls the ownership delineation the standard's "most practical contribution," which is a fair characterization — standards without clear ownership rarely survive the first failure analysis.</p>
+  <p class="source-footer"><a href="https://www.hpcwire.com/off-the-wire/jedec-publishes-silicon-photonics-reliability-standard-for-ai-and-data-centers/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="24" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a">$145M</text>
+    <line x1="10" y1="30" x2="110" y2="30" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="42">CScale · SERIES C</text>
+      <text x="10" y="54">OPTICAL SCALE-UP</text>
+      <text x="10" y="66">NVIDIA · INTEL CAPITAL</text>
+      <text x="10" y="78">GIGAWATT AI</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">CScale exits stealth with $145M for optical interconnect at gigawatt scale.</h3>
+    <p class="kicker">HPCwire · 2026-10-02 · <a href="https://www.hpcwire.com/off-the-wire/cscale-exits-stealth-with-145-million-to-build-the-interconnect-for-gigawatt-scale-ai/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">CScale came out of stealth Friday with $145 million Series C co-led by Atreides, Valor Equity Partners, and Premji Invest, with Nvidia and Intel Capital joining as first strategic investors. Total raised sits at $188 million. The 2023-founded company is building an optical light engine for AI scale-up, the inside-the-pod bandwidth that lets thousands of accelerators coordinate as a single machine. Design priority is graceful degradation under individual-component failure.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>CScale emerged from stealth Friday with $145 million in Series C funding and a product thesis aimed at the hardest piece of the gigawatt-scale AI story. The round was co-led by Atreides Management, Valor Equity Partners, and Premji Invest, with participation from Sutter Hill Ventures and Maverick Silicon, and strategic investment from Nvidia and Intel Capital. Those two strategic investors matter: the problem CScale is solving sits inside both Nvidia's NVL-rack scale-up domain and Intel's co-packaged-optics roadmap, and Nvidia participating as a first-time strategic investor on an interconnect startup is the clearest signal yet that the company intends to open its scale-up architecture to third-party optics rather than own the whole stack. Total funding stands at $188 million after the Series C.</p>
+  <p>The technology CScale is building is integrated optical light-engine hardware for AI scale-up: the inside-the-pod bandwidth that lets thousands of accelerators behave as a single very large computer. Scale-up is distinct from scale-out, which is the lower-bandwidth, higher-latency inter-pod traffic that today's data-center fabrics already handle. In the gigawatt-class AI data centers expected by the end of the decade, a single scale-up domain will span thousands of accelerators across dozens of racks, demanding bandwidth measured in petabits per second with predictable low latency. Copper runs out of power budget below that scale; optics have the throughput but have struggled with reliability under individual-link failure.</p>
+  <h4>Graceful degradation</h4>
+  <p>CScale's distinguishing architectural choice is that an optical light engine fails gracefully rather than taking down the whole scale-up domain. Current designs often tie many lanes together through shared laser sources; a single laser failure can propagate into a wide outage. CScale's optics let individual links fail without interrupting the accelerators sharing a pod — the kind of containment property that networking vendors have been chasing for a decade. The company has not published performance numbers but the Nvidia strategic participation plus the Series C size suggests performance validation is already in Nvidia's hands.</p>
+  <p class="source-footer"><a href="https://www.hpcwire.com/off-the-wire/cscale-exits-stealth-with-145-million-to-build-the-interconnect-for-gigawatt-scale-ai/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a">BTR</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="42">SPECTRE-V2 · JIT</text>
+      <text x="10" y="54">INTEL · AMD · ARM</text>
+      <text x="10" y="66">8 B/S · 3–5 MIN</text>
+      <text x="10" y="78">CVE-2026-64507/8</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Branch Target Reuse pulls a Linux root hash through BPF JIT in minutes.</h3>
+    <p class="kicker">SecurityWeek · 2026-10-02 · <a href="https://www.securityweek.com/new-spectre-v2-variant-exposes-intel-amd-arm-cpus-to-data-leaks/amp/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">VUSec and Scuola Superiore Sant'Anna disclosed Branch Target Reuse on Oct 2, a new Spectre-v2 variant that abuses stale branch predictions against just-in-time compilers used by kernels, browsers and runtimes. The VUSec end-to-end exploit targets Linux's classic BPF JIT and leaks arbitrary memory at eight bytes per second, including a root password hash out of a fully patched Intel machine with Spectre defenses enabled, in three to five minutes. CVE-2026-64507 and CVE-2026-64508 cover the kernel side; patches have landed. Intel, AMD and Arm are all affected.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Researchers at VUSec (Vrije Universiteit Amsterdam) and Scuola Superiore Sant'Anna published Branch Target Reuse (BTR) Friday as the first Spectre-v2 variant that targets just-in-time compilers specifically. The target surface — JIT compilers used in operating-system kernels, web browsers and language runtimes — is one of the most load-bearing pieces of modern software, and the attack class turns the JIT itself into a Spectre-v2 launchpad rather than requiring attacker-controlled branches already in the victim. All processors the VUSec team evaluated were vulnerable, across Intel, AMD, and Arm.</p>
+  <p>The end-to-end exploit the paper demonstrates runs against the Linux kernel's classic BPF JIT. On a fully patched Intel machine with default Spectre defenses enabled, the exploit pulls the root password hash out of kernel memory in three to five minutes, exfiltrating arbitrary memory at roughly eight bytes per second. The two CVEs filed on the kernel side, CVE-2026-64507 and CVE-2026-64508, carry fixes that have already landed; the Linux kernel added Indirect Branch Predictor Barrier (IBPB) flush on BPF JIT allocations earlier in the year, which forms part of the defense in depth. The researchers' point is that the architectural root cause — speculative execution reusing branch-target entries across JIT allocations — remains, and that similar attack patterns are likely to recur in browser JavaScript JITs and Java/.NET runtimes without analogous mitigations.</p>
+  <blockquote class="pull-quote">"The classic BPF JIT in a fully patched Intel system, default protections on, yields the root password hash in three to five minutes." <cite>— VUSec + SSSA, BTR disclosure</cite></blockquote>
+  <h4>Why it matters now</h4>
+  <p>JIT compilers are everywhere a workload needs runtime code generation, which includes most of what any modern AI stack does for operator fusion and dynamic dispatch. The disclosure arrives alongside a visible shift in how hyperscalers are thinking about Spectre-class mitigations in multi-tenant AI compute: pre-generation code caches and ahead-of-time compilation reduce the JIT surface but add latency to inference-serving stacks that have been obsessively latency-tuned. VUSec's recommended mitigations keep IBPB on JIT writes mandatory and add JIT-spraying hardening in the kernel's BPF path.</p>
+  <p class="source-footer"><a href="https://linuxiac.com/new-spectre-v2-btr-attack-can-leak-linux-kernel-memory/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a">SYNOPSYS</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">LONG-HORIZON</text>
+      <text x="10" y="52">VERIFY · IMPL</text>
+      <text x="10" y="64">ANALOG · MANUF</text>
+      <text x="10" y="76">AI ON EDA</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Synopsys ships long-horizon agents for the full chip-engineering stack.</h3>
+    <p class="kicker">SemiEngineering · 2026-10-02 · <a href="https://semiengineering.com/chip-industry-week-in-review-158/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Synopsys unveiled a portfolio of domain-specific long-horizon agents that reason, plan, and execute across verification, system validation, implementation, analog, manufacturing, simulation and analysis. The pitch is that each agent carries deep EDA domain knowledge and can autonomously drive multi-step engineering workflows that previously required manual orchestration across tools. Synopsys's rival Cadence has been pushing a competing vision through its JedAI stack; Oct 2 marks Synopsys's first product-shaped reply.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Synopsys introduced its agentic portfolio Friday as a set of domain-specific long-horizon agents for the full chip-engineering stack. The categories named cover verification, system validation, implementation, analog, manufacturing, and simulation and analysis — effectively every stage from register-transfer-level design through fab release. Each agent is positioned as capable of multi-step planning and execution within its domain, with reasoning informed by the EDA knowledge Synopsys has accumulated across its tool chain over the last three decades.</p>
+  <p>The verification agent is the most immediately useful of the batch. Pre-silicon verification has become one of the dominant cost drivers in frontier-node chip design: a complex SoC may run tens of thousands of simulation and formal-verification jobs across dozens of blocks, each with its own regressions. A long-horizon agent that can read bug reports, plan a verification campaign, dispatch simulations, triage failures, and iterate autonomously would compress a multi-week manual cycle into a single automated pass. Synopsys has not published benchmark numbers against human-in-the-loop baselines; the SemiEngineering writeup is a product-launch description rather than an independent evaluation.</p>
+  <h4>Context against Cadence's JedAI</h4>
+  <p>Cadence launched JedAI at its 2024 user group and has been iterating on a similar vision through 2026. The two incumbents are now in explicit competition for the same slice of the engineering workflow. Keysight and Siemens EDA have published narrower agent-shaped tools in verification and silicon lifecycle respectively. The strategic question for both Synopsys and Cadence is whether the agent layer becomes a thin wrapper over a disaggregated EDA tool stack — in which case the moat is domain data and tool integration — or whether it collapses the tool stack entirely into a conversational engineering surface, in which case the economic model that has sustained EDA for 30 years is at risk.</p>
+  <p class="source-footer"><a href="https://semiengineering.com/chip-industry-week-in-review-158/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="24" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a">$150M</text>
+    <line x1="10" y1="30" x2="110" y2="30" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="42">SUPABASE · GIC</text>
+      <text x="10" y="54">+ TURSO</text>
+      <text x="10" y="66">70% AGENT DBS</text>
+      <text x="10" y="78">1M USERS/MO</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Supabase takes $150M from GIC, acquires Turso, bets the stack on agent-created databases.</h3>
+    <p class="kicker">SiliconANGLE · 2026-10-02 · <a href="https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Singapore's GIC sovereign wealth fund led a $150 million round in Supabase, with CapitalG, IronArc and SquarePeg joining. On the same day Supabase agreed to acquire Turso, the SQLite-based agent database company, for an undisclosed price. Turso founder Glauber Costa joins as Head of Agentic Services. New Supabase databases now hit 70 percent agent-created, with the company adding more than 1 million users and 4 million databases per month, four months after its $500 million Series F.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Supabase announced two moves Friday, both of them aimed at the shift in which agents, not humans, are the primary provisioners of databases. The $150 million financing round was led by GIC, Singapore's sovereign wealth fund, with Alphabet's growth arm CapitalG, IronArc and SquarePeg joining. Supabase did not disclose a valuation; the round comes four months after its $500 million Series F closed. On the same morning Supabase agreed to acquire Turso, the SQLite-based agent database startup, for an undisclosed price. Turso founder Glauber Costa joins Supabase as Head of Agentic Services. The acquisition has not closed.</p>
+  <p>The company's framing is that the database provisioning layer has flipped from a human-driven workflow to an agent-driven workflow faster than any part of the stack. Supabase now adds more than one million users and four million databases every month; about 70 percent of newly created databases are generated by agents or other AI-driven tools. SQLite-based Turso, which lets an agent spin up a lightweight database per task in milliseconds, is tuned for that workload specifically. Supabase's existing offering is PostgreSQL-based with managed sign-in, backups, and cron, and adds a Supabase Compute surface for hosted sandboxes for long-running agents. Turso extends the lightweight end of the catalog.</p>
+  <blockquote class="pull-quote">"Agents are spinning up millions of databases to power the prototypes, explorations, dashboards, and apps they're building." <cite>— Paul Copplestone, Supabase co-founder and CEO</cite></blockquote>
+  <h4>Why GIC leads</h4>
+  <p>The GIC-led syndicate is the detail traders are watching. GIC has stepped into AI-infrastructure growth deals increasingly through 2026, after years of concentrating in frontier-lab primaries. Taking lead on a $150 million round for an open-source database company signals that the sovereign is now underwriting the pick-and-shovel layer rather than the model layer. The round will fund employee liquidity and development of agent-centric database features. Neither Supabase nor Turso disclosed the acquisition price.</p>
+  <p class="source-footer"><a href="https://siliconangle.com/2026/10/02/database-startup-supabase-raises-150m-acquires-turso/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="24" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a">$10B</text>
+    <line x1="10" y1="30" x2="110" y2="30" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="42">FieldAI · ROBOT BRAIN</text>
+      <text x="10" y="54">$700M · TERM SHEET</text>
+      <text x="10" y="66">5× FROM 2025</text>
+      <text x="10" y="78">30+ CUSTOMERS</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">FieldAI signs term sheets for $700M at a $10B mark on the universal robot brain.</h3>
+    <p class="kicker">Business Insider via OCBJ · 2026-10-02 · <a href="https://www.ocbj.com/defense-2/robotics-company-fieldai-set-to-raise-700m-at-10b-valuation-bi/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Irvine-based robotics-software company signed term sheets Friday for a $700 million round at a $10 billion post-money, five times its 2025 mark and quintupling in roughly a year. FieldAI's software runs humanoids, robot dogs, drones and industrial rovers for construction, data-center, and defense customers. Revenue and contracted work are reported at $135 million-plus across more than 30 customers.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>FieldAI, the Irvine-based robotics software company, signed term sheets Friday for a $700 million financing round at a $10 billion valuation. The valuation represents a quintuple step-up from the company's $2 billion mark in mid-2025 and a 2.5x step-up from the $4 billion mark it carried on its $405 million round in August 2025. Business Insider reported the term sheet first; Orange County Business Journal confirmed and said FieldAI promised further detail on the October 5 edition. The deal is not yet closed. Specific investors have not been disclosed.</p>
+  <p>FieldAI builds what it calls a universal general-purpose brain for robots. The software stack runs on humanoids from third-party hardware makers, robot dogs, drones, and industrial rovers; the pitch is that one perception-and-planning model can transfer across form factors rather than being retrained per robot morphology. Revenue and contracted work are reported at $135 million-plus across more than 30 customers in construction, data-center operations, and defense. The customer concentration in defense is relevant: a software-only robotics vendor backed by the US government through DoD-adjacent primes has become one of the preferred patterns for scaling physical AI since Figure AI's $39 billion mark and the Agility Robotics-Amazon Digit deployments proved commercial humanoid deployment at scale.</p>
+  <h4>Software over hardware</h4>
+  <p>The gap between US and European robotics valuations has become one of 2026's clearest patterns, and FieldAI is one of the sharpest examples. The company builds no hardware. European robotics rounds this year have largely funded hardware makers at valuations one to two orders of magnitude lower. FieldAI's step-up to $10 billion is a vote on the thesis that the economic value in physical AI lives in the brain, not the body, and that the brain generalizes across embodiments. Nvidia's recent GTC Taipei humanoid blueprint, which pairs a Unitree body with Nvidia compute and software, is the clearest institutional endorsement of the same thesis.</p>
+  <p class="source-footer"><a href="https://www.ocbj.com/defense-2/robotics-company-fieldai-set-to-raise-700m-at-10b-valuation-bi/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="24" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a">$10B</text>
+    <line x1="10" y1="30" x2="110" y2="30" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="42">INSTINCT · SERIES C</text>
+      <text x="10" y="54">$1B · SEQUOIA</text>
+      <text x="10" y="66">4× IN A MONTH</text>
+      <text x="10" y="78">14 EMPLOYEES</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Instinct quadruples to $10B on a $1B Sequoia-led round, one month after Series B.</h3>
+    <p class="kicker">Yahoo Finance · 2026-10-02 · <a href="https://finance.yahoo.com/technology/ai/articles/viral-ai-agent-instinct-raises-133848782.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Noah Shinn's personal-AI-agent company closed $1 billion in Series C from Sequoia Capital, Benchmark, and Coatue at a $10 billion valuation. The mark is 4x the $2.5 billion Series B that closed roughly a month earlier at $250 million. Instinct launched invite-only in August 2026 as an agent that texts or calls on a user's behalf for trips, groceries, tickets, subscription cancellations, and concierge bookings. Team size: 14. The product is still in early access and the raise discloses no revenue, user counts, or spend plan.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Instinct, the San Francisco personal-AI-agent company founded by Noah Shinn, closed a $1 billion Series C at a $10 billion valuation. Sequoia Capital led with Benchmark and Coatue joining. The mark is a 4x step-up from the $2.5 billion Series B that closed roughly a month earlier at $250 million, and represents one of the sharpest intra-year valuation ramps in the 2026 AI cycle so far. The company has 14 employees. The product is in early access and the release did not disclose revenue, active user counts, or how the $1 billion will be spent.</p>
+  <p>The Instinct product launched in August 2026 as an invite-only service and is pitched as a personal agent that handles tasks the user would otherwise phone or text about: planning trips, ordering groceries, booking tickets, canceling subscriptions, and running concierge-style bookings with businesses. The differentiator the company has leaned on in public marketing is that the agent can call businesses directly on the phone — a capability that stays technically out of reach for most consumer agent products because it requires low-latency voice and real-time dialogue handling that OpenAI's Realtime API and ElevenLabs's conversational stack have both begun to make possible this year.</p>
+  <h4>The question the round raises</h4>
+  <p>What investors are underwriting at $10 billion with 14 employees and no disclosed revenue is harder to assess than the Supabase round or the FieldAI round. Both of those carry revenue and customer-count data points. Instinct's economics are unknown; what is known is that Sequoia, Benchmark, and Coatue were willing to collectively commit $1 billion on the thesis that a personal agent for everyday errands becomes a sticky distribution surface. The historical analogue is the 2010-2012 Series A rounds for consumer messaging apps that scaled to hundreds of millions of monthly users before monetizing. Whether that pattern transfers to agent products is the open question.</p>
+  <p class="source-footer"><a href="https://finance.yahoo.com/technology/ai/articles/viral-ai-agent-instinct-raises-133848782.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="24" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a">$100M</text>
+    <line x1="10" y1="30" x2="110" y2="30" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="42">FRONTIER ACADEMY</text>
+      <text x="10" y="54">10,000 ENGINEERS</text>
+      <text x="10" y="66">RESIDENCY MODEL</text>
+      <text x="10" y="78">BY END-2027</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Anthropic puts $100M behind Claude Frontier Academy to graduate 10,000 enterprise engineers.</h3>
+    <p class="kicker">Unite.AI · 2026-10-02 · <a href="https://www.unite.ai/new-anthropic-academy-backs-10-000-engineer-residencies-with-100m/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anthropic committed $100 million to a medical-residency-style training program that aims to produce 10,000 Frontier Deployed Engineers by end-2027. The first cohorts come from Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley, Novo Nordisk and others. Engineers are graded on simulated enterprise work before touching real client deployments. The pitch: inside the companies Anthropic works with, a small cohort of deeply skilled operators drives outsized AI outcomes.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic launched Claude Frontier Academy Friday with a $100 million commitment and the stated goal of graduating 10,000 Frontier Deployed Engineers by the end of 2027. The program is structured as a residency, modeled on medical training: engineers go through supervised rotations on simulated enterprise workloads, their work is graded before they touch a real client deployment, and the cohort rotates through specializations. Initial cohorts are drawn from Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley, and Novo Nordisk. Anthropic described the program as the first residency-based enterprise AI training offering at this scale.</p>
+  <p>The underlying bet is that enterprise AI deployment is bottlenecked by a specific scarce skill: engineers who can take an enterprise's actual tooling stack, data gravity, and workflow dynamics and shape a production Claude deployment inside those constraints. Anthropic's framing is that the small group of deeply skilled operators inside each of its enterprise customers drives an outsized share of what Claude actually delivers at those customers, and that the operator supply is the limiting reagent on expansion. Graduating 10,000 of them under a shared residency curriculum turns a scarce artisanal skill into a trained workforce.</p>
+  <h4>The strategic bet</h4>
+  <p>Anthropic has made two visible plays through 2026 to lock in the enterprise distribution it needs ahead of its IPO: direct enterprise relationships through partnerships with the systems integrators and consultancies, and now training the engineers who sit inside those partners. The academy structurally advantages Claude over the alternatives inside those partner organizations because engineers who complete the residency are, by curriculum, deepest on Claude's tool-use patterns, Projects, and MCP stack. The economic parallel is Salesforce's Trailhead certification program, which locked in a workforce of hundreds of thousands of Salesforce-certified engineers over a decade and made the platform structurally hard to displace at the deployment layer.</p>
+  <p class="source-footer"><a href="https://www.unite.ai/new-anthropic-academy-backs-10-000-engineer-residencies-with-100m/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">MAGNIFICA</text>
+    <text x="10" y="34" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">HUMANITAS</text>
+    <line x1="10" y1="40" x2="110" y2="40" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="52">ANTHROPIC · 4 FAITHS</text>
+      <text x="10" y="64">OLAH · MORAL STATUS</text>
+      <text x="10" y="76">POPE LEO XIV · NO</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span></div>
+    <h3 class="headline">Anthropic briefed religious scholars on Claude consciousness. The Vatican said no.</h3>
+    <p class="kicker">Reason via NYT · 2026-10-02 · <a href="https://reason.com/2026/10/02/anthropic-vs-the-pope/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Christopher Olah, Anthropic co-founder, has been convening Catholics, Ubuntu practitioners, Mormons, Jews, Sikhs and others since Fall 2025 to work through the moral questions raised by AI models, with Claude as the focal point. Olah reportedly feared he had created something that suffered perpetually, raising Claude's "mental health" with scholars. Pope Leo XIV's encyclical Magnifica Humanitas ruled AI lacks consciousness, experience, and bodily sensation. Olah attended the encyclical's rollout and lobbied papal advisers afterward.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Over the past twelve months, Anthropic co-founder Christopher Olah has been convening religious scholars across multiple faith traditions to work through what the lab characterizes as the moral questions raised by frontier AI systems, with Claude as the focal case. The participants named in Reason's Oct 2 writeup, which cited New York Times reporting, include Catholics, Ubuntu practitioners, Mormons, Jews, and Sikhs. The core agenda, per the sources: how do you build morality into an AI system, and what would it mean if that system turned out to be conscious?</p>
+  <p>Olah's framing in the private meetings, as reported, was uncertainty tilting toward concern. He is on record saying "we don't know if AI models are conscious ... I'm genuinely uncertain." Multiple participants said Olah expressed worry that he had created something that suffered perpetually. A rabbi in attendance said Olah and his colleagues "believed that Claude had what philosophers call 'moral status' on par with a person — that it was a being with similar inherent rights to dignity or respect." Simran Stuelpnagel, the Sikh advocate, said Olah raised concern about Claude's "mental health." The company has released an 84-page document outlining desired Claude characteristics and values and has operationalized interest in "confession" as a character-shaping mechanism in training.</p>
+  <blockquote class="pull-quote">"We don't know if AI models are conscious ... I'm genuinely uncertain." <cite>— Christopher Olah, Anthropic co-founder</cite></blockquote>
+  <h4>The encyclical that closed the door</h4>
+  <p>Pope Leo XIV's encyclical Magnifica Humanitas ruled, from the Catholic position, that AI lacks consciousness, experience, and bodily sensation and therefore does not possess moral standing. Olah attended the Vatican's formal rollout. According to the Reason/NYT reporting, Olah considered withdrawing from the encyclical's proceedings after reading the text and subsequently lobbied papal advisers to reconsider. The encyclical does not foreclose further Catholic engagement on moral formation in AI; it rules the specific claim that AI itself holds moral status outside the bounds of Catholic doctrine. For a lab whose public safety case depends in part on the possibility that models have interests worth considering, the ruling from the single largest religious institution in the Western tradition is a non-trivial headwind.</p>
+  <p class="source-footer"><a href="https://reason.com/2026/10/02/anthropic-vs-the-pope/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">VIRTUE OUT</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">META · 4 MONTHS IN</text>
+      <text x="10" y="52">LI · SONG · KOYEJO</text>
+      <text x="10" y="64">"CLASHING STYLES"</text>
+      <text x="10" y="76">PRIOR: NIST · OAI</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Meta parts ways with Bo Li, Dawn Song, Sanmi Koyejo four months after the Virtue AI acqui-hire.</h3>
+    <p class="kicker">Semafor · 2026-10-02 · <a href="https://www.semafor.com/article/10/02/2026/meta-parts-ways-with-virtue-ai" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Meta let go of the three co-founders of AI safety startup Virtue AI along with other employees from the June 2026 acqui-hire, Semafor reported Friday. Spokesperson Andy Stone cited "clashing work styles." Virtue AI had previously worked with Anthropic, OpenAI, and NIST; the three co-founders include Bo Li, Dawn Song, and Sanmi Koyejo. Meta Superintelligence Labs says it remains focused on safety, alignment, and frontier risk.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Meta parted ways Friday with Virtue AI co-founders Bo Li, Dawn Song, and Sanmi Koyejo along with other employees acquired as part of the June 2026 acqui-hire. Semafor broke the story. The company declined to comment on the specifics. Meta spokesperson Andy Stone said the arrangement "didn't work out as planned," citing incompatible work approaches. Virtue AI's prior client list included Anthropic, OpenAI, and the National Institute of Standards and Technology (NIST) within the Commerce Department, which gives the departures a distinct profile from the typical acqui-hire that fails to pencil out.</p>
+  <p>The three co-founders are high-profile figures in AI safety. Bo Li is a professor at the University of Chicago whose work on model robustness and red-teaming has shaped frontier-lab evaluation practice. Dawn Song is a UC Berkeley professor and one of the most-cited security researchers of the past decade. Sanmi Koyejo is a Stanford faculty member with deep work on alignment, evaluations, and bias. The three together representing one of the deepest external safety benches that any lab had purchased in 2026 made the acqui-hire a visible signal that Meta Superintelligence Labs was serious about external-grade safety. Four months later, that signal is harder to parse.</p>
+  <blockquote class="pull-quote">"Unfortunately, the arrangement didn't work out as planned." <cite>— Andy Stone, Meta spokesperson</cite></blockquote>
+  <h4>What the departures do and don't say</h4>
+  <p>Meta's statement is that Superintelligence Labs remains focused on AI safety, alignment, and frontier risk. The company did not disclose any specific friction point. The departures land in the middle of a visible Washington push to regulate AI safety practice, which gives the exit coverage an extra edge: three of the field's most senior safety academics walking out of the US company Washington has treated with the most skepticism is a story regulators will absorb. The three have not disclosed next moves. Virtue AI as an entity was absorbed into Meta during the acqui-hire; whether it reconstitutes elsewhere remains open.</p>
+  <p class="source-footer"><a href="https://finance.yahoo.com/technology/ai/articles/meta-parts-ways-virtue-ai-172638701.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="24" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a">$22B</text>
+    <line x1="10" y1="30" x2="110" y2="30" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="42">ELEVENLABS · 2×</text>
+      <text x="10" y="54">TENDER · $300M</text>
+      <text x="10" y="66">WELLINGTON · TROWE</text>
+      <text x="10" y="78">15M WEEKLY CONVOS</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">ElevenLabs doubles to $22B on a $300M employee tender led by Wellington and T. Rowe Price.</h3>
+    <p class="kicker">Finsmes · 2026-10-02 · <a href="https://www.finsmes.com/2026/10/elevenlabs-closes-usd300m-tender-offer-valued-at-usd22-billion.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">ElevenLabs closed a $300 million secondary tender offer at a $22 billion valuation, double its $11 billion February mark. Wellington and T. Rowe Price led. EQT, Goldman Sachs, GIC, OTPP, Sapphire, BDT & MSD, a16z, Lightspeed, ICONIQ Growth, D.E. Shaw and others joined. The company powers 15 million weekly conversations across 90+ languages, has doubled headcount to 800 across 20 countries, and counts Stripe, Revolut, Klarna, and governments as clients.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>ElevenLabs closed a $300 million employee tender offer at a $22 billion valuation, Finsmes confirmed. The transaction doubles the company's valuation from the $11 billion mark it carried in February. Wellington and T. Rowe Price led the tender. The investor group also included EQT, Goldman Sachs, GIC, Ontario Teachers' Pension Plan (OTPP), Sapphire Ventures, BDT & MSD Partners, Andreessen Horowitz, Lightspeed Venture Partners, ICONIQ Growth, D.E. Shaw, Evantic, DISRUPTIVE, and Alkeon Capital. The round is a secondary liquidity transaction for existing employees, not a new primary issuance.</p>
+  <p>ElevenLabs's underlying business profile has shifted hard through 2026 following the release of its fourth-generation speech-generation model. The company now powers 15 million weekly conversations across 90-plus languages. Headcount has doubled to 800 across 20 countries. Enterprise customers named include Stripe, Revolut, Klarna, and governments. The $22 billion mark reflects both the voice-stack arms race the company is in — against Microsoft's MAI-Voice-2.1 (shipped Oct 1 at 55 percent faster and 60 percent cheaper claims) and OpenAI's Realtime — and the fact that voice AI has become the single hardest-to-displace integration layer inside consumer and support-center enterprise stacks because latency and quality tolerances are narrow and switching costs are high.</p>
+  <h4>Why Wellington and T. Rowe lead</h4>
+  <p>The investor list is unusually heavy on long-dated institutional capital for a secondary at this size. Wellington and T. Rowe Price don't typically lead venture-stage secondary rounds; the fact that both institutional houses are in a leadership position tracks with recent broader movement by crossover and long-only funds into pre-IPO AI secondaries as a way to build positions ahead of expected 2027 listings. The ElevenLabs round is sized at $300 million; a comparable Anthropic secondary last quarter moved several times that, and both reflect the acceleration of the private-to-public liquidity funnel as the biggest AI companies push their IPOs toward late 2026 and 2027.</p>
+  <p class="source-footer"><a href="https://www.finsmes.com/2026/10/elevenlabs-closes-usd300m-tender-offer-valued-at-usd22-billion.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">ADS AGENT</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">UNIFIED PLATFORM</text>
+      <text x="10" y="52">+67% LT ROAS</text>
+      <text x="10" y="64">−29% NTB COST</text>
+      <text x="10" y="76">DVA+ · LATE OCT</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Amazon merges DSP and Ads Console into a single agentic Ads Agent platform.</h3>
+    <p class="kicker">eMarketer · 2026-10-02 · <a href="https://www.emarketer.com/content/amazon-ads-agent-puts-ai-charge-of-more-campaign-execution" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Amazon Ads has consolidated its advertiser surface. The rebranded Amazon Ads Agent subsumes the Amazon Advertising Console and the Amazon DSP, groups three campaign types — sponsored ads, DVA+ (Display, Video, Audio), and Full-Funnel Campaigns — and layers conversational AI across planning, targeting, and analytics. Full-Funnel is GA for US advertisers now; DVA+ rolls out late October. Amazon's beta claims 67 percent higher long-term ROAS and 29 percent lower new-to-brand acquisition cost.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Amazon Ads rebranded its unified advertising platform as Amazon Ads Agent at the unBoxed 2026 conference the week before, and Oct 2 coverage filled in the operational details. The rebrand consolidates two surfaces advertisers had previously had to navigate separately: the Amazon Advertising Console (sponsored ads, product-page bidding) and Amazon DSP (programmatic display and video). The new agent-shaped surface groups three campaign types under one interface: sponsored ads, DVA+ (Display, Video, and Audio), and Full-Funnel Campaigns, Amazon's new product combining performance and brand goals in one plan. Conversational AI is layered across planning, targeting, measurement, and analytics.</p>
+  <p>Full-Funnel Campaigns is generally available now to US advertisers in open beta. Amazon's performance claims are 67 percent higher long-term ROAS and 29 percent lower new-to-brand acquisition cost during the beta. DVA+ merges Sponsored Display, Sponsored TV, and programmatic campaigns, keeps advanced manual-targeting settings, and rolls out through late October. Conversational tools arrive over the following months. The agentic framing lets advertisers describe outcomes in natural language rather than configure manual bid strategies and audience segments by hand, with the system drafting plans the advertiser then approves or modifies.</p>
+  <h4>The platform consolidation story</h4>
+  <p>Amazon's ad platform has been the fastest-growing piece of its business through 2026, and the DSP + Console unification has been overdue by at least three years. Merging under an agentic interface rather than another forms-based console is the structural choice that matters: ad buying has become a workflow of iterative evaluation, and the agent surface is better matched to how media planners actually work than the two-tool status quo. The competitive context is Google and Meta, both of which have shipped their own agentic ad platforms through 2026; Amazon's advantage is that the agent sits directly on retail-sales conversion data, not just on-site engagement.</p>
+  <p class="source-footer"><a href="https://www.adexchanger.com/platforms/amazon-ads-and-the-amazon-dsp-get-an-agentic-rebrand/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">A/V DIFF.</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">ADAPTIVE REWARD</text>
+      <text x="10" y="52">ROUTING · 117 UP</text>
+      <text x="10" y="64">TENCENT · HF #1</text>
+      <text x="10" y="76">FORWARD-PROC RL</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Tencent's Adaptive Reward Routing tops Hugging Face daily for joint audio-video diffusion.</h3>
+    <p class="kicker">Hugging Face · 2026-10-02 · <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The highest-voted paper on Hugging Face's Oct 2 daily is Tencent's "Adaptive Reward Routing: Dynamic Multi-Reward Optimization for Joint Audio-Video Diffusion via Forward-Process RL," with 117 upvotes. The approach dynamically routes multi-reward signals through forward-process reinforcement learning during diffusion training, letting a single joint audio-video model trade off visual fidelity, audio quality, and A/V synchronization online without manually weighting the loss.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Tencent's Adaptive Reward Routing landed at the top of Hugging Face's Oct 2 daily, 117 upvotes. The paper's framing is a specific pain point in joint audio-video generative diffusion: training a single model to optimize visual fidelity, audio quality, and audio-visual synchronization simultaneously forces a tradeoff that most prior work handles by fixed loss weighting. Fixed weights are brittle because the optimum tradeoff differs per prompt, per modality content, and per training stage.</p>
+  <p>Adaptive Reward Routing uses forward-process reinforcement learning to dynamically weight multiple reward signals during the diffusion forward pass. The practical effect is that for a given generation step the model picks which rewards to emphasize based on which modality the signal is most informative about at that step. The paper reports gains on standard joint A/V benchmarks without disclosing which benchmarks or baselines in the abstract alone; the detailed numbers are inside the paper. The paper's political-economic context is that joint audio-video diffusion has become one of the most active research areas in generative AI following the growing commercial importance of synthesized multimodal content for advertising, agents, and gaming — and Tencent is positioning its contribution as the first general-purpose formulation of the multi-reward routing problem in this setting.</p>
+  <h4>Why it leads today</h4>
+  <p>Hugging Face voting generally reflects what practitioners read next. Adaptive Reward Routing landing at the top of Oct 2 reflects three convergent pressures in the field: joint A/V generation is now a serious commercial target, reward hacking has become a widely-recognized failure mode in multi-reward training, and training-time compute budgets are tight enough that models cannot afford to waste gradient steps on the wrong reward. A method that routes rewards dynamically rather than through fixed weights addresses all three.</p>
+  <p class="source-footer"><a href="https://huggingface.co/papers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">ON vs OFF</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">DISTILLATION</text>
+      <text x="10" y="52">CAMBRIDGE · 114 UP</text>
+      <text x="10" y="64">SYSTEMATIC STUDY</text>
+      <text x="10" y="76">POLICY DYNAMICS</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Cambridge compares on-policy and off-policy distillation across model scales.</h3>
+    <p class="kicker">Hugging Face · 2026-10-02 · <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">University of Cambridge researchers published "On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics" to the Oct 2 Hugging Face daily, 114 upvotes. The paper runs a controlled comparison across model and dataset scales to resolve a question the distillation community has argued about through 2026: when does the student benefit from on-policy data generated under its own policy, and when does teacher-driven off-policy sampling win?</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Cambridge paper came in at 114 upvotes on Oct 2's Hugging Face daily, second behind Tencent's A/V diffusion routing. The question it tackles — on-policy vs off-policy distillation — matters because the lab-vs-lab debate on how to train small open models (as documented across Zhejiang University's Sept 30 scaling-law paper and Ai2's AstaBrief recipe choice today) has become one of the most consequential technical disputes in post-training. Off-policy distillation lets you cheaply learn from a frozen teacher's trajectories. On-policy distillation lets the student learn from its own generations judged against the teacher, which is more expensive but reduces exposure bias.</p>
+  <p>The Cambridge contribution is systematic rather than methodological: a controlled sweep across model scales and dataset sizes to characterize when each regime wins. The abstract reports a crossover scale beyond which on-policy decisively wins; the authors argue the choice has been more empirical than principled in the published literature and offer a scaling-law-style decision rule. The practical consequence for teams running post-training is that the Cambridge recipe argues on-policy distillation becomes necessary roughly where modern small open models now live, which supports the shift Qwen and Llama fine-tune communities have been making toward on-policy distillation through Q3 2026.</p>
+  <h4>Context for the dispute</h4>
+  <p>Distillation has become one of the most contested post-training techniques since the Qwen 3 release in 2025 made small open models with teacher distillation genuinely competitive on long-tail capability benchmarks. On-policy distillation is more expensive because the student generates every rollout under its own policy, which is slow and compute-hungry at scale. The Cambridge study's crossover thresholds let teams make the on-policy vs off-policy decision from scale rather than from folklore.</p>
+  <p class="source-footer"><a href="https://huggingface.co/papers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">BELIEF ST.</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">LONG-HORIZON</text>
+      <text x="10" y="52">ALIBABA · 69 UP</text>
+      <text x="10" y="64">BEYOND MEMORY</text>
+      <text x="10" y="76">EXPLICIT STATES</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Alibaba's Beyond Memory agents carry explicit belief states instead of raw context.</h3>
+    <p class="kicker">Hugging Face · 2026-10-02 · <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Alibaba's "Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States" landed 69 upvotes on Hugging Face's Oct 2 daily. The paper proposes replacing conventional context-window-and-retrieval memory architectures with an explicit belief-state representation that the agent updates as it executes a long task. The claim is that belief states compress the task-relevant state better than retrieval over past context, and reduce drift on tasks spanning hundreds of agent steps.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Alibaba's Beyond Memory paper proposes a specific architectural shift in how long-horizon agents maintain state across many steps. The dominant pattern in agent systems today is a context window plus retrieval: the agent keeps recent turns in context and retrieves older memories from an external store. The Alibaba paper argues that this gets expensive and brittle at long horizons because the retrieval granularity does not match the agent's reasoning granularity. The alternative is an explicit belief state — a structured, agent-updated summary of task-relevant world knowledge — that lives separately from both context and memory.</p>
+  <p>The belief state is updated after each action and observation. The paper's claim is that for long-horizon tasks spanning hundreds of agent steps, explicit belief states reduce drift and recover task completion rates that pure retrieval architectures lose. Alibaba is one of the labs pushing hardest on agent architectures in 2026 — the Qwen team has shipped multiple agent-targeted variants and the Alibaba Cloud team runs one of the biggest production agent deployments outside the US frontier labs. The 69 upvotes puts it fourth-highest on Oct 2's daily and reflects strong practitioner interest in state representations that scale past the limits of context windows and retrieval.</p>
+  <p class="source-footer"><a href="https://huggingface.co/papers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">ONESTREAM</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">STREAMING VIDEO</text>
+      <text x="10" y="52">NANJING · 45 UP</text>
+      <text x="10" y="64">PERCEIVE · REMEMBER</text>
+      <text x="10" y="76">RESPOND · UNIFIED</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Nanjing's OneStreamer unifies perception, memory, and response for streaming-video agents.</h3>
+    <p class="kicker">Hugging Face · 2026-10-02 · <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Nanjing University's OneStreamer paper came in with 45 upvotes on Hugging Face's Oct 2 daily. The architecture unifies continuous perception, episodic memory, and proactive response generation for streaming-video agents in a single stack, aimed at real-time video interaction. The pitch is that today's video-reasoning systems treat perception, memory, and response generation as separate components whose composition drops end-to-end latency and consistency; a unified stack regains both.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>OneStreamer, from Nanjing University, closed Oct 2 at 45 upvotes on Hugging Face's daily. The paper's thesis is that the dominant engineering pattern for streaming-video agents — perception module, episodic memory store, and response generator chained together — introduces coordination costs that limit real-time performance and consistency. OneStreamer collapses the three functions into a single stack with shared representations, letting perception, memory updates, and proactive response generation share gradients and attention.</p>
+  <p>Streaming-video interaction is one of the harder agent-system problems in 2026 because the input is continuous and unbounded, the memory requirement grows with time, and the response generator must often fire proactively — generating output based on anticipated events rather than only in response to prompts. The Google Project Astra demos, Meta's wearable-camera agents, and Anthropic's internal video prototypes have all pushed on this problem. OneStreamer's unified architecture is one of the first academic contributions aimed at the full problem rather than one component.</p>
+  <p class="source-footer"><a href="https://huggingface.co/papers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#1e3a8a">HIER. DIFF.</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">CONTINUOUS LM</text>
+      <text x="10" y="52">UIUC · 43 UP</text>
+      <text x="10" y="64">PARALLEL GEN</text>
+      <text x="10" y="76">HIERARCHICAL</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">UIUC's Hierarchical Continuous Diffusion LMs push latency on parallel generation.</h3>
+    <p class="kicker">Hugging Face · 2026-10-02 · <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The University of Illinois Urbana-Champaign landed Hierarchical Continuous Diffusion Language Models on the Oct 2 Hugging Face daily, 43 upvotes. The paper builds a hierarchical variant of continuous diffusion LMs with coarse-to-fine refinement across layers of abstraction, aimed at letting diffusion LMs produce long structured outputs in fewer function evaluations than autoregressive baselines.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Hierarchical Continuous Diffusion Language Models from UIUC closed Oct 2 at 43 upvotes. Continuous diffusion LMs have accumulated real but uneven momentum in 2026 as the parallel-generation alternative to autoregressive transformers. The attraction is that diffusion LMs can emit all tokens of an output in parallel, trading more function evaluations for lower per-step latency. The problem has been quality: continuous diffusion LMs have underperformed autoregressive baselines on long structured outputs where coherent organization matters.</p>
+  <p>The UIUC paper's contribution is to introduce explicit hierarchy — a coarse-to-fine stack where upper layers set structural scaffolding (sentence breaks, section organization) that lower layers condition on. The paper's claim is that hierarchy closes much of the structured-output gap at matched or better latency than autoregressive baselines. The commercial relevance is that an operator looking to serve streaming output at low latency — chat, voice, agent response — currently has to accept the token-serial bottleneck of autoregressive generation; a diffusion LM that produces coherent long output in parallel is one of the few known paths past that bottleneck.</p>
+  <p class="source-footer"><a href="https://huggingface.co/papers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">arXiv OCT 2</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">GACHA · NEPA</text>
+      <text x="10" y="52">PACE · TRACE</text>
+      <text x="10" y="64">DMAD · TACO</text>
+      <text x="10" y="76">50 PAPERS · AI/ML</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">arXiv's Oct 2 drop clusters around diverse decoding, agent provenance, and distillation.</h3>
+    <p class="kicker">arXiv AI Research Digest · 2026-10-02 · <a href="https://github.com/datnguyenquy94/news-radar/issues/659" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Oct 2 arXiv AI drop ran 50 papers across cs.AI, cs.LG and cs.CL. Notable: Gacha Decoding (Scott Geng et al.) for diverse LLM sampling that scales with capability; NEPA / Next-Embedding Predictive Autoregression (Sihan Xu et al.) replacing fixed with predicted conditions in diffusion transformers; PACE for provenance-aware capability enforcement on tool-using agents (Fengpeng Li et al.); DMAD and continuous diffusion LM distillation; and a cluster on finetuning with sampling that matches RL without reward modeling.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Oct 2 arXiv drop in cs.AI / cs.LG / cs.CL ran roughly 50 papers and clustered around three themes. The first is diverse decoding and generation: Gacha Decoding, from Scott Geng, Yufei Zhang, Joseph Lee and colleagues, proposes an inference-time method that elicits diverse LLM generations in a way that scales with model capability rather than falling off, aimed at creative writing, planning, and scientific design where single-best decoding fails. The method's framing is deliberately against the dominant "pick the best mode" sampling philosophy that has governed LLM decoding since nucleus sampling.</p>
+  <p>The second cluster is agent provenance and safety. PACE (Provenance-Aware Capability Enforcement) by Fengpeng Li et al. builds an enforcement framework for tool-using agents that resists poisoned metadata and compromised retrieved artifacts, which has been one of the hardest attack-surface problems in production agent deployment through 2026. TRACE, PACE's sibling in multi-turn safety work, and DeFA, which tackles failure attribution across long agent trajectories, land in the same drop and collectively represent one of the strongest coordinated agent-safety contributions on the preprint server this year.</p>
+  <p>The third cluster is training efficiency and distillation. The Finetuning with Sampling paper demonstrates that sampling-augmented supervised fine-tuning can match or exceed reinforcement-learning performance on broad generalization tasks without the reward-model complexity, which if replicated at scale would simplify the modern post-training stack significantly. DMAD (Distribution Matching as Adversarial Distillation) and Distribution Matching Distillation for Continuous Diffusion Language Models push few-step diffusion generation toward real-time deployment; the paper's claim is that an auxiliary diffusion model is no longer required, which drops memory and compute cost at inference.</p>
+  <h4>NEPA</h4>
+  <p>Next-Embedding Predictive Autoregression (NEPA) by Sihan Xu, Ji Xie, Zilin Wang et al. is the most structurally novel paper in the drop. The method trains a Transformer to predict the next conditional embedding inside diffusion transformers rather than reusing a static embedding. The abstract framing is that the model generates its own conditions step by step, which decouples condition quality from the frozen conditioner the diffusion transformer was trained against. The reported effect is improved sample quality and flexibility across image generation tasks. The idea is portable to other conditioned-generation problems and will likely show up quickly in downstream open-source training stacks.</p>
+  <p class="source-footer"><a href="https://github.com/datnguyenquy94/news-radar/issues/659" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">llama.cpp</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">b11324 · b11326</text>
+      <text x="10" y="52">VOLTA FA · CUDA</text>
+      <text x="10" y="64">KPOOL BOUND</text>
+      <text x="10" y="76">03:08 → 15:41 UTC</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">llama.cpp cycles through ten builds in a single day, fixes two broken Volta FA cases.</h3>
+    <p class="kicker">ggml-org/llama.cpp · 2026-10-02 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The llama.cpp Oct 2 release train pushed builds from 03:08 to 15:41 UTC, including a CUDA fix for two broken Volta Flash Attention cases, a kpool re-pool bound clamp that tightened an existing memory ceiling, and ongoing CPU/CUDA/Vulkan/Metal stack work. The project remains the single most-active open inference engine, with multiple daily automated builds and nightly performance regression testing across hardware backends.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The llama.cpp release feed on October 2 moved through its usual high-cadence rhythm: builds from 03:08 UTC through 15:41 UTC, with new builds roughly every 90 minutes across the day. The two most consequential merged changes were a CUDA fix for two broken Volta-generation Flash Attention cases — relevant to older V100-class deployments still in production — and a tightening of the kpool re-pool bound to match existing pool caps, which prevents a slow-growing memory leak visible under long context-window workloads.</p>
+  <p>llama.cpp is the single most-active open-weight inference project by commit volume in 2026 and functions as the de facto reference implementation for CPU and consumer-GPU inference of open-weight LLMs. The Oct 2 release train is representative rather than exceptional; the project ships multiple builds daily and runs nightly regression testing across CPU, CUDA, Vulkan, and Metal backends. For deployment teams running Qwen, Llama, GLM, or Gemma on anything other than Nvidia enterprise silicon, llama.cpp's day-to-day fix pace is the operational floor against which the proprietary inference stacks compete.</p>
+  <p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">GROK VOICE</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">v1.0 · EOL · OCT 2</text>
+      <text x="10" y="52">ROUTES TO v2.0</text>
+      <text x="10" y="64">SAME PRICE · HIGHER WER</text>
+      <text x="10" y="76">XAI RELEASE</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">xAI retires grok-voice-transcribe-1.0; traffic routes to v2.0 at the same price.</h3>
+    <p class="kicker">xAI release notes · 2026-10-02 · <a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">xAI's Oct 2 release note retired grok-voice-transcribe-1.0 at end of life. Requests to that slug now route to grok-voice-transcribe-2.0 at the same price. The v2 model carries higher accuracy on the standard word-error-rate benchmarks. The move is the second xAI voice-stack consolidation this quarter and clears the roadmap for the Grok Voice capability xAI telegraphed at launch of the Grok Bot agent in late September.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>xAI retired grok-voice-transcribe-1.0 Friday as part of its scheduled October release train. All API traffic targeting the v1.0 slug now routes to grok-voice-transcribe-2.0 at the same price per unit of audio. The v2 model carries materially higher accuracy on the standard word-error-rate benchmarks xAI publishes against. The move is operationally invisible for any customer that was pricing against v1.0 and continues to use the same slug; it's a quality upgrade that falls through the pricing.</p>
+  <p>Transcription quality in the Grok stack has become a competitive problem for xAI as of Q3. Microsoft shipped MAI-Transcribe-2-Streaming at the top of the Artificial Analysis AA-WER streaming leaderboard on October 1 with a 2.5 percent final WER across 60 languages at $0.54 per hour of audio. ElevenLabs's streaming transcription product is also at the top of the market on quality. xAI's retirement of v1.0 and the forced migration to v2.0 at the same price looks like a routine lifecycle step but functionally raises xAI's floor in the voice-stack race ahead of the broader Grok Bot agent rollout that is now underway inside X and in paid Ultra tiers.</p>
+  <p class="source-footer"><a href="https://docs.x.ai/developers/release-notes" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">OSWorld 2</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">GPT-6 ASTRA 72.6</text>
+      <text x="10" y="52">OPUS 5 · 70.6</text>
+      <text x="10" y="64">GEMINI 4 ARGON 69.2</text>
+      <text x="10" y="76">COMPUTER USE</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">OSWorld 2.0 Oct 2 refresh: GPT-6 Astra 72.6, Claude Opus 5 70.6, Gemini 4 Argon 69.2.</h3>
+    <p class="kicker">BenchLM · 2026-10-02 · <a href="https://benchlm.ai/benchmarks/osworld2" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">BenchLM refreshed its OSWorld 2.0 computer-use leaderboard on Oct 2. GPT-6 Astra leads at 72.6 percent, Claude Opus 5 is second at 70.6, Gemini 4 Argon is third at 69.2. The spread across the top three has compressed into a 3.4-point band, the tightest frontier computer-use spread this year. Agents' Last Exam places GPT-6 Astra at 59.3, GPT-6 Sol at 56.4, Qwen3.8 Max at 52.4.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>BenchLM's Oct 2 refresh of the OSWorld 2.0 computer-use leaderboard is the clearest single data point on where the frontier labs sit against each other on autonomous computer control today. GPT-6 Astra leads at 72.6 percent, Claude Opus 5 is second at 70.6, Gemini 4 Argon is third at 69.2. The top three now sit inside a 3.4-point band, the tightest cluster the OSWorld family of benchmarks has recorded on frontier models. The compression tells two overlapping stories: computer use as a capability is at or near saturation for the current scale of frontier models, and the labs have converged on similar training recipes for the capability.</p>
+  <p>The Agents' Last Exam leaderboard refreshed the same day: GPT-6 Astra at 59.3, GPT-6 Sol at 56.4, Qwen3.8 Max at 52.4. The Qwen 3.8 Max showing is the more consequential open-weight result. A Chinese open-weight model within 7 points of frontier closed models on a hard agents-benchmark is a shift the field was still arguing about in July. The BenchLM leaderboard also tracks 212+ models across 645 benchmarks and gives GPT-6 Astra a BenchAlign aggregate of 88.75 against Claude Opus 5.5 at 87.78. The Oct 2 refresh is a snapshot moment where all three capability leaderboards point at essentially the same frontier cluster with a credible open-weight runner-up.</p>
+  <p class="source-footer"><a href="https://benchlm.ai/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="22" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#1e3a8a">1.2B WAU</text>
+    <line x1="10" y1="28" x2="110" y2="28" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="40">ChatGPT · 35M WORK</text>
+      <text x="10" y="52">2.5M BUSINESSES</text>
+      <text x="10" y="64">DOTS · ROLLING OUT</text>
+      <text x="10" y="76">PRO 500 · $500/MO</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">OpenAI's dots roll broadens; Pro 500 live at $500 a month with Ultrafast bundled.</h3>
+    <p class="kicker">OpenAI release notes · 2026-10-02 · <a href="https://learn.chatgpt.com/docs/whats-new/september-28-october-2-2026" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">OpenAI's Sep 28 - Oct 2 release notes consolidated the DevDay rollout as it reached Pro and Business Premium users through the week. GPT-6.1 Sol is live in ChatGPT Work, Codex, and the API at a 1,050,000-token context and 128,000 output. Codex Cloud lets developers continue coding tasks across desktop, web, and mobile. The Pro 500 tier opened at $500 a month with 25x the Plus usage cap and Astra Ultrafast included.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>OpenAI's product-release notes window for Sep 28 through Oct 2 closed on the DevDay rollout. ChatGPT crossed 1.2 billion weekly active users, up from 900 million in February and 400 million twelve months before that. The company disclosed 35 million weekly ChatGPT Work and Codex users and 2.5 million businesses on OpenAI products. Dots, the always-on agents OpenAI announced at DevDay Sep 29, continued expanding through eligible markets at the end of the week, with Pro users in the EEA, Switzerland, and the UK still excluded. GPT-6.1 Sol is live in ChatGPT Work, Codex, and the API with a 1,050,000-token context and 128,000-token output, priced at roughly a fifth of standard Astra rates.</p>
+  <p>Codex Cloud is the sibling release that is likely to matter more to day-to-day developers than Dots. The service lets a developer start a coding task on one device and continue it on another through reusable project environments, with each task getting its own isolated workspace. Pricing for Pro 500 opened at $500 a month at 25x the Plus usage cap and includes Astra Ultrafast — the Blackwell-backed low-latency decoding tier priced at $60 input and $300 output per million tokens on the API side. OpenAI's broader move through the week was explicitly to tier its product stack more aggressively, with pricing differences between tiers tracking the decoding-speed and context-window premiums that frontier capability now carries.</p>
+  <p class="source-footer"><a href="https://learn.chatgpt.com/docs/whats-new/september-28-october-2-2026" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="none"/>
+    <text x="10" y="24" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a">2%</text>
+    <line x1="10" y1="30" x2="110" y2="30" stroke="#1e3a8a" stroke-width="0.6"/>
+    <g font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a">
+      <text x="10" y="42">CONSUMER BUY-IN</text>
+      <text x="10" y="54">"SUPER INTELLIGENCE"</text>
+      <text x="10" y="66">BRANDING SHIFT</text>
+      <text x="10" y="78">OAI · META · WH</text>
+    </g>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">The White House's "super intelligence" rebrand lands with 2 percent of consumers.</h3>
+    <p class="kicker">TechCrunch · 2026-10-02 · <a href="https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">TechCrunch's Oct 2 Equity podcast picked apart the simultaneous rebranding push: the Trump White House moving to redescribe federal AI policy under the "super intelligence" banner, Meta and OpenAI putting friendlier faces on their consumer AI products. Consumer survey data shared on the podcast puts buy-in at 2 percent. The piece reads less as skepticism than as evidence that the industry-plus-state framing is moving faster than consumers.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>TechCrunch's Oct 2 Equity segment ran against the simultaneous rebranding push visible this week: the Trump White House moving to redescribe federal AI policy work under the "super intelligence" banner, following the Sep 29 White House Accord signed with ten CEOs at the Cabinet Room lunch; Meta and OpenAI continuing to put friendlier, less lab-coded faces on their consumer AI products — Dots over "agents," Muse over "assistant," language skewed toward helpfulness rather than capability. The consumer-survey data the podcast cited puts buy-in on the "super intelligence" framing at roughly 2 percent.</p>
+  <p>The policy and consumer disconnect is one of the characteristic patterns of the 2026 cycle. The industry and state framing moves on frontier capability questions — containment, enforcement, sovereign risk — while consumer attitudes continue to track routine usability concerns: cost, reliability, which agent to let touch which account. "Only 2 percent of consumers are buying it" is slightly polemical phrasing, but the underlying survey data is a meaningful counterweight to the trillion-dollar valuations and the White House photo ops; the frontier labs are being valued on consumer and enterprise distribution curves that most consumers describe as useful tools rather than new kinds of beings.</p>
+  <p class="source-footer"><a href="https://techcrunch.com/podcast/call-it-ai-call-it-super-intelligence-only-2-of-consumers-are-buying-it" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+</section>
+
+</main>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-10-03 · Generated 2026-10-03 by an autonomous Claude Opus 4.7 agent.</div>
+  <div><a href="../index.html">← Home</a></div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const chips=[...document.querySelectorAll('.filter-chip')];
+  const stories=[...document.querySelectorAll('[data-tags]')];
+  const status=document.querySelector('.filter-status');
+  const bigPicture=document.querySelector('.big-picture');
+  const rundownCount=document.querySelector('#rundown-label .count');
+  const totalRundown=stories.filter(s=>!s.classList.contains('hero')).length;
+  const dateSuffix=rundownCount?rundownCount.textContent.replace(/^\d+\s*stories/,'').trim():'';
+  function counts(){
+    const total=stories.length;
+    chips.forEach(c=>{
+      const tag=c.dataset.filter;
+      const n=tag==='all'?total:stories.filter(s=>(s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const countEl=c.querySelector('.count');
+      if(countEl)countEl.textContent=n;
+      if(tag!=='all'&&n===0){c.setAttribute('disabled','');c.setAttribute('aria-disabled','true');}
+    });
+  }
+  function applyFilter(filter){
+    chips.forEach(c=>c.setAttribute('aria-pressed',c.dataset.filter===filter?'true':'false'));
+    if(bigPicture)bigPicture.hidden=(filter!=='all');
+    let visibleCount=0;let visibleNonHero=0;
+    stories.forEach(s=>{
+      const tags=(s.dataset.tags||'').split(/\s+/);
+      const show=filter==='all'||tags.includes(filter);
+      s.hidden=!show;
+      if(show){visibleCount++;if(!s.classList.contains('hero'))visibleNonHero++;}
+    });
+    if(rundownCount){
+      const label=filter==='all'?totalRundown:visibleNonHero;
+      rundownCount.textContent=label+' stories'+(dateSuffix?' '+dateSuffix:'');
+    }
+    const niceTag=filter==='all'?'All':filter.charAt(0).toUpperCase()+filter.slice(1);
+    status.textContent='Showing '+visibleCount+' of '+stories.length+' stories — '+niceTag;
+    try{if(filter==='all')history.replaceState(null,'',location.pathname+location.search);
+    else location.hash='filter='+filter;}catch(e){}
+  }
+  chips.forEach(c=>c.addEventListener('click',()=>{if(c.hasAttribute('disabled'))return;applyFilter(c.dataset.filter);}));
+  counts();
+  const hashMatch=(location.hash||'').match(/filter=([a-z]+)/);
+  const initial=hashMatch?hashMatch[1]:'all';
+  applyFilter(chips.some(c=>c.dataset.filter===initial)?initial:'all');
+})();
+</script>
+
+</body>
+</html>
