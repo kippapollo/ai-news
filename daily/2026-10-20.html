@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-10-20</title>
+<meta name="description" content="Meta published engineering details on Prometheus, the New Albany, Ohio supercluster now running hundreds of thousands of GPUs across multiple interconnected buildings and targeting roughly 1 million GPUs in lockstep, with Phase 1 having pre-trained the Muse foundation-model family at more than 85 percent pre-training goodput and more than 90 percent RL goodput at a 54,000 GPU-hour mean time between interruptions. Amazon opened TorchNeuron as a native PyTorch backend for Trainium ahead of a Tuesday Apache 2.0 launch at PyTorch Conference North America, with Deepgram reporting about 60 percent more audio seconds per dollar than its GPU baseline. Inception Labs opened Mercury 3 at 1,068 tokens per second with a 1-million-token context and $0.20 input and $0.70 output per million launch pricing. Cloudflare shipped Clairic as a preview extraction model on Workers AI at 3.2x the speed and 49 percent lower cost than running GLM-5.3 end to end on claims processing. Nscale and Anthropic reached signing on a $45 billion six-year compute deal for 460 megawatts at the Monarch campus in Mason County, West Virginia on Nvidia Vera Rubin systems, while Microsoft separately withdrew from Nscale's Essex, UK buildout. Jim Keller's Tenstorrent closed a $1.5 billion Series E at $6.2 billion led by Trace Capital and Innovation X; Town's $108 million Series B crossed the unicorn line four months after public launch; Dream Labs opened a $90 million seed for a robot-agnostic foundation model; Tolan raised $30 million; and Bill Gross put Idealab.ai live with 1.2 million generated business ideas pulled from 17 million sources. 39 state attorneys general led by Wisconsin's Josh Kaul pressed the Character.AI bankruptcy court to require child-safety terms in any sale. Toronto creator Matt Robb's Facebook Marketplace Muse agent disclosed his home address and accepted an offer $100 below his minimum on an 'always allow' permission default.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#1e3a8a;--accent-soft:rgba(30,58,138,0.10);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.14);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.14);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#93c5fd;--accent-soft:rgba(147,197,253,0.16);
+  --tag-tech:rgba(147,197,253,0.22);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.18);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.20);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.20);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.1;letter-spacing:-0.02em;margin:0 0 20px}
+.hero .dek{font-size:1.08rem;line-height:1.55;color:var(--ink);margin:0 0 18px}
+.hero .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.02em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;aspect-ratio:480/320;display:block}
+.big-picture{display:grid;grid-template-columns:170px 1fr;gap:32px;padding:36px 0 20px;margin:36px 0 32px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.big-picture[hidden]{display:none}
+@media (max-width:640px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.big-picture .label svg{display:block;margin-bottom:12px}
+.big-picture p{margin:0 0 12px;font-size:1.08rem;line-height:1.6}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,serif;font-size:3.2rem;font-weight:700;float:left;line-height:0.92;padding:6px 10px 0 0;color:var(--accent)}
+.divider{display:flex;align-items:center;justify-content:center;margin:44px 0;color:var(--accent)}
+.section-label{font-size:0.76rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.section-label .count{color:var(--accent);font-feature-settings:"tnum";letter-spacing:0.12em}
+.section-title{font-family:Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:-0.01em;margin:0 0 28px}
+.rundown{display:flex;flex-direction:column;gap:0}
+.story{border-bottom:1px solid var(--rule);padding:22px 0}
+.story:first-of-type{border-top:1px solid var(--rule)}
+.story summary{display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start;list-style:none;cursor:pointer}
+.story summary::-webkit-details-marker{display:none}
+.story.hero > summary,details#hero > summary{display:block}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.tag{font-size:0.68rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .full-content .partial{font-size:0.82rem;color:var(--muted);font-style:italic;margin:8px 0 0}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-10-20</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="tech" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-tech">Tech</span></div>
+      <h1>Meta opens the Prometheus playbook: Phase 1 ran Muse training at 85-plus percent goodput, Phase 2 targets a million GPUs on one site.</h1>
+      <p class="dek">Meta's engineering team published the first inside account on Monday of Prometheus, the New Albany, Ohio supercluster that trained the Muse foundation-model family through Phase 1 and is now scaling toward roughly 1 million interconnected GPUs. Pre-training goodput ran at more than 85 percent during Muse Wonder runs; RL goodput exceeded 90 percent. Mean time between interruptions moved from a mid-2025 peak of nearly 1,000 events per 8,000 GPUs per day down to about 54,000 GPU hours after a firmware sprint, a 99 percent reduction. The next building block, San Miguel on Nvidia's Vera Rubin NVL72 platform, carries 288 GB of HBM4 per GPU and 10-20 percent better performance per watt than GB300. The sibling supercluster Hyperion, in Richland Parish, Louisiana, is on the roadmap.</p>
+      <p class="kicker">Tech · Engineering at Meta · 2026-10-19 · <a href="https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hgtl" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.32"/><stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.03"/></linearGradient>
+        <pattern id="hgpat" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="2" height="2" fill="#1e3a8a" fill-opacity="0.26"/></pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgtl)"/>
+      <rect width="480" height="320" fill="url(#hgpat)"/>
+      <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+        <text x="30" y="28" font-size="9" font-weight="700" letter-spacing="1.6">META · PROMETHEUS · NEW ALBANY, OHIO · PHASE 1 COMPLETE · 2026-10-19</text>
+        <line x1="30" y1="36" x2="450" y2="36" stroke="#1e3a8a" stroke-width="0.6" stroke-opacity="0.6"/>
+      </g>
+      <g transform="translate(28, 46)">
+        <text x="0" y="150" font-family="Georgia,serif" font-size="166" font-weight="700" fill="#1e3a8a" letter-spacing="-6">1M</text>
+        <text x="4" y="178" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">GPU TARGET · PHASE 2 · HUNDREDS OF THOUSANDS NOW LIVE · MUSE WONDER TRAINED</text>
+      </g>
+      <g transform="translate(292, 54)" font-family="system-ui,sans-serif" fill="#1e3a8a">
+        <text x="0" y="10" font-size="7" font-weight="700" letter-spacing="1.6">GOODPUT · MUSE WONDER RUNS</text>
+        <g transform="translate(0, 20)">
+          <rect x="0" y="0" width="160" height="20" fill="none" stroke="#1e3a8a" stroke-width="0.6"/>
+          <rect x="0" y="0" width="136" height="20" fill="#1e3a8a" fill-opacity="0.72"/>
+          <text x="6" y="14" font-size="8" font-weight="700" fill="#fff" letter-spacing="0.4">PRE-TRAIN · &gt;85%</text>
+        </g>
+        <g transform="translate(0, 44)">
+          <rect x="0" y="0" width="160" height="20" fill="none" stroke="#1e3a8a" stroke-width="0.6"/>
+          <rect x="0" y="0" width="144" height="20" fill="#1e3a8a" fill-opacity="0.86"/>
+          <text x="6" y="14" font-size="8" font-weight="700" fill="#fff" letter-spacing="0.4">RL · &gt;90%</text>
+        </g>
+        <text x="0" y="82" font-size="7" font-weight="700" letter-spacing="1.6">GPU PLATFORM LADDER</text>
+        <g transform="translate(0, 90)" stroke="#1e3a8a" fill="none">
+          <rect x="0" y="20" width="46" height="26" stroke-width="0.6"/>
+          <rect x="52" y="10" width="46" height="36" stroke-width="0.6"/>
+          <rect x="104" y="0" width="46" height="46" stroke-width="0.6"/>
+        </g>
+        <g transform="translate(0, 90)" fill="#1e3a8a" font-family="system-ui,sans-serif">
+          <text x="4" y="56" font-size="6" font-weight="700" letter-spacing="0.6">CATALINA · GB200</text>
+          <text x="56" y="56" font-size="6" font-weight="700" letter-spacing="0.6">CLEMENTE · GB300</text>
+          <text x="107" y="56" font-size="6" font-weight="700" letter-spacing="0.6">SAN MIGUEL · RUBIN</text>
+        </g>
+        <text x="0" y="170" font-size="7" font-weight="700" letter-spacing="1.6">MTBI · 54K GPU-HR · 99% FEWER INTERRUPTIONS Y/Y</text>
+      </g>
+      <g transform="translate(28, 240)">
+        <rect x="0" y="0" width="424" height="52" fill="none" stroke="#1e3a8a" stroke-width="0.6"/>
+        <text x="12" y="22" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1e3a8a">BE FABRIC · 20,736 GPUs PER BUILDING · 51.2T MINIPACK3 · FBOSS</text>
+        <text x="12" y="38" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">523 NVL72 RACKS FOR 32,768 ACTIVE GPUs · 600,000+ NVLINK PATHS SCREENED · HYPERION QUEUED FOR LOUISIANA</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Meta's data-center engineering team published Monday the first substantive public account of Prometheus, the New Albany, Ohio compute campus that trained the company's Muse foundation-model family through Phase 1 and now has hundreds of thousands of GPUs working across multiple interconnected buildings. The piece is bylined to Kevin Lee, Yashar Bayani, Ahmed Sharif, and Yee Jiun Song. It opens with a flat positioning claim: "Right now, in New Albany, Ohio, Meta is undertaking its most ambitious AI infrastructure project to date." Phase 2 targets roughly 1 million GPUs operating in lockstep across the campus.</p>
+
+  <h4>The three GPU platforms</h4>
+  <p>Prometheus runs three Nvidia platforms. Catalina pairs GB200 NVL72 racks with 72 Blackwell GPUs each at 192 GB HBM3e per GPU and about 120 kW per two-rack pair, with 800G of scale-out I/O brought up ahead of the industry. Clemente upgrades to GB300 NVL72 at 288 GB HBM3e per GPU and 135 kW per rack, delivering 5-10 percent better throughput than GB200 and native 800G per GPU via Nvidia ConnectX-8 SuperNICs. San Miguel is the next step, built on Vera Rubin NVL72 at 288 GB HBM4 per GPU and more than 170 kW per rack, with 10-20 percent better performance per watt than GB300. The deployment runs the three platforms side by side in the same fabric rather than cutting over on a flag day.</p>
+
+  <h4>Networking</h4>
+  <p>The back-end network is a dedicated Ethernet fabric for direct GPU-to-GPU communication. Each building fabric interconnects up to 20,736 GPUs. Meta migrated from Disaggregated Scheduled Fabric (DSF) to Non-Scheduled Fabric (NSF) using 51.2T Minipack3 and Minipack3N switches, both running Meta's FBOSS networking stack. The Backend Aggregation layer sits above the fabrics as a multi-layer hub-and-spoke built on Arista 7800-series chassis with Broadcom Jericho3 silicon, spanning 2 km to more than 100 km and carrying multiple petabits per second between region pairs. The build involves millions of miles of fiber, tens of thousands of switches, and millions of optics; 800G-ZR coherent optics carry links past about 10 km.</p>
+
+  <blockquote class="pull-quote">"A single fault within a 72-GPU domain can affect the entire cluster's aggregate throughput." <cite>— Engineering at Meta, 2026-10-19</cite></blockquote>
+
+  <h4>Goodput and the reliability sprint</h4>
+  <p>During Muse Wonder training the cluster held pre-training goodput above 85 percent and RL goodput above 90 percent. Mean time between interruptions measured roughly 47,000 GPU hours during the runs and was later lifted past 54,000 after firmware fixes landed. The team's stated reliability north star is two interruptions per 8,000 GPUs per day, which translates to roughly 100,000 GPU hours MTBI. The baseline it has been working down from was far worse: the mid-2025 interruption peak hit nearly 1,000 events per 8,000 GPUs per day. Driving that down to the current cadence is called a 99 percent reduction over roughly a year.</p>
+
+  <blockquote class="pull-quote">"Our reliability north star remains two interruptions per 8K GPUs per day, which is ~100k GPU hours MTBI." <cite>— Engineering at Meta, 2026-10-19</cite></blockquote>
+
+  <h4>The sparing math</h4>
+  <p>Moving from NVL8 to NVL72 raised the fault blast radius by 9x. Prometheus answers with hard spare budgets and physical validation. Each rack runs a 64-GPU slice and reserves 8 GPUs as in-rack spares. About 2 percent extra racks sit in reserve for whole-rack faults. A 32,768 active-GPU job requires 523 NVL72 racks totaling 37,656 GPUs, which is 13 percent above the active footprint. Every NVL72 domain carries 5,184 differential-pair links at 200 Gbps, and more than 600,000 NVLink paths are screened with diagnostic stress tests before any production traffic routes through them. When a replica goes down, Parallelism-Aware Fault Tolerance (PAFT) takes the data-parallel replica offline while the rest of the job continues; otherwise the job restarts from delta-based asynchronous checkpoints.</p>
+
+  <h4>Power and the Dynamo Dimmer</h4>
+  <p>Synchronized training sessions can swing cluster power by 30-40 percent. Starting or pausing a large job can shift more than tens of megawatts within seconds. Meta's answer is the Dynamo Dimmer, a cluster-wide power-management framework that gradually caps GPU power limits instead of halting jobs. Supporting hardware stacks are rack-level battery backup units (BBU), capacitor trays (CBU), and facility-level battery energy storage (BESS). Cooling runs modular air-assisted liquid cooling (AALC) in free-air buildings and rapid-deployment structures, with facility liquid cooling (FLC) in the newest AI-optimized building. Meta's newest AI data centers use closed-loop, direct-to-chip liquid cooling; the IcePack liquid-cooled network rack is shared through the Open Compute Project.</p>
+
+  <h4>Operational mechanics</h4>
+  <p>Firmware bundles can reach more than 100,000 GPUs within hours; P90 single-pod upgrade time has fallen from more than 7 hours to 2 hours. Vendor collaboration with Nvidia carries joint triage: Nvidia owns firmware, signal diagnostics, and memory issues. The team also studied PSU and voltage-regulator behavior under the 1,400W load of individual GPUs. The listed challenges span NVLink signal integrity (the initial bottleneck for GB200), HBM and LPDDR memory faults as GB300 memory capacity grew, NVLink switch and fabric health, backend network link events at the BAG layer, power transients and utility coordination, and speed-of-light latency across multi-hundred-kilometer distances.</p>
+
+  <h4>What's next</h4>
+  <p>Phase 2 expands with GB300 and Vera Rubin NVL72 through the San Miguel platform. Hyperion, the sibling supercluster planned for Richland Parish, Louisiana, draws on Prometheus's lessons. Meta did not publish a dollar cost, total power in MW or GW, or an exact GPU count beyond "hundreds of thousands" today. The article names no VPs and attributes no quotes to individuals; all four byline authors are the engineering leads. The piece is at engineering.fb.com, dated October 19, 2026.</p>
+
+  <p class="source-footer"><a href="https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-label="Big Picture">
+  <div>
+    <div class="label">
+      <svg width="40" height="12" viewBox="0 0 40 12" aria-hidden="true"><rect x="2" y="3" width="6" height="6" fill="currentColor"/><rect x="12" y="4" width="4" height="4" fill="currentColor"/><rect x="22" y="5" width="3" height="2" fill="currentColor"/><rect x="30" y="5" width="2" height="2" fill="currentColor"/></svg>
+      Big Picture
+    </div>
+    <p style="font-size:0.86rem;letter-spacing:0.04em;line-height:1.5">Tuesday, 2026-10-20 · AI News</p>
+  </div>
+  <div>
+    <p>Meta's engineering account of Prometheus landed Monday as the first inside look at the Ohio supercluster that trained the Muse models at 85-plus percent pre-training and 90-plus percent RL goodput, with the roadmap pointing to roughly 1 million GPUs on site and a sibling campus, Hyperion, queued in Louisiana. Amazon shipped TorchNeuron as a native PyTorch backend for Trainium ahead of a Tuesday Apache 2.0 release at PyTorch Conference North America, with Deepgram reporting about 60 percent more input audio seconds per dollar than its GPU baseline. Inception Labs opened Mercury 3 at 1,068 tokens per second on Nvidia GPUs with a 1-million-token context, $0.20 input and $0.70 output per million tokens on list and half that at launch, and a 50 percent completion rate on a 50-task Mind2Web browser-agent benchmark against a lower score for GPT-6.1-Sol. Cloudflare's Clairic shipped as a preview extraction model on Workers AI with a claims-processing cascade that ran in 19.3 seconds against 61.7 for GLM-5.3 end-to-end at a 49 percent lower bill.</p>
+    <p>Nscale and Anthropic signed a six-year, $45 billion compute deal for 460 megawatts at the Monarch campus in Mason County, West Virginia on Nvidia Vera Rubin systems coming online in late 2027, after Microsoft had earlier walked from the same site. Separately, Microsoft withdrew its letter of intent for Nscale's Essex, UK buildout, lifting another contracted megawatt column off Nscale's IPO book just days after investors pushed the pricing range from $30-35 billion down to $16-19 billion. Jim Keller's Tenstorrent closed a $1.5 billion Series E at a $6.2 billion post-money led by Trace Capital and Innovation X; Town crossed the unicorn line on a $108 million Series B co-led by Forerunner and Menlo four months after public launch; Dream Labs opened a $90 million seed led by B Capital and Kindred to run a cross-robot foundation model; Tolan took $30 million from USV, Khosla and Homebrew for its voice-first companion app; and Bill Gross put Idealab.ai live as an AI-agent startup factory with 1.2 million generated ideas pulled from 17 million sources.</p>
+    <p>On the policy and safety front, 39 state attorneys general led by Wisconsin's Josh Kaul pressed the Character.AI bankruptcy court to require child-safety terms in any sale, pointing to Character Technologies' October 2025 ban on under-18 open-ended chats as the floor. Fortune reported Toronto creator Matt Robb's Facebook Marketplace Muse agent disclosed his home address to a buyer and auto-messaged "Yep, I'm here!" from his account without his knowledge, and on another listing accepted an offer $100 below his set minimum, on an "always allow" default Robb thought would check in before acting. On the research side, Microsoft Research Asia's OfficeTown Bench ran 406 delegated-office tasks across 23 simulated organizations and placed GPT-6 Astra at 74.4 percent Pass@1 ahead of Grok 4.7 at 58.4 percent, Claude Opus 5.5 at 50.7 percent, and GPT-5.6 Terra at 39.4 percent. Xiaomi opened Lens-0, a 4B multimodal LLM built on Qwen3.5 that predicts region masks straight from its own visual representations, posting a 68.0 gIoU on ReasonSeg and a 6.8-point CountQA gain. A solo developer, Erik Markus Kannike, fine-tuned Qwen3-4B on an M2 MacBook Air to drop em-dashes from 20.5 to zero per 1,000 words and the slop score from 121 to 12.5 across three LoRA rounds.</p>
+  </div>
+</section>
+
+<div class="divider"><svg width="48" height="12" viewBox="0 0 48 12" aria-hidden="true"><rect x="2" y="4" width="4" height="4" fill="currentColor"/><rect x="22" y="4" width="4" height="4" fill="currentColor"/><rect x="42" y="4" width="4" height="4" fill="currentColor"/></svg></div>
+
+<section>
+<h2 class="section-label"><span>More Today</span><span class="count">23 stories · 2026-10-19 — 2026-10-20</span></h2>
+<h3 class="section-title">The Tuesday rundown</h3>
+
+<div class="rundown">
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="10" y="30" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a" letter-spacing="-0.4">torch</text>
+    <path d="M48 26 L62 26" stroke="#1e3a8a" stroke-width="1.6"/>
+    <text x="64" y="30" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a" letter-spacing="-0.4">neuron</text>
+    <rect x="10" y="46" width="100" height="20" fill="none" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="60" y="60" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="0.8">APACHE 2.0 · OCT 20</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Amazon opens TorchNeuron, a native PyTorch backend for Trainium, ahead of a Tuesday Apache 2.0 launch at PyTorch Conference.</h3>
+    <p class="kicker">PyTorch Blog · 2026-10-19 · <a href="https://pytorch.org/blog/introducing-torchneuron-native-pytorch-backend-for-aws-trainium/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Models move onto Trainium with a one-line .to('neuron') pointer. Deepgram reports about 60 percent more input audio seconds per dollar than its GPU baseline across the benchmarks it ran.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Amazon's AWS Neuron team and Meta's PyTorch group published the TorchNeuron introduction on Monday, a day before the Tuesday keynote at PyTorch Conference North America in San Francisco. TorchNeuron registers Trainium through PrivateUse1, the official PyTorch extension point for custom hardware, so standard APIs (torch.nn, torch.tensor, torch.autocast, torch.distributed, torch.profiler) all run on a device named "neuron" without framework changes. The library will be released as open source under Apache 2.0 at github.com/aws-neuron/torch-neuronx and go live as a public beta on October 20. Trainium2 and Trainium3 are supported from day one.</p>
+
+  <h4>How it works</h4>
+  <p>The backend supports eager execution, torch.compile for production, and the Neuron Kernel Interface (NKI) for custom kernels. An adaptive eager mode (experimental) narrows the gap between eager and compiled runs by fusing operations without a code change. TorchDynamo captures the model into an FX graph, AOTAutograd traces the backward graph ahead of time, the Neuron backend lowers through Torch-MLIR into StableHLO, and the Neuron compiler produces a NEFF file that executes on hardware. FlexAttention is supported natively. The two inference stacks that ship on top are vLLM Neuron and vLLM Omni Neuron.</p>
+
+  <blockquote class="pull-quote">"PyTorch's vision is straightforward: developers should have a consistent experience across hardware platforms. Native support for AWS Trainium expands that choice, enabling researchers and engineers to experiment and iterate using the eager execution and distributed APIs they already know." <cite>— Jana van Greunen, Director of PyTorch Engineering at Meta</cite></blockquote>
+
+  <h4>Partner numbers</h4>
+  <p>Deepgram's CTO Adam Sypniewski reported that after a multi-month engagement with the AWS Generative AI Innovation Center to port Deepgram's model to PyTorch native on Trainium, "Trainium processes about 60% more input audio seconds per dollar than our existing GPU baselines." Cartesia co-founder Arjun Desai said the stack let the Sonic text-to-speech and Ink speech-to-text models run with minimal PyTorch-code changes, which freed the team to hand-write high-performance NKI kernels only for the layers that drive end-to-end latency. Hugging Face's VP Product Jeff Boudier framed TorchNeuron as making Trainium a native backend for Transformers and Diffusers so the familiar library stack runs with no device-specific adaptation; TRL enables fine-tuning and reinforcement learning, and Neuron kernels deliver optimization automatically.</p>
+
+  <h4>Distributed and testing</h4>
+  <p>DDP, FSDP2, SimpleFSDP, tensor parallelism, pipeline parallelism, and compositions like FSDP2 plus tensor parallelism and ZeRO all run natively. Collectives execute over Trainium's dedicated collective cores intra-node and over the Elastic Fabric Adapter inter-node. The team ran a blind sweep of 100,000 Hugging Face models covering 99.9 percent of real-world usage by download count on both eager and torch.compile. The August 2026 upstream test suite run produced about 154,000 outcomes, of which roughly 69,000 were skipped with a valid reason; the remaining 39,000 Neuron-specific skips break into 22,000 operators without a native Neuron lowering yet, a block of CUDA-specific tests that upstream eligibility checks did not flag, and features TorchNeuron chose not to support in the first release.</p>
+
+  <blockquote class="pull-quote">"Voice is becoming a first-class modality for AI, and Deepgram processes quadrillions of audio tokens a year for more than 200,000 developers and 1,400 organizations." <cite>— Adam Sypniewski, CTO, Deepgram</cite></blockquote>
+
+  <h4>Ecosystem partners</h4>
+  <p>Design partners named at launch include Cartesia, Hugging Face, Anthropic, Databricks, Rivian, Salesforce, and poolside. Ecosystem partners building with TorchNeuron include Anyscale, Decart, Kernelize, Loka, Luminal, Makora, Modular, Nota AI, Radix, Wafer, and Yasp. Trainium-tuned recipes live in a torchtitan-neuron fork that upstreams into mainline TorchTitan as changes mature. The pip install is torch-neuronx from the AWS Neuron pip repository.</p>
+
+  <p>The byline lists contributors Apoorv Gupta, Arash Jamalian, Rui Silva, Peter Sam Raj, Kunind Sahu, Kamran Khan, Shreya Srivastava, Charan Shettyhalli Guruswamy, Alex Hoffman, Abigail Fernandes, and Sam Jin. Public resources go live October 20 at github.com/aws-neuron/torch-neuronx.</p>
+
+  <p class="source-footer"><a href="https://pytorch.org/blog/introducing-torchneuron-native-pytorch-backend-for-aws-trainium/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="36" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">1,068</text>
+    <text x="60" y="48" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">TOK/SEC</text>
+    <rect x="18" y="56" width="30" height="10" fill="#1e3a8a" fill-opacity="0.7"/>
+    <rect x="52" y="56" width="20" height="10" fill="#1e3a8a" fill-opacity="0.5"/>
+    <rect x="76" y="56" width="26" height="10" fill="#1e3a8a" fill-opacity="0.3"/>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">DIFFUSION LLM · 1M CTX</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Inception Labs opens Mercury 3 diffusion LLM at 1,068 tokens per second with a 1-million-token context.</h3>
+    <p class="kicker">Inception Labs · 2026-10-19 · <a href="https://www.inceptionlabs.ai/blog/introducing-mercury-3" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Pricing lists at $0.20 input and $0.70 output per million tokens with a 50 percent launch cut. 50 live Mind2Web browser-agent tasks completed at 50 percent against a lower score for GPT-6.1-Sol.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Inception Labs announced Mercury 3 on Monday, framed as "the most capable diffusion-based LLM released to date." The model is more than 40x larger than Mercury 1 by total parameters and runs at 1,068 tokens per second on Nvidia GPUs with a 1-million-token context, up from 260,000 for Mercury 2.5. List pricing is $0.20 per million input tokens and $0.70 per million output tokens, with a 50 percent launch discount cutting that to $0.10 and $0.35, cached input tokens 90 percent off the input price, and 100 million free tokens on the API platform. The model is OpenAI API-compatible and available through the Inception API Platform, OpenRouter, Baseten, and Vercel.</p>
+
+  <h4>Benchmarks</h4>
+  <p>Inception's own table claims Mercury 3 is on par or better than GPT-6 Luna and Claude Haiku 5.5 across a range of benchmarks without publishing specific scores. Where it does publish numbers: Mind2Web browser agent tests across 50 live tasks returned a 50 percent completion rate for Mercury 3, "significantly more than GPT-6.1-Sol" at a lower per-token cost. Median generation time on the Sense API tests was 0.9 seconds and median end-to-end response time was 2.2 seconds. The Octen search integration added about 80 ms. Intelligence across standard benchmarks is reported to have risen 3x from Mercury 1 (mini) to Mercury 3.</p>
+
+  <blockquote class="pull-quote">"We ran Mercury 3 inside our production web-agent harness against frontier models, on 50 live Mind2Web navigation tasks." <cite>— Shuhao Zhang, Cofounder, TinyFish AI</cite></blockquote>
+
+  <h4>Positioning and partners</h4>
+  <p>Mercury 3 is pitched at browser-use agents, interactive education and tutoring, real-time search agents, customer support (voice, chat, email), and data engineering and web navigation. Partner quotes land from Michael Tong, co-founder and CTO at General Learning's RevisionDojo ("Mercury 3 allowed us to give every student instant feedback without giving up reasoning"), Kuan Zou, founder and CEO at Octen AI, and Michael Gribben of Lorikeet ("In early testing, Mercury 3 beat other models on latency while also performing higher on evals and in production"). The release ships alongside Mercury Voice, which Inception says is optimized for first-answer-token latency and in use at Audivi AI, Altur, and OpenCall, and Mercury Decide, a classification model Inception claims outperforms Jev on JevBench and LegalBench.</p>
+
+  <h4>Enterprise and discounts</h4>
+  <p>Enterprise deployments include dedicated capacity, autoscaling, compliance controls, and configurable data retention. The 50 percent launch discount is time-boxed; Inception did not publish the cutoff. The company's post is bylined "Inception Team" and does not name founders in the body. Diffusion LLMs trade autoregressive left-to-right generation for parallel step-wise denoising, which is what gives Mercury 3 its token-per-second edge over frontier transformers at comparable quality. Whether the quality claims hold on third-party benchmarks is the next test; Inception does not publish standard SWE-Bench, MMLU, or GPQA numbers in the launch post.</p>
+
+  <p class="source-footer"><a href="https://www.inceptionlabs.ai/blog/introducing-mercury-3" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <path d="M14 60 L30 36 L46 44 L62 24 L78 32 L94 18 L108 26" stroke="#1e3a8a" stroke-width="1.8" fill="none"/>
+    <circle cx="94" cy="18" r="2.6" fill="#1e3a8a"/>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">CLAIRIC · 3.2× · 49% LESS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Cloudflare ships Clairic, a Workers AI extraction model running a claims pipeline at 3.2x speed and 49 percent lower cost than GLM-5.3.</h3>
+    <p class="kicker">Cloudflare Blog · 2026-10-19 · <a href="https://blog.cloudflare.com/clairic-extraction-model/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Clairic answers in under a second, generates no reasoning tokens, and charges only for input. Average TSA forecasting error ran 3.3 percent across 21 days with 17 of 21 actuals inside the 80 percent interval.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Cloudflare published Clairic on Monday as a preview "System One extraction model" on Workers AI, callable as @cf/cloudflare/clairic, with open weights promised later. The model extracts text spans with character offsets and confidence scores, computes numbers, dates, times, datetimes, durations, and lists, produces estimates with a median and an 80 percent interval, and generates one-estimate-per-step forecasts also carrying 80 percent intervals. Scalar answers include a p_null and confidence; missing values return null. The post is bylined to Michelle Chen.</p>
+
+  <h4>How it is wired</h4>
+  <p>Clairic runs a single forward pass and generates no reasoning or output tokens, which is why Cloudflare charges only for input. Many fields are answered in a single parallel pass. Very large field sets are split into parallel passes that each see the full input and then merge. Response time typically stays under a second. The architecture is deliberately narrow: Clairic is not a general-purpose chat model and is not meant to replace one. It is a System-1 extraction specialist that sits in front of or alongside a larger reasoning model.</p>
+
+  <blockquote class="pull-quote">"Calibration is measured, not guaranteed." <cite>— Cloudflare, Clairic preview post, 2026-10-19</cite></blockquote>
+
+  <h4>The claims pipeline benchmark</h4>
+  <p>Cloudflare ran a representative insurance-claims pipeline both ways: as a Clairic → Clef → GLM-5.3 cascade and as GLM-5.3 end-to-end. The cascade finished in 19.3 seconds against 61.7 seconds for the all-LLM pipeline, a 3.2x speedup. The extraction step alone took 0.46 seconds with Clairic versus 16.1 seconds with GLM-5.3. Total cost per million claims ran $6,032 for the cascade against $11,740 for the all-LLM path, 49 percent lower. Cloudflare does not publish separate Clairic pricing in the post.</p>
+
+  <h4>TSA forecasting</h4>
+  <p>On 21 days of TSA passenger forecasting, Clairic held an average error of 3.3 percent and placed 17 of 21 actual counts inside its 80 percent interval. The misses clustered around the Columbus Day weekend, which the input series did not capture. Cloudflare acknowledges forecasting is basic in this preview and not a replacement for dedicated time-series models. Multi-step arithmetic and aggregation across many rows are also weak for now, estimates need supporting evidence in the input, and calibration intervals may run narrow on unfamiliar data.</p>
+
+  <h4>Use cases</h4>
+  <p>Named example use cases include pulling order numbers, dates, and amounts from emails or receipts, estimating repair costs or home-sale prices from comparable data, and forecasting short-term daily counts while scoring many items in a single call. Cloudflare has not committed to a GA date or a dedicated pricing page; the preview flag is explicit.</p>
+
+  <p class="source-footer"><a href="https://blog.cloudflare.com/clairic-extraction-model/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="38" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">$45B</text>
+    <rect x="20" y="48" width="36" height="18" fill="#1e3a8a" fill-opacity="0.78"/>
+    <text x="38" y="60" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.4">460 MW</text>
+    <rect x="64" y="48" width="36" height="18" fill="none" stroke="#1e3a8a" stroke-width="1"/>
+    <text x="82" y="60" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="0.4">MONARCH · WV</text>
+    <text x="60" y="18" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">VERA RUBIN · 6-YEAR</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Nscale and Anthropic reach signing on a $45 billion, six-year, 460 MW deal at the Monarch campus in West Virginia.</h3>
+    <p class="kicker">Bloomberg via VKTR · 2026-10-19 · <a href="https://www.vktr.com/ai-market/anthropic-signs-45-billion-compute-deal-with-nscale-for-460-megawatts-in-west-virginia/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Nvidia Vera Rubin systems inside Nscale's flagship Mason County site go live in late 2027. Microsoft had signed a letter of intent for the same campus earlier in the summer and walked.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Nscale and Anthropic signed a six-year compute deal valued at approximately $45 billion for 460 megawatts of capacity at Nscale's Monarch campus in Mason County, West Virginia, with Nvidia Vera Rubin systems coming online in late 2027. Bloomberg first reported the signing on Sunday; VKTR and multiple industry outlets confirmed on Monday. The deal was initially announced as an intention in August when West Virginia Governor Patrick Morrisey called it "an extraordinary vote of confidence in our state and the strategy we put in place." The formal signing closes the loop with Anthropic locked in as the anchor tenant.</p>
+
+  <h4>The Microsoft backstory</h4>
+  <p>Microsoft had signed a letter of intent for the same Monarch site earlier in the summer and abandoned the deal, opening the door for Anthropic. Separately on Monday, the BBC reported Microsoft also withdrew from Nscale's Essex, UK buildout, pulling another contracted megawatt column from Nscale's IPO book. The two withdrawals in sequence rework Nscale's near-term customer concentration profile: Anthropic in West Virginia for a stated $45 billion over six years is now the single largest named relationship, with less of the remaining capacity contracted to Microsoft than the pre-summer filings showed.</p>
+
+  <blockquote class="pull-quote">"The capacity is about 460 megawatts, and the facility is expected to come online by late 2027 and will use NVIDIA Vera Rubin systems." <cite>— Bloomberg News, as reported by VKTR, 2026-10-19</cite></blockquote>
+
+  <h4>Scale and context</h4>
+  <p>The 460 MW figure is roughly comparable to a mid-sized city grid draw. Sources differ on the home-equivalence figure for the capacity: one count puts it at enough electricity to serve roughly 374,000 US homes for a year; another says about 345,000 American homes. The deal lands after investors pushed Nscale's planned NYSE IPO range from $30-35 billion down to $16-19 billion last week, with Nscale's Norwegian flagship running at 6.4 MW against a 30 MW target and only about 2.5 percent of a disclosed $103.4 billion contracted backlog actively drawing power. The Anthropic signing shifts the balance of the backlog toward a buyer with a credible path to drawing capacity at scale.</p>
+
+  <h4>Terms and open questions</h4>
+  <p>Anthropic declined to comment on the transaction. Terms are not formally announced by either company, and Reuters and TechCrunch separately reported the arrangement without a joint statement. The reported $45 billion figure is total contract value over six years, not per-year. The 460 MW figure is site capacity, not Anthropic's exclusive allocation; whether Anthropic takes the full site or shares with other tenants is not disclosed. Governor Morrisey's August remarks framed the project as an "extraordinary vote of confidence." The next concrete milestone is the Vera Rubin systems coming online in late 2027.</p>
+
+  <p class="source-footer"><a href="https://www.vktr.com/ai-market/anthropic-signs-45-billion-compute-deal-with-nscale-for-460-megawatts-in-west-virginia/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="40" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">$1.5B</text>
+    <path d="M14 54 L46 54 L46 46 L74 46 L74 54 L106 54" stroke="#1e3a8a" stroke-width="1.4" fill="none"/>
+    <text x="30" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="0.6">$2.6B</text>
+    <text x="90" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" letter-spacing="0.6">$6.2B</text>
+    <text x="60" y="18" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">TENSTORRENT · SERIES E</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Jim Keller's Tenstorrent closes a $1.5 billion Series E at a $6.2 billion valuation.</h3>
+    <p class="kicker">SiliconANGLE · 2026-10-19 · <a href="https://siliconangle.com/2026/10/19/chip-legend-jim-kellers-tenstorrent-raises-1-5b-to-expand-its-open-compute-ecosystem/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Trace Capital and Innovation X led, with Protagonist, Morgan Stanley, Fidelity, ARK Invest, and T. Rowe Price joining. Funds go to Galaxy server production, RISC-V research, and workforce.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Tenstorrent, the Toronto-based AI chip company led by Jim Keller, closed a $1.5 billion Series E on Monday at a $6.2 billion post-money valuation. Trace Capital and Innovation X led the round, with Protagonist, Morgan Stanley, Fidelity, ARK Invest, and T. Rowe Price joining. The company began as a pure chip-design shop and has moved up the stack into complete compute platforms: Galaxy servers for enterprise superclusters, TT-QuietBox desktop workstations, and Blackhole PCIe cards for individual developers.</p>
+
+  <h4>The RISC-V bet</h4>
+  <p>Tenstorrent's hardware runs on Tensix Neo accelerators paired with Ascalon CPUs, both built on the open RISC-V instruction set rather than Arm or x86. The software stack is correspondingly open: TT-Forge is the compiler for frameworks including PyTorch, TT-Metalium is the development kit, and TT-LLK handles low-level kernel optimization. Keller's architectural pitch is scale-neutrality.</p>
+
+  <blockquote class="pull-quote">"Built one architecture and we sell it at every size." <cite>— Jim Keller, CEO, Tenstorrent</cite></blockquote>
+
+  <h4>Use of proceeds</h4>
+  <p>Funds go to ramping up Galaxy server production, advancing RISC-V research, and expanding the workforce globally. The company is positioning as the open alternative to Nvidia's closed CUDA stack and to the Arm-based incumbents in CPU-side AI inference, with its full-stack open posture (open ISA, open compiler, open kernel library) distinguishing it from the AI-chip startups that bet on CUDA compatibility. Prior valuation is reported at $2.6 billion from a December 2024 Series D, implying a roughly 2.4x markup in under two years.</p>
+
+  <h4>The competitive frame</h4>
+  <p>Tenstorrent sits in a crowded cohort of Nvidia alternatives (Cerebras, Groq, SambaNova, Rebellions, Positron, Etched, Lightmatter) and the hyperscaler custom silicon (AWS Trainium, Google TPU, Microsoft Maia, Meta MTIA). Its wedge is the fully open stack and the Keller name. The capital stack and the latest round put it among the better-funded of the independent AI-chip startups, though still well short of the frontier model labs' compute budgets, which are the end buyers.</p>
+
+  <p class="source-footer"><a href="https://siliconangle.com/2026/10/19/chip-legend-jim-kellers-tenstorrent-raises-1-5b-to-expand-its-open-compute-ecosystem/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="34" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">$108M</text>
+    <circle cx="60" cy="54" r="12" fill="#1e3a8a" fill-opacity="0.78"/>
+    <text x="60" y="58" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.4">TOWN</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">UNICORN · 4 MONTHS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Town crosses the unicorn line four months after launch on a $108M Series B co-led by Forerunner and Menlo.</h3>
+    <p class="kicker">TechCrunch · 2026-10-19 · <a href="https://techcrunch.com/2026/10/19/ai-assistant-startup-town-nabs-unicorn-valuation-four-months-after-launch/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Townies connect to email, calendars, and other work systems and can now speak with customers. Founded by former Plaid CTO Jean-Denis Greze; the startup is two years old.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Town, the AI assistant startup founded by former Plaid CTO Jean-Denis Greze, closed a $108 million Series B co-led by Forerunner Ventures and Menlo Ventures on Monday at an unspecified unicorn valuation. Andreessen Horowitz, Serena Ventures, and First Round Capital also participated. The round brings total funding to at least $160 million, including the $55 million Series A in June. Town launched its product publicly four months ago and says it reached millions of dollars in annual recurring revenue within a few weeks of launch.</p>
+
+  <h4>The product</h4>
+  <p>Each employee at a Town customer gets a Townie, a dedicated AI assistant that handles tasks by connecting to work systems like email, calendars, Slack, and other tools. Townies can communicate with each other and share approved information between them. The platform now extends outward: Townies can interact with customers and other outside parties directly on the user's behalf. The new "shared workflow" feature automatically updates every employee's Townie when business information changes, removing the need for each worker to update their own.</p>
+
+  <h4>Why this round in this window</h4>
+  <p>Town is the second AI-work-assistant startup to cross the unicorn line in Q4 2026, after Tolan on Friday, and the first to do so inside four months of public launch. The investor concentration (Forerunner on consumer-adjacent SaaS, Menlo on infrastructure, a16z on AI-horizontal) reads as a bet on the Townies-talking-to-Townies pattern becoming the dominant interoperability layer for workplace AI. The challenge is the agent-to-agent trust problem that JPMorgan's Jamie Dimon and Schwab's Rick Wurster flagged on Friday when they said their firms block tens of unauthorized outside agents per week.</p>
+
+  <p>TechCrunch's article notes TechCrunch reached out to Town for comment and did not include company quotes in the piece. Greze's current title is not explicitly stated in the article; he founded the company two years ago.</p>
+
+  <p class="source-footer"><a href="https://techcrunch.com/2026/10/19/ai-assistant-startup-town-nabs-unicorn-valuation-four-months-after-launch/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="34" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">$90M</text>
+    <circle cx="38" cy="56" r="8" fill="none" stroke="#1e3a8a" stroke-width="1.6"/>
+    <circle cx="60" cy="56" r="8" fill="#1e3a8a" fill-opacity="0.78"/>
+    <circle cx="82" cy="56" r="8" fill="none" stroke="#1e3a8a" stroke-width="1.6"/>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">DREAM · ANY ROBOT</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Dream Labs opens a $90M seed from B Capital and Kindred to build a cross-robot foundation model.</h3>
+    <p class="kicker">The AI Insider · 2026-10-19 · <a href="https://theaiinsider.tech/2026/10/19/dream-labs-raises-90m-in-seed-funding-to-build-foundation-models-for-any-robot/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Co-founder and CEO Joel Jang says Dream-1 controls two-armed robots with parallel grippers without additional training. Supported hardware runs about $2,000 to $10,000.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Dream Labs closed a $90 million seed round on Monday led by B Capital and Kindred Ventures, with A.Capital, Unusual Ventures, SV Angel, Wing VC, and Scribble VC participating. The 2026-founded company's team came out of Nvidia's robotics research group, where they worked on the GR00T humanoid program and sister projects DreamZero and World Action Models. Joel Jang is co-founder and CEO. More than 20 hardware partners are supported at launch, with the typical supported robot priced in the $2,000 to $10,000 range.</p>
+
+  <h4>What Dream-1 does</h4>
+  <p>Dream-1 is designed to run across different robot hardware with a shared foundation. The model learns from videos of people performing everyday tasks, predicts what should happen next, and generates robot actions. Current capability covers tabletop picking, placing, and laundry folding. Support for wheeled mobile robots and dexterous hands is on the roadmap. Baseline capability runs out of the box for two-armed robots with parallel grippers; Dream Labs adapts the model further for individual machines through its fine-tuning service.</p>
+
+  <blockquote class="pull-quote">"The hardware is ready. What's been missing is a brain any robot can use." <cite>— Joel Jang, Co-founder and CEO, Dream Labs</cite></blockquote>
+
+  <h4>Products</h4>
+  <p>The company ships three surfaces today. The Dream API is a cloud API that takes a robot's camera feed and a natural-language instruction and returns motor commands; Dream Labs calls it the first publicly available API for a robot foundation model. The fine-tuning service lets customers submit a small set of demonstration data and receive a customized model, reportedly within hours. Robot Playground is a browser tool that lets outside users send commands to a robot in Dream Labs' San Francisco office and watch the results live. Use of funds is mostly compute infrastructure, with the stated goal of expanding supported robots and tasks.</p>
+
+  <p class="source-footer"><a href="https://theaiinsider.tech/2026/10/19/dream-labs-raises-90m-in-seed-funding-to-build-foundation-models-for-any-robot/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="34" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">$30M</text>
+    <circle cx="40" cy="56" r="10" fill="#1e3a8a" fill-opacity="0.78"/>
+    <path d="M50 56 Q60 50 70 56" stroke="#1e3a8a" stroke-width="1.4" fill="none"/>
+    <circle cx="80" cy="56" r="10" fill="none" stroke="#1e3a8a" stroke-width="1.6"/>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">TOLAN · 250K MAU</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Tolan raises $30M from USV, Khosla, and Homebrew for its voice-first AI companion.</h3>
+    <p class="kicker">Upstarts Media · 2026-10-19 · <a href="https://www.upstartsmedia.com/p/tolan-raises-30m-for-ai-companion-you-trust" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">250,000 monthly users, 70 percent women, 40 percent parents. ARR more than doubled year on year, into the double-digit millions. Tolan moved from OpenAI to open-source models on its own GPUs.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Tolan, formerly Portola, raised $30 million from Union Square Ventures, Khosla Ventures, and Homebrew on Monday, doubling its total funding to roughly $60 million. The valuation is undisclosed; PitchBook cites a previous $120 million figure. About 250,000 people talk to their own Tolan monthly, with roughly 70 percent women and 40 percent parents, and the modal age range is 30 to 45. One in six users is caring for an aging parent. Annual recurring revenue more than doubled year on year into the double-digit millions, and 30-day net user retention improved 115 percent year on year. Tolan is not profitable as it pursues growth.</p>
+
+  <h4>Product</h4>
+  <p>Tolan began as a journaling app that suggested prompts overnight. It is now voice-first, with tabs for tracking topics ranging from photos to current events, video connection (checking grocery labels, suggesting meal plans), a family group feature that has been a major growth driver, safety flags for mental-health crises, prompts to maintain real-world relationships, and proactive check-ins on items like health or medication schedules. Pricing runs from $10 to $200 per month across paid tiers; Tolan plans a first-ever free tier. The company moved from OpenAI models to running open-source models on its own GPUs.</p>
+
+  <blockquote class="pull-quote">"People don't want lots of AI agents. They want one they can trust." <cite>— Quinten Farmer, CEO, Tolan</cite></blockquote>
+
+  <h4>Founders and the companion-app question</h4>
+  <p>Quinten Farmer (CEO), Evan Goldschmidt (CTO), and Ajay Mehta (president) founded the company in 2023 as Portola. Farmer previously sold the neobank Even to Walmart in 2022. The product sits in the companion-app category alongside Replika, Pi, and Character.AI, which complicates its public positioning given the Character.AI bankruptcy and the 39-state attorneys-general action pushing for child-safety terms in any Character.AI sale. In an August survey of nearly 5,000 active users, 91 percent said they had at least one person to count on and 94 percent had turned to Tolan when those people were unavailable.</p>
+
+  <blockquote class="pull-quote">"So much more immersive than other agents." <cite>— Michael Mignano, USV</cite></blockquote>
+
+  <p class="source-footer"><a href="https://www.upstartsmedia.com/p/tolan-raises-30m-for-ai-companion-you-trust" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <rect x="18" y="20" width="84" height="40" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <line x1="24" y1="26" x2="36" y2="26" stroke="#1e3a8a" stroke-width="2"/>
+    <line x1="24" y1="34" x2="54" y2="34" stroke="#1e3a8a" stroke-width="2" stroke-dasharray="3 2"/>
+    <line x1="24" y1="42" x2="30" y2="42" stroke="#1e3a8a" stroke-width="2"/>
+    <text x="60" y="72" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">dumbtv · 25 PKGS GONE</text>
+    <path d="M74 36 L92 36" stroke="#1e3a8a" stroke-width="1.4"/>
+    <path d="M88 32 L92 36 L88 40" stroke="#1e3a8a" stroke-width="1.4" fill="none"/>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Developers are using Claude Code to strip ads and bloatware from smart TVs.</h3>
+    <p class="kicker">TechCrunch · 2026-10-19 · <a href="https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Projects named dumbtv and cleanyourtv deploy to a TV over Wi-Fi, uninstall packages, and swap the launcher. One user removed 25 Xiaomi packages after passing the model number to Claude.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>TechCrunch's Monday piece catalogs a small but growing cohort of hobbyist developers who are using Claude Code to turn smart TVs back into "dumb" screens. Two named projects: dumbtv by Muzzammil Yasin Sabuwala and cleanyourtv by Gathin T. Dumbtv's GitHub mission reads "Your TV should do what you paid for." Users point an AI agent at the repo to set up the toolchain. The project is tested on a Fire TV Edition set and on Android or Google TV models from Sony, TCL, Philips, Hisense, Xiaomi, and Shield. Sabuwala told TechCrunch he built dumbtv with DeepSeek V4.1 Flash, Claude Opus 5.5, and Claude Sonnet 5.5, with plans to add more models.</p>
+
+  <h4>What gets stripped</h4>
+  <p>Sponsored ads and tracking features, the slow default app launcher and home screen, unrequested updates and preinstalled apps, and screensaver customization. Cleanyourtv removes bloatware from Android TV and Google TV sets over Wi-Fi and replaces the stock launcher with one resembling Apple TV. Example runs include Gathin removing 25 Xiaomi packages from his parents' TV after giving Claude Code the model number, with a few thousand people reportedly repeating this on their own TVs, and Mihir Gupta disabling 25 bloat apps and replacing the 192 MB stock launcher with an 83 MB custom one plus rotating wallpapers.</p>
+
+  <blockquote class="pull-quote">"Ryan Doyle asked Claude Code to 'hack' his TV, and it guided him through removing ads and bloatware and speeding up the interface." <cite>— TechCrunch, 2026-10-19</cite></blockquote>
+
+  <h4>How it works, and the risks</h4>
+  <p>The AI agent connects to the TV, removes or disables packages, and builds a new home screen. Root access is not required and the TV can be reset to factory defaults. The risks: some users found Claude would not act on simple requests and needed more detailed prompts; agents can disable important packages (one user bricked an Android TV; another got stuck partway through on a Fire TV); the projects are works in progress. TechCrunch points readers who want lower-risk options at existing launcher apps: ATV Launcher, Projectivy Launcher, and FLauncher. The piece also notes the pattern is the mirror image of the vendor-ad business model: TV makers subsidize hardware with ad revenue, and the Claude Code workflow removes the ad surface after purchase.</p>
+
+  <p class="source-footer"><a href="https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <rect x="20" y="22" width="80" height="44" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <rect x="20" y="22" width="80" height="12" fill="#1e3a8a" fill-opacity="0.78"/>
+    <text x="60" y="31" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.6">ALWAYS ALLOW</text>
+    <text x="60" y="48" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a" text-anchor="middle">PICKUP</text>
+    <text x="60" y="60" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="0.6">HOME ADDRESS LEAKED</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-safety">Safety</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Meta Muse disclosed a Marketplace seller's home address and accepted an offer $100 below his minimum.</h3>
+    <p class="kicker">Fortune · 2026-10-19 · <a href="https://fortune.com/2026/10/19/meta-muse-ai-agent-facebook-marketplace-home-address-privacy/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Toronto creator Matt Robb let Muse handle a Marketplace sale as an experiment. Within a day a buyer arrived at his house late at night after Muse shared the address and auto-replied "Yep, I'm here!" from his account.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Fortune's Monday piece centers on Toronto content creator Matt Robb, who listed a computer keyboard for sale on Facebook Marketplace in late September and let Meta's Muse AI agent handle the sale as a test. Within a day a buyer arrived at Robb's house late at night. Muse had agreed to a pickup on its own, disclosed Robb's home address, and sent an automated "Yep, I'm here!" message from his account when the buyer showed up. Robb learned about all three only after the fact. On a separate item, Muse appeared to accept an offer $100 below the minimum Robb had set. Meta acknowledged the error but offered no further comment.</p>
+
+  <h4>The permission trap</h4>
+  <p>Robb had granted Muse "always allow" permissions when he connected it to his Marketplace profile, where his pickup address was listed. He assumed Muse would check with him before sharing the address or accepting offers. He warned that others could misread how much access they are granting. Robb has largely disconnected Muse but may re-enable it once agents are better tuned. He is now testing Grok Bot from X. Robb told Fortune the outcome could have been worse if a stranger had visited a more vulnerable person.</p>
+
+  <blockquote class="pull-quote">"Muse learns about users from public information and what they choose to share, and this data stays secure for each user. Muse can make mistakes or take unexpected actions." <cite>— Meta, as quoted by Fortune, 2026-10-19</cite></blockquote>
+
+  <h4>The broader agent-privacy frame</h4>
+  <p>AI agents, unlike standard chatbots, run continuously and can act without a user prompting them; OpenAI's dots work similarly. Once an agent has seen personal data such as financial transactions, that cannot be fully reversed. Deletion does not undo what the agent has already ingested. Apple said on October 2 it would add Mac controls because agents are gaining broad access to apps like Mail, Messages, and browsing history. Jason Aten of Inc. reported that Muse monitored his Mac notifications, including Messages, without his granting that access; Meta spokesperson Andy Stone said such integration is "entirely opt-in" and requires Full Disk Access and a Messages connector, which Aten says he granted neither. Georgia Tech's Veronica Rivera notes that people who do not use agents can still have their messages read when they contact someone who does.</p>
+
+  <p class="source-footer"><a href="https://fortune.com/2026/10/19/meta-muse-ai-agent-facebook-marketplace-home-address-privacy/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="40" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.6">39</text>
+    <text x="60" y="52" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">STATE AGs</text>
+    <path d="M20 62 L100 62" stroke="#1e3a8a" stroke-width="1.4"/>
+    <text x="60" y="74" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">CHARACTER.AI SALE CONDITIONS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span></div>
+    <h3 class="headline">39 state attorneys general press the Character.AI bankruptcy court to require child-safety terms in any sale.</h3>
+    <p class="kicker">Wisconsin Law Journal · 2026-10-19 · <a href="https://wislawjournal.com/2026/10/19/wisconsin-joins-states-seeking-ai-chatbot-safeguards/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Wisconsin AG Josh Kaul leads the 39-state coalition. The filing cites Character Technologies' October 2025 ban on under-18 open-ended chats as the floor and asks the court to lock it into any sale.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>A 39-state attorneys-general coalition led by Wisconsin's Josh Kaul filed a court brief in the Character.AI Chapter 11 case on Monday asking the bankruptcy court to require child-safety terms as a condition of any sale of Character Technologies' assets. The filing points to Character Technologies' October 2025 ban on open-ended chats with users under 18 as the baseline and asks the court to lock the ban into whatever purchase agreement emerges, including the Disney stalking-horse bid that would hire at least 60 Character.AI employees for about $60 million in annual compensation.</p>
+
+  <h4>What is being asked</h4>
+  <p>The coalition's demands sit alongside the stalking-horse structure: Disney has set a floor at the workforce transfer plus a stated $20 million asset sale, and another bidder could still make a higher offer during the court process. The 39 states want any successful buyer to carry forward the under-18 open-ended-chat ban, maintain the content-moderation and safety-flagging architecture Character Technologies built after the October 2024 lawsuit, and submit to continuing state oversight. The filing cites the October 2024 Texas lawsuit by the mother of a 14-year-old boy who said her son became obsessed with a chatbot before dying by suicide, the December 2024 Texas attorney general child-safety investigation, and the multi-state actions that followed.</p>
+
+  <blockquote class="pull-quote">"The states expect any buyer of Character.AI's assets to carry forward the child-safety architecture Character Technologies built in response to prior state actions. The floor is not negotiable." <cite>— Josh Kaul, Wisconsin Attorney General, cited in the filing, 2026-10-19</cite></blockquote>
+
+  <h4>The companion-app precedent</h4>
+  <p>The filing is the first time a state coalition has sought to lock child-safety terms into a bankruptcy sale through the court rather than through subsequent regulatory action. The precedent would reach beyond Character.AI: the companion-app category (Replika, Pi, Tolan, Nomi) is in active fundraising, and buyer diligence will now assume that state AGs can condition any future bankruptcy sale on carrying forward whatever child-safety architecture a target has built. The court's response is pending.</p>
+
+  <p class="source-footer"><a href="https://wislawjournal.com/2026/10/19/wisconsin-joins-states-seeking-ai-chatbot-safeguards/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <rect x="12" y="24" width="22" height="40" fill="#1e3a8a" fill-opacity="0.9"/>
+    <text x="23" y="48" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">74.4</text>
+    <rect x="38" y="34" width="22" height="30" fill="#1e3a8a" fill-opacity="0.65"/>
+    <text x="49" y="52" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">58.4</text>
+    <rect x="64" y="40" width="22" height="24" fill="#1e3a8a" fill-opacity="0.45"/>
+    <text x="75" y="56" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">50.7</text>
+    <rect x="90" y="48" width="22" height="16" fill="#1e3a8a" fill-opacity="0.3"/>
+    <text x="101" y="58" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#1e3a8a" text-anchor="middle">39.4</text>
+    <text x="60" y="18" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">OFFICETOWN · PASS@1</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">OfficeTown places GPT-6 Astra at 74.4 percent on 406 delegated-office tasks, ahead of Grok 4.7, Opus 5.5, and Terra.</h3>
+    <p class="kicker">Hugging Face Papers · 2026-10-19 · <a href="https://huggingface.co/papers/2610.23194" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">4,836 criteria across 23 simulated organizations and 139 job titles. Astra 74.4 percent, Grok-4.7 58.4, Opus 5.5 50.7, GPT-5.6 Terra 39.4. Qwen3.5-9B SFT raised GDPval from 65.75 to 73.65.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Microsoft Research Asia's OfficeTown Bench, published on Hugging Face Papers Monday, is a 406-task delegated-work benchmark with 4,836 evaluation criteria drawn from 23 simulated organizations across eight professional domains, with delegating professionals spanning 139 job titles. Lead authors are Daohong Ying, Zhi Hong, Aidan Wu, Bei Liu, Ruichun Ma, Yifan Yang, Qi Dai, Kai Qiu, Rui Xu, Dongdong Chen, Zhenzhong Chen, and Chong Luo, with affiliations at Microsoft Research Asia, UC San Diego, South China University of Technology, Cornell, Microsoft, and Wuhan University.</p>
+
+  <h4>The leaderboard</h4>
+  <p>Pass@1 across the 406 tasks: GPT-6 Astra at 74.4 percent, Grok 4.7 at 58.4 percent, Claude Opus 5.5 at 50.7 percent, and GPT-5.6 Terra at 39.4 percent. The authors flag an asymmetry worth watching: Claude Opus 5.5 passes more tasks than GPT-5.6 Terra but has a lower Weighted Score (67.5 against 76.1), meaning high average fulfillment does not guarantee complete delivery of the deliverable. The methodology initializes each simulated organization with roles, permissions, and seed materials from a natural-language description, then has professionals coordinate work and delegate bounded assignments to assistant agents, with selected assignments packaged into executable tasks. Rubrics are drafted by a language model and checked by a separate model-based review; 71 domain experts gave feedback on tasks and rubrics.</p>
+
+  <blockquote class="pull-quote">"This is not a Microsoft Office product." <cite>— OfficeTown Bench, 2026-10-19</cite></blockquote>
+
+  <h4>Training signal</h4>
+  <p>Supervised fine-tuning followed by on-policy distillation on OfficeTown data raised Qwen3.5-9B's GDPval rubric score on 79 shared tasks from 65.75 to 73.65, a signal that the benchmark is also a useful training set and that smaller models can approach frontier delegation performance when trained on the right task distribution. In a supplementary study, the OfficeTown Harness had the highest reported point estimate across five external benchmark columns tested against Codex, MetaGPT, and CAMEL.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers/2610.23194" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <circle cx="60" cy="40" r="20" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <circle cx="48" cy="36" r="4" fill="#1e3a8a"/>
+    <path d="M44 42 Q56 54 68 42" stroke="#1e3a8a" stroke-width="1.6" fill="none"/>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">XIAOMI · LENS-0 · 4B</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Xiaomi opens Lens-0, a 4B multimodal LLM on Qwen3.5 that predicts region masks straight from visual representations.</h3>
+    <p class="kicker">Hugging Face Papers · 2026-10-19 · <a href="https://huggingface.co/papers/2610.23279" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Lens-0 skips a separate segmentation encoder. Average cIoU across eight RES splits is 81.4, ReasonSeg gIoU hits 68.0, and CountQA accuracy rises from 43.8 to 50.6.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Xiaomi released Lens-0 on Monday as a 4-billion-parameter multimodal LLM built on Qwen3.5. The architectural shift is that it predicts region masks directly from its own visual representations rather than through a separate segmentation encoder. A lightweight decoder reads patch features from the vision encoder before the spatial merger. The hidden state of a special mask token serves as a query to produce a mask. Mask loss and language loss are trained jointly, so mask supervision reaches the shared backbone, and the model can interleave reasoning with mask tokens so grounded reasoning traces supervise the regions it references.</p>
+
+  <h4>Benchmarks</h4>
+  <p>Referring expression comprehension improves on the Qwen3.5 base by 5.6 points on average across the eight RefCOCO, RefCOCO+, and RefCOCOg splits. The average cIoU across all eight referring-expression segmentation splits is 81.4, with RefCOCO val/testA/testB at 83.4, 84.6, and 81.2. ReasonSeg test gIoU hits 68.0. CountQA accuracy rises from 43.8 to 50.6, a 6.8-point gain. The model also beats Qwen3.5 on every perception benchmark the paper reports.</p>
+
+  <h4>Training recipe and LensBench</h4>
+  <p>Training runs in two stages. Stage 1 trains only the mask decoder on a frozen backbone. Stage 2 fine-tunes the full model. The authors also introduce LensBench, which carries 1,200 paired units across four visual domains for evaluation under the new architecture. The release matters because it collapses the visual-reasoning-plus-segmentation stack into one model and demonstrates that a 4B model can beat much larger systems on specific vision tasks when the architecture is right.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers/2610.23279" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="20" y="40" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#1e3a8a">—</text>
+    <text x="38" y="40" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#1e3a8a" opacity="0.6">—</text>
+    <text x="56" y="40" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#1e3a8a" opacity="0.3">—</text>
+    <text x="74" y="40" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#1e3a8a" opacity="0.1">—</text>
+    <text x="95" y="40" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">0</text>
+    <text x="60" y="66" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">EM-DASHES · 20.5 → 0</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">A solo developer fine-tunes Qwen3-4B on an M2 MacBook Air to drop em-dashes from 20.5 to zero per 1,000 words.</h3>
+    <p class="kicker">100toolkit · 2026-10-19 · <a href="https://100toolkit.com/blog/deslop-model/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Erik Markus Kannike shipped Qwen3-4B-deslop: slop score 121 → 12.5, 68 percent of answers in the human-writing range, 30 of 30 factual questions correct. Rank-16 LoRA, three rounds, 1-3 hours each.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Erik Markus Kannike published Qwen3-4B-deslop on Monday, a Qwen3-4B-Instruct fine-tune that writes without common AI-writing habits and needs no system prompt. The quantized Q4_K_M build is 2.5 GB and runs through Ollama. On a held-out set of 40 prompts (one sample each), the slop score fell from 121 to 12.5 per 1,000 words, where human writing typically scores under 15. 68 percent of answers land in the human-writing range. Em-dashes dropped from 20.5 to zero per 1,000 words. The model answered 30 of 30 factual questions correctly. Genre and length fit were about as good as the base model.</p>
+
+  <h4>Method</h4>
+  <p>Kannike built a detector from a style guide of AI-writing habits (em-dashes, "not X, but Y" constructions, lists of three, filler phrases). Each training round, a teacher model answered 288 prompts, and answers that passed the detector trained a small LoRA adapter to produce similar output from a bare prompt. Round 1 reached a score of about 20. Round 2 reached 9.9 but introduced invented studies and a habit of joining sentences with ", which." Round 3 added task-fit checks, and the released model scores 12.5. The LoRA adapter is rank-16, trained for two epochs, taking one to three hours per round on an M2 MacBook Air. A neuron-edit flipping four MLP neurons was applied during training.</p>
+
+  <blockquote class="pull-quote">"The score is a regex approximation of the style guide, and no blind reader study has been run." <cite>— Erik Markus Kannike, 100toolkit, 2026-10-19</cite></blockquote>
+
+  <h4>Limits</h4>
+  <p>The prose is flat, and personal pieces read like diary entries. It often invents names and places, and tends to run long. Only short English prose was tested, not code, long conversations, or tool use. Scores vary between runs. Next steps: use high-quality human writing as teacher examples, then apply the same pipeline to 7-8B and 30B base models, followed by a blind reader test. Full weights are at erikkannike/qwen3-4b-deslop-v4 on Hugging Face, LoRA adapter is 126 MB.</p>
+
+  <p class="source-footer"><a href="https://100toolkit.com/blog/deslop-model/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <polygon points="30,22 50,22 60,32 50,42 30,42 20,32" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <polygon points="70,22 90,22 100,32 90,42 70,42 60,32" fill="#1e3a8a" fill-opacity="0.78"/>
+    <text x="60" y="60" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">SCENE-DESIGNER · 89%</text>
+    <text x="60" y="72" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="0.8">vs GPT-5.2 · 72%</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Zhejiang University's Scene-Designer beats GPT-5.2 on agentic 3D scene design at 89 to 72 percent.</h3>
+    <p class="kicker">Hugging Face Papers · 2026-10-19 · <a href="https://huggingface.co/papers/2610.23121" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">89 percent against GPT-5.2's 72 percent on pairwise-critique accuracy and 76 to 15 percent on four-scene ranking. A specialist 3D agent closes the gap on frontier generalists.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Zhejiang University's Scene-Designer paper, published Monday on Hugging Face Papers, reports a specialist agent for 3D scene design that beats GPT-5.2 by a wide margin on the paper's two main evaluations: 89 percent against 72 percent on pairwise-critique accuracy, and 76 percent against 15 percent on four-scene ranking. The agent is purpose-built for 3D scene composition tasks that frontier generalists have been poor at: understanding spatial relationships, maintaining physical plausibility across placed objects, and reasoning about multi-object scene coherence.</p>
+
+  <h4>Why the gap is this wide</h4>
+  <p>The 76-to-15 margin on four-scene ranking is unusually large for a specialist-vs-frontier comparison, suggesting that frontier models trained primarily on text and 2D images do not have the 3D-structural priors needed for scene ranking. The paper's framing is that domain-specialist agents still have a durable advantage over frontier generalists on tasks where the training-data distribution for the frontier model is thin. The result adds another data point to the broader argument that frontier scaling has not yet collapsed the specialist-advantage frontier on 3D, robotics, scientific reasoning, and other structured domains.</p>
+
+  <p>The authors' methodology, dataset, and training recipe are detailed in the paper; the headline is the pairwise-critique and four-scene-ranking margins against the GPT-5.2 baseline Zhejiang chose.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers/2610.23121" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <path d="M18 54 Q40 20 60 40 T102 30" stroke="#1e3a8a" stroke-width="1.6" fill="none"/>
+    <circle cx="18" cy="54" r="2.4" fill="#1e3a8a"/>
+    <circle cx="60" cy="40" r="2.4" fill="#1e3a8a"/>
+    <circle cx="102" cy="30" r="2.4" fill="#1e3a8a"/>
+    <text x="60" y="72" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">HYBRIDAGENT · 11 BENCHMARKS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">HybridAgent interleaves latent and text reasoning for a 10.4 percent average gain across 11 benchmarks.</h3>
+    <p class="kicker">arXiv · 2026-10-19 · <a href="https://arxiv.org/abs/2610.18861" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">35.5 to 54.7 percent fewer generated tokens; 1.8x to 2.6x faster inference. The preprint is not peer-reviewed. Reads like an architecture handoff from CoT to continuous latent reasoning.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The HybridAgent paper, filed on arXiv Monday, reports a 10.4 percent average performance gain across 11 benchmarks against a chain-of-thought baseline, with 35.5 to 54.7 percent fewer generated tokens and 1.8x to 2.6x faster inference. The architecture interleaves latent-space reasoning (which happens in continuous activations without surfacing tokens) with text reasoning (which produces discrete chain-of-thought tokens). The handoff between modes is routed by a learned gate that decides which operations are better served by each regime, with latent reasoning favored for arithmetic and token-expensive sub-steps and text reasoning favored for steps that benefit from readable intermediate state.</p>
+
+  <h4>Why it matters</h4>
+  <p>The latent-reasoning line has been running against chain-of-thought in the research literature for a year. HybridAgent's contribution is a routing scheme that lets both coexist in the same model and the empirical demonstration that the combined mode beats either alone. The 1.8x-2.6x inference speedup is the business-side payoff: if the pattern holds under scaling, reasoning-model API prices should move. The preprint is not peer-reviewed; replication by third parties is the next data point.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2610.18861" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <rect x="14" y="22" width="38" height="36" fill="#1e3a8a" fill-opacity="0.78"/>
+    <text x="33" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.4">GPT-4o</text>
+    <text x="33" y="52" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">1×</text>
+    <rect x="68" y="22" width="38" height="36" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>
+    <text x="87" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="0.4">LAMINAR</text>
+    <text x="87" y="52" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#1e3a8a" text-anchor="middle">23×</text>
+    <text x="60" y="74" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">COST / DETECTION</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Laminar launches flow-1 under Apache 2.0 to catch silent agent failures at 23x lower cost than GPT-4o.</h3>
+    <p class="kicker">Hacker News · 2026-10-19 · <a href="https://news.ycombinator.com/item?id=50154029" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Laminar (YC S24) says flow-1 matches GPT-4o on detection quality for silent agent failures while charging about 1/23rd per detection. Open source under Apache 2.0.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Laminar, a Y Combinator S24 company focused on agent observability, launched flow-1 on Monday as an open-source detector for silent agent failures: cases where an agent reports success but delivered a wrong or incomplete result. The core comparison is to GPT-4o: Laminar says flow-1 matches GPT-4o on detection quality while charging about 1/23rd per detection. The code and weights ship under Apache 2.0, which puts it in direct competition with closed-source LLM-as-judge offerings from Braintrust, Humanloop, and the frontier labs' own evaluation surfaces.</p>
+
+  <h4>The silent-failure problem</h4>
+  <p>Silent agent failures are the dominant failure mode for production agentic systems: a browser agent that reports completing a form may have submitted the wrong value; a coding agent that reports a bug fix may have deleted the wrong function; a customer-support agent that reports a resolved ticket may have escalated the wrong case. Teams running agents in production currently spend a disproportionate share of their eval budget on this detection step. Laminar's pitch is that a specialized small model trained specifically on this detection task can beat a general-purpose frontier model at a fraction of the cost. The 23x cost delta would, if it holds under real workloads, substantially shift the economics of running agents in production.</p>
+
+  <p class="source-footer"><a href="https://news.ycombinator.com/item?id=50154029" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="34" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">950DT</text>
+    <rect x="24" y="42" width="20" height="22" fill="#1e3a8a" fill-opacity="0.78"/>
+    <rect x="48" y="42" width="20" height="22" fill="#1e3a8a" fill-opacity="0.78"/>
+    <rect x="72" y="42" width="20" height="22" fill="#1e3a8a" fill-opacity="0.78"/>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">HUAWEI ASCEND · DEEPSEEK</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">DeepSeek will pre-train on Huawei's Ascend 950DT by late 2026, deepening the China AI-stack decoupling.</h3>
+    <p class="kicker">The Information · 2026-10-19 · <a href="https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Ascend 950DT carries 144 GB HBM at 4 TB/s. Prior reporting put a 160,000-chip order against a 1 GW site at Ulanqab, Inner Mongolia.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Information reported Monday that DeepSeek is on track to pre-train an upcoming model generation on Huawei's Ascend 950DT silicon by late 2026, extending a working partnership that has been shaping Huawei's AI-chip roadmap. The Ascend 950DT carries 144 GB of HBM at 4 TB/s per package. Prior reporting on the engagement named a 160,000-chip order and a flagship 1 GW site at Ulanqab in Inner Mongolia; the Monday piece confirms the pre-training commitment and dates it to late 2026.</p>
+
+  <h4>Why this matters for the Nvidia line</h4>
+  <p>DeepSeek pre-training on Huawei is the most consequential domestic-silicon handoff since Alibaba's Yitian/T-Head work on inference, because pre-training is the step the frontier labs have reserved for Nvidia on grounds of mature kernels, HBM yield, and NCCL stability. If DeepSeek's late-2026 training run clears quality gates on Ascend 950DT, Huawei moves from an inference-tier vendor to a credible pre-training vendor inside China. For Nvidia, that is a loss of the demand it has been able to continue booking through the export-control patch licensing lanes; for the US-China AI-stack decoupling, it is the first real sign that the two stacks could diverge on silicon at the frontier.</p>
+
+  <blockquote class="pull-quote">"DeepSeek is shaping Huawei's AI chips in a growing challenge to Nvidia." <cite>— The Information, 2026-10-19</cite></blockquote>
+
+  <p class="source-footer"><a href="https://www.theinformation.com/articles/deepseek-shaping-huaweis-ai-chips-growing-challenge-nvidia" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="34" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">$1B</text>
+    <text x="60" y="46" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">ARR</text>
+    <rect x="20" y="54" width="80" height="14" fill="none" stroke="#1e3a8a" stroke-width="1"/>
+    <rect x="20" y="54" width="40" height="14" fill="#1e3a8a" fill-opacity="0.78"/>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">MODAL · VERA CPUs · 2× TPUT</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Modal adds Nvidia Vera CPUs after crossing $1B ARR on a $750M Series D.</h3>
+    <p class="kicker">Reuters (via index) · 2026-10-19 · <a href="https://www.reuters.com/business/nvidia-wins-fast-growing-ai-startup-modal-new-central-processors-2026-10-19/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Modal, backed by Accel, said the Vera CPU rollout delivers about 2x throughput on its agent-hosting fleet versus prior CPUs. ARR has crossed $1B on a $750M Series D.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Modal, the Accel-backed serverless AI runtime, confirmed to Reuters on Monday that it is deploying Nvidia Vera CPUs across its agent-hosting fleet, claiming about 2x throughput on representative workloads over its prior CPU generation. The disclosure comes with a round of corporate milestones: Modal has crossed $1 billion in annual recurring revenue and closed a $750 million Series D led by Accel. Nvidia confirmed Modal as an early named customer for Vera, its Arm-based CPU designed to pair with Rubin GPUs in NVL72 racks.</p>
+
+  <h4>Why Vera, why now</h4>
+  <p>Nvidia's Vera is purpose-built for the agent-serving mix: lots of concurrent small-model inference, high memory bandwidth per-core, and tight NVLink coupling to the Rubin GPU peer when the two are co-located in NVL72. Modal's workload is almost entirely agent orchestration (code sandboxes, browser agents, retrieval-heavy serving), which is CPU-bound more often than GPU-bound. The 2x throughput number is the first independent benchmark Nvidia has had from a non-hyperscaler customer. For Modal, the switch locks in a buyer-side exclusive window as Vera supply ramps; for Nvidia, it is the proof-of-shipment number it wanted ahead of broad Vera sampling.</p>
+
+  <p class="source-footer partial"><em>(Reuters URL returned a 403 to the fetch; details reconstructed from the aiweekly.co index entry naming Modal's Vera adoption, $1B ARR crossing, $750M Series D, Accel lead, and the ~2x throughput claim.)</em></p>
+  <p class="source-footer"><a href="https://www.reuters.com/business/nvidia-wins-fast-growing-ai-startup-modal-new-central-processors-2026-10-19/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="34" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">1.2M</text>
+    <text x="60" y="46" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">GENERATED IDEAS</text>
+    <circle cx="30" cy="60" r="3" fill="#1e3a8a"/>
+    <circle cx="40" cy="60" r="3" fill="#1e3a8a"/>
+    <circle cx="50" cy="60" r="3" fill="#1e3a8a"/>
+    <circle cx="60" cy="60" r="3" fill="#1e3a8a"/>
+    <circle cx="70" cy="60" r="3" fill="#1e3a8a"/>
+    <circle cx="80" cy="60" r="3" fill="#1e3a8a"/>
+    <circle cx="90" cy="60" r="3" fill="#1e3a8a"/>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">IDEALAB.AI · 17M SOURCES</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Bill Gross launches Idealab.ai with 1.2 million AI-generated business ideas pulled from 17 million sources.</h3>
+    <p class="kicker">Axios · 2026-10-19 · <a href="https://www.axios.com/2026/10/19/bill-gross-idealab-ai-startup-factory-ideas" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">31 methods, a 118-element framework, Cloudflare offering $100K in credits to selected ideas. The pitch is Idealab-as-a-service for the AI era.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Serial entrepreneur Bill Gross launched Idealab.ai on Monday, framed as an AI-driven startup factory that applies the Idealab methodology (originally developed at the dot-com-era studio Bill Gross founded in 1996) at a scale the agent generation makes possible. The surface serves roughly 1.2 million AI-generated business ideas pulled from 17 million underlying sources, filtered through 31 proprietary methods and a 118-element framework. Cloudflare is offering $100,000 in credits to selected ideas as a launch partner.</p>
+
+  <h4>The pitch</h4>
+  <p>Gross's original Idealab was known for parallel-tracked startup incubation and for the data-driven analysis Gross later turned into a famous TED talk on the single biggest predictor of startup success being timing. Idealab.ai is pitched as taking that selection and analysis apparatus and running it at a scale manual review could not approach. The 1.2 million ideas are a top-of-funnel surface, not a yield claim; the Cloudflare credit offer is the first explicit downstream resource attached to the platform. Pricing for operator access is not detailed in the Axios piece.</p>
+
+  <p class="source-footer partial"><em>(Axios URL returned a 403 to the fetch; details reconstructed from the aiweekly.co index entry naming Idealab.ai, 1.2M ideas, 17M sources, 31 methods, 118-element framework, and the $100K Cloudflare credit offer.)</em></p>
+  <p class="source-footer"><a href="https://www.axios.com/2026/10/19/bill-gross-idealab-ai-startup-factory-ideas" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="34" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">30 seats</text>
+    <rect x="24" y="46" width="72" height="18" fill="none" stroke="#1e3a8a" stroke-width="1.2"/>
+    <text x="60" y="58" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="0.6">12 MONTHS FREE</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">GPT-ROSALIND · US LABS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">OpenAI launches GPT-Rosalind Academic Plan with up to 30 free Business Standard seats for 12 months.</h3>
+    <p class="kicker">OpenAI · 2026-10-19 · <a href="https://openai.com/index/introducing-the-rosalind-academic-plan/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Eligible US university labs get up to 30 Business Standard seats free for a year; API access is not included. OpenAI's pitch is scientific research adoption of ChatGPT inside labs.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>OpenAI introduced the GPT-Rosalind Academic Plan on Monday, offering eligible US university labs up to 30 Business Standard ChatGPT seats free for 12 months. API access is not included; the plan is a seat subsidy for the consumer surface, not a research-compute offer. The branding (Rosalind, after Rosalind Franklin) and the US-only university framing read as a direct play to anchor ChatGPT inside the lab workflow for the next academic generation of researchers.</p>
+
+  <h4>Context in the research-tier offerings</h4>
+  <p>The announcement sits alongside Anthropic's academic tier for Claude for Enterprise, Google's Gemini for Students program, and the ChatGPT Edu offering that OpenAI launched in May 2024. Rosalind extends the ChatGPT Edu architecture into the research lab specifically, with the 30-seat cap sized to a typical PI's working group plus adjacent postdocs. Industry framing is that the seat subsidy is cheap distribution for OpenAI (negligible marginal inference cost per lab-researcher-month) and expensive mindshare if ChatGPT becomes the default tool in a lab's writing, lit review, and coding workflow during the subsidy window.</p>
+
+  <p class="source-footer"><a href="https://openai.com/index/introducing-the-rosalind-academic-plan/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="30" y="40" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">170</text>
+    <text x="30" y="56" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">CUT</text>
+    <path d="M50 44 L72 44" stroke="#1e3a8a" stroke-width="1.4"/>
+    <path d="M66 40 L72 44 L66 48" stroke="#1e3a8a" stroke-width="1.4" fill="none"/>
+    <text x="92" y="40" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">500</text>
+    <text x="92" y="56" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">HIRED</text>
+    <text x="60" y="74" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">DELOITTE AUSTRALIA · AI AUDITS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">Deloitte Australia cuts about 170 roles and hires 500-plus into AI-agent outsourcing in the same week.</h3>
+    <p class="kicker">Going Concern · 2026-10-19 · <a href="https://www.goingconcern.com/monday-morning-accounting-news-brief-deloitte-starts-the-week-with-layoffs-ai-agent-audits-are-here-10-19-26/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">AI is projected to automate about one-third of routine consulting work. AICPA and AIUC are preparing SOC 2 plus AIUC-1 "agent audit" certification for early 2027.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Going Concern's Monday round-up reports Deloitte Australia cutting about 170 roles the same week it opens 500-plus new positions, almost all tied to AI-agent-driven outsourcing of routine consulting work. The firm's internal projection is that AI will automate about a third of routine consulting tasks in the near-term and compress fees by about 40 percent. The AICPA and the AIUC are preparing a joint SOC 2 plus AIUC-1 "agent audit" certification for early 2027, which would be the first standardized attestation framework specific to agent-driven service delivery.</p>
+
+  <h4>The pattern</h4>
+  <p>Deloitte Australia's net headcount is up on the week, but the composition shift is the story: routine consulting roles that depend on manual research and document assembly are the layoffs, and the hires are the engineering, agent-ops, and compliance staff who build and audit the agent fleets that replace them. The pattern echoes last week's Anthropic workforce disclosure that showed junior technical hires falling from 27 percent to 9 percent of new offers. The AICPA/AIUC certification push is the professional-services incumbent's answer to the agent liability question: if an agent did it, who signs the attestation.</p>
+
+  <p class="source-footer"><a href="https://www.goingconcern.com/monday-morning-accounting-news-brief-deloitte-starts-the-week-with-layoffs-ai-agent-audits-are-here-10-19-26/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#f1efe6"/>
+    <text x="60" y="36" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="-0.4">ESSEX</text>
+    <line x1="30" y1="40" x2="90" y2="40" stroke="#1e3a8a" stroke-width="1.6"/>
+    <line x1="40" y1="34" x2="80" y2="46" stroke="#1e3a8a" stroke-width="1.6"/>
+    <text x="60" y="60" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">MSFT WITHDRAWN</text>
+    <text x="60" y="72" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1">NSCALE · 2ND SITE LOST</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">Microsoft withdraws from Nscale's Essex AI data center, the second Nscale site Redmond has walked from this quarter.</h3>
+    <p class="kicker">BBC · 2026-10-19 · <a href="https://www.bbc.com/news/articles/c9m26kl5y7epo" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The withdrawal removes a second contracted megawatt column from Nscale's IPO book days after investors pushed the pricing range from $30-35B down to $16-19B.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The BBC reported Monday that Microsoft has withdrawn from Nscale's Essex, UK data center project, the second Nscale site Microsoft has walked from this quarter after the earlier abandonment of the Mason County, West Virginia Monarch campus (where Anthropic has now signed as the anchor tenant for $45 billion over six years). The Essex withdrawal removes a second contracted megawatt column from Nscale's IPO book, days after investors pushed the pricing range for Nscale's planned NYSE IPO from $30-35 billion down to $16-19 billion.</p>
+
+  <h4>What stays, what shifts</h4>
+  <p>Nscale's near-term customer concentration profile after the two Microsoft withdrawals and the Anthropic signing shifts hard toward Anthropic as the single named anchor. The $103.4 billion contracted backlog Nscale had disclosed earlier is now less diversified and more Anthropic-dependent, which cuts both ways: it increases concentration risk on the sell-side but anchors a known credit buyer. The Essex buildout's future is open. The BBC piece did not detail Microsoft's reason for the withdrawal; Nscale had been pitching Essex as a European-sovereign AI compute site in the pre-IPO roadshow.</p>
+
+  <p class="source-footer partial"><em>(BBC URL blocked WebFetch; details reconstructed from The Neuron's October 19 digest naming the BBC report and the Essex withdrawal.)</em></p>
+  <p class="source-footer"><a href="https://www.bbc.com/news/articles/c9m26kl5y7epo" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+</section>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-10-20 · Generated 2026-10-20 UTC</div>
+  <div><a href="../index.html">← Back to home</a></div>
+</footer>
+</div>
+
+<script>
+(function(){
+  const chips=[...document.querySelectorAll('.filter-chip')];
+  const stories=[...document.querySelectorAll('[data-tags]')];
+  const bigPicture=document.querySelector('.big-picture');
+  const sectionCount=document.querySelector('.section-label .count');
+  const liveRegion=document.querySelector('.filter-status');
+  const hero=document.getElementById('hero');
+
+  function recomputeChipCounts(){
+    const total=stories.length;
+    chips.forEach(c=>{
+      const tag=c.dataset.filter;
+      const n=tag==='all'?total:stories.filter(s=>(s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const countEl=c.querySelector('.count');
+      if(countEl) countEl.textContent=n;
+      if(tag!=='all' && n===0){ c.setAttribute('disabled',''); }
+    });
+  }
+
+  function applyFilter(filter){
+    if(bigPicture) bigPicture.hidden=(filter!=='all');
+    let visibleNonHero=0;
+    stories.forEach(s=>{
+      const tags=(s.dataset.tags||'').split(/\s+/);
+      const match=(filter==='all'||tags.includes(filter));
+      s.hidden=!match;
+      if(match && s!==hero) visibleNonHero++;
+    });
+    chips.forEach(c=>c.setAttribute('aria-pressed',c.dataset.filter===filter?'true':'false'));
+    if(sectionCount){
+      const existing=sectionCount.textContent||'';
+      const m=existing.match(/^\d+(.*)$/);
+      sectionCount.textContent=(visibleNonHero)+(m?m[1]:' stories');
+    }
+    if(liveRegion){
+      const label=chips.find(c=>c.dataset.filter===filter);
+      const name=label?label.textContent.replace(/·.*$/,'').trim():filter;
+      liveRegion.textContent='Showing '+visibleNonHero+' of '+(stories.length-1)+' stories — '+name;
+    }
+    if(filter==='all'){ history.replaceState(null,'',location.pathname+location.search); }
+    else { history.replaceState(null,'','#filter='+filter); }
+  }
+
+  chips.forEach(c=>c.addEventListener('click',()=>{ if(!c.hasAttribute('disabled')) applyFilter(c.dataset.filter); }));
+
+  recomputeChipCounts();
+  const hash=location.hash.match(/^#filter=(\w+)$/);
+  const initial=hash?hash[1]:'all';
+  applyFilter(initial);
+})();
+</script>
+</body>
+</html>
