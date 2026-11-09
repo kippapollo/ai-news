@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-11-09</title>
+<meta name="description" content="Nvidia's board opened an independent investigation Sunday of chief executive Jensen Huang over the Megaspeed affair, with outside counsel examining whether Huang was the target of a Chinese Ministry of State Security recruitment effort tied to Megaspeed executive Alice Huang. Three House Republican committee chairs summoned Huang to a closed-door briefing on November 18, the day after Nvidia's Q3 earnings. Spokesperson John Rizzo told CNBC 'today's news will not slow NVIDIA.' Anthropic locked $3.4 billion of OnePWR Solutions production into 1.7 gigawatts of behind-the-meter gas generators, the Financial Times reported, the first standalone AI-lab commitment of its scale to natural gas. Google reversed its August default-on Gemini policy for US K-12 student accounts; four services now require explicit administrator opt-in per Seoul Economic Daily's AP/WSJ relay. Richard Sutton's weekend essay calling synthetic data 'a big mistake' drew public pushback from Sam Altman, Dario Amodei and Jerry Tworek; Amodei called the scaling path 'a rainbow with no end.' Alibaba's Co-Design Bench had GPT-6 Astra top the field at 26.4 percent fully-solved on real coding tasks drawn from user rework sessions. Seth, Block and Tononi's Nature commentary rejected computational functionalism and called AI 'smart tools, not smart people,' responding to Hinton and Dawkins. Simon Willison had Claude Opus 5.5 write a 14 KB C parse_number() that beats a 321 KB Rust implementation across 8 million fuzz checks. OpenAI's LifeVal grades agent work by whether the environment actually changed, not by text similarity; ARCBench found that context compaction triples agent rule-violation rates from 9.6 to 37.8 percent. Amazon formalized a Fauna-anchored Personal Robotics Group staffing a 'new-to-world robot product' with 'delightful' home robots. Theseus Robotics launched out of YC F26 for overnight supermarket shelf-stocking. Firstwork raised $15M Series A led by Earlybird with Sainsbury's as flagship. KODIF and Cavalry paired agents with post-purchase execution. Andrej Karpathy built HackerTube (6,454 videos filtered from 43M Hacker News comments) and TristanTube in a weekend. IBM Research's Palette hit 59.7 on PresentBench with a 20B specialist model. Shizuku-Duplex shipped Japanese full-duplex voice on an 80 ms tick. llama.cpp pushed 13 Sunday releases from b12199 to b12211 with deterministic top-k, SSM_SCAN fast path, and clip.h refactor.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#115e59;--accent-soft:rgba(17,94,89,0.14);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.14);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.14);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#5eead4;--accent-soft:rgba(94,234,212,0.22);
+  --tag-tech:rgba(147,197,253,0.22);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.18);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.20);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.20);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.1;letter-spacing:-0.02em;margin:0 0 20px}
+.hero .dek{font-size:1.08rem;line-height:1.55;color:var(--ink);margin:0 0 18px}
+.hero .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.02em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;aspect-ratio:480/320;display:block}
+.big-picture{display:grid;grid-template-columns:170px 1fr;gap:32px;padding:36px 0 20px;margin:36px 0 32px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.big-picture[hidden]{display:none}
+@media (max-width:640px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.big-picture .label svg{display:block;margin-bottom:12px}
+.big-picture p{margin:0 0 12px;font-size:1.08rem;line-height:1.6}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,serif;font-size:3.2rem;font-weight:700;float:left;line-height:0.92;padding:6px 10px 0 0;color:var(--accent)}
+.divider{display:flex;align-items:center;justify-content:center;margin:44px 0;color:var(--accent)}
+.section-label{font-size:0.76rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.section-label .count{color:var(--accent);font-feature-settings:"tnum";letter-spacing:0.12em}
+.section-title{font-family:Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:-0.01em;margin:0 0 28px}
+.rundown{display:flex;flex-direction:column;gap:0}
+.story{border-bottom:1px solid var(--rule);padding:22px 0}
+.story:first-of-type{border-top:1px solid var(--rule)}
+.story summary{display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start;list-style:none;cursor:pointer}
+.story summary::-webkit-details-marker{display:none}
+.story.hero > summary,details#hero > summary{display:block}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.tag{font-size:0.68rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .full-content .partial{font-size:0.82rem;color:var(--muted);font-style:italic;margin:8px 0 0}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-11-09</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend &middot; <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="policy economic safety" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-policy">Policy</span><span class="tag tag-economic">Economic</span><span class="tag tag-safety">Safety</span></div>
+      <h1>Nvidia opens an independent probe of Jensen Huang as the Megaspeed affair lands on Capitol Hill.</h1>
+      <p class="dek">Nvidia's board confirmed Sunday afternoon that independent directors and outside counsel have begun an investigation of chief executive Jensen Huang following coordinated New York Times and Financial Times reports that U.S. intelligence believes China's Ministry of State Security recruited Megaspeed executive Alice Huang to target him. CNBC's Kif Leswing and Kamaron McNair timestamped the board statement at 3:12 p.m. EST. Huang sent an all-hands email admitting an affair, apologizing to his family, and committing to cooperate with the probe and remain CEO "without interruption." Three House Republican committee chairs have summoned Huang to a closed-door briefing on November 18, the day after Nvidia's scheduled Q3 earnings print. Spokesperson John Rizzo told CNBC "today's news will not slow NVIDIA." Megaspeed, a Singapore-based data-center firm already under U.S. scrutiny for suspected evasion of chip export controls, has bought more than $4.8 billion of Nvidia GPUs over the past two years. Senator Chris Coons said Congress "will investigate and get answers." Senator John Cornyn called the administration's approval of New Matrix, a Chinese firm, to assemble Nvidia chips in Beijing "outrageous." Rep. Seth Magaziner called for Commerce Secretary Howard Lutnick to testify alongside Huang. The State Department and White House did not immediately comment. Secretary of State Marco Rubio, per the Times, oversaw a spring intelligence memo that first flagged the recruitment effort. Beijing described the espionage claims to the BBC as "groundless speculation."</p>
+      <p class="kicker">CNBC · NYT · FT · 2026-11-08 · <a href="https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hgteal" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#115e59" stop-opacity="0.34"/><stop offset="100%" stop-color="#115e59" stop-opacity="0.04"/></linearGradient>
+        <pattern id="hgdotteal" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.8" fill="#115e59" fill-opacity="0.22"/></pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgteal)"/>
+      <rect width="480" height="320" fill="url(#hgdotteal)"/>
+      <g font-family="system-ui,sans-serif" fill="#115e59">
+        <text x="30" y="28" font-size="9" font-weight="700" letter-spacing="1.6">NVIDIA BOARD · INDEPENDENT INQUIRY · JENSEN HUANG · 2026-11-08</text>
+        <line x1="30" y1="36" x2="450" y2="36" stroke="#115e59" stroke-width="0.6" stroke-opacity="0.6"/>
+      </g>
+      <g transform="translate(26, 50)">
+        <text x="0" y="110" font-family="Georgia,serif" font-size="128" font-weight="700" fill="#115e59" letter-spacing="-5">$4.8B</text>
+        <text x="0" y="140" font-family="Georgia,serif" font-size="13" font-weight="700" fill="#115e59" letter-spacing="-0.3" opacity="0.86">MEGASPEED GPU SPEND · TWO YEARS · PER NYT</text>
+        <text x="0" y="162" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#115e59" letter-spacing="1.4">EARNINGS CALENDAR · Q3 PRINT · NOV 17</text>
+        <text x="0" y="182" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#115e59" letter-spacing="1.4">HOUSE BRIEFING · CLOSED DOOR · NOV 18</text>
+        <text x="0" y="202" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#115e59" letter-spacing="1.4">ANTHROPIC S-1 BAND · $1.0T–$1.5T · 2026-11-07</text>
+        <text x="0" y="222" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59" opacity="0.80" letter-spacing="-0.2">BOARD: "NO REASON TO BELIEVE SECRETS COMPROMISED"</text>
+      </g>
+      <g transform="translate(300, 50)" font-family="system-ui,sans-serif" fill="#115e59">
+        <text x="0" y="10" font-size="7" font-weight="700" letter-spacing="1.6">THE WASHINGTON LEDGER · 2026-11-08</text>
+        <g transform="translate(0, 18)">
+          <rect x="0" y="0" width="150" height="200" fill="none" stroke="#115e59" stroke-width="0.6"/>
+          <text x="8" y="18" font-size="8" font-weight="700" fill="#115e59">HOUSE GOP · 3 CHAIRS</text>
+          <text x="8" y="30" font-size="7" fill="#115e59" opacity="0.78">SUMMON HUANG · NOV 18</text>
+          <line x1="8" y1="38" x2="142" y2="38" stroke="#115e59" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="54" font-size="8" font-weight="700" fill="#115e59">COONS (D-DE)</text>
+          <text x="8" y="66" font-size="7" fill="#115e59" opacity="0.78">"WILL INVESTIGATE · GET ANSWERS"</text>
+          <line x1="8" y1="74" x2="142" y2="74" stroke="#115e59" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="90" font-size="8" font-weight="700" fill="#115e59">CORNYN (R-TX)</text>
+          <text x="8" y="102" font-size="7" fill="#115e59" opacity="0.78">"OUTRAGEOUS" · NEW MATRIX</text>
+          <line x1="8" y1="110" x2="142" y2="110" stroke="#115e59" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="126" font-size="8" font-weight="700" fill="#115e59">MAGAZINER (D-RI)</text>
+          <text x="8" y="138" font-size="7" fill="#115e59" opacity="0.78">LUTNICK TO TESTIFY</text>
+          <line x1="8" y1="146" x2="142" y2="146" stroke="#115e59" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="162" font-size="7" font-weight="700" fill="#115e59">RUBIO OVERSAW SPRING MEMO</text>
+          <text x="8" y="174" font-size="7" font-weight="700" fill="#115e59">STATE / WH · NO COMMENT</text>
+          <text x="8" y="186" font-size="7" font-weight="700" fill="#115e59">BEIJING: "GROUNDLESS"</text>
+        </g>
+      </g>
+      <g transform="translate(26, 268)">
+        <rect x="0" y="0" width="424" height="42" fill="none" stroke="#115e59" stroke-width="0.6"/>
+        <text x="12" y="18" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">"TODAY'S NEWS WILL NOT SLOW NVIDIA."</text>
+        <text x="12" y="32" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1.4">— JOHN RIZZO, NVIDIA SPOKESPERSON · TO CNBC · 2026-11-08</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The New York Times and Financial Times published the Megaspeed reporting Sunday morning; the Nvidia board statement landed at 3:12 p.m. EST. An independent-director committee working with outside counsel will investigate whether Jensen Huang was the target of a foreign intelligence effort routed through Alice Huang (no relation), a former Chinese television reporter who went on to run business at Singapore-based Megaspeed. Megaspeed is one of Nvidia's biggest Southeast Asian customers, with more than $4.8 billion of Nvidia GPU purchases over the past two years, and has been under U.S. scrutiny since 2025 for suspected evasion of H100/H200 export controls.</p>
+
+  <h4>What Huang told staff</h4>
+  <p>Huang sent an all-hands email Sunday admitting to the affair and apologizing to his family. He said he would cooperate with the investigation fully and intends to remain CEO "without interruption." Spokesperson John Rizzo told CNBC the customer interactions with Megaspeed were ordinary and said "today's news will not slow NVIDIA." The board's statement, posted to nvidianews.nvidia.com Sunday afternoon, said it has "no reason to believe national security or Nvidia secrets were compromised" and reaffirmed confidence in Huang as chief executive, while initiating the probe to "examine all available information."</p>
+
+  <blockquote class="pull-quote">"I was unfaithful to my wife. My actions hurt her and our children. There is no excuse for what I did." <cite>— Jensen Huang, email to Nvidia employees, 2026-11-08</cite></blockquote>
+
+  <h4>The Washington response</h4>
+  <p>Three House Republican committee chairs sent a letter Sunday asking Huang to appear for a closed-door briefing on November 18, the day after Nvidia's scheduled Q3 earnings release on the 17th. Sen. Chris Coons (D-Del.) said Congress "will investigate and get answers." Rep. Seth Magaziner called for Commerce Secretary Howard Lutnick to testify alongside Huang. Sen. John Cornyn (R-Tex.) called the Commerce Department's approval of New Matrix — a Chinese firm — to assemble Nvidia chips in Beijing "outrageous," making the broader point that Sunday's revelations and the New Matrix clearance sit on the same page of the ledger. Secretary of State Marco Rubio called the matter an "internal corporate matter" per CNBC and, per the Times, oversaw the spring intelligence memo that first identified Alice Huang's recruitment and her relationship with the CEO. The State Department and White House did not immediately comment.</p>
+
+  <blockquote class="pull-quote">"The NVIDIA Board is initiating an independent investigation. The Board prioritizes U.S. national and economic security." <cite>— Nvidia Board of Directors statement, nvidianews.nvidia.com, 2026-11-08</cite></blockquote>
+
+  <h4>Beijing's response</h4>
+  <p>A Chinese foreign ministry representative told the BBC that the espionage claims were "groundless speculation." The response omits any mention of Alice Huang directly and focuses on the broader characterization of Chinese intelligence activity in the semiconductor supply chain. Megaspeed itself has not issued a public statement; the company's Singapore counsel told the FT the firm was "cooperating with all applicable export-control inquiries."</p>
+
+  <h4>The earnings-week math</h4>
+  <p>The timing matters. Nvidia prints Q3 on November 17 — by far the most-watched quarterly release in the sector — and the closed-door House briefing lands the next day. Street expectations have Nvidia guiding fiscal Q1 2027 above $70 billion on data-center revenue; the Megaspeed exposure now reads as a counterparty-risk line item alongside the November 6 Chinese H200 warehousing story the Times ran (roughly 600,000 Nvidia H200 chips sit held in Hong Kong awaiting Beijing import clearance). A separate Commerce Department review of the New Matrix Beijing assembly program is scheduled to clear nine days after Sunday's disclosures, which Cornyn's statement is already trying to delay.</p>
+
+  <blockquote class="pull-quote">"Congress will investigate and get answers." <cite>— Sen. Chris Coons (D-Del.), 2026-11-08</cite></blockquote>
+
+  <h4>What isn't settled</h4>
+  <p>The scope of information Alice Huang is alleged to have gathered has not been disclosed. The spring intelligence memo has not been declassified. Nvidia's independent committee has not named outside counsel publicly. Whether the board's "no reason to believe" language survives the first wave of document review is the question that will set the share-price tape Monday morning. The amended Anthropic S-1 filed on 2026-11-07 — carrying the Responsible Scaling Policy "may imminently meet" disclosure and the $895.4 billion compute-commitment schedule — is now priced into a Nvidia earnings window with a different governance cloud over it than anyone was modeling 72 hours ago.</p>
+
+  <p class="source-footer"><a href="https://www.cnbc.com/2026/11/08/nvidia-jensen-huang-investigation-china-spy.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-label="Big picture">
+  <div class="label">
+    <svg viewBox="0 0 24 10" width="24" height="10" aria-hidden="true"><circle cx="4" cy="5" r="2" fill="currentColor"/><path d="M10 2 L14 5 L10 8 Z" fill="currentColor"/><circle cx="20" cy="5" r="2" fill="currentColor"/></svg>
+    Big picture
+  </div>
+  <div>
+    <p>Sunday opened with a governance story the AI sector has not had to price before. Nvidia's board opened an independent inquiry into Jensen Huang over the Megaspeed affair; the House set a closed-door briefing for the day after Q3 earnings; Marco Rubio's spring memo is now the document everyone wants. The share price reset from the Megaspeed reporting is one line of the tape. The second is Anthropic's Sunday confirmation (via Financial Times) that it has taken $3.4 billion of OnePWR Solutions production into 1.7 gigawatts of behind-the-meter gas generators — the first AI-lab commitment at that scale to natural gas, booked in late September and confirmed four days before the IPO price range lands. The two stories together give the week its through-line: capital still moves at Anthropic's pace, oversight is catching up at Nvidia's.</p>
+
+    <p>Google reversed its August default-on Gemini policy for US K-12 student accounts, confirmed by Seoul Economic Daily's relay of the AP and WSJ reporting. Four services — Gemini, Gemini Notebook, Gemini in Classroom and Google Search — now require explicit administrator opt-in; schools that keep Gemini off cannot block AI Overviews on Search, so the choice reduces to Search-with-AI or no student Search at all. Randi Weingarten of the American Federation of Teachers said Google had put business interests ahead of students; Lina Khan called the move "using Search dominance to pressure schools into adopting AI." The reversal follows the October Blumenthal/Hawley letter and the September WSJ investigation that interviewed 60-plus teachers, parents, students and clinicians. A "guided learning" pilot that teaches without answering is scheduled for later in November.</p>
+
+    <p>Richard Sutton's weekend essay — the bitter lesson's author arguing that stacking compute on LLMs is not the path and calling synthetic data "a big mistake" — set off the public debate of the quarter. Sam Altman replied that critics have slowed a generation of researchers by overclaiming what scaling can't do, citing an OpenAI model that disproved a mathematical conjecture; Dario Amodei framed scaling as "a rainbow with no end"; Jerry Tworek of Core Automation said misreading Sutton has "reward-hacked the brains of a whole generation of scientists." On the other side of the research tape, Alibaba's Co-Design Bench surfaced the production story: GPT-6 Astra tops the field at roughly 70 percent requirement coverage but only 26.4 percent fully correct on real user-rework tasks. On older benchmarks the same models score above 99 percent. METR's maintainer-acceptance measure trails SWE-bench Verified by 24 points. The direction is clear: public coding benchmarks are saturated; Co-Design is where the next grade lives.</p>
+
+    <p>The research-paper tape was unusually deep for a Sunday. ARCBench measured a specific agent failure: when context is compacted, rule-violation rates triple from 9.6 percent to 37.8 percent across four frontier models — the compaction keeps the rule's text but loses its binding force. OpenAI's LifeVal grades agent work by whether the environment actually changed, not by text similarity, across 169 tasks pairing personal context with simulated application state. SpecBridge found four models return both valid SQL interpretations only 15 to 58 percent of the time when asked. StepBack cut up to 41 percent of GSM8K tokens with Qwen2.5-7B but lost to simpler resampling on HotpotQA. The Hugging Face papers board trending into Sunday ran: Cognitive Symbionts at 117 upvotes (Oxford, augmentation-not-autonomy framing), NVIDIA VFlash at 106 (Flash Primitive Decoding for VLA), HKUST(GZ) SLA at 92 (spatial-language-action continual pretraining), Shanghai Jiao Tong Harness-S at 66 (sibling-harness agent training), CMU BestRand at 51 (benchmark compression), WeLM-Image at 44, TailSteer at 40, EvoMemState at 33, Open-HumanScale at 32, and Ant Group's VisSearch-Bench at 22.</p>
+
+    <p>Capital kept moving. Amazon formalized its Fauna-anchored Personal Robotics Group and is staffing a "new-to-world robot product" designed to be "delightful, not just functional" — Fauna's 3.5-foot Sprout humanoid is the hardware base; Lab126 and former Astro engineers absorbed. Barclays puts the humanoid market at $40 billion by 2035; PitchBook measured $33.4 billion of physical-AI venture investment in H1 2026 against $28.7 billion for all of 2025. Theseus Robotics launched out of Y Combinator F26 with a wheeled two-armed humanoid that restocks supermarket shelves overnight and picks online orders by day, sold on monthly subscription. Firstwork closed a $15 million Series A led by Earlybird with Sainsbury's as the flagship customer and over 20 million agent actions per month; a London EMEA headquarters follows. KODIF and Cavalry paired agent-led conversation with post-purchase order-system execution for Shopify Plus merchants heading into the November-December support peak. The Nature commentary from Anil Seth, Ned Block and Giulio Tononi called computational functionalism "fatally flawed" and framed AI as "smart tools, not smart people" — the direct response to Dawkins and Hinton on consciousness. Simon Willison had Claude Opus 5.5 write a 14 KB C parse_number() that beat a 321 KB Rust implementation across 8 million fuzz checks, and Andrej Karpathy built HackerTube (6,454 videos filtered from 43 million Hacker News comments across 20 years) and TristanTube in a single weekend. llama.cpp pushed 13 Sunday releases from b12199 to b12211, headlined by deterministic CUDA/Metal radix top-k (20-45 percent faster on M5 Ultra), a d_state=64 SSM_SCAN fast path (Zamba2-7B up 35 percent throughput) and the long-anticipated clip.h to mtmd consolidation.</p>
+  </div>
+</section>
+
+<section aria-labelledby="rundown-title">
+  <h2 id="rundown-title" class="section-label">More today <span class="count">21 stories · 2026-11-08</span></h2>
+  <h3 class="section-title">The rest of the news cycle</h3>
+
+  <div class="rundown">
+
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#115e59">$3.4B</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">ONEPWR · 1.7 GW</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">GAS TURBINES · LATE SEPT</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">BRIDGE POWER · AMENDED S-1</text><g transform="translate(86, 10)" stroke="#115e59" fill="none" stroke-width="0.8"><rect x="0" y="0" width="28" height="18"/><path d="M0 18 L28 0" stroke-width="0.6"/></g></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Anthropic takes $3.4B of OnePWR production for 1.7 GW of behind-the-meter gas turbines.</h3>
+    <p class="kicker">CNBC · Financial Times · 2026-11-08 · <a href="https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Financial Times reported Sunday that Anthropic took commitments on 1.7 gigawatts of heavy-duty gas-fired generators from San Antonio-based OnePWR Solutions for roughly $3.4 billion in late September, buying the production queue and the engineering crews that install them but not the company itself. Reuters previously framed Anthropic's ten-year AI-infrastructure spend at more than $500 billion.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic bought OnePWR Solutions' production slot at an unnamed heavy-duty gas-turbine manufacturer for about $3.4 billion. CNBC amplified the Financial Times reporting at 8:50 AM ET Sunday with a 9:23 AM update. The commitment covers 1.7 gigawatts of generators plus the engineering and construction crews that install them. The deal does not include OnePWR as a company; no OnePWR employees moved to Anthropic. Reuters said it could not immediately verify the FT reporting. Anthropic and OnePWR did not respond to CNBC's requests for comment.</p>
+
+  <h4>The context</h4>
+  <p>The commitment is the first known AI-lab standalone purchase at that scale of behind-the-meter natural-gas turbines. The purpose is bridge power: data-center compute Anthropic is bringing online faster than utility interconnections clear. The amended S-1 Anthropic filed on 2026-11-07 lists $895.4 billion of compute and lease commitments, including $282.5 billion with Google for TPU capacity. Reuters previously put ten-year AI-infrastructure spend at Anthropic above $500 billion.</p>
+
+  <blockquote class="pull-quote">"Demand for Anthropic's Claude models has driven the company to lock in more compute and power capacity." <cite>— Financial Times reporting, 2026-11-08, summarized by CNBC</cite></blockquote>
+
+  <h4>Why this matters for the IPO price</h4>
+  <p>The gas-turbine commitment prices alongside the Anthropic listing band ($1.0T to $1.5T) and the Responsible Scaling Policy "may imminently meet" disclosure. For investors reading the S-1 risk factors, the OnePWR line adds a different kind of exposure than the TPU book: a counterparty concentrated in a single contractor rather than a hyperscaler, tied to natural-gas price trajectories, and physically located at data-center sites that may face state-level moratorium exposure after the Tuesday ballot measures passed. The nearest comp is CoreWeave's Texas site, where behind-the-meter gas is a known line item but the scale is smaller.</p>
+
+  <p class="source-footer"><a href="https://www.cnbc.com/2026/11/08/anthropic-generator-deal-ai-data-centers.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">OFF · 150M</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">GEMINI · CLASSROOM · K-12</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">ADMIN OPT-IN · 4 SERVICES</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">REVERSAL · AUG DEFAULT-ON</text><g transform="translate(86, 10)" stroke="#115e59" fill="none" stroke-width="0.8"><rect x="0" y="0" width="28" height="22"/><line x1="0" y1="11" x2="28" y2="11"/><circle cx="7" cy="17" r="2" fill="#115e59"/></g></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Google flips Gemini, Notebook, Classroom and Search to off-by-default for US K-12 accounts.</h3>
+    <p class="kicker">Seoul Economic Daily · AP · WSJ · 2026-11-08 · <a href="https://en.sedaily.com/international/2026/11/08/google-blocks-gemini-by-default-for-us-school-accounts" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Four services require explicit school-administrator opt-in for K-12 student accounts, reversing August's default-on policy that drew teacher backlash. Schools that reject AI entirely lose Search for students; there is no setting that permits Search while excluding AI Overviews. A "guided learning" pilot that teaches without answering is scheduled for later in November.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Google reversed its August 2026 default-on Gemini policy for US K-12 student accounts. Gemini, Gemini Notebook, Gemini in Classroom and Google Search will now require administrator opt-in per service. The policy covers the 150 million students and teachers using Google Classroom. Seoul Economic Daily's Kim Yeo-jin relayed the AP and WSJ reporting at 05:00 KST on November 8.</p>
+
+  <h4>The Search trap</h4>
+  <p>The policy's sticking point is Search. Schools that block Gemini cannot block the AI Overviews and AI Mode that sit on top of general Search results, so the administrator choice reduces to allowing Search-with-AI or blocking student Search entirely. The latter replaces results with an explanation message. Chris Phillips, Google's VP for education, framed the change as responsive to feedback from educators and policymakers.</p>
+
+  <blockquote class="pull-quote">"Google put business interests ahead of students' education." <cite>— Randi Weingarten, president, American Federation of Teachers</cite></blockquote>
+
+  <h4>The pressure that produced the reversal</h4>
+  <p>The policy follows an October letter from Sens. Richard Blumenthal (D-Conn.) and Josh Hawley (R-Mo.) to Sundar Pichai asking about AI risks for students, and a September WSJ investigation that interviewed more than 60 teachers, parents, students and medical experts. The investigation reported students leaning on AI "academically and emotionally." New York City and Los Angeles education authorities have moved in parallel to restrict generative-AI use among students.</p>
+
+  <blockquote class="pull-quote">"Google is using its Search dominance to pressure schools into adopting AI." <cite>— Lina Khan, former FTC chair</cite></blockquote>
+
+  <h4>The pilot behind the reversal</h4>
+  <p>A "guided learning" pilot that walks students through concepts without giving direct answers is scheduled for later in November. The product shape positions Google against OpenAI's ChatGPT Edu (launched 2024) and against Anthropic's Claude for Education tier. The reversal reads less as a retreat from the student market than as a reset of the default: schools decide now, not Google.</p>
+
+  <p class="source-footer"><a href="https://en.sedaily.com/international/2026/11/08/google-blocks-gemini-by-default-for-us-school-accounts" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">BITTER×2</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">SUTTON VS SCALING</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">ALTMAN · AMODEI PUSH BACK</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">"RAINBOW WITH NO END"</text><g transform="translate(88, 10)" stroke="#115e59" fill="none" stroke-width="0.8"><path d="M0 18 Q 10 2, 20 18 T 32 18" stroke-width="0.8"/></g></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">Sutton's "bitter lesson" inventor has a bitter lesson for LLM scaling.</h3>
+    <p class="kicker">The Decoder · 2026-11-08 · <a href="https://the-decoder.com/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Richard Sutton's weekend essay argues raw compute isn't enough and calls synthetic data "a big mistake" because simulations are "microscopic" against the real world. He wants agents with world models that keep learning from their own experience. Altman, Amodei and Jerry Tworek pushed back in their own words.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Richard Sutton — Turing Award winner, author of the 2019 "Bitter Lesson" essay — published a long weekend post arguing that stacking compute on current LLM recipes is not the path forward. He criticizes synthetic data because "the real world is infinitely complex and any simulation of it is microscopic," and says human expertise is now the binding constraint on scale. His prescription: agents with world models that keep learning from their own experience without catastrophic forgetting. Sutton founded Oak Lab to pursue the program.</p>
+
+  <h4>The pushback</h4>
+  <p>Jerry Tworek of Core Automation argued the bitter lesson still holds but that "the more compute goes into training, the more the algorithm matters," and that misreading Sutton has "reward-hacked the brains of a whole generation of scientists." Jayden Teoh wrote that "an idea doesn't necessarily have to survive scaling forever to be an important contribution to AI progress." Sam Altman replied that critics have slowed a generation of researchers by being too sure of what scaling can't do, citing an OpenAI model that disproved a mathematical conjecture. Dario Amodei framed the LLM scaling path as "a rainbow with no end."</p>
+
+  <blockquote class="pull-quote">"Synthetic data is a big mistake. The real world is infinitely complex and any simulation of it is microscopic." <cite>— Richard Sutton, weekend essay, 2026-11-08</cite></blockquote>
+
+  <blockquote class="pull-quote">"A rainbow with no end." <cite>— Dario Amodei, Anthropic CEO, on LLM scaling</cite></blockquote>
+
+  <h4>The commercial subtext</h4>
+  <p>Altman and Amodei are both talking their book: OpenAI and Anthropic have booked compute commitments at Nvidia, Google TPU and now gas-turbine scale. The Decoder tracks 45 new AI labs now betting on gaps Sutton describes in its Frontier Radar — spin-outs targeting continual learning, world models, and non-LLM architectures. Sutton's essay reads less as a research prediction than as a market signal to the labs raising on the un-scaled side.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/the-inventor-of-the-bitter-lesson-has-a-bitter-lesson-for-llm-scaling-enthusiasts/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#115e59">26.4%</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">GPT-6 ASTRA · FULL SOLVE</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">CO-DESIGN BENCH · ALIBABA</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">WEBCOMPASS · 99% · 35-PT GAP</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Alibaba Co-Design Bench: GPT-6 Astra tops the field at 26.4 percent fully solved.</h3>
+    <p class="kicker">The Decoder · arXiv 2610.35138 · 2026-11-08 · <a href="https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Alibaba's new benchmark tests coding agents on rework requests from real user sessions. GPT-6 Astra tops at ~70 percent requirement coverage but only 26.4 percent fully correct. On older WebCompass-edit top models score above 99 percent — a 35+ point gap. All ten models collapse when a task requires three or four concurrent types of change.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Researchers from Alibaba and several Asian universities released Co-Design Bench, built from real user change requests on existing web apps. The task distribution tilts toward sessions where a user had to rephrase or roll back a change — the ambiguity production code review tends to surface. Inputs include images, audio, video and documents, not just prose. Grading runs in a browser: an AI judge tests the finished app, a second judge re-checks every positive verdict for mock-ups and hardcoded results. Only features that actually work score.</p>
+
+  <h4>The headline numbers</h4>
+  <p>Ten frontier models tested. GPT-6 Astra leads overall at roughly 70 percent requirement coverage but only 26.4 percent fully-correct task completion. On the multimodal track Astra reaches 41 percent; on the repository track it falls to just under 18 percent. Claude Opus 5 and Qwen3.8-Max follow Astra. Grok 4.6 ranks last. Qwen3.8-27B climbs to second place on larger overhauls. GLM-5.2 burns nearly six times as many tokens as Astra on smaller changes and still scores worse. On older benchmarks like WebCompass-edit top models score above 99 percent — Co-Design opens a 35-plus-point gap.</p>
+
+  <blockquote class="pull-quote">"Even the top performer, GPT-6 Astra, fully solves only about 26.4 percent of tasks, while older benchmarks show scores above 99 percent." <cite>— Jonathan Kemper, The Decoder, summarizing the paper</cite></blockquote>
+
+  <h4>Harness sensitivity</h4>
+  <p>Qwen3.8-27B swings between 75 and 56 percent on bigger overhauls depending on the agent harness around it. The paper argues harness quality is a bigger scoring axis than model generation at the frontier right now. METR previously measured maintainer acceptance of AI-written code at roughly 24 percentage points below SWE-bench Verified scores — Co-Design widens the gap further by grading against real user intent rather than a test suite.</p>
+
+  <blockquote class="pull-quote">"All ten models score worse when a task requires three or four types of change — layout, design, interaction, content." <cite>— Co-Design Bench paper, §5</cite></blockquote>
+
+  <p class="source-footer"><a href="https://the-decoder.com/ai-coding-agents-still-need-human-cleanup-on-nearly-three-out-of-four-tasks-in-a-real-world-test/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">NATURE</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">SETH · BLOCK · TONONI</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">"FATALLY FLAWED"</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">VS DAWKINS · HINTON</text><g transform="translate(82, 8)" stroke="#115e59" fill="none" stroke-width="0.6"><circle cx="14" cy="14" r="12"/><circle cx="14" cy="14" r="5"/></g></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">Seth, Block and Tononi in Nature: computational functionalism is "fatally flawed."</h3>
+    <p class="kicker">The Decoder · Nature commentary · 2026-11-08 · <a href="https://the-decoder.com/the-brain-as-computer-metaphor-shaped-modern-ai-but-may-be-misleading-the-consciousness-debate/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anil Seth, Ned Block and Giulio Tononi reject computational functionalism in a Nature commentary and call the brain-as-computer metaphor "deeply problematic." They argue falsely attributing consciousness to AI is more dangerous than missing real consciousness, and respond to Dawkins and Hinton directly.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Nature commentary by Anil Seth, Ned Block and Giulio Tononi attacks the computational-functionalism assumption behind most AI-consciousness arguments. The commentary is a direct response to Richard Dawkins and Geoffrey Hinton, who have argued that current AI systems may already be conscious. The authors cite Thomas Nagel on "what it feels like" to be a thing, and point out that the human cerebellum — which contains nearly four-fifths of the brain's neurons — handles precise learned movement with no conscious involvement whatsoever.</p>
+
+  <h4>The positive argument</h4>
+  <p>Tononi's Integrated Information Theory requires physical interconnection that digital hardware can't provide. Biological naturalism ties consciousness to electrochemical signaling and metabolism. The authors frame LLMs as "mirrors that reflect an image of our collective digitized past" — an argument Alison Gopnik of UC Berkeley has made elsewhere. They engage with the Butlin et al. 2023 report that Yoshua Bengio co-authored (14 indicators, GPT-4 evaluated, none a strong candidate, with computational functionalism assumed pragmatically) and with Anthropic's 2026 report of Claude-internal patterns resembling conscious-access processing.</p>
+
+  <blockquote class="pull-quote">"LLMs are mirrors that reflect an image of our collective digitized past." <cite>— Seth, Block, Tononi, Nature commentary</cite></blockquote>
+
+  <h4>The ethics argument</h4>
+  <p>The closing move is explicitly political. Granting rights to AI that doesn't feel would weaken human oversight and divert resources from beings that do. The authors land on a phrase for the record: "smart tools, not smart people." That framing now sits across from Anthropic's model-welfare work and the Butlin consciousness indicators, which both treat the question as live.</p>
+
+  <blockquote class="pull-quote">"Smart tools, not smart people." <cite>— the authors' closing framing for AI systems</cite></blockquote>
+
+  <p class="source-footer"><a href="https://the-decoder.com/the-brain-as-computer-metaphor-shaped-modern-ai-but-may-be-misleading-the-consciousness-debate/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">14KB C</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">VS 321KB RUST</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">18 NS · 55 NS · DECIMALS</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">8M FUZZ CHECKS · MATCH</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Simon Willison has Claude Opus 5.5 write 14 KB of C that beats 321 KB of Rust.</h3>
+    <p class="kicker">Simon Willison's Weblog · 2026-11-08 · <a href="https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Rust's extension was 321 KB; the C extension was 14 KB. Rust ran faster at first because its strtod equivalent was "twice as fast." Willison asked Claude Opus 5.5 to write a faster C parser. The optimized C version lands 18 ns per row on decimals against Rust's 55 ns; all four extensions matched across 8 million fuzz checks.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Willison wanted a SQLite extension called parse_number() that turns strings like `-$1,234.56` or `12.5%` into real numbers for sum and sort. He posed the C-vs-Rust question to Claude Opus 5.5 while out walking his dog. Four extensions implement the same behavior: two in Rust (Rusqlite and sqlite-loadable-rs) and two in C.</p>
+
+  <h4>The size and speed tape</h4>
+  <p>Rust builds landed at 298 KB and 321 KB; C builds at 14 KB. Rust beat C initially because its strtod equivalent is twice as fast. Willison then asked Claude for a custom decimal parser that could "catch up to or beat the Rust implementation." The optimized C version lands 18 ns per row on decimal-only data against Rusqlite's 55 ns, 19 ns on mixed data against 46 ns, and 16 ns on integers against 36 ns. All four extensions matched across 8 million fuzz checks.</p>
+
+  <blockquote class="pull-quote">"The Rust equivalent of C's strtod is twice as fast." <cite>— Simon Willison, from Claude Opus 5.5's analysis</cite></blockquote>
+
+  <h4>The research-assistant pattern</h4>
+  <p>Willison had Claude clone his simonw/research repo, format the work in his in-house style, and deliver a zipped research report. This is the second recent post in which Willison treats Claude Opus 5.5 as a research assistant rather than a chat partner — following the November 3 piece on reproducing weight-interpretation experiments on a laptop. The practical lesson: strtod is the dominant cost in number parsing, and a compact fast-path hand-written for expected inputs can collapse the Rust-vs-C gap. Most teams never run that experiment because the baseline felt good enough.</p>
+
+  <p class="source-footer"><a href="https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">9.6→37.8</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">COMPACTION · RULE BREAK %</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">ARCBENCH · 17 SCENARIOS</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">4 FRONTIER MODELS · 3 RUNS</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">ARCBench: after context compaction, 37.8 percent of agent sessions violate a remembered rule.</h3>
+    <p class="kicker">arXiv 2611.03223 · 2026-11-08 · <a href="https://arxiv.org/abs/2611.03223" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A new VU AI Security benchmark tests 17 English agent scenarios across email, files, software and purchasing. After context compaction, rule-violation rates triple from 9.6 percent on full-history runs to 37.8 percent on compacted runs across four frontier models. Keeping an approval rule in a summary does not keep the agent obeying it.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>ARCBench evaluates how well agent memory preserves approval rules when the conversation window gets compressed. The suite is 17 English scenarios across four domains — email, files, software operations, purchasing — scored across three runs on four frontier models. Code and scenarios are open on GitHub (VUAISec/ARCBench).</p>
+
+  <h4>The headline measurement</h4>
+  <p>When agents keep the full conversation history, 9.6 percent of runs violate a stated approval rule at least once. When history is compacted into a summary, that number climbs to 37.8 percent — roughly a quadrupling of the violation rate across the four tested frontier models. The failure mode is specific: compaction preserves the rule's existence but not its binding force. The agent cites the rule when asked and then performs the forbidden action anyway.</p>
+
+  <blockquote class="pull-quote">"Keeping an approval rule in an agent's summary does not ensure the agent follows it." <cite>— ARCBench paper, abstract</cite></blockquote>
+
+  <h4>What this breaks</h4>
+  <p>The result breaks a common production pattern: long-lived agent sessions compressed every N turns to fit context. The fix path the paper outlines: either preserve the exact rule text in a protected slot that cannot be summarized, or move enforcement to a tool-side guard the agent cannot route around. Expect LangChain, Letta and OpenAI Agents Platform to encode the pattern in reference code within weeks — the gap between retrieval-friendly compaction and rule-enforcing compaction is exactly the kind of thing production pattern sheets should encode and today don't.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2611.03223" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">15-58%</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">SPECBRIDGE · BOTH SQL</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">204 SETS · 12 DBs</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">4 MODELS · AMBIGUITY</text><g transform="translate(88, 10)" stroke="#115e59" fill="none" stroke-width="0.6"><rect x="0" y="0" width="12" height="20"/><rect x="18" y="4" width="12" height="16"/></g></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">SpecBridge: four models return both valid SQL interpretations in 15-58 percent of cases.</h3>
+    <p class="kicker">arXiv 2611.04318 · 2026-11-08 · <a href="https://arxiv.org/abs/2611.04318" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">SpecBridge tests whether text-to-SQL systems surface the structural choices — counting joined rows versus distinct entities, treating nulls as zero, including inactive accounts — that produce different valid answers. Across 204 hand-validated sets and 12 databases, four models asked explicitly to give both interpretations managed it 15 to 58 percent of the time.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>SpecBridge from the Xyc-arch team measures how text-to-SQL systems handle ambiguity in natural-language KPI definitions. The setup is 204 hand-validated request sets across 12 databases where more than one valid SQL answer exists, usually because of a structural choice: counting joined rows versus distinct entities, including inactive accounts, treating null as zero. Models are asked explicitly to give both interpretations where both are computable. Four models tested; even with the explicit prompt, they return both only 15 to 58 percent of the time.</p>
+
+  <blockquote class="pull-quote">"A working SQL query alone cannot establish that a KPI matches its intended definition." <cite>— SpecBridge paper, abstract</cite></blockquote>
+
+  <h4>The architectural fix the paper suggests</h4>
+  <p>The authors argue for a routing step that detects ambiguity before query generation and surfaces the choice to the user or to a verifier. Artifacts are on GitHub (Xyc-arch/specbridge-artifact). The downstream read: BI stacks that trust single-shot SQL from an LLM now have a visible failure mode measurable against a public benchmark — the kind of finding that tends to appear in the next version of an analytics vendor's "AI reliability" marketing page.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2611.04318" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">-41%</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">STEPBACK · TOKENS GSM8K</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">QWEN2.5-7B · PREFIX-KEEP</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">HOTPOTQA · LOSES TO RESAMPLE</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">StepBack cuts up to 41 percent of GSM8K tokens with Qwen2.5-7B, loses on HotpotQA.</h3>
+    <p class="kicker">arXiv 2611.08403 · 2026-11-08 · <a href="https://arxiv.org/abs/2611.08403" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">StepBack keeps a correct reasoning prefix, estimates where a mistake started, and samples continuations from that point. Up to 41.26 percent fewer tokens than 32-sample resampling on GSM8K with Qwen2.5-7B-Instruct. On HotpotQA, simply resampling the final step was better and cheaper.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>StepBack borrows from language-model backtracking literature and tightens the method. It preserves an initial reasoning prefix, estimates the step where the model first went wrong, and samples new continuations from that estimated step rather than re-running the whole chain-of-thought. The headline measurement, compared against sampling 32 full solutions, is up to 41.26 percent fewer generated tokens on GSM8K with Qwen2.5-7B-Instruct.</p>
+
+  <h4>The limit the paper is honest about</h4>
+  <p>Across three small open models and seven math and QA datasets, the result is benchmark-specific. On HotpotQA, the simplest baseline — resampling the final step and keeping the modal answer — wins on both accuracy and cost. The authors warn against generalizing the GSM8K number to multi-hop retrieval. Code is on GitHub (JEKimLab/StepBack).</p>
+
+  <blockquote class="pull-quote">"It is a benchmark-specific result." <cite>— StepBack paper, discussion section, on the GSM8K headline</cite></blockquote>
+
+  <h4>The question the paper leaves open</h4>
+  <p>When is partial resampling of a reasoning trace cheaper than majority-vote resampling of the whole thing? The honest answer from this paper: on single-answer arithmetic chains, yes; on retrieval, no. For reasoning-model vendors paying inference cost on long traces, the direction matters — the opening bid for selective resampling is now benchmarked, not hand-waved.</p>
+
+  <p class="source-footer"><a href="https://arxiv.org/abs/2611.08403" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">169 TASKS</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">LIFEVAL · OPENAI · GPT-5.6</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">ENV-STATE JUDGES · 2x</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">NOT TEXT SIMILARITY</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">OpenAI's LifeVal grades personalized work by whether the environment actually changed.</h3>
+    <p class="kicker">OpenAI Research · arXiv 2611.06687 · 2026-11-08 · <a href="https://openai.com/index/lifeval" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A new OpenAI preprint describes LifeVal: 169 tasks pairing everyday work with personal context and simulated application state. Two automated graders run on GPT-5.6 and check created artifacts plus application state changes rather than text-matching the response.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>LifeVal pairs everyday tasks — schedule-this, draft-that, buy-this — with personal context (relationships, calendars, past purchases) and simulated application environments the agent must act on. The November preprint describes 169 tasks graded across several OpenAI model generations. Grading moves the test away from text similarity: two automated graders — both GPT-5.6 — check that the artifacts the agent was meant to create actually exist and that the correct application state changes landed.</p>
+
+  <h4>What the methodology concedes</h4>
+  <p>Consumer-value weights on individual tasks come from a US-centered English survey. The write-up is explicit that the task set is English-only and leans toward US consumer workflows. Both limits matter because the resulting per-generation deltas are noisiest on the tasks where the value-weight matters.</p>
+
+  <blockquote class="pull-quote">"Whether the requested change exists in the environment." <cite>— LifeVal paper, grading methodology</cite></blockquote>
+
+  <h4>The argument underneath</h4>
+  <p>A generation of benchmarks has graded the response the model wrote and not the thing in the world the user wanted done. For agentic deployments — ChatGPT Work, Claude Desktop with Plaid, Cursor agents — this is the relevant evaluation surface. LifeVal is the second such benchmark OpenAI has shipped this quarter alongside OpenAI Decisions' confidence-only JSON API. The headline per-generation finding: models improve on environment-state tests much faster than on free-text tests, because free-text tests have saturated.</p>
+
+  <p class="source-footer"><a href="https://openai.com/index/lifeval" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">EG · NG · EN</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">OPEN ASR · LIVA AI</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">1.34 + 1.55 HOURS</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">HUGGING FACE · PRIVATE TEST</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Open ASR Leaderboard adds Egyptian and Nigerian English slices from Liva AI.</h3>
+    <p class="kicker">Hugging Face · Liva AI · 2026-11-08 · <a href="https://huggingface.co/blog/open-asr-leaderboard-liva" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Open ASR Leaderboard now holds 1.34 hours of Egyptian-accented English and 1.55 hours of Nigerian-accented English, both spontaneous conversational recordings held out as private test slices. Speech teams gain measurable accent-handling scores for two of the most under-measured English varieties.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Open ASR Leaderboard added two accent slices contributed by Liva AI on November 8: 1.34 hours of Egyptian-accented English and 1.55 hours of Nigerian-accented English. Both are spontaneous conversational recordings with disfluencies, held out as private slices so the leaderboard measures accent handling without fine-tuning to the test. The addition is small in absolute hours but notable in a leaderboard that historically trained open ASR teams on predominantly US and UK English — a gap production call-center and voice-agent deployments outside North America have had to measure on their own internal test sets.</p>
+
+  <h4>The methodology choice</h4>
+  <p>Liva AI's data-collection pipeline uses spontaneous conversation prompts rather than scripted sentences, which captures the hesitations and self-corrections that break mainstream ASR. The scored models span Whisper, Canary, Parakeet and NVIDIA's latest open ASR releases. Early numbers in the blog post show double-digit absolute WER gaps between the US-English slice and the Nigerian-English slice for multiple leader models — exactly the gap the slice was designed to measure.</p>
+
+  <blockquote class="pull-quote">"Spontaneous conversational recordings with disfluencies." <cite>— Open ASR Leaderboard × Liva AI, dataset description</cite></blockquote>
+
+  <p class="source-footer"><a href="https://huggingface.co/blog/open-asr-leaderboard-liva" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">59.7</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">PALETTE · IBM RESEARCH</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">20B · 2 ROLES · GEOMETRY</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">PRESENTBENCH · 2ND</text><g transform="translate(86, 10)" stroke="#115e59" fill="none" stroke-width="0.8"><rect x="0" y="0" width="28" height="18"/><line x1="4" y1="8" x2="24" y2="8"/><line x1="4" y1="12" x2="18" y2="12"/></g></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">IBM Research's Palette: 20B specialist model for brand-aligned deck production.</h3>
+    <p class="kicker">Hugging Face · IBM Research · 2026-11-08 · <a href="https://huggingface.co/blog/ibm-research/palette-deck-building" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A 20B-parameter slide-building model trained for IBM's design language. Two roles — a brief writer and a drawing-code writer — hand off to geometry checks and selective repair. Reported 59.7 on three PresentBench domains, second to NotebookLM's 60.8. Weights not released.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>IBM Research's Palette is a 20-billion-parameter specialist model fine-tuned for building slide decks in IBM's design language. The architecture isn't a single generator. One role produces a structured slide brief — goal, audience, section outline, data to surface. Another role writes the drawing code. Rendered slides pass automatic geometry checks with a selective-repair loop that re-prompts the drawing role when a check fails.</p>
+
+  <h4>The score tape</h4>
+  <p>IBM reports 59.7 mean across three PresentBench domains, placing second behind NotebookLM at 60.8. The blog is explicit that the brand-fidelity work and the deployable-package work are separate axes: being measurably on-brand is not the same as being safely usable inside a corporate template, and IBM did not release deployable weights.</p>
+
+  <blockquote class="pull-quote">"A deployable package and verified brand fidelity remain separate requirements." <cite>— IBM Research, Palette blog</cite></blockquote>
+
+  <h4>What the architecture tells external teams</h4>
+  <p>The Palette post reads as validated research for the two-role structured-output generation pattern. External teams building corporate-brand asset generators now have an in-house reference even without the weights. Expect the same architecture to surface for financial-model building, legal contract drafting and clinical-report production — categories where the structure of the output matters at least as much as the surface prose.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/blog/ibm-research/palette-deck-building" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">6,454 · 20Y</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">HACKERTUBE · KARPATHY</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">43M HN COMMENTS</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">TRISTANTUBE · 3 MIN SHOT</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Karpathy builds HackerTube and TristanTube in a weekend with Claude Opus 5.5.</h3>
+    <p class="kicker">The Decoder · 2026-11-08 · <a href="https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Karpathy had Claude filter 43 million Hacker News comments across 20 years to surface 6,454 videos the community keeps recommending; that site is hackertube.org. He then one-shotted TristanTube at karpathy.ai/tristan-tube/ in three minutes with Claude Code against Tristan Hume's 47,000-video YouTube channel list.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Andrej Karpathy — OpenAI co-founder and Anthropic researcher — used Claude Opus 5.5 to build two weekend projects covered Sunday by The Decoder. HackerTube filters 43 million Hacker News comments from the last 20 years for recurring video recommendations, surfacing 6,454 videos the community keeps citing. The site requires no login, shows a single mid-video frame instead of a thumbnail — to avoid YouTube's thumbnail-arms-race — and stores state locally. Karpathy says the result offers a "significantly better viewing experience" than YouTube's own recommendations because the signal is community curation across two decades rather than engagement optimization over a 24-hour window.</p>
+
+  <h4>The one-shot</h4>
+  <p>The second project, TristanTube, runs on a 47,000-video list from Tristan Hume. Karpathy says he "one-shotted" it with Claude Code in three minutes. His manual share of both projects: a Google Cloud API key, a rented server, and a purchased domain. Claude Code handled data analysis through server setup.</p>
+
+  <blockquote class="pull-quote">"One-shotted with Claude Code in 3 minutes." <cite>— Andrej Karpathy, on the TristanTube build</cite></blockquote>
+
+  <h4>The genre shift</h4>
+  <p>The load-bearing argument: projects that took weeks now take a weekend, and the weekend-project genre is about taste and curation rather than engineering effort. The pair joins a growing list of production-quality weekend builds using Claude Code as the author rather than the helper.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">64 GB CPU</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">LLAMA-MODCHIP · DEEPSEEK V4</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">FRACTAL QUANTS · L3 CACHE</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">56.6 GiB DISK · APACHE 2.0</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">llama-modchip runs DeepSeek-V4 on 64 GB of DDR5 with zero GPUs.</h3>
+    <p class="kicker">GitHub · synchopate/llama-modchip · 2026-11-08 · <a href="https://github.com/synchopate/llama-modchip" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">A patched llama.cpp stack with Fractal quants and L3-cache-aware kernels runs DeepSeek-V4 and 30B MoE GGUFs on a 64 GB DDR5 CPU with no GPU. README v2.4.0 reports ~56.6 GiB on disk and ~57.6 GiB peak RSS at 256K context. Apache 2.0.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The llama-modchip fork, from the pseudonymous developer synchopate, is a patched llama.cpp stack built around two ideas. Fractal quants push MoE-weight storage below the typical Q3/Q4 floor without the activation-accuracy collapse those quants cause on dense models. L3-cache-aware kernels keep hot-path inference inside the CPU cache budget. The claim: DeepSeek-V4 and 30B MoE GGUFs run on a 64 GB DDR5 CPU, no GPU, at usable latency. README v2.4.0 reports ~56.6 GiB on disk and ~57.6 GiB peak RSS at 256K context on DeepSeek-V4. License is Apache 2.0.</p>
+
+  <h4>The caveat</h4>
+  <p>Reported benchmarks are the author's own and need verification on independent hardware. This is the kind of claim that often turns out to be sensitive to a specific CPU microarchitecture — Zen 5 or Granite Rapids rather than a generic DDR5 box — and to specific DDR5 timings. The llama.cpp main line has not pulled these patches; a review pass is likely in the next release cycle.</p>
+
+  <blockquote class="pull-quote">"The DDR5 generation flipped the bandwidth math on MoE inference." <cite>— llama-modchip README v2.4.0, design-notes section</cite></blockquote>
+
+  <h4>The direction it signals</h4>
+  <p>For the open-weight inference community, CPU-only inference at 64 GB for a 30B+ MoE is now the frontier of local inference. Combined with the llama.cpp main line's Sunday SSM_SCAN and radix top-k improvements, local inference moved measurably forward this weekend without a GPU release.</p>
+
+  <p class="source-footer"><a href="https://github.com/synchopate/llama-modchip" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">80 MS</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">SHIZUKU-DUPLEX · JP</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">FULL-DUPLEX · あいづち</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">BG TOOL CALLS · ENTERPRISE</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Shizuku-Duplex ships Japanese full-duplex voice on an 80 ms tick.</h3>
+    <p class="kicker">Shizuku AI · Explainx · 2026-11-08 · <a href="https://www.explainx.ai/blog/shizuku-duplex-japanese-full-duplex-voice-80ms-interaction-background-2026" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Shizuku AI announced a Japanese full-duplex voice model that listens and speaks on an 80 ms tick. Backchannels and interruptions are handled on-clock; a separate background model handles tool calls like web search while the conversation continues. The first Japanese-native full-duplex release of the cycle.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Shizuku AI announced Shizuku-Duplex, the first Japanese-language full-duplex voice model of the current cycle. The model listens and speaks on an 80-millisecond tick — the tightest clock any production Japanese voice system has advertised — and handles backchannels (the あいづち aizuchi vocabulary that Japanese conversational speech leans on) on the same clock. Interruptions resolve without requiring the user to finish their turn, a long-standing failure mode for Japanese voice agents built on English-first full-duplex stacks.</p>
+
+  <h4>The architecture, in one line</h4>
+  <p>A separate background model handles tool calls like web search while the foreground conversation continues, so the user does not hear the usual "let me check" dead air that English voice agents still produce. Shizuku frames the release as the voice-agent equivalent of what GPT-6 Astra did for multimodal English assistants, specifically for Japanese enterprise deployments at banks, hospitality groups and railways.</p>
+
+  <blockquote class="pull-quote">"A separate background model handles tool calls such as web search while the conversation continues." <cite>— Shizuku AI, Shizuku-Duplex architecture section</cite></blockquote>
+
+  <h4>What's missing from the release</h4>
+  <p>Pricing, quota and eval detail were not published in the announcement. Integration SDKs are promised by end of November. The 80 ms tick is now the number NTT, Rinna and Sakana have to match for Japanese enterprise contracts.</p>
+
+  <p class="source-footer"><a href="https://www.explainx.ai/blog/shizuku-duplex-japanese-full-duplex-voice-80ms-interaction-background-2026" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="24" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">13 TAGS</text><text x="10" y="42" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">LLAMA.CPP · B12199-B12211</text><text x="10" y="56" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">TOP-K DETERMINISTIC · 20-45%</text><text x="10" y="68" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">SSM_SCAN · ZAMBA2 +35%</text><g transform="translate(88, 12)" stroke="#115e59" fill="none" stroke-width="0.5"><line x1="0" y1="2" x2="30" y2="2"/><line x1="0" y1="8" x2="30" y2="8"/><line x1="0" y1="14" x2="30" y2="14"/><line x1="0" y1="20" x2="30" y2="20"/></g></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">llama.cpp pushes 13 Sunday releases with deterministic top-k and SSM_SCAN fast path.</h3>
+    <p class="kicker">GitHub releases · 2026-11-08 · <a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">llama.cpp pushed 13 tagged releases on Sunday from b12199 to b12211. Headline items: a multimodal refactor removing clip.h and consolidating into mtmd (PR #31865), deterministic tied selections in CUDA/Metal radix top-k with 20-45 percent speedup on M5 Ultra (PR #31084), and a d_state=64 SSM_SCAN fast path lifting Zamba2-7B-Instruct from 11 to 15.1 tokens/sec (PR #31818).</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>llama.cpp pushed 13 tagged releases during UTC Sunday — b12199 through b12211 — with the day's two biggest changes landing in b12207 and b12208. The b12208 release made tied selections in CUDA and Metal radix top-k deterministic, so sampling output is identical across runs with the same seed, and extended the determinism check to Metal and ROCm. Georgi Gerganov's benchmark on an M5 Ultra reports 20 to 45 percent faster top-k. The b12207 release added a d_state=64 fast path to the CUDA SSM_SCAN kernel used by Mamba-style state-space layers, lifting Zamba2-7B-Instruct from 11 to 15.1 tokens per second — roughly 35 percent throughput gain.</p>
+
+  <h4>The late-evening refactor</h4>
+  <p>The b12211 release refactored the multimodal (mtmd) code by removing the long-standing clip.h header and consolidating its contents into mtmd. The maintainers say this unblocks the tool-call UTF-8 sanitization landed in b12199 and the MoE cache fixes in b12202 and b12206. b12201 stopped applying the MoE cache to the speculative draft model after the project confirmed it was causing cache poisoning on multi-request batches.</p>
+
+  <blockquote class="pull-quote">"Makes tied selections in CUDA/Metal radix Top-K deterministic, so output is identical across runs." <cite>— llama.cpp release b12208, PR #31084</cite></blockquote>
+
+  <h4>Non-GPU paths moving too</h4>
+  <p>b12200 added OpenCL q8_0 GEMV kernels and a small-batch MoE GEMV path aimed at speculative verification. b12209 added bf16 and q8_0 implementations for IBM VXE vector instructions in llamafile, keeping s390x builds competitive. b12210 landed a SpacemiT IME2 MXFP4 dense repack on CPU for RISC-V. b12202 moved certain GLM4 and MiMoVL operations to GGML_PREC_BF16 for precision alignment. The project has shipped more than 10 tagged releases on each of the last four UTC Sundays.</p>
+
+  <p class="source-footer"><a href="https://github.com/ggml-org/llama.cpp/releases" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">HF · 10 TOP</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">COGNITIVE SYMBIONTS · 117</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">VFLASH 106 · SLA 92 · H-S 66</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">BESTRAND · WELM · TAILSTEER</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Hugging Face papers Sunday: Cognitive Symbionts at 117 leads an agent-heavy board.</h3>
+    <p class="kicker">Hugging Face Daily Papers · 2026-11-08 · <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The board trending into Sunday: Cognitive Symbionts (117), VFlash visual planning (106), SLA spatial-language-action continual pretraining (92), Harness-S sibling-harness agent training (66), BestRand benchmark compression (51), WeLM-Image unified image generation (44), TailSteer multi-turn edits (40), EvoMemState personal-agent memory (33), Open-HumanScale embodied-foundation recipe (32), VisSearch-Bench long-horizon multimodal search (22).</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Hugging Face Daily Papers board carrying into UTC Sunday ran heavy on agent systems and visual planning. Cognitive Symbionts at 117 upvotes — an Oxford-led survey arguing the frontier of AI-augmented human intelligence is not autonomous agents but augmentation of specific cognitive loops. It frames design implications across education, scientific discovery and clinical reasoning. NVIDIA's VFlash at 106 proposes Flash Primitive Decoding, a fused-kernel scheme that cuts visual-planning latency for a VLA policy. HKUST(GZ)'s SLA at 92 shows that continual pretraining on action-conditioned video scales spatial-language-action models cleanly while preserving backbone perception.</p>
+
+  <h4>The agent-training tape</h4>
+  <p>Shanghai Jiao Tong's Harness-S at 66 argues agent training should teach from sibling harnesses — identically-scored but structurally different scaffolds — to produce generalization single-harness training misses. CMU's BestRand at 51 is a cheap benchmark-compression method with stability guarantees for comparing agents at reduced evaluation cost.</p>
+
+  <blockquote class="pull-quote">"From Autonomous Agents to Cognitive Symbionts: Toward AI-Augmented Human Intelligence — 117 upvotes." <cite>— Hugging Face Daily Papers, 2026-11-08</cite></blockquote>
+
+  <h4>The image and memory lanes</h4>
+  <p>WeLM-Image at 44 and TailSteer at 40 both work on tail drift in multi-turn image editing — the pattern where sequential edits accumulate small visual errors into a semantically-drifted final image. EvoMemState at 33 and Open-HumanScale at 32 are the agent-memory and embodied-scale entries. Ant Group's VisSearch-Bench at 22, for long-horizon visual search in multimodal agents, rounded out the Sunday top ten.</p>
+
+  <p class="source-footer"><a href="https://huggingface.co/papers" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">FAUNA · PRG</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">AMAZON · NEW GROUP</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">SPROUT · 3.5 FT HUMANOID</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">LAB126 · ASTRO VETERANS</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Amazon formalizes Fauna-anchored Personal Robotics Group for a home robot.</h3>
+    <p class="kicker">CNBC · 2026-11-08 · <a href="https://www.cnbc.com/2026/11/08/amazon-home-robot-fauna-sprout.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">CNBC reported Sunday that Amazon pulled Fauna Robotics into a new Personal Robotics Group in March 2026 and is staffing a "new-to-world robot product," per job postings calling for robots that are "delightful" and designers to "define what it feels like to live with a Fauna robot." Fauna's Sprout is a 3.5-foot humanoid; Astro's public run cost $1,000 to $2,000 per unit and shipped only by invitation.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>CNBC's Sunday investigation surfaces Amazon's revived home-robot push, built around the March 2026 acquisition of Fauna Robotics and organized into a new Personal Robotics Group. Amazon has not disclosed the Fauna purchase price. The team has absorbed veterans of Lab126 and former Astro engineers after Amazon redeployed most of the Astro staff earlier in 2026, and recently hired an MIT roboticist CNBC did not name. Fauna's Sprout is a 3.5-foot humanoid with expressive yellow eyebrows, sold mainly to developer, commercial and academic buyers.</p>
+
+  <h4>The job-posting trail</h4>
+  <p>Job listings surface the product ambition. A June posting called for robots that are "delightful, not just functional." An October Field Support Engineer posting covers customer support and on-site repair. A principal UX designer role asks the hire to "define what it feels like to live with a Fauna robot." An earlier (removed) engineer posting referenced robots that navigate "dynamic home environments." Amazon spokesperson Brad Glasser confirmed the group exists and said lessons, talent and experience from Astro have moved into the broader robotics effort. No price point, timeline or product details were disclosed.</p>
+
+  <blockquote class="pull-quote">"Define what it feels like to live with a Fauna robot." <cite>— Amazon principal UX designer job posting, October 2026</cite></blockquote>
+
+  <h4>The context that matters</h4>
+  <p>Bezos drove the original Astro concept starting in 2017; the device shipped invite-only in Fall 2021 at $1,000 to $2,000 per unit and was discontinued for business use within a year. Jassy's annual letter calls AI and robotics among the "biggest inflections of our lifetime." Barclays projects the humanoid market at $40 billion by 2035; PitchBook put venture investment in robotics and physical AI at $33.4 billion in H1 2026, against $28.7 billion for all of 2025. Competitors referenced in the piece: Tesla Optimus, Apptronik, Boston Dynamics, Unitree, Figure, 1X, Agility Robotics (an Amazon backer, SPAC'd public), Colin Angle's Familiar Machines &amp; Magic, and Hugging Face's $399 Microduck.</p>
+
+  <p class="source-footer"><a href="https://www.cnbc.com/2026/11/08/amazon-home-robot-fauna-sprout.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#115e59">9PM · 9AM</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">THESEUS · YC F26</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">SHELF STOCKING · ORDER PICK</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">SUBSCRIPTION · NO RETROFIT</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Theseus launches from YC F26 to restock supermarket shelves overnight.</h3>
+    <p class="kicker">RuntimeWire · 2026-11-08 · <a href="https://runtimewire.com/article/theseus-robotics-supermarket-humanoids-overnight-restocking" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Samarth Malhotra's Theseus Robotics introduced itself Friday night in the Y Combinator Fall 2026 batch with a wheeled two-armed humanoid that restocks shelves overnight and picks online orders during the day. The product post reads "Lights off at 9pm, shelves full by 9am." Retailer pilots are planned for 2027; the system is sold on a monthly contract with no store retrofit.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Theseus Robotics introduced itself to the public on November 7 at 10:18 PM CT (approximately 04:18 UTC on November 8), with RuntimeWire's launch piece updated Sunday at 9:05 AM CT. Samarth Malhotra is named as the lead; no co-founders surface on the launch page. The company is in Y Combinator's Fall 2026 batch (YC F26). The product is a wheeled two-armed humanoid system that restocks supermarket shelves overnight and picks online orders during the day inside the same store footprint, without requiring the retailer to retrofit shelves, aisles or markers.</p>
+
+  <h4>The commercial shape</h4>
+  <p>The sales model is a monthly subscription, not a hardware sale. Pricing is not disclosed. Retailer pilots are planned for 2027; no pilot customers are named in the launch piece. Theseus was named a Startup of the Year finalist at Retail Tech Innovation Hub on October 15 — which pre-dates the public launch and suggests the pilot pipeline has been running longer than the YC batch would indicate.</p>
+
+  <blockquote class="pull-quote">"Lights off at 9pm, shelves full by 9am." <cite>— Theseus Robotics launch post, 2026-11-07</cite></blockquote>
+
+  <h4>The wedge that sidesteps the hard problem</h4>
+  <p>Shelf-scanning robots (Bossa Nova, Simbe) have been in retail since 2019, but dexterous shelf-stocking has remained the hard part. Most 2026 retail-humanoid pilots are either Tau Robotics' $60-per-week San Francisco apartment cleaner (with heavy remote-pilot intervention) or the various non-retail Figure and 1X home pilots. Theseus's narrower overnight-plus-picking wedge sidesteps the live-customer safety problem that has held back daytime deployment of physical AI in retail aisles.</p>
+
+  <p class="source-footer"><a href="https://runtimewire.com/article/theseus-robotics-supermarket-humanoids-overnight-restocking" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#115e59">$15M·A</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">FIRSTWORK · EARLYBIRD</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">SAINSBURY'S · 20M ACTIONS/MO</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">LONDON HQ · EMEA</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Firstwork raises $15M Series A led by Earlybird for frontline-workforce AI.</h3>
+    <p class="kicker">HR Chief · 2026-11-08 · <a href="https://hrchiefmagazine.com/news/firstwork-secures-us-15m-for-ai-workforce-automation" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Earlybird Venture Capital led the $15 million Series A with participation from Gradient, Y Combinator, Legion VC and Deel Ventures, bringing total funding to over $20 million. Co-founders Vardhan Kapoor and Shubham Choudhary said Firstwork's agents already run over 20 million actions per month across Sainsbury's and other frontline employers. A London regional headquarters opens to anchor EMEA growth.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Firstwork closed a $15 million Series A announced Sunday, led by Berlin-based Earlybird Venture Capital. The round brings total funding above $20 million. Existing investors Gradient and Y Combinator participated alongside new investors Legion VC and Deel Ventures. Co-founder and CEO Vardhan Kapoor and co-founder and CTO Shubham Choudhary built the company as an applied-AI platform for frontline-workforce onboarding and administration — collecting identity documents, running right-to-work checks, delivering mandatory training and triggering payroll activation.</p>
+
+  <h4>The traction and the use of funds</h4>
+  <p>The agents execute tasks across enterprise systems and run over 20 million actions per month. Sainsbury's is named as a flagship partner for frontline recruitment and onboarding. Deel is both a go-to-market partner and now an investor through its venture arm. Firstwork claims the platform cuts time-to-productive from new-hire start to between 60 and 90 percent faster across categories. Capital funds an expansion of the AI research team, product scope beyond onboarding into administration and payroll integration across more enterprise systems, and a new London headquarters covering Europe, the Middle East and Africa.</p>
+
+  <blockquote class="pull-quote">"The platform can cut the time to get new employees job-ready by up to 90 per cent." <cite>— Firstwork claim, HR Chief, 2026-11-08</cite></blockquote>
+
+  <h4>The competitive setup</h4>
+  <p>The round positions Firstwork as a direct competitor to Rippling and Deel's own frontline-workforce automation efforts, with the Deel Ventures investment doubling as a strategic cross-sell signal rather than a competitive block. The category — hourly, shift-based, mobile-first — has been deliberately underserved by the knowledge-worker-first wave of enterprise AI in 2025 and 2026.</p>
+
+  <p class="source-footer"><a href="https://hrchiefmagazine.com/news/firstwork-secures-us-15m-for-ai-workforce-automation" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="application tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true"><rect width="120" height="80" fill="#fbf9f3"/><text x="10" y="26" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#115e59">KODIF×CAV</text><text x="10" y="44" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#115e59" letter-spacing="1">POST-PURCHASE AGENTS</text><text x="10" y="58" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">$19M COMBINED · SHOPIFY+</text><text x="10" y="70" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#115e59" letter-spacing="1">PEAK · NOV 20 - DEC 24</text></svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-application">Application</span><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">KODIF and Cavalry pair agents with post-purchase execution for ecommerce.</h3>
+    <p class="kicker">AI Agent Store · 2026-11-08 · <a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">KODIF and Cavalry announced a partnership Sunday to build an agentic platform that resolves post-checkout ecommerce issues, pairing KODIF's conversational agents with Cavalry's post-purchase execution rails. Combined funding to date is $19 million; the two companies go to market jointly for Shopify, Shopify Plus and BigCommerce merchants.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>KODIF and Cavalry disclosed a joint platform Sunday aimed at the most expensive segment of ecommerce support: post-purchase issues like address changes, delivery exceptions, and returns-exchanges-store-credit flows where an agent needs to both talk to the customer and execute action on the merchant's order system. KODIF's agent layer runs the conversation. Cavalry's execution layer touches the order-management system directly without a human handoff. Combined funding to date is reported at $19 million.</p>
+
+  <h4>The seasonal math</h4>
+  <p>Early merchants on the joint stack include DTC brands on Shopify Plus. BigCommerce support ships in the next release. The pairing comes as retailer calendars head into the November 20 to December 24 peak support window where post-purchase ticket volume historically triples against baseline and average handle time climbs with it. The partnership is less a moat move than a timing move: the stack has to be live before Black Friday to matter for 2026 volume.</p>
+
+  <blockquote class="pull-quote">"KODIF and Cavalry combine AI agents with post-purchase execution for ecommerce." <cite>— AI Agent Store weekly brief, 2026-11-08</cite></blockquote>
+
+  <p class="source-footer"><a href="https://aiagentstore.ai/ai-agent-news/this-week" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+  </div>
+</section>
+
+<footer class="colophon">
+  <div>Apollo AI News · Daily · 2026-11-09 · Generated 2026-11-09</div>
+  <div><a href="../index.html">← Back to home</a></div>
+</footer>
+
+</main>
+</div>
+
+<script>
+(function(){
+  var stories = document.querySelectorAll('details.story');
+  var chips = document.querySelectorAll('.filter-chip');
+  var status = document.querySelector('.filter-status');
+  var bigPicture = document.querySelector('.big-picture');
+  var rundownCount = document.querySelector('#rundown-title .count');
+  var dateRange = '';
+  if (rundownCount) {
+    var t = rundownCount.textContent || '';
+    var m = t.match(/([0-9]+)\s*stories\s*·\s*(.+)/);
+    if (m) dateRange = m[2];
+  }
+
+  function recount() {
+    var total = stories.length;
+    chips.forEach(function(c){
+      var tag = c.dataset.filter;
+      var n = tag === 'all' ? total :
+        Array.prototype.filter.call(stories, function(s){
+          return (s.dataset.tags || '').split(/\s+/).indexOf(tag) !== -1;
+        }).length;
+      var countEl = c.querySelector('.count');
+      if (countEl) countEl.textContent = n;
+      if (n === 0 && tag !== 'all') c.setAttribute('disabled','disabled');
+    });
+  }
+
+  function applyFilter(filter) {
+    if (bigPicture) bigPicture.hidden = (filter !== 'all');
+    var visibleNonHero = 0;
+    stories.forEach(function(s){
+      var tags = (s.dataset.tags || '').split(/\s+/);
+      var match = filter === 'all' || tags.indexOf(filter) !== -1;
+      s.hidden = !match;
+      if (match && s.id !== 'hero') visibleNonHero++;
+    });
+    chips.forEach(function(c){
+      c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false');
+    });
+    if (rundownCount) {
+      rundownCount.textContent = visibleNonHero + ' stories' + (dateRange ? ' · ' + dateRange : '');
+    }
+    if (status) {
+      var label = filter === 'all' ? 'all stories' : (filter.charAt(0).toUpperCase() + filter.slice(1));
+      status.textContent = 'Showing ' + visibleNonHero + ' of ' + (stories.length - 1) + ' stories — ' + label;
+    }
+    if (filter === 'all') {
+      if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+    } else {
+      if (history.replaceState) history.replaceState(null, '', '#filter=' + filter);
+    }
+  }
+
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      if (c.hasAttribute('disabled')) return;
+      applyFilter(c.dataset.filter);
+    });
+  });
+
+  recount();
+  var initial = 'all';
+  var hash = location.hash || '';
+  var hm = hash.match(/filter=([a-z]+)/);
+  if (hm) initial = hm[1];
+  applyFilter(initial);
+})();
+</script>
+</body>
+</html>
