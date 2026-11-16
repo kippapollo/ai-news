@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Daily · 2026-11-16</title>
+<meta name="description" content="Anthropic's Claude Fable 5.2 generates images by writing 1,000-to-2,000 line Python programs that drive a paint engine stroke by stroke, not by computing pixels; a photorealistic parking garage took 700,000 strokes and the model painted over its own early mistakes. The Decoder's Jonathan Kemper reported Meituan released LongCat-2.5, a 1.6-trillion-parameter mixture-of-experts agent model trained entirely on Chinese hardware, with a sample 194-Ascend deployment, 88.4 on Terminal Bench v2.1, and no Nvidia GPU anywhere in the self-hosting guide. The Wall Street Journal documented ~$12B in Nvidia high-performance chip orders routed through Alice Huang's Megaspeed between March 2024 and June 2025, covering several hundred thousand restricted chips, per a Saturday Decoder write-up. The Reserve Bank of Australia published a labor-market monitoring report arguing AI has barely displaced jobs overall but young workers in programming, clerical and customer-service roles have lost ground since late 2022. TechCrunch's Anthony Ha and Rebecca Bellan argued Jensen Huang's ouster is bad news for an AI industry in which Nvidia accounts for roughly 80% of the GPU market and holds $99B of investments plus $25B of commitments. Kirsten Korosec reported Pony.ai CFO Leo Wang said Chinese self-driving firms have been building Nvidia backup plans for two years, now leaning on mid-tier compute and domestic chips. Intuz's Nilay Dhamsania wrote in VentureBeat that Palo Alto Networks Unit 42 saw a 78.3% attack success rate on agents connected to five MCP servers once one server was compromised.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;--ink:#11151a;--muted:#5a6068;--rule:#d9d3c2;--card:#fbf9f3;
+  --accent:#1e3a8a;--accent-soft:rgba(30,58,138,0.14);
+  --tag-tech:rgba(30,58,138,0.12);--tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.14);--tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.14);--tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);--tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.14);--tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);--tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#15181c;--ink:#e6e3dc;--muted:#9a9690;--rule:#2c2f35;--card:#1b1f24;
+  --accent:#93c5fd;--accent-soft:rgba(147,197,253,0.22);
+  --tag-tech:rgba(147,197,253,0.22);--tag-tech-ink:#bfdbfe;
+  --tag-application:rgba(45,212,191,0.20);--tag-application-ink:#5eead4;
+  --tag-economic:rgba(74,222,128,0.18);--tag-economic-ink:#86efac;
+  --tag-policy:rgba(252,211,77,0.16);--tag-policy-ink:#fcd34d;
+  --tag-safety:rgba(253,164,175,0.20);--tag-safety-ink:#fecaca;
+  --tag-trend:rgba(216,180,254,0.20);--tag-trend-ink:#e9d5ff;
+}}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern","liga"}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.1;letter-spacing:-0.02em;margin:0 0 20px}
+.hero .dek{font-size:1.08rem;line-height:1.55;color:var(--ink);margin:0 0 18px}
+.hero .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.02em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;aspect-ratio:480/320;display:block}
+.big-picture{display:grid;grid-template-columns:170px 1fr;gap:32px;padding:36px 0 20px;margin:36px 0 32px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.big-picture[hidden]{display:none}
+@media (max-width:640px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.big-picture .label svg{display:block;margin-bottom:12px}
+.big-picture p{margin:0 0 12px;font-size:1.08rem;line-height:1.6}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,serif;font-size:3.2rem;font-weight:700;float:left;line-height:0.92;padding:6px 10px 0 0;color:var(--accent)}
+.divider{display:flex;align-items:center;justify-content:center;margin:44px 0;color:var(--accent)}
+.section-label{font-size:0.76rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.section-label .count{color:var(--accent);font-feature-settings:"tnum";letter-spacing:0.12em}
+.section-title{font-family:Georgia,serif;font-size:1.9rem;font-weight:700;letter-spacing:-0.01em;margin:0 0 28px}
+.rundown{display:flex;flex-direction:column;gap:0}
+.story{border-bottom:1px solid var(--rule);padding:22px 0}
+.story:first-of-type{border-top:1px solid var(--rule)}
+.story summary{display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start;list-style:none;cursor:pointer}
+.story summary::-webkit-details-marker{display:none}
+.story.hero > summary,details#hero > summary{display:block}
+.tag-row{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
+.tag{font-size:0.68rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.story .headline{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:1.4rem;line-height:1.2;margin:2px 0 4px;letter-spacing:-0.01em}
+.story .kicker{font-size:0.82rem;color:var(--muted);font-feature-settings:"tnum";margin:0}
+.story .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story .teaser{margin:6px 0 6px;color:var(--ink);font-size:0.98rem;line-height:1.55}
+.story .expand-control{display:inline-block;font-size:0.75rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;color:var(--accent);padding:5px 0;margin-top:2px}
+.story .expand-control::after{content:"Read in full  \25BE"}
+.story[open] .expand-control::after{content:"Collapse  \25B4"}
+.story .full-content{opacity:0;transform:translateY(-4px);transition:opacity 180ms ease,transform 180ms ease;padding-top:8px}
+.story[open] .full-content{opacity:1;transform:none;padding-top:16px}
+.story .full-content p{margin:0 0 14px;font-size:1.0rem;line-height:1.65}
+.story .full-content h4{font-family:Georgia,serif;font-size:1.02rem;margin:16px 0 6px}
+.story .full-content .pull-quote{margin:16px 0;padding:6px 16px;border-left:3px solid var(--accent);font-style:italic;color:var(--ink);font-size:1.02rem;line-height:1.5}
+.story .full-content .pull-quote cite{display:block;font-style:normal;font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:0.02em}
+.story .full-content .partial{font-size:0.82rem;color:var(--muted);font-style:italic;margin:8px 0 0}
+.story .source-footer{margin:14px 0 0;font-size:0.85rem}
+.story .source-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.story-thumb{width:120px;height:80px;display:block;background:var(--card);border-radius:2px}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:10px}.story-thumb{width:100%;height:auto;aspect-ratio:320/80;max-height:88px}}
+.colophon{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);font-size:0.82rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.colophon a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — home">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/><line x1="28" y1="47" x2="28" y2="54"/><line x1="2" y1="28" x2="9" y2="28"/><line x1="47" y1="28" x2="54" y2="28"/><line x1="9.5" y1="9.5" x2="14" y2="14"/><line x1="42" y1="42" x2="46.5" y2="46.5"/><line x1="46.5" y1="9.5" x2="42" y2="14"/><line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/><circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta"><strong>Daily</strong>2026-11-16</div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety &middot; <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend &middot; <span class="count">0</span></button>
+  <span class="filter-status" aria-live="polite"></span>
+</nav>
+
+<main>
+<details class="story hero" id="hero" data-tags="tech" open>
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags"><span class="tag tag-tech">Tech</span></div>
+      <h1>Claude Fable 5.2 paints images with 1,000-line Python programs, 700,000 strokes, and a deliberate first-line wobble.</h1>
+      <p class="dek">Anthropic's Claude Fable 5.2, the frontier variant that shipped November 9 with Mythos 5.2, produces images without a diffusion model or any image encoder. Shown off by Anthropic's Jake Eaton and engineer Michael Graczyk on X, the model writes a Python program, usually between 1,000 and 2,000 lines, that drives a virtual paint engine stroke by stroke. One photorealistic parking garage scene used roughly 700,000 strokes; a sunrise bird painting ran 111 strokes, each a single coordinate line. Fable 5.2 added a small wobble to its first stroke because, in its own reasoning, "a human arm doesn't draw a perfectly straight line either." The model painted over its own mistakes in real time: a late lighting pass that smeared an object was corrected by repainting the object; a thin, scraggly bird was turned back into bolder strokes that read as ruffled feathers.</p>
+      <p class="kicker">The Decoder (Manuel Uth) · 2026-11-15 · <a href="https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/" target="_blank" rel="noopener">Source ↗</a></p>
+    </div>
+    <svg class="hero-art" viewBox="0 0 480 320" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="hgnavy" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.34"/><stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.04"/></linearGradient>
+        <pattern id="hgmeshn" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 8 L16 8 M8 0 L8 16" stroke="#1e3a8a" stroke-width="0.4" stroke-opacity="0.18"/></pattern>
+      </defs>
+      <rect width="480" height="320" fill="url(#hgnavy)"/>
+      <rect width="480" height="320" fill="url(#hgmeshn)"/>
+      <g font-family="system-ui,sans-serif" fill="#1e3a8a">
+        <text x="30" y="28" font-size="9" font-weight="700" letter-spacing="1.6">CLAUDE FABLE 5.2 · PAINT ENGINE · 2026-11-15 · THE DECODER</text>
+        <line x1="30" y1="36" x2="450" y2="36" stroke="#1e3a8a" stroke-width="0.6" stroke-opacity="0.6"/>
+      </g>
+      <g transform="translate(26, 50)">
+        <text x="0" y="110" font-family="Georgia,serif" font-size="98" font-weight="700" fill="#1e3a8a" letter-spacing="-5">700K</text>
+        <text x="0" y="138" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a" letter-spacing="-0.3" opacity="0.86">STROKES · PARKING GARAGE · PHOTOREALISTIC SCENE</text>
+        <text x="0" y="160" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">FABLE 5.2 · "A HUMAN ARM DOESN'T DRAW A PERFECTLY STRAIGHT LINE"</text>
+        <text x="0" y="178" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">ROBODOJO SIM · 64.9% VS 29.8% FOR GPT-6 ASTRA</text>
+        <text x="0" y="198" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">1,000–2,000 LINES OF PYTHON PER IMAGE · NO IMAGE ENCODER</text>
+        <text x="0" y="218" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a" opacity="0.80" letter-spacing="-0.2">111 STROKES · SUNRISE BIRD · FIRST-LINE WOBBLE DELIBERATE</text>
+      </g>
+      <g transform="translate(300, 50)" font-family="system-ui,sans-serif" fill="#1e3a8a">
+        <text x="0" y="10" font-size="7" font-weight="700" letter-spacing="1.6">SUNDAY LEDGER · ANTHROPIC IPO WEEK</text>
+        <g transform="translate(0, 18)">
+          <rect x="0" y="0" width="150" height="212" fill="none" stroke="#1e3a8a" stroke-width="0.6"/>
+          <text x="8" y="18" font-size="8" font-weight="700" fill="#1e3a8a">PRICE · $8 IN / $40 OUT</text>
+          <text x="8" y="30" font-size="7" fill="#1e3a8a" opacity="0.78">DOWN FROM $10 / $50 ON FABLE 5.1</text>
+          <line x1="8" y1="38" x2="142" y2="38" stroke="#1e3a8a" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="54" font-size="8" font-weight="700" fill="#1e3a8a">AA INTEL INDEX V5 · 65</text>
+          <text x="8" y="66" font-size="7" fill="#1e3a8a" opacity="0.78">OPUS 5.5: 59 · GEMINI 4 CARBON: 60</text>
+          <line x1="8" y1="74" x2="142" y2="74" stroke="#1e3a8a" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="90" font-size="8" font-weight="700" fill="#1e3a8a">FORMALIZE FERMAT · 30 HOURS</text>
+          <text x="8" y="102" font-size="7" fill="#1e3a8a" opacity="0.78">~1,000 AGENTS · 11 DAYS BEFORE</text>
+          <line x1="8" y1="110" x2="142" y2="110" stroke="#1e3a8a" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="126" font-size="8" font-weight="700" fill="#1e3a8a">REMOTE LABOR INDEX · 41.3%</text>
+          <text x="8" y="138" font-size="7" fill="#1e3a8a" opacity="0.78">OPUS 5.5: 21.3 · ASTRA: 20.8</text>
+          <line x1="8" y1="146" x2="142" y2="146" stroke="#1e3a8a" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="162" font-size="8" font-weight="700" fill="#1e3a8a">IPO · ANT · NASDAQ</text>
+          <text x="8" y="174" font-size="7" fill="#1e3a8a" opacity="0.78">BAND $70–$78 · PRICE NOV 18</text>
+          <line x1="8" y1="182" x2="142" y2="182" stroke="#1e3a8a" stroke-width="0.3" stroke-opacity="0.6"/>
+          <text x="8" y="198" font-size="7" font-weight="700" fill="#1e3a8a">EATON / GRACZYK · DEMOS ON X</text>
+        </g>
+      </g>
+      <g transform="translate(26, 272)">
+        <rect x="0" y="0" width="424" height="38" fill="none" stroke="#1e3a8a" stroke-width="0.6"/>
+        <text x="12" y="16" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#1e3a8a">"A HUMAN ARM DOESN'T DRAW A PERFECTLY STRAIGHT LINE EITHER." · 111 STROKES · WOBBLE BY DESIGN</text>
+        <text x="12" y="30" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" letter-spacing="1.4">— FABLE 5.2, EXPLAINING ITS FIRST BRUSH STROKE · NOV 15 · THE DECODER</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+  <p>The Decoder's Manuel Uth put out the fullest write-up on Sunday of a quiet Anthropic launch the company had buried behind the Fable 5.2 pricing announcement a week earlier. Fable 5.2 does not use a diffusion model, does not use an image encoder, and does not call out to a specialist image API. It generates images by writing Python programs, usually between 1,000 and 2,000 lines, that drive a virtual paint engine stroke by stroke. The engine models bristle texture, how paint goes on a canvas, and the fact that there is no undo: mistakes have to be painted over the way a human painter paints over them. Anthropic engineer Jake Eaton and researcher Michael Graczyk posted the demos on X; Uth stitched them together and added benchmark context the X threads had left loose.</p>
+
+  <h4>The 700,000-stroke parking garage</h4>
+  <p>The flagship demo is a photorealistic parking garage scene composed of roughly 700,000 individual strokes. Each stroke is a small numeric command that chooses a color, a brush, a starting coordinate, a pressure, and a trajectory. The model emits the whole plan as code, runs the code, looks at the result, and then writes more code to correct what it got wrong. A late lighting pass smeared an object in the frame; Fable 5.2 noticed and repainted the object with new highlights. A thin, scraggly bird in a separate painting was turned back into bolder strokes that read as ruffled feathers once the model noticed the shape didn't match the species it had planned. In a shorter demo, a sunrise bird was painted in 111 strokes total, each a single coordinate line in the program listing. The first stroke was wobbled on purpose, the model said in its own trace, because "a human arm doesn't draw a perfectly straight line either."</p>
+
+  <blockquote class="pull-quote">"A human arm doesn't draw a perfectly straight line either." <cite>— Claude Fable 5.2, explaining the wobble on its first stroke, per The Decoder, 2026-11-15</cite></blockquote>
+
+  <h4>Why painting, not generating</h4>
+  <p>Earlier attempts with the sibling model Opus 5.5 were criticized for drawing too closely from the training distribution and imitating existing art. Fable 5.2's response was to invent artist personas with fictional backstories and consistent styles, and to paint under those personas rather than against a style tag. Anthropic framed the shift at the Fable 5.2 launch on November 9 as a research choice, not a cost choice: Fable 5.2 lists at $8 per million input tokens and $40 per million output tokens, down from $10 and $50 on Fable 5.1, but Uth notes the peak per-task cost of $26.50 against $10 for Opus 5.5 at Max tier — paying out more tokens is central to what Fable does. On the Artificial Analysis Intelligence Index v5 Fable 5.2 scored 65 at the highest tier, with Gemini 4 Carbon at 60, Opus 5.5 at 59, and Fable 5.1 at about 50. Fermat's Last Theorem was given to roughly 1,000 Fable 5.2 agents in Lean and formalized in 30 hours; an earlier research version had taken eleven days.</p>
+
+  <blockquote class="pull-quote">"We deliberately limited training gains in capabilities that could most directly accelerate AI development." <cite>— Anthropic, on Fable 5.2's recursive-self-improvement caps, per The Decoder, 2026-11-09</cite></blockquote>
+
+  <h4>The robotics bridge</h4>
+  <p>Uth flags the painting work as evidence of something Anthropic is not saying out loud. If a language model can plan and self-correct across hundreds of thousands of constrained, ordered actions, the same primitive looks applicable to physical robotics. Anthropic's internal RoboDojo Sim benchmark bears that out on paper: Fable 5.2 scored 64.9 percent against 29.8 percent for OpenAI's GPT-6 Astra. In a real-world robot-arm test run by researcher Aris Zhu, both models were asked to paint Van Gogh's <em>The Starry Night</em>; Astra painted faster and was the only one of the two to stand a domino on end, while Fable 5.2 showed weaker fine motor control. The simulation-to-real gap is still there. Uth also surfaces Anthropic's internal claims — unverifiable from outside — that Fable 5.2 solved two open problems in black-hole physics, designed three working electronic devices with Diode, and ran more than a thousand sub-agents to program a laptop operating system in eight days.</p>
+
+  <blockquote class="pull-quote">"Pixels and joint commands as a shared denoising target." <cite>— Runway Research page on Praxis-1, 2026-11-14; similar logic as Fable 5.2's paint engine</cite></blockquote>
+
+  <h4>What it means for image generation</h4>
+  <p>The practical read is that diffusion is not the only route to a general-purpose image model, and it may not be the most steerable one. Painting through code opens the door to editing an image the way one edits a program: find the lines that drew the misshapen bird, rewrite them. Midjourney and Stable Diffusion cannot be edited that way without a mask. The constraint is throughput: 700,000 strokes is a lot of tokens, and Anthropic has not published a cost-per-image for the parking garage. The IPO roadshow runs through this week; Anthropic is scheduled to price ANT at $70 to $78 per share on November 18 and start trading November 19 on Nasdaq. Uth frames the Sunday demos as Anthropic's weekend assist for the roadshow, not a product launch.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture">
+  <div>
+    <div class="label">
+      <svg viewBox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="20" y1="2" x2="20" y2="10" stroke="currentColor" stroke-width="1.6"/><line x1="20" y1="30" x2="20" y2="38" stroke="currentColor" stroke-width="1.6"/><line x1="2" y1="20" x2="10" y2="20" stroke="currentColor" stroke-width="1.6"/><line x1="30" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.6"/></svg>
+      Big Picture
+    </div>
+  </div>
+  <div>
+    <p>Anthropic's Claude Fable 5.2 generates images by writing Python programs that drive a paint engine stroke by stroke, not by computing pixels. A photorealistic parking garage took roughly 700,000 strokes; a sunrise bird took 111; a first-line wobble was added on purpose because "a human arm doesn't draw a perfectly straight line either," the model reasoned. Anthropic's Jake Eaton and Michael Graczyk posted the demos on X; The Decoder's Manuel Uth published the fullest Sunday write-up. The release lands five days before Anthropic's expected Nasdaq pricing of ANT at $70 to $78 and nine days after the model went live at $8 per million input and $40 per million output tokens.</p>
+    <p>Meituan's LongCat team released LongCat-2.5 on Sunday under MIT license, a 1.6-trillion-parameter mixture-of-experts model with around 48 billion active parameters, a 1-million-token input context, and a self-hosting guide that has no Nvidia GPU. Jonathan Kemper wrote it up in The Decoder: the sample deployment runs on 194 Huawei Ascend accelerators, the W4A4 quantization adds 42.77 percent response-generation throughput against 8-bit at parity accuracy, and LongCat-2.5 posts 88.4 on Terminal Bench v2.1 against Claude Opus 5 at 89.1 and GPT-5.6 Sol at 88.8. The Wall Street Journal documented roughly $12 billion in restricted Nvidia chip orders that Megaspeed, the firm controlled from March 2023 to August 2025 by Jensen Huang's alleged ex-lover Alice Huang, routed to Chinese buyers between March 2024 and June 2025, with Alibaba a major client. Culper Research estimates more than 20 percent of Nvidia's prior-year revenue came from Chinese customers, much of it through indirect channels.</p>
+    <p>Pony.ai CFO Leo Wang told TechCrunch's Kirsten Korosec that Chinese self-driving firms have been "practicing kind of like a Plan B for a few years." Mid-tier compute is now standard and domestic Chinese chips are "more mature than before," though not yet cost-competitive. TechCrunch's Equity podcast, previewed by weekend editor Anthony Ha, argued Nvidia's role as the ~80 percent GPU-market supplier and the holder of $99 billion of AI investments plus $25 billion of commitments puts the whole AI industry on the hook for CFO Collette Kress's caretaker interim term. The Reserve Bank of Australia's monitoring report by Mike Major found young workers aged 15 to 24 in programming, clerical work and customer service have weaker employment rates than older peers since late 2022, though Major cautioned the study does not establish causation.</p>
+    <p>Intuz AI strategist Nilay Dhamsania wrote in VentureBeat on Sunday that Palo Alto Networks Unit 42 measured a 78.3 percent attack success rate on agents connected to five MCP servers once a single server was compromised. The MCP protocol had no authorization framework at its November 2024 launch; the July 2026 revision added OAuth and deprecated Dynamic Client Registration. OWASP's MCP Top 10 says only two of ten risk categories sit in text the agent reads; the other eight live in infrastructure the protocol does not constrain. Gartner forecasts 40 percent of enterprise applications will include task-specific AI agents by end of 2026, which puts the attack surface in production without a standard identity layer.</p>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 80 12" width="80" height="12" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="6" r="2.4" fill="currentColor"/><circle cx="40" cy="6" r="2.4" fill="currentColor"/><circle cx="68" cy="6" r="2.4" fill="currentColor"/></svg>
+</div>
+
+<section id="rundown-title">
+  <p class="section-label">More Today <span class="count">6 stories · 2026-11-15</span></p>
+  <h2 class="section-title">The rundown</h2>
+</section>
+
+<section class="rundown">
+
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#fbf9f3"/>
+    <g font-family="Georgia,serif" fill="#1e3a8a">
+      <text x="60" y="36" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="-1.2">1.6T</text>
+      <text x="60" y="50" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1.4">MoE · 48B ACTIVE · 1M CTX</text>
+    </g>
+    <g stroke="#1e3a8a" fill="none" stroke-width="0.6" opacity="0.8">
+      <rect x="18" y="58" width="24" height="14" fill="none"/>
+      <rect x="48" y="58" width="24" height="14" fill="none"/>
+      <rect x="78" y="58" width="24" height="14" fill="#1e3a8a" stroke="none" opacity="0.5"/>
+      <rect x="78" y="58" width="24" height="14" fill="none"/>
+    </g>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.2">194 ASCEND · W4A4 · NO NVIDIA</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span></div>
+    <h3 class="headline">Meituan opens LongCat-2.5 1.6T MoE agent model under MIT, self-hosting guide names 194 Huawei Ascend accelerators and no Nvidia GPU.</h3>
+    <p class="kicker">The Decoder (Jonathan Kemper) · 2026-11-15 · <a href="https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">LongCat-2.5 ships MIT-licensed weights on Hugging Face plus a separate W4A4 version that targets Chinese chips natively; Meituan's self-hosting guide has no Nvidia GPU guidance anywhere. The sample deployment runs on 194 Huawei Ascend Atlas A2 accelerators: two for images, 64 for prompt ingestion, 128 for response generation. Terminal Bench v2.1 posted 88.4 (Opus 5 is at 89.1, GPT-5.6 Sol 88.8); DeepSWE jumped to 64.6 from 9.7 for LongCat-2.0. Launch pricing €0.27 per million input tokens and €1.07 per million output tokens.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Jonathan Kemper's Sunday write-up in The Decoder lands one week after Meituan unveiled LongCat-2.5 and now puts the weights, the quantized variant, and the self-hosting path in public hands. LongCat-2.5 is a 1.6-trillion-parameter mixture-of-experts model, with about 48 billion active parameters per token, a 1-million-token input context, a 128,000-token output limit over the API, and reasoning that can be toggled on and off. It ingests text, images, and video and emits text; images are converted into tokens at native resolution rather than through a separate encoder. The model inherits from LongCat-2.0 and from the earlier research model LongCat-Next, and is explicitly positioned for long, multi-step agent work, coding above all.</p>
+
+  <h4>Trained on Chinese hardware, deployed on Huawei Ascend</h4>
+  <p>Meituan describes LongCat-2.5 as trained "entirely on Chinese hardware" without naming the training cluster. Kemper flags LongCat-2.0's prior disclosure — more than 50,000 Chinese AI chips in late June — as the closest public reference. The reinforcement-learning pipeline runs tasks built from real GitHub pull requests and recreations of past agent failures; training environments block internet access and strip Git history and cached files so the model can't cheat by remembering the answer, and an LLM checks solutions for shortcuts. Capabilities were distilled from several specialized teacher models covering agent work, reasoning, and dialog.</p>
+
+  <p>The deployment side is where the Nvidia story sits. Meituan's self-hosting guide, built on top of the SGLang-FluentLLM NPU runtime, names 194 Huawei Ascend Atlas A2 accelerators in its sample configuration: two accelerators for image processing, 64 for prompt ingestion, 128 for response generation. The W4A4 quantization — 4-bit weights, 4-bit activations — is native on Chinese chips; against the 8-bit baseline, Meituan's own load tests show prompt processing up 43.3 percent and response generation up 42.77 percent while accuracy stays "on par with the uncompressed model."</p>
+
+  <blockquote class="pull-quote">"On par with the uncompressed model." <cite>— Meituan, on the W4A4 quantization in LongCat-2.5, per The Decoder, 2026-11-15</cite></blockquote>
+
+  <h4>Benchmarks and the DeepSWE jump</h4>
+  <p>The Terminal Bench v2.1 score of 88.4 sits beside Claude Opus 5 at 89.1, GPT-5.6 Sol at 88.8, and DeepSeek-V4.1-Flash at the table top of 90.6. On DeepSWE LongCat-2.5 jumped from 9.7 on LongCat-2.0 to 64.6, behind DeepSeek-V4.1-Flash at 74.2 and GPT-5.6 Sol at 72.7 but ahead of Claude Opus 4.8 in the published table. BrowseComp topped the chart at 91.9 but was run in Meituan's own environment. Claude Opus 5.5 and GPT-6.1 Sol are not in the DeepSWE comparison, a conspicuous absence.</p>
+
+  <h4>Distribution</h4>
+  <p>Weights are MIT-licensed, allowing commercial use, modification, and redistribution. A separate W4A4 variant is also published. The chat endpoint lives at longcat.ai; the API supports both OpenAI and Anthropic request formats and works with agent harnesses including Claude Code, Codex, and Hermes. Launch promotional pricing is about €0.27 per million input tokens and €1.07 per million output tokens — a steep discount against Western frontier models. LongCat-2.0 ran anonymously as "Owl Alpha" on OpenRouter before its public release, which Kemper notes as a pattern for how Chinese labs are now timing the open-weight drop.</p>
+
+  <blockquote class="pull-quote">"The self-hosting guide has no Nvidia GPU guidance anywhere." <cite>— The Decoder, paraphrasing Meituan's documentation, 2026-11-15</cite></blockquote>
+
+  <p class="source-footer"><a href="https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#fbf9f3"/>
+    <g font-family="Georgia,serif" fill="#1e3a8a">
+      <text x="60" y="36" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="-1.2">$12B</text>
+      <text x="60" y="50" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1.4">MEGASPEED · MAR 24 – JUN 25</text>
+    </g>
+    <g stroke="#1e3a8a" fill="none" stroke-width="0.6" opacity="0.8">
+      <path d="M12 68 L36 68 L36 70 L60 70 L60 66 L84 66 L84 72 L108 72" stroke-width="1"/>
+      <circle cx="36" cy="68" r="1.6" fill="#1e3a8a"/>
+      <circle cx="60" cy="70" r="1.6" fill="#1e3a8a"/>
+      <circle cx="84" cy="66" r="1.6" fill="#1e3a8a"/>
+    </g>
+    <text x="60" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.2">ALICE HUANG · WSJ DOCS · C4ADS · CULPER</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-economic">Economic</span></div>
+    <h3 class="headline">WSJ documents: Alice Huang's Megaspeed brokered ~$12B of restricted Nvidia chip orders for China between March 2024 and June 2025.</h3>
+    <p class="kicker">The Decoder (Matthias Bastian) · 2026-11-15 · <a href="https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Wall Street Journal reviewed documents showing Megaspeed arranged nearly $12 billion in Nvidia high-performance chip orders for Chinese buyers over 15 months, covering several hundred thousand chips export controls aimed to keep out. C4ADS says Alice Huang became controlling shareholder in March 2023; Megaspeed says she left on 30 August 2025. The firm reportedly had preferential access as an Nvidia cloud partner, with Alibaba a major client. Culper Research estimates more than 20 percent of Nvidia's prior-year revenue came from Chinese customers, much of it through indirect channels.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Matthias Bastian's Sunday Decoder piece folds the WSJ document trail, C4ADS ownership research, and Reuters statement response into one picture of how Megaspeed moved restricted Nvidia chips into China. Documents reviewed by the Wall Street Journal showed Megaspeed arranged nearly $12 billion worth of Nvidia high-performance chip orders for Chinese companies between March 2024 and June 2025, covering several hundred thousand chips that U.S. export controls were designed to keep out of the country. The buyers had long-standing ties to Chinese tech giants. Megaspeed itself reportedly gained preferential access to scarce Nvidia chips as an Nvidia cloud partner, with Alibaba as a major client.</p>
+
+  <h4>Who owned the firm</h4>
+  <p>Research group C4ADS identified Alice Huang as Megaspeed's controlling shareholder as of March 2023. The company told Reuters that Huang officially left Megaspeed on August 30, 2025, and has no current role. An update on Bastian's article cites the New York Times November 6 report that U.S. officials have speculated Huang may work for Chinese intelligence; no reporting has established that she does. The Decoder's language on the point is careful: the spy allegation is "unconfirmed." Separately, Alice Huang's past personal relationship with Jensen Huang, the Nvidia CEO who resigned on November 13, is the piece the mainstream wires have led with for a week. Bastian's framing puts the chip flow first and the personal thread second.</p>
+
+  <blockquote class="pull-quote">"Legitimate and lawful business." <cite>— Megaspeed statement to Reuters, as cited in The Decoder, 2026-11-15</cite></blockquote>
+
+  <h4>What Nvidia said</h4>
+  <p>Nvidia officially reported $12.4 billion in China revenue over six months, or about 7 percent of total revenue. Culper Research, the Wall Street short-seller shop, estimates that more than 20 percent of Nvidia's prior fiscal-year revenue came from Chinese customers, with much of that flowing through indirect channels. The disparity between the reported 7 percent and the Culper estimate of 20-plus percent is the piece that regulators have focused on since the October 2025 NYT report that Megaspeed was under investigation for helping Chinese customers obtain export-controlled Nvidia chips.</p>
+
+  <h4>Timeline</h4>
+  <p>Bastian lays out a clean order-of-events. March 2023: Alice Huang becomes Megaspeed's controlling shareholder per C4ADS. March 2024 to June 2025: WSJ's document window for the ~$12 billion in orders. August 30, 2025: Megaspeed says Alice Huang departs. October 2025: NYT reports the Commerce investigation. November 6, 2026: NYT publishes the espionage-speculation piece. November 13, 2026: Jensen Huang resigns as Nvidia CEO. November 15, 2026: The Decoder publishes Bastian's write-up. Megaspeed told Reuters it had retained external legal counsel for an internal investigation; Bastian notes that the external-counsel statement is not a direct quote in the response but is referenced in Megaspeed's reply.</p>
+
+  <blockquote class="pull-quote">"More than 20 percent of Nvidia's prior fiscal-year revenue came from Chinese customers, with much of that flowing through indirect channels." <cite>— Culper Research estimate, cited in The Decoder, 2026-11-15</cite></blockquote>
+
+  <p>The story runs alongside TechCrunch's Nov 15 Equity podcast preview, where Rebecca Bellan argues Huang's advocacy for loosening chip export controls to China "raises national security concerns"; and Kirsten Korosec's Nov 15 TechCrunch Mobility piece, where Pony.ai CFO Leo Wang says Chinese self-driving firms have spent two years practicing an Nvidia Plan B. The chip flow at Megaspeed is now Congress's single clearest numeric handle on the China exposure question.</p>
+
+  <p class="source-footer"><a href="https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="tech policy application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#fbf9f3"/>
+    <g stroke="#1e3a8a" fill="none" stroke-width="0.8" opacity="0.8">
+      <circle cx="30" cy="40" r="12"/>
+      <circle cx="90" cy="40" r="12"/>
+      <line x1="42" y1="40" x2="78" y2="40" stroke-dasharray="2 2"/>
+    </g>
+    <g font-family="Georgia,serif" fill="#1e3a8a">
+      <text x="30" y="44" font-size="8" font-weight="700" text-anchor="middle">NVDA</text>
+      <text x="90" y="44" font-size="8" font-weight="700" text-anchor="middle">CN</text>
+    </g>
+    <text x="60" y="22" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.4">PONY.AI · PLAN B · 2 YEARS</text>
+    <text x="60" y="68" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.2">LEO WANG · "SOME FLEXIBILITY"</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-tech">Tech</span><span class="tag tag-policy">Policy</span><span class="tag tag-application">Application</span></div>
+    <h3 class="headline">Pony.ai CFO tells TechCrunch Chinese self-driving firms have been "practicing a Plan B" on Nvidia for two years as export risk mounts.</h3>
+    <p class="kicker">TechCrunch (Kirsten Korosec) · 2026-11-15 · <a href="https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Pony.ai CFO Leo Wang told Kirsten Korosec that Chinese autonomy firms are substituting mid-tier compute where they can and leaning more on domestic chips; the alternatives aren't yet most cost-effective but are "more mature than before." The piece ties the backup plans to Jensen Huang's resignation and the Web Summit opening remarks that framed future tech leaders as emerging from China. Nvidia supplies automakers in three ways: auto processors, training GPUs, and full-stack partnerships with Mercedes-Benz, Zoox and Wayve.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Kirsten Korosec, TechCrunch's transportation editor, built Sunday's Mobility column around a conversation with Pony.ai CFO Leo Wang. The context is the Jensen Huang resignation and the prospect of tighter U.S. export controls on Nvidia chips sold to China. Wang said demand for AI training compute already far exceeds supply, and Chinese self-driving companies are responding by using mid-tier compute where it can carry the training load and by turning more to domestic Chinese chips. The alternatives are not yet the most cost-effective option, Wang said, but they are more mature than they were.</p>
+
+  <blockquote class="pull-quote">"Everyone, I would say, is also practicing kind of like a Plan B for a few years." <cite>— Leo Wang, CFO, Pony.ai, to TechCrunch, 2026-11-15</cite></blockquote>
+
+  <h4>Three Nvidia lines of exposure</h4>
+  <p>Korosec notes that Nvidia supplies autonomous-driving firms in three distinct ways: automotive processors that run the on-vehicle inference loop, data-center GPUs that train the perception and planning models, and full-stack partnerships in which Nvidia provides both the silicon and a software layer. The full-stack side names Mercedes-Benz, Zoox, and Wayve. A pullback on any one of those lines lands differently; Wang's comments focus on the training GPUs, where domestic Chinese alternatives are now in play.</p>
+
+  <blockquote class="pull-quote">"I think that gives us some flexibility." <cite>— Leo Wang, Pony.ai, on domestic chips as an AI-training option, 2026-11-15</cite></blockquote>
+
+  <h4>Other Mobility items in the piece</h4>
+  <p>May Mobility plans to use the Volkswagen ID. Buzz for its global ride-hailing platform, targeting more than 10,000 autonomous vehicles through 2031; VW continues to work with Mobileye and offers an automation-ready base vehicle to other developers. Japan's Newmo raised ¥20.8 billion, roughly $135 million, led by KDDI. The Dutch parking-tech firm ParkBee acquired Mobian's city and parking operations. The Austrian urban-logistics company Port raised €14.5 million led by EBRD and Balnord. Lucid reported Q3 revenue of $350 million, below expectations, with net loss narrowing to $830.9 million and the Saudi Public Investment Fund's delayed-draw term loan increased to $1.75 billion.</p>
+
+  <p>Elsewhere in the newsletter: NHTSA is investigating a Waymo software recall tied to robotaxis illegally passing school buses, and Waymo sources told Korosec no such incidents have occurred since March, which the writer could not independently verify. Elon Musk said the Cybertruck will remain in production through next summer and then end, with some deposits refunded; Tesla is expanding robotaxi service to San Antonio. Uber is launching a parking reservation and payment service about nine months after acquiring SpotHero and is notifying thousands of drivers about a data breach at a technology provider. United Airlines will restrict AI agents from booking flights on users' behalf, citing cybersecurity risks.</p>
+
+  <blockquote class="pull-quote">"Future tech leaders are emerging from China." <cite>— Paddy Cosgrave, Web Summit co-founder, opening remarks cited by Korosec, 2026-11-15</cite></blockquote>
+
+  <p class="source-footer"><a href="https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#fbf9f3"/>
+    <g font-family="Georgia,serif" fill="#1e3a8a">
+      <text x="60" y="38" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="-1.2">78.3%</text>
+      <text x="60" y="52" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1.4">UNIT 42 · 5 MCP SERVERS</text>
+    </g>
+    <g stroke="#1e3a8a" fill="none" stroke-width="0.6" opacity="0.8">
+      <circle cx="24" cy="68" r="3"/>
+      <circle cx="46" cy="68" r="3"/>
+      <circle cx="68" cy="68" r="3" fill="#1e3a8a" stroke="none"/>
+      <circle cx="90" cy="68" r="3"/>
+      <circle cx="112" cy="68" r="3"/>
+      <line x1="27" y1="68" x2="43" y2="68"/>
+      <line x1="49" y1="68" x2="65" y2="68"/>
+      <line x1="71" y1="68" x2="87" y2="68"/>
+      <line x1="93" y1="68" x2="109" y2="68"/>
+    </g>
+    <text x="60" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.2">CASCADING TRUST · OWASP TOP 10 · OAUTH</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-safety">Safety</span></div>
+    <h3 class="headline">VentureBeat: Palo Alto Unit 42 measures 78.3% attack success on agents connected to five MCP servers once one server is compromised.</h3>
+    <p class="kicker">VentureBeat (Nilay Dhamsania, Intuz) · 2026-11-15 · <a href="https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Intuz AI strategist Nilay Dhamsania wrote that Palo Alto Networks Unit 42 found a 78.3 percent attack success rate when five MCP servers were connected to a single agent and one was compromised, with instructions riding cascading trust into every subsequent tool call. OWASP's MCP Top 10 says only two of ten risk categories sit in the text the agent reads; the other eight live in infrastructure the protocol doesn't constrain. MCP launched in November 2024 with no authorization framework; revisions in March, June, November 2025 and July 2026 added OAuth and deprecated Dynamic Client Registration.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>VentureBeat ran Nilay Dhamsania's Sunday analysis as the orchestration beat's main security piece. Dhamsania is an AI strategist and director at Intuz; the piece is a practitioner argument, not a vendor announcement. The argument is simple: a single compromised MCP server can inject instructions that spread through "cascading trust" into every subsequent tool call an agent makes. Once an agent treats one server's output as trustworthy, those instructions carry into calls to other servers, including servers that were never compromised. The example Dhamsania works through is a help-desk agent given access to a mail store, a calendar, a ticket system, and an internal wiki; a prompt injection in one of those surfaces can reach all four.</p>
+
+  <h4>The 78.3 percent number</h4>
+  <p>Palo Alto Networks Unit 42 ran testing with five MCP servers connected to a single agent. Once Unit 42 compromised a single server, attacks succeeded at a 78.3 percent rate across the agent's full tool set. Dhamsania maps the result to OWASP's MCP Top 10 taxonomy: ten risk categories, of which only two are visible to the agent itself as text. The other eight — credential handling, scope boundaries, identity, token lifetime, consent flow, server-to-server authentication, logging, and rotation — sit in infrastructure the MCP protocol doesn't constrain. The NSA's May 2026 guidance for agentic deployments, mapped by Equixly to the OWASP list, flagged the same split.</p>
+
+  <blockquote class="pull-quote">"It never standardized how you prove who's calling or what they're allowed to touch." <cite>— Nilay Dhamsania, Intuz, on MCP's original 2024 spec, in VentureBeat, 2026-11-15</cite></blockquote>
+
+  <h4>The protocol timeline</h4>
+  <p>MCP launched in November 2024 with no authorization framework. The March 2025 revision added OAuth-based controls; the June 2025 revision strengthened session management; the November 2025 revision tightened tool-call scoping; the July 2026 revision deprecated Dynamic Client Registration (DCR), which Dhamsania frames as a response to the "rug pull" pattern in which a trusted dependency silently changes behavior after registration. The piece calls out hard-coded credentials and token mismanagement as the two most common Unit 42 findings in the field — tokens scoped to full mailbox access where read-only would do, as Microsoft Azure guidance put it in its own write-up that Dhamsania cites.</p>
+
+  <blockquote class="pull-quote">"A compromised server can inject instructions that ride along into every subsequent tool call." <cite>— Nilay Dhamsania, VentureBeat, 2026-11-15</cite></blockquote>
+
+  <h4>What Microsoft's internal deployments say</h4>
+  <p>Microsoft's Inside Track blog and Azure security guidance, Dhamsania writes, treat MCP deployment as external by default: "internal isn't the same as trusted," the Microsoft text reads, as summarized in the article. The practical takeaway Dhamsania pulls out is three-part: scope tokens tightly; log and attribute every tool call to a human or service identity; and pin MCP server versions so a July rug pull can't re-enter on the next run.</p>
+
+  <blockquote class="pull-quote">"Internal isn't the same as trusted." <cite>— Microsoft Inside Track, cited by Dhamsania, 2026-11-15</cite></blockquote>
+
+  <h4>The deployment baseline</h4>
+  <p>Gartner forecasts 40 percent of enterprise applications will include task-specific AI agents by the end of 2026. Combine that with the Unit 42 cascade number and the OWASP mapping and the piece's argument writes itself: the agentic layer is going into production without a standard identity layer, and the incident curve has to flatten through convention. The deprecation of DCR in July is the first standards-level response; Dhamsania argues it isn't enough without enterprise policy that treats MCP tool chains as mutually untrusted by default.</p>
+
+  <p class="source-footer"><a href="https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="economic trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#fbf9f3"/>
+    <g font-family="Georgia,serif" fill="#1e3a8a">
+      <text x="60" y="36" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="-1.2">~80%</text>
+      <text x="60" y="50" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1.4">GPU MARKET · NVIDIA</text>
+    </g>
+    <g stroke="#1e3a8a" fill="none" stroke-width="0.6" opacity="0.8">
+      <rect x="14" y="58" width="92" height="14" fill="none"/>
+      <rect x="14" y="58" width="73" height="14" fill="#1e3a8a" stroke="none" opacity="0.5"/>
+      <line x1="87" y1="58" x2="87" y2="72" stroke-dasharray="2 2"/>
+    </g>
+    <text x="60" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.2">$99B INV · $25B COMM · $36B CLOUD</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-economic">Economic</span><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">TechCrunch Equity podcast: Huang's ouster hits an AI industry Nvidia funds through 80% market share, $99B of investments, $25B of commitments.</h3>
+    <p class="kicker">TechCrunch (Anthony Ha) · 2026-11-15 · <a href="https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Anthony Ha and Rebecca Bellan previewed TechCrunch's Equity podcast argument that Jensen Huang's Thursday resignation is also bad news for an AI industry that leans on Nvidia for roughly 80 percent of the GPU market, $99 billion in investments, $25 billion in commitments, and $36 billion in cloud service commitments. CFO Collette Kress is reading as a caretaker, not a long-term CEO; a Bloomberg report Nov 9 said Nvidia's head attorney had a role in inquiring about a Commerce investigation into Alice Huang.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>TechCrunch's weekend editor Anthony Ha previewed Sunday's Equity podcast with co-hosts Rebecca Bellan and Tim De Chant. The frame is straightforward: Nvidia's board opened an investigation into CEO Jensen Huang, the resignation came faster than the hosts expected, and the AI industry's dependence on Nvidia means the fallout is not an Nvidia story. Huang resigned on a Thursday after reports of an affair with a former executive at Megaspeed, an Nvidia customer whose alleged ties to Chinese intelligence are still contested, and after reports of a second affair with a current Nvidia executive. CFO Collette Kress became interim CEO.</p>
+
+  <blockquote class="pull-quote">"I didn't think it was going to happen at all." <cite>— Rebecca Bellan, TechCrunch, on the speed of Huang's ouster, 2026-11-15</cite></blockquote>
+
+  <h4>The dependency numbers</h4>
+  <p>The core argument Ha and Bellan return to is that Jensen Huang's personal footprint on the AI industry extends well past Nvidia's chip sales. Nvidia accounts for roughly 80 percent of the AI GPU market. The company has reported $99 billion in investments, another $25 billion in commitments, and $36 billion in cloud service commitments. Those are the numbers the podcast uses to argue the "Jensen is Nvidia, right?" shorthand is more than branding — a shift in investment posture under Kress propagates across the capacity planning of every AI company that Nvidia has helped finance.</p>
+
+  <blockquote class="pull-quote">"Jensen is Nvidia, right?" <cite>— Rebecca Bellan, TechCrunch Equity, 2026-11-15</cite></blockquote>
+
+  <h4>Kress as caretaker</h4>
+  <p>Ha's read on Kress is that she is a caretaker rather than a candidate for long-term CEO. Nvidia had no formal succession plan in place; several family members work at the company; and Kress's first-week moves on OpenAI's Ohio guarantee program read as expense discipline, not strategy. The hosts treat The-decoder's earlier reporting that Kress halved the $250 billion OpenAI Ohio guarantee as a signal she will focus on managing exposure rather than extending it.</p>
+
+  <blockquote class="pull-quote">"This is not necessarily someone you should expect to be in this role for the long term." <cite>— Anthony Ha, on interim CEO Collette Kress, 2026-11-15</cite></blockquote>
+
+  <h4>The Bloomberg piece</h4>
+  <p>A Bloomberg report Ha references, dated November 9, said Nvidia's head attorney had a role in inquiring about a Department of Commerce investigation into Alice Huang. The hosts call that the turning point — a board investigation gains teeth when it has a general-counsel thread. Ha also references Elon Musk's open petition from November 14 calling on Nvidia to reinstate Huang, and the broader national-security framing that Bellan argues flows from Huang's past advocacy for loosening chip exports to China.</p>
+
+  <blockquote class="pull-quote">"He just wants to sell more chips, and to anybody and everybody." <cite>— Rebecca Bellan, on Huang's export-policy posture, 2026-11-15</cite></blockquote>
+
+  <p>The podcast is edited for length and clarity in the preview; the full audio runs with Equity's Sunday drop. The takeaway Ha and Bellan converge on is that the industry's next ten days turn on Nvidia's November 17 Q3 earnings call — the first with Kress, the first without Huang, and the one that forces an answer on the Ohio guarantee and the Megaspeed revenue exposure in the same window as the Anthropic IPO.</p>
+
+  <p class="source-footer"><a href="https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<details class="story" data-tags="policy trend">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="80" fill="#fbf9f3"/>
+    <g stroke="#1e3a8a" fill="none" stroke-width="0.8" opacity="0.8">
+      <polyline points="10 62 30 58 50 54 70 50 90 48 110 44" stroke-width="1.2"/>
+      <polyline points="10 42 30 44 50 48 70 52 90 56 110 60" stroke-dasharray="3 2"/>
+    </g>
+    <g font-family="Georgia,serif" fill="#1e3a8a">
+      <text x="60" y="26" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="-0.6">15–24</text>
+    </g>
+    <text x="60" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#1e3a8a" text-anchor="middle" letter-spacing="1.2">RBA · PROGRAMMING · CLERICAL · CS</text>
+  </svg>
+  <div>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-trend">Trend</span></div>
+    <h3 class="headline">Reserve Bank of Australia: AI has barely displaced jobs overall but young workers in high-exposure roles have lost ground since late 2022.</h3>
+    <p class="kicker">The Decoder (Manuel Uth) · 2026-11-15 · <a href="https://the-decoder.com/australias-central-bank-finds-ai-hitting-young-workers-first-especially-in-software-and-customer-service/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The RBA's "Monitoring early effects of AI on the labour market" by Mike Major finds AI has barely displaced jobs in Australia overall, but postings have fallen across all groups since late 2022, with the steepest drop in the highest-exposure quintile. Young workers aged 15 to 24 and recent college graduates in that quintile have weaker employment rates than older workers in the same quintile. Programming, clerical work and customer service are the exposure anchors. Major cautions the study doesn't establish causation and measures theoretical exposure, not actual corporate AI use.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Manuel Uth's Sunday Decoder write-up walks through the Reserve Bank of Australia's latest labor-market monitoring report, "Monitoring early effects of AI on the labour market," by RBA researcher Mike Major. The headline finding is a careful one: AI has barely displaced any jobs in Australia so far, Major writes, but the youngest workers in the most AI-exposed occupations have measurably lost ground. The monitoring system focuses on entry-level workers and highly exposed occupations — programming, clerical work, and customer service. Job postings have fallen across all exposure groups since ChatGPT's late-2022 launch, with the steepest drop in the highest-exposure group.</p>
+
+  <blockquote class="pull-quote">"AI has barely displaced any jobs in Australia so far." <cite>— Mike Major, Reserve Bank of Australia, "Monitoring early effects of AI on the labour market," cited in The Decoder, 2026-11-15</cite></blockquote>
+
+  <h4>The young-worker gap</h4>
+  <p>In the highest-exposure quintile, workers aged 15 to 24 and recent college graduates have weaker employment rates and higher unemployment than older workers in the same quintile. Employment among younger people in the high-exposure group has declined since late 2022, while employment among older workers in the same group has risen. Major is careful on causation: theoretical exposure is not the same as actual corporate AI use, and the post-pandemic business cycle, remote-work normalization, and other macro factors could carry the signal. SEEK data referenced in the report suggests AI is complementing existing work in many workflows and generating demand for AI-related skills at the same time.</p>
+
+  <h4>Studies in context</h4>
+  <p>Uth sets the RBA finding alongside the recent US and European literature. Stanford's August 2025 US payroll analysis showed a roughly 13 percent drop in relative employment for 22-to-25-year-olds in AI-exposed occupations since late 2022, and nearly 20 percent for young software developers. Anthropic's March 2026 study found job-finding rates for 22-to-25-year-olds in exposed occupations fell about 14 percent, with no systematic rise in overall unemployment. Anthropic's internal review showed its own junior-technical hire share fell from 27 percent to 9 percent since early 2025; in August 2026, Anthropic's AI agents logged six times as many hours as human employees. Denmark's 25,000-worker study found no measurable changes in wages or hours despite a 64 percent AI adoption rate, with workers saving an average of 2.8 percent of their working time.</p>
+
+  <blockquote class="pull-quote">"77 percent of surveyed companies prioritize upskilling over job cuts." <cite>— WEF Future of Jobs Report 2025, as cited by Uth, 2026-11-15</cite></blockquote>
+
+  <h4>The LinkedIn counterweight</h4>
+  <p>A January 2026 LinkedIn/US unemployment analysis found problems in exposed occupations began in early 2022, before ChatGPT's launch, suggesting macroeconomic factors may matter more than AI alone. LinkedIn also reported AI-related job postings grew sixfold in one year. WEF's Future of Jobs 2025 projected a net gain of 78 million jobs by 2030 and showed 77 percent of surveyed companies prioritize upskilling over job cuts.</p>
+
+  <h4>The policy angle</h4>
+  <p>The RBA report is monitoring, not policy, and Major does not propose interventions. Uth's framing is that Australia's central bank is now the latest in a line of monetary-policy authorities tracking AI labor effects, alongside Anthropic's internal review and the UK Office for Students' recent flagging that AI makes some coursework "close to impossible" to grade fairly. The more consequential piece is the composition of the youth jobs gap: a labor market where entry-level programming and customer-service work is thinning narrows the escalator from school to mid-career, independent of whether the thinning is directly attributable to AI or the broader cycle.</p>
+
+  <blockquote class="pull-quote">"Employment among younger people in the high-exposure group has declined since late 2022." <cite>— Reserve Bank of Australia, 2026-11-15</cite></blockquote>
+
+  <p class="source-footer"><a href="https://the-decoder.com/australias-central-bank-finds-ai-hitting-young-workers-first-especially-in-software-and-customer-service/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</section>
+
+<div class="colophon">
+  <div>Apollo AI News · Daily · 2026-11-16 · Generated by the AI News Bot</div>
+  <div><a href="../index.html">← Back to home</a></div>
+</div>
+
+</main>
+</div>
+<script>
+(function(){
+  const stories = document.querySelectorAll('details.story');
+  const chips = document.querySelectorAll('.filter-chip');
+  const statusEl = document.querySelector('.filter-status');
+  const bigPicture = document.querySelector('.big-picture');
+  const countEl = document.querySelector('#rundown-title .count');
+  const baseCountText = countEl ? countEl.textContent : '';
+  const dateSuffix = baseCountText.includes('·') ? ' · ' + baseCountText.split('·').slice(1).join('·').trim() : '';
+
+  function updateChipCounts(){
+    const total = stories.length;
+    chips.forEach(c => {
+      const tag = c.dataset.filter;
+      const n = tag === 'all' ? total : [...stories].filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const countSpan = c.querySelector('.count');
+      if(countSpan) countSpan.textContent = n;
+      if(n === 0 && tag !== 'all'){ c.disabled = true; }
+    });
+  }
+
+  function applyFilter(filter){
+    if(bigPicture){ bigPicture.hidden = (filter !== 'all'); }
+    let visible = 0;
+    let visibleNonHero = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags || '').split(/\s+/);
+      const match = filter === 'all' || tags.includes(filter);
+      s.hidden = !match;
+      if(match){
+        visible++;
+        if(!s.classList.contains('hero') && s.id !== 'hero') visibleNonHero++;
+      }
+    });
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    const labelMap = {all:'All', tech:'Tech', application:'Application', economic:'Economic', policy:'Policy', safety:'Safety', trend:'Trend'};
+    if(statusEl) statusEl.textContent = 'Showing ' + visible + ' of ' + stories.length + ' stories — ' + (labelMap[filter] || filter);
+    if(countEl){ countEl.textContent = visibleNonHero + ' stories' + dateSuffix; }
+    if(filter === 'all'){ history.replaceState(null, '', location.pathname + location.search); }
+    else { history.replaceState(null, '', '#filter=' + filter); }
+  }
+
+  updateChipCounts();
+
+  chips.forEach(c => {
+    c.addEventListener('click', () => {
+      if(c.disabled) return;
+      applyFilter(c.dataset.filter);
+    });
+  });
+
+  const hash = location.hash || '';
+  const match = hash.match(/^#filter=(\w+)/);
+  const initial = (match && [...chips].some(c => c.dataset.filter === match[1] && !c.disabled)) ? match[1] : 'all';
+  applyFilter(initial);
+})();
+</script>
+</body>
+</html>
