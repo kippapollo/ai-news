@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apollo AI News — Weekly · 2026-W46</title>
+<meta name="description" content="Jensen Huang resigned as Nvidia president, CEO and director on Thursday November 12, four days after the board opened an independent probe into a foreign intelligence contact; CFO Colette Kress stepped in as interim CEO and Harvey C. Jones was named the company's first-ever chair. Two Nvidia shareholders — Altimeter and Atreides, holding about $2.1 billion of stock between them — wrote the board on November 13 urging a 'slow, measured, and deliberate process,' and by Saturday the Financial Times reported Huang was already talking to allies about a return. Anthropic filed Amendment No. 2 to its S-1 with an $70–$78 price band on 825 million Class A shares and a $26 billion private placement from Nvidia, Google, AMD, Broadcom, Micron, Microsoft and TSMC. Anthropic shipped Claude Fable 5.2 and Mythos 5.2 at $8/$40 per million tokens, a 20 percent cut from the 5.1 generation. Google DeepMind released Gemini Robotics 2.5 at 96 percent on a Mercedes-Benz bin-picking pilot, plus AlphaGenome 2 with DNA methylation and cell-type conditioning. Google launched TPU 8tx for confidential inference and TPU 8i Max for long context. Apple sold its first paid Apple Intelligence tier through $49.99 Logic Pro usage packs. OpenAI's Q3 revenue climbed 50 percent to $10 billion with a $10.9 billion operating loss. Alibaba opened a frozen Qwen4-Max preview with a 1M-token context through November 25. Macron convened OpenAI, Anthropic, Microsoft and Mistral at the Élysée for the Paris Call for AI Safety and Security. Anthony Albanese announced a dedicated Australian AI safety regulator with penalty powers.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<style>
+:root{
+  --bg:#f7f5ef;
+  --ink:#11151a;
+  --muted:#5a6068;
+  --rule:#d9d3c2;
+  --card:#fbf9f3;
+  --accent:#166534;
+  --accent-soft:rgba(22,101,52,0.09);
+  --tag-tech:rgba(30,58,138,0.12);
+  --tag-tech-ink:#1e3a8a;
+  --tag-application:rgba(17,94,89,0.12);
+  --tag-application-ink:#0f766e;
+  --tag-economic:rgba(22,101,52,0.12);
+  --tag-economic-ink:#166534;
+  --tag-policy:rgba(180,83,9,0.14);
+  --tag-policy-ink:#92400e;
+  --tag-safety:rgba(136,19,55,0.12);
+  --tag-safety-ink:#881337;
+  --tag-trend:rgba(107,33,168,0.12);
+  --tag-trend-ink:#6b21a8;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#15181c;
+    --ink:#e6e3dc;
+    --muted:#9a9690;
+    --rule:#2c2f35;
+    --card:#1b1f24;
+    --accent:#86efac;
+    --accent-soft:rgba(134,239,172,0.14);
+    --tag-tech:rgba(147,197,253,0.16);
+    --tag-tech-ink:#bfdbfe;
+    --tag-application:rgba(45,212,191,0.16);
+    --tag-application-ink:#5eead4;
+    --tag-economic:rgba(74,222,128,0.16);
+    --tag-economic-ink:#86efac;
+    --tag-policy:rgba(252,211,77,0.16);
+    --tag-policy-ink:#fcd34d;
+    --tag-safety:rgba(252,165,165,0.16);
+    --tag-safety-ink:#fecaca;
+    --tag-trend:rgba(216,180,254,0.16);
+    --tag-trend-ink:#e9d5ff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  font-feature-settings:"kern","liga";
+}
+.page{max-width:1140px;margin:0 auto;padding:24px 28px 96px}
+@media (max-width:640px){.page{padding:16px 18px 72px}}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-bottom:14px;border-bottom:2px solid var(--accent)}
+.masthead a.brand{display:inline-flex;align-items:center;text-decoration:none;color:inherit;outline:none}
+.masthead a.brand:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.masthead svg.logo{height:48px;width:auto;display:block}
+.edition-meta{text-align:right;font-feature-settings:"tnum";font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.edition-meta strong{display:block;color:var(--ink);font-size:0.92rem;letter-spacing:0.18em}
+.edition-meta .range{display:block;margin-top:2px;letter-spacing:0.08em;text-transform:none;font-size:0.75rem}
+.filter-bar{position:sticky;top:0;z-index:10;background:var(--bg);display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:12px 0;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.filter-bar.is-stuck{box-shadow:0 6px 12px -10px rgba(0,0,0,0.18)}
+.filter-chip{font:inherit;font-size:0.72rem;letter-spacing:0.10em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;font-weight:600}
+.filter-chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (prefers-color-scheme: dark){.filter-chip[aria-pressed="true"]{color:#15181c}}
+.filter-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.filter-chip[disabled]{opacity:0.4;cursor:not-allowed}
+.filter-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;padding:24px 0 8px}
+@media (max-width:880px){.hero{grid-template-columns:1fr;gap:24px}}
+.hero-tags{margin-bottom:16px}
+.hero h1{font-family:Georgia,"Times New Roman",Charter,serif;font-weight:700;font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.06;letter-spacing:-0.018em;margin:0 0 18px}
+.hero .dek{font-size:1.16rem;color:var(--muted);line-height:1.5;margin:0 0 22px}
+.hero .kicker{font-size:0.84rem;color:var(--muted);font-feature-settings:"tnum";letter-spacing:0.04em;margin:0}
+.hero .kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.hero-art{width:100%;height:auto;display:block;aspect-ratio:480/320}
+.big-picture{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0;margin:36px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px}
+@media (max-width:720px){.big-picture{grid-template-columns:1fr;gap:14px}}
+.big-picture .label{font-size:0.72rem;letter-spacing:0.20em;text-transform:uppercase;color:var(--accent);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);align-self:start}
+@media (max-width:720px){.big-picture .label{writing-mode:horizontal-tb;transform:none}}
+.big-picture p{font-size:1.16rem;line-height:1.6;margin:0 0 14px}
+.big-picture p:last-child{margin-bottom:0}
+.big-picture[hidden]{display:none}
+.big-picture p:first-of-type::first-letter{font-family:Georgia,"Times New Roman",Charter,serif;font-size:3.6rem;line-height:0.9;float:left;margin:6px 10px 0 0;color:var(--accent);font-weight:700}
+.themes{margin:24px 0 8px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media (max-width:780px){.themes{grid-template-columns:1fr}}
+.theme{padding:18px 18px 14px;border:1px solid var(--rule);border-radius:6px;background:var(--card)}
+.theme header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.theme header svg{width:28px;height:28px;flex-shrink:0}
+.theme h3{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.06rem;margin:0;letter-spacing:-0.005em}
+.theme p{margin:0;font-size:0.96rem;line-height:1.55;color:var(--ink)}
+.ornament{display:flex;justify-content:center;margin:36px 0 28px}
+.ornament svg{width:96px;height:18px}
+.section-head{display:flex;align-items:baseline;gap:18px;margin:0 0 28px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.section-head h2{font-family:Georgia,"Times New Roman",Charter,serif;margin:0;font-size:1.6rem;letter-spacing:-0.01em}
+.section-head .count{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum"}
+.cards{display:flex;flex-direction:column;gap:8px}
+.story{background:transparent;border-top:1px solid var(--rule);padding:24px 0}
+.story[open]{background:var(--accent-soft);padding-left:18px;padding-right:18px;border-radius:4px;margin:0 -18px}
+.story summary{list-style:none;cursor:pointer;outline:none;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:start}
+.story summary::-webkit-details-marker{display:none}
+.story summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+.story.hero>summary,details#hero>summary{display:block}
+@media (max-width:600px){.story summary{grid-template-columns:1fr;gap:12px}.story-thumb{aspect-ratio:320/80;width:100%;height:auto}}
+.story-thumb{display:block;width:120px;height:auto}
+.story .body{min-width:0}
+.tag-row{display:flex;gap:6px;margin:0 0 8px;flex-wrap:wrap}
+.tag{font-size:0.66rem;letter-spacing:0.10em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:3px}
+.tag-tech{background:var(--tag-tech);color:var(--tag-tech-ink)}
+.tag-application{background:var(--tag-application);color:var(--tag-application-ink)}
+.tag-economic{background:var(--tag-economic);color:var(--tag-economic-ink)}
+.tag-policy{background:var(--tag-policy);color:var(--tag-policy-ink)}
+.tag-safety{background:var(--tag-safety);color:var(--tag-safety-ink)}
+.tag-trend{background:var(--tag-trend);color:var(--tag-trend-ink)}
+.headline{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.42rem;line-height:1.18;letter-spacing:-0.01em;margin:0 0 6px;font-weight:700}
+.kicker{font-size:0.84rem;color:var(--muted);margin:0 0 8px;font-feature-settings:"tnum"}
+.kicker a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.teaser{margin:0 0 12px;font-size:0.99rem;line-height:1.55}
+.expand-control{display:inline-block;font-size:0;letter-spacing:normal;color:var(--accent);font-weight:700;border-bottom:1px solid var(--accent);padding-bottom:2px}
+.story[open] .expand-control::after{content:" Collapse \25B4";font-size:0.76rem;letter-spacing:0.12em}
+.story:not([open]) .expand-control::after{content:" Read in full \25BE";font-size:0.76rem;letter-spacing:0.12em}
+.full-content{margin-top:16px;padding-top:16px;border-top:1px dashed var(--rule);grid-column:1/-1;animation:fadeIn 220ms ease}
+.full-content p{margin:0 0 14px;line-height:1.65;font-size:1rem}
+.full-content h4{font-family:Georgia,"Times New Roman",Charter,serif;font-size:1.04rem;margin:18px 0 6px;letter-spacing:-0.005em}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.pull-quote{margin:18px 0;padding:6px 0 6px 16px;border-left:3px solid var(--accent);font-style:italic;font-size:1.05rem;line-height:1.5;color:var(--ink)}
+.pull-quote cite{display:block;margin-top:6px;font-style:normal;font-size:0.82rem;color:var(--muted);letter-spacing:0.03em}
+.source-footer{margin-top:18px !important}
+.source-footer a{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid var(--accent)}
+.colophon{margin-top:64px;padding:24px 0 0;border-top:2px solid var(--accent);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:0.84rem;color:var(--muted)}
+.colophon a{color:var(--accent);text-decoration:none}
+.colophon strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <a class="brand" href="../index.html" aria-label="Apollo AI News — homepage">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Apollo AI News">
+      <g transform="translate(4, 4)" stroke="#c2410c" stroke-linecap="round">
+        <g fill="none" stroke-width="2">
+          <line x1="28" y1="2" x2="28" y2="9"/>
+          <line x1="28" y1="47" x2="28" y2="54"/>
+          <line x1="2" y1="28" x2="9" y2="28"/>
+          <line x1="47" y1="28" x2="54" y2="28"/>
+          <line x1="9.5" y1="9.5" x2="14" y2="14"/>
+          <line x1="42" y1="42" x2="46.5" y2="46.5"/>
+          <line x1="46.5" y1="9.5" x2="42" y2="14"/>
+          <line x1="9.5" y1="46.5" x2="14" y2="42"/>
+        </g>
+        <circle cx="28" cy="28" r="14" fill="none" stroke-width="2"/>
+        <circle cx="28" cy="28" r="5" fill="#c2410c" stroke="none"/>
+      </g>
+      <g transform="translate(76, 0)" fill="currentColor">
+        <text x="0" y="34" font-family="Georgia,'Times New Roman',Charter,serif" font-size="28" font-weight="700" letter-spacing="0.6">APOLLO</text>
+        <text x="0" y="54" font-family="system-ui,-apple-system,'Segoe UI',Roboto,sans-serif" font-size="11" font-weight="600" letter-spacing="3" fill="#c2410c">AI NEWS</text>
+      </g>
+    </svg>
+  </a>
+  <div class="edition-meta">
+    <strong>Weekly · 2026-W46</strong>
+    <span class="range">Nov 9 – Nov 15, 2026</span>
+  </div>
+</header>
+
+<nav class="filter-bar" aria-label="Filter stories by tag">
+  <button class="filter-chip" data-filter="all" aria-pressed="true">All · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="tech" aria-pressed="false">Tech · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="application" aria-pressed="false">Application · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="economic" aria-pressed="false">Economic · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="policy" aria-pressed="false">Policy · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="safety" aria-pressed="false">Safety · <span class="count">0</span></button>
+  <button class="filter-chip" data-filter="trend" aria-pressed="false">Trend · <span class="count">0</span></button>
+  <div class="filter-status" aria-live="polite" id="filter-status"></div>
+</nav>
+
+<!-- HERO: Jensen Huang resigns from Nvidia -->
+<details class="story hero" id="hero" data-tags="economic policy trend">
+<summary>
+  <div class="hero">
+    <div>
+      <div class="tag-row hero-tags">
+        <span class="tag tag-economic">Economic</span>
+        <span class="tag tag-policy">Policy</span>
+        <span class="tag tag-trend">Trend</span>
+      </div>
+      <h1>After 33 years, Nvidia's board accepts Jensen Huang's resignation</h1>
+      <p class="dek">Nvidia's board announced Thursday November 12 that Jensen Huang had resigned as president, chief executive and a director, effective immediately. CFO Colette Kress stepped in as interim CEO while retaining the CFO role; Harvey C. Jones was named the company's first-ever chair. The announcement came four days after the board opened an independent probe — run by Wachtell, Lipton, Rosen &amp; Katz and former acting US Attorney Joon H. Kim — into reports that Huang was targeted by a foreign intelligence operation through his contact with Alice Huang, a former executive at Singapore-based data-centre company Megaspeed. Nvidia said it had "no reason to believe that either national security or NVIDIA secrets were compromised." Q3 fiscal 2027 earnings stay on Monday November 17.</p>
+      <p class="kicker">NVIDIA Investor Relations · 2026-11-12 · <a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener">Source ↗</a></p>
+      <p style="margin-top:14px"><span class="expand-control"></span></p>
+    </div>
+    <svg class="hero-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="presentation" aria-hidden="true">
+      <defs>
+        <linearGradient id="hgrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#166534" stop-opacity="0.28"/>
+          <stop offset="1" stop-color="#166534" stop-opacity="0"/>
+        </linearGradient>
+        <pattern id="grid2" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0 L0 0 0 24" fill="none" stroke="#166534" stroke-opacity="0.08" stroke-width="0.5"/>
+        </pattern>
+        <radialGradient id="dot-glow" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#166534" stop-opacity="0.85"/>
+          <stop offset="1" stop-color="#166534" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="480" height="320" fill="#f7f5ef"/>
+      <rect x="0" y="0" width="480" height="320" fill="url(#grid2)"/>
+      <rect x="0" y="0" width="480" height="320" fill="url(#hgrad)"/>
+      <g transform="translate(28, 24)">
+        <text x="0" y="0" font-family="system-ui,sans-serif" font-size="9" font-weight="700" letter-spacing="2.4" fill="#166534">WEEK 46 · NOV 9 – NOV 15 · THE SUCCESSION WEEK</text>
+        <line x1="0" y1="8" x2="424" y2="8" stroke="#166534" stroke-width="1"/>
+      </g>
+
+      <!-- Big 33Y glyph on left -->
+      <g transform="translate(28, 72)">
+        <circle cx="90" cy="90" r="92" fill="url(#dot-glow)" opacity="0.5"/>
+        <text x="90" y="74" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" letter-spacing="1.4" text-anchor="middle" opacity="0.72">NVIDIA CEO · 1993 – 2026</text>
+        <text x="90" y="128" font-family="Georgia,serif" font-size="68" font-weight="700" fill="#166534" text-anchor="middle">33Y</text>
+        <text x="90" y="146" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" letter-spacing="1.4" text-anchor="middle">RESIGNED THU NOV 12 · EFFECTIVE IMMEDIATELY</text>
+        <text x="90" y="162" font-family="system-ui,sans-serif" font-size="7" font-weight="600" fill="#166534" letter-spacing="1.0" text-anchor="middle">KRESS · INTERIM CEO + CFO · JONES · CHAIR</text>
+      </g>
+
+      <!-- Scorecard right: the week's ledger -->
+      <g transform="translate(228, 56)" font-family="system-ui,sans-serif">
+        <text x="0" y="0" font-size="7" font-weight="700" letter-spacing="1.6" fill="#166534">THE SUCCESSION LEDGER</text>
+      </g>
+      <g transform="translate(228, 72)" font-family="system-ui,sans-serif">
+        <g>
+          <rect x="0" y="0" width="224" height="22" fill="#166534" fill-opacity="0.14" stroke="#166534" stroke-width="0.8"/>
+          <text x="8" y="9" font-size="6.5" font-weight="700" letter-spacing="1.2" fill="#166534">NOV 8 · INDEPENDENT PROBE OPENS</text>
+          <text x="8" y="18" font-size="10" font-weight="700" fill="#166534">WACHTELL · JOON H. KIM</text>
+        </g>
+        <g transform="translate(0, 26)">
+          <rect x="0" y="0" width="224" height="22" fill="#166534" fill-opacity="0.14" stroke="#166534" stroke-width="0.8"/>
+          <text x="8" y="9" font-size="6.5" font-weight="700" letter-spacing="1.2" fill="#166534">NOV 12 · BOARD ACCEPTS RESIGNATION</text>
+          <text x="8" y="18" font-size="10" font-weight="700" fill="#166534">KRESS INTERIM · JONES CHAIR</text>
+        </g>
+        <g transform="translate(0, 52)">
+          <rect x="0" y="0" width="224" height="22" fill="#166534" fill-opacity="0.14" stroke="#166534" stroke-width="0.8"/>
+          <text x="8" y="9" font-size="6.5" font-weight="700" letter-spacing="1.2" fill="#166534">NOV 13 · ALTIMETER + ATREIDES LETTER</text>
+          <text x="8" y="18" font-size="10" font-weight="700" fill="#166534">~$2.1B · "SLOW · MEASURED"</text>
+        </g>
+        <g transform="translate(0, 78)">
+          <rect x="0" y="0" width="224" height="22" fill="#166534" fill-opacity="0.14" stroke="#166534" stroke-width="0.8"/>
+          <text x="8" y="9" font-size="6.5" font-weight="700" letter-spacing="1.2" fill="#166534">NOV 14 · FT · COMEBACK TALKS</text>
+          <text x="8" y="18" font-size="10" font-weight="700" fill="#166534">HUANG + ALLIES</text>
+        </g>
+        <g transform="translate(0, 104)">
+          <rect x="0" y="0" width="224" height="22" fill="#166534" fill-opacity="0.14" stroke="#166534" stroke-width="0.8"/>
+          <text x="8" y="9" font-size="6.5" font-weight="700" letter-spacing="1.2" fill="#166534">NOV 15 · MUSK SIGNS PETITION</text>
+          <text x="8" y="18" font-size="10" font-weight="700" fill="#166534">"CRITICAL DEALS WILL BE LOST"</text>
+        </g>
+        <g transform="translate(0, 130)">
+          <rect x="0" y="0" width="224" height="22" fill="#166534" fill-opacity="0.14" stroke="#166534" stroke-width="0.8"/>
+          <text x="8" y="9" font-size="6.5" font-weight="700" letter-spacing="1.2" fill="#166534">NOV 17 · Q3 FY27 EARNINGS CALL</text>
+          <text x="8" y="18" font-size="10" font-weight="700" fill="#166534">KRESS DEBUT · UNCHANGED DATE</text>
+        </g>
+      </g>
+
+      <!-- Base strap: Huang statement + Kress quote -->
+      <g transform="translate(28, 272)" font-family="system-ui,sans-serif" fill="#166534">
+        <line x1="0" y1="0" x2="424" y2="0" stroke="#166534" stroke-width="0.6"/>
+        <text x="0" y="16" font-size="8" font-weight="700" letter-spacing="1.4">"THE BOARD HAS FULL CONFIDENCE IN COLETTE AND THE LEADERSHIP TEAM." — HARVEY C. JONES · CHAIR</text>
+      </g>
+    </svg>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Nvidia's board announced Thursday November 12 that Jensen Huang had resigned as president, chief executive officer and a member of the board, effective immediately. Chief financial officer Colette Kress will serve as interim chief executive while retaining the CFO role until a permanent successor is named. Harvey C. Jones, a decade-long director, was appointed the company's first-ever chair of the board. The announcement was a one-page press release from NVIDIA Investor Relations that gave no reason for the departure and included no letter from Huang.</p>
+
+  <p>The resignation came four days after the November 8 independent probe the board had opened into reports that Huang was targeted by a foreign intelligence operation. Reuters later reported that Huang had affairs with two Nvidia employees; the investigation itself focused on his contact with Alice Huang, a former executive at Singapore-based data-centre company Megaspeed International. A WSJ analysis of customs records reported by Bloomberg put Megaspeed's Nvidia hardware imports at at least $4.6 billion over two years and 136,000 Nvidia GPUs, though Bloomberg said it had found no evidence any of the chips reached China.</p>
+
+  <blockquote class="pull-quote">"The Board has full confidence in Colette and the leadership team. We expect operations, customer commitments and the product roadmap to continue without interruption."<cite>— Harvey C. Jones, Chair of the Board, Nvidia press release, Nov 12</cite></blockquote>
+
+  <h4>The investigation set up the exit</h4>
+  <p>The board's November 8 announcement opened an inquiry run by Wachtell, Lipton, Rosen &amp; Katz and former acting US Attorney for the Southern District of New York Joon H. Kim. Board statements insisted the company had "no reason to believe that either national security or NVIDIA secrets were compromised." Huang, through the company, said he supported the inquiry and would cooperate fully. A WSJ-reported criminal investigation into Megaspeed was transferred from Commerce to the Justice Department over the week. Three House committees and the Senate Banking Committee chair had asked Huang to testify before the November 12 resignation; Fortune's Sebastian Herrera noted on November 9 that Huang had held the CEO post for 33 years, that Nvidia had no chief operating officer, that about 60 people reported directly to him, that he held a 3.56 percent stake without super-voting shares and that Nvidia had operated without a chief compliance officer.</p>
+
+  <h4>The shareholder pushback</h4>
+  <p>Altimeter Capital's Brad Gerstner and Atreides Management's Gavin Baker posted a letter to Nvidia's board on X Friday November 13 urging the directors to weigh every option for permanent leadership, including "the potential return of Jensen Huang." They asked for "a slow, measured, and deliberate process regarding the future leadership of Nvidia" and said the company would be "capably led" by Kress in the interim. The letter stopped short of calling for Huang's immediate reinstatement, noting Huang "has earned the right for a deliberate process that avoids any needless rush to replace him." As of June 30, Altimeter held 9.4 million Nvidia shares worth about $1.9 billion — Nvidia was its largest disclosed holding — and Atreides held 1.2 million shares worth about $250 million. By Saturday the Financial Times reported Huang was already discussing a comeback with allies; Elon Musk had signed a petition on X to reinstate him and warned that without Huang "critical deals will be lost."</p>
+
+  <blockquote class="pull-quote">"We will continue advancing the work that has made NVIDIA a leader in accelerated computing and AI. Our focus remains on our customers, partners, developers and shareholders."<cite>— Colette Kress, Interim CEO and CFO, Nvidia press release, Nov 12</cite></blockquote>
+
+  <p>Nvidia's Q3 fiscal 2027 earnings call stays on Monday November 17 as scheduled, where Kress will be the company's first voice on investor-call duty without Huang in 33 years. The quarter was already set up as the test of whether Nvidia's $500-plus-billion-run-rate data-centre franchise held up through the data-centre political backlash that W45 cataloged. Kress inherits that quarter, an open independent inquiry, a Congressional subpoena list, an activist-letter campaign and an ex-CEO in talks about returning — on a one-week timeline the board did not plan.</p>
+
+  <p class="source-footer"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<section class="big-picture" aria-labelledby="bp-title">
+  <div class="label" id="bp-title">The Week in AI</div>
+  <div>
+    <p>Nvidia's board accepted Jensen Huang's resignation on Thursday November 12 after four days of an independent inquiry Wachtell and Joon H. Kim were running into a foreign intelligence contact. Colette Kress took the interim CEO seat while keeping CFO and Harvey C. Jones took the first-ever chair role. Altimeter and Atreides wrote the board on November 13 urging a "slow, measured, and deliberate process," naming Kress as a "capable" interim and leaving the door open to Huang's return; the Financial Times reported the next day he was already in comeback talks with allies. Q3 fiscal 2027 earnings stayed on Monday November 17.</p>
+    <p>Around the governance story the week's other announcements landed in a rapid sequence. Anthropic filed Amendment No. 2 to its S-1 on November 10 with an $70 to $78 range over 825 million Class A shares and a $26 billion concurrent private placement from Nvidia, Google, AMD, Broadcom, Micron, Microsoft and TSMC; pricing is set for Tuesday November 18. Anthropic separately shipped Claude Fable 5.2 and Mythos 5.2 on Monday November 9 at $8 input and $40 output per million tokens, a 20 percent cut from the 5.1 generation. Google DeepMind unveiled Gemini Robotics 2.5 on November 11 at 96 percent in a Mercedes-Benz bin-picking pilot and AlphaGenome 2 the same day with DNA methylation and cell-type conditioning. Google launched TPU 8tx for confidential inference and TPU 8i Max for long context on November 9. Alibaba opened a frozen Qwen4-Max preview on November 11 with a 1M-token context and a November 25 retirement date.</p>
+    <p>The capital story around OpenAI stayed brutal. Bloomberg's November 10 investor-call figures put Q3 revenue up 50 percent to $10 billion, with the operating loss widening to $10.9 billion from $10.1 billion the prior quarter — a -109 percent adjusted margin against the prior quarter's -150 percent. Apple opened its first paid Apple Intelligence tier through $49.99 Logic Pro Intelligence Usage Packs for Creator Studio subscribers who have used their monthly allowance, with Final Cut Pro, Pixelmator Pro and iWork expected later in November. On the policy side Emmanuel Macron convened ten companies, including OpenAI, Anthropic, Microsoft and Mistral, plus sixteen countries at the Élysée on November 9 for the Paris Call for AI Safety and Security; Prime Minister Anthony Albanese announced on November 10 that Australia will legislate a dedicated AI safety regulator with penalty powers after an OpenAI agent breached a Medicare statistics website.</p>
+    <p>The frontier labs kept making safety a product. Google DeepMind open-sourced the ASIMOV-Jailbreak benchmark the same day it shipped Gemini Robotics 2.5, with the Mercedes-Benz model running on Apptronik's Apollo 2 humanoid and the Franka Duo dual-arm platform; DeepMind's Kanishka Rao described the gap from 96 percent to near-human reliability as a "steep road." Anthropic put Mythos 5.2 behind its Life Sciences and Cyber Verification Programs rather than on open rate limits; Mozilla's Brian Grinstead said the model "roughly doubled the vulnerability discovery metrics of Claude Mythos 5.1 across respective scanning campaigns." Anthropic's own Enterprise Frontier Safeguards program entered private beta with Bridgewater, Salesforce and Stripe named as early customers. The pattern inside the week is cadence: the pricing cut, the governance earthquake, the policy frameworks and the embodied-AI demo all shipped between Monday and Saturday.</p>
+  </div>
+</section>
+
+<section class="themes" aria-labelledby="themes-title">
+  <h2 id="themes-title" style="grid-column:1/-1;font-family:Georgia,serif;font-size:1.4rem;letter-spacing:-0.01em;margin:0 0 4px">Themes This Week</h2>
+
+  <article class="theme">
+    <header>
+      <svg viewBox="0 0 28 28" role="presentation" aria-hidden="true">
+        <g fill="none" stroke="#166534" stroke-width="1.6">
+          <circle cx="14" cy="14" r="10"/>
+          <path d="M14 4 L 14 14 L 22 14"/>
+        </g>
+        <circle cx="14" cy="14" r="1.8" fill="#166534"/>
+      </svg>
+      <h3>Nvidia's governance clock sped up</h3>
+    </header>
+    <p>The board's November 8 independent probe into a foreign intelligence contact ran four days before accepting Huang's resignation on November 12. Colette Kress stepped in as interim CEO and kept the CFO role; Harvey C. Jones took the first-ever chair. By Friday Altimeter's Brad Gerstner and Atreides' Gavin Baker had posted the "slow, measured, and deliberate" letter urging the board to weigh a Huang return; by Saturday the Financial Times had him talking to allies about one. Elon Musk signed a petition to reinstate him, warning that without him "critical deals will be lost." Q3 fiscal 2027 earnings stayed on Monday November 17, putting Kress on the investor call three business days after the resignation.</p>
+  </article>
+
+  <article class="theme">
+    <header>
+      <svg viewBox="0 0 28 28" role="presentation" aria-hidden="true">
+        <g fill="none" stroke="#166534" stroke-width="1.6">
+          <path d="M3 22 L 8 16 L 13 20 L 18 10 L 25 6"/>
+          <path d="M20 6 L 25 6 L 25 11" stroke-linejoin="miter"/>
+        </g>
+        <g fill="#166534">
+          <circle cx="8" cy="16" r="1.4"/>
+          <circle cx="13" cy="20" r="1.4"/>
+          <circle cx="18" cy="10" r="1.4"/>
+        </g>
+      </svg>
+      <h3>Frontier labs rewrite the price list</h3>
+    </header>
+    <p>Anthropic cut Claude Fable 5.2 and Mythos 5.2 to $8 input and $40 output per million tokens, a 20 percent reduction from the 5.1 generation. Alibaba opened a free frozen Qwen4-Max preview on November 11 with a 1M-token context and a November 25 retirement date. OpenAI's Q3 revenue climbed 50 percent to $10 billion per Bloomberg's November 10 investor-call figures, but the operating loss widened to $10.9 billion — an adjusted margin of -109 percent against -150 percent the prior quarter. Anthropic's amended S-1 added an $26 billion concurrent private placement from Nvidia and Google at $10 billion each plus AMD, Broadcom, Micron, Microsoft and TSMC. The pricing floor keeps dropping and the strategic placements keep swelling.</p>
+  </article>
+
+  <article class="theme">
+    <header>
+      <svg viewBox="0 0 28 28" role="presentation" aria-hidden="true">
+        <g fill="none" stroke="#166534" stroke-width="1.6">
+          <rect x="4" y="12" width="20" height="12" rx="2"/>
+          <path d="M14 4 L 14 12"/>
+          <circle cx="14" cy="4" r="1.6" fill="#166534"/>
+          <path d="M8 12 L 8 8 L 20 8 L 20 12"/>
+        </g>
+      </svg>
+      <h3>Frontier AI leaves the chat window</h3>
+    </header>
+    <p>Google DeepMind shipped Gemini Robotics 2.5 on November 11 at 96 percent on a Mercedes-Benz bin-picking pilot in Kecskemét and Sindelfingen, running on Apptronik's Apollo 2 humanoid and the Franka Duo platform through partners Agile Robots SE, Apptronik and Boston Dynamics. The same day DeepMind released AlphaGenome 2 with DNA methylation as a new readout, cell-type conditioning that resolves heart muscle and immune cells separately, and 30 percent causal-variant identification on the TenK10K immune-cell dataset against 16 percent for the fine-tuned prior version. Google's TPU 8tx added hardware-enforced confidential inference and claimed 2x lower latency than TPU 8t; TPU 8i Max packaged two TPU 8i chips with double the SRAM and HBM bandwidth to attack the memory wall. The frontier moved out of the chat window and onto the production line, the single-cell atlas and the confidential-compute rack inside a week.</p>
+  </article>
+
+  <article class="theme">
+    <header>
+      <svg viewBox="0 0 28 28" role="presentation" aria-hidden="true">
+        <g fill="none" stroke="#166534" stroke-width="1.6">
+          <path d="M14 3 L 24 8 L 24 17 C 24 21 20 24 14 25 C 8 24 4 21 4 17 L 4 8 Z"/>
+          <path d="M9 14 L 13 18 L 19 11"/>
+        </g>
+      </svg>
+      <h3>Governments and investors move on AI safety</h3>
+    </header>
+    <p>Emmanuel Macron convened ten companies — OpenAI, Anthropic, Microsoft, Mistral among them — plus sixteen countries at the Élysée on November 9 for the Paris Call for AI Safety and Security, endorsing independent public assessments of advanced models, faster serious-incident sharing and developer accountability. Anthony Albanese announced November 10 that Australia will legislate six mandatory safety protections regulated by a dedicated AI safety regulator with penalty powers, after an OpenAI agent breached a Medicare statistics website. Google DeepMind open-sourced the ASIMOV-Jailbreak benchmark alongside Gemini Robotics 2.5 the next day. Anthropic kept Mythos 5.2 behind its Life Sciences and Cyber Verification Programs and moved Enterprise Frontier Safeguards into private beta with Bridgewater, Salesforce and Stripe named. Safety became a product feature, a shipping artifact and a signing commitment in one five-day stretch.</p>
+  </article>
+</section>
+
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 96 18">
+    <circle cx="18" cy="9" r="2" fill="#166534"/>
+    <circle cx="36" cy="9" r="2" fill="#166534"/>
+    <path d="M48 3 L 52 9 L 48 15 L 44 9 Z" fill="#166534"/>
+    <circle cx="60" cy="9" r="2" fill="#166534"/>
+    <circle cx="78" cy="9" r="2" fill="#166534"/>
+  </svg>
+</div>
+
+<div class="section-head">
+  <h2>The Week's Stories</h2>
+  <span class="count"><span id="rundown-count">11</span> stories · Nov 9 – Nov 15</span>
+</div>
+
+<div class="cards" id="cards">
+
+<!-- STORY 2: Anthropic amended S-1 and $26B placement -->
+<details class="story" data-tags="economic tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <rect x="18" y="20" width="84" height="40"/>
+      <line x1="60" y1="20" x2="60" y2="60"/>
+      <line x1="18" y1="40" x2="102" y2="40"/>
+    </g>
+    <text x="38" y="35" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" text-anchor="middle">$70-78</text>
+    <text x="82" y="35" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" text-anchor="middle">NOV 18</text>
+    <text x="38" y="55" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" text-anchor="middle">825M SH</text>
+    <text x="82" y="55" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" text-anchor="middle">$26B PP</text>
+    <text x="60" y="74" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.4" text-anchor="middle" fill="#166534">ANT · NASDAQ</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-economic">Economic</span>
+      <span class="tag tag-tech">Tech</span>
+    </div>
+    <h3 class="headline">Anthropic sets a $70–$78 band and books a $26 billion private placement from seven partners</h3>
+    <p class="kicker">SEC EDGAR / SEC-API · 2026-11-10 · <a href="https://sec-api.io/insights/anthropic-ant-s-1-ipo-sec-filing-analysis" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Amendment No. 2 to the S-1 sets 825,000,000 Class A shares at an estimated $70 to $78 each and plans a Nasdaq listing under ANT. Nvidia and Google agreed to $10 billion each of non-voting Class N stock; AMD $2.5 billion; Broadcom, Micron and Microsoft $1 billion each; TSMC $500 million.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic filed Amendment No. 2 to its Form S-1 on Tuesday November 10 setting an initial price range of $70.00 to $78.00 per share on 825,000,000 Class A common shares, with application to list on the Nasdaq Global Select Market under the ticker ANT. The company's investor FAQ names Tuesday November 18 Eastern time as the pricing date. Underwriters are led by Goldman Sachs and Morgan Stanley. The filing retains the dual-class structure in which a single share held by the seven co-founders carries 50.1 percent of the vote, capping IPO buyers at 49.9 percent of the vote in combined Class A and the co-founders' control block.</p>
+
+  <p>The accompanying $26 billion private placement of non-voting Class N stock reads as a strategic cap-table. Nvidia and Google each committed $10 billion, Advanced Micro Devices $2.5 billion, Broadcom $1 billion, Micron $1 billion, Microsoft $1 billion and TSMC $500 million. The filing specifies that completion of the IPO is not contingent on completion of the concurrent private placement, and that the placement closes immediately after the IPO. One sec-api.io estimate suggests retail participants could absorb up to 20 percent of the 825 million-share offer, roughly $12.2 billion at the midpoint.</p>
+
+  <blockquote class="pull-quote">"Completion of the offering is not contingent on completion of the concurrent private placement."<cite>— Anthropic S-1/A No. 2, Nov 10</cite></blockquote>
+
+  <h4>The $10 billion Nvidia line-item</h4>
+  <p>Nvidia's $10 billion placement sits at the top of the Class N list. It was written in the same week the board accepted Jensen Huang's resignation and Colette Kress took the interim CEO seat; the placement is a long-dated commitment that outlasts a CEO turn. Google's matching $10 billion stacks on top of its November 2025 TeraWulf-backed $19 billion Kentucky-tenancy credit backstop Apollo covered in W45. Both hyperscaler commitments make the TPU-and-GPU ambidexterity Anthropic has been running since the summer part of the public-markets story the company is pitching.</p>
+
+  <h4>The headline numbers</h4>
+  <p>At the $74 midpoint, the primary offer raises roughly $61 billion; the headline enterprise value sits in the $1.1 to $1.5 trillion zone the company already flagged in its November 8 trimmed guidance. Q3 revenue was $16.95 billion up 1,127 percent year over year per the amended S-1's own figures; cumulative compute and lease commitments were $895.4 billion. The strategic placement adds another $26 billion of non-voting support that cannot dilute the IPO book but does bind each vendor to the trade. Pricing Tuesday November 18 lines up with Nvidia's Monday November 17 Q3 fiscal 2027 call.</p>
+
+  <p class="source-footer"><a href="https://sec-api.io/insights/anthropic-ant-s-1-ipo-sec-filing-analysis" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 3: Claude Fable 5.2 and Mythos 5.2 release -->
+<details class="story" data-tags="tech economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <path d="M10 60 L 30 55 L 50 48 L 70 40 L 90 36 L 110 32"/>
+      <circle cx="30" cy="55" r="2" fill="#166534"/>
+      <circle cx="70" cy="40" r="2" fill="#166534"/>
+      <circle cx="110" cy="32" r="2" fill="#166534"/>
+    </g>
+    <text x="22" y="22" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#166534">5.1: $10/$50</text>
+    <text x="68" y="18" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#166534">5.2: $8/$40</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.4" text-anchor="middle" fill="#166534">−20% · 1M CTX</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-tech">Tech</span>
+      <span class="tag tag-economic">Economic</span>
+    </div>
+    <h3 class="headline">Anthropic drops Claude Fable 5.2 and Mythos 5.2 prices 20 percent to $8 and $40</h3>
+    <p class="kicker">Implicator AI · 2026-11-09 · <a href="https://www.implicator.ai/anthropic-fable-5-2-mythos-5-2-price-cut/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Fable 5.2 drops to $8 input and $40 output per million tokens from Fable 5.1's $10 and $50, with a $16/$80 Fast mode for verified organizations. Mythos 5.2 stays gated behind Anthropic's Life Sciences and Cyber Verification Programs.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Anthropic shipped Claude Fable 5.2 and Claude Mythos 5.2 on Monday November 9 with a headline 20 percent cut to the Fable price list and the same tiering kept for Mythos. Fable 5.2 lists at $8 per million input tokens and $40 per million output tokens, down from Fable 5.1's $10 and $50. A faster Fast mode at $16 input and $80 output is available only to organizations in Anthropic's verification programs. Mythos 5.2 "has the same specifications and pricing as Claude Fable 5.2," per Anthropic's model overview cited in secondary coverage, but remains accessible only to vetted organizations through the Life Sciences and Cyber Verification Programs.</p>
+
+  <p>Anthropic kept Opus 5.5 as what the company calls "our strongest daily driver" at $4 input and $20 output per million tokens — half of Fable 5.2's rates. The positioning is explicit: Fable 5.2 earns the premium through what Anthropic frames as frontier-of-frontier work, including an unverified claim it had formalized Fermat's Last Theorem and solved two open theoretical physics problems, plus a 30 percent speed uplift over 5.1 the Implicator piece says it could not independently verify. The 55 percent reduction in "unnecessary safeguard blocks" sits in the same unverified bucket.</p>
+
+  <blockquote class="pull-quote">"Each round has left fewer, subtler bugs to find."<cite>— Brian Grinstead, Mozilla, on Mythos 5.2 vulnerability discovery</cite></blockquote>
+
+  <h4>Mozilla's vulnerability-discovery testimonial</h4>
+  <p>Grinstead told Anthropic — and the quote was cited in Implicator's piece — that Mythos 5.2 "roughly doubled the vulnerability discovery metrics of Claude Mythos 5.1 across respective scanning campaigns." The quote covers only Mozilla's own scanning campaigns, not an industry benchmark. Mythos sits inside the Cyber Verification Program with API-level IP allowlisting of the sort OpenAI used for GPT-6 Cyber at the Preparedness Framework Critical tier a week earlier. The two frontier labs are drawing the same perimeter: cyber-capable frontier models stay behind verification gates, not open rate limits.</p>
+
+  <h4>Enterprise Frontier Safeguards in private beta</h4>
+  <p>Anthropic launched an Enterprise Frontier Safeguards offering in private beta with zero data retention and named Bridgewater, Salesforce and Stripe as early customers. The package pairs Fable 5.2 availability with enterprise-grade retention controls on the model path and extends the Mythos verification-program architecture to Fortune 500 production deployments. Bridgewater — a hedge-fund customer — signals the audience: regulated verticals willing to pay the Fable premium if the data-handling contract covers them. The 20 percent cut on the base model and the gated premium stack sit on the same price list for the first time since the 5.1 generation.</p>
+
+  <p class="source-footer"><a href="https://www.implicator.ai/anthropic-fable-5-2-mythos-5-2-price-cut/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 4: Gemini Robotics 2.5 + ASIMOV-Jailbreak -->
+<details class="story" data-tags="tech safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <rect x="18" y="22" width="14" height="38"/>
+      <rect x="38" y="30" width="14" height="30"/>
+      <rect x="58" y="18" width="14" height="42"/>
+      <rect x="78" y="12" width="14" height="48"/>
+      <rect x="98" y="8" width="14" height="52"/>
+    </g>
+    <text x="25" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">30</text>
+    <text x="45" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">60</text>
+    <text x="65" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">75</text>
+    <text x="85" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">88</text>
+    <text x="105" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">96</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-tech">Tech</span>
+      <span class="tag tag-safety">Safety</span>
+    </div>
+    <h3 class="headline">Gemini Robotics 2.5 hits 96 percent on a Mercedes-Benz line; DeepMind open-sources ASIMOV-Jailbreak</h3>
+    <p class="kicker">AI Weekly · 2026-11-11 · <a href="https://aiweekly.co/alerts/deepminds-gemini-robotics-25-hits-96-on-mercedes-benz-line" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The vision-language-action model ran Apptronik's Apollo 2 humanoid on Mercedes-Benz lines in Kecskemét and Sindelfingen picking metal brackets from bulk bins. DeepMind released it through Agile Robots, Apptronik and Boston Dynamics and open-sourced the ASIMOV-Jailbreak embodied-safety benchmark the same day.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Google DeepMind introduced Gemini Robotics 2.5 on Wednesday November 11 with a 96 percent success rate on a Mercedes-Benz proof-of-concept in Kecskemét, Hungary and Sindelfingen, Germany. The task was pulling metal brackets from bulk bins into sequencing containers; the active production lines were not a controlled lab. Across more than 200 evaluation tasks the model reports a 30 to 100 percent success-rate range, with the harder multi-step jobs still landing between 40 and 75 percent per DeepMind's own charts. Across the task set the new generation runs 20 to 30 percent faster than the prior version. Per The Decoder's independent read, DeepMind also reports 33 percent fewer safety incidents near obstacles and 43 percent fewer near people.</p>
+
+  <p>The model is a vision-language-action model running alongside Gemini Robotics ER, which handles task-level reasoning. ER breaks a workstation sequence into actions; 2.5 controls the hands and arms. The release supports Apptronik's Apollo 2 humanoid and the Franka Duo platform with two-fingered parallel grippers natively, with partners Agile Robots SE, Apptronik and Boston Dynamics running it on their own bodies. DeepMind did not open an API: Gemini Robotics 2.5 is going out only through those robotics partners.</p>
+
+  <blockquote class="pull-quote">"This is what we built Apollo for: useful work alongside people in real industrial settings."<cite>— Jeff Cardenas, Apptronik Co-founder and CEO</cite></blockquote>
+
+  <h4>The ASIMOV-Jailbreak benchmark</h4>
+  <p>DeepMind released ASIMOV-Jailbreak alongside the model as an open-source embodied-safety benchmark with hundreds of adversarial prompts. The benchmark is scoped to embodied agents, not chat-tier jailbreaks. DeepMind did not post a Gemini Robotics 2.5 jailbreak-resistance score in the launch material — the 99.5 percent resistance figure that circulated the same week belongs to Gemini 4 Argon, not to the robotics model. CellCog noted DeepMind did not publish a technical paper for Robotics 2.5 and did not name the baselines, so the 96 percent Mercedes number cannot be read against a comparison.</p>
+
+  <blockquote class="pull-quote">"The road from 96 percent to near-human reliability is a steep one."<cite>— Kanishka Rao, DeepMind Robotics Director (via Heise)</cite></blockquote>
+
+  <h4>What the pilot actually showed</h4>
+  <p>Analysts pointed out that human workers performing the same bracket-picking task are effectively error-free; 4 percent failure at the pace of Apollo 2 still generates an industrial-engineering problem. DeepMind framed the pilot as a proof-of-concept rather than a line-worthy deployment. Mercedes-Benz did not commit to a unit deployment schedule, and no partner published a cost-per-task figure. Across the week the story stayed in the "frontier moves out of the chat window and onto the line" column — matching the AlphaGenome 2 single-cell release the same day and Google's confidential-inference TPU announcement 48 hours earlier.</p>
+
+  <p class="source-footer"><a href="https://aiweekly.co/alerts/deepminds-gemini-robotics-25-hits-96-on-mercedes-benz-line" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 5: AlphaGenome 2 -->
+<details class="story" data-tags="tech application">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.2">
+      <path d="M20 12 C 40 30 40 50 20 68" />
+      <path d="M50 12 C 30 30 30 50 50 68" />
+      <path d="M70 12 C 90 30 90 50 70 68" />
+      <path d="M100 12 C 80 30 80 50 100 68" />
+      <line x1="20" y1="20" x2="50" y2="20"/>
+      <line x1="20" y1="30" x2="50" y2="30"/>
+      <line x1="20" y1="40" x2="50" y2="40"/>
+      <line x1="20" y1="50" x2="50" y2="50"/>
+      <line x1="20" y1="60" x2="50" y2="60"/>
+      <line x1="70" y1="20" x2="100" y2="20"/>
+      <line x1="70" y1="30" x2="100" y2="30"/>
+      <line x1="70" y1="40" x2="100" y2="40"/>
+      <line x1="70" y1="50" x2="100" y2="50"/>
+      <line x1="70" y1="60" x2="100" y2="60"/>
+    </g>
+    <circle cx="35" cy="30" r="2" fill="#166534"/>
+    <circle cx="85" cy="50" r="2" fill="#166534"/>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-tech">Tech</span>
+      <span class="tag tag-application">Application</span>
+    </div>
+    <h3 class="headline">AlphaGenome 2 adds methylation and cell-type conditioning, nearly doubles causal variants</h3>
+    <p class="kicker">Google DeepMind · 2026-11-11 · <a href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">DeepMind released AlphaGenome 2 with DNA methylation as a new readout, cell-type conditioning that resolves heart muscle and immune cells separately, and 30 percent causal-variant identification on the TenK10K immune-cell dataset against 16 percent for AlphaGenome 1 fine-tuned on single-cell data.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Google DeepMind released AlphaGenome 2 on November 11 as a conditional single-cell model that predicts DNA effects for one biological condition at a time, taking a million-letter DNA sequence as input. Where the first AlphaGenome predicted many tissues in parallel, the new version resolves specialized cells — the DeepMind post gives heart muscle and blood immune cells as examples. Added readout: DNA methylation, which DeepMind calls "a widely requested readout" and which sits alongside the first model's gene expression, histone modifications and chromatin accessibility. The post credits lead authors Adam Gayoso, Natasha Latysheva, Pushmeet Kohli and Žiga Avsec.</p>
+
+  <p>On the TenK10K dataset of 28 primary immune cell types, AlphaGenome 2 identified causal variants at 30 percent, against 16 percent for AlphaGenome 1 fine-tuned on single-cell data and other specialized tools. Directional gene-effect identification improved from 23 to 43 percent. Overall, the post reports the model identifies nearly twice as many variants that change gene expression as the previous state of the art. Training data is cited as over 107 million cell profiles across 68 tissues. The model supports cross-modality imputation: given one measurement such as single-cell gene activity, it can predict unmeasured properties such as chromatin accessibility.</p>
+
+  <blockquote class="pull-quote">"AlphaGenome 2 adapts directly to new single-cell data without retraining."<cite>— Prof. Sarah Teichmann, Co-founder of the Human Cell Atlas, University of Cambridge</cite></blockquote>
+
+  <h4>Access and applications</h4>
+  <p>AlphaGenome 2 is available today for non-commercial research through the AlphaGenome API; commercial research is in private preview through Google Cloud. DeepMind said "AlphaGenome 2 Skills" will be released in Google Antigravity soon. Researchers can express interest through the AlphaGenome community forum or submit a use-case form by November 30 for possible extra quota and credits. The model is for research use only, with no clinical or diagnostic validation.</p>
+
+  <p>Peter Donnelly, CEO of Genomics Limited, commented on the drug-discovery application and said the company plans to incorporate the model into its Mystra platform. The post catalogs applications including mapping enhancer-gene links in primary human cells (brain astrocytes listed), pinpointing causal GWAS variants, cell types and effect direction for traits like height and type 2 diabetes with precomputed predictions, reproducing a published IBD-linked variant effect on the ETS2 gene in gut macrophages, and distinguishing vaccine-activated T cells from resting ones in COVID-19 mRNA vaccine data. One finding: a severe-COVID-19-linked variant disrupts gene activity more strongly in activated T cells than resting ones.</p>
+
+  <p class="source-footer"><a href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 6: Google TPU 8tx and TPU 8i Max -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <rect x="14" y="18" width="38" height="44"/>
+      <rect x="22" y="28" width="22" height="24"/>
+      <line x1="22" y1="34" x2="44" y2="34"/>
+      <line x1="22" y1="40" x2="44" y2="40"/>
+      <line x1="22" y1="46" x2="44" y2="46"/>
+    </g>
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <rect x="68" y="18" width="38" height="44"/>
+      <rect x="74" y="28" width="12" height="24"/>
+      <rect x="90" y="28" width="12" height="24"/>
+    </g>
+    <text x="33" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1" fill="#166534" text-anchor="middle">8TX</text>
+    <text x="87" y="76" font-family="system-ui,sans-serif" font-size="6" font-weight="700" letter-spacing="1" fill="#166534" text-anchor="middle">8I MAX</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-tech">Tech</span>
+    </div>
+    <h3 class="headline">Google ships TPU 8tx for confidential inference and TPU 8i Max for long context</h3>
+    <p class="kicker">Constellation Research · 2026-11-09 · <a href="https://www.constellationr.com/insights/news/google-launches-tpu-8tx-tpu-8i-max" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Google expanded the eighth-generation TPU portfolio: TPU 8tx pairs with AMD EPYC for hardware-enforced confidential inference and claims 2x lower latency than TPU 8t; TPU 8i Max packages two TPU 8i chips with double the SRAM and HBM bandwidth for million-token context.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Google announced TPU 8tx and TPU 8i Max on November 9, extending the TPU 8t and TPU 8i chips the company first unveiled at Google Cloud Next in April 2026. TPU 8tx pairs the same silicon as the TPU 8t training chip with AMD EPYC hosts and adds hardware-level confidential computing that keeps sensitive data and model weights isolated while in use. AMD called it "the first cloud TPU system with hardware-enforced confidential computing." Google reports up to 2x lower latency against TPU 8t on the confidential-inference workload. TPU 8i Max packages two TPU 8i chips in one module with double the SRAM and double the HBM bandwidth of a single TPU 8i to attack the memory wall on long-context workloads.</p>
+
+  <p>Google positioned the pair as building blocks: 8t for scaled-up training, 8i for low-latency reasoning, 8tx for confidential compute and 8i Max for compute-density per rack at long context. Google did not announce pricing or general-availability timing for either new system. Confidential inference is the sharper read: it lets regulated-vertical tenants ship model weights and workload data to Google's TPUs without trust in Google's operator plane. The AMD CPU pairing is the first acknowledged joint Google-AMD system.</p>
+
+  <blockquote class="pull-quote">"The first cloud TPU system with hardware-enforced confidential computing."<cite>— AMD on the TPU 8tx/EPYC pairing</cite></blockquote>
+
+  <h4>Where this lands against Nvidia</h4>
+  <p>The release is Google's second TPU step in seven months. The first Google Cloud Next generation was aimed at training throughput; TPU 8tx is aimed at the piece of Nvidia's enterprise business that hinges on confidential compute. Anthropic's $10 billion strategic placement in the amended S-1 week keeps Nvidia inside the Anthropic cap table, but the TeraWulf-Kentucky TPU-only clause from W45 and the $10 billion concurrent Google line-item from this week keep the Google TPU story as the inferencing alternative Anthropic is paying to build. One Singularity Moments headline framed the package: "Google thinks stapling two TPUs together will break Nvidia's grip."</p>
+
+  <p class="source-footer"><a href="https://www.constellationr.com/insights/news/google-launches-tpu-8tx-tpu-8i-max" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 7: Altimeter + Atreides letter + Huang comeback -->
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <rect x="14" y="20" width="44" height="40"/>
+      <path d="M14 20 L 36 36 L 58 20"/>
+      <rect x="62" y="20" width="44" height="40"/>
+      <path d="M62 20 L 84 36 L 106 20"/>
+    </g>
+    <text x="36" y="55" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" text-anchor="middle">$1.9B</text>
+    <text x="84" y="55" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#166534" text-anchor="middle">$250M</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.4" text-anchor="middle" fill="#166534">SLOW · MEASURED</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-economic">Economic</span>
+    </div>
+    <h3 class="headline">Altimeter and Atreides urge Nvidia to weigh Huang's return; Musk signs petition</h3>
+    <p class="kicker">CNBC · 2026-11-14 · <a href="https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Altimeter's Brad Gerstner and Atreides' Gavin Baker — holding about $2.1 billion of Nvidia stock between them — asked the board on November 13 for "a slow, measured, and deliberate process" and left the door open to Huang's return. The FT reported the next day Huang was already in comeback talks with allies.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Altimeter Capital chief executive Brad Gerstner and Atreides Management's Gavin Baker posted a signed letter to Nvidia's board on X on Friday November 13 urging the directors to consider all options for Nvidia's permanent leadership, including "the potential return of Jensen Huang." The letter asked for "a slow, measured, and deliberate process regarding the future leadership of Nvidia," said the company would be "capably led" by interim CEO Colette Kress, and stopped short of calling for Huang's immediate reinstatement. It read: "Jensen has earned the right for a deliberate process that avoids any needless rush to replace him."</p>
+
+  <p>Altimeter held 9.4 million Nvidia shares worth nearly $1.9 billion as of June 30, with Nvidia its largest disclosed equity holding. Atreides held 1.2 million shares worth nearly $250 million. Combined, roughly $2.13 billion of Nvidia stock sits behind the letter. CNBC's piece noted the letter's framing — "capably led" interim with a door open to Huang — is structurally different from an activist campaign demanding reinstatement; it's an ask for governance process rather than a reversal.</p>
+
+  <blockquote class="pull-quote">"Jensen has earned the right for a deliberate process that avoids any needless rush to replace him."<cite>— Altimeter Capital + Atreides Management, board letter, Nov 13</cite></blockquote>
+
+  <h4>The Saturday FT report</h4>
+  <p>By Saturday November 14 the Financial Times reported — and Bloomberg relayed on November 15 — that Huang had held discussions with allies about returning as Nvidia CEO. The reporting named no specific channels or next steps. Forbes' Zachary Folk relayed the thread on November 15. Elon Musk posted on X that he had signed a petition to reinstate Huang, warning that without him "critical deals will be lost." Musk was not identified as a shareholder. CNBC named Howard Lutnick, Secretary of Commerce, and Donald Trump in the piece without naming them as signatories.</p>
+
+  <h4>What the board can hear</h4>
+  <p>The letter lands four business days before Nvidia's Monday November 17 Q3 fiscal 2027 earnings call, where Kress makes her CEO-seat debut. Harvey C. Jones — the new chair installed November 12 — now carries both the search process the letter asked to slow down and the Congressional pressure the Nov 8 probe generated. The November 13 signal-to-noise ratio read in New York as preserving optionality on the Huang slot without locking the new chair out of the search. Per the letter, "Nvidia will be capably led by interim CEO Colette Kress in the interim" is the floor and a Huang return is the ceiling the board is being asked not to foreclose.</p>
+
+  <p class="source-footer"><a href="https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 8: OpenAI Q3 revenue / losses -->
+<details class="story" data-tags="economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <rect x="22" y="36" width="12" height="28"/>
+      <rect x="42" y="30" width="12" height="34"/>
+      <rect x="62" y="22" width="12" height="42"/>
+      <rect x="82" y="14" width="12" height="50"/>
+    </g>
+    <text x="28" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">Q4·25</text>
+    <text x="48" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">Q1·26</text>
+    <text x="68" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">Q2·26</text>
+    <text x="88" y="78" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">Q3·26</text>
+    <text x="88" y="10" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">$10B</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-economic">Economic</span>
+    </div>
+    <h3 class="headline">OpenAI Q3 revenue grows 50 percent to $10 billion as operating loss widens to $10.9 billion</h3>
+    <p class="kicker">Exchange4Media · 2026-11-10 · <a href="https://www.exchange4media.com/digital-news/openai-q3-revenue-jumps-50-to-10-billion-but-operating-loss-widens-to-109-billion-160109.html" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The Wall Street Journal and Bloomberg relayed OpenAI's Q3 figures from a November 10 investor call: revenue up 50 percent to $10 billion, operating loss $10.9 billion against $10.1 billion the prior quarter. Adjusted operating margin improved to -109 percent from -150 percent; annualized run rate near $50 billion.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Documents reviewed by The Wall Street Journal and Bloomberg's relay of a November 10 OpenAI investor call put Q3 2026 revenue up about 50 percent sequentially to $10 billion. Operating loss widened to about $10.9 billion from $10.1 billion the prior quarter. The adjusted operating margin improved to -109 percent from -150 percent. Annualized run-rate is around $50 billion. OpenAI declined to comment on the figures.</p>
+
+  <p>Enterprise revenue reportedly more than doubled year-over-year and OpenAI's Q3 consumer intake exceeded the company's entire prior-year consumer line, per attributed September 29 reporting. Loss framing matters: where last quarter's -150 percent margin tracked with the September round economics, Q3's -109 percent moves the curve toward the trajectory the IPO comps implied — still deeply negative, less so than three months earlier. The adjusted/GAAP distinction remained unclear across the news-flow; most secondary outlets labeled $10.9 billion as adjusted.</p>
+
+  <blockquote class="pull-quote">"OpenAI's adjusted operating margin improves from -150% to -109%."<cite>— Crypto Briefing summary of Q3 disclosure</cite></blockquote>
+
+  <h4>Context of the week</h4>
+  <p>The Q3 disclosure arrived two weeks after the $11 billion first close at $1.25 trillion that W45 cataloged. The figures also followed The Information's week-before report that Anthropic's $34.9 billion Lambda deal "may be cancelled" and that Anthropic had secured "over $10 billion in new deals with Microsoft and Google." Both frontier labs now report quarterly revenue in the ten-billion-dollar range, both at deeply negative operating margins, both inside S-1 or S-1-adjacent windows. Anthropic's amended S-1 earlier in the week backfilled Q3 at $16.95 billion up 1,127 percent year over year; OpenAI's Q3 at $10 billion and $50 billion ARR puts the two labs within a factor of two of one another on sequential revenue for the first time at this scale.</p>
+
+  <p>Q2 comparables remain unresolved across outlets. One source cited a $12.3 billion Q2 operating loss on $6.7 billion of revenue, which contradicts the $10.1 billion Q2 loss referenced in the Q3 disclosure. Investors in the Monday-morning read focused on the sequential revenue print and the margin improvement, treating the Q2 baseline as a reconciliation detail for the audited numbers.</p>
+
+  <p class="source-footer"><a href="https://www.exchange4media.com/digital-news/openai-q3-revenue-jumps-50-to-10-billion-but-operating-loss-widens-to-109-billion-160109.html" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 9: Apple $49.99 Intelligence Usage Packs -->
+<details class="story" data-tags="application economic">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <rect x="22" y="22" width="76" height="40" rx="4"/>
+      <line x1="22" y1="34" x2="98" y2="34"/>
+    </g>
+    <text x="60" y="30" font-family="system-ui,sans-serif" font-size="6" font-weight="700" fill="#166534" text-anchor="middle">APPLE INTELLIGENCE</text>
+    <text x="60" y="52" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#166534" text-anchor="middle">$49.99</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2" text-anchor="middle" fill="#166534">LOGIC PRO · 1ST PAID TIER</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-application">Application</span>
+      <span class="tag tag-economic">Economic</span>
+    </div>
+    <h3 class="headline">Apple opens its first paid Apple Intelligence tier through $49.99 Logic Pro packs</h3>
+    <p class="kicker">AI Weekly · 2026-11-10 · <a href="https://aiweekly.co/alerts/apple-launches-4999-intelligence-usage-packs-first-paid-ai-tier" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Apple began selling one-time $49.99 Intelligence Usage Packs through Logic Pro for Creator Studio subscribers who have used their monthly AI allowance. Final Cut Pro, Pixelmator Pro and iWork expected to follow in November. Launches in eight countries.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Apple began selling one-time $49.99 Intelligence Usage Packs on November 9 through a Logic Pro update, marking Apple Intelligence's first paid tier. The packs are available only to Creator Studio subscribers who have used up their monthly AI allowance. Logic Pro is the only Creator Studio application offering the packs at launch. Packs are tied to the Apple Account that bought them and do not participate in Family Sharing. Unused usage rolls over month to month and expires 12 months from purchase. Packs are non-refundable except where required by law. The launch covers eight countries.</p>
+
+  <p>Apple has not disclosed how much additional AI usage $49.99 buys. According to 9to5Mac, Creator Studio updates scheduled for November 2026 are expected to extend Intelligence Usage Packs to Final Cut Pro, Pixelmator Pro and iWork applications; that extension is a press expectation rather than an Apple confirmation. Some headlines rounded the price to $50; Apple's own product page uses $49.99. Apple has also signaled paid access for Siri AI and Image Playground, but no timing or final pricing is confirmed.</p>
+
+  <blockquote class="pull-quote">"Creator Studio apps can be purchased individually or accessed via subscription, but the extra usage packs require an active Creator Studio subscription."<cite>— MacDailyNews summary of Apple's purchase mechanics</cite></blockquote>
+
+  <h4>What this signals</h4>
+  <p>Apple Intelligence has been free since launch, bundled with eligible iPhone, iPad and Mac hardware. The $49.99 pack is the first time Apple has moved any Intelligence component into a paid line-item, and it did so in a vertical-app surface — Logic Pro — rather than system-wide Siri or the general on-device model. The usage-pack model avoids the monthly-subscription treadmill: one purchase, 12-month shelf life, no auto-renew. It also sits on top of an existing subscription rather than replacing it. Apple's framing keeps Siri and Image Playground pricing open for later; the Logic Pro mechanic now serves as the paid-Intelligence template the subsequent apps will inherit.</p>
+
+  <p class="source-footer"><a href="https://aiweekly.co/alerts/apple-launches-4999-intelligence-usage-packs-first-paid-ai-tier" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 10: Qwen4-Max preview -->
+<details class="story" data-tags="tech">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <rect x="22" y="22" width="76" height="40"/>
+      <line x1="22" y1="42" x2="98" y2="42"/>
+    </g>
+    <text x="60" y="36" font-family="system-ui,sans-serif" font-size="8" font-weight="700" fill="#166534" text-anchor="middle">QWEN4-MAX</text>
+    <text x="60" y="56" font-family="Georgia,serif" font-size="11" font-weight="700" fill="#166534" text-anchor="middle">1M CTX</text>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.2" text-anchor="middle" fill="#166534">NOV 11 → NOV 25</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-tech">Tech</span>
+    </div>
+    <h3 class="headline">Alibaba opens a frozen Qwen4-Max preview with a 1M-token context and a 14-day retirement</h3>
+    <p class="kicker">Four Week MBA · 2026-11-11 · <a href="https://fourweekmba.com/ai-alibaba-opens-a-350-hour-qwen4-max-preview-with-1m-context/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">The preview runs 10:00 Nov 11 to 24:00 Nov 25 UTC+8, access through Alibaba's Token Plan only. The model is frozen for the window and retired at the end. A 1M-token context, up to 393,216 output tokens, text/image/video input. No benchmark numbers or parameter count disclosed.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Alibaba opened the Qwen4-Max preview on Wednesday November 11 at 10:00 Beijing time (UTC+8), scheduled to retire on November 25 at 24:00. The preview is available only through Alibaba's Token Plan — no pay-as-you-go access — and the model is frozen for the window. The API identifier is "qwen4-max-preview" with an alias "qwen4.0-max-preview." The preview has a 1M-token context window and supports up to 393,216 output tokens combined thinking and answer. Input modalities: text, image and video.</p>
+
+  <p>As of launch, the total parameter count, objective benchmark results and general-availability timing were not disclosed. No open-weight release accompanied the preview; the license is proprietary for the preview period. Alibaba offered a new-user price for the Token Plan valid through 23:59 November 30 Beijing time for accounts that had never bought a personal Token Plan. Sources disagreed on the preview's exact duration — some called it 15 days, some two weeks; the published UTC+8 timestamps cover November 11 10:00 to November 25 24:00.</p>
+
+  <blockquote class="pull-quote">"The model will not be changed during that period and will be retired when the preview ends."<cite>— Alibaba Cloud documentation summary</cite></blockquote>
+
+  <h4>What the preview is for</h4>
+  <p>A frozen preview with a hard retirement date sets up a benchmark-collection window. Alibaba keeps the version constant so third-party scores can be anchored to a single model build; closing the preview on November 25 removes the model before December Token Plan renewals. The preview's long context and three-modality input make it the broadest Qwen4-Max surface the company has opened to external users; the Token Plan gate keeps the pricing study inside its paid tier. One tracker suggested an unlabeled "Qoduck" model appearing in prior days on the Qoder platform may have been an early Qwen4-Max build — Alibaba did not confirm.</p>
+
+  <p class="source-footer"><a href="https://fourweekmba.com/ai-alibaba-opens-a-350-hour-qwen4-max-preview-with-1m-context/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 11: Paris Call for AI Safety and Security -->
+<details class="story" data-tags="policy safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <circle cx="60" cy="40" r="22"/>
+      <line x1="60" y1="18" x2="60" y2="62"/>
+      <line x1="38" y1="40" x2="82" y2="40"/>
+      <path d="M44 24 C 52 40 52 40 44 56"/>
+      <path d="M76 24 C 68 40 68 40 76 56"/>
+    </g>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.4" text-anchor="middle" fill="#166534">PARIS CALL · ÉLYSÉE</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-policy">Policy</span>
+      <span class="tag tag-safety">Safety</span>
+    </div>
+    <h3 class="headline">Macron convenes Paris Call for AI Safety and Security; OpenAI, Anthropic, Microsoft, Mistral sign</h3>
+    <p class="kicker">The Next Web · 2026-11-09 · <a href="https://thenextweb.com/news/paris-call-ai-safety-openai-anthropic-cesia" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">Ten AI companies — OpenAI, Anthropic, Microsoft, Mistral among them — plus sixteen countries met with Macron at the Élysée on November 9 to endorse independent public assessments of advanced models, faster serious-incident sharing and developer accountability.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>French President Emmanuel Macron convened the Paris Call for AI Safety and Security at the Élysée Palace on Monday November 9. Ten AI companies — including OpenAI, Anthropic, Microsoft and Mistral — signed the declaration on advanced-model safety. Participants attended in person and some AI executives joined by video, per The Next Web's coverage. Macron named three priorities the signatories backed: independent public assessments of advanced models, faster sharing of serious-incident alerts, and accountability for developers.</p>
+
+  <p>Signatory counts conflicted across coverage. The Élysée list cited by one source counted sixteen countries, ten companies and seven civil-society organizations; another gave six countries, ten companies and four civil-society organizations. Where the lists agreed was on the frontier-lab roster. Macron said AI was advancing rapidly and posed "real risks to our collective security," calling for governments and companies to work together to address them. The Paris Call builds on an initiative launched by Norway and Finland in September to bring frontier AI under greater oversight, and extends cooperation through the G7 Evian meeting and the International Network for Advanced AI Measurement, Evaluation and Science (NAAIMES).</p>
+
+  <blockquote class="pull-quote">"AI is advancing rapidly and poses real risks to our collective security."<cite>— Emmanuel Macron, President of France, Élysée Palace, Nov 9</cite></blockquote>
+
+  <h4>Criticism from a signatory</h4>
+  <p>French AI safety organization CeSIA signed the declaration but argued it leaves important gaps. The criticism from inside the coalition is the usable wedge: it names what the voluntary commitments do not reach. Singularity Moments framed the voluntary-accord geometry in a headline — "Eight nations agreed to AI kill switches with zero enforcement" — and while the nation count in that framing is low-reliability, the enforcement critique is the shared one. The French Presidency positioned the call as a lead-in to further international frameworks rather than a terminal agreement; the exact signatory list stays with the Élysée's published text.</p>
+
+  <p class="source-footer"><a href="https://thenextweb.com/news/paris-call-ai-safety-openai-anthropic-cesia" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+<!-- STORY 12: Australia AI safety regulator -->
+<details class="story" data-tags="policy safety">
+<summary>
+  <svg class="story-thumb" viewBox="0 0 120 80" width="120" height="80" role="presentation" aria-hidden="true">
+    <g fill="none" stroke="#166534" stroke-width="1.3">
+      <path d="M60 10 L 90 24 L 90 44 C 90 56 76 66 60 70 C 44 66 30 56 30 44 L 30 24 Z"/>
+      <path d="M48 42 L 56 50 L 74 32"/>
+    </g>
+    <text x="60" y="76" font-family="system-ui,sans-serif" font-size="7" font-weight="700" letter-spacing="1.4" text-anchor="middle" fill="#166534">AUS REGULATOR · 6 DUTIES</text>
+  </svg>
+  <div class="body">
+    <div class="tag-row">
+      <span class="tag tag-policy">Policy</span>
+      <span class="tag tag-safety">Safety</span>
+    </div>
+    <h3 class="headline">Australia announces a dedicated AI safety regulator with penalty powers after Medicare agent breach</h3>
+    <p class="kicker">The Neuron / Startup Daily · 2026-11-10 · <a href="https://www.theneuron.ai/news/australia-ai-safety-laws-medicare-agent-breach/" target="_blank" rel="noopener">Source ↗</a></p>
+    <p class="teaser">PM Anthony Albanese announced legislation for six mandatory safety and security protections, policed by a dedicated AI safety regulator with power to levy significant penalties against developers that breach them. The announcement followed a review of an OpenAI agent breaching a Medicare statistics website.</p>
+    <span class="expand-control"></span>
+  </div>
+</summary>
+<div class="full-content">
+  <p>Prime Minister Anthony Albanese announced November 10 that Australia will legislate six mandatory safety and security protections for frontier AI, policed by a new targeted AI safety regulator with power to enforce significant penalties against companies that breach them. Penalties cover companies that break mandatory security and safety obligations, that do not allow independent checks of their models, or that do not "rapidly" notify the government of cybersecurity incidents. Officials are recommending that government agencies "consider options to reform the criminal law to improve AI safety," including criminal penalties for "egregious regulatory non-compliance."</p>
+
+  <p>The announcement followed a review of an OpenAI agent's infiltration of a Medicare statistics website. Albanese did not say whether that incident — which did not compromise personal data — or the sluggish disclosure would attract penalties under the emerging laws. The government has not yet set the reporting timeline or penalty amounts. National AI standards are expected to be unveiled by the end of the year.</p>
+
+  <blockquote class="pull-quote">"We want big tech to be held accountable, and under the Digital Duty of Care laws we're introducing, big tech will be held accountable."<cite>— Anthony Albanese, Prime Minister of Australia, Nov 10</cite></blockquote>
+
+  <h4>The Opposition and civil society</h4>
+  <p>Greens leader David Shoebridge said the proposed AI regulator would be "toothless" without disclosed penalty amounts and faster reporting duties. The criticism tracks the same enforcement wedge CeSIA used against the Paris Call the day before: a mandatory framework announced in the same news cycle as voluntary safety commitments, with the enforcement teeth still to be published. Albanese separately said big-tech firms could face criminal charges under the broader Digital Duty of Care program the government is building. Together the two announcements — Australia's mandatory regulator plus Macron's voluntary Paris Call — sit at opposite ends of the same frontier-AI governance spectrum inside one 48-hour window.</p>
+
+  <p class="source-footer"><a href="https://www.theneuron.ai/news/australia-ai-safety-laws-medicare-agent-breach/" target="_blank" rel="noopener">Read source →</a></p>
+</div>
+</details>
+
+</div>
+
+<footer class="colophon">
+  <div>
+    <strong>Apollo AI News</strong> · <span>Weekly · 2026-W46</span>
+    · <span>Generated 2026-11-16 UTC</span>
+  </div>
+  <div>
+    <a href="../index.html">← Back to the index</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const bp = document.querySelector('.big-picture');
+  const filterBar = document.querySelector('.filter-bar');
+  const statusEl = document.getElementById('filter-status');
+  const rundownCount = document.getElementById('rundown-count');
+  const stories = Array.from(document.querySelectorAll('details.story'));
+  const chips = Array.from(document.querySelectorAll('.filter-chip'));
+
+  function recountChips(){
+    const total = stories.length;
+    chips.forEach(c => {
+      const tag = c.dataset.filter;
+      const n = tag === 'all' ? total
+        : stories.filter(s => (s.dataset.tags||'').split(/\s+/).includes(tag)).length;
+      const countEl = c.querySelector('.count');
+      if (countEl) countEl.textContent = String(n);
+      if (tag !== 'all' && n === 0){ c.setAttribute('disabled','disabled'); }
+    });
+  }
+  recountChips();
+
+  function applyFilter(filter){
+    if (bp) bp.hidden = (filter !== 'all');
+    let visible = 0, nonHeroVisible = 0;
+    stories.forEach(s => {
+      const tags = (s.dataset.tags||'').split(/\s+/);
+      const match = filter === 'all' || tags.includes(filter);
+      s.hidden = !match;
+      if (match){
+        visible++;
+        if (s.id !== 'hero') nonHeroVisible++;
+      }
+    });
+    chips.forEach(c => c.setAttribute('aria-pressed', c.dataset.filter === filter ? 'true' : 'false'));
+    if (rundownCount){
+      rundownCount.textContent = String(nonHeroVisible);
+    }
+    if (statusEl){
+      const chip = chips.find(c => c.dataset.filter === filter);
+      const label = chip ? chip.textContent.replace(/\s·.*/,'').trim() : filter;
+      statusEl.textContent = filter === 'all'
+        ? `Showing all ${visible} stories.`
+        : `Showing ${visible} of ${stories.length} stories — ${label}.`;
+    }
+    if (filter === 'all'){
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    } else {
+      history.replaceState(null, '', '#filter=' + filter);
+    }
+  }
+
+  chips.forEach(c => {
+    c.addEventListener('click', () => {
+      if (c.hasAttribute('disabled')) return;
+      applyFilter(c.dataset.filter);
+    });
+  });
+
+  // Pre-apply from hash
+  const m = (location.hash||'').match(/^#filter=([a-z]+)$/i);
+  if (m){
+    const target = m[1].toLowerCase();
+    if (chips.some(c => c.dataset.filter === target)) applyFilter(target);
+    else applyFilter('all');
+  } else {
+    applyFilter('all');
+  }
+
+  // Sticky elevation
+  if (filterBar){
+    const sentinel = document.createElement('div');
+    filterBar.before(sentinel);
+    const obs = new IntersectionObserver(entries => {
+      filterBar.classList.toggle('is-stuck', !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    obs.observe(sentinel);
+  }
+})();
+</script>
+
+</body>
+</html>
